@@ -2,12 +2,12 @@ name: cursus-environment
 channels:
   - conda-forge
 dependencies:
-  - python
   - jupyter_contrib_nbextensions
   - matplotlib
   - pandas
   - numpy
-  - appmode
+  - scipy
   - ipywidgets
+  - scikit-rf
   - pip:
     - SchemDraw
