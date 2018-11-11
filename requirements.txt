@@ -1,0 +1,11 @@
+## using conda-forge
+jupyter_contrib_nbextensions
+pip
+matplotlib
+pandas
+numpy
+scipy
+ipywidgets
+scikit-rf
+## using pip
+SchemDraw
