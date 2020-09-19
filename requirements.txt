@@ -1,11 +1,10 @@
 ## using conda-forge
-jupyter_contrib_nbextensions
+jupyterlab
 pip
 matplotlib
 pandas
 numpy
 scipy
-ipywidgets
 scikit-rf
 ## using pip
 SchemDraw
