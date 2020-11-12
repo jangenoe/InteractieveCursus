@@ -10,4 +10,4 @@ dependencies:
   - scipy
   - scikit-rf
   - pip:
-    - SchemDraw
+    - schemdraw

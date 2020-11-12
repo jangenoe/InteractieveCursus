@@ -11,7 +11,7 @@ from PySpice.Unit import *
 import schemdraw as schem
 import schemdraw.elements as e
 from ipywidgets import interact,FloatSlider
-usewidgets=False;
+usewidgets=True;
     
 def spicelisting(filename):
     with open(filename) as f:
