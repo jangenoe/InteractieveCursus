@@ -2,7 +2,11 @@ name: cursus-environment
 channels:
   - conda-forge
 dependencies:
+  - python>=3
+  - pandoc
+  - ipykernel
   - pip
+  - sphinx-material
   - jupyterlab
   - matplotlib
   - pandas
@@ -10,4 +14,4 @@ dependencies:
   - scipy
   - scikit-rf
   - pip:
-    - schemdraw
+    - nbsphinx
