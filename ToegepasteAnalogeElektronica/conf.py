@@ -6,13 +6,10 @@ import os
 # Select nbsphinx and, if needed, other Sphinx extensions:
 extensions = [
     'nbsphinx',
-    'sphinx_copybutton',  # for "copy to clipboard" buttons
-    'sphinx.ext.mathjax',  # for math equations
-    'sphinxcontrib.bibtex',  # for bibliographic references
-    'sphinxcontrib.rsvgconverter',  # for SVG->PDF conversion in LaTeX output
-    'sphinx_gallery.load_style',  # load CSS for gallery (needs SG >= 0.6)
-    'sphinx_last_updated_by_git',  # get "last updated" from Git
+    'sphinx.ext.mathjax'  # for math equations
 ]
+
+nbsphinx_execute = 'never'
 
 # Default language for syntax highlighting in reST and Markdown cells:
 highlight_language = 'none'
@@ -51,10 +48,6 @@ nbsphinx_prolog = r"""
         }
       </script>
     </div>
-.. raw:: latex
-    \nbsphinxstartnotebook{\scriptsize\noindent\strut
-    \textcolor{gray}{The following section was generated from
-    \sphinxcode{\sphinxupquote{\strut {{ docname | escape_latex }}}} \dotfill}}
 """
 
 # This is processed by Jinja2 and inserted after each notebook
@@ -74,7 +67,7 @@ mathjax_config = {
 
 master_doc = 'index'
 
-project = 'nbsphinx'
+project = 'Toegepaste Analoge elektronica'
 author = 'Jan Genoe'
 copyright = '2020, ' + author
 html_show_copyright = False
@@ -83,7 +76,7 @@ html_show_copyright = False
 # -- Options for HTML output ----------------------------------------------
 
 html_favicon = 'favicon.svg'
-html_title = project + ' version ' + release
+html_title = 'Toegepaste Analoge elektronica'
 
 # -- Set default HTML theme (if none was given above) ---------------------
 
