@@ -1,0 +1,22 @@
+format: jb-book
+root: intro
+parts:
+- caption: Inleiding
+  chapters:
+  - file: Hoe_dit_werkboek_gebruiken
+- caption: Versterkers
+  chapters:
+  - file: Klasse-C
+  - file: Klasse-F
+  - file: Klasse-D
+  - file: Klasse-E
+- caption: Filters
+  chapters:  
+  - file: Filters
+- caption: SmithKaart
+  chapters:
+  - file: SmithKaartOefening1
+  - file: SmithKaartOefening2
+  - file: SmithKaartOefening3
+  - file: SmithKaartOefening4
+  - file: SmithKaartOefening5
