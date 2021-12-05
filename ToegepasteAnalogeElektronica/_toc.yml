@@ -15,6 +15,7 @@ parts:
   - file: Filters
 - caption: SmithKaart
   chapters:
+  - file: transmissielijn
   - file: SmithKaartOefening1
   - file: SmithKaartOefening2
   - file: SmithKaartOefening3
