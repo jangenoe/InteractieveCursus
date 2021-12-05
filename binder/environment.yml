@@ -1,0 +1,16 @@
+name: KULeuven
+channels:
+  - conda-forge
+dependencies:
+  - python=3.8
+  - numpy
+  - scipy
+  - matplotlib-base
+  - pip
+  - matplotlib
+  - sympy
+  - scikit-rf
+  - networkx
+  - pyspice
+  - pip:
+    - schemdraw
