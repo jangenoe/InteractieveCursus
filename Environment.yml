@@ -1,11 +1,16 @@
-name: cursus-environment
+name: kuleuven
 channels:
   - conda-forge
 dependencies:
-  - python>=3
-  - pandoc
-  - ipykernel
+  - python=3.8
+  - numpy
+  - scipy
+  - matplotlib-base
   - pip
-  - sphinx-material
+  - matplotlib
+  - sympy
+  - scikit-rf
+  - networkx
+  - pyspice
   - pip:
-    - nbsphinx
+    - schemdraw
