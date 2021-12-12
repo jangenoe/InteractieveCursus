@@ -31,3 +31,6 @@ parse:
     # - smartquotes
     - substitution
     - tasklist
+sphinx:
+  config:
+    language: nl

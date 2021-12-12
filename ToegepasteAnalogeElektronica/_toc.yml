@@ -13,11 +13,15 @@ parts:
 - caption: Filters
   chapters:  
   - file: Filters
-- caption: SmithKaart
+- caption: transmissielijnen
   chapters:
   - file: transmissielijn
-  - file: SmithKaartOefening1
-  - file: SmithKaartOefening2
-  - file: SmithKaartOefening3
-  - file: SmithKaartOefening4
-  - file: SmithKaartOefening5
+  - file: reflecties
+  - file: SmithKaart
+    sections:
+      - file: SmithKaartOefening1
+      - file: SmithKaartOefening2
+      - file: SmithKaartOefening3
+      - file: SmithKaartOefening4
+      - file: SmithKaartOefening5
+      - file: SmithKaartOefening6
