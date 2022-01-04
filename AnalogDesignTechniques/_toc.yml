@@ -1,0 +1,12 @@
+format: jb-book
+root: intro
+options:
+  numbered: true
+parts:
+- caption: Chip Design
+  chapters:
+  - file: AmplifierDesign
+- caption: Capita Selecta
+  chapters:  
+  - file: Capacitive voltage conversion
+

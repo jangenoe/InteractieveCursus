@@ -1,9 +1,8 @@
 format: jb-book
 root: intro
+options:
+  numbered: true
 parts:
-- caption: Inleiding
-  chapters:
-  - file: Hoe_dit_werkboek_gebruiken
 - caption: Versterkers
   chapters:
   - file: Klasse-C

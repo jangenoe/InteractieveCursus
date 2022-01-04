@@ -1,10 +1,11 @@
-title: Toegepaste Analoge Elektronica
+title: Analog Design Techniques
 author: Jan Genoe (jan.genoe@kuleuven.be)
+copyright: "2022" 
 logo: images/logo.svg
 only_build_toc_files: true
 repository:
   url: https://github.com/jangenoe/InteractieveCursus
-  path_to_book: ToegepasteAnalogeElektronica 
+  path_to_book: AnalogDesignTechniques 
 html:
   use_issues_button: true
   use_edit_page_button: true
@@ -33,5 +34,5 @@ parse:
     - tasklist
 sphinx:
   config:
-    language: nl
+    language: en
     togglebutton_hint: " "

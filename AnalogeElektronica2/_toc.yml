@@ -1,0 +1,17 @@
+format: jb-book
+root: intro
+options:
+  numbered: true
+parts:
+- caption: Versterkers
+  chapters:
+  - file: Klasse-A
+  - file: Klasse-B
+  - file: Klasse-G
+  - file: Klasse-S
+- caption: Voedingen
+  chapters:  
+  - file: Buck-converter
+  - file: Boost-converter
+  - file: Inverter
+  - file: Flyback-converter
