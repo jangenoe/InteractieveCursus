@@ -1,16 +1,18 @@
+![logo](./images/logo.svg)
+
+
 # Toegepaste Analoge Elektronica
 
 **door [Jan Genoe](https://www.kuleuven.be/wieiswie/nl/person/00004269)**
 
-Welcome bij de notebooks van het vak Toegepaste Analoge Elektronica.
+Welkom bij het ![jupyterbook](https://jupyterbook.org/badge.svg) van het vak Toegepaste Analoge Elektronica.
 
 Deze notebooks bevatten materiaal en oefeningen, in het formaat van Jupyter notebooks, ontwikkeld als aanvullingen bij het vak Toegepaste Analoge Elektronica aan de [KU Leuven](https://www.kuleuven.be), campus Diepenbeek.
 
 :::{note}
-Dit is momenteel nog werk in progress. De cursus zoals aanwezig op Toledo blijft het voornaamste leerinstrument. Dit is enkel een hulpmiddel.
+Dit is momenteel nog 'werk in progress'. De cursus zoals aanwezig op Toledo blijft het voornaamste leerinstrument. Dit boek is enkel een hulpmiddel.
 :::
 
-Ik gebruik hiervoor het formaat van [Jupyter Book](https://jupyterbook.org/intro.html).
 
 ```{tableofcontents}
 ```
