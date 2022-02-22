@@ -1,0 +1,43 @@
+# Book settings
+# Learn more at https://jupyterbook.org/customize/config.html
+
+title: Interactieve Cursussen 
+author: Jan Genoe (jan.genoe@kuleuven.be)
+logo: images/logo.svg
+only_build_toc_files: true
+
+repository:
+  url: https://github.com/jangenoe/InteractieveCursus
+  path_to_book: CursusIndex
+
+html:
+  use_issues_button: false
+  use_edit_page_button: false
+  use_repository_button: false
+  extra_navbar    : <a href="https://www.kuleuven.be"> <img src=" http://stijl.kuleuven.be/2016tmp/img/svg/logo.svg" alt="KULeuven"></a>
+execute:
+  execute_notebooks: "off"
+launch_buttons:
+  notebook_interface: "jupyterlab"
+  binderhub_url: "https://mybinder.org"
+  colab_url: "https://colab.research.google.com"
+parse:
+  myst_enable_extensions:
+    # don't forget to list any other extensions you want enabled,
+    # including those that are enabled by default!
+    - amsmath
+    - colon_fence
+    # - deflist
+    - dollarmath
+    # - html_admonition
+    # - html_image
+    - linkify
+    # - replacements
+    # - smartquotes
+    - substitution
+    - tasklist
+sphinx:
+  config:
+    language: nl
+    togglebutton_hint: " "
+    html_show_copyright: false
