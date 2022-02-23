@@ -11,6 +11,7 @@ repository:
   path_to_book: CursusIndex
 
 html:
+  favicon: images/favicon.ico
   use_issues_button: false
   use_edit_page_button: false
   use_repository_button: false
