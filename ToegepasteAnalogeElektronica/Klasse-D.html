@@ -1,0 +1,611 @@
+
+<!DOCTYPE html>
+
+<html lang="nl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Klasse D Versterkers &#8212; Toegepaste Analoge Elektronica</title>
+    
+  <link href="_static/css/theme.css" rel="stylesheet">
+  <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/translations.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Zoeken" href="search.html" />
+    <link rel="next" title="Klasse E Versterkers" href="Klasse-E.html" />
+    <link rel="prev" title="Klasse F Verstekers" href="Klasse-F.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="nl">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="_static/logo.svg" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Toegepaste Analoge Elektronica</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Zoek in dit boek ..." aria-label="Zoek in dit boek ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro.html">
+   Toegepaste Analoge Elektronica
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Versterkers
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Klasse-C.html">
+   Klasse C  Versterkers
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Klasse-F.html">
+   Klasse F Verstekers
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Klasse D  Versterkers
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Klasse-E.html">
+   Klasse E  Versterkers
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Filters
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Filters.html">
+   Filters
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  transmissielijnen
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="transmissielijn.html">
+   Transmissie lijnen
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="reflecties.html">
+   Reflecties
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="SmithKaart.html">
+   SmithKaart
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="SmithKaartOefening1.html">
+     Smith Kaart Oefening 1
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="SmithKaartOefening2.html">
+     Smith Kaart Oefening 2
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="SmithKaartOefening3.html">
+     Smith Kaart Oefening 3
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="SmithKaartOefening4.html">
+     Smith Kaart Oefening 4
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="SmithKaartOefening5.html">
+     Smith Kaart Oefening 5
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="SmithKaartOefening6.html">
+     Smith Kaart Oefening 6
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="SmithKaartOefening7.html">
+     Smith Kaart Oefening 7
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  <a href="https://www.kuleuven.be"> <img src=" http://stijl.kuleuven.be/2016tmp/img/svg/logo.svg" alt="KULeuven"></a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Schakel navigatie" aria-controls="site-navigation"
+                title="Schakel navigatie" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download deze pagina"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/Klasse-D.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download het bronbestand" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Afdrukken naar pdf"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/jangenoe/InteractieveCursus"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Bronopslagplaats"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/jangenoe/InteractieveCursus/issues/new?title=Issue%20on%20page%20%2FKlasse-D.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open een probleem"><i class="fas fa-lightbulb"></i>open probleem</button></a>
+        <a class="edit-button" href="https://github.com/jangenoe/InteractieveCursus/edit/master/ToegepasteAnalogeElektronica/Klasse-D.ipynb"><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="bewerk deze pagina"><i class="fas fa-pencil-alt"></i>suggereren bewerken</button></a>
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Volledig scherm"
+        title="Volledig scherm"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/jangenoe/InteractieveCursus/master?urlpath=lab/tree/ToegepasteAnalogeElektronica/Klasse-D.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Lancering Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        <a class="colab-button" href="https://colab.research.google.com/github/jangenoe/InteractieveCursus/blob/master/ToegepasteAnalogeElektronica/Klasse-D.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+                title="Lancering Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
+                    src="_static/images/logo_colab.png"
+                    alt="Interact on Colab">Colab</button></a>
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Inhoud
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#simulatie-met-aansturing-off-frequency">
+   simulatie met aansturing off frequency
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Klasse D  Versterkers</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Inhoud </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#simulatie-met-aansturing-off-frequency">
+   simulatie met aansturing off frequency
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="klasse-d-versterkers">
+<h1>Klasse D  Versterkers<a class="headerlink" href="#klasse-d-versterkers" title="Permalink naar deze titel">¶</a></h1>
+<p><a href="./slides/Klasse-D.slides.html"><img alt="sildes" src="https://img.shields.io/badge/slides-beschikbaar-blue" /></a></p>
+<div class="cell tag_hide-input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">matplotlib.ticker</span> <span class="k">as</span> <span class="nn">ticker</span>
+<span class="kn">from</span>  <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">patches</span>
+<span class="kn">import</span> <span class="nn">scipy.signal</span> <span class="k">as</span> <span class="nn">signal</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">PySpice.Probe.Plot</span> <span class="kn">import</span> <span class="n">plot</span>
+<span class="kn">from</span> <span class="nn">PySpice.Spice.Parser</span> <span class="kn">import</span> <span class="n">SpiceParser</span>
+<span class="kn">from</span> <span class="nn">PySpice.Spice.Netlist</span> <span class="kn">import</span> <span class="n">Circuit</span>
+<span class="kn">from</span> <span class="nn">PySpice.Unit</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">import</span> <span class="nn">schemdraw</span> <span class="k">as</span> <span class="nn">schem</span>
+<span class="kn">import</span> <span class="nn">schemdraw.elements</span> <span class="k">as</span> <span class="nn">e</span>
+<span class="kn">from</span> <span class="nn">ipywidgets</span> <span class="kn">import</span> <span class="n">interact</span><span class="p">,</span><span class="n">FloatSlider</span>
+<span class="n">usewidgets</span><span class="o">=</span><span class="kc">True</span><span class="p">;</span>
+    
+<span class="k">def</span> <span class="nf">spicelisting</span><span class="p">(</span><span class="n">filename</span><span class="p">):</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">f</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="n">line</span><span class="o">.</span><span class="n">strip</span><span class="p">())</span>
+    <span class="nb">print</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_hide-input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">d</span> <span class="o">=</span> <span class="n">schem</span><span class="o">.</span><span class="n">Drawing</span><span class="p">()</span>
+<span class="n">T1</span> <span class="o">=</span> <span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">BJT_NPN</span><span class="p">)</span>
+<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">LINE</span><span class="p">,</span> <span class="n">xy</span><span class="o">=</span><span class="n">T1</span><span class="o">.</span><span class="n">base</span><span class="p">,</span> <span class="n">d</span><span class="o">=</span><span class="s1">&#39;down&#39;</span><span class="p">,</span> <span class="n">l</span><span class="o">=</span><span class="mf">1.5</span><span class="p">)</span>
+<span class="n">indot</span><span class="o">=</span><span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">DOT</span><span class="p">)</span>
+<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">LINE</span><span class="p">,</span> <span class="n">d</span><span class="o">=</span><span class="s1">&#39;down&#39;</span><span class="p">,</span> <span class="n">l</span><span class="o">=</span><span class="mf">1.4</span><span class="p">)</span>
+<span class="n">T2</span> <span class="o">=</span> <span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">BJT_PNP</span><span class="p">,</span> <span class="n">d</span><span class="o">=</span><span class="s1">&#39;right&#39;</span><span class="p">)</span>
+<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">VDD</span><span class="p">,</span> <span class="n">xy</span><span class="o">=</span><span class="n">T1</span><span class="o">.</span><span class="n">collector</span><span class="p">,</span>  <span class="n">l</span><span class="o">=</span><span class="mf">0.75</span><span class="p">)</span>
+<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">LINE</span><span class="p">,</span> <span class="n">xy</span><span class="o">=</span><span class="n">indot</span><span class="o">.</span><span class="n">start</span><span class="p">,</span> <span class="n">d</span><span class="o">=</span><span class="s1">&#39;left&#39;</span><span class="p">,</span> <span class="n">l</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
+<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">DOT_OPEN</span><span class="p">)</span>
+<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">LINE</span><span class="p">,</span> <span class="n">d</span><span class="o">=</span><span class="s1">&#39;down&#39;</span><span class="p">,</span><span class="n">xy</span><span class="o">=</span><span class="n">T1</span><span class="o">.</span><span class="n">emitter</span><span class="p">,</span> <span class="n">l</span><span class="o">=</span><span class="mf">0.8</span><span class="p">)</span>
+<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">DOT</span><span class="p">)</span>
+<span class="n">L1</span> <span class="o">=</span> <span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">INDUCTOR2</span><span class="p">,</span> <span class="n">d</span><span class="o">=</span><span class="s1">&#39;right&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;$L_1$&#39;</span><span class="p">)</span>
+<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">LINE</span><span class="p">,</span> <span class="n">d</span><span class="o">=</span><span class="s1">&#39;down&#39;</span><span class="p">,</span><span class="n">xy</span><span class="o">=</span><span class="n">L1</span><span class="o">.</span><span class="n">start</span><span class="p">,</span> <span class="n">l</span><span class="o">=</span><span class="mf">0.8</span><span class="p">)</span>
+<span class="n">C1</span> <span class="o">=</span> <span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">CAP</span><span class="p">,</span> <span class="n">d</span><span class="o">=</span><span class="s1">&#39;right&#39;</span><span class="p">,</span><span class="n">xy</span><span class="o">=</span><span class="n">L1</span><span class="o">.</span><span class="n">end</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;$C_1$&#39;</span><span class="p">)</span>
+<span class="n">R</span> <span class="o">=</span> <span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">RES</span><span class="p">,</span> <span class="n">d</span><span class="o">=</span><span class="s1">&#39;down&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;$R_L$&#39;</span><span class="p">)</span>
+<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">LINE</span><span class="p">,</span> <span class="n">xy</span><span class="o">=</span><span class="n">R</span><span class="o">.</span><span class="n">start</span><span class="p">,</span> <span class="n">d</span><span class="o">=</span><span class="s1">&#39;right&#39;</span><span class="p">,</span> <span class="n">l</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
+<span class="n">dot</span><span class="o">=</span><span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">DOT_OPEN</span><span class="p">)</span>
+<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">LINE</span><span class="p">,</span><span class="n">xy</span><span class="o">=</span><span class="n">R</span><span class="o">.</span><span class="n">end</span><span class="p">,</span> <span class="n">d</span><span class="o">=</span><span class="s1">&#39;right&#39;</span><span class="p">,</span><span class="n">l</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
+<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">DOT_OPEN</span><span class="p">)</span>
+<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">LINE</span><span class="p">,</span><span class="n">xy</span><span class="o">=</span><span class="n">R</span><span class="o">.</span><span class="n">end</span><span class="p">,</span> <span class="n">d</span><span class="o">=</span><span class="s1">&#39;left&#39;</span><span class="p">,</span> <span class="n">tox</span><span class="o">=</span><span class="n">L1</span><span class="o">.</span><span class="n">start</span><span class="p">)</span>
+<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">DOT</span><span class="p">)</span>
+<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">GND</span><span class="p">)</span>
+<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">LINE</span><span class="p">,</span><span class="n">d</span><span class="o">=</span><span class="s1">&#39;up&#39;</span><span class="p">,</span><span class="n">toy</span><span class="o">=</span><span class="n">T2</span><span class="o">.</span><span class="n">collector</span><span class="p">)</span>
+<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">GAP_LABEL</span><span class="p">,</span> <span class="n">d</span><span class="o">=</span><span class="s1">&#39;down&#39;</span><span class="p">,</span> <span class="n">xy</span><span class="o">=</span> <span class="n">dot</span><span class="o">.</span><span class="n">start</span><span class="p">,</span> <span class="n">toy</span><span class="o">=</span> <span class="n">R</span><span class="o">.</span><span class="n">end</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;-&#39;</span><span class="p">,</span><span class="s1">&#39;$v_</span><span class="si">{out}</span><span class="s1">$&#39;</span><span class="p">,</span><span class="s1">&#39;$+$&#39;</span><span class="p">],</span><span class="n">lblofst</span><span class="o">=</span><span class="mf">0.4</span><span class="p">)</span>
+<span class="n">d</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/Klasse-D_2_0.svg" src="_images/Klasse-D_2_0.svg" /></div>
+</div>
+<div class="figure align-default" id="dfig1">
+<img alt="_images/mpl.svg" src="_images/mpl.svg" /><p class="caption"><span class="caption-number">Fig. 38 </span><span class="caption-text">Basisschema van de klasse D versterker</span><a class="headerlink" href="#dfig1" title="Permallink naar deze afbeelding">¶</a></p>
+</div>
+<div class="cell tag_hide-input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">d</span> <span class="o">=</span> <span class="n">schem</span><span class="o">.</span><span class="n">Drawing</span><span class="p">()</span>
+<span class="n">T1</span> <span class="o">=</span> <span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">BJT_NPN</span><span class="p">)</span>
+<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">LINE</span><span class="p">,</span> <span class="n">xy</span><span class="o">=</span><span class="n">T1</span><span class="o">.</span><span class="n">base</span><span class="p">,</span> <span class="n">d</span><span class="o">=</span><span class="s1">&#39;down&#39;</span><span class="p">,</span> <span class="n">l</span><span class="o">=</span><span class="mf">1.5</span><span class="p">)</span>
+<span class="n">indot</span><span class="o">=</span><span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">DOT</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">)</span>
+<span class="n">indot</span><span class="o">.</span><span class="n">add_label</span><span class="p">(</span><span class="s1">&#39;1&#39;</span><span class="p">,</span>  <span class="n">loc</span><span class="o">=</span><span class="s1">&#39;center&#39;</span><span class="p">,</span> <span class="n">ofst</span><span class="o">=</span><span class="p">[</span><span class="o">-</span><span class="mf">0.2</span><span class="p">,</span><span class="mf">.3</span><span class="p">],</span> <span class="n">align</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;right&#39;</span><span class="p">,</span><span class="s1">&#39;bottom&#39;</span><span class="p">))</span>
+<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">LINE</span><span class="p">,</span> <span class="n">d</span><span class="o">=</span><span class="s1">&#39;down&#39;</span><span class="p">,</span> <span class="n">l</span><span class="o">=</span><span class="mf">1.4</span><span class="p">)</span>
+<span class="n">T2</span> <span class="o">=</span> <span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">BJT_PNP</span><span class="p">,</span> <span class="n">d</span><span class="o">=</span><span class="s1">&#39;right&#39;</span><span class="p">)</span>
+<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">VDD</span><span class="p">,</span> <span class="n">xy</span><span class="o">=</span><span class="n">T1</span><span class="o">.</span><span class="n">collector</span><span class="p">,</span>  <span class="n">l</span><span class="o">=</span><span class="mf">0.75</span><span class="p">)</span>
+<span class="n">vdd</span><span class="o">=</span><span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">DOT</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">)</span>
+<span class="n">vdd</span><span class="o">.</span><span class="n">add_label</span><span class="p">(</span><span class="s1">&#39;3&#39;</span><span class="p">,</span>  <span class="n">loc</span><span class="o">=</span><span class="s1">&#39;center&#39;</span><span class="p">,</span> <span class="n">ofst</span><span class="o">=</span><span class="p">[</span><span class="mf">0.6</span><span class="p">,</span><span class="o">-</span><span class="mf">0.3</span><span class="p">],</span> <span class="n">align</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;right&#39;</span><span class="p">,</span><span class="s1">&#39;bottom&#39;</span><span class="p">))</span>
+<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">LINE</span><span class="p">,</span> <span class="n">xy</span><span class="o">=</span><span class="n">indot</span><span class="o">.</span><span class="n">start</span><span class="p">,</span> <span class="n">d</span><span class="o">=</span><span class="s1">&#39;left&#39;</span><span class="p">,</span> <span class="n">l</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
+<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">DOT_OPEN</span><span class="p">)</span>
+<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">LINE</span><span class="p">,</span> <span class="n">d</span><span class="o">=</span><span class="s1">&#39;down&#39;</span><span class="p">,</span><span class="n">xy</span><span class="o">=</span><span class="n">T1</span><span class="o">.</span><span class="n">emitter</span><span class="p">,</span> <span class="n">l</span><span class="o">=</span><span class="mf">0.8</span><span class="p">)</span>
+<span class="n">pwm</span><span class="o">=</span><span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">DOT</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">)</span>
+<span class="n">pwm</span><span class="o">.</span><span class="n">add_label</span><span class="p">(</span><span class="s1">&#39;2&#39;</span><span class="p">,</span>  <span class="n">loc</span><span class="o">=</span><span class="s1">&#39;center&#39;</span><span class="p">,</span> <span class="n">ofst</span><span class="o">=</span><span class="p">[</span><span class="mf">0.4</span><span class="p">,</span><span class="mf">.3</span><span class="p">],</span> <span class="n">align</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;right&#39;</span><span class="p">,</span><span class="s1">&#39;bottom&#39;</span><span class="p">))</span>
+<span class="n">L1</span> <span class="o">=</span> <span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">INDUCTOR2</span><span class="p">,</span> <span class="n">d</span><span class="o">=</span><span class="s1">&#39;right&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;$L_1$&#39;</span><span class="p">)</span>
+<span class="n">mid</span><span class="o">=</span><span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">DOT</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">)</span>
+<span class="n">mid</span><span class="o">.</span><span class="n">add_label</span><span class="p">(</span><span class="s1">&#39;5&#39;</span><span class="p">,</span>  <span class="n">loc</span><span class="o">=</span><span class="s1">&#39;center&#39;</span><span class="p">,</span> <span class="n">ofst</span><span class="o">=</span><span class="p">[</span><span class="mf">0.4</span><span class="p">,</span><span class="mf">.3</span><span class="p">],</span> <span class="n">align</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;right&#39;</span><span class="p">,</span><span class="s1">&#39;bottom&#39;</span><span class="p">))</span>
+<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">LINE</span><span class="p">,</span> <span class="n">d</span><span class="o">=</span><span class="s1">&#39;down&#39;</span><span class="p">,</span><span class="n">xy</span><span class="o">=</span><span class="n">L1</span><span class="o">.</span><span class="n">start</span><span class="p">,</span> <span class="n">l</span><span class="o">=</span><span class="mf">0.8</span><span class="p">)</span>
+<span class="n">C1</span> <span class="o">=</span> <span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">CAP</span><span class="p">,</span> <span class="n">d</span><span class="o">=</span><span class="s1">&#39;right&#39;</span><span class="p">,</span><span class="n">xy</span><span class="o">=</span><span class="n">L1</span><span class="o">.</span><span class="n">end</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;$C_1$&#39;</span><span class="p">)</span>
+<span class="n">out</span><span class="o">=</span><span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">DOT</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">)</span>
+<span class="n">out</span><span class="o">.</span><span class="n">add_label</span><span class="p">(</span><span class="s1">&#39;6&#39;</span><span class="p">,</span>  <span class="n">loc</span><span class="o">=</span><span class="s1">&#39;center&#39;</span><span class="p">,</span> <span class="n">ofst</span><span class="o">=</span><span class="p">[</span><span class="mf">0.4</span><span class="p">,</span><span class="mf">.3</span><span class="p">],</span> <span class="n">align</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;right&#39;</span><span class="p">,</span><span class="s1">&#39;bottom&#39;</span><span class="p">))</span>
+<span class="n">R</span> <span class="o">=</span> <span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">RES</span><span class="p">,</span> <span class="n">d</span><span class="o">=</span><span class="s1">&#39;down&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;$R_L$&#39;</span><span class="p">)</span>
+<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">LINE</span><span class="p">,</span> <span class="n">xy</span><span class="o">=</span><span class="n">R</span><span class="o">.</span><span class="n">start</span><span class="p">,</span> <span class="n">d</span><span class="o">=</span><span class="s1">&#39;right&#39;</span><span class="p">,</span> <span class="n">l</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
+<span class="n">dot</span><span class="o">=</span><span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">DOT_OPEN</span><span class="p">)</span>
+<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">LINE</span><span class="p">,</span><span class="n">xy</span><span class="o">=</span><span class="n">R</span><span class="o">.</span><span class="n">end</span><span class="p">,</span> <span class="n">d</span><span class="o">=</span><span class="s1">&#39;right&#39;</span><span class="p">,</span><span class="n">l</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
+<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">DOT_OPEN</span><span class="p">)</span>
+<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">LINE</span><span class="p">,</span><span class="n">xy</span><span class="o">=</span><span class="n">R</span><span class="o">.</span><span class="n">end</span><span class="p">,</span> <span class="n">d</span><span class="o">=</span><span class="s1">&#39;left&#39;</span><span class="p">,</span> <span class="n">tox</span><span class="o">=</span><span class="n">L1</span><span class="o">.</span><span class="n">start</span><span class="p">)</span>
+<span class="n">gg</span><span class="o">=</span><span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">DOT</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">)</span>
+<span class="n">gg</span><span class="o">.</span><span class="n">add_label</span><span class="p">(</span><span class="s1">&#39;0&#39;</span><span class="p">,</span>  <span class="n">loc</span><span class="o">=</span><span class="s1">&#39;center&#39;</span><span class="p">,</span> <span class="n">ofst</span><span class="o">=</span><span class="p">[</span><span class="mf">0.4</span><span class="p">,</span><span class="mf">.3</span><span class="p">],</span> <span class="n">align</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;right&#39;</span><span class="p">,</span><span class="s1">&#39;bottom&#39;</span><span class="p">))</span>
+<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">GND</span><span class="p">)</span>
+<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">LINE</span><span class="p">,</span><span class="n">d</span><span class="o">=</span><span class="s1">&#39;up&#39;</span><span class="p">,</span><span class="n">toy</span><span class="o">=</span><span class="n">T2</span><span class="o">.</span><span class="n">collector</span><span class="p">)</span>
+<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">GAP_LABEL</span><span class="p">,</span> <span class="n">d</span><span class="o">=</span><span class="s1">&#39;down&#39;</span><span class="p">,</span> <span class="n">xy</span><span class="o">=</span> <span class="n">dot</span><span class="o">.</span><span class="n">start</span><span class="p">,</span> <span class="n">toy</span><span class="o">=</span> <span class="n">R</span><span class="o">.</span><span class="n">end</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;-&#39;</span><span class="p">,</span><span class="s1">&#39;$v_</span><span class="si">{out}</span><span class="s1">$&#39;</span><span class="p">,</span><span class="s1">&#39;$+$&#39;</span><span class="p">],</span><span class="n">lblofst</span><span class="o">=</span><span class="mf">0.4</span><span class="p">)</span>
+<span class="n">d</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/Klasse-D_4_0.svg" src="_images/Klasse-D_4_0.svg" /></div>
+</div>
+<div class="figure align-default" id="dfig2">
+<img alt="_images/mpl.svg" src="_images/mpl.svg" /><p class="caption"><span class="caption-number">Fig. 39 </span><span class="caption-text">Basisschema van de klasse D versterker, met nummering van de knopen overeenkomende met de onderstaande SPICE file</span><a class="headerlink" href="#dfig2" title="Permallink naar deze afbeelding">¶</a></p>
+</div>
+<p>De overeenkomende SPICE code voor dit circuit is:</p>
+<div class="cell tag_hide-input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">spicelisting</span><span class="p">(</span><span class="s1">&#39;simul\classD.sp&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>* Class D amp 1
+Q_Q1         3 1 2 Q2
+Q_Qp         0 1 2 Qp
+L_L1         5 2 1uH
+C_C1         5 6 10n
+R_RL         6 0 6
+V_Vdd        3 0 20V
+R_Rin        4 1 1
+V_Vin        4 0 PULSE(0 20 0 20ns 20ns 294ns 628ns) DC=0
+.model Q2  NPN(Is=14.34f BF=200)
+.model Qp  PNP(Is=5.34f BF=100)
+</pre></div>
+</div>
+</div>
+</div>
+<p class=spicecaption>basiscircuit van de Klasse D versterker</p><div class="cell tag_hide-input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># .print TRAN IC(Q_Q1) IC(Q_Qp) I(R_RL)</span>
+
+<span class="n">circuit</span><span class="o">=</span><span class="n">SpiceParser</span><span class="p">(</span><span class="n">path</span><span class="o">=</span><span class="s1">&#39;simul\classD.sp&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">build_circuit</span><span class="p">()</span>  
+<span class="n">end_time</span><span class="o">=</span><span class="mf">1e-5</span>
+<span class="n">simulator</span> <span class="o">=</span> <span class="n">circuit</span><span class="o">.</span><span class="n">simulator</span><span class="p">(</span><span class="n">temperature</span><span class="o">=</span><span class="mi">25</span><span class="p">,</span> <span class="n">nominal_temperature</span><span class="o">=</span><span class="mi">25</span><span class="p">)</span>
+<span class="c1">#simulator.save(&#39;2 1 5 6&#39;)  # dit mag niet langer zijn dan 15 tekens &quot;v(1) v(2) v(5) v(6)&quot; kan niet maar wel de 3 eerste</span>
+<span class="n">analysis</span> <span class="o">=</span> <span class="n">simulator</span><span class="o">.</span><span class="n">transient</span><span class="p">(</span><span class="n">step_time</span><span class="o">=</span><span class="mf">2e-10</span><span class="p">,</span> <span class="n">end_time</span><span class="o">=</span><span class="n">end_time</span><span class="p">)</span>
+<span class="n">figure</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">analysis</span><span class="o">.</span><span class="n">time</span><span class="o">*</span><span class="mf">1e6</span><span class="p">,</span><span class="n">analysis</span><span class="o">.</span><span class="n">nodes</span><span class="p">[</span><span class="s1">&#39;2&#39;</span><span class="p">],</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;V(2) [V]&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">analysis</span><span class="o">.</span><span class="n">time</span><span class="o">*</span><span class="mf">1e6</span><span class="p">,</span><span class="n">analysis</span><span class="o">.</span><span class="n">nodes</span><span class="p">[</span><span class="s1">&#39;5&#39;</span><span class="p">],</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;V(5) [V]&#39;</span> <span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">analysis</span><span class="o">.</span><span class="n">time</span><span class="o">*</span><span class="mf">1e6</span><span class="p">,</span><span class="n">analysis</span><span class="o">.</span><span class="n">nodes</span><span class="p">[</span><span class="s1">&#39;6&#39;</span><span class="p">],</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;V(6) [V]  ($V_</span><span class="si">{out}</span><span class="s1">$)&#39;</span> <span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">analysis</span><span class="o">.</span><span class="n">time</span><span class="o">*</span><span class="mf">1e6</span><span class="p">,</span><span class="n">analysis</span><span class="o">.</span><span class="n">nodes</span><span class="p">[</span><span class="s1">&#39;1&#39;</span><span class="p">],</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;V(1) [V]  ($V_</span><span class="si">{in}</span><span class="s1">$)&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span> <span class="n">loc</span><span class="o">=</span><span class="p">(</span><span class="mf">0.31</span><span class="p">,</span><span class="mf">.78</span><span class="p">))</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;tijd [us]&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">end_time</span><span class="o">*</span><span class="mf">1e6</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Voltage [V]&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/Klasse-D_9_0.png" src="_images/Klasse-D_9_0.png" />
+</div>
+</div>
+<div class="figure align-default" id="dfig5">
+<img alt="_images/mpl.svg" src="_images/mpl.svg" /><p class="caption"><span class="caption-number">Fig. 40 </span><span class="caption-text">Bekomen spanningen op de verschillende knopen in het hierboven aangegeven schema van de Klasse D versterker.</span><a class="headerlink" href="#dfig5" title="Permallink naar deze afbeelding">¶</a></p>
+</div>
+<p>We merken op dat de spanning aan knoop 5 een veel grotere swing heeft dan de uitgangspanning over <span class="math notranslate nohighlight">\(R_L\)</span> (i.e. knoop 6). De spanning op knoop 2 is typisch de verzadigingsspanning van Q1 lager dan de voedingsspanning (hier 20V) of de verzadigingsspanning van Qp hoger dan de grond.</p>
+<div class="cell tag_hide-input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">circuit</span><span class="o">=</span><span class="n">SpiceParser</span><span class="p">(</span><span class="n">path</span><span class="o">=</span><span class="s1">&#39;simul\classD.sp&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">build_circuit</span><span class="p">()</span>  
+<span class="n">end_time</span><span class="o">=</span><span class="mf">1e-5</span>
+<span class="n">simulator</span> <span class="o">=</span> <span class="n">circuit</span><span class="o">.</span><span class="n">simulator</span><span class="p">(</span><span class="n">temperature</span><span class="o">=</span><span class="mi">25</span><span class="p">,</span> <span class="n">nominal_temperature</span><span class="o">=</span><span class="mi">25</span><span class="p">)</span>
+
+<span class="c1">#simulator.save(&quot;@Q_Q1[ie]&quot;)</span>
+
+<span class="n">analysis</span> <span class="o">=</span> <span class="n">simulator</span><span class="o">.</span><span class="n">transient</span><span class="p">(</span><span class="n">step_time</span><span class="o">=</span><span class="mf">2e-10</span><span class="p">,</span> <span class="n">end_time</span><span class="o">=</span><span class="n">end_time</span><span class="p">)</span>
+<span class="n">figure</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
+<span class="c1">#ax.plot(analysis.time*1e6,-analysis.branches[&#39;Q_Q1[ie]&#39;]*201/200,label=&#39;ic(Q_Q1)&#39; )</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">analysis</span><span class="o">.</span><span class="n">time</span><span class="o">*</span><span class="mf">1e6</span><span class="p">,</span><span class="o">-</span><span class="n">analysis</span><span class="o">.</span><span class="n">branches</span><span class="p">[</span><span class="s1">&#39;v_vdd&#39;</span><span class="p">]</span><span class="o">*</span><span class="mi">201</span><span class="o">/</span><span class="mi">200</span><span class="p">,</span><span class="n">label</span><span class="o">=</span> <span class="s1">&#39;ic(Q_Q1)&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">analysis</span><span class="o">.</span><span class="n">time</span><span class="o">*</span><span class="mf">1e6</span><span class="p">,</span><span class="n">analysis</span><span class="o">.</span><span class="n">branches</span><span class="p">[</span><span class="s1">&#39;v_vdd&#39;</span><span class="p">]</span><span class="o">*</span><span class="mi">201</span><span class="o">/</span><span class="mi">200</span><span class="o">-</span><span class="n">analysis</span><span class="o">.</span><span class="n">branches</span><span class="p">[</span><span class="s1">&#39;l_l1&#39;</span><span class="p">],</span><span class="n">label</span><span class="o">=</span> <span class="s1">&#39;ic(Q_Qp)&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span> <span class="n">loc</span><span class="o">=</span><span class="p">(</span><span class="mf">0.31</span><span class="p">,</span><span class="mf">.78</span><span class="p">))</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;tijd [us]&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">end_time</span><span class="o">*</span><span class="mf">1e6</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;stroom [A]&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/Klasse-D_11_0.png" src="_images/Klasse-D_11_0.png" />
+</div>
+</div>
+<div class="figure align-default" id="dfig6">
+<img alt="_images/mpl.svg" src="_images/mpl.svg" /><p class="caption"><span class="caption-number">Fig. 41 </span><span class="caption-text">Stromen in de NPN en de PNP transistor van het hierboven aangegeven schema van de Klasse D versterker.</span><a class="headerlink" href="#dfig6" title="Permallink naar deze afbeelding">¶</a></p>
+</div>
+<div class="section" id="simulatie-met-aansturing-off-frequency">
+<h2>simulatie met aansturing off frequency<a class="headerlink" href="#simulatie-met-aansturing-off-frequency" title="Permalink naar deze titel">¶</a></h2>
+<p>Alleen tijdens het opstarten is kort deze spanning 0.7 V hoger dan voedingsspanning of 0.7V lager dan de grond. Merk op in de onderstaande figuur dat de stromen op deze momenten ook het ander teken hebben.</p>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "kuleuven"
+        },
+        kernelOptions: {
+            kernelName: "kuleuven",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'kuleuven'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="Klasse-F.html" title="vorige pagina">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">vorige</p>
+            <p class="prev-next-title">Klasse F Verstekers</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="Klasse-E.html" title="volgende pagina">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">volgende</p>
+        <p class="prev-next-title">Klasse E  Versterkers</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      Door Jan Genoe (jan.genoe@kuleuven.be)<br/>
+    
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

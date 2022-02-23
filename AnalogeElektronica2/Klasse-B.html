@@ -1,0 +1,473 @@
+
+<!DOCTYPE html>
+
+<html lang="nl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Klasse B versterkers &#8212; Analoge elektronische schakelingen</title>
+    
+  <link href="_static/css/theme.css" rel="stylesheet">
+  <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/translations.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Zoeken" href="search.html" />
+    <link rel="next" title="Buck Converter" href="Buck-converter.html" />
+    <link rel="prev" title="Klasse A versterkers" href="Klasse-A.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="nl">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="_static/logo.svg" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Analoge elektronische schakelingen</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Zoek in dit boek ..." aria-label="Zoek in dit boek ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro.html">
+   Analoge Elektronische Schakelingen
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Inleiding
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Hoe_dit_werkboek_gebruiken.html">
+   Hoe dit werkboek te gebruiken
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Versterkers
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Klasse-A.html">
+   Klasse A versterkers
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Klasse B versterkers
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Voedingen
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Buck-converter.html">
+   Buck Converter
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Boost-converter.html">
+   Boost Converter of Step-up Converter
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Inverter.html">
+   Inverter of Buck-Boost Converter
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Flyback-converter.html">
+   Flyback converter
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  <a href="https://www.kuleuven.be"> <img src=" http://stijl.kuleuven.be/2016tmp/img/svg/logo.svg" alt="KULeuven"></a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Schakel navigatie" aria-controls="site-navigation"
+                title="Schakel navigatie" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download deze pagina"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/Klasse-B.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download het bronbestand" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Afdrukken naar pdf"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/jangenoe/InteractieveCursus"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Bronopslagplaats"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/jangenoe/InteractieveCursus/issues/new?title=Issue%20on%20page%20%2FKlasse-B.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open een probleem"><i class="fas fa-lightbulb"></i>open probleem</button></a>
+        <a class="edit-button" href="https://github.com/jangenoe/InteractieveCursus/edit/master/AnalogeElektronica2/Klasse-B.ipynb"><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="bewerk deze pagina"><i class="fas fa-pencil-alt"></i>suggereren bewerken</button></a>
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Volledig scherm"
+        title="Volledig scherm"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/jangenoe/InteractieveCursus/master?urlpath=lab/tree/AnalogeElektronica2/Klasse-B.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Lancering Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        <a class="colab-button" href="https://colab.research.google.com/github/jangenoe/InteractieveCursus/blob/master/AnalogeElektronica2/Klasse-B.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+                title="Lancering Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
+                    src="_static/images/logo_colab.png"
+                    alt="Interact on Colab">Colab</button></a>
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Inhoud
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#uitgewerkt-voorbeeld-van-een-klasse-ab-met-mos-transistors">
+   Uitgewerkt voorbeeld van een klasse AB met MOS transistors
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="klasse-b-versterkers">
+<h1>Klasse B versterkers<a class="headerlink" href="#klasse-b-versterkers" title="Permalink naar deze titel">¶</a></h1>
+<p>De presentatie slides van dit hoofdstuk kan je <a href="./slides/Klasse-B.slides.html"> <code class="docutils literal notranslate"><span class="pre">hier</span></code> </a> vinden</p>
+<div class="section" id="uitgewerkt-voorbeeld-van-een-klasse-ab-met-mos-transistors">
+<h2>Uitgewerkt voorbeeld van een klasse AB met MOS transistors<a class="headerlink" href="#uitgewerkt-voorbeeld-van-een-klasse-ab-met-mos-transistors" title="Permalink naar deze titel">¶</a></h2>
+<p>In [1] wordt de klasse AB werking getoond aan de hand van het schema in Fig. 1. We bestuderen dit schema in meer detail. Eerst bekijken we de voorinsteltak. De 2 weerstanden R, samen met de 2 diodes zorgen ervoor dat zonder aangelegd signaal de spanning <span class="math notranslate nohighlight">\(V_i\)</span> gelegen is midden de 2 voedingsspanningen. De 2 weerstanden R zijn dan zo gekozen dat de <span class="math notranslate nohighlight">\(I_B\)</span> een DC stroomcomponenten heeft die mooi kan ingesteld worden door R.</p>
+<p>Wanneer we vervolgens een AC signaal aanleggen, krijgen we de volgende signalen:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(V_I+V_D\)</span> aan de ingang van de nMOS transistor <span class="math notranslate nohighlight">\(M_N\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(V_I-V_D\)</span> aan de ingang van de pMOS transistor <span class="math notranslate nohighlight">\(M_P\)</span></p></li>
+</ul>
+<p>Onder zo goed als alle omstandigheden zullen zowel de nMOS als de pMOS in saturatie zijn. Dit wil zeggen dat de stromen door deze transistors voldoen aan de vergelijkingen:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\( I_n=\mu_n C_{ox} \frac{W_n}{2L_n} (V_{GSn} -V_{Tn})^2\)</span>  als <span class="math notranslate nohighlight">\(V_{GSn} &gt;V_{Tn}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\( I_p=\mu_p C_{ox} \frac{W_p}{2L_p} (V_{GSp} -V_{Tp})^2\)</span>  als <span class="math notranslate nohighlight">\(V_{GSp} &lt;V_{Tp}\)</span></p></li>
+</ul>
+<div class="figure align-default" id="figbias">
+<img alt="_images/ClassB_Bias.png" src="_images/ClassB_Bias.png" />
+<p class="caption"><span class="caption-number">Fig. 7 </span><span class="caption-text">Klasse AB versterker met MOS transistors [1]</span><a class="headerlink" href="#figbias" title="Permallink naar deze afbeelding">¶</a></p>
+</div>
+<p>Wanneer we de spanning aan de gate en de source invullen krijgen we:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\( I_n=\mu_n C_{ox} \frac{W_n}{2L_n} (V_I+V_D- V_{out} -V_{Tn})^2\)</span>  als <span class="math notranslate nohighlight">\(V_I+V_D- V_{out} &gt;V_{Tn}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\( I_p=\mu_p C_{ox} \frac{W_p}{2L_p} (V_I-V_D -V_{out}-V_{Tp})^2\)</span>   als <span class="math notranslate nohighlight">\(V_I-V_D -V_{out} &lt;V_{Tp}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\( V_{out}= (I_n -I_p)R_L\)</span></p></li>
+</ul>
+<p>In de onderstaande berekening veronderstellen we dat:
+<span class="math notranslate nohighlight">\(\mu_n C_{ox} \frac{W_n}{2L_n}=\mu_p C_{ox} \frac{W_p}{2L_p}=0.02 A/V^2\)</span>,<span class="math notranslate nohighlight">\(V_D=0.7V\)</span>, <span class="math notranslate nohighlight">\(V_{Tn}=0.3V\)</span> <span class="math notranslate nohighlight">\(V_{Tp}=-0.3V\)</span> en <span class="math notranslate nohighlight">\(R_L=80 \Omega\)</span>.</p>
+<p>[1] X. Jiang, “Fundamentals of Audio Class D Amplifier Design: A Review of Schemes and Architectures,” IEEE Solid-State Circuits Magazine, vol. 9, no. 3, pp. 14–25, Summer 2017</p>
+<div class="cell tag_hide-input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="k">def</span> <span class="nf">Inmos</span><span class="p">(</span><span class="n">K</span><span class="p">,</span><span class="n">VGS</span><span class="p">,</span><span class="n">VT</span><span class="p">):</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">VGS</span><span class="o">-</span><span class="n">VT</span><span class="p">)</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">K</span><span class="o">*</span><span class="p">(</span><span class="n">VGS</span><span class="o">-</span><span class="n">VT</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="mi">0</span>
+<span class="k">def</span> <span class="nf">Ipmos</span><span class="p">(</span><span class="n">K</span><span class="p">,</span><span class="n">VGS</span><span class="p">,</span><span class="n">VT</span><span class="p">):</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">VGS</span><span class="o">-</span><span class="n">VT</span><span class="p">)</span><span class="o">&lt;</span><span class="mi">0</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">K</span><span class="o">*</span><span class="p">(</span><span class="n">VGS</span><span class="o">-</span><span class="n">VT</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="mi">0</span>
+
+<span class="k">def</span> <span class="nf">klasseBtransferplot</span><span class="p">(</span><span class="n">Vmax</span><span class="p">,</span><span class="n">Kp</span><span class="o">=</span><span class="mf">0.02</span><span class="p">,</span><span class="n">Kn</span><span class="o">=</span><span class="mf">0.02</span><span class="p">,</span><span class="n">Vd</span><span class="o">=</span><span class="mf">0.7</span><span class="p">,</span><span class="n">vtp</span><span class="o">=-</span><span class="mf">0.3</span><span class="p">,</span><span class="n">vtn</span><span class="o">=</span><span class="mf">0.3</span><span class="p">,</span><span class="n">RL</span><span class="o">=</span><span class="mi">80</span><span class="p">):</span>
+    <span class="n">vii</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">Vmax</span><span class="p">,</span><span class="n">Vmax</span><span class="o">/</span><span class="mi">100</span><span class="p">)</span> <span class="c1"># sweeping up</span>
+    <span class="n">Avout</span><span class="o">=</span><span class="p">[]</span>
+    <span class="n">Aiin</span><span class="o">=</span><span class="p">[]</span>
+    <span class="n">Aiip</span><span class="o">=</span><span class="p">[]</span>
+    <span class="n">voo</span><span class="o">=</span><span class="mi">0</span>
+    <span class="k">for</span> <span class="n">vi</span> <span class="ow">in</span> <span class="n">vii</span><span class="p">:</span>
+        <span class="n">vgn</span><span class="o">=</span><span class="n">vi</span><span class="o">+</span><span class="n">Vd</span>
+        <span class="n">vgp</span><span class="o">=</span><span class="n">vi</span><span class="o">-</span><span class="n">Vd</span>
+        <span class="k">for</span> <span class="n">ii</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">40</span><span class="p">):</span>
+            <span class="n">vgsn</span><span class="o">=</span><span class="n">vgn</span><span class="o">-</span><span class="n">voo</span>
+            <span class="n">vgsp</span><span class="o">=</span><span class="n">vgp</span><span class="o">-</span><span class="n">voo</span>
+            <span class="n">voo2</span><span class="o">=</span><span class="n">RL</span><span class="o">*</span><span class="p">(</span><span class="n">Inmos</span><span class="p">(</span><span class="n">Kn</span><span class="p">,</span><span class="n">vgsn</span><span class="p">,</span><span class="n">vtn</span><span class="p">)</span><span class="o">-</span><span class="n">Ipmos</span><span class="p">(</span><span class="n">Kp</span><span class="p">,</span><span class="n">vgsp</span><span class="p">,</span><span class="n">vtp</span><span class="p">))</span>
+            <span class="n">voo</span><span class="o">=</span><span class="p">(</span><span class="mi">4</span><span class="o">*</span><span class="n">voo</span><span class="o">+</span><span class="n">voo2</span><span class="p">)</span><span class="o">/</span><span class="mi">5</span>
+        <span class="n">Avout</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">voo</span><span class="p">)</span>
+        <span class="n">Aiin</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">Inmos</span><span class="p">(</span><span class="n">Kn</span><span class="p">,</span><span class="n">vgsn</span><span class="p">,</span><span class="n">vtn</span><span class="p">))</span>
+        <span class="n">Aiip</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">Ipmos</span><span class="p">(</span><span class="n">Kp</span><span class="p">,</span><span class="n">vgsp</span><span class="p">,</span><span class="n">vtp</span><span class="p">))</span>
+    <span class="n">vii</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="o">-</span><span class="n">Vmax</span><span class="p">,</span><span class="o">-</span><span class="n">Vmax</span><span class="o">/</span><span class="mi">100</span><span class="p">)</span>  <span class="c1"># sweeping down</span>
+    <span class="n">Bvout</span><span class="o">=</span><span class="p">[]</span>
+    <span class="n">Biin</span><span class="o">=</span><span class="p">[]</span>
+    <span class="n">Biip</span><span class="o">=</span><span class="p">[]</span>
+    <span class="n">voo</span><span class="o">=</span><span class="mi">0</span>
+    <span class="k">for</span> <span class="n">vi</span> <span class="ow">in</span> <span class="n">vii</span><span class="p">:</span>
+        <span class="n">vgn</span><span class="o">=</span><span class="n">vi</span><span class="o">+</span><span class="n">Vd</span>
+        <span class="n">vgp</span><span class="o">=</span><span class="n">vi</span><span class="o">-</span><span class="n">Vd</span>
+        <span class="k">for</span> <span class="n">ii</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">40</span><span class="p">):</span>
+            <span class="n">vgsn</span><span class="o">=</span><span class="n">vgn</span><span class="o">-</span><span class="n">voo</span>
+            <span class="n">vgsp</span><span class="o">=</span><span class="n">vgp</span><span class="o">-</span><span class="n">voo</span>
+            <span class="n">voo2</span><span class="o">=</span><span class="n">RL</span><span class="o">*</span><span class="p">(</span><span class="n">Inmos</span><span class="p">(</span><span class="n">Kn</span><span class="p">,</span><span class="n">vgsn</span><span class="p">,</span><span class="n">vtn</span><span class="p">)</span><span class="o">-</span><span class="n">Ipmos</span><span class="p">(</span><span class="n">Kp</span><span class="p">,</span><span class="n">vgsp</span><span class="p">,</span><span class="n">vtp</span><span class="p">))</span>
+            <span class="n">voo</span><span class="o">=</span><span class="p">(</span><span class="mi">4</span><span class="o">*</span><span class="n">voo</span><span class="o">+</span><span class="n">voo2</span><span class="p">)</span><span class="o">/</span><span class="mi">5</span>
+        <span class="n">Bvout</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">voo</span><span class="p">)</span>
+        <span class="n">Biin</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">Inmos</span><span class="p">(</span><span class="n">Kn</span><span class="p">,</span><span class="n">vgsn</span><span class="p">,</span><span class="n">vtn</span><span class="p">))</span>
+        <span class="n">Biip</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">Ipmos</span><span class="p">(</span><span class="n">Kp</span><span class="p">,</span><span class="n">vgsp</span><span class="p">,</span><span class="n">vtp</span><span class="p">))</span>
+        
+    <span class="n">vii</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="o">-</span><span class="n">Vmax</span><span class="o">+</span><span class="n">Vmax</span><span class="o">/</span><span class="mi">100</span><span class="p">,</span><span class="n">Vmax</span><span class="p">,</span><span class="n">Vmax</span><span class="o">/</span><span class="mi">100</span><span class="p">)</span> <span class="c1"># double sweep</span>
+    
+    <span class="n">vout</span><span class="o">=</span><span class="n">Bvout</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">+</span><span class="n">Avout</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span>
+    <span class="n">iin</span><span class="o">=</span><span class="n">Biin</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">+</span><span class="n">Aiin</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span>
+    <span class="n">iip</span><span class="o">=</span><span class="n">Biip</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">+</span><span class="n">Aiip</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span>
+    <span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="mi">12</span><span class="p">),</span> <span class="n">sharex</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">fig</span><span class="o">.</span><span class="n">subplots_adjust</span><span class="p">(</span><span class="n">hspace</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+    <span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="n">linestyle</span><span class="o">=</span><span class="s2">&quot;-.&quot;</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">)</span>
+    <span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="n">linestyle</span><span class="o">=</span><span class="s2">&quot;-.&quot;</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">)</span>
+    <span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">vii</span><span class="p">,</span><span class="n">vout</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="s2">&quot;Uitgangsspanning Vout&quot;</span><span class="p">)</span>
+    <span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">vii</span><span class="p">,</span><span class="n">vii</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="s2">&quot;Ideale transfercurve&quot;</span><span class="p">)</span>
+    <span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">vii</span><span class="p">,</span><span class="n">iin</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="s2">&quot;$Stroom van Mn: I_n$&quot;</span><span class="p">)</span>
+    <span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">vii</span><span class="p">,</span><span class="n">iip</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="s2">&quot;$Stroom van Mp: I_p$&quot;</span><span class="p">)</span>
+    <span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;Input Voltage (V)&quot;</span><span class="p">)</span>
+    <span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Output current (A)&quot;</span><span class="p">)</span>  
+    <span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Output Voltage (V)&quot;</span><span class="p">)</span>
+    <span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">(</span><span class="o">-</span><span class="n">Vmax</span><span class="p">,</span><span class="n">Vmax</span><span class="p">)</span>
+    <span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+    <span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">();</span>
+
+<span class="n">klasseBtransferplot</span><span class="p">(</span><span class="mi">8</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/Klasse-B_2_0.png" src="_images/Klasse-B_2_0.png" />
+</div>
+</div>
+<div class="figure align-default" id="transfer1">
+<img alt="_images/mpl.svg" src="_images/mpl.svg" /><p class="caption"><span class="caption-number">Fig. 8 </span><span class="caption-text">Transfer curve en stroom van de beide transistors.</span><a class="headerlink" href="#transfer1" title="Permallink naar deze afbeelding">¶</a></p>
+</div>
+<div class="cell tag_hide-input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">klasseBtransferplot</span><span class="p">(</span><span class="mf">1.7</span><span class="p">,</span><span class="n">RL</span><span class="o">=</span><span class="mi">80</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/Klasse-B_4_0.png" src="_images/Klasse-B_4_0.png" />
+</div>
+</div>
+<div class="figure align-default" id="transfer1b">
+<img alt="_images/mpl.svg" src="_images/mpl.svg" /><p class="caption"><span class="caption-number">Fig. 9 </span><span class="caption-text">Detail van de zone rond de oorsprong. We zien dat hier beide transistors in geleiding zijn.</span><a class="headerlink" href="#transfer1b" title="Permallink naar deze afbeelding">¶</a></p>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "kuleuven"
+        },
+        kernelOptions: {
+            kernelName: "kuleuven",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'kuleuven'</script>
+
+              </div>
+              
+        
+            <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="Klasse-A.html" title="vorige pagina">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">vorige</p>
+            <p class="prev-next-title">Klasse A versterkers</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="Buck-converter.html" title="volgende pagina">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">volgende</p>
+        <p class="prev-next-title">Buck Converter</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+        
+        </div>
+    </div>
+    <footer class="footer">
+    <div class="container">
+      <p>
+        
+          Door Jan Genoe (jan.genoe@kuleuven.be)<br/>
+        
+            &copy; auteursrechten 2022.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

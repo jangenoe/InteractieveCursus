@@ -1,0 +1,1373 @@
+
+<!DOCTYPE html>
+
+<html lang="nl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Smith Kaart Oefening 4 &#8212; Toegepaste Analoge Elektronica</title>
+    
+  <link href="_static/css/theme.css" rel="stylesheet">
+  <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/translations.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Zoeken" href="search.html" />
+    <link rel="next" title="Smith Kaart Oefening 5" href="SmithKaartOefening5.html" />
+    <link rel="prev" title="Smith Kaart Oefening 3" href="SmithKaartOefening3.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="nl">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="_static/logo.svg" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Toegepaste Analoge Elektronica</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Zoek in dit boek ..." aria-label="Zoek in dit boek ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro.html">
+   Toegepaste Analoge Elektronica
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Versterkers
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Klasse-C.html">
+   Klasse C  Versterkers
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Klasse-F.html">
+   Klasse F Verstekers
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Klasse-D.html">
+   Klasse D  Versterkers
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Klasse-E.html">
+   Klasse E  Versterkers
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Filters
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Filters.html">
+   Filters
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  transmissielijnen
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="transmissielijn.html">
+   Transmissie lijnen
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="reflecties.html">
+   Reflecties
+  </a>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="SmithKaart.html">
+   SmithKaart
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="SmithKaartOefening1.html">
+     Smith Kaart Oefening 1
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="SmithKaartOefening2.html">
+     Smith Kaart Oefening 2
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="SmithKaartOefening3.html">
+     Smith Kaart Oefening 3
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Smith Kaart Oefening 4
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="SmithKaartOefening5.html">
+     Smith Kaart Oefening 5
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="SmithKaartOefening6.html">
+     Smith Kaart Oefening 6
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="SmithKaartOefening7.html">
+     Smith Kaart Oefening 7
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  <a href="https://www.kuleuven.be"> <img src=" http://stijl.kuleuven.be/2016tmp/img/svg/logo.svg" alt="KULeuven"></a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Schakel navigatie" aria-controls="site-navigation"
+                title="Schakel navigatie" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download deze pagina"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/SmithKaartOefening4.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download het bronbestand" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Afdrukken naar pdf"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/jangenoe/InteractieveCursus"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Bronopslagplaats"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/jangenoe/InteractieveCursus/issues/new?title=Issue%20on%20page%20%2FSmithKaartOefening4.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open een probleem"><i class="fas fa-lightbulb"></i>open probleem</button></a>
+        <a class="edit-button" href="https://github.com/jangenoe/InteractieveCursus/edit/master/ToegepasteAnalogeElektronica/SmithKaartOefening4.ipynb"><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="bewerk deze pagina"><i class="fas fa-pencil-alt"></i>suggereren bewerken</button></a>
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Volledig scherm"
+        title="Volledig scherm"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/jangenoe/InteractieveCursus/master?urlpath=lab/tree/ToegepasteAnalogeElektronica/SmithKaartOefening4.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Lancering Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        <a class="colab-button" href="https://colab.research.google.com/github/jangenoe/InteractieveCursus/blob/master/ToegepasteAnalogeElektronica/SmithKaartOefening4.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+                title="Lancering Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
+                    src="_static/images/logo_colab.png"
+                    alt="Interact on Colab">Colab</button></a>
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Inhoud
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#opgave">
+   Opgave
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#oplossing">
+   Oplossing
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#oplossing-1-bijplaatsen-van-een-capaciteit-in-serie">
+     Oplossing 1: Bijplaatsen van een capaciteit in serie
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#oplossing-2-bijplaatsen-van-een-inductantie-in-serie">
+     Oplossing 2: Bijplaatsen van een inductantie in serie
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#oplossing-3-bijplaatsen-van-een-capaciteit-in-parallel">
+     Oplossing 3: Bijplaatsen van een capaciteit in parallel
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#oplossing-4-bijplaatsen-van-een-spoel-in-parallel">
+     Oplossing 4: Bijplaatsen van een spoel in parallel
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#oplossing-5-oplossing-3-waarbij-de-condensator-vervangen-is-door-een-open-transmissielijn">
+     Oplossing 5: Oplossing 3 waarbij de condensator vervangen is door een open transmissielijn
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#oplossing-6-oplossing-3-waarbij-de-condensator-vervangen-is-door-een-kortgesloten-transmissielijn">
+     Oplossing 6: Oplossing 3 waarbij de condensator vervangen is door een kortgesloten transmissielijn
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#oplossing-7-oplossing-4-waarbij-het-spoel-vervangen-is-door-een-open-transmissielijn">
+     Oplossing 7: Oplossing 4 waarbij het spoel vervangen is door een open transmissielijn
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#oplossing-8-oplossing-4-waarbij-het-spoel-vervangen-is-door-een-kortgesloten-transmissielijn">
+     Oplossing 8: Oplossing 4 waarbij het spoel vervangen is door een kortgesloten transmissielijn
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Smith Kaart Oefening 4</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Inhoud </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#opgave">
+   Opgave
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#oplossing">
+   Oplossing
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#oplossing-1-bijplaatsen-van-een-capaciteit-in-serie">
+     Oplossing 1: Bijplaatsen van een capaciteit in serie
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#oplossing-2-bijplaatsen-van-een-inductantie-in-serie">
+     Oplossing 2: Bijplaatsen van een inductantie in serie
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#oplossing-3-bijplaatsen-van-een-capaciteit-in-parallel">
+     Oplossing 3: Bijplaatsen van een capaciteit in parallel
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#oplossing-4-bijplaatsen-van-een-spoel-in-parallel">
+     Oplossing 4: Bijplaatsen van een spoel in parallel
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#oplossing-5-oplossing-3-waarbij-de-condensator-vervangen-is-door-een-open-transmissielijn">
+     Oplossing 5: Oplossing 3 waarbij de condensator vervangen is door een open transmissielijn
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#oplossing-6-oplossing-3-waarbij-de-condensator-vervangen-is-door-een-kortgesloten-transmissielijn">
+     Oplossing 6: Oplossing 3 waarbij de condensator vervangen is door een kortgesloten transmissielijn
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#oplossing-7-oplossing-4-waarbij-het-spoel-vervangen-is-door-een-open-transmissielijn">
+     Oplossing 7: Oplossing 4 waarbij het spoel vervangen is door een open transmissielijn
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#oplossing-8-oplossing-4-waarbij-het-spoel-vervangen-is-door-een-kortgesloten-transmissielijn">
+     Oplossing 8: Oplossing 4 waarbij het spoel vervangen is door een kortgesloten transmissielijn
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="smith-kaart-oefening-4">
+<h1>Smith Kaart Oefening 4<a class="headerlink" href="#smith-kaart-oefening-4" title="Permalink naar deze titel">¶</a></h1>
+<div class="section" id="opgave">
+<h2>Opgave<a class="headerlink" href="#opgave" title="Permalink naar deze titel">¶</a></h2>
+<p>Gebruik je Smith kaart om een antenne van 150 Ohm aan te passen aan een coax van 50 Ohm voor een frequentie van 600 MHz (<span class="math notranslate nohighlight">\(\lambda\)</span>= 25 cm; <span class="math notranslate nohighlight">\(\epsilon_r\)</span>=4)? Welke verschillende oplossingen zijn er mogelijk?</p>
+</div>
+<div class="section" id="oplossing">
+<h2>Oplossing<a class="headerlink" href="#oplossing" title="Permalink naar deze titel">¶</a></h2>
+<p>Er zijn hiervoor 8 oplossingen mogelijk.</p>
+<p>We bespreken hieronder elk van deze 8 oplossing:</p>
+<div class="cell tag_hide-input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">skrf</span> <span class="k">as</span> <span class="nn">rf</span>
+<span class="kn">import</span> <span class="nn">schemdraw</span>
+<span class="kn">import</span> <span class="nn">schemdraw.elements</span> <span class="k">as</span> <span class="nn">elm</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="oplossing-1-bijplaatsen-van-een-capaciteit-in-serie">
+<h3>Oplossing 1: Bijplaatsen van een capaciteit in serie<a class="headerlink" href="#oplossing-1-bijplaatsen-van-een-capaciteit-in-serie" title="Permalink naar deze titel">¶</a></h3>
+<p>We plaatsen <span class="math notranslate nohighlight">\(z= \frac{Z_L}{Z_0}=3\)</span> op de Smith kaart (rode dotje) en we zoeken waar we de r=1 cirkel snijden in het bovenste deel van de Smith kaart (groene dotje).</p>
+<div class="cell tag_hide-input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Z_L</span> <span class="o">=</span> <span class="mi">150</span>
+<span class="n">Z_0</span> <span class="o">=</span> <span class="mi">50</span>
+<span class="n">f_0_str</span> <span class="o">=</span> <span class="s1">&#39;600MHz&#39;</span>
+<span class="n">freq</span> <span class="o">=</span> <span class="n">rf</span><span class="o">.</span><span class="n">Frequency</span><span class="p">(</span><span class="n">start</span><span class="o">=</span><span class="mi">500</span><span class="p">,</span> <span class="n">stop</span><span class="o">=</span><span class="mi">700</span><span class="p">,</span> <span class="n">npoints</span><span class="o">=</span><span class="mi">31</span><span class="p">,</span> <span class="n">unit</span><span class="o">=</span><span class="s1">&#39;MHz&#39;</span><span class="p">)</span>
+<span class="n">beta</span> <span class="o">=</span> <span class="n">freq</span><span class="o">.</span><span class="n">w</span><span class="o">/</span><span class="n">rf</span><span class="o">.</span><span class="n">c</span>
+<span class="n">line</span> <span class="o">=</span> <span class="n">rf</span><span class="o">.</span><span class="n">DefinedGammaZ0</span><span class="p">(</span><span class="n">freq</span><span class="p">,</span> <span class="n">gamma</span><span class="o">=</span><span class="mi">1</span><span class="n">j</span><span class="o">*</span><span class="n">beta</span><span class="p">,</span> <span class="n">z0</span><span class="o">=</span><span class="n">Z_0</span><span class="p">)</span>
+<span class="n">zlijn</span><span class="o">=</span><span class="p">[</span><span class="n">line</span><span class="o">.</span><span class="n">delay_load</span><span class="p">(</span><span class="n">rf</span><span class="o">.</span><span class="n">zl_2_Gamma0</span><span class="p">(</span><span class="n">Z_0</span><span class="p">,</span> <span class="n">Z_L</span><span class="p">),</span> <span class="n">i</span><span class="o">/</span><span class="mi">2</span><span class="p">)[</span><span class="n">f_0_str</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">z</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>  <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">301</span><span class="p">)]</span>
+<span class="k">def</span> <span class="nf">smitplot</span><span class="p">(</span><span class="n">zlijn</span><span class="p">,</span><span class="n">Z_0</span><span class="p">,</span><span class="n">tt</span><span class="o">=</span><span class="s1">&#39;z&#39;</span><span class="p">):</span>
+    <span class="n">gamma</span><span class="o">=</span><span class="p">[(</span><span class="n">zl</span><span class="o">-</span><span class="n">Z_0</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="n">zl</span><span class="o">+</span><span class="n">Z_0</span><span class="p">)</span> <span class="k">for</span> <span class="n">zl</span> <span class="ow">in</span> <span class="n">zlijn</span><span class="p">]</span>
+    <span class="n">fig</span><span class="p">,</span><span class="n">ax</span><span class="o">=</span><span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">25</span><span class="p">,</span><span class="mi">15</span><span class="p">))</span>
+    <span class="n">rf</span><span class="o">.</span><span class="n">plotting</span><span class="o">.</span><span class="n">plot_smith</span><span class="p">(</span><span class="n">gamma</span><span class="p">,</span> <span class="n">chart_type</span><span class="o">=</span><span class="n">tt</span><span class="p">,</span> <span class="n">x_label</span><span class="o">=</span><span class="sa">r</span><span class="s2">&quot;Reëel deel&quot;</span><span class="p">,</span> <span class="n">y_label</span><span class="o">=</span><span class="s1">&#39;Imaginair deel&#39;</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">([</span><span class="n">gamma</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">real</span><span class="p">],[</span><span class="n">gamma</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">imag</span><span class="p">],</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;green&#39;</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s2">&quot;.&quot;</span><span class="p">,</span> <span class="n">markersize</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">([</span><span class="n">gamma</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">real</span><span class="p">],[</span><span class="n">gamma</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">imag</span><span class="p">],</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s2">&quot;.&quot;</span><span class="p">,</span> <span class="n">markersize</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span>
+<span class="n">smitplot</span><span class="p">(</span><span class="n">zlijn</span><span class="p">,</span><span class="n">Z_0</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/SmithKaartOefening4_5_0.png" src="_images/SmithKaartOefening4_5_0.png" />
+</div>
+</div>
+<div class="figure align-default" id="smith4s1">
+<img alt="_images/mpl.svg" src="_images/mpl.svg" /><p class="caption"><span class="caption-number">Fig. 131 </span><span class="caption-text">Smith kaart van de eerste oplossing</span><a class="headerlink" href="#smith4s1" title="Permallink naar deze afbeelding">¶</a></p>
+</div>
+<p>Als we van de aanpassing (groene dot) naar de belasting gaan (rode dot), draaien we in tegenwijzerzin over een afstand van <span class="math notranslate nohighlight">\(300^o\)</span>. Dit geeft een afstand van <span class="math notranslate nohighlight">\(\frac{300}{360}\frac{\lambda}{2}\)</span>=0.416 <span class="math notranslate nohighlight">\(\lambda\)</span> = 10.41cm.    (<span class="math notranslate nohighlight">\(\lambda\)</span>= 25 cm is gegeven)</p>
+<p>De nieuwe z = 1 + j 1.15. Daaruit volgt dat Z = 50 Ohm + j 57.5 Ohm (zie Table 1). Het complexe deel van deze impedantie kunnen we compenseren door een condensator met impedantie van ongeveer - j 57.5 Ohm  toe te voegen. Als we het helemaal juist willen hebben kunnen we in de array van de lijnimpedantie (zie Table 1) juist gaan kijken waar het reele deel 50 Ohm wordt en wat we dan als complex deel over houden.</p>
+<div class="math notranslate nohighlight">
+\[ \frac{1}{j \omega C}= - j 57.5 \Omega\]</div>
+<p>Als we vervolgens <span class="math notranslate nohighlight">\(\omega\)</span> invullen, wetende dat de freqentie f=600 MHz:</p>
+<div class="math notranslate nohighlight">
+\[ \omega= 2 \pi \cdot  600\times 10^6 \]</div>
+<div class="math notranslate nohighlight">
+\[ C= 4.59 pF  \]</div>
+<div class="cell tag_hide-input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">1</span><span class="o">/</span><span class="mf">57.73502691896258</span><span class="o">/</span><span class="mf">6e8</span><span class="o">/</span><span class="mi">2</span><span class="o">/</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_hide-input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Z_L</span> <span class="o">=</span> <span class="mi">150</span>
+<span class="n">Z_0</span> <span class="o">=</span> <span class="mi">50</span>
+<span class="n">f_0_str</span> <span class="o">=</span> <span class="s1">&#39;600MHz&#39;</span>
+<span class="n">freq</span> <span class="o">=</span> <span class="n">rf</span><span class="o">.</span><span class="n">Frequency</span><span class="p">(</span><span class="n">start</span><span class="o">=</span><span class="mi">500</span><span class="p">,</span> <span class="n">stop</span><span class="o">=</span><span class="mi">700</span><span class="p">,</span> <span class="n">npoints</span><span class="o">=</span><span class="mi">301</span><span class="p">,</span> <span class="n">unit</span><span class="o">=</span><span class="s1">&#39;MHz&#39;</span><span class="p">)</span>
+<span class="n">beta</span> <span class="o">=</span> <span class="n">freq</span><span class="o">.</span><span class="n">w</span><span class="o">/</span><span class="n">rf</span><span class="o">.</span><span class="n">c</span>
+<span class="n">line</span> <span class="o">=</span> <span class="n">rf</span><span class="o">.</span><span class="n">DefinedGammaZ0</span><span class="p">(</span><span class="n">freq</span><span class="p">,</span> <span class="n">gamma</span><span class="o">=</span><span class="mi">1</span><span class="n">j</span><span class="o">*</span><span class="n">beta</span><span class="p">,</span> <span class="n">z0</span><span class="o">=</span><span class="n">Z_0</span><span class="p">)</span>
+<span class="n">zlijn</span><span class="o">=</span><span class="p">[(</span><span class="n">i</span><span class="p">,</span><span class="n">line</span><span class="o">.</span><span class="n">delay_load</span><span class="p">(</span><span class="n">rf</span><span class="o">.</span><span class="n">zl_2_Gamma0</span><span class="p">(</span><span class="n">Z_0</span><span class="p">,</span> <span class="n">Z_L</span><span class="p">),</span> <span class="n">i</span><span class="o">/</span><span class="mi">2</span><span class="p">)[</span><span class="n">f_0_str</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">z</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">])</span>  <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">297</span><span class="p">,</span><span class="mi">303</span><span class="p">)]</span>
+<span class="k">def</span> <span class="nf">zlijnprint</span><span class="p">(</span><span class="n">zlijn</span><span class="p">,</span><span class="n">golflengte</span><span class="o">=</span><span class="mi">25</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;hoek    impedantie (Ohm)     lengte coax (cm)&#39;</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">i</span><span class="p">,</span><span class="n">zi</span> <span class="ow">in</span> <span class="n">zlijn</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">{:4}</span><span class="s1">  Z= </span><span class="si">{:.2f}{:+.2f}</span><span class="s1">j Ohm     lengte=</span><span class="si">{:.2f}</span><span class="s1"> cm&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="n">zi</span><span class="o">.</span><span class="n">real</span><span class="p">,</span><span class="n">zi</span><span class="o">.</span><span class="n">imag</span><span class="p">,</span> <span class="n">i</span><span class="o">/</span><span class="mi">360</span><span class="o">*</span><span class="n">golflengte</span><span class="o">/</span><span class="mi">2</span><span class="p">))</span>
+<span class="n">zlijnprint</span><span class="p">(</span><span class="n">zlijn</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>hoek    impedantie (Ohm)     lengte coax (cm)
+ 297  Z= 47.11+55.97j Ohm     lengte=10.31 cm
+ 298  Z= 48.04+56.56j Ohm     lengte=10.35 cm
+ 299  Z= 49.01+57.15j Ohm     lengte=10.38 cm
+ 300  Z= 50.00+57.74j Ohm     lengte=10.42 cm
+ 301  Z= 51.02+58.31j Ohm     lengte=10.45 cm
+ 302  Z= 52.08+58.89j Ohm     lengte=10.49 cm
+</pre></div>
+</div>
+</div>
+</div>
+<p class=tabcaption> Overzicht van de bekomen impedantie als funktie van de hoek op de Smith kaart. De laatste kolom geeft de nodige lengte van de coax</p><p class="alert alert-success">
+De optimale condensatorwaarde in serie wordt dus  4.59 pF en de nodige lengte van de coax tussen de antenne en de aanpassing is 10.4 cm
+</p><p>Het schema dat we nodig hebben om deze eerst oplossing te realiseren wordt dus:</p>
+<div class="cell tag_hide-input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">d</span> <span class="o">=</span> <span class="n">schemdraw</span><span class="o">.</span><span class="n">Drawing</span><span class="p">()</span>
+<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">elm</span><span class="o">.</span><span class="n">Ground</span><span class="p">())</span>
+<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">elm</span><span class="o">.</span><span class="n">Dot</span><span class="p">)</span>
+<span class="n">bron</span><span class="o">=</span><span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">elm</span><span class="o">.</span><span class="n">SourceSin</span><span class="p">(</span><span class="n">l</span><span class="o">=</span><span class="mf">2.0</span><span class="p">,</span><span class="n">d</span><span class="o">=</span><span class="s1">&#39;up&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;$V_</span><span class="si">{in}</span><span class="s1">$&#39;</span><span class="p">))</span>
+<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">elm</span><span class="o">.</span><span class="n">Line</span><span class="p">(</span><span class="n">l</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">d</span><span class="o">=</span><span class="s1">&#39;right&#39;</span><span class="p">)</span> <span class="p">)</span>
+<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">elm</span><span class="o">.</span><span class="n">Line</span><span class="p">(</span><span class="n">l</span><span class="o">=</span><span class="mf">0.4</span><span class="p">,</span><span class="n">d</span><span class="o">=</span><span class="s1">&#39;down&#39;</span><span class="p">)</span> <span class="p">)</span>
+<span class="n">coax1</span><span class="o">=</span><span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">elm</span><span class="o">.</span><span class="n">coax</span><span class="p">(</span><span class="n">d</span><span class="o">=</span><span class="s1">&#39;right&#39;</span><span class="p">,</span><span class="n">length</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;$50\Omega$&#39;</span><span class="p">))</span>
+<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">elm</span><span class="o">.</span><span class="n">Dot</span><span class="p">)</span>
+<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">elm</span><span class="o">.</span><span class="n">Capacitor</span><span class="p">(</span><span class="n">l</span><span class="o">=</span><span class="mf">1.5</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;4.59pF&#39;</span><span class="p">))</span>
+<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">elm</span><span class="o">.</span><span class="n">Dot</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;g&#39;</span><span class="p">)</span>
+<span class="n">coax2</span><span class="o">=</span><span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">elm</span><span class="o">.</span><span class="n">coax</span><span class="p">(</span><span class="n">l</span><span class="o">=</span><span class="mf">1.5</span><span class="p">,</span><span class="n">length</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;$50\Omega$&#39;</span><span class="p">,</span> <span class="n">botlabel</span><span class="o">=</span><span class="s1">&#39;10.4 cm&#39;</span><span class="p">))</span>
+<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">elm</span><span class="o">.</span><span class="n">Dot</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;r&#39;</span><span class="p">)</span>
+<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">elm</span><span class="o">.</span><span class="n">Antenna</span><span class="p">(</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;$150\Omega$&#39;</span><span class="p">))</span>
+<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">elm</span><span class="o">.</span><span class="n">Line</span><span class="p">(</span><span class="n">xy</span><span class="o">=</span><span class="n">coax1</span><span class="o">.</span><span class="n">shieldend</span><span class="p">,</span><span class="n">l</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">d</span><span class="o">=</span><span class="s1">&#39;down&#39;</span><span class="p">))</span>
+<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">elm</span><span class="o">.</span><span class="n">Line</span><span class="p">(</span><span class="n">tox</span><span class="o">=</span><span class="n">coax2</span><span class="o">.</span><span class="n">shieldstart</span><span class="p">,</span><span class="n">d</span><span class="o">=</span><span class="s1">&#39;right&#39;</span><span class="p">)</span> <span class="p">)</span>     
+<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">elm</span><span class="o">.</span><span class="n">Line</span><span class="p">(</span><span class="n">toy</span><span class="o">=</span><span class="n">coax2</span><span class="o">.</span><span class="n">shieldstart</span><span class="p">,</span><span class="n">d</span><span class="o">=</span><span class="s1">&#39;up&#39;</span><span class="p">)</span> <span class="p">)</span>     
+<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">elm</span><span class="o">.</span><span class="n">Line</span><span class="p">(</span><span class="n">xy</span><span class="o">=</span><span class="n">bron</span><span class="o">.</span><span class="n">start</span><span class="p">,</span><span class="n">tox</span><span class="o">=</span><span class="n">coax1</span><span class="o">.</span><span class="n">shieldstart</span><span class="p">,</span><span class="n">d</span><span class="o">=</span><span class="s1">&#39;right&#39;</span><span class="p">)</span> <span class="p">)</span>
+<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">elm</span><span class="o">.</span><span class="n">Line</span><span class="p">(</span><span class="n">toy</span><span class="o">=</span><span class="n">coax1</span><span class="o">.</span><span class="n">shieldstart</span><span class="p">,</span><span class="n">d</span><span class="o">=</span><span class="s1">&#39;up&#39;</span><span class="p">)</span> <span class="p">)</span>
+<span class="n">d</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/SmithKaartOefening4_13_0.svg" src="_images/SmithKaartOefening4_13_0.svg" /></div>
+</div>
+<div class="figure align-default" id="smith4f1">
+<img alt="_images/mpl.svg" src="_images/mpl.svg" /><p class="caption"><span class="caption-number">Fig. 132 </span><span class="caption-text">circuit van de eerste oplossing</span><a class="headerlink" href="#smith4f1" title="Permallink naar deze afbeelding">¶</a></p>
+</div>
+</div>
+<div class="section" id="oplossing-2-bijplaatsen-van-een-inductantie-in-serie">
+<h3>Oplossing 2: Bijplaatsen van een inductantie in serie<a class="headerlink" href="#oplossing-2-bijplaatsen-van-een-inductantie-in-serie" title="Permalink naar deze titel">¶</a></h3>
+<p>We plaatsen <span class="math notranslate nohighlight">\(\frac{Z_L}{Z_0}=3\)</span> op de Smith kaart en we zoeken waar we de r=1 cirkel snijden in het onderste deel van de kaart.</p>
+<div class="cell tag_hide-input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Z_L</span> <span class="o">=</span> <span class="mi">150</span>
+<span class="n">Z_0</span> <span class="o">=</span> <span class="mi">50</span>
+<span class="n">f_0_str</span> <span class="o">=</span> <span class="s1">&#39;600MHz&#39;</span>
+<span class="n">freq</span> <span class="o">=</span> <span class="n">rf</span><span class="o">.</span><span class="n">Frequency</span><span class="p">(</span><span class="n">start</span><span class="o">=</span><span class="mi">500</span><span class="p">,</span> <span class="n">stop</span><span class="o">=</span><span class="mi">700</span><span class="p">,</span> <span class="n">npoints</span><span class="o">=</span><span class="mi">301</span><span class="p">,</span> <span class="n">unit</span><span class="o">=</span><span class="s1">&#39;MHz&#39;</span><span class="p">)</span>
+<span class="n">beta</span> <span class="o">=</span> <span class="n">freq</span><span class="o">.</span><span class="n">w</span><span class="o">/</span><span class="n">rf</span><span class="o">.</span><span class="n">c</span>
+<span class="n">line</span> <span class="o">=</span> <span class="n">rf</span><span class="o">.</span><span class="n">DefinedGammaZ0</span><span class="p">(</span><span class="n">freq</span><span class="p">,</span> <span class="n">gamma</span><span class="o">=</span><span class="mi">1</span><span class="n">j</span><span class="o">*</span><span class="n">beta</span><span class="p">,</span> <span class="n">z0</span><span class="o">=</span><span class="n">Z_0</span><span class="p">)</span>
+<span class="n">zlijn</span><span class="o">=</span><span class="p">[</span><span class="n">line</span><span class="o">.</span><span class="n">delay_load</span><span class="p">(</span><span class="n">rf</span><span class="o">.</span><span class="n">zl_2_Gamma0</span><span class="p">(</span><span class="n">Z_0</span><span class="p">,</span> <span class="n">Z_L</span><span class="p">),</span> <span class="n">i</span><span class="o">/</span><span class="mi">2</span><span class="p">)[</span><span class="n">f_0_str</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">z</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>  <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">61</span><span class="p">)]</span>
+<span class="n">smitplot</span><span class="p">(</span><span class="n">zlijn</span><span class="p">,</span><span class="n">Z_0</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/SmithKaartOefening4_16_0.png" src="_images/SmithKaartOefening4_16_0.png" />
+</div>
+</div>
+<div class="figure align-default" id="smith4s2">
+<img alt="_images/mpl.svg" src="_images/mpl.svg" /><p class="caption"><span class="caption-number">Fig. 133 </span><span class="caption-text">Smith kaart van de tweede oplossing</span><a class="headerlink" href="#smith4s2" title="Permallink naar deze afbeelding">¶</a></p>
+</div>
+<p>We zoomen vervolgens in op het deel van de cirkel die de eenheidscirkel snijdt.</p>
+<div class="cell tag_hide-input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Z_L</span> <span class="o">=</span> <span class="mi">150</span>
+<span class="n">Z_0</span> <span class="o">=</span> <span class="mi">50</span>
+<span class="n">f_0_str</span> <span class="o">=</span> <span class="s1">&#39;600MHz&#39;</span>
+<span class="n">freq</span> <span class="o">=</span> <span class="n">rf</span><span class="o">.</span><span class="n">Frequency</span><span class="p">(</span><span class="n">start</span><span class="o">=</span><span class="mi">500</span><span class="p">,</span> <span class="n">stop</span><span class="o">=</span><span class="mi">700</span><span class="p">,</span> <span class="n">npoints</span><span class="o">=</span><span class="mi">301</span><span class="p">,</span> <span class="n">unit</span><span class="o">=</span><span class="s1">&#39;MHz&#39;</span><span class="p">)</span>
+<span class="n">beta</span> <span class="o">=</span> <span class="n">freq</span><span class="o">.</span><span class="n">w</span><span class="o">/</span><span class="n">rf</span><span class="o">.</span><span class="n">c</span>
+<span class="n">line</span> <span class="o">=</span> <span class="n">rf</span><span class="o">.</span><span class="n">DefinedGammaZ0</span><span class="p">(</span><span class="n">freq</span><span class="p">,</span> <span class="n">gamma</span><span class="o">=</span><span class="mi">1</span><span class="n">j</span><span class="o">*</span><span class="n">beta</span><span class="p">,</span> <span class="n">z0</span><span class="o">=</span><span class="n">Z_0</span><span class="p">)</span>
+<span class="n">zlijn</span><span class="o">=</span><span class="p">[(</span><span class="n">i</span><span class="p">,</span><span class="n">line</span><span class="o">.</span><span class="n">delay_load</span><span class="p">(</span><span class="n">rf</span><span class="o">.</span><span class="n">zl_2_Gamma0</span><span class="p">(</span><span class="n">Z_0</span><span class="p">,</span> <span class="n">Z_L</span><span class="p">),</span> <span class="n">i</span><span class="o">/</span><span class="mi">2</span><span class="p">)[</span><span class="n">f_0_str</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">z</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">])</span>  <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">57</span><span class="p">,</span><span class="mi">62</span><span class="p">)]</span>
+<span class="n">zlijnprint</span><span class="p">(</span><span class="n">zlijn</span><span class="p">,</span><span class="n">golflengte</span><span class="o">=</span><span class="mi">25</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>hoek    impedantie (Ohm)     lengte coax (cm)
+  57  Z= 53.16-59.45j Ohm     lengte=1.98 cm
+  58  Z= 52.08-58.89j Ohm     lengte=2.01 cm
+  59  Z= 51.02-58.31j Ohm     lengte=2.05 cm
+  60  Z= 50.00-57.74j Ohm     lengte=2.08 cm
+  61  Z= 49.01-57.15j Ohm     lengte=2.12 cm
+</pre></div>
+</div>
+</div>
+</div>
+<p class=tabcaption> Overzicht van de bekomen impedantie als funktie van de hoek op de Smith kaart. De laatste kolom geeft de nodige lengte van de coax</p><div class="cell tag_hide-input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">zlijn</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>De nieuwe z = 1 - j 1.15. Daaruit volgt dat Z = 50 Ohm - j 57.7 Ohm. Het complexe deel van deze impedantie kunnen we compenseren door een spoel met impedantie van ongeveer  j 57.7 Ohm  toe te voegen. Als we het helemaal juist willen hebben kunnen we in de array van zlijn juist gaan kijken waar het reele deel 50 Ohm wordt en wat we dan als complex deel over houden.</p>
+<div class="math notranslate nohighlight">
+\[ j \omega L=  j 57.7 \Omega\]</div>
+<div class="math notranslate nohighlight">
+\[ \omega= 2 \pi \cdot 600 \times 10^6 \]</div>
+<div class="math notranslate nohighlight">
+\[ L=15 nH \]</div>
+<div class="cell tag_hide-input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mf">57.73502691896258</span><span class="o">/</span><span class="mi">2</span><span class="o">/</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">/</span><span class="mf">6e8</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Het schema dat we nodig hebben om deze tweede oplossing te realiseren wordt dus:</p>
+<div class="cell tag_hide-input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">d</span> <span class="o">=</span> <span class="n">schemdraw</span><span class="o">.</span><span class="n">Drawing</span><span class="p">()</span>
+<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">elm</span><span class="o">.</span><span class="n">Ground</span><span class="p">())</span>
+<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">elm</span><span class="o">.</span><span class="n">Dot</span><span class="p">)</span>
+<span class="n">bron</span><span class="o">=</span><span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">elm</span><span class="o">.</span><span class="n">SourceSin</span><span class="p">(</span><span class="n">l</span><span class="o">=</span><span class="mf">2.0</span><span class="p">,</span><span class="n">d</span><span class="o">=</span><span class="s1">&#39;up&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;$V_</span><span class="si">{in}</span><span class="s1">$&#39;</span><span class="p">))</span>
+<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">elm</span><span class="o">.</span><span class="n">Line</span><span class="p">(</span><span class="n">l</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">d</span><span class="o">=</span><span class="s1">&#39;right&#39;</span><span class="p">)</span> <span class="p">)</span>
+<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">elm</span><span class="o">.</span><span class="n">Line</span><span class="p">(</span><span class="n">l</span><span class="o">=</span><span class="mf">0.4</span><span class="p">,</span><span class="n">d</span><span class="o">=</span><span class="s1">&#39;down&#39;</span><span class="p">)</span> <span class="p">)</span>
+<span class="n">coax1</span><span class="o">=</span><span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">elm</span><span class="o">.</span><span class="n">coax</span><span class="p">(</span><span class="n">d</span><span class="o">=</span><span class="s1">&#39;right&#39;</span><span class="p">,</span><span class="n">length</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;$50\Omega$&#39;</span><span class="p">))</span>
+
+<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">elm</span><span class="o">.</span><span class="n">Inductor</span><span class="p">(</span><span class="n">l</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;15 nH&#39;</span><span class="p">))</span>
+
+<span class="n">coax2</span><span class="o">=</span><span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">elm</span><span class="o">.</span><span class="n">coax</span><span class="p">(</span><span class="n">l</span><span class="o">=</span><span class="mf">1.5</span><span class="p">,</span><span class="n">length</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;$50\Omega$&#39;</span><span class="p">,</span> <span class="n">botlabel</span><span class="o">=</span><span class="s1">&#39;2.1 cm&#39;</span><span class="p">))</span>
+<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">elm</span><span class="o">.</span><span class="n">Dot</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;r&#39;</span><span class="p">)</span>
+<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">elm</span><span class="o">.</span><span class="n">Antenna</span><span class="p">(</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;$150\Omega$&#39;</span><span class="p">))</span>
+<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">elm</span><span class="o">.</span><span class="n">Line</span><span class="p">(</span><span class="n">xy</span><span class="o">=</span><span class="n">coax1</span><span class="o">.</span><span class="n">shieldend</span><span class="p">,</span><span class="n">l</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">d</span><span class="o">=</span><span class="s1">&#39;down&#39;</span><span class="p">))</span>
+<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">elm</span><span class="o">.</span><span class="n">Line</span><span class="p">(</span><span class="n">tox</span><span class="o">=</span><span class="n">coax2</span><span class="o">.</span><span class="n">shieldstart</span><span class="p">,</span><span class="n">d</span><span class="o">=</span><span class="s1">&#39;right&#39;</span><span class="p">)</span> <span class="p">)</span>     
+<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">elm</span><span class="o">.</span><span class="n">Line</span><span class="p">(</span><span class="n">toy</span><span class="o">=</span><span class="n">coax2</span><span class="o">.</span><span class="n">shieldstart</span><span class="p">,</span><span class="n">d</span><span class="o">=</span><span class="s1">&#39;up&#39;</span><span class="p">)</span> <span class="p">)</span>     
+
+<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">elm</span><span class="o">.</span><span class="n">Line</span><span class="p">(</span><span class="n">xy</span><span class="o">=</span><span class="n">bron</span><span class="o">.</span><span class="n">start</span><span class="p">,</span><span class="n">tox</span><span class="o">=</span><span class="n">coax1</span><span class="o">.</span><span class="n">shieldstart</span><span class="p">,</span><span class="n">d</span><span class="o">=</span><span class="s1">&#39;right&#39;</span><span class="p">)</span> <span class="p">)</span>
+<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">elm</span><span class="o">.</span><span class="n">Line</span><span class="p">(</span><span class="n">toy</span><span class="o">=</span><span class="n">coax1</span><span class="o">.</span><span class="n">shieldstart</span><span class="p">,</span><span class="n">d</span><span class="o">=</span><span class="s1">&#39;up&#39;</span><span class="p">)</span> <span class="p">)</span>
+<span class="n">d</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/SmithKaartOefening4_24_0.svg" src="_images/SmithKaartOefening4_24_0.svg" /></div>
+</div>
+<div class="figure align-default" id="smith4f2">
+<img alt="_images/mpl.svg" src="_images/mpl.svg" /><p class="caption"><span class="caption-number">Fig. 134 </span><span class="caption-text">circuit van de tweede oplossing</span><a class="headerlink" href="#smith4f2" title="Permallink naar deze afbeelding">¶</a></p>
+</div>
+<p class="alert alert-success">
+De optimale inductantiewaarde in serie wordt dus  15 nH en de nodige lengte van de coax tussen de antenne en de aanpassing is 2.1 cm
+</p></div>
+<div class="section" id="oplossing-3-bijplaatsen-van-een-capaciteit-in-parallel">
+<h3>Oplossing 3: Bijplaatsen van een capaciteit in parallel<a class="headerlink" href="#oplossing-3-bijplaatsen-van-een-capaciteit-in-parallel" title="Permalink naar deze titel">¶</a></h3>
+<p>We plaatsen <span class="math notranslate nohighlight">\(\frac{Z_L}{Z_0}=3\)</span> op de Smith kaart en we zoeken waar we de y=1 cirkel snijden in het bovenste deel van de kaart.</p>
+<div class="cell tag_hide-input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Z_L</span> <span class="o">=</span> <span class="mi">150</span>
+<span class="n">Z_0</span> <span class="o">=</span> <span class="mi">50</span>
+<span class="n">f_0_str</span> <span class="o">=</span> <span class="s1">&#39;600MHz&#39;</span>
+<span class="n">freq</span> <span class="o">=</span> <span class="n">rf</span><span class="o">.</span><span class="n">Frequency</span><span class="p">(</span><span class="n">start</span><span class="o">=</span><span class="mi">500</span><span class="p">,</span> <span class="n">stop</span><span class="o">=</span><span class="mi">700</span><span class="p">,</span> <span class="n">npoints</span><span class="o">=</span><span class="mi">31</span><span class="p">,</span> <span class="n">unit</span><span class="o">=</span><span class="s1">&#39;MHz&#39;</span><span class="p">)</span>
+<span class="n">beta</span> <span class="o">=</span> <span class="n">freq</span><span class="o">.</span><span class="n">w</span><span class="o">/</span><span class="n">rf</span><span class="o">.</span><span class="n">c</span>
+<span class="n">line</span> <span class="o">=</span> <span class="n">rf</span><span class="o">.</span><span class="n">DefinedGammaZ0</span><span class="p">(</span><span class="n">freq</span><span class="p">,</span> <span class="n">gamma</span><span class="o">=</span><span class="mi">1</span><span class="n">j</span><span class="o">*</span><span class="n">beta</span><span class="p">,</span> <span class="n">z0</span><span class="o">=</span><span class="n">Z_0</span><span class="p">)</span>
+<span class="n">zlijn</span><span class="o">=</span><span class="p">[</span><span class="n">line</span><span class="o">.</span><span class="n">delay_load</span><span class="p">(</span><span class="n">rf</span><span class="o">.</span><span class="n">zl_2_Gamma0</span><span class="p">(</span><span class="n">Z_0</span><span class="p">,</span> <span class="n">Z_L</span><span class="p">),</span> <span class="n">i</span><span class="o">/</span><span class="mi">2</span><span class="p">)[</span><span class="n">f_0_str</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">z</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>  <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">241</span><span class="p">)]</span>
+<span class="n">smitplot</span><span class="p">(</span><span class="n">zlijn</span><span class="p">,</span><span class="n">Z_0</span><span class="p">,</span><span class="n">tt</span><span class="o">=</span><span class="s1">&#39;y&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/SmithKaartOefening4_28_0.png" src="_images/SmithKaartOefening4_28_0.png" />
+</div>
+</div>
+<div class="figure align-default" id="smith4s3">
+<img alt="_images/mpl.svg" src="_images/mpl.svg" /><p class="caption"><span class="caption-number">Fig. 135 </span><span class="caption-text">Smith kaart van de derde oplossing</span><a class="headerlink" href="#smith4s3" title="Permallink naar deze afbeelding">¶</a></p>
+</div>
+<p>Omdat een Smith kaart in admitantie het spiegelbeeld is van een Smith kaart in impedentie, kunnen we ook de kaart spiegelen. We moeten dan wel aan de andere kant van de kaart vertrekken. Dit is weergegeven in figuur 6.</p>
+<div class="cell tag_hide-input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Z_L</span> <span class="o">=</span> <span class="mi">150</span>
+<span class="n">Z_0</span> <span class="o">=</span> <span class="mi">50</span>
+<span class="n">f_0_str</span> <span class="o">=</span> <span class="s1">&#39;600MHz&#39;</span>
+<span class="n">freq</span> <span class="o">=</span> <span class="n">rf</span><span class="o">.</span><span class="n">Frequency</span><span class="p">(</span><span class="n">start</span><span class="o">=</span><span class="mi">500</span><span class="p">,</span> <span class="n">stop</span><span class="o">=</span><span class="mi">700</span><span class="p">,</span> <span class="n">npoints</span><span class="o">=</span><span class="mi">301</span><span class="p">,</span> <span class="n">unit</span><span class="o">=</span><span class="s1">&#39;MHz&#39;</span><span class="p">)</span>
+<span class="n">beta</span> <span class="o">=</span> <span class="n">freq</span><span class="o">.</span><span class="n">w</span><span class="o">/</span><span class="n">rf</span><span class="o">.</span><span class="n">c</span>
+<span class="n">line</span> <span class="o">=</span> <span class="n">rf</span><span class="o">.</span><span class="n">DefinedGammaZ0</span><span class="p">(</span><span class="n">freq</span><span class="p">,</span> <span class="n">gamma</span><span class="o">=</span><span class="mi">1</span><span class="n">j</span><span class="o">*</span><span class="n">beta</span><span class="p">,</span> <span class="n">z0</span><span class="o">=</span><span class="n">Z_0</span><span class="p">)</span>
+<span class="n">Y_0</span><span class="o">=</span><span class="mi">1</span><span class="o">/</span><span class="n">Z_0</span>
+<span class="n">ylijn</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="o">/</span><span class="n">line</span><span class="o">.</span><span class="n">delay_load</span><span class="p">(</span><span class="n">rf</span><span class="o">.</span><span class="n">zl_2_Gamma0</span><span class="p">(</span><span class="n">Z_0</span><span class="p">,</span> <span class="n">Z_L</span><span class="p">),</span> <span class="n">i</span><span class="o">/</span><span class="mi">2</span><span class="p">)[</span><span class="n">f_0_str</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">z</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>  <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">241</span><span class="p">)]</span>
+<span class="n">smitplot</span><span class="p">(</span><span class="n">ylijn</span><span class="p">,</span><span class="n">Y_0</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/SmithKaartOefening4_31_0.png" src="_images/SmithKaartOefening4_31_0.png" />
+</div>
+</div>
+<div class="figure align-default" id="smith4s3a">
+<img alt="_images/mpl.svg" src="_images/mpl.svg" /><p class="caption"><span class="caption-number">Fig. 136 </span><span class="caption-text">Smith kaart van de derde oplossing als admitantie</span><a class="headerlink" href="#smith4s3a" title="Permallink naar deze afbeelding">¶</a></p>
+</div>
+<div class="cell tag_hide-input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Z_L</span> <span class="o">=</span> <span class="mi">150</span>
+<span class="n">Z_0</span> <span class="o">=</span> <span class="mi">50</span>
+<span class="n">f_0_str</span> <span class="o">=</span> <span class="s1">&#39;600MHz&#39;</span>
+<span class="n">freq</span> <span class="o">=</span> <span class="n">rf</span><span class="o">.</span><span class="n">Frequency</span><span class="p">(</span><span class="n">start</span><span class="o">=</span><span class="mi">500</span><span class="p">,</span> <span class="n">stop</span><span class="o">=</span><span class="mi">700</span><span class="p">,</span> <span class="n">npoints</span><span class="o">=</span><span class="mi">301</span><span class="p">,</span> <span class="n">unit</span><span class="o">=</span><span class="s1">&#39;MHz&#39;</span><span class="p">)</span>
+<span class="n">beta</span> <span class="o">=</span> <span class="n">freq</span><span class="o">.</span><span class="n">w</span><span class="o">/</span><span class="n">rf</span><span class="o">.</span><span class="n">c</span>
+<span class="n">line</span> <span class="o">=</span> <span class="n">rf</span><span class="o">.</span><span class="n">DefinedGammaZ0</span><span class="p">(</span><span class="n">freq</span><span class="p">,</span> <span class="n">gamma</span><span class="o">=</span><span class="mi">1</span><span class="n">j</span><span class="o">*</span><span class="n">beta</span><span class="p">,</span> <span class="n">z0</span><span class="o">=</span><span class="n">Z_0</span><span class="p">)</span>
+<span class="n">Y_0</span><span class="o">=</span><span class="mi">1</span><span class="o">/</span><span class="n">Z_0</span>
+<span class="n">ylijn</span><span class="o">=</span><span class="p">[(</span><span class="n">i</span><span class="p">,</span><span class="mi">1</span><span class="o">/</span><span class="n">line</span><span class="o">.</span><span class="n">delay_load</span><span class="p">(</span><span class="n">rf</span><span class="o">.</span><span class="n">zl_2_Gamma0</span><span class="p">(</span><span class="n">Z_0</span><span class="p">,</span> <span class="n">Z_L</span><span class="p">),</span> <span class="n">i</span><span class="o">/</span><span class="mi">2</span><span class="p">)[</span><span class="n">f_0_str</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">z</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">])</span>  <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">237</span><span class="p">,</span><span class="mi">243</span><span class="p">)]</span>
+<span class="k">def</span> <span class="nf">ylijnprint</span><span class="p">(</span><span class="n">ylijn</span><span class="p">,</span><span class="n">golflengte</span><span class="o">=</span><span class="mi">25</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;hoek    admitantie (Siemens)     lengte coax (cm)&#39;</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">i</span><span class="p">,</span><span class="n">yi</span> <span class="ow">in</span> <span class="n">ylijn</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">{:4}</span><span class="s1">    Y= </span><span class="si">{:-.2f}{:+.2f}</span><span class="s1">j mS     lengte=</span><span class="si">{:.2f}</span><span class="s1"> cm&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="n">yi</span><span class="o">.</span><span class="n">real</span><span class="o">*</span><span class="mi">1000</span><span class="p">,</span><span class="n">yi</span><span class="o">.</span><span class="n">imag</span><span class="o">*</span><span class="mi">1000</span><span class="p">,</span> <span class="n">i</span><span class="o">/</span><span class="mi">360</span><span class="o">*</span><span class="n">golflengte</span><span class="o">/</span><span class="mi">2</span><span class="p">))</span>
+<span class="n">ylijnprint</span><span class="p">(</span><span class="n">ylijn</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>hoek    admitantie (Siemens)     lengte coax (cm)
+ 237    Y= 21.27-23.78j mS     lengte=8.23 cm
+ 238    Y= 20.83-23.55j mS     lengte=8.26 cm
+ 239    Y= 20.41-23.33j mS     lengte=8.30 cm
+ 240    Y= 20.00-23.09j mS     lengte=8.33 cm
+ 241    Y= 19.60-22.86j mS     lengte=8.37 cm
+ 242    Y= 19.22-22.62j mS     lengte=8.40 cm
+</pre></div>
+</div>
+</div>
+</div>
+<p class=tabcaption> Overzicht van de bekomen admitantie als funktie van de hoek op de Smith kaart. De laatste kolom geeft de nodige lengte van de coax</p><div class="cell tag_hide-input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mf">0.023094010767585035</span><span class="o">/</span><span class="mi">2</span><span class="o">/</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">/</span><span class="mf">6e8</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p class="alert alert-success">
+De optimale condensatorwaarde in parallel wordt dus  6.12 pF en  de nodige lengte van de coax tussen de antenne en de aanpassing is 8.3 cm 
+<\p><div class="math notranslate nohighlight">
+\[ j \omega C= 0.023 j \]</div>
+<div class="math notranslate nohighlight">
+\[ C =\frac{0.023}{2 \pi \cdot 600 \times 10^6}=  6.12 pF \]</div>
+<p>Het schema dat we nodig hebben om deze derde oplossing te realiseren wordt dus:</p>
+<div class="cell tag_hide-input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">d</span> <span class="o">=</span> <span class="n">schemdraw</span><span class="o">.</span><span class="n">Drawing</span><span class="p">()</span>
+<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">elm</span><span class="o">.</span><span class="n">Ground</span><span class="p">())</span>
+<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">elm</span><span class="o">.</span><span class="n">Dot</span><span class="p">)</span>
+<span class="n">bron</span><span class="o">=</span><span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">elm</span><span class="o">.</span><span class="n">SourceSin</span><span class="p">(</span><span class="n">l</span><span class="o">=</span><span class="mf">2.0</span><span class="p">,</span><span class="n">d</span><span class="o">=</span><span class="s1">&#39;up&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;$V_</span><span class="si">{in}</span><span class="s1">$&#39;</span><span class="p">))</span>
+<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">elm</span><span class="o">.</span><span class="n">Line</span><span class="p">(</span><span class="n">l</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">d</span><span class="o">=</span><span class="s1">&#39;right&#39;</span><span class="p">)</span> <span class="p">)</span>
+<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">elm</span><span class="o">.</span><span class="n">Line</span><span class="p">(</span><span class="n">l</span><span class="o">=</span><span class="mf">0.4</span><span class="p">,</span><span class="n">d</span><span class="o">=</span><span class="s1">&#39;down&#39;</span><span class="p">)</span> <span class="p">)</span>
+<span class="n">coax1</span><span class="o">=</span><span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">elm</span><span class="o">.</span><span class="n">coax</span><span class="p">(</span><span class="n">d</span><span class="o">=</span><span class="s1">&#39;right&#39;</span><span class="p">,</span><span class="n">length</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;$50\Omega$&#39;</span><span class="p">))</span>
+<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">elm</span><span class="o">.</span><span class="n">Dot</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;g&#39;</span><span class="p">)</span>
+<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">elm</span><span class="o">.</span><span class="n">Capacitor</span><span class="p">(</span><span class="n">l</span><span class="o">=</span><span class="mf">2.5</span><span class="p">,</span><span class="n">d</span><span class="o">=</span><span class="s1">&#39;down&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;6.12pF&#39;</span><span class="p">))</span>
+<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">elm</span><span class="o">.</span><span class="n">Ground</span><span class="p">())</span>
+<span class="n">coax2</span><span class="o">=</span><span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">elm</span><span class="o">.</span><span class="n">coax</span><span class="p">(</span><span class="n">xy</span><span class="o">=</span><span class="n">coax1</span><span class="o">.</span><span class="n">end</span><span class="p">,</span><span class="n">d</span><span class="o">=</span><span class="s1">&#39;right&#39;</span><span class="p">,</span><span class="n">l</span><span class="o">=</span><span class="mf">1.5</span><span class="p">,</span><span class="n">length</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;$50\Omega$&#39;</span><span class="p">,</span> <span class="n">botlabel</span><span class="o">=</span><span class="s1">&#39;8.3 cm&#39;</span><span class="p">))</span>
+<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">elm</span><span class="o">.</span><span class="n">Dot</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;r&#39;</span><span class="p">)</span>
+<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">elm</span><span class="o">.</span><span class="n">Antenna</span><span class="p">(</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;$150\Omega$&#39;</span><span class="p">))</span>
+<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">elm</span><span class="o">.</span><span class="n">Line</span><span class="p">(</span><span class="n">xy</span><span class="o">=</span><span class="n">coax1</span><span class="o">.</span><span class="n">shieldend_top</span><span class="p">,</span><span class="n">l</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">d</span><span class="o">=</span><span class="s1">&#39;up&#39;</span><span class="p">))</span>
+<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">elm</span><span class="o">.</span><span class="n">Line</span><span class="p">(</span><span class="n">tox</span><span class="o">=</span><span class="n">coax2</span><span class="o">.</span><span class="n">shieldstart_top</span><span class="p">,</span><span class="n">d</span><span class="o">=</span><span class="s1">&#39;right&#39;</span><span class="p">)</span> <span class="p">)</span>     
+<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">elm</span><span class="o">.</span><span class="n">Line</span><span class="p">(</span><span class="n">toy</span><span class="o">=</span><span class="n">coax2</span><span class="o">.</span><span class="n">shieldstart_top</span><span class="p">,</span><span class="n">d</span><span class="o">=</span><span class="s1">&#39;down&#39;</span><span class="p">)</span> <span class="p">)</span>     
+<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">elm</span><span class="o">.</span><span class="n">Line</span><span class="p">(</span><span class="n">xy</span><span class="o">=</span><span class="n">bron</span><span class="o">.</span><span class="n">start</span><span class="p">,</span><span class="n">tox</span><span class="o">=</span><span class="n">coax1</span><span class="o">.</span><span class="n">shieldstart</span><span class="p">,</span><span class="n">d</span><span class="o">=</span><span class="s1">&#39;right&#39;</span><span class="p">)</span> <span class="p">)</span>
+<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">elm</span><span class="o">.</span><span class="n">Line</span><span class="p">(</span><span class="n">toy</span><span class="o">=</span><span class="n">coax1</span><span class="o">.</span><span class="n">shieldstart</span><span class="p">,</span><span class="n">d</span><span class="o">=</span><span class="s1">&#39;up&#39;</span><span class="p">)</span> <span class="p">)</span>
+<span class="n">d</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/SmithKaartOefening4_39_0.svg" src="_images/SmithKaartOefening4_39_0.svg" /></div>
+</div>
+<div class="figure align-default" id="smith4f3">
+<img alt="_images/mpl.svg" src="_images/mpl.svg" /><p class="caption"><span class="caption-number">Fig. 137 </span><span class="caption-text">circuit van de derde oplossing</span><a class="headerlink" href="#smith4f3" title="Permallink naar deze afbeelding">¶</a></p>
+</div>
+</div>
+<div class="section" id="oplossing-4-bijplaatsen-van-een-spoel-in-parallel">
+<h3>Oplossing 4: Bijplaatsen van een spoel in parallel<a class="headerlink" href="#oplossing-4-bijplaatsen-van-een-spoel-in-parallel" title="Permalink naar deze titel">¶</a></h3>
+<p>We plaatsen <span class="math notranslate nohighlight">\(\frac{Z_0}{Z_L}=\frac{1}{3}\)</span> op de Smith kaart en we zoeken waar we de y=1 cirkel snijden in het bovenste deel van de kaart.</p>
+<div class="cell tag_hide-input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Z_L</span> <span class="o">=</span> <span class="mi">150</span>
+<span class="n">Z_0</span> <span class="o">=</span> <span class="mi">50</span>
+<span class="n">f_0_str</span> <span class="o">=</span> <span class="s1">&#39;600MHz&#39;</span>
+<span class="n">freq</span> <span class="o">=</span> <span class="n">rf</span><span class="o">.</span><span class="n">Frequency</span><span class="p">(</span><span class="n">start</span><span class="o">=</span><span class="mi">500</span><span class="p">,</span> <span class="n">stop</span><span class="o">=</span><span class="mi">700</span><span class="p">,</span> <span class="n">npoints</span><span class="o">=</span><span class="mi">301</span><span class="p">,</span> <span class="n">unit</span><span class="o">=</span><span class="s1">&#39;MHz&#39;</span><span class="p">)</span>
+<span class="n">beta</span> <span class="o">=</span> <span class="n">freq</span><span class="o">.</span><span class="n">w</span><span class="o">/</span><span class="n">rf</span><span class="o">.</span><span class="n">c</span>
+<span class="n">line</span> <span class="o">=</span> <span class="n">rf</span><span class="o">.</span><span class="n">DefinedGammaZ0</span><span class="p">(</span><span class="n">freq</span><span class="p">,</span> <span class="n">gamma</span><span class="o">=</span><span class="mi">1</span><span class="n">j</span><span class="o">*</span><span class="n">beta</span><span class="p">,</span> <span class="n">z0</span><span class="o">=</span><span class="n">Z_0</span><span class="p">)</span>
+<span class="n">Y_0</span><span class="o">=</span><span class="mi">1</span><span class="o">/</span><span class="n">Z_0</span>
+<span class="n">ylijn</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="o">/</span><span class="n">line</span><span class="o">.</span><span class="n">delay_load</span><span class="p">(</span><span class="n">rf</span><span class="o">.</span><span class="n">zl_2_Gamma0</span><span class="p">(</span><span class="n">Z_0</span><span class="p">,</span> <span class="n">Z_L</span><span class="p">),</span> <span class="n">i</span><span class="o">/</span><span class="mi">2</span><span class="p">)[</span><span class="n">f_0_str</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">z</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>  <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">121</span><span class="p">)]</span>
+<span class="n">smitplot</span><span class="p">(</span><span class="n">ylijn</span><span class="p">,</span><span class="n">Y_0</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/SmithKaartOefening4_42_0.png" src="_images/SmithKaartOefening4_42_0.png" />
+</div>
+</div>
+<div class="figure align-default" id="smith4s4">
+<img alt="_images/mpl.svg" src="_images/mpl.svg" /><p class="caption"><span class="caption-number">Fig. 138 </span><span class="caption-text">Smith kaart van de vierde oplossing</span><a class="headerlink" href="#smith4s4" title="Permallink naar deze afbeelding">¶</a></p>
+</div>
+<div class="cell tag_hide-input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Z_L</span> <span class="o">=</span> <span class="mi">150</span>
+<span class="n">Z_0</span> <span class="o">=</span> <span class="mi">50</span>
+<span class="n">f_0_str</span> <span class="o">=</span> <span class="s1">&#39;600MHz&#39;</span>
+<span class="n">freq</span> <span class="o">=</span> <span class="n">rf</span><span class="o">.</span><span class="n">Frequency</span><span class="p">(</span><span class="n">start</span><span class="o">=</span><span class="mi">500</span><span class="p">,</span> <span class="n">stop</span><span class="o">=</span><span class="mi">700</span><span class="p">,</span> <span class="n">npoints</span><span class="o">=</span><span class="mi">301</span><span class="p">,</span> <span class="n">unit</span><span class="o">=</span><span class="s1">&#39;MHz&#39;</span><span class="p">)</span>
+<span class="n">beta</span> <span class="o">=</span> <span class="n">freq</span><span class="o">.</span><span class="n">w</span><span class="o">/</span><span class="n">rf</span><span class="o">.</span><span class="n">c</span>
+<span class="n">line</span> <span class="o">=</span> <span class="n">rf</span><span class="o">.</span><span class="n">DefinedGammaZ0</span><span class="p">(</span><span class="n">freq</span><span class="p">,</span> <span class="n">gamma</span><span class="o">=</span><span class="mi">1</span><span class="n">j</span><span class="o">*</span><span class="n">beta</span><span class="p">,</span> <span class="n">z0</span><span class="o">=</span><span class="n">Z_0</span><span class="p">)</span>
+<span class="n">Y_0</span><span class="o">=</span><span class="mi">1</span><span class="o">/</span><span class="n">Z_0</span>
+<span class="n">ylijn</span><span class="o">=</span><span class="p">[(</span><span class="n">i</span><span class="p">,</span><span class="mi">1</span><span class="o">/</span><span class="n">line</span><span class="o">.</span><span class="n">delay_load</span><span class="p">(</span><span class="n">rf</span><span class="o">.</span><span class="n">zl_2_Gamma0</span><span class="p">(</span><span class="n">Z_0</span><span class="p">,</span> <span class="n">Z_L</span><span class="p">),</span> <span class="n">i</span><span class="o">/</span><span class="mi">2</span><span class="p">)[</span><span class="n">f_0_str</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">z</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">118</span><span class="p">,</span><span class="mi">122</span><span class="p">)]</span>
+<span class="n">ylijnprint</span><span class="p">(</span><span class="n">ylijn</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>hoek    admitantie (Siemens)     lengte coax (cm)
+ 118    Y= 19.22+22.62j mS     lengte=4.10 cm
+ 119    Y= 19.60+22.86j mS     lengte=4.13 cm
+ 120    Y= 20.00+23.09j mS     lengte=4.17 cm
+ 121    Y= 20.41+23.33j mS     lengte=4.20 cm
+</pre></div>
+</div>
+</div>
+</div>
+<p class=tabcaption> Overzicht van de bekomen admitantie als funktie van de hoek op de Smith kaart. De laatste kolom geeft de nodige lengte van de coax</p><div class="math notranslate nohighlight">
+\[ \frac{1}{j \omega L}= - 0.023 j \]</div>
+<div class="math notranslate nohighlight">
+\[ L =\frac{1}{0.023\cdot  2 \pi \cdot 600 \times 10^6}= 11.5 nH \]</div>
+<div class="cell tag_hide-input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">1</span><span class="o">/</span><span class="mf">0.02309401076758503</span><span class="o">/</span><span class="mi">2</span><span class="o">/</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">/</span><span class="mf">6e8</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p class="alert alert-success">
+De optimale inductantiewaarde in parallel wordt dus  11.5 nH  de nodige lengte van de coax tussen de antenne en de aanpassing is 4.1 cm 
+</p><p>Het schema dat we nodig hebben om deze vierde oplossing te realiseren wordt dus:</p>
+<div class="cell tag_hide-input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">d</span> <span class="o">=</span> <span class="n">schemdraw</span><span class="o">.</span><span class="n">Drawing</span><span class="p">()</span>
+<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">elm</span><span class="o">.</span><span class="n">Ground</span><span class="p">())</span>
+<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">elm</span><span class="o">.</span><span class="n">Dot</span><span class="p">)</span>
+<span class="n">bron</span><span class="o">=</span><span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">elm</span><span class="o">.</span><span class="n">SourceSin</span><span class="p">(</span><span class="n">l</span><span class="o">=</span><span class="mf">2.0</span><span class="p">,</span><span class="n">d</span><span class="o">=</span><span class="s1">&#39;up&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;$V_</span><span class="si">{in}</span><span class="s1">$&#39;</span><span class="p">))</span>
+<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">elm</span><span class="o">.</span><span class="n">Line</span><span class="p">(</span><span class="n">l</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">d</span><span class="o">=</span><span class="s1">&#39;right&#39;</span><span class="p">)</span> <span class="p">)</span>
+<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">elm</span><span class="o">.</span><span class="n">Line</span><span class="p">(</span><span class="n">l</span><span class="o">=</span><span class="mf">0.4</span><span class="p">,</span><span class="n">d</span><span class="o">=</span><span class="s1">&#39;down&#39;</span><span class="p">)</span> <span class="p">)</span>
+<span class="n">coax1</span><span class="o">=</span><span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">elm</span><span class="o">.</span><span class="n">coax</span><span class="p">(</span><span class="n">d</span><span class="o">=</span><span class="s1">&#39;right&#39;</span><span class="p">,</span><span class="n">length</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;$50\Omega$&#39;</span><span class="p">))</span>
+<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">elm</span><span class="o">.</span><span class="n">Dot</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;g&#39;</span><span class="p">)</span>
+<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">elm</span><span class="o">.</span><span class="n">Inductor</span><span class="p">(</span><span class="n">l</span><span class="o">=</span><span class="mf">2.5</span><span class="p">,</span><span class="n">d</span><span class="o">=</span><span class="s1">&#39;down&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;11.5nH&#39;</span><span class="p">))</span>
+<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">elm</span><span class="o">.</span><span class="n">Ground</span><span class="p">())</span>
+<span class="n">coax2</span><span class="o">=</span><span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">elm</span><span class="o">.</span><span class="n">coax</span><span class="p">(</span><span class="n">xy</span><span class="o">=</span><span class="n">coax1</span><span class="o">.</span><span class="n">end</span><span class="p">,</span><span class="n">d</span><span class="o">=</span><span class="s1">&#39;right&#39;</span><span class="p">,</span><span class="n">l</span><span class="o">=</span><span class="mf">1.5</span><span class="p">,</span><span class="n">length</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;$50\Omega$&#39;</span><span class="p">,</span> <span class="n">botlabel</span><span class="o">=</span><span class="s1">&#39;4.2 cm&#39;</span><span class="p">))</span>
+<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">elm</span><span class="o">.</span><span class="n">Dot</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;r&#39;</span><span class="p">)</span>
+<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">elm</span><span class="o">.</span><span class="n">Antenna</span><span class="p">(</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;$150\Omega$&#39;</span><span class="p">))</span>
+<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">elm</span><span class="o">.</span><span class="n">Line</span><span class="p">(</span><span class="n">xy</span><span class="o">=</span><span class="n">coax1</span><span class="o">.</span><span class="n">shieldend_top</span><span class="p">,</span><span class="n">l</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">d</span><span class="o">=</span><span class="s1">&#39;up&#39;</span><span class="p">))</span>
+<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">elm</span><span class="o">.</span><span class="n">Line</span><span class="p">(</span><span class="n">tox</span><span class="o">=</span><span class="n">coax2</span><span class="o">.</span><span class="n">shieldstart_top</span><span class="p">,</span><span class="n">d</span><span class="o">=</span><span class="s1">&#39;right&#39;</span><span class="p">)</span> <span class="p">)</span>     
+<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">elm</span><span class="o">.</span><span class="n">Line</span><span class="p">(</span><span class="n">toy</span><span class="o">=</span><span class="n">coax2</span><span class="o">.</span><span class="n">shieldstart_top</span><span class="p">,</span><span class="n">d</span><span class="o">=</span><span class="s1">&#39;down&#39;</span><span class="p">)</span> <span class="p">)</span>     
+<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">elm</span><span class="o">.</span><span class="n">Line</span><span class="p">(</span><span class="n">xy</span><span class="o">=</span><span class="n">bron</span><span class="o">.</span><span class="n">start</span><span class="p">,</span><span class="n">tox</span><span class="o">=</span><span class="n">coax1</span><span class="o">.</span><span class="n">shieldstart</span><span class="p">,</span><span class="n">d</span><span class="o">=</span><span class="s1">&#39;right&#39;</span><span class="p">)</span> <span class="p">)</span>
+<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">elm</span><span class="o">.</span><span class="n">Line</span><span class="p">(</span><span class="n">toy</span><span class="o">=</span><span class="n">coax1</span><span class="o">.</span><span class="n">shieldstart</span><span class="p">,</span><span class="n">d</span><span class="o">=</span><span class="s1">&#39;up&#39;</span><span class="p">)</span> <span class="p">)</span>
+<span class="n">d</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/SmithKaartOefening4_50_0.svg" src="_images/SmithKaartOefening4_50_0.svg" /></div>
+</div>
+<div class="figure align-default" id="smith4f4">
+<img alt="_images/mpl.svg" src="_images/mpl.svg" /><p class="caption"><span class="caption-number">Fig. 139 </span><span class="caption-text">circuit van de vierde oplossing</span><a class="headerlink" href="#smith4f4" title="Permallink naar deze afbeelding">¶</a></p>
+</div>
+</div>
+<div class="section" id="oplossing-5-oplossing-3-waarbij-de-condensator-vervangen-is-door-een-open-transmissielijn">
+<h3>Oplossing 5: Oplossing 3 waarbij de condensator vervangen is door een open transmissielijn<a class="headerlink" href="#oplossing-5-oplossing-3-waarbij-de-condensator-vervangen-is-door-een-open-transmissielijn" title="Permalink naar deze titel">¶</a></h3>
+<p>De y = 1 - j 1.15 compenseren we door +j 1.15 vertrekkende vanuit g=0.</p>
+<div class="cell tag_hide-input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Z_L</span> <span class="o">=</span> <span class="mi">150</span>
+<span class="n">Z_0</span> <span class="o">=</span> <span class="mi">50</span>
+<span class="n">f_0_str</span> <span class="o">=</span> <span class="s1">&#39;600MHz&#39;</span>
+<span class="n">freq</span> <span class="o">=</span> <span class="n">rf</span><span class="o">.</span><span class="n">Frequency</span><span class="p">(</span><span class="n">start</span><span class="o">=</span><span class="mi">500</span><span class="p">,</span> <span class="n">stop</span><span class="o">=</span><span class="mi">700</span><span class="p">,</span> <span class="n">npoints</span><span class="o">=</span><span class="mi">301</span><span class="p">,</span> <span class="n">unit</span><span class="o">=</span><span class="s1">&#39;MHz&#39;</span><span class="p">)</span>
+<span class="n">beta</span> <span class="o">=</span> <span class="n">freq</span><span class="o">.</span><span class="n">w</span><span class="o">/</span><span class="n">rf</span><span class="o">.</span><span class="n">c</span>
+<span class="n">line</span> <span class="o">=</span> <span class="n">rf</span><span class="o">.</span><span class="n">DefinedGammaZ0</span><span class="p">(</span><span class="n">freq</span><span class="p">,</span> <span class="n">gamma</span><span class="o">=</span><span class="mi">1</span><span class="n">j</span><span class="o">*</span><span class="n">beta</span><span class="p">,</span> <span class="n">z0</span><span class="o">=</span><span class="n">Z_0</span><span class="p">)</span>
+<span class="n">Y_0</span><span class="o">=</span><span class="mi">1</span><span class="o">/</span><span class="n">Z_0</span>
+<span class="n">ylijn</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="o">/</span><span class="n">line</span><span class="o">.</span><span class="n">delay_load</span><span class="p">(</span><span class="n">rf</span><span class="o">.</span><span class="n">zl_2_Gamma0</span><span class="p">(</span><span class="n">Z_0</span><span class="p">,</span> <span class="n">Z_L</span><span class="p">),</span> <span class="n">i</span><span class="o">/</span><span class="mi">2</span><span class="p">)[</span><span class="n">f_0_str</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">z</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>  <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">241</span><span class="p">)]</span>
+<span class="n">yopenlijn</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="o">/</span><span class="n">line</span><span class="o">.</span><span class="n">delay_load</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">i</span><span class="o">/</span><span class="mi">2</span><span class="p">)[</span><span class="n">f_0_str</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">z</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>  <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">105</span><span class="p">)]</span>
+
+<span class="k">def</span> <span class="nf">smitplot2</span><span class="p">(</span><span class="n">ylijn</span><span class="p">,</span><span class="n">yopenlijn</span><span class="p">,</span><span class="n">Y_0</span><span class="p">):</span>
+    <span class="n">gamma</span><span class="o">=</span><span class="p">[(</span><span class="n">yl</span><span class="o">-</span><span class="n">Y_0</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="n">yl</span><span class="o">+</span><span class="n">Y_0</span><span class="p">)</span> <span class="k">for</span> <span class="n">yl</span> <span class="ow">in</span> <span class="n">ylijn</span><span class="p">]</span>
+    <span class="n">gammaopen</span><span class="o">=</span><span class="p">[(</span><span class="n">yl</span><span class="o">-</span><span class="n">Y_0</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="n">yl</span><span class="o">+</span><span class="n">Y_0</span><span class="p">)</span> <span class="k">for</span> <span class="n">yl</span> <span class="ow">in</span> <span class="n">yopenlijn</span><span class="p">]</span>
+    <span class="n">fig</span><span class="p">,</span><span class="n">ax</span><span class="o">=</span><span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">25</span><span class="p">,</span><span class="mi">15</span><span class="p">))</span>
+    <span class="n">rf</span><span class="o">.</span><span class="n">plotting</span><span class="o">.</span><span class="n">plot_smith</span><span class="p">(</span><span class="n">gamma</span><span class="p">,</span> <span class="n">x_label</span><span class="o">=</span><span class="sa">r</span><span class="s2">&quot;Reëel deel&quot;</span><span class="p">,</span> <span class="n">y_label</span><span class="o">=</span><span class="s1">&#39;Imaginair deel&#39;</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">([</span><span class="n">g</span><span class="o">.</span><span class="n">real</span> <span class="k">for</span> <span class="n">g</span> <span class="ow">in</span> <span class="n">gammaopen</span><span class="p">],[</span><span class="n">g</span><span class="o">.</span><span class="n">imag</span> <span class="k">for</span> <span class="n">g</span> <span class="ow">in</span> <span class="n">gammaopen</span><span class="p">])</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">([</span><span class="n">gamma</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">real</span><span class="p">],[</span><span class="n">gamma</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">imag</span><span class="p">],</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;green&#39;</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s2">&quot;.&quot;</span><span class="p">,</span> <span class="n">markersize</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">([</span><span class="n">gamma</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">real</span><span class="p">],[</span><span class="n">gamma</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">imag</span><span class="p">],</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s2">&quot;.&quot;</span><span class="p">,</span> <span class="n">markersize</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">([</span><span class="n">gammaopen</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">real</span><span class="p">],[</span><span class="n">gammaopen</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">imag</span><span class="p">],</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;green&#39;</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s2">&quot;.&quot;</span><span class="p">,</span> <span class="n">markersize</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">([</span><span class="n">gammaopen</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">real</span><span class="p">],[</span><span class="n">gammaopen</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">imag</span><span class="p">],</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;blue&#39;</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s2">&quot;.&quot;</span><span class="p">,</span> <span class="n">markersize</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span>
+<span class="n">smitplot2</span><span class="p">(</span><span class="n">ylijn</span><span class="p">,</span><span class="n">yopenlijn</span><span class="p">,</span><span class="n">Y_0</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/SmithKaartOefening4_53_0.png" src="_images/SmithKaartOefening4_53_0.png" />
+</div>
+</div>
+<div class="figure align-default" id="smith4s5">
+<img alt="_images/mpl.svg" src="_images/mpl.svg" /><p class="caption"><span class="caption-number">Fig. 140 </span><span class="caption-text">Smith kaart van de vijfde oplossing</span><a class="headerlink" href="#smith4s5" title="Permallink naar deze afbeelding">¶</a></p>
+</div>
+<div class="cell tag_hide-input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ylijn</span><span class="o">=</span><span class="p">[(</span><span class="n">i</span><span class="p">,</span><span class="mi">1</span><span class="o">/</span><span class="n">line</span><span class="o">.</span><span class="n">delay_load</span><span class="p">(</span><span class="n">rf</span><span class="o">.</span><span class="n">zl_2_Gamma0</span><span class="p">(</span><span class="n">Z_0</span><span class="p">,</span> <span class="n">Z_L</span><span class="p">),</span> <span class="n">i</span><span class="o">/</span><span class="mi">2</span><span class="p">)[</span><span class="n">f_0_str</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">z</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">])</span>  <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">238</span><span class="p">,</span><span class="mi">242</span><span class="p">)]</span>
+<span class="n">ylijnprint</span><span class="p">(</span><span class="n">ylijn</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>hoek    admitantie (Siemens)     lengte coax (cm)
+ 238    Y= 20.83-23.55j mS     lengte=8.26 cm
+ 239    Y= 20.41-23.33j mS     lengte=8.30 cm
+ 240    Y= 20.00-23.09j mS     lengte=8.33 cm
+ 241    Y= 19.60-22.86j mS     lengte=8.37 cm
+</pre></div>
+</div>
+</div>
+</div>
+<p class=tabcaption> Overzicht van de bekomen admitantie als funktie van de hoek op de Smith kaart. De laatste kolom geeft de nodige lengte van de coax</p><div class="cell tag_hide-input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">yopenlijn</span><span class="o">=</span><span class="p">[(</span><span class="n">i</span><span class="p">,</span><span class="mi">1</span><span class="o">/</span><span class="n">line</span><span class="o">.</span><span class="n">delay_load</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">i</span><span class="o">/</span><span class="mi">2</span><span class="p">)[</span><span class="n">f_0_str</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">z</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">95</span><span class="p">,</span><span class="mi">101</span><span class="p">)]</span>
+
+<span class="k">def</span> <span class="nf">ylijnprint2</span><span class="p">(</span><span class="n">ylijn</span><span class="p">,</span><span class="n">golflengte</span><span class="o">=</span><span class="mi">25</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;hoek    admitantie (Siemens)     lengte coax (cm)&#39;</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">i</span><span class="p">,</span><span class="n">yi</span> <span class="ow">in</span> <span class="n">ylijn</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">{:4}</span><span class="s1">       Y= </span><span class="si">{:+.2f}</span><span class="s1">j mS     lengte=</span><span class="si">{:.2f}</span><span class="s1"> cm&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="n">yi</span><span class="o">.</span><span class="n">imag</span><span class="o">*</span><span class="mi">1000</span><span class="p">,</span> <span class="n">i</span><span class="o">/</span><span class="mi">360</span><span class="o">*</span><span class="n">golflengte</span><span class="o">/</span><span class="mi">2</span><span class="p">))</span>
+
+<span class="n">ylijnprint2</span><span class="p">(</span><span class="n">yopenlijn</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>hoek    admitantie (Siemens)     lengte coax (cm)
+  95       Y= +21.83j mS     lengte=3.30 cm
+  96       Y= +22.21j mS     lengte=3.33 cm
+  97       Y= +22.61j mS     lengte=3.37 cm
+  98       Y= +23.01j mS     lengte=3.40 cm
+  99       Y= +23.42j mS     lengte=3.44 cm
+ 100       Y= +23.84j mS     lengte=3.47 cm
+</pre></div>
+</div>
+</div>
+</div>
+<p class=tabcaption> Overzicht van de bekomen admitantie van de open transmissielijn als funktie van de hoek op de Smith kaart. De laatste kolom geeft de nodige lengte van de coax</p><p>Hieruit blijkt dat een open transmissielijn met de lengte van <span class="math notranslate nohighlight">\(\frac{98}{360} \frac{\lambda}{2}\)</span> de beste aanpassing geeft.</p>
+<p class="alert alert-success">
+Het stukje open coax dat we moeten voorzien ter vervanging van de condensator is dus: 3.4 cm
+</p><p>Het schema dat we nodig hebben om deze vijfde oplossing te realiseren wordt dus:</p>
+<div class="cell tag_hide-input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">d</span> <span class="o">=</span> <span class="n">schemdraw</span><span class="o">.</span><span class="n">Drawing</span><span class="p">()</span>
+<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">elm</span><span class="o">.</span><span class="n">Ground</span><span class="p">())</span>
+<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">elm</span><span class="o">.</span><span class="n">Dot</span><span class="p">)</span>
+<span class="n">bron</span><span class="o">=</span><span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">elm</span><span class="o">.</span><span class="n">SourceSin</span><span class="p">(</span><span class="n">l</span><span class="o">=</span><span class="mf">2.0</span><span class="p">,</span><span class="n">d</span><span class="o">=</span><span class="s1">&#39;up&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;$V_</span><span class="si">{in}</span><span class="s1">$&#39;</span><span class="p">))</span>
+<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">elm</span><span class="o">.</span><span class="n">Line</span><span class="p">(</span><span class="n">l</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">d</span><span class="o">=</span><span class="s1">&#39;right&#39;</span><span class="p">)</span> <span class="p">)</span>
+<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">elm</span><span class="o">.</span><span class="n">Line</span><span class="p">(</span><span class="n">l</span><span class="o">=</span><span class="mf">0.4</span><span class="p">,</span><span class="n">d</span><span class="o">=</span><span class="s1">&#39;down&#39;</span><span class="p">)</span> <span class="p">)</span>
+<span class="n">coax1</span><span class="o">=</span><span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">elm</span><span class="o">.</span><span class="n">coax</span><span class="p">(</span><span class="n">d</span><span class="o">=</span><span class="s1">&#39;right&#39;</span><span class="p">,</span><span class="n">length</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;$50\Omega$&#39;</span><span class="p">))</span>
+<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">elm</span><span class="o">.</span><span class="n">Dot</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;g&#39;</span><span class="p">)</span>
+<span class="n">coax3</span><span class="o">=</span><span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">elm</span><span class="o">.</span><span class="n">coax</span><span class="p">(</span><span class="n">xy</span><span class="o">=</span><span class="n">coax1</span><span class="o">.</span><span class="n">end</span><span class="p">,</span><span class="n">d</span><span class="o">=</span><span class="s1">&#39;down&#39;</span><span class="p">,</span><span class="n">l</span><span class="o">=</span><span class="mf">1.5</span><span class="p">,</span><span class="n">length</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;$50\Omega$&#39;</span><span class="p">,</span> <span class="n">botlabel</span><span class="o">=</span><span class="s1">&#39;3.4 cm&#39;</span><span class="p">))</span>
+<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">elm</span><span class="o">.</span><span class="n">Line</span><span class="p">(</span><span class="n">xy</span><span class="o">=</span><span class="n">coax1</span><span class="o">.</span><span class="n">shieldend</span><span class="p">,</span><span class="n">toy</span><span class="o">=</span><span class="n">coax3</span><span class="o">.</span><span class="n">shieldstart_top</span><span class="p">,</span><span class="n">d</span><span class="o">=</span><span class="s1">&#39;down&#39;</span><span class="p">))</span>
+<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">elm</span><span class="o">.</span><span class="n">Line</span><span class="p">(</span><span class="n">tox</span><span class="o">=</span><span class="n">coax3</span><span class="o">.</span><span class="n">shieldstart</span><span class="p">,</span><span class="n">d</span><span class="o">=</span><span class="s1">&#39;right&#39;</span><span class="p">))</span>
+
+<span class="n">coax2</span><span class="o">=</span><span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">elm</span><span class="o">.</span><span class="n">coax</span><span class="p">(</span><span class="n">xy</span><span class="o">=</span><span class="n">coax1</span><span class="o">.</span><span class="n">end</span><span class="p">,</span><span class="n">d</span><span class="o">=</span><span class="s1">&#39;right&#39;</span><span class="p">,</span><span class="n">l</span><span class="o">=</span><span class="mf">1.5</span><span class="p">,</span><span class="n">length</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;$50\Omega$&#39;</span><span class="p">,</span> <span class="n">botlabel</span><span class="o">=</span><span class="s1">&#39;8.3 cm&#39;</span><span class="p">))</span>
+<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">elm</span><span class="o">.</span><span class="n">Dot</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;r&#39;</span><span class="p">)</span>
+<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">elm</span><span class="o">.</span><span class="n">Antenna</span><span class="p">(</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;$150\Omega$&#39;</span><span class="p">))</span>
+<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">elm</span><span class="o">.</span><span class="n">Line</span><span class="p">(</span><span class="n">xy</span><span class="o">=</span><span class="n">coax1</span><span class="o">.</span><span class="n">shieldend_top</span><span class="p">,</span><span class="n">l</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">d</span><span class="o">=</span><span class="s1">&#39;up&#39;</span><span class="p">))</span>
+<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">elm</span><span class="o">.</span><span class="n">Line</span><span class="p">(</span><span class="n">tox</span><span class="o">=</span><span class="n">coax2</span><span class="o">.</span><span class="n">shieldstart_top</span><span class="p">,</span><span class="n">d</span><span class="o">=</span><span class="s1">&#39;right&#39;</span><span class="p">)</span> <span class="p">)</span>     
+<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">elm</span><span class="o">.</span><span class="n">Line</span><span class="p">(</span><span class="n">toy</span><span class="o">=</span><span class="n">coax2</span><span class="o">.</span><span class="n">shieldstart_top</span><span class="p">,</span><span class="n">d</span><span class="o">=</span><span class="s1">&#39;down&#39;</span><span class="p">)</span> <span class="p">)</span>     
+<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">elm</span><span class="o">.</span><span class="n">Line</span><span class="p">(</span><span class="n">xy</span><span class="o">=</span><span class="n">bron</span><span class="o">.</span><span class="n">start</span><span class="p">,</span><span class="n">tox</span><span class="o">=</span><span class="n">coax1</span><span class="o">.</span><span class="n">shieldstart</span><span class="p">,</span><span class="n">d</span><span class="o">=</span><span class="s1">&#39;right&#39;</span><span class="p">)</span> <span class="p">)</span>
+<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">elm</span><span class="o">.</span><span class="n">Line</span><span class="p">(</span><span class="n">toy</span><span class="o">=</span><span class="n">coax1</span><span class="o">.</span><span class="n">shieldstart</span><span class="p">,</span><span class="n">d</span><span class="o">=</span><span class="s1">&#39;up&#39;</span><span class="p">)</span> <span class="p">)</span>
+<span class="n">d</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/SmithKaartOefening4_62_0.svg" src="_images/SmithKaartOefening4_62_0.svg" /></div>
+</div>
+<div class="figure align-default" id="smith4f5">
+<img alt="_images/mpl.svg" src="_images/mpl.svg" /><p class="caption"><span class="caption-number">Fig. 141 </span><span class="caption-text">circuit van de vijfde oplossing</span><a class="headerlink" href="#smith4f5" title="Permallink naar deze afbeelding">¶</a></p>
+</div>
+</div>
+<div class="section" id="oplossing-6-oplossing-3-waarbij-de-condensator-vervangen-is-door-een-kortgesloten-transmissielijn">
+<h3>Oplossing 6: Oplossing 3 waarbij de condensator vervangen is door een kortgesloten transmissielijn<a class="headerlink" href="#oplossing-6-oplossing-3-waarbij-de-condensator-vervangen-is-door-een-kortgesloten-transmissielijn" title="Permalink naar deze titel">¶</a></h3>
+<p>De y = 1 - j 1.15 compenseren we door +j 1.15 vertrekkende vanuit g=<span class="math notranslate nohighlight">\(\infty\)</span></p>
+<div class="cell tag_hide-input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ykortlijn</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="o">/</span><span class="n">line</span><span class="o">.</span><span class="n">delay_load</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">i</span><span class="o">/</span><span class="mi">2</span><span class="p">)[</span><span class="n">f_0_str</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">z</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>  <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="o">-</span><span class="mi">180</span><span class="p">,</span><span class="mi">105</span><span class="p">)]</span>
+
+<span class="n">smitplot2</span><span class="p">(</span><span class="n">ylijn</span><span class="p">,</span><span class="n">ykortlijn</span><span class="p">,</span><span class="n">Y_0</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/SmithKaartOefening4_65_0.png" src="_images/SmithKaartOefening4_65_0.png" />
+</div>
+</div>
+<div class="figure align-default" id="smith4s6">
+<img alt="_images/mpl.svg" src="_images/mpl.svg" /><p class="caption"><span class="caption-number">Fig. 142 </span><span class="caption-text">Smith kaart van de zesde oplossing</span><a class="headerlink" href="#smith4s6" title="Permallink naar deze afbeelding">¶</a></p>
+</div>
+<div class="cell tag_hide-input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ylijn</span><span class="o">=</span><span class="p">[(</span><span class="n">i</span><span class="p">,</span><span class="mi">1</span><span class="o">/</span><span class="n">line</span><span class="o">.</span><span class="n">delay_load</span><span class="p">(</span><span class="n">rf</span><span class="o">.</span><span class="n">zl_2_Gamma0</span><span class="p">(</span><span class="n">Z_0</span><span class="p">,</span> <span class="n">Z_L</span><span class="p">),</span> <span class="n">i</span><span class="o">/</span><span class="mi">2</span><span class="p">)[</span><span class="n">f_0_str</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">z</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">])</span>  <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">238</span><span class="p">,</span><span class="mi">242</span><span class="p">)]</span>
+<span class="n">ylijnprint</span><span class="p">(</span><span class="n">ylijn</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>hoek    admitantie (Siemens)     lengte coax (cm)
+ 238    Y= 20.83-23.55j mS     lengte=8.26 cm
+ 239    Y= 20.41-23.33j mS     lengte=8.30 cm
+ 240    Y= 20.00-23.09j mS     lengte=8.33 cm
+ 241    Y= 19.60-22.86j mS     lengte=8.37 cm
+</pre></div>
+</div>
+</div>
+</div>
+<p class=tabcaption> Overzicht van de bekomen admitantie als funktie van de hoek op de Smith kaart. De laatste kolom geeft de nodige lengte van de coax</p><div class="cell tag_hide-input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ykortlijn</span><span class="o">=</span><span class="p">[(</span><span class="n">i</span><span class="o">+</span><span class="mi">180</span><span class="p">,</span><span class="mi">1</span><span class="o">/</span><span class="n">line</span><span class="o">.</span><span class="n">delay_load</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">i</span><span class="o">/</span><span class="mi">2</span><span class="p">)[</span><span class="n">f_0_str</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">z</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">])</span>  <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">95</span><span class="p">,</span><span class="mi">101</span><span class="p">)]</span>
+<span class="n">ylijnprint2</span><span class="p">(</span><span class="n">ykortlijn</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>hoek    admitantie (Siemens)     lengte coax (cm)
+ 275       Y= +21.83j mS     lengte=9.55 cm
+ 276       Y= +22.21j mS     lengte=9.58 cm
+ 277       Y= +22.61j mS     lengte=9.62 cm
+ 278       Y= +23.01j mS     lengte=9.65 cm
+ 279       Y= +23.42j mS     lengte=9.69 cm
+ 280       Y= +23.84j mS     lengte=9.72 cm
+</pre></div>
+</div>
+</div>
+</div>
+<p class=tabcaption> Overzicht van de bekomen admitantie van de kortgesloten transmissielijn als funktie van de hoek op de Smith kaart. De laatste kolom geeft de nodige lengte van de coax</p><p class="alert alert-success">
+Het stukje kortgesloten coax dat we moeten voorzien ter vervanging van de condensator is dus: 9.7 cm
+</p><p>Het schema dat we nodig hebben om deze zesde oplossing te realiseren wordt dus:</p>
+<div class="cell tag_hide-input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">d</span> <span class="o">=</span> <span class="n">schemdraw</span><span class="o">.</span><span class="n">Drawing</span><span class="p">()</span>
+<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">elm</span><span class="o">.</span><span class="n">Ground</span><span class="p">())</span>
+<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">elm</span><span class="o">.</span><span class="n">Dot</span><span class="p">)</span>
+<span class="n">bron</span><span class="o">=</span><span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">elm</span><span class="o">.</span><span class="n">SourceSin</span><span class="p">(</span><span class="n">l</span><span class="o">=</span><span class="mf">2.0</span><span class="p">,</span><span class="n">d</span><span class="o">=</span><span class="s1">&#39;up&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;$V_</span><span class="si">{in}</span><span class="s1">$&#39;</span><span class="p">))</span>
+<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">elm</span><span class="o">.</span><span class="n">Line</span><span class="p">(</span><span class="n">l</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">d</span><span class="o">=</span><span class="s1">&#39;right&#39;</span><span class="p">)</span> <span class="p">)</span>
+<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">elm</span><span class="o">.</span><span class="n">Line</span><span class="p">(</span><span class="n">l</span><span class="o">=</span><span class="mf">0.4</span><span class="p">,</span><span class="n">d</span><span class="o">=</span><span class="s1">&#39;down&#39;</span><span class="p">)</span> <span class="p">)</span>
+<span class="n">coax1</span><span class="o">=</span><span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">elm</span><span class="o">.</span><span class="n">coax</span><span class="p">(</span><span class="n">d</span><span class="o">=</span><span class="s1">&#39;right&#39;</span><span class="p">,</span><span class="n">length</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;$50\Omega$&#39;</span><span class="p">))</span>
+<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">elm</span><span class="o">.</span><span class="n">Dot</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;g&#39;</span><span class="p">)</span>
+<span class="n">coax3</span><span class="o">=</span><span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">elm</span><span class="o">.</span><span class="n">coax</span><span class="p">(</span><span class="n">xy</span><span class="o">=</span><span class="n">coax1</span><span class="o">.</span><span class="n">end</span><span class="p">,</span><span class="n">d</span><span class="o">=</span><span class="s1">&#39;down&#39;</span><span class="p">,</span><span class="n">l</span><span class="o">=</span><span class="mf">1.5</span><span class="p">,</span><span class="n">length</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;$50\Omega$&#39;</span><span class="p">,</span> <span class="n">botlabel</span><span class="o">=</span><span class="s1">&#39;9.7 cm&#39;</span><span class="p">))</span>
+<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">elm</span><span class="o">.</span><span class="n">Line</span><span class="p">(</span><span class="n">tox</span><span class="o">=</span><span class="n">coax3</span><span class="o">.</span><span class="n">shieldend</span><span class="p">,</span><span class="n">d</span><span class="o">=</span><span class="s1">&#39;left&#39;</span><span class="p">))</span>
+<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">elm</span><span class="o">.</span><span class="n">Line</span><span class="p">(</span><span class="n">toy</span><span class="o">=</span><span class="n">coax3</span><span class="o">.</span><span class="n">shieldend</span><span class="p">,</span><span class="n">d</span><span class="o">=</span><span class="s1">&#39;up&#39;</span><span class="p">))</span>
+
+<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">elm</span><span class="o">.</span><span class="n">Line</span><span class="p">(</span><span class="n">xy</span><span class="o">=</span><span class="n">coax1</span><span class="o">.</span><span class="n">shieldend</span><span class="p">,</span><span class="n">toy</span><span class="o">=</span><span class="n">coax3</span><span class="o">.</span><span class="n">shieldstart_top</span><span class="p">,</span><span class="n">d</span><span class="o">=</span><span class="s1">&#39;down&#39;</span><span class="p">))</span>
+<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">elm</span><span class="o">.</span><span class="n">Line</span><span class="p">(</span><span class="n">tox</span><span class="o">=</span><span class="n">coax3</span><span class="o">.</span><span class="n">shieldstart</span><span class="p">,</span><span class="n">d</span><span class="o">=</span><span class="s1">&#39;right&#39;</span><span class="p">))</span>
+
+<span class="n">coax2</span><span class="o">=</span><span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">elm</span><span class="o">.</span><span class="n">coax</span><span class="p">(</span><span class="n">xy</span><span class="o">=</span><span class="n">coax1</span><span class="o">.</span><span class="n">end</span><span class="p">,</span><span class="n">d</span><span class="o">=</span><span class="s1">&#39;right&#39;</span><span class="p">,</span><span class="n">l</span><span class="o">=</span><span class="mf">1.5</span><span class="p">,</span><span class="n">length</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;$50\Omega$&#39;</span><span class="p">,</span> <span class="n">botlabel</span><span class="o">=</span><span class="s1">&#39;8.3 cm&#39;</span><span class="p">))</span>
+<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">elm</span><span class="o">.</span><span class="n">Dot</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;r&#39;</span><span class="p">)</span>
+<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">elm</span><span class="o">.</span><span class="n">Antenna</span><span class="p">(</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;$150\Omega$&#39;</span><span class="p">))</span>
+<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">elm</span><span class="o">.</span><span class="n">Line</span><span class="p">(</span><span class="n">xy</span><span class="o">=</span><span class="n">coax1</span><span class="o">.</span><span class="n">shieldend_top</span><span class="p">,</span><span class="n">l</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">d</span><span class="o">=</span><span class="s1">&#39;up&#39;</span><span class="p">))</span>
+<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">elm</span><span class="o">.</span><span class="n">Line</span><span class="p">(</span><span class="n">tox</span><span class="o">=</span><span class="n">coax2</span><span class="o">.</span><span class="n">shieldstart_top</span><span class="p">,</span><span class="n">d</span><span class="o">=</span><span class="s1">&#39;right&#39;</span><span class="p">)</span> <span class="p">)</span>     
+<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">elm</span><span class="o">.</span><span class="n">Line</span><span class="p">(</span><span class="n">toy</span><span class="o">=</span><span class="n">coax2</span><span class="o">.</span><span class="n">shieldstart_top</span><span class="p">,</span><span class="n">d</span><span class="o">=</span><span class="s1">&#39;down&#39;</span><span class="p">)</span> <span class="p">)</span>     
+<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">elm</span><span class="o">.</span><span class="n">Line</span><span class="p">(</span><span class="n">xy</span><span class="o">=</span><span class="n">bron</span><span class="o">.</span><span class="n">start</span><span class="p">,</span><span class="n">tox</span><span class="o">=</span><span class="n">coax1</span><span class="o">.</span><span class="n">shieldstart</span><span class="p">,</span><span class="n">d</span><span class="o">=</span><span class="s1">&#39;right&#39;</span><span class="p">)</span> <span class="p">)</span>
+<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">elm</span><span class="o">.</span><span class="n">Line</span><span class="p">(</span><span class="n">toy</span><span class="o">=</span><span class="n">coax1</span><span class="o">.</span><span class="n">shieldstart</span><span class="p">,</span><span class="n">d</span><span class="o">=</span><span class="s1">&#39;up&#39;</span><span class="p">)</span> <span class="p">)</span>
+<span class="n">d</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/SmithKaartOefening4_73_0.svg" src="_images/SmithKaartOefening4_73_0.svg" /></div>
+</div>
+<div class="figure align-default" id="smith4f6">
+<img alt="_images/mpl.svg" src="_images/mpl.svg" /><p class="caption"><span class="caption-number">Fig. 143 </span><span class="caption-text">circuit van de zesde oplossing</span><a class="headerlink" href="#smith4f6" title="Permallink naar deze afbeelding">¶</a></p>
+</div>
+</div>
+<div class="section" id="oplossing-7-oplossing-4-waarbij-het-spoel-vervangen-is-door-een-open-transmissielijn">
+<h3>Oplossing 7: Oplossing 4 waarbij het spoel vervangen is door een open transmissielijn<a class="headerlink" href="#oplossing-7-oplossing-4-waarbij-het-spoel-vervangen-is-door-een-open-transmissielijn" title="Permalink naar deze titel">¶</a></h3>
+<p>De y = 1 + j 1.15 compenseren we door -j 1.15 vertrekkende vanuit g=0.</p>
+<div class="cell tag_hide-input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Z_L</span> <span class="o">=</span> <span class="mi">150</span>
+<span class="n">Z_0</span> <span class="o">=</span> <span class="mi">50</span>
+<span class="n">f_0_str</span> <span class="o">=</span> <span class="s1">&#39;600MHz&#39;</span>
+<span class="n">freq</span> <span class="o">=</span> <span class="n">rf</span><span class="o">.</span><span class="n">Frequency</span><span class="p">(</span><span class="n">start</span><span class="o">=</span><span class="mi">500</span><span class="p">,</span> <span class="n">stop</span><span class="o">=</span><span class="mi">700</span><span class="p">,</span> <span class="n">npoints</span><span class="o">=</span><span class="mi">301</span><span class="p">,</span> <span class="n">unit</span><span class="o">=</span><span class="s1">&#39;MHz&#39;</span><span class="p">)</span>
+<span class="n">beta</span> <span class="o">=</span> <span class="n">freq</span><span class="o">.</span><span class="n">w</span><span class="o">/</span><span class="n">rf</span><span class="o">.</span><span class="n">c</span>
+<span class="n">line</span> <span class="o">=</span> <span class="n">rf</span><span class="o">.</span><span class="n">DefinedGammaZ0</span><span class="p">(</span><span class="n">freq</span><span class="p">,</span> <span class="n">gamma</span><span class="o">=</span><span class="mi">1</span><span class="n">j</span><span class="o">*</span><span class="n">beta</span><span class="p">,</span> <span class="n">z0</span><span class="o">=</span><span class="n">Z_0</span><span class="p">)</span>
+<span class="n">Y_0</span><span class="o">=</span><span class="mi">1</span><span class="o">/</span><span class="n">Z_0</span>
+<span class="n">ylijn</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="o">/</span><span class="n">line</span><span class="o">.</span><span class="n">delay_load</span><span class="p">(</span><span class="n">rf</span><span class="o">.</span><span class="n">zl_2_Gamma0</span><span class="p">(</span><span class="n">Z_0</span><span class="p">,</span> <span class="n">Z_L</span><span class="p">),</span> <span class="n">i</span><span class="o">/</span><span class="mi">2</span><span class="p">)[</span><span class="n">f_0_str</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">z</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>  <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">121</span><span class="p">)]</span>
+<span class="n">yopenlijn</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="o">/</span><span class="n">line</span><span class="o">.</span><span class="n">delay_load</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">i</span><span class="o">/</span><span class="mi">2</span><span class="p">)[</span><span class="n">f_0_str</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">z</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>  <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">262</span><span class="p">)]</span>
+<span class="n">smitplot2</span><span class="p">(</span><span class="n">ylijn</span><span class="p">,</span><span class="n">yopenlijn</span><span class="p">,</span><span class="n">Y_0</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/SmithKaartOefening4_76_0.png" src="_images/SmithKaartOefening4_76_0.png" />
+</div>
+</div>
+<div class="figure align-default" id="smith4s7">
+<img alt="_images/mpl.svg" src="_images/mpl.svg" /><p class="caption"><span class="caption-number">Fig. 144 </span><span class="caption-text">Smith kaart van de zevende oplossing</span><a class="headerlink" href="#smith4s7" title="Permallink naar deze afbeelding">¶</a></p>
+</div>
+<div class="cell tag_hide-input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Z_L</span> <span class="o">=</span> <span class="mi">150</span>
+<span class="n">Z_0</span> <span class="o">=</span> <span class="mi">50</span>
+<span class="n">f_0_str</span> <span class="o">=</span> <span class="s1">&#39;600MHz&#39;</span>
+<span class="n">freq</span> <span class="o">=</span> <span class="n">rf</span><span class="o">.</span><span class="n">Frequency</span><span class="p">(</span><span class="n">start</span><span class="o">=</span><span class="mi">500</span><span class="p">,</span> <span class="n">stop</span><span class="o">=</span><span class="mi">700</span><span class="p">,</span> <span class="n">npoints</span><span class="o">=</span><span class="mi">301</span><span class="p">,</span> <span class="n">unit</span><span class="o">=</span><span class="s1">&#39;MHz&#39;</span><span class="p">)</span>
+<span class="n">beta</span> <span class="o">=</span> <span class="n">freq</span><span class="o">.</span><span class="n">w</span><span class="o">/</span><span class="n">rf</span><span class="o">.</span><span class="n">c</span>
+<span class="n">line</span> <span class="o">=</span> <span class="n">rf</span><span class="o">.</span><span class="n">DefinedGammaZ0</span><span class="p">(</span><span class="n">freq</span><span class="p">,</span> <span class="n">gamma</span><span class="o">=</span><span class="mi">1</span><span class="n">j</span><span class="o">*</span><span class="n">beta</span><span class="p">,</span> <span class="n">z0</span><span class="o">=</span><span class="n">Z_0</span><span class="p">)</span>
+<span class="n">Y_0</span><span class="o">=</span><span class="mi">1</span><span class="o">/</span><span class="n">Z_0</span>
+<span class="n">ylijn</span><span class="o">=</span><span class="p">[(</span><span class="n">i</span><span class="p">,</span><span class="mi">1</span><span class="o">/</span><span class="n">line</span><span class="o">.</span><span class="n">delay_load</span><span class="p">(</span><span class="n">rf</span><span class="o">.</span><span class="n">zl_2_Gamma0</span><span class="p">(</span><span class="n">Z_0</span><span class="p">,</span> <span class="n">Z_L</span><span class="p">),</span> <span class="n">i</span><span class="o">/</span><span class="mi">2</span><span class="p">)[</span><span class="n">f_0_str</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">z</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">118</span><span class="p">,</span><span class="mi">122</span><span class="p">)]</span>
+<span class="n">ylijnprint</span><span class="p">(</span><span class="n">ylijn</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>hoek    admitantie (Siemens)     lengte coax (cm)
+ 118    Y= 19.22+22.62j mS     lengte=4.10 cm
+ 119    Y= 19.60+22.86j mS     lengte=4.13 cm
+ 120    Y= 20.00+23.09j mS     lengte=4.17 cm
+ 121    Y= 20.41+23.33j mS     lengte=4.20 cm
+</pre></div>
+</div>
+</div>
+</div>
+<p class=tabcaption> Overzicht van de bekomen admitantie als funktie van de hoek op de Smith kaart. De laatste kolom geeft de nodige lengte van de coax</p><div class="cell tag_hide-input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">yopenlijn</span><span class="o">=</span><span class="p">[(</span><span class="n">i</span><span class="p">,</span><span class="mi">1</span><span class="o">/</span><span class="n">line</span><span class="o">.</span><span class="n">delay_load</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">i</span><span class="o">/</span><span class="mi">2</span><span class="p">)[</span><span class="n">f_0_str</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">z</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">260</span><span class="p">,</span><span class="mi">265</span><span class="p">)]</span>
+<span class="n">ylijnprint2</span><span class="p">(</span><span class="n">yopenlijn</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>hoek    admitantie (Siemens)     lengte coax (cm)
+ 260       Y= -23.84j mS     lengte=9.03 cm
+ 261       Y= -23.42j mS     lengte=9.06 cm
+ 262       Y= -23.01j mS     lengte=9.10 cm
+ 263       Y= -22.61j mS     lengte=9.13 cm
+ 264       Y= -22.21j mS     lengte=9.17 cm
+</pre></div>
+</div>
+</div>
+</div>
+<p class=tabcaption> Overzicht van de bekomen admitantie als funktie van de hoek op de Smith kaart. De laatste kolom geeft de nodige lengte van de coax</p><p>Het schema dat we nodig hebben om deze zevende oplossing te realiseren wordt dus:</p>
+<p class="alert alert-success">
+Het stukje open coax dat we moeten voorzien ter vervanging van het spoel is dus: 9.1 cm
+</p><div class="cell tag_hide-input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">d</span> <span class="o">=</span> <span class="n">schemdraw</span><span class="o">.</span><span class="n">Drawing</span><span class="p">()</span>
+<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">elm</span><span class="o">.</span><span class="n">Ground</span><span class="p">())</span>
+<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">elm</span><span class="o">.</span><span class="n">Dot</span><span class="p">)</span>
+<span class="n">bron</span><span class="o">=</span><span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">elm</span><span class="o">.</span><span class="n">SourceSin</span><span class="p">(</span><span class="n">l</span><span class="o">=</span><span class="mf">2.0</span><span class="p">,</span><span class="n">d</span><span class="o">=</span><span class="s1">&#39;up&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;$V_</span><span class="si">{in}</span><span class="s1">$&#39;</span><span class="p">))</span>
+<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">elm</span><span class="o">.</span><span class="n">Line</span><span class="p">(</span><span class="n">l</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">d</span><span class="o">=</span><span class="s1">&#39;right&#39;</span><span class="p">)</span> <span class="p">)</span>
+<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">elm</span><span class="o">.</span><span class="n">Line</span><span class="p">(</span><span class="n">l</span><span class="o">=</span><span class="mf">0.4</span><span class="p">,</span><span class="n">d</span><span class="o">=</span><span class="s1">&#39;down&#39;</span><span class="p">)</span> <span class="p">)</span>
+<span class="n">coax1</span><span class="o">=</span><span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">elm</span><span class="o">.</span><span class="n">coax</span><span class="p">(</span><span class="n">d</span><span class="o">=</span><span class="s1">&#39;right&#39;</span><span class="p">,</span><span class="n">length</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;$50\Omega$&#39;</span><span class="p">))</span>
+<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">elm</span><span class="o">.</span><span class="n">Dot</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;g&#39;</span><span class="p">)</span>
+<span class="n">coax3</span><span class="o">=</span><span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">elm</span><span class="o">.</span><span class="n">coax</span><span class="p">(</span><span class="n">xy</span><span class="o">=</span><span class="n">coax1</span><span class="o">.</span><span class="n">end</span><span class="p">,</span><span class="n">d</span><span class="o">=</span><span class="s1">&#39;down&#39;</span><span class="p">,</span><span class="n">l</span><span class="o">=</span><span class="mf">1.5</span><span class="p">,</span><span class="n">length</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;$50\Omega$&#39;</span><span class="p">,</span> <span class="n">botlabel</span><span class="o">=</span><span class="s1">&#39;9.1 cm&#39;</span><span class="p">))</span>
+<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">elm</span><span class="o">.</span><span class="n">Line</span><span class="p">(</span><span class="n">xy</span><span class="o">=</span><span class="n">coax1</span><span class="o">.</span><span class="n">shieldend</span><span class="p">,</span><span class="n">toy</span><span class="o">=</span><span class="n">coax3</span><span class="o">.</span><span class="n">shieldstart_top</span><span class="p">,</span><span class="n">d</span><span class="o">=</span><span class="s1">&#39;down&#39;</span><span class="p">))</span>
+<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">elm</span><span class="o">.</span><span class="n">Line</span><span class="p">(</span><span class="n">tox</span><span class="o">=</span><span class="n">coax3</span><span class="o">.</span><span class="n">shieldstart</span><span class="p">,</span><span class="n">d</span><span class="o">=</span><span class="s1">&#39;right&#39;</span><span class="p">))</span>
+
+<span class="n">coax2</span><span class="o">=</span><span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">elm</span><span class="o">.</span><span class="n">coax</span><span class="p">(</span><span class="n">xy</span><span class="o">=</span><span class="n">coax1</span><span class="o">.</span><span class="n">end</span><span class="p">,</span><span class="n">d</span><span class="o">=</span><span class="s1">&#39;right&#39;</span><span class="p">,</span><span class="n">l</span><span class="o">=</span><span class="mf">1.5</span><span class="p">,</span><span class="n">length</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;$50\Omega$&#39;</span><span class="p">,</span> <span class="n">botlabel</span><span class="o">=</span><span class="s1">&#39;4.2 cm&#39;</span><span class="p">))</span>
+<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">elm</span><span class="o">.</span><span class="n">Dot</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;r&#39;</span><span class="p">)</span>
+<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">elm</span><span class="o">.</span><span class="n">Antenna</span><span class="p">(</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;$150\Omega$&#39;</span><span class="p">))</span>
+<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">elm</span><span class="o">.</span><span class="n">Line</span><span class="p">(</span><span class="n">xy</span><span class="o">=</span><span class="n">coax1</span><span class="o">.</span><span class="n">shieldend_top</span><span class="p">,</span><span class="n">l</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">d</span><span class="o">=</span><span class="s1">&#39;up&#39;</span><span class="p">))</span>
+<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">elm</span><span class="o">.</span><span class="n">Line</span><span class="p">(</span><span class="n">tox</span><span class="o">=</span><span class="n">coax2</span><span class="o">.</span><span class="n">shieldstart_top</span><span class="p">,</span><span class="n">d</span><span class="o">=</span><span class="s1">&#39;right&#39;</span><span class="p">)</span> <span class="p">)</span>     
+<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">elm</span><span class="o">.</span><span class="n">Line</span><span class="p">(</span><span class="n">toy</span><span class="o">=</span><span class="n">coax2</span><span class="o">.</span><span class="n">shieldstart_top</span><span class="p">,</span><span class="n">d</span><span class="o">=</span><span class="s1">&#39;down&#39;</span><span class="p">)</span> <span class="p">)</span>     
+<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">elm</span><span class="o">.</span><span class="n">Line</span><span class="p">(</span><span class="n">xy</span><span class="o">=</span><span class="n">bron</span><span class="o">.</span><span class="n">start</span><span class="p">,</span><span class="n">tox</span><span class="o">=</span><span class="n">coax1</span><span class="o">.</span><span class="n">shieldstart</span><span class="p">,</span><span class="n">d</span><span class="o">=</span><span class="s1">&#39;right&#39;</span><span class="p">)</span> <span class="p">)</span>
+<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">elm</span><span class="o">.</span><span class="n">Line</span><span class="p">(</span><span class="n">toy</span><span class="o">=</span><span class="n">coax1</span><span class="o">.</span><span class="n">shieldstart</span><span class="p">,</span><span class="n">d</span><span class="o">=</span><span class="s1">&#39;up&#39;</span><span class="p">)</span> <span class="p">)</span>
+<span class="n">d</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/SmithKaartOefening4_84_0.svg" src="_images/SmithKaartOefening4_84_0.svg" /></div>
+</div>
+<div class="figure align-default" id="smith4f7">
+<img alt="_images/mpl.svg" src="_images/mpl.svg" /><p class="caption"><span class="caption-number">Fig. 145 </span><span class="caption-text">circuit van de zevende oplossing</span><a class="headerlink" href="#smith4f7" title="Permallink naar deze afbeelding">¶</a></p>
+</div>
+</div>
+<div class="section" id="oplossing-8-oplossing-4-waarbij-het-spoel-vervangen-is-door-een-kortgesloten-transmissielijn">
+<h3>Oplossing 8: Oplossing 4 waarbij het spoel vervangen is door een kortgesloten transmissielijn<a class="headerlink" href="#oplossing-8-oplossing-4-waarbij-het-spoel-vervangen-is-door-een-kortgesloten-transmissielijn" title="Permalink naar deze titel">¶</a></h3>
+<p>De y = 1 + j 1.15 compenseren we door -j 1.15 vertrekkende vanuit g=<span class="math notranslate nohighlight">\(\infty\)</span>.</p>
+<div class="cell tag_hide-input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Z_L</span> <span class="o">=</span> <span class="mi">150</span>
+<span class="n">Z_0</span> <span class="o">=</span> <span class="mi">50</span>
+<span class="n">f_0_str</span> <span class="o">=</span> <span class="s1">&#39;600MHz&#39;</span>
+<span class="n">freq</span> <span class="o">=</span> <span class="n">rf</span><span class="o">.</span><span class="n">Frequency</span><span class="p">(</span><span class="n">start</span><span class="o">=</span><span class="mi">500</span><span class="p">,</span> <span class="n">stop</span><span class="o">=</span><span class="mi">700</span><span class="p">,</span> <span class="n">npoints</span><span class="o">=</span><span class="mi">301</span><span class="p">,</span> <span class="n">unit</span><span class="o">=</span><span class="s1">&#39;MHz&#39;</span><span class="p">)</span>
+<span class="n">beta</span> <span class="o">=</span> <span class="n">freq</span><span class="o">.</span><span class="n">w</span><span class="o">/</span><span class="n">rf</span><span class="o">.</span><span class="n">c</span>
+<span class="n">line</span> <span class="o">=</span> <span class="n">rf</span><span class="o">.</span><span class="n">DefinedGammaZ0</span><span class="p">(</span><span class="n">freq</span><span class="p">,</span> <span class="n">gamma</span><span class="o">=</span><span class="mi">1</span><span class="n">j</span><span class="o">*</span><span class="n">beta</span><span class="p">,</span> <span class="n">z0</span><span class="o">=</span><span class="n">Z_0</span><span class="p">)</span>
+<span class="n">Y_0</span><span class="o">=</span><span class="mi">1</span><span class="o">/</span><span class="n">Z_0</span>
+<span class="n">ylijn</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="o">/</span><span class="n">line</span><span class="o">.</span><span class="n">delay_load</span><span class="p">(</span><span class="n">rf</span><span class="o">.</span><span class="n">zl_2_Gamma0</span><span class="p">(</span><span class="n">Z_0</span><span class="p">,</span> <span class="n">Z_L</span><span class="p">),</span> <span class="n">i</span><span class="o">/</span><span class="mi">2</span><span class="p">)[</span><span class="n">f_0_str</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">z</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>  <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">121</span><span class="p">)]</span>
+<span class="n">ykortlijn</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="o">/</span><span class="n">line</span><span class="o">.</span><span class="n">delay_load</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">i</span><span class="o">/</span><span class="mi">2</span><span class="p">)[</span><span class="n">f_0_str</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">z</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>  <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="o">-</span><span class="mi">180</span><span class="p">,</span><span class="o">-</span><span class="mi">98</span><span class="p">)]</span>
+<span class="n">smitplot2</span><span class="p">(</span><span class="n">ylijn</span><span class="p">,</span><span class="n">ykortlijn</span><span class="p">,</span><span class="n">Y_0</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/SmithKaartOefening4_87_0.png" src="_images/SmithKaartOefening4_87_0.png" />
+</div>
+</div>
+<div class="figure align-default" id="smith4s8">
+<img alt="_images/mpl.svg" src="_images/mpl.svg" /><p class="caption"><span class="caption-number">Fig. 146 </span><span class="caption-text">Smith kaart van de achtste oplossing</span><a class="headerlink" href="#smith4s8" title="Permallink naar deze afbeelding">¶</a></p>
+</div>
+<div class="cell tag_hide-input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Z_L</span> <span class="o">=</span> <span class="mi">150</span>
+<span class="n">Z_0</span> <span class="o">=</span> <span class="mi">50</span>
+<span class="n">f_0_str</span> <span class="o">=</span> <span class="s1">&#39;600MHz&#39;</span>
+<span class="n">freq</span> <span class="o">=</span> <span class="n">rf</span><span class="o">.</span><span class="n">Frequency</span><span class="p">(</span><span class="n">start</span><span class="o">=</span><span class="mi">500</span><span class="p">,</span> <span class="n">stop</span><span class="o">=</span><span class="mi">700</span><span class="p">,</span> <span class="n">npoints</span><span class="o">=</span><span class="mi">301</span><span class="p">,</span> <span class="n">unit</span><span class="o">=</span><span class="s1">&#39;MHz&#39;</span><span class="p">)</span>
+<span class="n">beta</span> <span class="o">=</span> <span class="n">freq</span><span class="o">.</span><span class="n">w</span><span class="o">/</span><span class="n">rf</span><span class="o">.</span><span class="n">c</span>
+<span class="n">line</span> <span class="o">=</span> <span class="n">rf</span><span class="o">.</span><span class="n">DefinedGammaZ0</span><span class="p">(</span><span class="n">freq</span><span class="p">,</span> <span class="n">gamma</span><span class="o">=</span><span class="mi">1</span><span class="n">j</span><span class="o">*</span><span class="n">beta</span><span class="p">,</span> <span class="n">z0</span><span class="o">=</span><span class="n">Z_0</span><span class="p">)</span>
+<span class="n">Y_0</span><span class="o">=</span><span class="mi">1</span><span class="o">/</span><span class="n">Z_0</span>
+<span class="n">ylijn</span><span class="o">=</span><span class="p">[(</span><span class="n">i</span><span class="p">,</span><span class="mi">1</span><span class="o">/</span><span class="n">line</span><span class="o">.</span><span class="n">delay_load</span><span class="p">(</span><span class="n">rf</span><span class="o">.</span><span class="n">zl_2_Gamma0</span><span class="p">(</span><span class="n">Z_0</span><span class="p">,</span> <span class="n">Z_L</span><span class="p">),</span> <span class="n">i</span><span class="o">/</span><span class="mi">2</span><span class="p">)[</span><span class="n">f_0_str</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">z</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">118</span><span class="p">,</span><span class="mi">122</span><span class="p">)]</span>
+<span class="n">ylijnprint</span><span class="p">(</span><span class="n">ylijn</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>hoek    admitantie (Siemens)     lengte coax (cm)
+ 118    Y= 19.22+22.62j mS     lengte=4.10 cm
+ 119    Y= 19.60+22.86j mS     lengte=4.13 cm
+ 120    Y= 20.00+23.09j mS     lengte=4.17 cm
+ 121    Y= 20.41+23.33j mS     lengte=4.20 cm
+</pre></div>
+</div>
+</div>
+</div>
+<p class=tabcaption> Overzicht van de bekomen admitantie als funktie van de hoek op de Smith kaart. De laatste kolom geeft de nodige lengte van de coax</p><div class="cell tag_hide-input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ykortlijn</span><span class="o">=</span><span class="p">[(</span><span class="n">i</span><span class="o">+</span><span class="mi">180</span><span class="p">,</span><span class="mi">1</span><span class="o">/</span><span class="n">line</span><span class="o">.</span><span class="n">delay_load</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">i</span><span class="o">/</span><span class="mi">2</span><span class="p">)[</span><span class="n">f_0_str</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">z</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">])</span>  <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="o">-</span><span class="mi">100</span><span class="p">,</span><span class="o">-</span><span class="mi">95</span><span class="p">)]</span>
+<span class="n">ylijnprint2</span><span class="p">(</span><span class="n">ykortlijn</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>hoek    admitantie (Siemens)     lengte coax (cm)
+  80       Y= -23.84j mS     lengte=2.78 cm
+  81       Y= -23.42j mS     lengte=2.81 cm
+  82       Y= -23.01j mS     lengte=2.85 cm
+  83       Y= -22.61j mS     lengte=2.88 cm
+  84       Y= -22.21j mS     lengte=2.92 cm
+</pre></div>
+</div>
+</div>
+</div>
+<p class=tabcaption> Overzicht van de bekomen admitantie als funktie van de hoek op de Smith kaart. De laatste kolom geeft de nodige lengte van de coax</p><p class="alert alert-success">
+Het stukje kortgesloten coax dat we moeten voorzien ter vervanging van het spoel is dus: 2.8 cm
+</p><p>Het schema dat we nodig hebben om deze achtste oplossing te realiseren wordt dus:</p>
+<div class="cell tag_hide-input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">d</span> <span class="o">=</span> <span class="n">schemdraw</span><span class="o">.</span><span class="n">Drawing</span><span class="p">()</span>
+<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">elm</span><span class="o">.</span><span class="n">Ground</span><span class="p">())</span>
+<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">elm</span><span class="o">.</span><span class="n">Dot</span><span class="p">)</span>
+<span class="n">bron</span><span class="o">=</span><span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">elm</span><span class="o">.</span><span class="n">SourceSin</span><span class="p">(</span><span class="n">l</span><span class="o">=</span><span class="mf">2.0</span><span class="p">,</span><span class="n">d</span><span class="o">=</span><span class="s1">&#39;up&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;$V_</span><span class="si">{in}</span><span class="s1">$&#39;</span><span class="p">))</span>
+<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">elm</span><span class="o">.</span><span class="n">Line</span><span class="p">(</span><span class="n">l</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">d</span><span class="o">=</span><span class="s1">&#39;right&#39;</span><span class="p">)</span> <span class="p">)</span>
+<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">elm</span><span class="o">.</span><span class="n">Line</span><span class="p">(</span><span class="n">l</span><span class="o">=</span><span class="mf">0.4</span><span class="p">,</span><span class="n">d</span><span class="o">=</span><span class="s1">&#39;down&#39;</span><span class="p">)</span> <span class="p">)</span>
+<span class="n">coax1</span><span class="o">=</span><span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">elm</span><span class="o">.</span><span class="n">coax</span><span class="p">(</span><span class="n">d</span><span class="o">=</span><span class="s1">&#39;right&#39;</span><span class="p">,</span><span class="n">length</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;$50\Omega$&#39;</span><span class="p">))</span>
+<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">elm</span><span class="o">.</span><span class="n">Dot</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;g&#39;</span><span class="p">)</span>
+<span class="n">coax3</span><span class="o">=</span><span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">elm</span><span class="o">.</span><span class="n">coax</span><span class="p">(</span><span class="n">xy</span><span class="o">=</span><span class="n">coax1</span><span class="o">.</span><span class="n">end</span><span class="p">,</span><span class="n">d</span><span class="o">=</span><span class="s1">&#39;down&#39;</span><span class="p">,</span><span class="n">l</span><span class="o">=</span><span class="mf">1.5</span><span class="p">,</span><span class="n">length</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;$50\Omega$&#39;</span><span class="p">,</span> <span class="n">botlabel</span><span class="o">=</span><span class="s1">&#39;2.8 cm&#39;</span><span class="p">))</span>
+<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">elm</span><span class="o">.</span><span class="n">Line</span><span class="p">(</span><span class="n">tox</span><span class="o">=</span><span class="n">coax3</span><span class="o">.</span><span class="n">shieldend</span><span class="p">,</span><span class="n">d</span><span class="o">=</span><span class="s1">&#39;left&#39;</span><span class="p">))</span>
+<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">elm</span><span class="o">.</span><span class="n">Line</span><span class="p">(</span><span class="n">toy</span><span class="o">=</span><span class="n">coax3</span><span class="o">.</span><span class="n">shieldend</span><span class="p">,</span><span class="n">d</span><span class="o">=</span><span class="s1">&#39;up&#39;</span><span class="p">))</span>
+
+<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">elm</span><span class="o">.</span><span class="n">Line</span><span class="p">(</span><span class="n">xy</span><span class="o">=</span><span class="n">coax1</span><span class="o">.</span><span class="n">shieldend</span><span class="p">,</span><span class="n">toy</span><span class="o">=</span><span class="n">coax3</span><span class="o">.</span><span class="n">shieldstart_top</span><span class="p">,</span><span class="n">d</span><span class="o">=</span><span class="s1">&#39;down&#39;</span><span class="p">))</span>
+<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">elm</span><span class="o">.</span><span class="n">Line</span><span class="p">(</span><span class="n">tox</span><span class="o">=</span><span class="n">coax3</span><span class="o">.</span><span class="n">shieldstart</span><span class="p">,</span><span class="n">d</span><span class="o">=</span><span class="s1">&#39;right&#39;</span><span class="p">))</span>
+
+<span class="n">coax2</span><span class="o">=</span><span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">elm</span><span class="o">.</span><span class="n">coax</span><span class="p">(</span><span class="n">xy</span><span class="o">=</span><span class="n">coax1</span><span class="o">.</span><span class="n">end</span><span class="p">,</span><span class="n">d</span><span class="o">=</span><span class="s1">&#39;right&#39;</span><span class="p">,</span><span class="n">l</span><span class="o">=</span><span class="mf">1.5</span><span class="p">,</span><span class="n">length</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;$50\Omega$&#39;</span><span class="p">,</span> <span class="n">botlabel</span><span class="o">=</span><span class="s1">&#39;4.2 cm&#39;</span><span class="p">))</span>
+<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">elm</span><span class="o">.</span><span class="n">Dot</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;r&#39;</span><span class="p">)</span>
+<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">elm</span><span class="o">.</span><span class="n">Antenna</span><span class="p">(</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;$150\Omega$&#39;</span><span class="p">))</span>
+<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">elm</span><span class="o">.</span><span class="n">Line</span><span class="p">(</span><span class="n">xy</span><span class="o">=</span><span class="n">coax1</span><span class="o">.</span><span class="n">shieldend_top</span><span class="p">,</span><span class="n">l</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">d</span><span class="o">=</span><span class="s1">&#39;up&#39;</span><span class="p">))</span>
+<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">elm</span><span class="o">.</span><span class="n">Line</span><span class="p">(</span><span class="n">tox</span><span class="o">=</span><span class="n">coax2</span><span class="o">.</span><span class="n">shieldstart_top</span><span class="p">,</span><span class="n">d</span><span class="o">=</span><span class="s1">&#39;right&#39;</span><span class="p">)</span> <span class="p">)</span>     
+<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">elm</span><span class="o">.</span><span class="n">Line</span><span class="p">(</span><span class="n">toy</span><span class="o">=</span><span class="n">coax2</span><span class="o">.</span><span class="n">shieldstart_top</span><span class="p">,</span><span class="n">d</span><span class="o">=</span><span class="s1">&#39;down&#39;</span><span class="p">)</span> <span class="p">)</span>     
+<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">elm</span><span class="o">.</span><span class="n">Line</span><span class="p">(</span><span class="n">xy</span><span class="o">=</span><span class="n">bron</span><span class="o">.</span><span class="n">start</span><span class="p">,</span><span class="n">tox</span><span class="o">=</span><span class="n">coax1</span><span class="o">.</span><span class="n">shieldstart</span><span class="p">,</span><span class="n">d</span><span class="o">=</span><span class="s1">&#39;right&#39;</span><span class="p">)</span> <span class="p">)</span>
+<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">elm</span><span class="o">.</span><span class="n">Line</span><span class="p">(</span><span class="n">toy</span><span class="o">=</span><span class="n">coax1</span><span class="o">.</span><span class="n">shieldstart</span><span class="p">,</span><span class="n">d</span><span class="o">=</span><span class="s1">&#39;up&#39;</span><span class="p">)</span> <span class="p">)</span>
+<span class="n">d</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/SmithKaartOefening4_95_0.svg" src="_images/SmithKaartOefening4_95_0.svg" /></div>
+</div>
+<div class="figure align-default" id="smith4f8">
+<img alt="_images/mpl.svg" src="_images/mpl.svg" /><p class="caption"><span class="caption-number">Fig. 147 </span><span class="caption-text">circuit van de achtste oplossing</span><a class="headerlink" href="#smith4f8" title="Permallink naar deze afbeelding">¶</a></p>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "kuleuven"
+        },
+        kernelOptions: {
+            kernelName: "kuleuven",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'kuleuven'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="SmithKaartOefening3.html" title="vorige pagina">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">vorige</p>
+            <p class="prev-next-title">Smith Kaart Oefening 3</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="SmithKaartOefening5.html" title="volgende pagina">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">volgende</p>
+        <p class="prev-next-title">Smith Kaart Oefening 5</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      Door Jan Genoe (jan.genoe@kuleuven.be)<br/>
+    
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

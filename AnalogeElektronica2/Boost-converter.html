@@ -1,0 +1,586 @@
+
+<!DOCTYPE html>
+
+<html lang="nl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Boost Converter of Step-up Converter &#8212; Analoge elektronische schakelingen</title>
+    
+  <link href="_static/css/theme.css" rel="stylesheet">
+  <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/translations.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Zoeken" href="search.html" />
+    <link rel="next" title="Inverter of Buck-Boost Converter" href="Inverter.html" />
+    <link rel="prev" title="Buck Converter" href="Buck-converter.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="nl">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="_static/logo.svg" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Analoge elektronische schakelingen</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Zoek in dit boek ..." aria-label="Zoek in dit boek ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro.html">
+   Analoge Elektronische Schakelingen
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Inleiding
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Hoe_dit_werkboek_gebruiken.html">
+   Hoe dit werkboek te gebruiken
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Versterkers
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Klasse-A.html">
+   Klasse A versterkers
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Klasse-B.html">
+   Klasse B versterkers
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Voedingen
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Buck-converter.html">
+   Buck Converter
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Boost Converter of Step-up Converter
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Inverter.html">
+   Inverter of Buck-Boost Converter
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Flyback-converter.html">
+   Flyback converter
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  <a href="https://www.kuleuven.be"> <img src=" http://stijl.kuleuven.be/2016tmp/img/svg/logo.svg" alt="KULeuven"></a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Schakel navigatie" aria-controls="site-navigation"
+                title="Schakel navigatie" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download deze pagina"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/Boost-converter.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download het bronbestand" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Afdrukken naar pdf"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/jangenoe/InteractieveCursus"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Bronopslagplaats"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/jangenoe/InteractieveCursus/issues/new?title=Issue%20on%20page%20%2FBoost-converter.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open een probleem"><i class="fas fa-lightbulb"></i>open probleem</button></a>
+        <a class="edit-button" href="https://github.com/jangenoe/InteractieveCursus/edit/master/AnalogeElektronica2/Boost-converter.ipynb"><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="bewerk deze pagina"><i class="fas fa-pencil-alt"></i>suggereren bewerken</button></a>
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Volledig scherm"
+        title="Volledig scherm"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/jangenoe/InteractieveCursus/master?urlpath=lab/tree/AnalogeElektronica2/Boost-converter.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Lancering Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        <a class="colab-button" href="https://colab.research.google.com/github/jangenoe/InteractieveCursus/blob/master/AnalogeElektronica2/Boost-converter.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+                title="Lancering Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
+                    src="_static/images/logo_colab.png"
+                    alt="Interact on Colab">Colab</button></a>
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Inhoud
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Boost Converter of Step-up Converter
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#oefening-1">
+   Oefening 1
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#oefening-2">
+   Oefening 2
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="boost-converter-of-step-up-converter">
+<h1>Boost Converter of Step-up Converter<a class="headerlink" href="#boost-converter-of-step-up-converter" title="Permalink naar deze titel">¶</a></h1>
+<p>De presentatie slides van dit hoofdstuk kan je <a href="./slides/Boost-converter.slides.html"><code class="docutils literal notranslate"><span class="pre">hier</span></code></a> vinden.</p>
+<div class="cell tag_hide-input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">YouTubeVideo</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_hide-input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">YouTubeVideo</span><span class="p">(</span><span class="s2">&quot;vwJYIorz_Aw&quot;</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">960</span><span class="p">,</span><span class="n">height</span><span class="o">=</span><span class="mi">540</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+<iframe
+    width="960"
+    height="540"
+    src="https://www.youtube.com/embed/vwJYIorz_Aw"
+    frameborder="0"
+    allowfullscreen
+
+></iframe>
+</div></div>
+</div>
+</div>
+<div class="tex2jax_ignore mathjax_ignore section" id="oefening-1">
+<h1>Oefening 1<a class="headerlink" href="#oefening-1" title="Permalink naar deze titel">¶</a></h1>
+<p>(a) Het schema in <code class="docutils literal notranslate"><span class="pre">numref</span></code> komt uit een <a class="reference external" href="https://www.st.com/resource/en/datasheet/l6920.pdf">datasheet</a> die je van het internet kan downloaden. Wat verwacht je dat er binnen in deze component zit en hoe werkt dit circuit dan? De Ron van de schakeltransistor veronderstel je 0.3<span class="math notranslate nohighlight">\(\Omega\)</span> en de weerstand van het spoel L1 mag je verwaarlozen, VD veronderstel je 0.3V.</p>
+<div class="figure align-default" id="st-schema">
+<img alt="_images/STep-UP-TI.png" src="_images/STep-UP-TI.png" />
+<p class="caption"><span class="caption-number">Fig. 12 </span><span class="caption-text">Schema van een Step-up converter ontworpen door ST-microelectronics [bron toevoegen].</span><a class="headerlink" href="#st-schema" title="Permallink naar deze afbeelding">¶</a></p>
+</div>
+<p>(b) Reken uit hoe de Duty cycle en de efficiëntie veranderen als de output stroom gaat van 0 mA naar 500 mA.</p>
+</div>
+<div class="tex2jax_ignore mathjax_ignore section" id="oefening-2">
+<h1>Oefening 2<a class="headerlink" href="#oefening-2" title="Permalink naar deze titel">¶</a></h1>
+<div class="cell tag_hide-input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+
+<span class="k">def</span> <span class="nf">step_up_vout</span><span class="p">(</span><span class="n">vin</span><span class="p">,</span><span class="n">D</span><span class="p">,</span><span class="n">Iout</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">RT</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">RL</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">VD</span><span class="o">=</span><span class="mf">0.3</span><span class="p">):</span>
+    <span class="n">D1</span><span class="o">=</span><span class="mi">1</span><span class="o">-</span><span class="n">D</span>
+    <span class="k">return</span> <span class="n">vin</span><span class="o">/</span><span class="n">D1</span><span class="o">-</span><span class="n">RL</span><span class="o">*</span><span class="n">Iout</span><span class="o">/</span><span class="n">D1</span><span class="o">/</span><span class="n">D1</span><span class="o">-</span><span class="n">D</span><span class="o">/</span><span class="n">D1</span><span class="o">/</span><span class="n">D1</span><span class="o">*</span><span class="n">RT</span><span class="o">*</span><span class="n">Iout</span><span class="o">-</span><span class="n">VD</span>
+
+<span class="k">def</span> <span class="nf">step_up_mu</span><span class="p">(</span><span class="n">vin</span><span class="p">,</span><span class="n">D</span><span class="p">,</span><span class="n">Iout</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">RT</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">RL</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">VD</span><span class="o">=</span><span class="mf">0.3</span><span class="p">):</span>
+    <span class="n">D1</span><span class="o">=</span><span class="mi">1</span><span class="o">-</span><span class="n">D</span>
+    <span class="k">return</span> <span class="mi">1</span><span class="o">-</span><span class="n">RL</span><span class="o">*</span><span class="n">Iout</span><span class="o">/</span><span class="n">D1</span><span class="o">/</span><span class="n">vin</span><span class="o">-</span><span class="n">D</span><span class="o">/</span><span class="n">D1</span><span class="o">/</span><span class="n">vin</span><span class="o">*</span><span class="n">RT</span><span class="o">*</span><span class="n">Iout</span><span class="o">-</span><span class="n">D1</span><span class="o">*</span><span class="n">VD</span><span class="o">/</span><span class="n">vin</span>
+
+<span class="k">def</span> <span class="nf">step_up_duty</span><span class="p">(</span><span class="n">vin</span><span class="p">,</span><span class="n">vout</span><span class="p">,</span><span class="n">IL</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">RT</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">RL</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">VD</span><span class="o">=</span><span class="mf">0.3</span><span class="p">):</span>
+    <span class="n">mT</span><span class="o">=</span><span class="p">(</span><span class="n">vout</span><span class="o">+</span><span class="n">VD</span><span class="o">+</span><span class="n">RL</span><span class="o">*</span><span class="n">IL</span><span class="o">-</span><span class="n">vin</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="n">vin</span><span class="o">-</span><span class="n">RL</span><span class="o">*</span><span class="n">IL</span><span class="o">-</span><span class="n">RT</span><span class="o">*</span><span class="n">IL</span><span class="p">)</span><span class="o">+</span><span class="mi">1</span> <span class="c1"># T_off/T_on</span>
+    <span class="k">return</span> <span class="mi">1</span><span class="o">/</span><span class="n">mT</span>
+
+<span class="k">def</span> <span class="nf">step_up_vin</span><span class="p">(</span><span class="n">vout</span><span class="p">,</span><span class="n">D</span><span class="p">,</span><span class="n">Iout</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">RT</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">RL</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">VD</span><span class="o">=</span><span class="mf">0.3</span><span class="p">):</span>
+    <span class="n">D1</span><span class="o">=</span><span class="mi">1</span><span class="o">-</span><span class="n">D</span>
+    <span class="n">IL</span><span class="o">=</span><span class="n">Iout</span><span class="o">/</span><span class="n">D1</span>
+    <span class="k">return</span> <span class="p">(</span><span class="n">vout</span><span class="o">+</span><span class="n">VD</span><span class="p">)</span><span class="o">*</span><span class="n">D1</span><span class="o">+</span><span class="n">RL</span><span class="o">*</span><span class="n">IL</span><span class="o">+</span><span class="n">RT</span><span class="o">*</span><span class="n">D</span><span class="o">*</span><span class="n">IL</span>
+    
+
+<span class="n">figure</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
+<span class="n">vin</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mf">0.75</span><span class="p">,</span><span class="mi">12</span><span class="p">,</span><span class="mf">0.05</span><span class="p">)</span>
+<span class="n">iout</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mf">0.12</span><span class="p">,</span><span class="mf">0.01</span><span class="p">)</span>
+
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">vin</span><span class="p">,</span><span class="n">step_up_duty</span><span class="p">(</span><span class="n">vin</span><span class="p">,</span><span class="mi">12</span><span class="p">,</span><span class="n">IL</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">RT</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span><span class="n">RL</span><span class="o">=</span><span class="mf">0.3</span><span class="p">,</span><span class="n">VD</span><span class="o">=</span><span class="mf">0.3</span><span class="p">),</span> <span class="n">label</span><span class="o">=</span><span class="sa">r</span><span class="s1">&#39;$I_</span><span class="si">{out}</span><span class="s1">= 0 mA$&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">vin</span><span class="p">,</span><span class="n">step_up_duty</span><span class="p">(</span><span class="n">vin</span><span class="p">,</span><span class="mi">12</span><span class="p">,</span><span class="n">IL</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span><span class="n">RT</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span><span class="n">RL</span><span class="o">=</span><span class="mf">0.3</span><span class="p">,</span><span class="n">VD</span><span class="o">=</span><span class="mf">0.3</span><span class="p">),</span><span class="n">label</span><span class="o">=</span><span class="sa">r</span><span class="s1">&#39;$I_</span><span class="si">{out}</span><span class="s1">= 100 mA$&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">vin</span><span class="p">,</span><span class="n">step_up_duty</span><span class="p">(</span><span class="n">vin</span><span class="p">,</span><span class="mi">12</span><span class="p">,</span><span class="n">IL</span><span class="o">=</span><span class="mf">0.35</span><span class="p">,</span><span class="n">RT</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span><span class="n">RL</span><span class="o">=</span><span class="mf">0.3</span><span class="p">,</span><span class="n">VD</span><span class="o">=</span><span class="mf">0.3</span><span class="p">),</span><span class="n">label</span><span class="o">=</span><span class="sa">r</span><span class="s1">&#39;$I_</span><span class="si">{out}</span><span class="s1">= 350 mA$&#39;</span><span class="p">)</span>
+
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">iout</span><span class="p">,</span><span class="n">step_up_mu</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="n">step_up_duty</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">12</span><span class="p">,</span><span class="n">IL</span><span class="o">=</span><span class="n">iout</span><span class="p">,</span><span class="n">RT</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span><span class="n">RL</span><span class="o">=</span><span class="mf">0.3</span><span class="p">,</span><span class="n">VD</span><span class="o">=</span><span class="mf">0.3</span><span class="p">),</span><span class="n">Iout</span><span class="o">=</span><span class="n">iout</span><span class="p">,</span><span class="n">RT</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span><span class="n">RL</span><span class="o">=</span><span class="mf">0.3</span><span class="p">,</span><span class="n">VD</span><span class="o">=</span><span class="mf">0.3</span><span class="p">))</span>
+
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span> <span class="n">loc</span><span class="o">=</span><span class="p">(</span><span class="mf">.8</span><span class="p">,</span><span class="mf">.1</span><span class="p">))</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">(</span><span class="mf">0.75</span><span class="p">,</span><span class="mi">12</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;Input spanning [V]&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Duty cycle&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;Output stroom [A]&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Efficientie&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/Boost-converter_6_0.png" src="_images/Boost-converter_6_0.png" />
+</div>
+</div>
+<div class="figure align-default" id="dutysu">
+<img alt="_images/mpl.svg" src="_images/mpl.svg" /><p class="caption"><span class="caption-number">Fig. 13 </span><span class="caption-text">(bovenaan) Duty-cycle als functie van de input spanning en (onderaaan) efficientie als functie van de output stroom voor de ontworpen Step-up converter</span><a class="headerlink" href="#dutysu" title="Permallink naar deze afbeelding">¶</a></p>
+</div>
+<div class="cell tag_hide-input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">D</span> <span class="ow">in</span> <span class="p">[</span><span class="mf">0.0</span><span class="p">,</span><span class="mf">0.1</span><span class="p">,</span><span class="mf">0.3</span><span class="p">,</span><span class="mf">0.5</span><span class="p">,</span><span class="mf">0.7</span><span class="p">,</span><span class="mf">0.9</span><span class="p">]:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">D</span><span class="p">,</span><span class="n">step_up_vin</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="n">D</span><span class="p">,</span><span class="n">Iout</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">RT</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span><span class="n">RL</span><span class="o">=</span><span class="mf">0.3</span><span class="p">,</span><span class="n">VD</span><span class="o">=</span><span class="mf">0.3</span><span class="p">),</span><span class="n">step_up_vin</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="n">D</span><span class="p">,</span><span class="n">Iout</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span><span class="n">RT</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span><span class="n">RL</span><span class="o">=</span><span class="mf">0.3</span><span class="p">,</span><span class="n">VD</span><span class="o">=</span><span class="mf">0.3</span><span class="p">),</span><span class="n">step_up_vin</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="n">D</span><span class="p">,</span><span class="n">Iout</span><span class="o">=</span><span class="mf">0.35</span><span class="p">,</span><span class="n">RT</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span><span class="n">RL</span><span class="o">=</span><span class="mf">0.3</span><span class="p">,</span><span class="n">VD</span><span class="o">=</span><span class="mf">0.3</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.0 12.3 12.33 12.405000000000001
+0.1 11.07 11.136666666666667 11.303333333333335
+0.3 8.61 8.78142857142857 9.209999999999999
+0.5 6.15 6.51 7.41
+0.7 3.690000000000001 4.490000000000001 6.49
+0.9 1.2299999999999998 4.23 11.73
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_hide-input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">D1</span><span class="o">=</span><span class="p">[</span><span class="mf">0.0</span><span class="p">,</span><span class="mf">0.1</span><span class="p">,</span><span class="mf">0.3</span><span class="p">,</span><span class="mf">0.5</span><span class="p">,</span><span class="mf">0.7</span><span class="p">,</span><span class="mf">0.9</span><span class="p">]</span>
+<span class="n">A1</span><span class="o">=</span><span class="p">[</span><span class="n">step_up_vin</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="n">D</span><span class="p">,</span><span class="n">Iout</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">RT</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span><span class="n">RL</span><span class="o">=</span><span class="mf">0.3</span><span class="p">,</span><span class="n">VD</span><span class="o">=</span><span class="mf">0.3</span><span class="p">)</span> <span class="k">for</span> <span class="n">D</span> <span class="ow">in</span> <span class="n">D1</span><span class="p">]</span>
+<span class="n">A2</span><span class="o">=</span><span class="p">[</span><span class="n">step_up_vin</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="n">D</span><span class="p">,</span><span class="n">Iout</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span><span class="n">RT</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span><span class="n">RL</span><span class="o">=</span><span class="mf">0.3</span><span class="p">,</span><span class="n">VD</span><span class="o">=</span><span class="mf">0.3</span><span class="p">)</span> <span class="k">for</span> <span class="n">D</span> <span class="ow">in</span> <span class="n">D1</span><span class="p">]</span>
+<span class="n">A3</span><span class="o">=</span><span class="p">[</span><span class="n">step_up_vin</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="n">D</span><span class="p">,</span><span class="n">Iout</span><span class="o">=</span><span class="mf">0.35</span><span class="p">,</span><span class="n">RT</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span><span class="n">RL</span><span class="o">=</span><span class="mf">0.3</span><span class="p">,</span><span class="n">VD</span><span class="o">=</span><span class="mf">0.3</span><span class="p">)</span> <span class="k">for</span> <span class="n">D</span> <span class="ow">in</span> <span class="n">D1</span><span class="p">]</span>
+<span class="n">D2</span><span class="o">=</span><span class="p">[</span><span class="n">x</span><span class="o">/</span><span class="mi">100</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">100</span><span class="p">)]</span>
+<span class="n">b1</span><span class="o">=</span><span class="p">[</span><span class="n">step_up_vin</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="n">D</span><span class="p">,</span><span class="n">Iout</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">RT</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span><span class="n">RL</span><span class="o">=</span><span class="mf">0.3</span><span class="p">,</span><span class="n">VD</span><span class="o">=</span><span class="mf">0.3</span><span class="p">)</span> <span class="k">for</span> <span class="n">D</span> <span class="ow">in</span> <span class="n">D2</span><span class="p">]</span>
+<span class="n">b2</span><span class="o">=</span><span class="p">[</span><span class="n">step_up_vin</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="n">D</span><span class="p">,</span><span class="n">Iout</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span><span class="n">RT</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span><span class="n">RL</span><span class="o">=</span><span class="mf">0.3</span><span class="p">,</span><span class="n">VD</span><span class="o">=</span><span class="mf">0.3</span><span class="p">)</span> <span class="k">for</span> <span class="n">D</span> <span class="ow">in</span> <span class="n">D2</span><span class="p">]</span>
+<span class="n">b3</span><span class="o">=</span><span class="p">[</span><span class="n">step_up_vin</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="n">D</span><span class="p">,</span><span class="n">Iout</span><span class="o">=</span><span class="mf">0.35</span><span class="p">,</span><span class="n">RT</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span><span class="n">RL</span><span class="o">=</span><span class="mf">0.3</span><span class="p">,</span><span class="n">VD</span><span class="o">=</span><span class="mf">0.3</span><span class="p">)</span> <span class="k">for</span> <span class="n">D</span> <span class="ow">in</span> <span class="n">D2</span><span class="p">]</span>
+
+<span class="n">figure</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">8</span><span class="p">))</span>
+
+
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">A1</span><span class="p">,</span><span class="n">D1</span><span class="p">,</span><span class="s1">&#39;ro&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="sa">r</span><span class="s1">&#39;$I_</span><span class="si">{out}</span><span class="s1">= 0 mA$&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">A2</span><span class="p">,</span><span class="n">D1</span><span class="p">,</span><span class="s1">&#39;go&#39;</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="sa">r</span><span class="s1">&#39;$I_</span><span class="si">{out}</span><span class="s1">= 100 mA$&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">A3</span><span class="p">,</span><span class="n">D1</span><span class="p">,</span><span class="s1">&#39;bo&#39;</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="sa">r</span><span class="s1">&#39;$I_</span><span class="si">{out}</span><span class="s1">= 350 mA$&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">b1</span><span class="p">,</span><span class="n">D2</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;r&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">b2</span><span class="p">,</span><span class="n">D2</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;g&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">b3</span><span class="p">,</span><span class="n">D2</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;b&#39;</span><span class="p">)</span>
+
+
+<span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span> <span class="n">loc</span><span class="o">=</span><span class="p">(</span><span class="mf">.1</span><span class="p">,</span><span class="mf">.1</span><span class="p">))</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">(</span><span class="mf">3.75</span><span class="p">,</span><span class="mi">12</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;Input voltage [V]&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Duty cycle&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/Boost-converter_9_0.png" src="_images/Boost-converter_9_0.png" />
+</div>
+</div>
+<div class="figure align-default" id="dutyinputv">
+<img alt="_images/mpl.svg" src="_images/mpl.svg" /><p class="caption"><span class="caption-number">Fig. 14 </span><span class="caption-text">Duty cycle als functie van de input spanning voor de ontworpen Step-up converter</span><a class="headerlink" href="#dutyinputv" title="Permallink naar deze afbeelding">¶</a></p>
+</div>
+<div class="cell tag_hide-input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">D1</span><span class="o">=</span><span class="p">[</span><span class="mf">0.0</span><span class="p">,</span><span class="mf">0.1</span><span class="p">,</span><span class="mf">0.2</span><span class="p">,</span><span class="mf">0.3</span><span class="p">,</span><span class="mf">0.4</span><span class="p">,</span><span class="mf">0.5</span><span class="p">]</span>
+<span class="n">A1</span><span class="o">=</span><span class="p">[(</span><span class="mf">7.3</span><span class="o">+</span><span class="mf">0.3</span><span class="o">*</span><span class="n">D</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="mf">12.3</span><span class="o">-</span><span class="mi">3</span><span class="o">*</span><span class="n">D</span><span class="p">)</span> <span class="k">for</span> <span class="n">D</span> <span class="ow">in</span> <span class="n">D1</span><span class="p">]</span>
+<span class="n">A2</span><span class="o">=</span><span class="p">[</span><span class="mi">100</span><span class="o">*</span><span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="n">D</span><span class="p">)</span><span class="o">*</span><span class="mi">12</span><span class="o">/</span><span class="mi">5</span> <span class="k">for</span> <span class="n">D</span> <span class="ow">in</span> <span class="n">A1</span><span class="p">]</span>
+<span class="n">A3</span><span class="o">=</span><span class="p">[(</span><span class="mi">1</span><span class="o">-</span><span class="n">D</span><span class="p">)</span><span class="o">*</span><span class="n">DD</span> <span class="k">for</span> <span class="n">D</span><span class="p">,</span><span class="n">DD</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">A1</span><span class="p">,</span><span class="n">D1</span><span class="p">)]</span>
+
+<span class="n">D2</span><span class="o">=</span><span class="p">[</span><span class="n">x</span><span class="o">/</span><span class="mi">100</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">80</span><span class="p">)]</span>
+<span class="n">b1</span><span class="o">=</span><span class="p">[(</span><span class="mf">7.3</span><span class="o">+</span><span class="mf">0.3</span><span class="o">*</span><span class="n">D</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="mf">12.3</span><span class="o">-</span><span class="mi">3</span><span class="o">*</span><span class="n">D</span><span class="p">)</span> <span class="k">for</span> <span class="n">D</span> <span class="ow">in</span> <span class="n">D2</span><span class="p">]</span>
+<span class="n">b2</span><span class="o">=</span><span class="p">[</span><span class="mi">100</span><span class="o">*</span><span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="n">D</span><span class="p">)</span><span class="o">*</span><span class="mi">12</span><span class="o">/</span><span class="mi">5</span>  <span class="k">for</span> <span class="n">D</span> <span class="ow">in</span> <span class="n">b1</span><span class="p">]</span>
+<span class="n">b3</span><span class="o">=</span><span class="p">[(</span><span class="mi">1</span><span class="o">-</span><span class="n">D</span><span class="p">)</span><span class="o">*</span><span class="n">DD</span> <span class="k">for</span> <span class="n">D</span><span class="p">,</span><span class="n">DD</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">b1</span><span class="p">,</span><span class="n">D2</span><span class="p">)]</span>
+
+<span class="n">figure</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">8</span><span class="p">))</span>
+
+
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">A3</span><span class="p">,</span><span class="n">A2</span><span class="p">,</span><span class="s1">&#39;ro&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">b3</span><span class="p">,</span><span class="n">b2</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;r&#39;</span><span class="p">)</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mf">0.2</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;Output stroom [A]&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Rendement  [%]&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/Boost-converter_11_0.png" src="_images/Boost-converter_11_0.png" />
+</div>
+</div>
+<div class="figure align-default" id="mua">
+<img alt="_images/mpl.svg" src="_images/mpl.svg" /><p class="caption"><span class="caption-number">Fig. 15 </span><span class="caption-text">Efficientie als functie van de output stroom voor de ontworpen Step-up converter</span><a class="headerlink" href="#mua" title="Permallink naar deze afbeelding">¶</a></p>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">A1</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[0.5934959349593495,
+ 0.6108333333333333,
+ 0.6290598290598289,
+ 0.6482456140350876,
+ 0.6684684684684684,
+ 0.6898148148148148]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">A2</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[97.56097560975613,
+ 93.4,
+ 89.02564102564105,
+ 84.42105263157899,
+ 79.56756756756758,
+ 74.44444444444446]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">A3</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[0.0,
+ 0.03891666666666667,
+ 0.07418803418803421,
+ 0.1055263157894737,
+ 0.13261261261261265,
+ 0.15509259259259262]
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "kuleuven"
+        },
+        kernelOptions: {
+            kernelName: "kuleuven",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'kuleuven'</script>
+
+              </div>
+              
+        
+            <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="Buck-converter.html" title="vorige pagina">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">vorige</p>
+            <p class="prev-next-title">Buck Converter</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="Inverter.html" title="volgende pagina">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">volgende</p>
+        <p class="prev-next-title">Inverter of Buck-Boost Converter</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+        
+        </div>
+    </div>
+    <footer class="footer">
+    <div class="container">
+      <p>
+        
+          Door Jan Genoe (jan.genoe@kuleuven.be)<br/>
+        
+            &copy; auteursrechten 2022.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

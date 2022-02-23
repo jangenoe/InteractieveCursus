@@ -1,0 +1,491 @@
+
+<!DOCTYPE html>
+
+<html lang="nl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Buck Converter &#8212; Analoge elektronische schakelingen</title>
+    
+  <link href="_static/css/theme.css" rel="stylesheet">
+  <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/translations.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Zoeken" href="search.html" />
+    <link rel="next" title="Boost Converter of Step-up Converter" href="Boost-converter.html" />
+    <link rel="prev" title="Klasse B versterkers" href="Klasse-B.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="nl">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="_static/logo.svg" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Analoge elektronische schakelingen</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Zoek in dit boek ..." aria-label="Zoek in dit boek ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro.html">
+   Analoge Elektronische Schakelingen
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Inleiding
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Hoe_dit_werkboek_gebruiken.html">
+   Hoe dit werkboek te gebruiken
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Versterkers
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Klasse-A.html">
+   Klasse A versterkers
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Klasse-B.html">
+   Klasse B versterkers
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Voedingen
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Buck Converter
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Boost-converter.html">
+   Boost Converter of Step-up Converter
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Inverter.html">
+   Inverter of Buck-Boost Converter
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Flyback-converter.html">
+   Flyback converter
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  <a href="https://www.kuleuven.be"> <img src=" http://stijl.kuleuven.be/2016tmp/img/svg/logo.svg" alt="KULeuven"></a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Schakel navigatie" aria-controls="site-navigation"
+                title="Schakel navigatie" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download deze pagina"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/Buck-converter.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download het bronbestand" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Afdrukken naar pdf"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/jangenoe/InteractieveCursus"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Bronopslagplaats"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/jangenoe/InteractieveCursus/issues/new?title=Issue%20on%20page%20%2FBuck-converter.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open een probleem"><i class="fas fa-lightbulb"></i>open probleem</button></a>
+        <a class="edit-button" href="https://github.com/jangenoe/InteractieveCursus/edit/master/AnalogeElektronica2/Buck-converter.ipynb"><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="bewerk deze pagina"><i class="fas fa-pencil-alt"></i>suggereren bewerken</button></a>
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Volledig scherm"
+        title="Volledig scherm"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/jangenoe/InteractieveCursus/master?urlpath=lab/tree/AnalogeElektronica2/Buck-converter.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Lancering Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        <a class="colab-button" href="https://colab.research.google.com/github/jangenoe/InteractieveCursus/blob/master/AnalogeElektronica2/Buck-converter.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+                title="Lancering Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
+                    src="_static/images/logo_colab.png"
+                    alt="Interact on Colab">Colab</button></a>
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Inhoud
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#zonder-belasting-van-de-uitgang">
+   Zonder belasting van de uitgang
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#onder-belasting-van-de-uitgang-5ua">
+   Onder belasting van de uitgang: 5uA
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="buck-converter">
+<h1>Buck Converter<a class="headerlink" href="#buck-converter" title="Permalink naar deze titel">¶</a></h1>
+<p>De presentatie slides van dit hoofdstuk kan je <a href="./slides/Buck-converter.slides.html"> <code class="docutils literal notranslate"><span class="pre">hier</span></code></a> vinden.</p>
+<div class="section" id="zonder-belasting-van-de-uitgang">
+<h2>Zonder belasting van de uitgang<a class="headerlink" href="#zonder-belasting-van-de-uitgang" title="Permalink naar deze titel">¶</a></h2>
+<div class="cell tag_hide-input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">PySpice.Logging.Logging</span> <span class="k">as</span> <span class="nn">Logging</span>
+<span class="kn">from</span> <span class="nn">PySpice.Doc.ExampleTools</span> <span class="kn">import</span> <span class="n">find_libraries</span>
+<span class="kn">from</span> <span class="nn">PySpice.Probe.Plot</span> <span class="kn">import</span> <span class="n">plot</span>
+<span class="kn">from</span> <span class="nn">PySpice.Spice.Library</span> <span class="kn">import</span> <span class="n">SpiceLibrary</span>
+<span class="kn">from</span> <span class="nn">PySpice.Spice.Netlist</span> <span class="kn">import</span> <span class="n">Circuit</span>
+<span class="kn">from</span> <span class="nn">PySpice.Unit</span> <span class="kn">import</span> <span class="o">*</span>
+
+<span class="k">def</span> <span class="nf">step_down</span><span class="p">(</span><span class="n">Vin</span> <span class="o">=</span> <span class="mi">12</span><span class="nd">@u_V</span><span class="p">,</span><span class="n">Vout</span> <span class="o">=</span> <span class="mi">5</span><span class="nd">@u_V</span><span class="p">,</span><span class="n">Iload</span> <span class="o">=</span> <span class="mi">2</span><span class="nd">@u_A</span><span class="p">,</span><span class="n">frequency</span> <span class="o">=</span> <span class="mi">400</span><span class="nd">@u_kHz</span><span class="p">,</span><span class="n">ripple_voltage</span> <span class="o">=</span> <span class="mi">50</span><span class="nd">@u_mV</span><span class="p">,</span><span class="n">RL</span> <span class="o">=</span> <span class="mi">37</span><span class="nd">@u_mΩ</span><span class="p">,</span><span class="n">ESR</span> <span class="o">=</span> <span class="mi">30</span><span class="nd">@u_mΩ</span><span class="p">,</span><span class="n">ESL</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span><span class="n">ripple_voltage_in</span> <span class="o">=</span> <span class="mi">200</span><span class="nd">@u_mV</span><span class="p">,</span><span class="n">ESR_in</span> <span class="o">=</span> <span class="mi">120</span><span class="nd">@u_mΩ</span><span class="p">):</span>
+    <span class="n">logger</span> <span class="o">=</span> <span class="n">Logging</span><span class="o">.</span><span class="n">setup_logging</span><span class="p">()</span>
+    <span class="c1">#libraries_path = find_libraries()</span>
+   
+    <span class="n">libraries_path</span> <span class="o">=</span> <span class="sa">r</span><span class="s1">&#39;C:\Users\jangenoe\code\PySpice\examples\libraries&#39;</span>
+    <span class="n">spice_library</span> <span class="o">=</span> <span class="n">SpiceLibrary</span><span class="p">(</span><span class="n">libraries_path</span><span class="p">)</span>
+    <span class="n">circuit</span> <span class="o">=</span> <span class="n">Circuit</span><span class="p">(</span><span class="s1">&#39;Buck Converter&#39;</span><span class="p">)</span>
+
+    <span class="n">circuit</span><span class="o">.</span><span class="n">include</span><span class="p">(</span><span class="n">spice_library</span><span class="p">[</span><span class="s1">&#39;1N5822&#39;</span><span class="p">])</span> <span class="c1"># Schottky diode</span>
+    <span class="n">circuit</span><span class="o">.</span><span class="n">include</span><span class="p">(</span><span class="n">spice_library</span><span class="p">[</span><span class="s1">&#39;irf150&#39;</span><span class="p">])</span>
+
+    <span class="n">ratio</span> <span class="o">=</span> <span class="n">Vout</span> <span class="o">/</span> <span class="n">Vin</span>
+    <span class="n">Rload</span> <span class="o">=</span> <span class="n">Vout</span> <span class="o">/</span> <span class="p">(</span><span class="mf">.8</span> <span class="o">*</span> <span class="n">Iload</span><span class="p">)</span>
+    <span class="n">period</span> <span class="o">=</span> <span class="n">frequency</span><span class="o">.</span><span class="n">period</span>
+    <span class="n">duty_cycle</span> <span class="o">=</span> <span class="n">ratio</span> <span class="o">*</span> <span class="n">period</span>
+    <span class="n">ripple_current</span> <span class="o">=</span> <span class="mf">.3</span> <span class="o">*</span> <span class="n">Iload</span> <span class="c1"># typically 30 %</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;ratio =&#39;</span><span class="p">,</span> <span class="n">ratio</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;RLoad =&#39;</span><span class="p">,</span> <span class="n">Rload</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;period =&#39;</span><span class="p">,</span> <span class="n">period</span><span class="o">.</span><span class="n">canonise</span><span class="p">())</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;duty_cycle =&#39;</span><span class="p">,</span> <span class="n">duty_cycle</span><span class="o">.</span><span class="n">canonise</span><span class="p">())</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;ripple_current =&#39;</span><span class="p">,</span> <span class="n">ripple_current</span><span class="p">)</span>
+    
+    <span class="n">L</span> <span class="o">=</span> <span class="p">(</span><span class="n">Vin</span> <span class="o">-</span> <span class="n">Vout</span><span class="p">)</span> <span class="o">*</span> <span class="n">duty_cycle</span> <span class="o">/</span> <span class="n">ripple_current</span>
+
+    <span class="n">Cout</span> <span class="o">=</span> <span class="p">(</span><span class="n">ripple_current</span> <span class="o">*</span> <span class="n">duty_cycle</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="n">ripple_voltage</span> <span class="o">-</span> <span class="n">ripple_current</span> <span class="o">*</span> <span class="n">ESR</span><span class="p">)</span>
+
+    <span class="n">ripple_current_in</span> <span class="o">=</span> <span class="n">Iload</span> <span class="o">/</span> <span class="mi">2</span>
+    
+    <span class="n">Cin</span> <span class="o">=</span> <span class="n">duty_cycle</span> <span class="o">/</span> <span class="p">(</span><span class="n">ripple_voltage_in</span> <span class="o">/</span> <span class="n">ripple_current_in</span> <span class="o">-</span> <span class="n">ESR_in</span><span class="p">)</span>
+
+    <span class="n">L</span> <span class="o">=</span> <span class="n">L</span><span class="o">.</span><span class="n">canonise</span><span class="p">()</span>
+    <span class="n">Cout</span> <span class="o">=</span> <span class="n">Cout</span><span class="o">.</span><span class="n">canonise</span><span class="p">()</span>
+    <span class="n">Cin</span> <span class="o">=</span> <span class="n">Cin</span><span class="o">.</span><span class="n">canonise</span><span class="p">()</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;L =&#39;</span><span class="p">,</span> <span class="n">L</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Cout =&#39;</span><span class="p">,</span> <span class="n">Cout</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Cint =&#39;</span><span class="p">,</span> <span class="n">Cin</span><span class="p">)</span>
+
+    <span class="n">circuit</span><span class="o">.</span><span class="n">V</span><span class="p">(</span><span class="s1">&#39;in&#39;</span><span class="p">,</span> <span class="s1">&#39;in&#39;</span><span class="p">,</span> <span class="n">circuit</span><span class="o">.</span><span class="n">gnd</span><span class="p">,</span> <span class="n">Vin</span><span class="p">)</span>
+    <span class="n">circuit</span><span class="o">.</span><span class="n">C</span><span class="p">(</span><span class="s1">&#39;in&#39;</span><span class="p">,</span> <span class="s1">&#39;in&#39;</span><span class="p">,</span> <span class="n">circuit</span><span class="o">.</span><span class="n">gnd</span><span class="p">,</span> <span class="n">Cin</span><span class="p">)</span>
+
+    <span class="c1"># Fixme: out drop from 12V to 4V</span>
+    <span class="c1"># circuit.VCS(&#39;switch&#39;, &#39;gate&#39;, circuit.gnd, &#39;in&#39;, &#39;source&#39;, model=&#39;Switch&#39;, initial_state=&#39;off&#39;)</span>
+    <span class="c1"># circuit.PulseVoltageSource(&#39;pulse&#39;, &#39;gate&#39;, circuit.gnd, 0@u_V, Vin, duty_cycle, period)</span>
+    <span class="c1"># circuit.model(&#39;Switch&#39;, &#39;SW&#39;, ron=1@u_mΩ, roff=10@u_MΩ)</span>
+
+    <span class="c1"># Fixme: Vgate =&gt; Vout ???</span>
+    <span class="n">circuit</span><span class="o">.</span><span class="n">X</span><span class="p">(</span><span class="s1">&#39;Q&#39;</span><span class="p">,</span> <span class="s1">&#39;irf150&#39;</span><span class="p">,</span> <span class="s1">&#39;in&#39;</span><span class="p">,</span> <span class="s1">&#39;gate&#39;</span><span class="p">,</span> <span class="s1">&#39;source&#39;</span><span class="p">)</span>
+    <span class="c1"># circuit.PulseVoltageSource(&#39;pulse&#39;, &#39;gate&#39;, &#39;source&#39;, 0@u_V, Vin, duty_cycle, period)</span>
+    <span class="n">circuit</span><span class="o">.</span><span class="n">R</span><span class="p">(</span><span class="s1">&#39;gate&#39;</span><span class="p">,</span> <span class="s1">&#39;gate&#39;</span><span class="p">,</span> <span class="s1">&#39;clock&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="nd">@u_Ω</span><span class="p">)</span>
+    <span class="n">circuit</span><span class="o">.</span><span class="n">PulseVoltageSource</span><span class="p">(</span><span class="s1">&#39;pulse&#39;</span><span class="p">,</span> <span class="s1">&#39;clock&#39;</span><span class="p">,</span> <span class="n">circuit</span><span class="o">.</span><span class="n">gnd</span><span class="p">,</span> <span class="mi">0</span><span class="nd">@u_V</span><span class="p">,</span> <span class="mf">2.</span><span class="o">*</span><span class="n">Vin</span><span class="p">,</span> <span class="n">duty_cycle</span><span class="p">,</span> <span class="n">period</span><span class="p">)</span>
+
+    <span class="n">circuit</span><span class="o">.</span><span class="n">X</span><span class="p">(</span><span class="s1">&#39;D&#39;</span><span class="p">,</span> <span class="s1">&#39;1N5822&#39;</span><span class="p">,</span> <span class="n">circuit</span><span class="o">.</span><span class="n">gnd</span><span class="p">,</span> <span class="s1">&#39;source&#39;</span><span class="p">)</span>
+    <span class="n">circuit</span><span class="o">.</span><span class="n">L</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;source&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">L</span><span class="p">)</span>
+    <span class="n">circuit</span><span class="o">.</span><span class="n">R</span><span class="p">(</span><span class="s1">&#39;L&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;out&#39;</span><span class="p">,</span> <span class="n">RL</span><span class="p">)</span>
+    <span class="n">circuit</span><span class="o">.</span><span class="n">C</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;out&#39;</span><span class="p">,</span> <span class="n">circuit</span><span class="o">.</span><span class="n">gnd</span><span class="p">,</span> <span class="n">Cout</span><span class="p">)</span> <span class="c1"># , initial_condition=0@u_V</span>
+    <span class="n">circuit</span><span class="o">.</span><span class="n">R</span><span class="p">(</span><span class="s1">&#39;load&#39;</span><span class="p">,</span> <span class="s1">&#39;out&#39;</span><span class="p">,</span> <span class="n">circuit</span><span class="o">.</span><span class="n">gnd</span><span class="p">,</span> <span class="n">Rload</span><span class="p">)</span>
+
+    <span class="n">simulator</span> <span class="o">=</span> <span class="n">circuit</span><span class="o">.</span><span class="n">simulator</span><span class="p">(</span><span class="n">temperature</span><span class="o">=</span><span class="mi">25</span><span class="p">,</span> <span class="n">nominal_temperature</span><span class="o">=</span><span class="mi">25</span><span class="p">)</span>
+    <span class="n">analysis</span> <span class="o">=</span> <span class="n">simulator</span><span class="o">.</span><span class="n">transient</span><span class="p">(</span><span class="n">step_time</span><span class="o">=</span><span class="n">period</span><span class="o">/</span><span class="mi">300</span><span class="p">,</span> <span class="n">end_time</span><span class="o">=</span><span class="n">period</span><span class="o">*</span><span class="mi">150</span><span class="p">)</span>
+
+    <span class="n">figure</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
+
+    <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">analysis</span><span class="o">.</span><span class="n">time</span><span class="p">,</span><span class="n">analysis</span><span class="o">.</span><span class="n">out</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Vout [V]&#39;</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">analysis</span><span class="o">.</span><span class="n">time</span><span class="p">,</span><span class="n">analysis</span><span class="p">[</span><span class="s1">&#39;source&#39;</span><span class="p">],</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;Vsource [V]&#39;</span><span class="p">)</span>
+    <span class="c1"># ax.plot(analysis[&#39;source&#39;] - analysis[&#39;out&#39;])</span>
+    <span class="c1"># ax.plot(analysis[&#39;gate&#39;])</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="n">y</span><span class="o">=</span><span class="nb">float</span><span class="p">(</span><span class="n">Vout</span><span class="p">),</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span> <span class="n">loc</span><span class="o">=</span><span class="p">(</span><span class="mf">.8</span><span class="p">,</span><span class="mf">.8</span><span class="p">))</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;t [s]&#39;</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;[V]&#39;</span><span class="p">)</span>
+
+    <span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+    <span class="c1">#return analysis</span>
+
+<span class="n">a</span><span class="o">=</span><span class="n">step_down</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>ratio = 0.4166666666666667 sr
+RLoad = 3.125 Ω
+period = 2.5000000000000004 μs
+duty_cycle = 1.0416666666666667 μs
+ripple_current = 0.6 A
+L = 12.152777777777779 μH
+Cout = 19.53125 μF
+Cint = 13.020833333333332 μF
+</pre></div>
+</div>
+<img alt="_images/Buck-converter_2_1.png" src="_images/Buck-converter_2_1.png" />
+</div>
+</div>
+<div class="figure align-default" id="transfer1">
+<img alt="_images/mpl.svg" src="_images/mpl.svg" /><p class="caption"><span class="caption-number">Fig. 10 </span><span class="caption-text">Schakelspanning en bekomen spanning voor een step-down converter met een inputspanning van 12 V die opstart van 0V naar <a class="reference external" href="http://5V.De">5V.De</a> gewenste spanning is aangegeven in het rood.</span><a class="headerlink" href="#transfer1" title="Permallink naar deze afbeelding">¶</a></p>
+</div>
+</div>
+<div class="section" id="onder-belasting-van-de-uitgang-5ua">
+<h2>Onder belasting van de uitgang: 5uA<a class="headerlink" href="#onder-belasting-van-de-uitgang-5ua" title="Permalink naar deze titel">¶</a></h2>
+<div class="cell tag_hide-input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">step_down</span><span class="p">(</span><span class="n">Iload</span> <span class="o">=</span> <span class="mi">5</span><span class="nd">@u_A</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>ratio = 0.4166666666666667 sr
+RLoad = 1.25 Ω
+period = 2.5000000000000004 μs
+duty_cycle = 1.0416666666666667 μs
+ripple_current = 1.5 A
+L = 4.861111111111112 μH
+Cout = 312.5 μF
+Cint = -26.04166666666667 μF
+</pre></div>
+</div>
+<img alt="_images/Buck-converter_5_1.png" src="_images/Buck-converter_5_1.png" />
+</div>
+</div>
+<div class="figure align-default" id="id1">
+<img alt="_images/mpl.svg" src="_images/mpl.svg" /><p class="caption"><span class="caption-number">Fig. 11 </span><span class="caption-text">Schakelspanning en bekomen spanning voor een step-down converter met een inputspanning van 12 V die opstart van 0V naar <a class="reference external" href="http://5V.De">5V.De</a> gewenste spanning is aangegeven in het rood.</span><a class="headerlink" href="#id1" title="Permallink naar deze afbeelding">¶</a></p>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "kuleuven"
+        },
+        kernelOptions: {
+            kernelName: "kuleuven",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'kuleuven'</script>
+
+              </div>
+              
+        
+            <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="Klasse-B.html" title="vorige pagina">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">vorige</p>
+            <p class="prev-next-title">Klasse B versterkers</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="Boost-converter.html" title="volgende pagina">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">volgende</p>
+        <p class="prev-next-title">Boost Converter of Step-up Converter</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+        
+        </div>
+    </div>
+    <footer class="footer">
+    <div class="container">
+      <p>
+        
+          Door Jan Genoe (jan.genoe@kuleuven.be)<br/>
+        
+            &copy; auteursrechten 2022.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>
