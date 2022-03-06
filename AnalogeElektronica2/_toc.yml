@@ -7,6 +7,10 @@ parts:
   chapters:
   - file: Klasse-A
   - file: Klasse-B
+    sections:
+    - file: KlasseB_vb1
+    - file: KlasseB_vb2
+    - file: KlasseB_vb3
   - file: Klasse-G
   - file: Klasse-S
 - caption: Voedingen

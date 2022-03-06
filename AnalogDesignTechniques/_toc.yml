@@ -5,7 +5,8 @@ options:
 parts:
 - caption: Chip Design
   chapters:
-  - file: AmplifierDesign
+  - file: DifferentialAmplifiers
+  - file: FoldedCascode   
 - caption: Capita Selecta
   chapters:  
   - file: Capacitive voltage conversion
