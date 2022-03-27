@@ -12,7 +12,6 @@ parts:
     - file: KlasseB_vb2
     - file: KlasseB_vb3
   - file: Klasse-G
-  - file: Klasse-S
 - caption: Voedingen
   chapters:  
   - file: Buck-converter
