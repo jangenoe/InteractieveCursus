@@ -37,24 +37,26 @@
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
     <script src="_static/doctools.js"></script>
-    <script src="_static/togglebutton.js"></script>
     <script src="_static/clipboard.min.js"></script>
     <script src="_static/copybutton.js"></script>
+    <script>let toggleHintShow = ' ';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
     <script src="_static/translations.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
-    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script>
-        const thebe_selector = ".thebe"
-        const thebe_selector_input = "pre"
-        const thebe_selector_output = ".output"
-    </script>
+    <script src="_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Zoeken" href="search.html" />
-    <link rel="next" title="Buck Converter" href="Buck-converter.html" />
+    <link rel="next" title="Voorbeeld 1: Klasse B versterker" href="KlasseB_vb1.html" />
     <link rel="prev" title="Klasse A versterkers" href="Klasse-A.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="nl">
@@ -101,18 +103,6 @@
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
-  Inleiding
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="Hoe_dit_werkboek_gebruiken.html">
-   Hoe dit werkboek te gebruiken
-  </a>
- </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
   Versterkers
  </span>
 </p>
@@ -122,9 +112,36 @@
    Klasse A versterkers
   </a>
  </li>
- <li class="toctree-l1 current active">
+ <li class="toctree-l1 current active has-children">
   <a class="current reference internal" href="#">
    Klasse B versterkers
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="KlasseB_vb1.html">
+     Voorbeeld 1: Klasse B versterker
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="KlasseB_vb2.html">
+     Voorbeeld 2: Klasse B versterker
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="KlasseB_vb3.html">
+     Voorbeeld 3: Klasse B versterker
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Klasse-G.html">
+   Klasse G versterkers
   </a>
  </li>
 </ul>
@@ -200,7 +217,7 @@
                 data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
         <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Afdrukken naar pdf"
-            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
     </div>
 </div>
 
@@ -258,7 +275,7 @@
         </div>
 
         <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show">
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
             
             <div class="tocsection onthispage pt-5 pb-3">
                 <i class="fas fa-list"></i> Inhoud
@@ -266,8 +283,42 @@
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#basisschema">
+   Basisschema
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#schema-voor-dc-werking">
+     Schema voor DC werking
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#schema-voor-ac-werking">
+     Schema voor AC werking
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#gebruik-van-de-voorinstelspanning">
+   Gebruik van de voorinstelspanning
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#diodes-als-voorinstelspanning">
+     diodes als voorinstelspanning
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#uitgewerkt-voorbeeld-van-een-klasse-ab-met-mos-transistors">
    Uitgewerkt voorbeeld van een klasse AB met MOS transistors
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#referenties">
+   Referenties
   </a>
  </li>
 </ul>
@@ -278,28 +329,721 @@
 </div>
     <div id="main-content" class="row">
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
-        
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Klasse B versterkers</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Inhoud </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#basisschema">
+   Basisschema
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#schema-voor-dc-werking">
+     Schema voor DC werking
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#schema-voor-ac-werking">
+     Schema voor AC werking
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#gebruik-van-de-voorinstelspanning">
+   Gebruik van de voorinstelspanning
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#diodes-als-voorinstelspanning">
+     diodes als voorinstelspanning
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#uitgewerkt-voorbeeld-van-een-klasse-ab-met-mos-transistors">
+   Uitgewerkt voorbeeld van een klasse AB met MOS transistors
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#referenties">
+   Referenties
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
               <div>
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="klasse-b-versterkers">
 <h1>Klasse B versterkers<a class="headerlink" href="#klasse-b-versterkers" title="Permalink naar deze titel">¶</a></h1>
-<p>De presentatie slides van dit hoofdstuk kan je <a href="./slides/Klasse-B.slides.html"> <code class="docutils literal notranslate"><span class="pre">hier</span></code> </a> vinden</p>
+<p><a href="./slides/Klasse-B.slides.html"><img alt="sildes" src="https://img.shields.io/badge/slides-beschikbaar-blue" /></a></p>
+<div class="cell tag_hide-input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">matplotlib.ticker</span> <span class="k">as</span> <span class="nn">ticker</span>
+<span class="kn">from</span>  <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">patches</span>
+<span class="kn">import</span> <span class="nn">scipy.signal</span> <span class="k">as</span> <span class="nn">signal</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">PySpice.Probe.Plot</span> <span class="kn">import</span> <span class="n">plot</span>
+<span class="kn">from</span> <span class="nn">PySpice.Spice.Parser</span> <span class="kn">import</span> <span class="n">SpiceParser</span>
+<span class="kn">from</span> <span class="nn">PySpice.Spice.Netlist</span> <span class="kn">import</span> <span class="n">Circuit</span>
+<span class="kn">from</span> <span class="nn">PySpice.Unit</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">import</span> <span class="nn">schemdraw</span> <span class="k">as</span> <span class="nn">schem</span>
+<span class="kn">import</span> <span class="nn">schemdraw.elements</span> <span class="k">as</span> <span class="nn">e</span>
+<span class="kn">from</span> <span class="nn">ipywidgets</span> <span class="kn">import</span> <span class="n">interact</span><span class="p">,</span><span class="n">FloatSlider</span>
+<span class="n">usewidgets</span><span class="o">=</span><span class="kc">True</span><span class="p">;</span>
+    
+<span class="k">def</span> <span class="nf">spicelisting</span><span class="p">(</span><span class="n">filename</span><span class="p">):</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">f</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="n">line</span><span class="o">.</span><span class="n">strip</span><span class="p">())</span>
+    <span class="nb">print</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="basisschema">
+<h2>Basisschema<a class="headerlink" href="#basisschema" title="Permalink naar deze titel">¶</a></h2>
+<div class="section" id="schema-voor-dc-werking">
+<h3>Schema voor DC werking<a class="headerlink" href="#schema-voor-dc-werking" title="Permalink naar deze titel">¶</a></h3>
+<div class="cell tag_hide-input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">d</span> <span class="o">=</span> <span class="n">schem</span><span class="o">.</span><span class="n">Drawing</span><span class="p">()</span>
+<span class="n">T1</span> <span class="o">=</span> <span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">BJT_NPN</span><span class="p">)</span>
+<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">LINE</span><span class="p">,</span> <span class="n">xy</span><span class="o">=</span><span class="n">T1</span><span class="o">.</span><span class="n">base</span><span class="p">,</span> <span class="n">d</span><span class="o">=</span><span class="s1">&#39;down&#39;</span><span class="p">,</span> <span class="n">l</span><span class="o">=</span><span class="mf">1.5</span><span class="p">)</span>
+<span class="n">indot</span><span class="o">=</span><span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">DOT</span><span class="p">)</span>
+<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">LINE</span><span class="p">,</span> <span class="n">d</span><span class="o">=</span><span class="s1">&#39;down&#39;</span><span class="p">,</span> <span class="n">l</span><span class="o">=</span><span class="mf">1.4</span><span class="p">)</span>
+<span class="n">T2</span> <span class="o">=</span> <span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">BJT_PNP</span><span class="p">,</span> <span class="n">d</span><span class="o">=</span><span class="s1">&#39;right&#39;</span><span class="p">)</span>
+<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">VDD</span><span class="p">,</span> <span class="n">xy</span><span class="o">=</span><span class="n">T1</span><span class="o">.</span><span class="n">collector</span><span class="p">,</span>  <span class="n">l</span><span class="o">=</span><span class="mf">0.75</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;$V_</span><span class="si">{DD}</span><span class="s1">$&#39;</span><span class="p">)</span>
+<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">LINE</span><span class="p">,</span> <span class="n">xy</span><span class="o">=</span><span class="n">indot</span><span class="o">.</span><span class="n">start</span><span class="p">,</span> <span class="n">d</span><span class="o">=</span><span class="s1">&#39;left&#39;</span><span class="p">,</span> <span class="n">l</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
+<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">DOT_OPEN</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;$v_</span><span class="si">{in}</span><span class="s1">$&#39;</span><span class="p">)</span>
+<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">LINE</span><span class="p">,</span> <span class="n">d</span><span class="o">=</span><span class="s1">&#39;down&#39;</span><span class="p">,</span><span class="n">xy</span><span class="o">=</span><span class="n">T1</span><span class="o">.</span><span class="n">emitter</span><span class="p">,</span> <span class="n">l</span><span class="o">=</span><span class="mf">0.8</span><span class="p">)</span>
+<span class="n">outdot</span><span class="o">=</span><span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">DOT</span><span class="p">)</span>
+<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">LINE</span><span class="p">,</span> <span class="n">d</span><span class="o">=</span><span class="s1">&#39;down&#39;</span><span class="p">,</span><span class="n">xy</span><span class="o">=</span><span class="n">outdot</span><span class="o">.</span><span class="n">start</span><span class="p">,</span><span class="n">toy</span><span class="o">=</span><span class="n">T2</span><span class="o">.</span><span class="n">emitter</span><span class="p">)</span>
+<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">VSS</span><span class="p">,</span><span class="n">xy</span><span class="o">=</span><span class="n">T2</span><span class="o">.</span><span class="n">collector</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;-$V_</span><span class="si">{DD}</span><span class="s1">$&#39;</span><span class="p">)</span>
+
+<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">LINE</span><span class="p">,</span><span class="n">xy</span><span class="o">=</span><span class="n">outdot</span><span class="o">.</span><span class="n">start</span><span class="p">,</span>  <span class="n">d</span><span class="o">=</span><span class="s1">&#39;right&#39;</span><span class="p">,</span> <span class="n">l</span><span class="o">=</span><span class="mf">1.5</span><span class="p">)</span>
+<span class="n">R</span> <span class="o">=</span> <span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">RES</span><span class="p">,</span> <span class="n">d</span><span class="o">=</span><span class="s1">&#39;down&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;$R_L$&#39;</span><span class="p">,</span> <span class="n">l</span><span class="o">=</span><span class="mf">1.5</span><span class="p">)</span>
+<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">GND</span><span class="p">)</span>
+<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">LINE</span><span class="p">,</span> <span class="n">xy</span><span class="o">=</span><span class="n">R</span><span class="o">.</span><span class="n">start</span><span class="p">,</span> <span class="n">d</span><span class="o">=</span><span class="s1">&#39;right&#39;</span><span class="p">,</span> <span class="n">l</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
+<span class="n">dot</span><span class="o">=</span><span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">DOT_OPEN</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;$v_</span><span class="si">{out}</span><span class="s1">$&#39;</span><span class="p">)</span>
+<span class="n">d</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/Klasse-B_3_0.svg" src="_images/Klasse-B_3_0.svg" /></div>
+</div>
+<div class="figure align-default" id="bfig1">
+<img alt="_images/mpl.svg" src="_images/mpl.svg" /><p class="caption"><span class="caption-number">Fig. 8 </span><span class="caption-text">Basisschema van de klasse B versterker voor DC werking.</span><a class="headerlink" href="#bfig1" title="Permallink naar deze afbeelding">¶</a></p>
+</div>
+<p>Het is belangrijk in dit schema de verschillende bouwblokken te herkennen. <a class="reference internal" href="#bfig1anot"><span class="std std-numref">Fig. 9</span></a> toont deze bouwblokken. We hebben natuurlijk in de eerste plaats de belasting <span class="math notranslate nohighlight">\(R_L\)</span>. Daarnaast zien we (in de groene box) zowel het pull-up netwerk als het pull-down netwerk aangeduid.</p>
+<div class="cell tag_hide-input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">d</span> <span class="o">=</span> <span class="n">schem</span><span class="o">.</span><span class="n">Drawing</span><span class="p">()</span>
+<span class="n">T1</span> <span class="o">=</span> <span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">BJT_NPN</span><span class="p">)</span>
+<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">LINE</span><span class="p">,</span> <span class="n">xy</span><span class="o">=</span><span class="n">T1</span><span class="o">.</span><span class="n">base</span><span class="p">,</span> <span class="n">d</span><span class="o">=</span><span class="s1">&#39;down&#39;</span><span class="p">,</span> <span class="n">l</span><span class="o">=</span><span class="mf">1.5</span><span class="p">)</span>
+<span class="n">indot</span><span class="o">=</span><span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">DOT</span><span class="p">)</span>
+<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">LINE</span><span class="p">,</span> <span class="n">d</span><span class="o">=</span><span class="s1">&#39;down&#39;</span><span class="p">,</span> <span class="n">l</span><span class="o">=</span><span class="mf">1.4</span><span class="p">)</span>
+<span class="n">T2</span> <span class="o">=</span> <span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">BJT_PNP</span><span class="p">,</span> <span class="n">d</span><span class="o">=</span><span class="s1">&#39;right&#39;</span><span class="p">)</span>
+<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">VDD</span><span class="p">,</span> <span class="n">xy</span><span class="o">=</span><span class="n">T1</span><span class="o">.</span><span class="n">collector</span><span class="p">,</span>  <span class="n">l</span><span class="o">=</span><span class="mf">0.75</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;$V_</span><span class="si">{DD}</span><span class="s1">$&#39;</span><span class="p">)</span>
+<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">LINE</span><span class="p">,</span> <span class="n">xy</span><span class="o">=</span><span class="n">indot</span><span class="o">.</span><span class="n">start</span><span class="p">,</span> <span class="n">d</span><span class="o">=</span><span class="s1">&#39;left&#39;</span><span class="p">,</span> <span class="n">l</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
+<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">DOT_OPEN</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;$v_</span><span class="si">{in}</span><span class="s1">$&#39;</span><span class="p">)</span>
+<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">LINE</span><span class="p">,</span> <span class="n">d</span><span class="o">=</span><span class="s1">&#39;down&#39;</span><span class="p">,</span><span class="n">xy</span><span class="o">=</span><span class="n">T1</span><span class="o">.</span><span class="n">emitter</span><span class="p">,</span> <span class="n">l</span><span class="o">=</span><span class="mf">0.8</span><span class="p">)</span>
+<span class="n">outdot</span><span class="o">=</span><span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">DOT</span><span class="p">)</span>
+<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">LINE</span><span class="p">,</span> <span class="n">d</span><span class="o">=</span><span class="s1">&#39;down&#39;</span><span class="p">,</span><span class="n">xy</span><span class="o">=</span><span class="n">outdot</span><span class="o">.</span><span class="n">start</span><span class="p">,</span><span class="n">toy</span><span class="o">=</span><span class="n">T2</span><span class="o">.</span><span class="n">emitter</span><span class="p">)</span>
+<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">VSS</span><span class="p">,</span><span class="n">xy</span><span class="o">=</span><span class="n">T2</span><span class="o">.</span><span class="n">collector</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;-$V_</span><span class="si">{DD}</span><span class="s1">$&#39;</span><span class="p">)</span>
+
+<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">LINE</span><span class="p">,</span><span class="n">xy</span><span class="o">=</span><span class="n">outdot</span><span class="o">.</span><span class="n">start</span><span class="p">,</span>  <span class="n">d</span><span class="o">=</span><span class="s1">&#39;right&#39;</span><span class="p">,</span> <span class="n">l</span><span class="o">=</span><span class="mf">1.5</span><span class="p">)</span>
+<span class="n">R</span> <span class="o">=</span> <span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">RES</span><span class="p">,</span> <span class="n">d</span><span class="o">=</span><span class="s1">&#39;down&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;$R_L$&#39;</span><span class="p">,</span> <span class="n">l</span><span class="o">=</span><span class="mf">1.5</span><span class="p">)</span>
+<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">GND</span><span class="p">)</span>
+<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">LINE</span><span class="p">,</span> <span class="n">xy</span><span class="o">=</span><span class="n">R</span><span class="o">.</span><span class="n">start</span><span class="p">,</span> <span class="n">d</span><span class="o">=</span><span class="s1">&#39;right&#39;</span><span class="p">,</span> <span class="n">l</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
+<span class="n">dot</span><span class="o">=</span><span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">DOT_OPEN</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;$v_</span><span class="si">{out}</span><span class="s1">$&#39;</span><span class="p">)</span>
+
+
+<span class="n">pullup</span><span class="o">=</span><span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">EncircleBox</span><span class="p">([</span><span class="n">T1</span><span class="p">],</span><span class="n">padx</span><span class="o">=</span><span class="mf">.1</span><span class="p">)</span><span class="o">.</span><span class="n">linestyle</span><span class="p">(</span><span class="s1">&#39;--&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">linewidth</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span><span class="o">.</span><span class="n">color</span><span class="p">(</span><span class="s1">&#39;green&#39;</span><span class="p">))</span>
+<span class="n">pulldown</span><span class="o">=</span><span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">EncircleBox</span><span class="p">([</span><span class="n">T2</span><span class="p">],</span><span class="n">padx</span><span class="o">=</span><span class="mf">.1</span><span class="p">)</span><span class="o">.</span><span class="n">linestyle</span><span class="p">(</span><span class="s1">&#39;--&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">linewidth</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span><span class="o">.</span><span class="n">color</span><span class="p">(</span><span class="s1">&#39;green&#39;</span><span class="p">))</span>
+
+<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">Annotate</span><span class="p">(</span><span class="n">th1</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">at</span><span class="p">(</span><span class="n">pullup</span><span class="o">.</span><span class="n">E</span><span class="p">)</span><span class="o">.</span><span class="n">delta</span><span class="p">(</span><span class="n">dx</span><span class="o">=</span><span class="mf">1.5</span><span class="p">,</span> <span class="n">dy</span><span class="o">=</span><span class="mf">1.2</span><span class="p">)</span><span class="o">.</span><span class="n">label</span><span class="p">(</span><span class="s1">&#39;Pull-up&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">color</span><span class="p">(</span><span class="s1">&#39;green&#39;</span><span class="p">))</span>
+<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">Annotate</span><span class="p">(</span><span class="n">th1</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">at</span><span class="p">(</span><span class="n">pulldown</span><span class="o">.</span><span class="n">E</span><span class="p">)</span><span class="o">.</span><span class="n">delta</span><span class="p">(</span><span class="n">dx</span><span class="o">=</span><span class="mf">1.5</span><span class="p">,</span> <span class="n">dy</span><span class="o">=-</span><span class="mf">1.2</span><span class="p">)</span><span class="o">.</span><span class="n">label</span><span class="p">(</span><span class="s1">&#39;Pull-down&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">color</span><span class="p">(</span><span class="s1">&#39;green&#39;</span><span class="p">))</span>
+<span class="n">d</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/Klasse-B_6_0.svg" src="_images/Klasse-B_6_0.svg" /></div>
+</div>
+<div class="figure align-default" id="bfig1anot">
+<img alt="_images/mpl.svg" src="_images/mpl.svg" /><p class="caption"><span class="caption-number">Fig. 9 </span><span class="caption-text">Basisschema van de klasse B versterker voor DC werking met aangeduide bouwblokken</span><a class="headerlink" href="#bfig1anot" title="Permallink naar deze afbeelding">¶</a></p>
+</div>
+</div>
+<div class="section" id="schema-voor-ac-werking">
+<h3>Schema voor AC werking<a class="headerlink" href="#schema-voor-ac-werking" title="Permalink naar deze titel">¶</a></h3>
+<div class="cell tag_hide-input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">d</span> <span class="o">=</span> <span class="n">schem</span><span class="o">.</span><span class="n">Drawing</span><span class="p">()</span>
+<span class="n">T1</span> <span class="o">=</span> <span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">BJT_NPN</span><span class="p">)</span>
+<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">LINE</span><span class="p">,</span> <span class="n">xy</span><span class="o">=</span><span class="n">T1</span><span class="o">.</span><span class="n">base</span><span class="p">,</span> <span class="n">d</span><span class="o">=</span><span class="s1">&#39;down&#39;</span><span class="p">,</span> <span class="n">l</span><span class="o">=</span><span class="mf">1.5</span><span class="p">)</span>
+<span class="n">indot</span><span class="o">=</span><span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">DOT</span><span class="p">)</span>
+<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">LINE</span><span class="p">,</span> <span class="n">d</span><span class="o">=</span><span class="s1">&#39;down&#39;</span><span class="p">,</span> <span class="n">l</span><span class="o">=</span><span class="mf">1.4</span><span class="p">)</span>
+<span class="n">T2</span> <span class="o">=</span> <span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">BJT_PNP</span><span class="p">,</span> <span class="n">d</span><span class="o">=</span><span class="s1">&#39;right&#39;</span><span class="p">)</span>
+<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">VDD</span><span class="p">,</span> <span class="n">xy</span><span class="o">=</span><span class="n">T1</span><span class="o">.</span><span class="n">collector</span><span class="p">,</span>  <span class="n">l</span><span class="o">=</span><span class="mf">0.75</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;$V_</span><span class="si">{DD}</span><span class="s1">$&#39;</span><span class="p">)</span>
+<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">LINE</span><span class="p">,</span> <span class="n">xy</span><span class="o">=</span><span class="n">indot</span><span class="o">.</span><span class="n">start</span><span class="p">,</span> <span class="n">d</span><span class="o">=</span><span class="s1">&#39;left&#39;</span><span class="p">,</span> <span class="n">l</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
+<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">DOT_OPEN</span><span class="p">)</span>
+<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">LINE</span><span class="p">,</span> <span class="n">d</span><span class="o">=</span><span class="s1">&#39;down&#39;</span><span class="p">,</span><span class="n">xy</span><span class="o">=</span><span class="n">T1</span><span class="o">.</span><span class="n">emitter</span><span class="p">,</span> <span class="n">l</span><span class="o">=</span><span class="mf">0.8</span><span class="p">)</span>
+<span class="n">outdot</span><span class="o">=</span><span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">DOT</span><span class="p">)</span>
+<span class="n">C1</span> <span class="o">=</span> <span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">CAP</span><span class="p">,</span> <span class="n">d</span><span class="o">=</span><span class="s1">&#39;right&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;$C_</span><span class="si">{out}</span><span class="s1">$&#39;</span><span class="p">)</span>
+<span class="n">R</span> <span class="o">=</span> <span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">RES</span><span class="p">,</span> <span class="n">d</span><span class="o">=</span><span class="s1">&#39;down&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;$R_L$&#39;</span><span class="p">,</span> <span class="n">l</span><span class="o">=</span><span class="mf">1.5</span><span class="p">)</span>
+<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">GND</span><span class="p">)</span>
+<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">LINE</span><span class="p">,</span> <span class="n">d</span><span class="o">=</span><span class="s1">&#39;down&#39;</span><span class="p">,</span><span class="n">xy</span><span class="o">=</span><span class="n">outdot</span><span class="o">.</span><span class="n">start</span><span class="p">,</span><span class="n">toy</span><span class="o">=</span><span class="n">T2</span><span class="o">.</span><span class="n">emitter</span><span class="p">)</span>
+<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">LINE</span><span class="p">,</span> <span class="n">xy</span><span class="o">=</span><span class="n">R</span><span class="o">.</span><span class="n">start</span><span class="p">,</span> <span class="n">d</span><span class="o">=</span><span class="s1">&#39;right&#39;</span><span class="p">,</span> <span class="n">l</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
+<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">DOT_OPEN</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;$v_</span><span class="si">{out}</span><span class="s1">$&#39;</span><span class="p">)</span>
+<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">GND</span><span class="p">,</span><span class="n">xy</span><span class="o">=</span><span class="n">T2</span><span class="o">.</span><span class="n">collector</span><span class="p">)</span>
+<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">EncircleBox</span><span class="p">([</span><span class="n">T1</span><span class="p">],</span><span class="n">padx</span><span class="o">=</span><span class="mf">.1</span><span class="p">)</span><span class="o">.</span><span class="n">linestyle</span><span class="p">(</span><span class="s1">&#39;--&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">linewidth</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span><span class="o">.</span><span class="n">color</span><span class="p">(</span><span class="s1">&#39;green&#39;</span><span class="p">))</span>
+<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">EncircleBox</span><span class="p">([</span><span class="n">T2</span><span class="p">],</span><span class="n">padx</span><span class="o">=</span><span class="mf">.1</span><span class="p">)</span><span class="o">.</span><span class="n">linestyle</span><span class="p">(</span><span class="s1">&#39;--&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">linewidth</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span><span class="o">.</span><span class="n">color</span><span class="p">(</span><span class="s1">&#39;green&#39;</span><span class="p">))</span>
+<span class="n">d</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/Klasse-B_9_0.svg" src="_images/Klasse-B_9_0.svg" /></div>
+</div>
+<div class="figure align-default" id="bfig1ac">
+<img alt="_images/mpl.svg" src="_images/mpl.svg" /><p class="caption"><span class="caption-number">Fig. 10 </span><span class="caption-text">Basisschema van de klasse B versterker voor AC werking</span><a class="headerlink" href="#bfig1ac" title="Permallink naar deze afbeelding">¶</a></p>
+</div>
+<div class="cell tag_hide-input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">spicelisting</span><span class="p">(</span><span class="s2">&quot;simul\classB1.sp&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Klasse B versterker
+*
+* SUPPLY VOLTAGES
+VPOS 8 0 DC	+15V
+VNEG 9 0 DC	-15V
+*
+*  input source
+VS1 1 0	DC 0 SIN(0V 5VPEAK 10KHZ)
+*
+*  PUSH-PULL TRANSISTOR OUTPUT STAGE
+Q1 8 1 2 QNPN
+Q2 9 1 2 QPNP
+*
+* Load resistance
+RL1 2 0	100
+*
+* DEVICE MODELS
+.model QNPN	NPN(BF=50)
+.model QPNP	PNP(BF=50)
+</pre></div>
+</div>
+</div>
+</div>
+<p>De simulatie van de bovenstaande spice code (zie <a class="reference internal" href="#bfig2"><span class="std std-numref">Fig. 11</span></a>) geeft duidelijk de dode zone aan bij de nuldoorgang van de spanning. In <a class="reference internal" href="#bfig2b"><span class="std std-numref">Fig. 12</span></a> bekijken we deze nuldoorgang in meer detail.</p>
+<div class="cell tag_hide-input tag_full-width docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">circuit</span><span class="o">=</span><span class="n">SpiceParser</span><span class="p">(</span><span class="n">path</span><span class="o">=</span><span class="s1">&#39;simul\classB1.sp&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">build_circuit</span><span class="p">()</span>     <span class="c1"># CHECK DISTORTION WITH FOURIER SERIES ANALYSIS    ==&gt; .FOUR 10KHZ V(12) </span>
+<span class="n">end_time</span><span class="o">=</span><span class="mf">2e-4</span>
+<span class="n">simulator</span> <span class="o">=</span> <span class="n">circuit</span><span class="o">.</span><span class="n">simulator</span><span class="p">(</span><span class="n">temperature</span><span class="o">=</span><span class="mi">25</span><span class="p">,</span> <span class="n">nominal_temperature</span><span class="o">=</span><span class="mi">25</span><span class="p">)</span>
+<span class="n">analysis</span> <span class="o">=</span> <span class="n">simulator</span><span class="o">.</span><span class="n">transient</span><span class="p">(</span><span class="n">step_time</span><span class="o">=</span><span class="mf">100e-9</span><span class="p">,</span> <span class="n">end_time</span><span class="o">=</span><span class="n">end_time</span><span class="p">)</span>
+
+<span class="n">figure</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">analysis</span><span class="o">.</span><span class="n">time</span><span class="o">*</span><span class="mf">1e6</span><span class="p">,</span><span class="n">analysis</span><span class="o">.</span><span class="n">nodes</span><span class="p">[</span><span class="s1">&#39;1&#39;</span><span class="p">],</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;V(1) [V]  ($V_</span><span class="si">{in}</span><span class="s1">$)&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">analysis</span><span class="o">.</span><span class="n">time</span><span class="o">*</span><span class="mf">1e6</span><span class="p">,</span><span class="n">analysis</span><span class="o">.</span><span class="n">nodes</span><span class="p">[</span><span class="s1">&#39;2&#39;</span><span class="p">],</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;V(2) [V]  ($V_</span><span class="si">{out}</span><span class="s1">$)&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span> <span class="n">loc</span><span class="o">=</span><span class="p">(</span><span class="mf">0.24</span><span class="p">,</span><span class="mf">.78</span><span class="p">))</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;tijd [us]&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">end_time</span><span class="o">*</span><span class="mf">1e6</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Voltage [V]&#39;</span><span class="p">)</span>
+
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">analysis</span><span class="o">.</span><span class="n">time</span><span class="o">*</span><span class="mf">1e6</span><span class="p">,</span><span class="o">-</span><span class="n">analysis</span><span class="o">.</span><span class="n">branches</span><span class="p">[</span><span class="s1">&#39;vpos&#39;</span><span class="p">]</span><span class="o">*</span><span class="mf">1e3</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;$I_</span><span class="si">{npn}</span><span class="s1">$ [mA] &#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">analysis</span><span class="o">.</span><span class="n">time</span><span class="o">*</span><span class="mf">1e6</span><span class="p">,</span><span class="n">analysis</span><span class="o">.</span><span class="n">branches</span><span class="p">[</span><span class="s1">&#39;vneg&#39;</span><span class="p">]</span><span class="o">*</span><span class="mf">1e3</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;$I_</span><span class="si">{pnp}</span><span class="s1">$ [mA]  &#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span> <span class="n">loc</span><span class="o">=</span><span class="p">(</span><span class="mf">0.16</span><span class="p">,</span><span class="mf">.91</span><span class="p">))</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;tijd [us]&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">end_time</span><span class="o">*</span><span class="mf">1e6</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Stroom [mA]&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/Klasse-B_13_0.png" src="_images/Klasse-B_13_0.png" />
+</div>
+</div>
+<div class="figure align-default" id="bfig2">
+<img alt="_images/mpl.svg" src="_images/mpl.svg" /><p class="caption"><span class="caption-number">Fig. 11 </span><span class="caption-text">De klasse B versterker: stromen en spanningen als functie van de tijd</span><a class="headerlink" href="#bfig2" title="Permallink naar deze afbeelding">¶</a></p>
+</div>
+<div class="cell tag_full-width tag_hide-input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">figure</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">analysis</span><span class="o">.</span><span class="n">time</span><span class="o">*</span><span class="mf">1e6</span><span class="p">,</span><span class="n">analysis</span><span class="o">.</span><span class="n">nodes</span><span class="p">[</span><span class="s1">&#39;1&#39;</span><span class="p">],</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;V(1) [V]  ($V_</span><span class="si">{in}</span><span class="s1">$)&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">analysis</span><span class="o">.</span><span class="n">time</span><span class="o">*</span><span class="mf">1e6</span><span class="p">,</span><span class="n">analysis</span><span class="o">.</span><span class="n">nodes</span><span class="p">[</span><span class="s1">&#39;2&#39;</span><span class="p">],</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;V(2) [V]  ($V_</span><span class="si">{out}</span><span class="s1">$)&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span> <span class="n">loc</span><span class="o">=</span><span class="p">(</span><span class="mf">0.54</span><span class="p">,</span><span class="mf">.78</span><span class="p">))</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;tijd [us]&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">(</span><span class="mi">47</span><span class="p">,</span><span class="mi">53</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="o">-</span><span class="mf">0.5</span><span class="p">,</span><span class="mf">0.5</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Voltage [V]&#39;</span><span class="p">)</span>
+
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">analysis</span><span class="o">.</span><span class="n">time</span><span class="o">*</span><span class="mf">1e6</span><span class="p">,</span><span class="o">-</span><span class="n">analysis</span><span class="o">.</span><span class="n">branches</span><span class="p">[</span><span class="s1">&#39;vpos&#39;</span><span class="p">]</span><span class="o">*</span><span class="mf">1e3</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;$I_</span><span class="si">{npn}</span><span class="s1">$ [mA] &#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">analysis</span><span class="o">.</span><span class="n">time</span><span class="o">*</span><span class="mf">1e6</span><span class="p">,</span><span class="n">analysis</span><span class="o">.</span><span class="n">branches</span><span class="p">[</span><span class="s1">&#39;vneg&#39;</span><span class="p">]</span><span class="o">*</span><span class="mf">1e3</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;$I_</span><span class="si">{pnp}</span><span class="s1">$ [mA]  &#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span> <span class="n">loc</span><span class="o">=</span><span class="p">(</span><span class="mf">0.16</span><span class="p">,</span><span class="mf">.91</span><span class="p">))</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;tijd [us]&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">(</span><span class="mi">47</span><span class="p">,</span><span class="mi">53</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="o">-</span><span class="mf">0.2</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Stroom [mA]&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/Klasse-B_15_0.png" src="_images/Klasse-B_15_0.png" />
+</div>
+</div>
+<div class="figure align-default" id="bfig2b">
+<img alt="_images/mpl.svg" src="_images/mpl.svg" /><p class="caption"><span class="caption-number">Fig. 12 </span><span class="caption-text">De klasse B versterker: detail van de stromen en spanningen als functie van de tijd in de buurt van de nuldoorgang.</span><a class="headerlink" href="#bfig2b" title="Permallink naar deze afbeelding">¶</a></p>
+</div>
+<p><a class="reference internal" href="#bfig2c"><span class="std std-numref">Fig. 13</span></a> toont de stroom door als functie van de spanning over de transistor voor de npn transistor. Voor de pnp transistor bekomen we dezelfde grafiek.</p>
+<div class="cell tag_hide-input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">figure</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">analysis</span><span class="o">.</span><span class="n">nodes</span><span class="p">[</span><span class="s1">&#39;8&#39;</span><span class="p">]</span><span class="o">-</span><span class="n">analysis</span><span class="o">.</span><span class="n">nodes</span><span class="p">[</span><span class="s1">&#39;2&#39;</span><span class="p">],</span><span class="o">-</span><span class="n">analysis</span><span class="o">.</span><span class="n">branches</span><span class="p">[</span><span class="s1">&#39;vpos&#39;</span><span class="p">]</span><span class="o">*</span><span class="mf">1e3</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;Spanning over de npn transistor [V]&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Stroom door de transistor [mA]&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/Klasse-B_18_0.png" src="_images/Klasse-B_18_0.png" />
+</div>
+</div>
+<div class="figure align-default" id="bfig2c">
+<img alt="_images/mpl.svg" src="_images/mpl.svg" /><p class="caption"><span class="caption-number">Fig. 13 </span><span class="caption-text">De klasse B versterker: de stroom door een npn transistor als functie van de spanning</span><a class="headerlink" href="#bfig2c" title="Permallink naar deze afbeelding">¶</a></p>
+</div>
+</div>
+</div>
+<div class="section" id="gebruik-van-de-voorinstelspanning">
+<h2>Gebruik van de voorinstelspanning<a class="headerlink" href="#gebruik-van-de-voorinstelspanning" title="Permalink naar deze titel">¶</a></h2>
+<div class="section" id="diodes-als-voorinstelspanning">
+<h3>diodes als voorinstelspanning<a class="headerlink" href="#diodes-als-voorinstelspanning" title="Permalink naar deze titel">¶</a></h3>
+<div class="cell tag_hide-input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">d</span> <span class="o">=</span> <span class="n">schem</span><span class="o">.</span><span class="n">Drawing</span><span class="p">()</span>
+<span class="n">T1</span> <span class="o">=</span> <span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">BJT_NPN</span><span class="p">)</span>
+<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">LINE</span><span class="p">,</span> <span class="n">xy</span><span class="o">=</span><span class="n">T1</span><span class="o">.</span><span class="n">base</span><span class="p">,</span>  <span class="n">d</span><span class="o">=</span><span class="s1">&#39;left&#39;</span><span class="p">,</span> <span class="n">l</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
+<span class="n">PullUpIn</span><span class="o">=</span><span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">DOT</span><span class="p">)</span>
+<span class="n">dv1</span><span class="o">=</span><span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">DIODE</span><span class="p">,</span> <span class="n">d</span><span class="o">=</span><span class="s1">&#39;down&#39;</span><span class="p">,</span> <span class="n">l</span><span class="o">=</span><span class="mf">1.5</span><span class="p">)</span>
+<span class="n">indot</span><span class="o">=</span><span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">DOT</span><span class="p">)</span>
+<span class="n">dv2</span><span class="o">=</span><span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">DIODE</span><span class="p">,</span> <span class="n">d</span><span class="o">=</span><span class="s1">&#39;down&#39;</span><span class="p">,</span> <span class="n">l</span><span class="o">=</span><span class="mf">1.4</span><span class="p">)</span>
+<span class="n">PullDownIn</span><span class="o">=</span><span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">DOT</span><span class="p">)</span>
+<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">LINE</span><span class="p">,</span>  <span class="n">d</span><span class="o">=</span><span class="s1">&#39;right&#39;</span><span class="p">,</span> <span class="n">l</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
+<span class="n">T2</span> <span class="o">=</span> <span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">BJT_PNP</span><span class="p">,</span> <span class="n">d</span><span class="o">=</span><span class="s1">&#39;right&#39;</span><span class="p">)</span>
+<span class="n">r1</span><span class="o">=</span><span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">RES</span><span class="p">,</span> <span class="n">xy</span><span class="o">=</span><span class="n">PullUpIn</span><span class="o">.</span><span class="n">start</span><span class="p">,</span> <span class="n">d</span><span class="o">=</span><span class="s1">&#39;up&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;$R_1$&#39;</span><span class="p">,</span><span class="n">l</span><span class="o">=</span><span class="mf">1.5</span><span class="p">)</span>
+<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">LINE</span><span class="p">,</span>  <span class="n">d</span><span class="o">=</span><span class="s1">&#39;right&#39;</span><span class="p">,</span> <span class="n">l</span><span class="o">=</span><span class="mf">0.4</span><span class="p">)</span>
+<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">VDD</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;$V_</span><span class="si">{DD}</span><span class="s1">$&#39;</span><span class="p">)</span>
+<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">LINE</span><span class="p">,</span>  <span class="n">d</span><span class="o">=</span><span class="s1">&#39;right&#39;</span><span class="p">,</span> <span class="n">tox</span><span class="o">=</span><span class="n">T1</span><span class="o">.</span><span class="n">collector</span><span class="p">)</span>
+<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">LINE</span><span class="p">,</span>  <span class="n">d</span><span class="o">=</span><span class="s1">&#39;down&#39;</span><span class="p">,</span> <span class="n">toy</span><span class="o">=</span><span class="n">T1</span><span class="o">.</span><span class="n">collector</span><span class="p">)</span>
+<span class="n">r2</span><span class="o">=</span><span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">RES</span><span class="p">,</span> <span class="n">xy</span><span class="o">=</span><span class="n">PullDownIn</span><span class="o">.</span><span class="n">start</span><span class="p">,</span> <span class="n">d</span><span class="o">=</span><span class="s1">&#39;down&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;$R_2$&#39;</span><span class="p">,</span><span class="n">l</span><span class="o">=</span><span class="mf">1.5</span><span class="p">)</span>
+<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">LINE</span><span class="p">,</span>  <span class="n">d</span><span class="o">=</span><span class="s1">&#39;right&#39;</span><span class="p">,</span> <span class="n">l</span><span class="o">=</span><span class="mf">0.4</span><span class="p">)</span>
+<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">VSS</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;-$V_</span><span class="si">{DD}</span><span class="s1">$&#39;</span><span class="p">)</span>
+<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">LINE</span><span class="p">,</span>  <span class="n">d</span><span class="o">=</span><span class="s1">&#39;right&#39;</span><span class="p">,</span> <span class="n">tox</span><span class="o">=</span><span class="n">T2</span><span class="o">.</span><span class="n">collector</span><span class="p">)</span>
+<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">LINE</span><span class="p">,</span>  <span class="n">d</span><span class="o">=</span><span class="s1">&#39;up&#39;</span><span class="p">,</span> <span class="n">toy</span><span class="o">=</span><span class="n">T2</span><span class="o">.</span><span class="n">collector</span><span class="p">)</span>
+
+<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">LINE</span><span class="p">,</span> <span class="n">xy</span><span class="o">=</span><span class="n">indot</span><span class="o">.</span><span class="n">start</span><span class="p">,</span> <span class="n">d</span><span class="o">=</span><span class="s1">&#39;left&#39;</span><span class="p">,</span> <span class="n">l</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
+<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">DOT_OPEN</span><span class="p">)</span>
+<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">LINE</span><span class="p">,</span> <span class="n">d</span><span class="o">=</span><span class="s1">&#39;down&#39;</span><span class="p">,</span><span class="n">xy</span><span class="o">=</span><span class="n">T1</span><span class="o">.</span><span class="n">emitter</span><span class="p">,</span> <span class="n">l</span><span class="o">=</span><span class="mf">0.8</span><span class="p">)</span>
+<span class="n">outdot</span><span class="o">=</span><span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">DOT</span><span class="p">)</span>
+<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">LINE</span><span class="p">,</span> <span class="n">d</span><span class="o">=</span><span class="s1">&#39;down&#39;</span><span class="p">,</span><span class="n">toy</span><span class="o">=</span><span class="n">T2</span><span class="o">.</span><span class="n">emitter</span><span class="p">)</span>
+
+<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">LINE</span><span class="p">,</span><span class="n">xy</span><span class="o">=</span><span class="n">outdot</span><span class="o">.</span><span class="n">start</span><span class="p">,</span>  <span class="n">d</span><span class="o">=</span><span class="s1">&#39;right&#39;</span><span class="p">,</span> <span class="n">l</span><span class="o">=</span><span class="mf">1.5</span><span class="p">)</span>
+<span class="n">R</span> <span class="o">=</span> <span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">RES</span><span class="p">,</span> <span class="n">d</span><span class="o">=</span><span class="s1">&#39;down&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;$R_L$&#39;</span><span class="p">,</span> <span class="n">l</span><span class="o">=</span><span class="mf">1.5</span><span class="p">)</span>
+<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">GND</span><span class="p">)</span>
+<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">LINE</span><span class="p">,</span> <span class="n">xy</span><span class="o">=</span><span class="n">R</span><span class="o">.</span><span class="n">start</span><span class="p">,</span> <span class="n">d</span><span class="o">=</span><span class="s1">&#39;right&#39;</span><span class="p">,</span> <span class="n">l</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
+<span class="n">dot</span><span class="o">=</span><span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">DOT_OPEN</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;$v_</span><span class="si">{out}</span><span class="s1">$&#39;</span><span class="p">)</span>
+
+<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">EncircleBox</span><span class="p">([</span><span class="n">T1</span><span class="p">],</span><span class="n">padx</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">pady</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">linestyle</span><span class="p">(</span><span class="s1">&#39;--&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">linewidth</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span><span class="o">.</span><span class="n">color</span><span class="p">(</span><span class="s1">&#39;green&#39;</span><span class="p">))</span>
+<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">EncircleBox</span><span class="p">([</span><span class="n">T2</span><span class="p">],</span><span class="n">padx</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">pady</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">linestyle</span><span class="p">(</span><span class="s1">&#39;--&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">linewidth</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span><span class="o">.</span><span class="n">color</span><span class="p">(</span><span class="s1">&#39;green&#39;</span><span class="p">))</span>
+<span class="n">Voorinstelspanning</span><span class="o">=</span><span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">EncircleBox</span><span class="p">([</span><span class="n">dv1</span><span class="p">,</span><span class="n">dv2</span><span class="p">],</span><span class="n">padx</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span><span class="n">pady</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">linestyle</span><span class="p">(</span><span class="s1">&#39;--&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">linewidth</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span><span class="o">.</span><span class="n">color</span><span class="p">(</span><span class="s1">&#39;red&#39;</span><span class="p">))</span>
+<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">EncircleBox</span><span class="p">([</span><span class="n">r1</span><span class="p">],</span><span class="n">padx</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">pady</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">linestyle</span><span class="p">(</span><span class="s1">&#39;--&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">linewidth</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span><span class="o">.</span><span class="n">color</span><span class="p">(</span><span class="s1">&#39;brown&#39;</span><span class="p">))</span>
+<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">EncircleBox</span><span class="p">([</span><span class="n">r2</span><span class="p">],</span><span class="n">padx</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">pady</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">linestyle</span><span class="p">(</span><span class="s1">&#39;--&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">linewidth</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span><span class="o">.</span><span class="n">color</span><span class="p">(</span><span class="s1">&#39;blue&#39;</span><span class="p">))</span>
+
+<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">Annotate</span><span class="p">(</span><span class="n">th1</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">at</span><span class="p">(</span><span class="n">Voorinstelspanning</span><span class="o">.</span><span class="n">SW</span><span class="p">)</span><span class="o">.</span><span class="n">delta</span><span class="p">(</span><span class="n">dx</span><span class="o">=-</span><span class="mf">1.2</span><span class="p">,</span> <span class="n">dy</span><span class="o">=</span><span class="mf">0.3</span><span class="p">)</span><span class="o">.</span><span class="n">label</span><span class="p">(</span><span class="s1">&#39;Voorinstelspanning&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">color</span><span class="p">(</span><span class="s1">&#39;red&#39;</span><span class="p">))</span>
+
+<span class="c1"># ff=d.draw(showframe=True)   # debugging bbox</span>
+<span class="c1"># print(ff.bbox.xmin)</span>
+<span class="c1"># ff</span>
+
+<span class="n">d</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/Klasse-B_21_0.svg" src="_images/Klasse-B_21_0.svg" /></div>
+</div>
+<div class="figure align-default" id="bfig1v2">
+<img alt="_images/mpl.svg" src="_images/mpl.svg" /><p class="caption"><span class="caption-number">Fig. 14 </span><span class="caption-text">Basisschema van de klasse B versterker voor DC werking met diode voorinstelspanning</span><a class="headerlink" href="#bfig1v2" title="Permallink naar deze afbeelding">¶</a></p>
+</div>
+<p>Hieronder tonen we de spice listing van de klasse B versterker waarbij we een voorinstelspanning voorzien tussen de  basissen van de npn en de pnp transistor. Deze voorinstelspanning is hier uitgevoerd door diodes. in <a class="reference internal" href="#bfig2dio"><span class="std std-numref">Fig. 15</span></a> merken we hierbij op dat dit tot gevolg heeft dat er toch een stroom blijft lopen door de transistor die niet in geleiding is. Dit noemen we de klasse AB werking van deze klasseB versterker.</p>
+<div class="cell tag_hide-input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">spicelisting</span><span class="p">(</span><span class="s2">&quot;simul\classB2.sp&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Klasse B versterker
+*
+* SUPPLY VOLTAGES
+VPOS 8 0 DC +15V
+VNEG 9 0 DC -15V
+*
+VS2 10 0 DC 0 SIN(0V 5VPEAK 10KHZ)
+*
+D1  13 10	DNOM
+RB1 13 8	10K
+Q11 8 13 12 QNPN
+*
+D2  10 14   DNOM
+RB2 14 9    10K
+Q12 9 14 12 QPNP
+*
+RL2 12 0 100
+*
+* DEVICE MODELS
+.model	QNPN	NPN(BF=50)
+.model	QPNP	PNP(BF=50)
+.model	DNOM	D()
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_full-width tag_hide-input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">circuit</span><span class="o">=</span><span class="n">SpiceParser</span><span class="p">(</span><span class="n">path</span><span class="o">=</span><span class="s1">&#39;simul\classB2.sp&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">build_circuit</span><span class="p">()</span>  
+<span class="n">end_time</span><span class="o">=</span><span class="mf">2e-4</span>
+<span class="n">simulator</span> <span class="o">=</span> <span class="n">circuit</span><span class="o">.</span><span class="n">simulator</span><span class="p">(</span><span class="n">temperature</span><span class="o">=</span><span class="mi">25</span><span class="p">,</span> <span class="n">nominal_temperature</span><span class="o">=</span><span class="mi">25</span><span class="p">)</span>
+<span class="n">analysis</span> <span class="o">=</span> <span class="n">simulator</span><span class="o">.</span><span class="n">transient</span><span class="p">(</span><span class="n">step_time</span><span class="o">=</span><span class="mf">100e-9</span><span class="p">,</span> <span class="n">end_time</span><span class="o">=</span><span class="n">end_time</span><span class="p">)</span>
+
+<span class="n">figure</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">analysis</span><span class="o">.</span><span class="n">time</span><span class="o">*</span><span class="mf">1e6</span><span class="p">,</span><span class="n">analysis</span><span class="o">.</span><span class="n">nodes</span><span class="p">[</span><span class="s1">&#39;10&#39;</span><span class="p">],</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;V(10) [V]  ($V_</span><span class="si">{in}</span><span class="s1">$)&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">analysis</span><span class="o">.</span><span class="n">time</span><span class="o">*</span><span class="mf">1e6</span><span class="p">,</span><span class="n">analysis</span><span class="o">.</span><span class="n">nodes</span><span class="p">[</span><span class="s1">&#39;12&#39;</span><span class="p">],</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;V(12) [V]  ($V_</span><span class="si">{out}</span><span class="s1">$)&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span> <span class="n">loc</span><span class="o">=</span><span class="p">(</span><span class="mf">0.24</span><span class="p">,</span><span class="mf">.78</span><span class="p">))</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;tijd [us]&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">end_time</span><span class="o">*</span><span class="mf">1e6</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Voltage [V]&#39;</span><span class="p">)</span>
+
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">analysis</span><span class="o">.</span><span class="n">time</span><span class="o">*</span><span class="mf">1e6</span><span class="p">,</span><span class="o">-</span><span class="n">analysis</span><span class="o">.</span><span class="n">branches</span><span class="p">[</span><span class="s1">&#39;vpos&#39;</span><span class="p">]</span><span class="o">*</span><span class="mf">1e3</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;$I_</span><span class="si">{npn}</span><span class="s1">$ [mA] &#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">analysis</span><span class="o">.</span><span class="n">time</span><span class="o">*</span><span class="mf">1e6</span><span class="p">,</span><span class="n">analysis</span><span class="o">.</span><span class="n">branches</span><span class="p">[</span><span class="s1">&#39;vneg&#39;</span><span class="p">]</span><span class="o">*</span><span class="mf">1e3</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;$I_</span><span class="si">{pnp}</span><span class="s1">$ [mA]  &#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span> <span class="n">loc</span><span class="o">=</span><span class="p">(</span><span class="mf">0.16</span><span class="p">,</span><span class="mf">.91</span><span class="p">))</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;tijd [us]&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">end_time</span><span class="o">*</span><span class="mf">1e6</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Stroom [mA]&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/Klasse-B_25_0.png" src="_images/Klasse-B_25_0.png" />
+</div>
+</div>
+<div class="figure align-default" id="bfig2dio">
+<img alt="_images/mpl.svg" src="_images/mpl.svg" /><p class="caption"><span class="caption-number">Fig. 15 </span><span class="caption-text">De klasse B versterker: stromen en spanningen als functie van de tijd</span><a class="headerlink" href="#bfig2dio" title="Permallink naar deze afbeelding">¶</a></p>
+</div>
+<p>In de grafiek (<a class="reference internal" href="#bfig2dioss"><span class="std std-numref">Fig. 16</span></a>) wordt dit nog duidelijker.</p>
+<div class="cell tag_hide-input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">figure</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">analysis</span><span class="o">.</span><span class="n">nodes</span><span class="p">[</span><span class="s1">&#39;8&#39;</span><span class="p">]</span><span class="o">-</span><span class="n">analysis</span><span class="o">.</span><span class="n">nodes</span><span class="p">[</span><span class="s1">&#39;12&#39;</span><span class="p">],</span><span class="o">-</span><span class="n">analysis</span><span class="o">.</span><span class="n">branches</span><span class="p">[</span><span class="s1">&#39;vpos&#39;</span><span class="p">]</span><span class="o">*</span><span class="mf">1e3</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;Spanning over de npn transistor [V]&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Stroom door de transistor [mA]&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/Klasse-B_28_0.png" src="_images/Klasse-B_28_0.png" />
+</div>
+</div>
+<div class="figure align-default" id="bfig2dioss">
+<img alt="_images/mpl.svg" src="_images/mpl.svg" /><p class="caption"><span class="caption-number">Fig. 16 </span><span class="caption-text">De klasse B versterker: de stroom door een npn transistor als functie van de spanning</span><a class="headerlink" href="#bfig2dioss" title="Permallink naar deze afbeelding">¶</a></p>
+</div>
+<p>We kunnen ook proberen de dode zone weg te werken aan de hand van feedback, zoals in het onderstaande schema aan de hand van een opamp. Op het eerste zicht lijkt dat te lukken, als we de simulatie in <a class="reference internal" href="#bopmapsim"><span class="std std-numref">Fig. 17</span></a> bekijken. De <span class="math notranslate nohighlight">\(V_{in}\)</span> en <span class="math notranslate nohighlight">\(V_{out}\)</span> liggen zo goed als volledig op elkaar dat we het verschil niet merken. Enkel als we heel erg inzoemen, zoals in <a class="reference internal" href="#bopmapsimz"><span class="std std-numref">Fig. 18</span></a> lijkt er een klein verschil te zijn langs de nuldoorgang. Laat je hierbij echter niet vangen. Deze simualtie is gedaan met een ideale OpAmp, warvan de stijsnelheid niet realistisch is. Wanneer we diezelfde simulatie hernemen met een realistische OpAmp, zie onder, blijft dit bijna ideale gedrag niet behouden.</p>
+<div class="cell tag_hide-input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">SpiceParser</span><span class="p">(</span><span class="n">path</span><span class="o">=</span><span class="s1">&#39;simul\classB4.sp&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">build_circuit</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>.title Klasse B versterker  PUSH-PULL PLACED IN OPAMP FEEDBACK LOOP
+VPOS 8 0 DC +15V
+VNEG 9 0 DC -15V
+VS3 20 0 DC 0 SIN(0V 5VPEAK 10KHZ)
+Q21 8 23 22 QNPN
+Q22 9 23 22 QPNP
+RL3 22 0 100
+XOpAmp 20 22 8 9 23 opamp
+.model QNPN NPN (BF=50)
+.model QPNP PNP (BF=50)
+.model DNOM D ()
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_full-width tag_hide-input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">circuit</span><span class="o">=</span><span class="n">SpiceParser</span><span class="p">(</span><span class="n">path</span><span class="o">=</span><span class="s1">&#39;simul\classB4.sp&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">build_circuit</span><span class="p">()</span>  
+<span class="n">circuit</span><span class="o">.</span><span class="n">include</span><span class="p">(</span><span class="s1">&#39;libraries\opamp\BasicOpamp.cir&#39;</span><span class="p">)</span>
+<span class="n">end_time</span><span class="o">=</span><span class="mf">2e-4</span>
+<span class="n">simulator</span> <span class="o">=</span> <span class="n">circuit</span><span class="o">.</span><span class="n">simulator</span><span class="p">(</span><span class="n">temperature</span><span class="o">=</span><span class="mi">25</span><span class="p">,</span> <span class="n">nominal_temperature</span><span class="o">=</span><span class="mi">25</span><span class="p">)</span>
+<span class="n">analysis</span> <span class="o">=</span> <span class="n">simulator</span><span class="o">.</span><span class="n">transient</span><span class="p">(</span><span class="n">step_time</span><span class="o">=</span><span class="mf">10e-9</span><span class="p">,</span> <span class="n">end_time</span><span class="o">=</span><span class="n">end_time</span><span class="p">)</span>
+
+<span class="n">figure</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">analysis</span><span class="o">.</span><span class="n">time</span><span class="o">*</span><span class="mf">1e6</span><span class="p">,</span><span class="n">analysis</span><span class="o">.</span><span class="n">nodes</span><span class="p">[</span><span class="s1">&#39;20&#39;</span><span class="p">],</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;V(20) [V]  ($V_</span><span class="si">{in}</span><span class="s1">$)&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">analysis</span><span class="o">.</span><span class="n">time</span><span class="o">*</span><span class="mf">1e6</span><span class="p">,</span><span class="n">analysis</span><span class="o">.</span><span class="n">nodes</span><span class="p">[</span><span class="s1">&#39;22&#39;</span><span class="p">],</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;V(22) [V]  ($V_</span><span class="si">{out}</span><span class="s1">$)&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">analysis</span><span class="o">.</span><span class="n">time</span><span class="o">*</span><span class="mf">1e6</span><span class="p">,</span><span class="n">analysis</span><span class="o">.</span><span class="n">nodes</span><span class="p">[</span><span class="s1">&#39;23&#39;</span><span class="p">],</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;V(23) [V]  ($V_</span><span class="si">{OpAmp}</span><span class="s1">$)&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span> <span class="n">loc</span><span class="o">=</span><span class="p">(</span><span class="mf">0.24</span><span class="p">,</span><span class="mf">.78</span><span class="p">))</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;tijd [us]&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">end_time</span><span class="o">*</span><span class="mf">1e6</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Voltage [V]&#39;</span><span class="p">)</span>
+
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">analysis</span><span class="o">.</span><span class="n">time</span><span class="o">*</span><span class="mf">1e6</span><span class="p">,</span><span class="o">-</span><span class="n">analysis</span><span class="o">.</span><span class="n">branches</span><span class="p">[</span><span class="s1">&#39;vpos&#39;</span><span class="p">]</span><span class="o">*</span><span class="mf">1e3</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;$I_</span><span class="si">{npn}</span><span class="s1">$ [mA] &#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">analysis</span><span class="o">.</span><span class="n">time</span><span class="o">*</span><span class="mf">1e6</span><span class="p">,</span><span class="n">analysis</span><span class="o">.</span><span class="n">branches</span><span class="p">[</span><span class="s1">&#39;vneg&#39;</span><span class="p">]</span><span class="o">*</span><span class="mf">1e3</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;$I_</span><span class="si">{pnp}</span><span class="s1">$ [mA]  &#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span> <span class="n">loc</span><span class="o">=</span><span class="p">(</span><span class="mf">0.16</span><span class="p">,</span><span class="mf">.91</span><span class="p">))</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;tijd [us]&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">end_time</span><span class="o">*</span><span class="mf">1e6</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Stroom [mA]&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/Klasse-B_32_0.png" src="_images/Klasse-B_32_0.png" />
+</div>
+</div>
+<div class="figure align-default" id="bopmapsim">
+<img alt="_images/mpl.svg" src="_images/mpl.svg" /><p class="caption"><span class="caption-number">Fig. 17 </span><span class="caption-text">De klasse B versterker teruggekoppeld met een ideale OpAmp: stromen en spanningen als functie van de tijd</span><a class="headerlink" href="#bopmapsim" title="Permallink naar deze afbeelding">¶</a></p>
+</div>
+<div class="cell tag_full-width tag_hide-input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">figure</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">analysis</span><span class="o">.</span><span class="n">time</span><span class="o">*</span><span class="mf">1e6</span><span class="p">,</span><span class="n">analysis</span><span class="o">.</span><span class="n">nodes</span><span class="p">[</span><span class="s1">&#39;20&#39;</span><span class="p">],</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;V(20) [V]  ($V_</span><span class="si">{in}</span><span class="s1">$)&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">analysis</span><span class="o">.</span><span class="n">time</span><span class="o">*</span><span class="mf">1e6</span><span class="p">,</span><span class="n">analysis</span><span class="o">.</span><span class="n">nodes</span><span class="p">[</span><span class="s1">&#39;22&#39;</span><span class="p">],</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;V(22) [V]  ($V_</span><span class="si">{out}</span><span class="s1">$)&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">analysis</span><span class="o">.</span><span class="n">time</span><span class="o">*</span><span class="mf">1e6</span><span class="p">,</span><span class="n">analysis</span><span class="o">.</span><span class="n">nodes</span><span class="p">[</span><span class="s1">&#39;23&#39;</span><span class="p">],</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;V(23) [V]  ($V_</span><span class="si">{OpAmp}</span><span class="s1">$)&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span> <span class="n">loc</span><span class="o">=</span><span class="p">(</span><span class="mf">0.24</span><span class="p">,</span><span class="mf">.78</span><span class="p">))</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;tijd [us]&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">(</span><span class="mi">47</span><span class="p">,</span><span class="mi">53</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="o">-</span><span class="mf">0.5</span><span class="p">,</span><span class="mf">0.5</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Voltage [V]&#39;</span><span class="p">)</span>
+
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">analysis</span><span class="o">.</span><span class="n">time</span><span class="o">*</span><span class="mf">1e6</span><span class="p">,</span><span class="o">-</span><span class="n">analysis</span><span class="o">.</span><span class="n">branches</span><span class="p">[</span><span class="s1">&#39;vpos&#39;</span><span class="p">]</span><span class="o">*</span><span class="mf">1e3</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;$I_</span><span class="si">{npn}</span><span class="s1">$ [mA] &#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">analysis</span><span class="o">.</span><span class="n">time</span><span class="o">*</span><span class="mf">1e6</span><span class="p">,</span><span class="n">analysis</span><span class="o">.</span><span class="n">branches</span><span class="p">[</span><span class="s1">&#39;vneg&#39;</span><span class="p">]</span><span class="o">*</span><span class="mf">1e3</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;$I_</span><span class="si">{pnp}</span><span class="s1">$ [mA]  &#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span> <span class="n">loc</span><span class="o">=</span><span class="p">(</span><span class="mf">0.16</span><span class="p">,</span><span class="mf">.91</span><span class="p">))</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;tijd [us]&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">(</span><span class="mi">47</span><span class="p">,</span><span class="mi">53</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="o">-</span><span class="mf">0.2</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Stroom [mA]&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/Klasse-B_34_0.png" src="_images/Klasse-B_34_0.png" />
+</div>
+</div>
+<div class="figure align-default" id="bopmapsimz">
+<img alt="_images/mpl.svg" src="_images/mpl.svg" /><p class="caption"><span class="caption-number">Fig. 18 </span><span class="caption-text">De klasse B versterker teruggekoppeld met een ideale OpAmp: stromen en spanningen als functie van de tijd in de nabijheid van de nuldoorgang</span><a class="headerlink" href="#bopmapsimz" title="Permallink naar deze afbeelding">¶</a></p>
+</div>
+<div class="cell tag_hide-input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">figure</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">analysis</span><span class="o">.</span><span class="n">nodes</span><span class="p">[</span><span class="s1">&#39;8&#39;</span><span class="p">]</span><span class="o">-</span><span class="n">analysis</span><span class="o">.</span><span class="n">nodes</span><span class="p">[</span><span class="s1">&#39;22&#39;</span><span class="p">],</span><span class="o">-</span><span class="n">analysis</span><span class="o">.</span><span class="n">branches</span><span class="p">[</span><span class="s1">&#39;vpos&#39;</span><span class="p">]</span><span class="o">*</span><span class="mf">1e3</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;Spanning over de npn transistor [V]&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Stroom door de transistor [mA]&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/Klasse-B_36_0.png" src="_images/Klasse-B_36_0.png" />
+</div>
+</div>
+<div class="figure align-default" id="bopamp-dio">
+<img alt="_images/mpl.svg" src="_images/mpl.svg" /><p class="caption"><span class="caption-number">Fig. 19 </span><span class="caption-text">De klasse B versterker: de stroom door een npn transistor als functie van de spanning</span><a class="headerlink" href="#bopamp-dio" title="Permallink naar deze afbeelding">¶</a></p>
+</div>
+<div class="cell tag_hide-input tag_full-width docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">circuit</span><span class="o">=</span><span class="n">SpiceParser</span><span class="p">(</span><span class="n">path</span><span class="o">=</span><span class="s1">&#39;simul\classB5.sp&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">build_circuit</span><span class="p">()</span>  
+<span class="n">circuit</span><span class="o">.</span><span class="n">include</span><span class="p">(</span><span class="s1">&#39;libraries\opamp\BasicOpamp.cir&#39;</span><span class="p">)</span>
+<span class="n">end_time</span><span class="o">=</span><span class="mf">2e-4</span>
+<span class="n">simulator</span> <span class="o">=</span> <span class="n">circuit</span><span class="o">.</span><span class="n">simulator</span><span class="p">(</span><span class="n">temperature</span><span class="o">=</span><span class="mi">25</span><span class="p">,</span> <span class="n">nominal_temperature</span><span class="o">=</span><span class="mi">25</span><span class="p">)</span>
+<span class="n">analysis</span> <span class="o">=</span> <span class="n">simulator</span><span class="o">.</span><span class="n">transient</span><span class="p">(</span><span class="n">step_time</span><span class="o">=</span><span class="mf">10e-9</span><span class="p">,</span> <span class="n">end_time</span><span class="o">=</span><span class="n">end_time</span><span class="p">)</span>
+
+<span class="n">figure</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">analysis</span><span class="o">.</span><span class="n">time</span><span class="o">*</span><span class="mf">1e6</span><span class="p">,</span><span class="n">analysis</span><span class="o">.</span><span class="n">nodes</span><span class="p">[</span><span class="s1">&#39;20&#39;</span><span class="p">],</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;V(20) [V]  ($V_</span><span class="si">{in}</span><span class="s1">$)&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">analysis</span><span class="o">.</span><span class="n">time</span><span class="o">*</span><span class="mf">1e6</span><span class="p">,</span><span class="n">analysis</span><span class="o">.</span><span class="n">nodes</span><span class="p">[</span><span class="s1">&#39;22&#39;</span><span class="p">],</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;V(22) [V]  ($V_</span><span class="si">{out}</span><span class="s1">$)&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">analysis</span><span class="o">.</span><span class="n">time</span><span class="o">*</span><span class="mf">1e6</span><span class="p">,</span><span class="n">analysis</span><span class="o">.</span><span class="n">nodes</span><span class="p">[</span><span class="s1">&#39;23&#39;</span><span class="p">],</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;V(23) [V]  ($V_</span><span class="si">{OpAmp}</span><span class="s1">$)&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span> <span class="n">loc</span><span class="o">=</span><span class="p">(</span><span class="mf">0.24</span><span class="p">,</span><span class="mf">.78</span><span class="p">))</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;tijd [us]&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">end_time</span><span class="o">*</span><span class="mf">1e6</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Voltage [V]&#39;</span><span class="p">)</span>
+
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">analysis</span><span class="o">.</span><span class="n">time</span><span class="o">*</span><span class="mf">1e6</span><span class="p">,</span><span class="o">-</span><span class="n">analysis</span><span class="o">.</span><span class="n">branches</span><span class="p">[</span><span class="s1">&#39;vpos&#39;</span><span class="p">]</span><span class="o">*</span><span class="mf">1e3</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;$I_</span><span class="si">{npn}</span><span class="s1">$ [mA] &#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">analysis</span><span class="o">.</span><span class="n">time</span><span class="o">*</span><span class="mf">1e6</span><span class="p">,</span><span class="n">analysis</span><span class="o">.</span><span class="n">branches</span><span class="p">[</span><span class="s1">&#39;vneg&#39;</span><span class="p">]</span><span class="o">*</span><span class="mf">1e3</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;$I_</span><span class="si">{pnp}</span><span class="s1">$ [mA]  &#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span> <span class="n">loc</span><span class="o">=</span><span class="p">(</span><span class="mf">0.16</span><span class="p">,</span><span class="mf">.91</span><span class="p">))</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;tijd [us]&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">end_time</span><span class="o">*</span><span class="mf">1e6</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Stroom [mA]&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/Klasse-B_38_0.png" src="_images/Klasse-B_38_0.png" />
+</div>
+</div>
+<div class="figure align-default" id="bopmapsiml">
+<img alt="_images/mpl.svg" src="_images/mpl.svg" /><p class="caption"><span class="caption-number">Fig. 20 </span><span class="caption-text">De klasse B versterker met lagere voedinsspanning teruggekoppeld met een ideale OpAmp: stromen en spanningen als functie van de tijd</span><a class="headerlink" href="#bopmapsiml" title="Permallink naar deze afbeelding">¶</a></p>
+</div>
+<p>Echter, wanneer we een realistisch model van een opamp invoeren, zoals de <a class="reference external" href="https://www.ti.com/product/LMV981-N">LMV981-N</a> van Texas Instruments, zien we een heel ander gedrag in de dode zone.</p>
+<div class="cell tag_hide-input tag_full-width docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">circuit</span><span class="o">=</span><span class="n">SpiceParser</span><span class="p">(</span><span class="n">path</span><span class="o">=</span><span class="s1">&#39;simul\classB5.sp&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">build_circuit</span><span class="p">()</span>  
+<span class="n">circuit</span><span class="o">.</span><span class="n">include</span><span class="p">(</span><span class="s1">&#39;libraries\opamp\LMV981.cir&#39;</span><span class="p">)</span>   <span class="c1"># Dit is een opamp met lage voedingsspanning. Beter een opamp kiezen met aangepast voedingsspaaningsbereik.</span>
+<span class="n">end_time</span><span class="o">=</span><span class="mf">2e-4</span>
+<span class="n">simulator</span> <span class="o">=</span> <span class="n">circuit</span><span class="o">.</span><span class="n">simulator</span><span class="p">(</span><span class="n">temperature</span><span class="o">=</span><span class="mi">25</span><span class="p">,</span> <span class="n">nominal_temperature</span><span class="o">=</span><span class="mi">25</span><span class="p">)</span>
+<span class="n">analysis</span> <span class="o">=</span> <span class="n">simulator</span><span class="o">.</span><span class="n">transient</span><span class="p">(</span><span class="n">step_time</span><span class="o">=</span><span class="mf">10e-9</span><span class="p">,</span> <span class="n">end_time</span><span class="o">=</span><span class="n">end_time</span><span class="p">)</span>
+
+<span class="n">figure</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">analysis</span><span class="o">.</span><span class="n">time</span><span class="o">*</span><span class="mf">1e6</span><span class="p">,</span><span class="n">analysis</span><span class="o">.</span><span class="n">nodes</span><span class="p">[</span><span class="s1">&#39;20&#39;</span><span class="p">],</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;V(20) [V]  ($V_</span><span class="si">{in}</span><span class="s1">$)&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">analysis</span><span class="o">.</span><span class="n">time</span><span class="o">*</span><span class="mf">1e6</span><span class="p">,</span><span class="n">analysis</span><span class="o">.</span><span class="n">nodes</span><span class="p">[</span><span class="s1">&#39;22&#39;</span><span class="p">],</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;V(22) [V]  ($V_</span><span class="si">{out}</span><span class="s1">$)&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">analysis</span><span class="o">.</span><span class="n">time</span><span class="o">*</span><span class="mf">1e6</span><span class="p">,</span><span class="n">analysis</span><span class="o">.</span><span class="n">nodes</span><span class="p">[</span><span class="s1">&#39;23&#39;</span><span class="p">],</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;V(23) [V]  ($V_</span><span class="si">{OpAmp}</span><span class="s1">$)&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span> <span class="n">loc</span><span class="o">=</span><span class="p">(</span><span class="mf">0.24</span><span class="p">,</span><span class="mf">.78</span><span class="p">))</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;tijd [us]&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">end_time</span><span class="o">*</span><span class="mf">1e6</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Voltage [V]&#39;</span><span class="p">)</span>
+
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">analysis</span><span class="o">.</span><span class="n">time</span><span class="o">*</span><span class="mf">1e6</span><span class="p">,</span><span class="o">-</span><span class="n">analysis</span><span class="o">.</span><span class="n">branches</span><span class="p">[</span><span class="s1">&#39;vpos&#39;</span><span class="p">]</span><span class="o">*</span><span class="mf">1e3</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;$I_</span><span class="si">{npn}</span><span class="s1">$ [mA] &#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">analysis</span><span class="o">.</span><span class="n">time</span><span class="o">*</span><span class="mf">1e6</span><span class="p">,</span><span class="n">analysis</span><span class="o">.</span><span class="n">branches</span><span class="p">[</span><span class="s1">&#39;vneg&#39;</span><span class="p">]</span><span class="o">*</span><span class="mf">1e3</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;$I_</span><span class="si">{pnp}</span><span class="s1">$ [mA]  &#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span> <span class="n">loc</span><span class="o">=</span><span class="p">(</span><span class="mf">0.16</span><span class="p">,</span><span class="mf">.91</span><span class="p">))</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;tijd [us]&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">end_time</span><span class="o">*</span><span class="mf">1e6</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Stroom [mA]&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/Klasse-B_41_0.png" src="_images/Klasse-B_41_0.png" />
+</div>
+</div>
+<div class="figure align-default" id="bopmapsiml2">
+<img alt="_images/mpl.svg" src="_images/mpl.svg" /><p class="caption"><span class="caption-number">Fig. 21 </span><span class="caption-text">De klasse B versterker met lagere voedinsspanning teruggekoppeld met een realistisch OpAmp model <a class="reference external" href="https://www.ti.com/product/LMV981-N">LMV981-N</a>: stromen en spanningen als functie van de tijd</span><a class="headerlink" href="#bopmapsiml2" title="Permallink naar deze afbeelding">¶</a></p>
+</div>
+<div class="cell tag_hide-input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">d</span> <span class="o">=</span> <span class="n">schem</span><span class="o">.</span><span class="n">Drawing</span><span class="p">()</span>
+<span class="n">T1</span> <span class="o">=</span> <span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">BJT_NPN</span><span class="p">)</span>
+<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">LINE</span><span class="p">,</span> <span class="n">xy</span><span class="o">=</span><span class="n">T1</span><span class="o">.</span><span class="n">base</span><span class="p">,</span> <span class="n">d</span><span class="o">=</span><span class="s1">&#39;down&#39;</span><span class="p">,</span> <span class="n">l</span><span class="o">=</span><span class="mf">2.5</span><span class="p">)</span>
+<span class="n">indot</span><span class="o">=</span><span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">DOT</span><span class="p">)</span>
+<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">LINE</span><span class="p">,</span> <span class="n">d</span><span class="o">=</span><span class="s1">&#39;down&#39;</span><span class="p">,</span> <span class="n">l</span><span class="o">=</span><span class="mf">2.4</span><span class="p">)</span>
+<span class="n">T2</span> <span class="o">=</span> <span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">BJT_PNP</span><span class="p">,</span> <span class="n">d</span><span class="o">=</span><span class="s1">&#39;right&#39;</span><span class="p">)</span>
+<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">LINE</span><span class="p">,</span> <span class="n">xy</span><span class="o">=</span><span class="n">indot</span><span class="o">.</span><span class="n">start</span><span class="p">,</span> <span class="n">d</span><span class="o">=</span><span class="s1">&#39;left&#39;</span><span class="p">,</span> <span class="n">l</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
+<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">DOT_OPEN</span><span class="p">)</span>
+<span class="n">T11</span> <span class="o">=</span> <span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">BJT_NPN</span><span class="p">,</span> <span class="n">d</span><span class="o">=</span><span class="s1">&#39;right&#39;</span><span class="p">,</span><span class="n">xy</span><span class="o">=</span><span class="n">T1</span><span class="o">.</span><span class="n">emitter</span><span class="p">)</span>
+<span class="n">r11</span><span class="o">=</span><span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">RES</span><span class="p">,</span> <span class="n">d</span><span class="o">=</span><span class="s1">&#39;down&#39;</span><span class="p">,</span><span class="n">xy</span><span class="o">=</span><span class="n">T1</span><span class="o">.</span><span class="n">emitter</span><span class="p">,</span><span class="n">l</span><span class="o">=</span><span class="mf">1.8</span><span class="p">)</span>
+<span class="n">outdot</span><span class="o">=</span><span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">DOT</span><span class="p">)</span>
+<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">LINE</span><span class="p">,</span> <span class="n">d</span><span class="o">=</span><span class="s1">&#39;down&#39;</span><span class="p">,</span><span class="n">xy</span><span class="o">=</span><span class="n">T11</span><span class="o">.</span><span class="n">emitter</span><span class="p">,</span><span class="n">toy</span><span class="o">=</span><span class="n">outdot</span><span class="o">.</span><span class="n">start</span><span class="p">)</span>
+<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">DOT</span><span class="p">)</span>
+<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">LINE</span><span class="p">,</span> <span class="n">d</span><span class="o">=</span><span class="s1">&#39;up&#39;</span><span class="p">,</span><span class="n">xy</span><span class="o">=</span><span class="n">T11</span><span class="o">.</span><span class="n">collector</span><span class="p">,</span><span class="n">toy</span><span class="o">=</span><span class="n">T1</span><span class="o">.</span><span class="n">collector</span><span class="p">)</span>
+<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">LINE</span><span class="p">,</span> <span class="n">d</span><span class="o">=</span><span class="s1">&#39;left&#39;</span><span class="p">,</span><span class="n">l</span><span class="o">=</span><span class="mf">0.4</span><span class="p">)</span>
+<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">DOT</span><span class="p">)</span>
+<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">VDD</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;$V_</span><span class="si">{DD}</span><span class="s1">$&#39;</span><span class="p">)</span>
+<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">LINE</span><span class="p">,</span> <span class="n">d</span><span class="o">=</span><span class="s1">&#39;left&#39;</span><span class="p">,</span><span class="n">tox</span><span class="o">=</span><span class="n">T1</span><span class="o">.</span><span class="n">collector</span><span class="p">)</span>
+
+<span class="n">r21</span><span class="o">=</span><span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">RES</span><span class="p">,</span> <span class="n">d</span><span class="o">=</span><span class="s1">&#39;down&#39;</span><span class="p">,</span><span class="n">xy</span><span class="o">=</span><span class="n">outdot</span><span class="o">.</span><span class="n">start</span><span class="p">,</span><span class="n">toy</span><span class="o">=</span><span class="n">T2</span><span class="o">.</span><span class="n">emitter</span><span class="p">)</span>
+<span class="n">T21</span> <span class="o">=</span> <span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">BJT_PNP</span><span class="p">,</span> <span class="n">d</span><span class="o">=</span><span class="s1">&#39;right&#39;</span><span class="p">)</span>
+<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">LINE</span><span class="p">,</span> <span class="n">d</span><span class="o">=</span><span class="s1">&#39;up&#39;</span><span class="p">,</span><span class="n">xy</span><span class="o">=</span><span class="n">T21</span><span class="o">.</span><span class="n">emitter</span><span class="p">,</span><span class="n">toy</span><span class="o">=</span><span class="n">outdot</span><span class="o">.</span><span class="n">start</span><span class="p">)</span>
+<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">LINE</span><span class="p">,</span> <span class="n">d</span><span class="o">=</span><span class="s1">&#39;down&#39;</span><span class="p">,</span><span class="n">xy</span><span class="o">=</span><span class="n">T21</span><span class="o">.</span><span class="n">collector</span><span class="p">,</span><span class="n">toy</span><span class="o">=</span><span class="n">T2</span><span class="o">.</span><span class="n">collector</span><span class="p">)</span>
+<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">LINE</span><span class="p">,</span> <span class="n">d</span><span class="o">=</span><span class="s1">&#39;left&#39;</span><span class="p">,</span><span class="n">l</span><span class="o">=</span><span class="mf">0.4</span><span class="p">)</span>
+<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">DOT</span><span class="p">)</span>
+<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">GND</span><span class="p">)</span>
+<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">LINE</span><span class="p">,</span> <span class="n">d</span><span class="o">=</span><span class="s1">&#39;left&#39;</span><span class="p">,</span><span class="n">tox</span><span class="o">=</span><span class="n">T2</span><span class="o">.</span><span class="n">collector</span><span class="p">)</span>
+
+<span class="n">C1</span> <span class="o">=</span> <span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">CAP</span><span class="p">,</span> <span class="n">d</span><span class="o">=</span><span class="s1">&#39;right&#39;</span><span class="p">,</span><span class="n">xy</span><span class="o">=</span><span class="n">outdot</span><span class="o">.</span><span class="n">start</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;$C_</span><span class="si">{out}</span><span class="s1">$&#39;</span><span class="p">)</span>
+<span class="n">R</span> <span class="o">=</span> <span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">RES</span><span class="p">,</span> <span class="n">d</span><span class="o">=</span><span class="s1">&#39;down&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;$R_L$&#39;</span><span class="p">)</span>
+<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">LINE</span><span class="p">,</span> <span class="n">xy</span><span class="o">=</span><span class="n">R</span><span class="o">.</span><span class="n">start</span><span class="p">,</span> <span class="n">d</span><span class="o">=</span><span class="s1">&#39;right&#39;</span><span class="p">,</span> <span class="n">l</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
+<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">DOT_OPEN</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;$v_</span><span class="si">{out}</span><span class="s1">$&#39;</span><span class="p">)</span>
+<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">GND</span><span class="p">,</span> <span class="n">xy</span><span class="o">=</span><span class="n">R</span><span class="o">.</span><span class="n">end</span><span class="p">)</span>
+
+<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">LINE</span><span class="p">,</span><span class="n">d</span><span class="o">=</span><span class="s1">&#39;up&#39;</span><span class="p">,</span><span class="n">toy</span><span class="o">=</span><span class="n">T2</span><span class="o">.</span><span class="n">collector</span><span class="p">)</span>
+
+<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">EncircleBox</span><span class="p">([</span><span class="n">T1</span><span class="p">,</span><span class="n">T11</span><span class="p">,</span><span class="n">r11</span><span class="p">],</span><span class="n">pady</span><span class="o">=-</span><span class="mf">0.1</span><span class="p">)</span><span class="o">.</span><span class="n">linestyle</span><span class="p">(</span><span class="s1">&#39;--&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">linewidth</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span><span class="o">.</span><span class="n">color</span><span class="p">(</span><span class="s1">&#39;green&#39;</span><span class="p">))</span>
+<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">EncircleBox</span><span class="p">([</span><span class="n">T2</span><span class="p">,</span><span class="n">T21</span><span class="p">,</span><span class="n">r21</span><span class="p">],</span><span class="n">pady</span><span class="o">=-</span><span class="mf">0.1</span><span class="p">)</span><span class="o">.</span><span class="n">linestyle</span><span class="p">(</span><span class="s1">&#39;--&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">linewidth</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span><span class="o">.</span><span class="n">color</span><span class="p">(</span><span class="s1">&#39;green&#39;</span><span class="p">))</span>
+
+<span class="n">d</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/Klasse-B_43_0.svg" src="_images/Klasse-B_43_0.svg" /></div>
+</div>
+<div class="figure align-default" id="bdoubledriver">
+<img alt="_images/mpl.svg" src="_images/mpl.svg" /><p class="caption"><span class="caption-number">Fig. 22 </span><span class="caption-text">De klasse B versterker met 2 opeenvolgende drive transistors</span><a class="headerlink" href="#bdoubledriver" title="Permallink naar deze afbeelding">¶</a></p>
+</div>
+</div>
+</div>
 <div class="section" id="uitgewerkt-voorbeeld-van-een-klasse-ab-met-mos-transistors">
 <h2>Uitgewerkt voorbeeld van een klasse AB met MOS transistors<a class="headerlink" href="#uitgewerkt-voorbeeld-van-een-klasse-ab-met-mos-transistors" title="Permalink naar deze titel">¶</a></h2>
-<p>In [1] wordt de klasse AB werking getoond aan de hand van het schema in Fig. 1. We bestuderen dit schema in meer detail. Eerst bekijken we de voorinsteltak. De 2 weerstanden R, samen met de 2 diodes zorgen ervoor dat zonder aangelegd signaal de spanning <span class="math notranslate nohighlight">\(V_i\)</span> gelegen is midden de 2 voedingsspanningen. De 2 weerstanden R zijn dan zo gekozen dat de <span class="math notranslate nohighlight">\(I_B\)</span> een DC stroomcomponenten heeft die mooi kan ingesteld worden door R.</p>
+<p>In <cite id="vks4r"><a href="#zotero|11916217/EY2R3695">[1]</a></cite> wordt de klasse AB werking getoond aan de hand van het schema in <a class="reference internal" href="#figbias"><span class="std std-numref">Fig. 23</span></a>. We bestuderen dit schema in meer detail. Eerst bekijken we de voorinsteltak. De 2 weerstanden R, samen met de 2 diodes zorgen ervoor dat zonder aangelegd signaal de spanning <span class="math notranslate nohighlight">\(V_i\)</span> gelegen is midden de 2 voedingsspanningen. De 2 weerstanden R zijn dan zo gekozen dat de <span class="math notranslate nohighlight">\(I_B\)</span> een DC stroomcomponenten heeft die mooi kan ingesteld worden door R.</p>
 <p>Wanneer we vervolgens een AC signaal aanleggen, krijgen we de volgende signalen:</p>
 <ul class="simple">
 <li><p><span class="math notranslate nohighlight">\(V_I+V_D\)</span> aan de ingang van de nMOS transistor <span class="math notranslate nohighlight">\(M_N\)</span></p></li>
 <li><p><span class="math notranslate nohighlight">\(V_I-V_D\)</span> aan de ingang van de pMOS transistor <span class="math notranslate nohighlight">\(M_P\)</span></p></li>
 </ul>
 <p>Onder zo goed als alle omstandigheden zullen zowel de nMOS als de pMOS in saturatie zijn. Dit wil zeggen dat de stromen door deze transistors voldoen aan de vergelijkingen:</p>
-<ul class="simple">
-<li><p><span class="math notranslate nohighlight">\( I_n=\mu_n C_{ox} \frac{W_n}{2L_n} (V_{GSn} -V_{Tn})^2\)</span>  als <span class="math notranslate nohighlight">\(V_{GSn} &gt;V_{Tn}\)</span></p></li>
-<li><p><span class="math notranslate nohighlight">\( I_p=\mu_p C_{ox} \frac{W_p}{2L_p} (V_{GSp} -V_{Tp})^2\)</span>  als <span class="math notranslate nohighlight">\(V_{GSp} &lt;V_{Tp}\)</span></p></li>
-</ul>
+<div class="math notranslate nohighlight">
+\[ I_n=\mu_n C_{ox} \frac{W_n}{2L_n} (V_{GSn} -V_{Tn})^2\]</div>
+<p>als <span class="math notranslate nohighlight">\(V_{GSn} &gt;V_{Tn}\)</span></p>
+<div class="math notranslate nohighlight">
+\[ I_p=\mu_p C_{ox} \frac{W_p}{2L_p} (V_{GSp} -V_{Tp})^2\]</div>
+<p>als <span class="math notranslate nohighlight">\(V_{GSp} &lt;V_{Tp}\)</span></p>
 <div class="figure align-default" id="figbias">
 <img alt="_images/ClassB_Bias.png" src="_images/ClassB_Bias.png" />
-<p class="caption"><span class="caption-number">Fig. 7 </span><span class="caption-text">Klasse AB versterker met MOS transistors [1]</span><a class="headerlink" href="#figbias" title="Permallink naar deze afbeelding">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 23 </span><span class="caption-text">Klasse AB versterker met MOS transistors <cite id="vks4r"><a href="#zotero|11916217/EY2R3695">[1]</a></cite></span><a class="headerlink" href="#figbias" title="Permallink naar deze afbeelding">¶</a></p>
 </div>
 <p>Wanneer we de spanning aan de gate en de source invullen krijgen we:</p>
 <ul class="simple">
@@ -307,9 +1051,9 @@
 <li><p><span class="math notranslate nohighlight">\( I_p=\mu_p C_{ox} \frac{W_p}{2L_p} (V_I-V_D -V_{out}-V_{Tp})^2\)</span>   als <span class="math notranslate nohighlight">\(V_I-V_D -V_{out} &lt;V_{Tp}\)</span></p></li>
 <li><p><span class="math notranslate nohighlight">\( V_{out}= (I_n -I_p)R_L\)</span></p></li>
 </ul>
-<p>In de onderstaande berekening veronderstellen we dat:
+<p>In <a class="reference internal" href="#transfer1"><span class="std std-numref">Fig. 24</span></a> berekenen we deze stromen veronderstellen we dat:
 <span class="math notranslate nohighlight">\(\mu_n C_{ox} \frac{W_n}{2L_n}=\mu_p C_{ox} \frac{W_p}{2L_p}=0.02 A/V^2\)</span>,<span class="math notranslate nohighlight">\(V_D=0.7V\)</span>, <span class="math notranslate nohighlight">\(V_{Tn}=0.3V\)</span> <span class="math notranslate nohighlight">\(V_{Tp}=-0.3V\)</span> en <span class="math notranslate nohighlight">\(R_L=80 \Omega\)</span>.</p>
-<p>[1] X. Jiang, “Fundamentals of Audio Class D Amplifier Design: A Review of Schemes and Architectures,” IEEE Solid-State Circuits Magazine, vol. 9, no. 3, pp. 14–25, Summer 2017</p>
+<p>In <a class="reference internal" href="#transfer1"><span class="std std-numref">Fig. 24</span></a> zoemen we in op een detail rond de oorsprong.</p>
 <div class="cell tag_hide-input docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -386,11 +1130,11 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/Klasse-B_2_0.png" src="_images/Klasse-B_2_0.png" />
+<img alt="_images/Klasse-B_46_0.png" src="_images/Klasse-B_46_0.png" />
 </div>
 </div>
 <div class="figure align-default" id="transfer1">
-<img alt="_images/mpl.svg" src="_images/mpl.svg" /><p class="caption"><span class="caption-number">Fig. 8 </span><span class="caption-text">Transfer curve en stroom van de beide transistors.</span><a class="headerlink" href="#transfer1" title="Permallink naar deze afbeelding">¶</a></p>
+<img alt="_images/mpl.svg" src="_images/mpl.svg" /><p class="caption"><span class="caption-number">Fig. 24 </span><span class="caption-text">Transfer curve en stroom van de beide transistors.</span><a class="headerlink" href="#transfer1" title="Permallink naar deze afbeelding">¶</a></p>
 </div>
 <div class="cell tag_hide-input docutils container">
 <div class="cell_input docutils container">
@@ -399,12 +1143,23 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/Klasse-B_4_0.png" src="_images/Klasse-B_4_0.png" />
+<img alt="_images/Klasse-B_48_0.png" src="_images/Klasse-B_48_0.png" />
 </div>
 </div>
 <div class="figure align-default" id="transfer1b">
-<img alt="_images/mpl.svg" src="_images/mpl.svg" /><p class="caption"><span class="caption-number">Fig. 9 </span><span class="caption-text">Detail van de zone rond de oorsprong. We zien dat hier beide transistors in geleiding zijn.</span><a class="headerlink" href="#transfer1b" title="Permallink naar deze afbeelding">¶</a></p>
+<img alt="_images/mpl.svg" src="_images/mpl.svg" /><p class="caption"><span class="caption-number">Fig. 25 </span><span class="caption-text">Detail van de zone rond de oorsprong. We zien dat hier beide transistors in geleiding zijn.</span><a class="headerlink" href="#transfer1b" title="Permallink naar deze afbeelding">¶</a></p>
 </div>
+</div>
+<div class="section" id="referenties">
+<h2>Referenties<a class="headerlink" href="#referenties" title="Permalink naar deze titel">¶</a></h2>
+<!-- BIBLIOGRAPHY START -->
+<div class="csl-bib-body">
+  <div class="csl-entry"><i id="zotero|11916217/EY2R3695"></i>
+    <div class="csl-left-margin">1.</div><div class="csl-right-inline">X. Jiang, Fundamentals of Audio Class D Amplifier Design: A Review of Schemes and Architectures. <i>IEEE Solid-State Circuits Magazine</i>, <b>9</b> (2017) 14–25. <a href="https://doi.org/10.1109/MSSC.2017.2712368">https://doi.org/10.1109/MSSC.2017.2712368</a>.</div>
+  </div>
+</div>
+<!-- BIBLIOGRAPHY END --></div>
+<div class="toctree-wrapper compound">
 </div>
 </div>
 
@@ -430,8 +1185,8 @@
 
               </div>
               
-        
-            <!-- Previous / next buttons -->
+            
+                <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
     <a class='left-prev' id="prev-link" href="Klasse-A.html" title="vorige pagina">
         <i class="fas fa-angle-left"></i>
@@ -440,27 +1195,25 @@
             <p class="prev-next-title">Klasse A versterkers</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="Buck-converter.html" title="volgende pagina">
+    <a class='right-next' id="next-link" href="KlasseB_vb1.html" title="volgende pagina">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">volgende</p>
-        <p class="prev-next-title">Buck Converter</p>
+        <p class="prev-next-title">Voorbeeld 1: Klasse B versterker</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
 </div>
-        
+            
         </div>
     </div>
     <footer class="footer">
-    <div class="container">
-      <p>
-        
-          Door Jan Genoe (jan.genoe@kuleuven.be)<br/>
-        
-            &copy; auteursrechten 2022.<br/>
-      </p>
-    </div>
-  </footer>
+  <p>
+    
+      Door Jan Genoe (jan.genoe@kuleuven.be)<br/>
+    
+        &copy; auteursrechten 2022.<br/>
+  </p>
+</footer>
 </main>
 
 

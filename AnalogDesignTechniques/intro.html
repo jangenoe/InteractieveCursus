@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Analog Design Techniques &#8212; Analoge elektronische schakelingen</title>
+    <title>Analog Design Techniques &#8212; Analog Design Techniques</title>
     
   <link href="_static/css/theme.css" rel="stylesheet">
   <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -37,21 +37,23 @@
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
     <script src="_static/doctools.js"></script>
-    <script src="_static/togglebutton.js"></script>
     <script src="_static/clipboard.min.js"></script>
     <script src="_static/copybutton.js"></script>
+    <script>let toggleHintShow = ' ';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
-    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script>
-        const thebe_selector = ".thebe"
-        const thebe_selector_input = "pre"
-        const thebe_selector_output = ".output"
-    </script>
+    <script src="_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="How to Interact With This Book" href="How-To-Interact-With-This-Book.html" />
+    <link rel="next" title="Differential Amplifiers" href="DifferentialAmplifiers.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en">
     
@@ -73,9 +75,14 @@
         <div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="index.html">
       
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
       
       
-      <h1 class="site-logo" id="site-title">Analoge elektronische schakelingen</h1>
+      <img src="_static/logo.svg" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Analog Design Techniques</h1>
       
     </a>
 </div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
@@ -92,25 +99,30 @@
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
-  Introduction
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="How-To-Interact-With-This-Book.html">
-   How to Interact With This Book
-  </a>
- </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
   Chip Design
  </span>
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="AmplifierDesign.html">
+  <a class="reference internal" href="DifferentialAmplifiers.html">
+   Differential Amplifiers
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="FoldedCascode.html">
    Folded cascode stage
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Capita Selecta
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Capacitive%20voltage%20conversion.html">
+   Capacitive voltage conversion
   </a>
  </li>
 </ul>
@@ -119,7 +131,7 @@
 </nav> <!-- To handle the deprecated key -->
 
 <div class="navbar_extra_footer">
-  Also available as <a href="./slides/index.html">presentation slides</a>
+  <a href="https://www.kuleuven.be"> <img src=" http://stijl.kuleuven.be/2016tmp/img/svg/logo.svg" alt="KULeuven"></a>
 </div>
 
 </div>
@@ -159,7 +171,7 @@
                 data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
         <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
-            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
     </div>
 </div>
 
@@ -195,7 +207,7 @@
         </div>
 
         <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show">
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
             
             <div class="tocsection onthispage pt-5 pb-3">
                 <i class="fas fa-list"></i> Contents
@@ -206,6 +218,8 @@
   <a class="reference internal nav-link" href="#table-of-contents">
    Table of Contents
   </a>
+  <ul class="nav section-nav flex-column">
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#licenties">
@@ -220,38 +234,69 @@
 </div>
     <div id="main-content" class="row">
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
-        
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Analog Design Techniques</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#table-of-contents">
+   Table of Contents
+  </a>
+  <ul class="nav section-nav flex-column">
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#licenties">
+   licenties
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
               <div>
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="analog-design-techniques">
 <h1>Analog Design Techniques<a class="headerlink" href="#analog-design-techniques" title="Permalink to this headline">¶</a></h1>
-<p><strong>door <a class="reference external" href="https://www.kuleuven.be/wieiswie/en/person/00004269">Jan Genoe</a></strong></p>
+<p><strong>by <a class="reference external" href="https://www.kuleuven.be/wieiswie/en/person/00004269">Jan Genoe</a></strong></p>
 <p>This <a class="reference external" href="https://jupyterbook.org/intro.html">Jupyter Book</a> comprises notebooks used in the lectures of <a class="reference external" href="https://www.uhasselt.be/studiegids?n=4&amp;a=2021&amp;i=3466">Analog Design Techniques</a> of the  <a class="reference external" href="https://www.kuleuven.be">KU Leuven</a>, campus Diepenbeek.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Dit is momenteel nog werk in progress. De cursus zoals aanwezig op Toledo blijft het voornaamste leerinstrument. Dit is enkel een hulpmiddel.</p>
+<p>This is currently still work in progress. Please refer to Toledo as the key source of information. This book is only added as support.</p>
 </div>
 <div class="section" id="table-of-contents">
 <h2>Table of Contents<a class="headerlink" href="#table-of-contents" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
-<span class="p">{</span><span class="n">tableofcontents</span><span class="p">}</span>
-
-
-</pre></div>
+<div class="toctree-wrapper compound">
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Chip Design</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="DifferentialAmplifiers.html">Differential Amplifiers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="FoldedCascode.html">Folded cascode stage</a></li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Capita Selecta</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="Capacitive%20voltage%20conversion.html">Capacitive voltage conversion</a></li>
+</ul>
 </div>
 </div>
 <div class="section" id="licenties">
 <h2>licenties<a class="headerlink" href="#licenties" title="Permalink to this headline">¶</a></h2>
-<p><a rel="license" href="http://creativecommons.org/licenses/by/4.0/deed.nl"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a>
+<p><a rel="license" href="http://creativecommons.org/licenses/by/4.0/deed.en"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a>
 <br />
-Een licentie voor de inhoud wordt gegeven onder de <a rel="license" href="https://creativecommons.org/licenses/by/4.0/deed.nl">Creative Commons Attribution 4.0 International License</a>
-en voor de software code onder de <a class="reference external" href="https://en.wikipedia.org/wiki/MIT_License">MIT license</a></p>
-</div>
-<div class="toctree-wrapper compound">
-</div>
-<div class="toctree-wrapper compound">
-</div>
-<div class="toctree-wrapper compound">
+The content is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by/4.0/deed.en">Creative Commons Attribution 4.0 International License</a>
+The code is licensed under the <a class="reference external" href="https://en.wikipedia.org/wiki/MIT_License">MIT license</a></p>
 </div>
 </div>
 
@@ -277,30 +322,28 @@ en voor de software code onder de <a class="reference external" href="https://en
 
               </div>
               
-        
-            <!-- Previous / next buttons -->
+            
+                <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='right-next' id="next-link" href="How-To-Interact-With-This-Book.html" title="next page">
+    <a class='right-next' id="next-link" href="DifferentialAmplifiers.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">How to Interact With This Book</p>
+        <p class="prev-next-title">Differential Amplifiers</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
 </div>
-        
+            
         </div>
     </div>
     <footer class="footer">
-    <div class="container">
-      <p>
-        
-          By Jan Genoe (jan.genoe@kuleuven.be)<br/>
-        
-            &copy; Copyright 2022.<br/>
-      </p>
-    </div>
-  </footer>
+  <p>
+    
+      By Jan Genoe (jan.genoe@kuleuven.be)<br/>
+    
+        &copy; Copyright 2022.<br/>
+  </p>
+</footer>
 </main>
 
 
