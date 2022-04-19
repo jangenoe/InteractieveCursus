@@ -1,0 +1,11 @@
+.ipynb_checkpoints/
+GitStatus.md
+.gitignore
+_Build
+.DS_Store
+.ipynb_checkpoints
+.jupyter_cache
+jupyter_execute
+src/_build/.jupyter_cache
+src/_build/jupyter_execute
+desktop.ini
