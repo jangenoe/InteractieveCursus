@@ -334,6 +334,32 @@ const thebe_selector_output = ".output, .cell_output"
   <div class="tex2jax_ignore mathjax_ignore section" id="boost-converter-of-step-up-converter">
 <h1>Boost Converter of Step-up Converter<a class="headerlink" href="#boost-converter-of-step-up-converter" title="Permalink naar deze titel">¶</a></h1>
 <p><a href="./slides/Boost-converter.slides.html"><img alt="sildes" src="https://img.shields.io/badge/slides-beschikbaar-blue" /></a></p>
+<p>De relatie tussen de Duty cycle (<span class="math notranslate nohighlight">\(D\)</span>) en de uitgangsspanning (<span class="math notranslate nohighlight">\(V_{uit}\)</span>) voor een gegeven ingangsspanning (<span class="math notranslate nohighlight">\(V_{in}\)</span>) kunnen we het best bereken vanuit het perspectief van de stroomverandering door het spoel. Inderdaad, de spanning over het spoel is evenredig met de stroomstijging per tijdseenheid.</p>
+<div class="math notranslate nohighlight">
+\[ U_L= L \frac{dI}{dt}  \]</div>
+<p>Hieruit volgt dat tijdens de tijd dat de transistor aan staat <span class="math notranslate nohighlight">\((T_{on})\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[ U_L= L \frac{\Delta I}{T_{on}}  \]</div>
+<p>en tijdens  de tijd dat de transistor af staat <span class="math notranslate nohighlight">\((T_{off})\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[ U_L= L \frac{-\Delta I}{T_{off}}  \]</div>
+<p>We vullen dit in en we bekomen:</p>
+<div class="math notranslate nohighlight">
+\[ U_L= L \frac{\Delta I}{T_{on}} = \]</div>
+<div class="math notranslate nohighlight">
+\[ U_L= - L \frac{\Delta I}{T_{off}} = \]</div>
+<p>met ** zijnde ***.
+Uit beide  vergelijkingen kunnen we nu <span class="math notranslate nohighlight">\(L \Delta I \)</span> extraheren en deze 2 waardes aan elkaar gelijkstellen. Dit geeft:</p>
+<div class="math notranslate nohighlight">
+\[ L \Delta I = T_{on}() =-T_{off}() \]</div>
+<hr class="docutils" />
+<p>Wanneer we deze vergelijking nu oplossen naar <span class="math notranslate nohighlight">\(V_{uit}\)</span> en de stroom door het spoel <span class="math notranslate nohighlight">\(I_L\)</span> bekomen we:</p>
+<div class="math notranslate nohighlight">
+\[ V_{uit}= \frac{1}{1-D}V_{in} -V_D-\frac{1}{1-D}R_L I_{L}-\frac{D }{1-D} R_T I_{L}\]</div>
+<p>In de meeste gevallen willen we echter de uitgangsspanning als functie van een gegeven uitgangsstroom <span class="math notranslate nohighlight">\(I_{out}\)</span>.</p>
+<div class="math notranslate nohighlight">
+\[ V_{uit}= \frac{1}{1-D}V_{in} -V_D-\frac{1}{(1-D)^2}R_L I_{out}-\frac{D }{(1-D)^2} R_T I_{out}\]</div>
+<p>We kunnen de vergelijking ook schrijven in functie van de duty cycle <span class="math notranslate nohighlight">\(D\)</span>. We zien dat er hier 2 oplossingen zijn.</p>
 <div class="cell tag_hide-input docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">YouTubeVideo</span>
@@ -408,7 +434,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/Boost-converter_5_0.png" src="_images/Boost-converter_5_0.png" />
+<img alt="_images/Boost-converter_6_0.png" src="_images/Boost-converter_6_0.png" />
 </div>
 </div>
 <div class="figure align-default" id="dutysu">
@@ -463,7 +489,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/Boost-converter_8_0.png" src="_images/Boost-converter_8_0.png" />
+<img alt="_images/Boost-converter_9_0.png" src="_images/Boost-converter_9_0.png" />
 </div>
 </div>
 <div class="figure align-default" id="dutyinputv">
@@ -495,7 +521,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/Boost-converter_10_0.png" src="_images/Boost-converter_10_0.png" />
+<img alt="_images/Boost-converter_11_0.png" src="_images/Boost-converter_11_0.png" />
 </div>
 </div>
 <div class="figure align-default" id="mua">

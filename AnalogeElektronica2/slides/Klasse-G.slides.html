@@ -14522,6 +14522,9 @@ a.anchor-link {
 .reveal {
   font-size: 160%;
 }
+.reveal table {
+  font-size: var(--jp-ui-font-size1);
+}
 .reveal pre {
   width: inherit;
   padding: 0.4em;
@@ -14565,6 +14568,23 @@ div.jp-OutputPrompt {
   margin: 5px 5px 0 0;
 }
 
+.reveal div.highlight {
+  margin: 0;
+}
+
+.reveal div.highlight > pre {
+  margin: 0;
+  width: 100%;
+  font-size: var(--jp-code-font-size);
+}
+
+.reveal div.jp-OutputArea-output > pre {
+  margin: 0;
+  width: 90%;
+  font-size: var(--jp-code-font-size);
+  box-shadow: none;
+}
+
 /* Reveal navigation controls */
 
 .reveal .controls .navigate-left,
@@ -14605,17 +14625,14 @@ div.jp-OutputPrompt {
 
 /* Scrollbars */
 
-::-webkit-scrollbar
-{
+::-webkit-scrollbar {
   width: 6px;
   height: 6px;
 }
-::-webkit-scrollbar *
-{
-  background:transparent;
+::-webkit-scrollbar * {
+  background: transparent;
 }
-::-webkit-scrollbar-thumb
-{
+::-webkit-scrollbar-thumb {
   background: #727272 !important;
 }
 </style>
@@ -15003,12 +15020,12 @@ section.has-dark-background, section.has-dark-background h1, section.has-dark-ba
                 },
                 displayAlign: 'center',
                 CommonHTML: {
-                    linebreaks: { 
-                    automatic: true 
+                    linebreaks: {
+                    automatic: true
                     }
                 }
             });
-        
+
             MathJax.Hub.Queue(["Typeset", MathJax.Hub]);
         }
     }

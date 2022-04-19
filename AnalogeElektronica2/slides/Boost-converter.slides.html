@@ -14522,6 +14522,9 @@ a.anchor-link {
 .reveal {
   font-size: 160%;
 }
+.reveal table {
+  font-size: var(--jp-ui-font-size1);
+}
 .reveal pre {
   width: inherit;
   padding: 0.4em;
@@ -14565,6 +14568,23 @@ div.jp-OutputPrompt {
   margin: 5px 5px 0 0;
 }
 
+.reveal div.highlight {
+  margin: 0;
+}
+
+.reveal div.highlight > pre {
+  margin: 0;
+  width: 100%;
+  font-size: var(--jp-code-font-size);
+}
+
+.reveal div.jp-OutputArea-output > pre {
+  margin: 0;
+  width: 90%;
+  font-size: var(--jp-code-font-size);
+  box-shadow: none;
+}
+
 /* Reveal navigation controls */
 
 .reveal .controls .navigate-left,
@@ -14605,17 +14625,14 @@ div.jp-OutputPrompt {
 
 /* Scrollbars */
 
-::-webkit-scrollbar
-{
+::-webkit-scrollbar {
   width: 6px;
   height: 6px;
 }
-::-webkit-scrollbar *
-{
-  background:transparent;
+::-webkit-scrollbar * {
+  background: transparent;
 }
-::-webkit-scrollbar-thumb
-{
+::-webkit-scrollbar-thumb {
   background: #727272 !important;
 }
 </style>
@@ -15003,12 +15020,12 @@ section.has-dark-background, section.has-dark-background h1, section.has-dark-ba
                 },
                 displayAlign: 'center',
                 CommonHTML: {
-                    linebreaks: { 
-                    automatic: true 
+                    linebreaks: {
+                    automatic: true
                     }
                 }
             });
-        
+
             MathJax.Hub.Queue(["Typeset", MathJax.Hub]);
         }
     }
@@ -15020,7 +15037,27 @@ section.has-dark-background, section.has-dark-background h1, section.has-dark-ba
 <body class="jp-Notebook" data-jp-theme-light="true" data-jp-theme-name="JupyterLab Light">
 
 <div class="reveal">
-<div class="slides"><section class='kuleuven_title_slide reveal'><section><h1 class="title">Boost Converter</h1><h2 class="subtitle">Schakelende voeding voor een hogere spanning te bekomen</h2><div class="speaker" >Jan Genoe</div><div class="date" >Februari 2022</div></section></section><section class="kuleuven_slide reveal"><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell  jp-mod-noInput  celltag_hide-input">
+<div class="slides"><section class='kuleuven_title_slide reveal'><section><h1 class="title">Boost Converter</h1><h2 class="subtitle">Schakelende voeding voor een hogere spanning te bekomen</h2><div class="speaker" >Jan Genoe</div><div class="date" >Februari 2022</div></section></section><section class="kuleuven_slide reveal"><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>De relatie tussen de Duty cycle ($D$) en de uitgangsspanning ($V_{uit}$) voor een gegeven ingangsspanning ($V_{in}$) kunnen we het best bereken vanuit het perspectief van de stroomverandering door het spoel. Inderdaad, de spanning over het spoel is evenredig met de stroomstijging per tijdseenheid.</p>
+$$ U_L= L \frac{dI}{dt}  $$<p>Hieruit volgt dat tijdens de tijd dat de transistor aan staat $(T_{on})$:</p>
+$$ U_L= L \frac{\Delta I}{T_{on}}  $$<p>en tijdens  de tijd dat de transistor af staat $(T_{off})$:</p>
+$$ U_L= L \frac{-\Delta I}{T_{off}}  $$<p>We vullen dit in en we bekomen:</p>
+$$ U_L= L \frac{\Delta I}{T_{on}} = $$$$ U_L= - L \frac{\Delta I}{T_{off}} = $$<p>met <strong> zijnde *</strong>.
+Uit beide  vergelijkingen kunnen we nu $L \Delta I $ extraheren en deze 2 waardes aan elkaar gelijkstellen. Dit geeft:</p>
+$$ L \Delta I = T_{on}() =-T_{off}() $$<hr>
+<p>Wanneer we deze vergelijking nu oplossen naar $V_{uit}$ en de stroom door het spoel $I_L$ bekomen we:</p>
+$$ V_{uit}= \frac{1}{1-D}V_{in} -V_D-\frac{1}{1-D}R_L I_{L}-\frac{D }{1-D} R_T I_{L}$$<p>In de meeste gevallen willen we echter de uitgangsspanning als functie van een gegeven uitgangsstroom $I_{out}$.</p>
+$$ V_{uit}= \frac{1}{1-D}V_{in} -V_D-\frac{1}{(1-D)^2}R_L I_{out}-\frac{D }{(1-D)^2} R_T I_{out}$$<p>We kunnen de vergelijking ook schrijven in functie van de duty cycle $D$. We zien dat er hier 2 oplossingen zijn.</p>
+
+</div>
+</div>
+</div>
+</div></section></section><section class="kuleuven_slide reveal"><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell  jp-mod-noInput  celltag_hide-input">
 
 <div class="jp-Cell-outputWrapper">
 <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">

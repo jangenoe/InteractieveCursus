@@ -483,7 +483,7 @@ const thebe_selector_output = ".output, .cell_output"
 <p>De overeenkomende spice listing wordt dan:</p>
 <div class="cell tag_hide-input docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">spicelisting</span><span class="p">(</span><span class="s2">&quot;simul\KlasseA.sp&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">spicelisting</span><span class="p">(</span><span class="s2">&quot;simul/klasseA.sp&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -507,7 +507,7 @@ V_VDD        2 0 66V
 <p>De bovenstaande netwerkcode simuleren we in spice. <a class="reference internal" href="#afigstroomvsspanning"><span class="std std-numref">Fig. 3</span></a>  toont zowel de stromen (rechts) als de spanningen als functie van de tijd.</p>
 <div class="cell tag_hide-input tag_full-width docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">circuit</span><span class="o">=</span><span class="n">SpiceParser</span><span class="p">(</span><span class="n">path</span><span class="o">=</span><span class="s1">&#39;simul\KlasseA.sp&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">build_circuit</span><span class="p">()</span>  
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">circuit</span><span class="o">=</span><span class="n">SpiceParser</span><span class="p">(</span><span class="n">path</span><span class="o">=</span><span class="s1">&#39;simul/klasseA.sp&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">build_circuit</span><span class="p">()</span>  
 <span class="n">end_time</span><span class="o">=</span><span class="mf">1e-3</span>
 <span class="n">simulator</span> <span class="o">=</span> <span class="n">circuit</span><span class="o">.</span><span class="n">simulator</span><span class="p">(</span><span class="n">temperature</span><span class="o">=</span><span class="mi">25</span><span class="p">,</span> <span class="n">nominal_temperature</span><span class="o">=</span><span class="mi">25</span><span class="p">)</span>
 <span class="n">analysis</span> <span class="o">=</span> <span class="n">simulator</span><span class="o">.</span><span class="n">transient</span><span class="p">(</span><span class="n">step_time</span><span class="o">=</span><span class="mf">100e-9</span><span class="p">,</span> <span class="n">end_time</span><span class="o">=</span><span class="n">end_time</span><span class="p">)</span>
@@ -563,7 +563,7 @@ V_VDD        2 0 66V
 <p>Wanneer we de spoelwaarde van de primaire en de secundaire wikkeling heel erg sterk verhogen (zonder de wikkelverhouding van 5 hierbij aan te passen), valt het faseverschil tussen de stroom en de spanning weg en krijgen we een plot waarbij we een mooi linair verband zien tussen stroom en spanning, zowel over de primaire (blauwe curve) als over de secundaire wikkeling (orange curve) (zie {numref<code class="docutils literal notranslate"><span class="pre">Afig3</span></code>). De  spice code voor deze simulatie met aangepaste wikkelverhouding kan je hieronder terugvinden.</p>
 <div class="cell tag_hide-input docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">spicelisting</span><span class="p">(</span><span class="s2">&quot;simul\KlasseA2.sp&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">spicelisting</span><span class="p">(</span><span class="s2">&quot;simul/klasseA2.sp&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -585,7 +585,7 @@ V_VDD        2 0 66V
 </div>
 <div class="cell tag_hide-input docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">circuit</span><span class="o">=</span><span class="n">SpiceParser</span><span class="p">(</span><span class="n">path</span><span class="o">=</span><span class="s1">&#39;simul\KlasseA2.sp&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">build_circuit</span><span class="p">()</span>  
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">circuit</span><span class="o">=</span><span class="n">SpiceParser</span><span class="p">(</span><span class="n">path</span><span class="o">=</span><span class="s1">&#39;simul/klasseA2.sp&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">build_circuit</span><span class="p">()</span>  
 <span class="n">end_time</span><span class="o">=</span><span class="mf">1e-3</span>
 <span class="n">simulator</span> <span class="o">=</span> <span class="n">circuit</span><span class="o">.</span><span class="n">simulator</span><span class="p">(</span><span class="n">temperature</span><span class="o">=</span><span class="mi">25</span><span class="p">,</span> <span class="n">nominal_temperature</span><span class="o">=</span><span class="mi">25</span><span class="p">)</span>
 <span class="n">analysis</span> <span class="o">=</span> <span class="n">simulator</span><span class="o">.</span><span class="n">transient</span><span class="p">(</span><span class="n">step_time</span><span class="o">=</span><span class="mf">100e-9</span><span class="p">,</span> <span class="n">end_time</span><span class="o">=</span><span class="n">end_time</span><span class="p">)</span>
@@ -610,7 +610,7 @@ V_VDD        2 0 66V
 <p>Het verschil in fase tussen de stroom door de transistor en de spanning over de transistor kunnen we ook verkleinen door de frequentie te verhogen. In de onderstaande spice listing is de frequentie van de stroombron I4 aan de basis van de bipolaire transistor verhoogt van 10 kHz naar 100 kHz. Uit de simulatie in <a class="reference internal" href="#afighf"><span class="std std-numref">Fig. 6</span></a> zien we dat ook hier weer een bijna linair verloop tussen stroom en spanning wodt bekomen.</p>
 <div class="cell tag_hide-input docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">spicelisting</span><span class="p">(</span><span class="s2">&quot;simul\KlasseA3.sp&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">spicelisting</span><span class="p">(</span><span class="s2">&quot;simul/klasseA3.sp&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -632,7 +632,7 @@ V_VDD        2 0 66V
 </div>
 <div class="cell tag_hide-input docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">circuit</span><span class="o">=</span><span class="n">SpiceParser</span><span class="p">(</span><span class="n">path</span><span class="o">=</span><span class="s1">&#39;simul\KlasseA3.sp&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">build_circuit</span><span class="p">()</span>  
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">circuit</span><span class="o">=</span><span class="n">SpiceParser</span><span class="p">(</span><span class="n">path</span><span class="o">=</span><span class="s1">&#39;simul/klasseA3.sp&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">build_circuit</span><span class="p">()</span>  
 <span class="n">end_time</span><span class="o">=</span><span class="mf">1e-3</span>
 <span class="n">simulator</span> <span class="o">=</span> <span class="n">circuit</span><span class="o">.</span><span class="n">simulator</span><span class="p">(</span><span class="n">temperature</span><span class="o">=</span><span class="mi">25</span><span class="p">,</span> <span class="n">nominal_temperature</span><span class="o">=</span><span class="mi">25</span><span class="p">)</span>
 <span class="n">analysis</span> <span class="o">=</span> <span class="n">simulator</span><span class="o">.</span><span class="n">transient</span><span class="p">(</span><span class="n">step_time</span><span class="o">=</span><span class="mf">100e-9</span><span class="p">,</span> <span class="n">end_time</span><span class="o">=</span><span class="n">end_time</span><span class="p">)</span>

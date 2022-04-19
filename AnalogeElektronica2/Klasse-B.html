@@ -528,7 +528,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 <div class="cell tag_hide-input docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">spicelisting</span><span class="p">(</span><span class="s2">&quot;simul\classB1.sp&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">spicelisting</span><span class="p">(</span><span class="s2">&quot;simul/classB1.sp&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -559,7 +559,7 @@ RL1 2 0	100
 <p>De simulatie van de bovenstaande spice code (zie <a class="reference internal" href="#bfig2"><span class="std std-numref">Fig. 11</span></a>) geeft duidelijk de dode zone aan bij de nuldoorgang van de spanning. In <a class="reference internal" href="#bfig2b"><span class="std std-numref">Fig. 12</span></a> bekijken we deze nuldoorgang in meer detail.</p>
 <div class="cell tag_hide-input tag_full-width docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">circuit</span><span class="o">=</span><span class="n">SpiceParser</span><span class="p">(</span><span class="n">path</span><span class="o">=</span><span class="s1">&#39;simul\classB1.sp&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">build_circuit</span><span class="p">()</span>     <span class="c1"># CHECK DISTORTION WITH FOURIER SERIES ANALYSIS    ==&gt; .FOUR 10KHZ V(12) </span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">circuit</span><span class="o">=</span><span class="n">SpiceParser</span><span class="p">(</span><span class="n">path</span><span class="o">=</span><span class="s1">&#39;simul/classB1.sp&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">build_circuit</span><span class="p">()</span>     <span class="c1"># CHECK DISTORTION WITH FOURIER SERIES ANALYSIS    ==&gt; .FOUR 10KHZ V(12) </span>
 <span class="n">end_time</span><span class="o">=</span><span class="mf">2e-4</span>
 <span class="n">simulator</span> <span class="o">=</span> <span class="n">circuit</span><span class="o">.</span><span class="n">simulator</span><span class="p">(</span><span class="n">temperature</span><span class="o">=</span><span class="mi">25</span><span class="p">,</span> <span class="n">nominal_temperature</span><span class="o">=</span><span class="mi">25</span><span class="p">)</span>
 <span class="n">analysis</span> <span class="o">=</span> <span class="n">simulator</span><span class="o">.</span><span class="n">transient</span><span class="p">(</span><span class="n">step_time</span><span class="o">=</span><span class="mf">100e-9</span><span class="p">,</span> <span class="n">end_time</span><span class="o">=</span><span class="n">end_time</span><span class="p">)</span>
@@ -707,7 +707,7 @@ RL1 2 0	100
 <p>Hieronder tonen we de spice listing van de klasse B versterker waarbij we een voorinstelspanning voorzien tussen de  basissen van de npn en de pnp transistor. Deze voorinstelspanning is hier uitgevoerd door diodes. in <a class="reference internal" href="#bfig2dio"><span class="std std-numref">Fig. 15</span></a> merken we hierbij op dat dit tot gevolg heeft dat er toch een stroom blijft lopen door de transistor die niet in geleiding is. Dit noemen we de klasse AB werking van deze klasseB versterker.</p>
 <div class="cell tag_hide-input docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">spicelisting</span><span class="p">(</span><span class="s2">&quot;simul\classB2.sp&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">spicelisting</span><span class="p">(</span><span class="s2">&quot;simul/classB2.sp&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -740,7 +740,7 @@ RL2 12 0 100
 </div>
 <div class="cell tag_full-width tag_hide-input docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">circuit</span><span class="o">=</span><span class="n">SpiceParser</span><span class="p">(</span><span class="n">path</span><span class="o">=</span><span class="s1">&#39;simul\classB2.sp&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">build_circuit</span><span class="p">()</span>  
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">circuit</span><span class="o">=</span><span class="n">SpiceParser</span><span class="p">(</span><span class="n">path</span><span class="o">=</span><span class="s1">&#39;simul/classB2.sp&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">build_circuit</span><span class="p">()</span>  
 <span class="n">end_time</span><span class="o">=</span><span class="mf">2e-4</span>
 <span class="n">simulator</span> <span class="o">=</span> <span class="n">circuit</span><span class="o">.</span><span class="n">simulator</span><span class="p">(</span><span class="n">temperature</span><span class="o">=</span><span class="mi">25</span><span class="p">,</span> <span class="n">nominal_temperature</span><span class="o">=</span><span class="mi">25</span><span class="p">)</span>
 <span class="n">analysis</span> <span class="o">=</span> <span class="n">simulator</span><span class="o">.</span><span class="n">transient</span><span class="p">(</span><span class="n">step_time</span><span class="o">=</span><span class="mf">100e-9</span><span class="p">,</span> <span class="n">end_time</span><span class="o">=</span><span class="n">end_time</span><span class="p">)</span>
@@ -794,7 +794,7 @@ RL2 12 0 100
 <p>We kunnen ook proberen de dode zone weg te werken aan de hand van feedback, zoals in het onderstaande schema aan de hand van een opamp. Op het eerste zicht lijkt dat te lukken, als we de simulatie in <a class="reference internal" href="#bopmapsim"><span class="std std-numref">Fig. 17</span></a> bekijken. De <span class="math notranslate nohighlight">\(V_{in}\)</span> en <span class="math notranslate nohighlight">\(V_{out}\)</span> liggen zo goed als volledig op elkaar dat we het verschil niet merken. Enkel als we heel erg inzoemen, zoals in <a class="reference internal" href="#bopmapsimz"><span class="std std-numref">Fig. 18</span></a> lijkt er een klein verschil te zijn langs de nuldoorgang. Laat je hierbij echter niet vangen. Deze simualtie is gedaan met een ideale OpAmp, warvan de stijsnelheid niet realistisch is. Wanneer we diezelfde simulatie hernemen met een realistische OpAmp, zie onder, blijft dit bijna ideale gedrag niet behouden.</p>
 <div class="cell tag_hide-input docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">SpiceParser</span><span class="p">(</span><span class="n">path</span><span class="o">=</span><span class="s1">&#39;simul\classB4.sp&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">build_circuit</span><span class="p">())</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">SpiceParser</span><span class="p">(</span><span class="n">path</span><span class="o">=</span><span class="s1">&#39;simul/classB4.sp&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">build_circuit</span><span class="p">())</span>
 </pre></div>
 </div>
 </div>
@@ -816,8 +816,8 @@ XOpAmp 20 22 8 9 23 opamp
 </div>
 <div class="cell tag_full-width tag_hide-input docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">circuit</span><span class="o">=</span><span class="n">SpiceParser</span><span class="p">(</span><span class="n">path</span><span class="o">=</span><span class="s1">&#39;simul\classB4.sp&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">build_circuit</span><span class="p">()</span>  
-<span class="n">circuit</span><span class="o">.</span><span class="n">include</span><span class="p">(</span><span class="s1">&#39;libraries\opamp\BasicOpamp.cir&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">circuit</span><span class="o">=</span><span class="n">SpiceParser</span><span class="p">(</span><span class="n">path</span><span class="o">=</span><span class="s1">&#39;simul/classB4.sp&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">build_circuit</span><span class="p">()</span>  
+<span class="n">circuit</span><span class="o">.</span><span class="n">include</span><span class="p">(</span><span class="s1">&#39;libraries/opamp/BasicOpamp.cir&#39;</span><span class="p">)</span>
 <span class="n">end_time</span><span class="o">=</span><span class="mf">2e-4</span>
 <span class="n">simulator</span> <span class="o">=</span> <span class="n">circuit</span><span class="o">.</span><span class="n">simulator</span><span class="p">(</span><span class="n">temperature</span><span class="o">=</span><span class="mi">25</span><span class="p">,</span> <span class="n">nominal_temperature</span><span class="o">=</span><span class="mi">25</span><span class="p">)</span>
 <span class="n">analysis</span> <span class="o">=</span> <span class="n">simulator</span><span class="o">.</span><span class="n">transient</span><span class="p">(</span><span class="n">step_time</span><span class="o">=</span><span class="mf">10e-9</span><span class="p">,</span> <span class="n">end_time</span><span class="o">=</span><span class="n">end_time</span><span class="p">)</span>
@@ -902,8 +902,8 @@ XOpAmp 20 22 8 9 23 opamp
 </div>
 <div class="cell tag_hide-input tag_full-width docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">circuit</span><span class="o">=</span><span class="n">SpiceParser</span><span class="p">(</span><span class="n">path</span><span class="o">=</span><span class="s1">&#39;simul\classB5.sp&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">build_circuit</span><span class="p">()</span>  
-<span class="n">circuit</span><span class="o">.</span><span class="n">include</span><span class="p">(</span><span class="s1">&#39;libraries\opamp\BasicOpamp.cir&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">circuit</span><span class="o">=</span><span class="n">SpiceParser</span><span class="p">(</span><span class="n">path</span><span class="o">=</span><span class="s1">&#39;simul/classB5.sp&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">build_circuit</span><span class="p">()</span>  
+<span class="n">circuit</span><span class="o">.</span><span class="n">include</span><span class="p">(</span><span class="s1">&#39;libraries/opamp/BasicOpamp.cir&#39;</span><span class="p">)</span>
 <span class="n">end_time</span><span class="o">=</span><span class="mf">2e-4</span>
 <span class="n">simulator</span> <span class="o">=</span> <span class="n">circuit</span><span class="o">.</span><span class="n">simulator</span><span class="p">(</span><span class="n">temperature</span><span class="o">=</span><span class="mi">25</span><span class="p">,</span> <span class="n">nominal_temperature</span><span class="o">=</span><span class="mi">25</span><span class="p">)</span>
 <span class="n">analysis</span> <span class="o">=</span> <span class="n">simulator</span><span class="o">.</span><span class="n">transient</span><span class="p">(</span><span class="n">step_time</span><span class="o">=</span><span class="mf">10e-9</span><span class="p">,</span> <span class="n">end_time</span><span class="o">=</span><span class="n">end_time</span><span class="p">)</span>
@@ -939,8 +939,8 @@ XOpAmp 20 22 8 9 23 opamp
 <p>Echter, wanneer we een realistisch model van een opamp invoeren, zoals de <a class="reference external" href="https://www.ti.com/product/LMV981-N">LMV981-N</a> van Texas Instruments, zien we een heel ander gedrag in de dode zone.</p>
 <div class="cell tag_hide-input tag_full-width docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">circuit</span><span class="o">=</span><span class="n">SpiceParser</span><span class="p">(</span><span class="n">path</span><span class="o">=</span><span class="s1">&#39;simul\classB5.sp&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">build_circuit</span><span class="p">()</span>  
-<span class="n">circuit</span><span class="o">.</span><span class="n">include</span><span class="p">(</span><span class="s1">&#39;libraries\opamp\LMV981.cir&#39;</span><span class="p">)</span>   <span class="c1"># Dit is een opamp met lage voedingsspanning. Beter een opamp kiezen met aangepast voedingsspaaningsbereik.</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">circuit</span><span class="o">=</span><span class="n">SpiceParser</span><span class="p">(</span><span class="n">path</span><span class="o">=</span><span class="s1">&#39;simul/classB5.sp&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">build_circuit</span><span class="p">()</span>  
+<span class="n">circuit</span><span class="o">.</span><span class="n">include</span><span class="p">(</span><span class="s1">&#39;libraries/opamp/LMV981.cir&#39;</span><span class="p">)</span>   <span class="c1"># Dit is een opamp met lage voedingsspanning. Beter een opamp kiezen met aangepast voedingsspaaningsbereik.</span>
 <span class="n">end_time</span><span class="o">=</span><span class="mf">2e-4</span>
 <span class="n">simulator</span> <span class="o">=</span> <span class="n">circuit</span><span class="o">.</span><span class="n">simulator</span><span class="p">(</span><span class="n">temperature</span><span class="o">=</span><span class="mi">25</span><span class="p">,</span> <span class="n">nominal_temperature</span><span class="o">=</span><span class="mi">25</span><span class="p">)</span>
 <span class="n">analysis</span> <span class="o">=</span> <span class="n">simulator</span><span class="o">.</span><span class="n">transient</span><span class="p">(</span><span class="n">step_time</span><span class="o">=</span><span class="mf">10e-9</span><span class="p">,</span> <span class="n">end_time</span><span class="o">=</span><span class="n">end_time</span><span class="p">)</span>
@@ -1155,7 +1155,7 @@ XOpAmp 20 22 8 9 23 opamp
 <!-- BIBLIOGRAPHY START -->
 <div class="csl-bib-body">
   <div class="csl-entry"><i id="zotero|11916217/EY2R3695"></i>
-    <div class="csl-left-margin">1.</div><div class="csl-right-inline">X. Jiang, Fundamentals of Audio Class D Amplifier Design: A Review of Schemes and Architectures. <i>IEEE Solid-State Circuits Magazine</i>, <b>9</b> (2017) 14–25. <a href="https://doi.org/10.1109/MSSC.2017.2712368">https://doi.org/10.1109/MSSC.2017.2712368</a>.</div>
+    <div class="csl-left-margin">1.</div><div class="csl-right-inline">Xicheng Jiang, Fundamentals of Audio Class D Amplifier Design: A Review of Schemes and Architectures. <i>IEEE Solid-State Circuits Magazine</i>, <b>9</b> (2017) 14–25. <a href="https://doi.org/10.1109/MSSC.2017.2712368">https://doi.org/10.1109/MSSC.2017.2712368</a>.</div>
   </div>
 </div>
 <!-- BIBLIOGRAPHY END --></div>
