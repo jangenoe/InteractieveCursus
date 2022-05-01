@@ -9,8 +9,9 @@ dependencies:
   - pip
   - matplotlib
   - sympy
+  - jupyterlab
   - scikit-rf
   - networkx
-  - pyspice
   - pip:
+    - pyspice
     - schemdraw
