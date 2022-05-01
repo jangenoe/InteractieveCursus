@@ -953,32 +953,30 @@ voornamelijk bijdragen tot het bepalen van de oscillatiefrequentie, namelijk:</p
 <div class="math notranslate nohighlight" id="equation-eq1">
 <span class="eqno">(1)<a class="headerlink" href="#equation-eq1" title="Permalink naar deze formule">¶</a></span>\[V_{out}(t)=V_{dd}-V_a \cos(\omega t) \]</div>
 <p>en is de collector current van de transistor <span class="math notranslate nohighlight">\(I_c\)</span></p>
-<div class="amsmath math notranslate nohighlight">
-\[\begin{align*}
- I_c(t) = \left\{ \begin{matrix}
+<div class="math notranslate nohighlight" id="equation-eq2">
+<span class="eqno">(2)<a class="headerlink" href="#equation-eq2" title="Permalink naar deze formule">¶</a></span>\[\begin{split} I_c(t) = \left\{ \begin{matrix}
       \frac{\cos(\omega t)-\cos(\alpha)}{1-\cos(\alpha)}I_p  &amp; wanneer &amp; |\omega t| &lt;\alpha \\  
-                  0 &amp; wanneer&amp; | \omega t| &gt;\alpha   \tag{eq2}
-          \end{matrix} \right.
-\end{align*}\]</div>
+                  0 &amp; wanneer&amp; | \omega t| &gt;\alpha   
+          \end{matrix} \right.\end{split}\]</div>
 <p>Hoe we aan de waarde van <span class="math notranslate nohighlight">\(V_a\)</span> komen, volgt in de afleiding hieronder.</p>
 <p>Op basis van de hierboven gegeven stromen en spanningen kunnen we de verschillende vermogens uitrekenen  (met <span class="math notranslate nohighlight">\(u=\omega t\)</span>):</p>
-<div class="amsmath math notranslate nohighlight">
-\[\begin{align*}
-P_{ac} &amp; = &amp;  \frac{1}{2\pi}\int_{-\pi}^{\pi}{\frac {(V_a\sin(u))^2}{R_L} du }&amp; = &amp; \frac {V_a^2}{2 R_L} \label{P1}\tag{eq3} \\
-P_{dc}  &amp; = &amp;  \frac{1}{2\pi}\int_{-\alpha}^{\alpha} { V_{dd}I_c(u) du }&amp; = &amp;  \frac{V_{dd} I_p}{\pi}\frac {\sin(\alpha)-\alpha\cos(\alpha)}{1-\cos(\alpha)}  \label{P2} \tag{eq4}\\
-P_{T}  &amp; = &amp;  \frac{1}{2\pi}\int_{-\alpha}^{\alpha} { V_{out}(u)I_c(u) du }&amp; = &amp; 
+<div class="math notranslate nohighlight" id="equation-eq3">
+<span class="eqno">(3)<a class="headerlink" href="#equation-eq3" title="Permalink naar deze formule">¶</a></span>\[ P_{ac}  =   \frac{1}{2\pi}\int_{-\pi}^{\pi}{\frac {(V_a\sin(u))^2}{R_L} du } =  \frac {V_a^2}{2 R_L} \]</div>
+<div class="math notranslate nohighlight" id="equation-eq4">
+<span class="eqno">(4)<a class="headerlink" href="#equation-eq4" title="Permalink naar deze formule">¶</a></span>\[ P_{dc}   =   \frac{1}{2\pi}\int_{-\alpha}^{\alpha} { V_{dd}I_c(u) du } =   \frac{V_{dd} I_p}{\pi}\frac {\sin(\alpha)-\alpha\cos(\alpha)}{1-\cos(\alpha)} \]</div>
+<div class="math notranslate nohighlight" id="equation-eq5">
+<span class="eqno">(5)<a class="headerlink" href="#equation-eq5" title="Permalink naar deze formule">¶</a></span>\[ P_{T}   =   \frac{1}{2\pi}\int_{-\alpha}^{\alpha} { V_{out}(u)I_c(u) du } =  
   \frac{V_{dd} I_p}{\pi}\frac {\sin(\alpha)-\alpha\cos(\alpha)}{1-\cos(\alpha)}-
-  \frac {I_p V_a}{4 \pi}\frac{(2\alpha-\sin(2\alpha))}{(1-\cos(\alpha))}  \label{P3}\tag{eq5}
-\end{align*}\]</div>
-<p>Nu is het totale DC vermogen (<span class="math notranslate nohighlight">\(P_{dc}\)</span>)de som van het in de transistor gedisipeerde vermogen (<span class="math notranslate nohighlight">\(P_{T}\)</span>)en het bekomen nuttige vermogen (<span class="math notranslate nohighlight">\(P_{ac}\)</span>):</p>
+  \frac {I_p V_a}{4 \pi}\frac{(2\alpha-\sin(2\alpha))}{(1-\cos(\alpha))} \]</div>
+<p>Nu is het totale DC vermogen (<span class="math notranslate nohighlight">\(P_{dc}\)</span>)de som van het in de transistor gedisipeerde vermogen (<span class="math notranslate nohighlight">\(P_{T}\)</span>) en het bekomen nuttige vermogen (<span class="math notranslate nohighlight">\(P_{ac}\)</span>):</p>
 <div class="math notranslate nohighlight" id="equation-eq6">
-<span class="eqno">(2)<a class="headerlink" href="#equation-eq6" title="Permalink naar deze formule">¶</a></span>\[ P_{ac} = P_{dc}-P_{T} \]</div>
-<p>Op basis van vergelijkingen  <code class="xref std std-numref docutils literal notranslate"><span class="pre">eq3</span></code>,<code class="xref std std-numref docutils literal notranslate"><span class="pre">eq4</span></code> en <code class="xref std std-numref docutils literal notranslate"><span class="pre">eq5</span></code> bekomen we:</p>
+<span class="eqno">(6)<a class="headerlink" href="#equation-eq6" title="Permalink naar deze formule">¶</a></span>\[ P_{ac} = P_{dc}-P_{T} \]</div>
+<p>Op basis van vergelijkingen  <a class="reference internal" href="#equation-eq3">(3)</a>,<a class="reference internal" href="#equation-eq4">(4)</a> en <a class="reference internal" href="#equation-eq5">(5)</a> bekomen we:</p>
 <div class="math notranslate nohighlight" id="equation-eq7">
-<span class="eqno">(3)<a class="headerlink" href="#equation-eq7" title="Permalink naar deze formule">¶</a></span>\[ \frac {V_a^2}{2 R_L} =\frac{I_p V_a}{4 \pi} \frac {(2\alpha-\sin(2\alpha))}{(1-\cos(\alpha))}\]</div>
+<span class="eqno">(7)<a class="headerlink" href="#equation-eq7" title="Permalink naar deze formule">¶</a></span>\[ \frac {V_a^2}{2 R_L} =\frac{I_p V_a}{4 \pi} \frac {(2\alpha-\sin(2\alpha))}{(1-\cos(\alpha))}\]</div>
 <p>De bekomen amplitude van oscillatie is:</p>
 <div class="math notranslate nohighlight" id="equation-eq8">
-<span class="eqno">(4)<a class="headerlink" href="#equation-eq8" title="Permalink naar deze formule">¶</a></span>\[ V_a= \frac{I_p R_L}{2 \pi} \frac{ 2 \alpha - \sin(2 \alpha)}{1-\cos(\alpha)} \]</div>
+<span class="eqno">(8)<a class="headerlink" href="#equation-eq8" title="Permalink naar deze formule">¶</a></span>\[ V_a= \frac{I_p R_L}{2 \pi} \frac{ 2 \alpha - \sin(2 \alpha)}{1-\cos(\alpha)} \]</div>
 <p>Het is goed om voor al deze 4 parameters ook eens de instantane bekomen power en het instantane ingangsvermogen te bekijken.</p>
 <div class="cell tag_hide-input docutils container">
 <div class="cell_input docutils container">
@@ -1927,7 +1925,7 @@ L_L2         2 4    20uH
     <div class="csl-left-margin">1.</div><div class="csl-right-inline">J. W. Wood, High efficiency class C amplifier, US3430157A, 1969.</div>
   </div>
   <div class="csl-entry"><i id="zotero|11916217/62LG3FWV"></i>
-    <div class="csl-left-margin">2.</div><div class="csl-right-inline">Bruce Schmukler &#38; J. Jorgenson, Design of a 3-volt HBT Power Amplifier for DCS. <i>Applied Microwave and Wireless</i>, (2000) 116–125.</div>
+    <div class="csl-left-margin">2.</div><div class="csl-right-inline">Bruce Schmukler &#38; Jon Jorgenson, Design of a 3-volt HBT Power Amplifier for DCS. <i>Applied Microwave and Wireless</i>, (2000) 116–125.</div>
   </div>
 </div>
 <!-- BIBLIOGRAPHY END -->

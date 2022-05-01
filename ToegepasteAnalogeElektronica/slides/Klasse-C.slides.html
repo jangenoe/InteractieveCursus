@@ -17613,22 +17613,20 @@ jp-needs-light-background
 <p>In de bovenstaande grafiek is de uitgangspanning  $V_{out}$</p>
 $$V_{out}(t)=V_{dd}-V_a \cos(\omega t) $$<p>(eq1)</p>
 <p>en is de collector current van de transistor $I_c$</p>
-\begin{align*}
- I_c(t) = \left\{ \begin{matrix}
+$$ I_c(t) = \left\{ \begin{matrix}
       \frac{\cos(\omega t)-\cos(\alpha)}{1-\cos(\alpha)}I_p  &amp; wanneer &amp; |\omega t| &lt;\alpha \\  
-                  0 &amp; wanneer&amp; | \omega t| &gt;\alpha   \tag{eq2}
-          \end{matrix} \right.
-\end{align*}<p>Hoe we aan de waarde van $V_a$ komen, volgt in de afleiding hieronder.</p>
+                  0 &amp; wanneer&amp; | \omega t| &gt;\alpha   
+          \end{matrix} \right.$$<p>(eq2)</p>
+<p>Hoe we aan de waarde van $V_a$ komen, volgt in de afleiding hieronder.</p>
 <p>Op basis van de hierboven gegeven stromen en spanningen kunnen we de verschillende vermogens uitrekenen  (met $u=\omega t$):</p>
-\begin{align*}
-P_{ac} &amp; = &amp;  \frac{1}{2\pi}\int_{-\pi}^{\pi}{\frac {(V_a\sin(u))^2}{R_L} du }&amp; = &amp; \frac {V_a^2}{2 R_L} \label{P1}\tag{eq3} \\
-P_{dc}  &amp; = &amp;  \frac{1}{2\pi}\int_{-\alpha}^{\alpha} { V_{dd}I_c(u) du }&amp; = &amp;  \frac{V_{dd} I_p}{\pi}\frac {\sin(\alpha)-\alpha\cos(\alpha)}{1-\cos(\alpha)}  \label{P2} \tag{eq4}\\
-P_{T}  &amp; = &amp;  \frac{1}{2\pi}\int_{-\alpha}^{\alpha} { V_{out}(u)I_c(u) du }&amp; = &amp; 
+$$ P_{ac}  =   \frac{1}{2\pi}\int_{-\pi}^{\pi}{\frac {(V_a\sin(u))^2}{R_L} du } =  \frac {V_a^2}{2 R_L} $$<p>(eq3)
+$$ P_{dc}   =   \frac{1}{2\pi}\int_{-\alpha}^{\alpha} { V_{dd}I_c(u) du } =   \frac{V_{dd} I_p}{\pi}\frac {\sin(\alpha)-\alpha\cos(\alpha)}{1-\cos(\alpha)} $$ (eq4)
+$$ P_{T}   =   \frac{1}{2\pi}\int_{-\alpha}^{\alpha} { V_{out}(u)I_c(u) du } =  
   \frac{V_{dd} I_p}{\pi}\frac {\sin(\alpha)-\alpha\cos(\alpha)}{1-\cos(\alpha)}-
-  \frac {I_p V_a}{4 \pi}\frac{(2\alpha-\sin(2\alpha))}{(1-\cos(\alpha))}  \label{P3}\tag{eq5}
-\end{align*}<p>Nu is het totale DC vermogen ($P_{dc}$)de som van het in de transistor gedisipeerde vermogen ($P_{T}$)en het bekomen nuttige vermogen ($P_{ac}$):</p>
+  \frac {I_p V_a}{4 \pi}\frac{(2\alpha-\sin(2\alpha))}{(1-\cos(\alpha))} $$ (eq5)</p>
+<p>Nu is het totale DC vermogen ($P_{dc}$)de som van het in de transistor gedisipeerde vermogen ($P_{T}$) en het bekomen nuttige vermogen ($P_{ac}$):</p>
 $$ P_{ac} = P_{dc}-P_{T} $$<p>(eq6)</p>
-<p>Op basis van vergelijkingen  {numref}<code>eq3</code>,{numref}<code>eq4</code> en {numref}<code>eq5</code> bekomen we:</p>
+<p>Op basis van vergelijkingen  {eq}<code>eq3</code>,{eq}<code>eq4</code> en {eq}<code>eq5</code> bekomen we:</p>
 $$ \frac {V_a^2}{2 R_L} =\frac{I_p V_a}{4 \pi} \frac {(2\alpha-\sin(2\alpha))}{(1-\cos(\alpha))}$$<p>(eq7)</p>
 <p>De bekomen amplitude van oscillatie is:</p>
 $$ V_a= \frac{I_p R_L}{2 \pi} \frac{ 2 \alpha - \sin(2 \alpha)}{1-\cos(\alpha)} $$<p>(eq8)</p>
@@ -26184,7 +26182,7 @@ z
     <div class="csl-left-margin">1.</div><div class="csl-right-inline">J. W. Wood, High efficiency class C amplifier, US3430157A, 1969.</div>
   </div>
   <div class="csl-entry"><i id="zotero|11916217/62LG3FWV"></i>
-    <div class="csl-left-margin">2.</div><div class="csl-right-inline">Bruce Schmukler &#38; J. Jorgenson, Design of a 3-volt HBT Power Amplifier for DCS. <i>Applied Microwave and Wireless</i>, (2000) 116–125.</div>
+    <div class="csl-left-margin">2.</div><div class="csl-right-inline">Bruce Schmukler &#38; Jon Jorgenson, Design of a 3-volt HBT Power Amplifier for DCS. <i>Applied Microwave and Wireless</i>, (2000) 116–125.</div>
   </div>
 </div>
 <!-- BIBLIOGRAPHY END -->
