@@ -10,13 +10,13 @@ Deze notebooks bevatten materiaal en oefeningen, in het formaat van [Jupyter Boo
 Dit is momenteel nog werk in progress. De cursus zoals aanwezig op Toledo blijft het voornaamste leerinstrument. Dit is enkel een hulpmiddel.
 :::
 
-### Inhoudsopgave
+## Inhoudsopgave
 
 ```{tableofcontents}
 ```
 
 
-### licenties
+## licenties
 
 <a rel="license" href="http://creativecommons.org/licenses/by/4.0/deed.nl"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a>
 <br />
