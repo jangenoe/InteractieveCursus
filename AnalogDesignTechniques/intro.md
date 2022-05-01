@@ -9,13 +9,13 @@ This [Jupyter Book](https://jupyterbook.org/intro.html) comprises notebooks used
 This is currently still work in progress. Please refer to Toledo as the key source of information. This book is only added as support.
 :::
 
-### Table of Contents
+## Table of Contents
 
 ```{tableofcontents}
 ```
 
 
-### licenties
+## licenties
 
 <a rel="license" href="http://creativecommons.org/licenses/by/4.0/deed.en"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a>
 <br />
