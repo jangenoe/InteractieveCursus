@@ -690,11 +690,9 @@ RL1 2 0	100
 
 <span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">Annotate</span><span class="p">(</span><span class="n">th1</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">at</span><span class="p">(</span><span class="n">Voorinstelspanning</span><span class="o">.</span><span class="n">SW</span><span class="p">)</span><span class="o">.</span><span class="n">delta</span><span class="p">(</span><span class="n">dx</span><span class="o">=-</span><span class="mf">1.2</span><span class="p">,</span> <span class="n">dy</span><span class="o">=</span><span class="mf">0.3</span><span class="p">)</span><span class="o">.</span><span class="n">label</span><span class="p">(</span><span class="s1">&#39;Voorinstelspanning&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">color</span><span class="p">(</span><span class="s1">&#39;red&#39;</span><span class="p">))</span>
 
-<span class="c1"># ff=d.draw(showframe=True)   # debugging bbox</span>
-<span class="c1"># print(ff.bbox.xmin)</span>
-<span class="c1"># ff</span>
-
-<span class="n">d</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
+<span class="n">ff</span><span class="o">=</span><span class="n">d</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
+<span class="n">ff</span><span class="o">.</span><span class="n">set_bbox</span><span class="p">([</span><span class="o">-</span><span class="mf">6.7524653676892985</span><span class="p">,</span> <span class="o">-</span><span class="mf">5.411111111111111</span><span class="p">,</span> <span class="mf">3.5739999999999994</span><span class="p">,</span> <span class="mf">2.711111111111111</span><span class="p">])</span>
+<span class="n">display</span><span class="p">(</span><span class="n">ff</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
