@@ -12,6 +12,7 @@ dependencies:
   - jupyterlab
   - scikit-rf
   - networkx
+  - ipywidgets
   - pip:
     - pyspice
     - schemdraw
