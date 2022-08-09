@@ -36,4 +36,5 @@ sphinx:
   config:
     language: nl
     togglebutton_hint: " "
+    html_show_copyright: false
     nb_render_figure_options: {"caption":"caption to be completed"}
