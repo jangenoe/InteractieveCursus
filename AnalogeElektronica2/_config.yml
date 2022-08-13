@@ -1,6 +1,5 @@
 title: Analoge elektronische schakelingen
 author: Jan Genoe (jan.genoe@kuleuven.be)
-copyright: "2022" 
 logo: images/logo.svg
 only_build_toc_files: true
 repository:
@@ -35,6 +34,6 @@ parse:
 sphinx:
   config:
     language: nl
-    togglebutton_hint: " "
     html_show_copyright: false
     nb_render_figure_options: {"caption":"caption to be completed"}
+    nb_remove_code_source: true

@@ -34,5 +34,5 @@ parse:
 sphinx:
   config:
     language: nl
-    togglebutton_hint: " "
     html_show_copyright: false
+    nb_remove_code_source: true
