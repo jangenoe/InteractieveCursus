@@ -1,5 +1,4 @@
 * Class E Tsai
-V_Vdd        3 0  2V
 M_SWn        0 11 10 0 nmos W=31580u L=0.35u
 M_SWp        3 11 10 3 pmos W=500u L=0.35u
 * stage 1
