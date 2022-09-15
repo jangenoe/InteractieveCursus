@@ -3,6 +3,9 @@ root: intro
 options:
   numbered: true
 parts:
+- caption: Inleiding
+  chapters:
+  - file: Spice-simulatie
 - caption: Versterkers
   chapters:
   - file: Klasse-C
