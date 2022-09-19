@@ -1,9 +1,5 @@
 jinja2==3.0.3
-<<<<<<< HEAD
 nbconvert==6.5.0
-=======
-nbconvert=6.5.0
->>>>>>> b3e42b70d5e4c4068c1bbe94b1990b71ed7cab76
 git+https://github.com/jangenoe/jupyter-book#egg=jupyter-book
 sphinx
 jupyter-KULeuven-slides
