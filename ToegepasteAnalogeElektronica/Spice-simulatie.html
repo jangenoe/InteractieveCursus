@@ -1,0 +1,658 @@
+
+<!DOCTYPE html>
+
+<html lang="nl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Spice simulatie &#8212; Toegepaste Analoge Elektronica</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/translations.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Zoeken" href="search.html" />
+    <link rel="next" title="Klasse C Versterkers" href="Klasse-C.html" />
+    <link rel="prev" title="Toegepaste Analoge Elektronica" href="intro.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="nl">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="_static/logo.svg" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Toegepaste Analoge Elektronica</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Toegepaste Analoge Elektronica
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Inleiding
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Spice simulatie
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Versterkers
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Klasse-C.html">
+   Klasse C  Versterkers
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Klasse-F.html">
+   Klasse F Verstekers
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Klasse-D.html">
+   Klasse D  Versterkers
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Klasse-E.html">
+   Klasse E  Versterkers
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Filters
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Filters.html">
+   Filters
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  transmissielijnen
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="transmissielijn.html">
+   Transmissie lijnen
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="reflecties.html">
+   Reflecties
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="SmithKaart.html">
+   SmithKaart
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="SmithKaartOefening1.html">
+     Smith Kaart Oefening 1
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="SmithKaartOefening2.html">
+     Smith Kaart Oefening 2
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="SmithKaartOefening3.html">
+     Smith Kaart Oefening 3
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="SmithKaartOefening4.html">
+     Smith Kaart Oefening 4
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="SmithKaartOefening5.html">
+     Smith Kaart Oefening 5
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="SmithKaartOefening6.html">
+     Smith Kaart Oefening 6
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="SmithKaartOefening7.html">
+     Smith Kaart Oefening 7
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            <a href="https://www.kuleuven.be"> <img src=" http://stijl.kuleuven.be/2016tmp/img/svg/logo.svg" alt="KULeuven"></a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/jangenoe/InteractieveCursus/master?urlpath=lab/tree/ToegepasteAnalogeElektronica/Spice-simulatie.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://colab.research.google.com/github/jangenoe/InteractieveCursus/blob/master/ToegepasteAnalogeElektronica/Spice-simulatie.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Colab"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="_static/images/logo_colab.png">
+  </span>
+<span class="headerbtn__text-container">Colab</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/jangenoe/InteractieveCursus"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/jangenoe/InteractieveCursus/issues/new?title=Issue%20on%20page%20%2FSpice-simulatie.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/jangenoe/InteractieveCursus/edit/master/ToegepasteAnalogeElektronica/Spice-simulatie.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Edit this page"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="headerbtn__text-container">suggest edit</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="_sources/Spice-simulatie.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Spice simulatie</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section class="tex2jax_ignore mathjax_ignore" id="spice-simulatie">
+<h1>Spice simulatie<a class="headerlink" href="#spice-simulatie" title="Permalink naar deze titel">#</a></h1>
+<p><a href="./slides/Spice-simulatie.slides.html"><img alt="slides" src="_images/slides-beschikbaar-blue.svg" /></a></p>
+<div class="cell docutils container">
+</div>
+<p>In deze cursus bestuderen we elektronische circuits. Hiervoor is het belangrijk dat we deze elektronische circuits ook in detail en correct kunnen simuleren. Hiervoor gebruiken we een implementatie van SPICE. SPICE staat voor <code class="docutils literal notranslate"><span class="pre">Simulation</span> <span class="pre">Program</span> <span class="pre">with</span> <span class="pre">Integrated</span> <span class="pre">Circuit</span> <span class="pre">Emphasis</span></code>. SPICE is in de jaren 1960 ontwikkeld door het <a class="reference external" href="https://eecs.berkeley.edu/">Department of Electrical Engineering and Computer Sciences in UC Berkeley, California, USA</a> en toen reeds vrijgegeven als een eerste soort open source avant la lettre.</p>
+<p>Ondertussen zijn er al meer dan 100 verschillende implementaties van spice. <span class="xref myst">Hier</span> vind je een overzicht van een aantal implementaties. De motor van deze implementaties is nog steeds zo goed als dezelfde van deze van de originele implementaties, namelijk de modified nodale analyse (<a class="reference external" href="https://en.wikipedia.org/wiki/Modified_nodal_analysis">MNA</a>). De verschillen tussen deze implementaties zijn in eerste instantie de user interface en de manier waarop de verschillende modellen geïmplementeerd zijn.</p>
+<p>In dit jupyterbook gebruik ik <a class="reference external" href="https://pyspice.fabrice-salvaire.fr/releases/v1.5/">PySpice</a>. Dit is een python interface naar <a class="reference external" href="https://ngspice.sourceforge.io/">ngspice</a>. Als je <a class="reference external" href="https://docs.conda.io/en/latest/miniconda.html">conda</a> geinstalleerd hebt en de github repository van <a class="reference external" href="https://github.com/jangenoe/InteractieveCursus">dit book</a> lokaal gecloned hebt, kan je de volledige PySpice omgeving die in dit boek gebruikt wordt installeren door de volgende commandos uit te voeren in de directory van deze repository:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">env</span> <span class="n">update</span> <span class="o">-</span><span class="n">f</span> <span class="o">.</span>\<span class="n">binder</span>\<span class="n">environment</span><span class="o">.</span><span class="n">yml</span>
+<span class="n">conda</span> <span class="n">activate</span> <span class="n">KULeuven</span>
+<span class="n">ipython</span> <span class="n">kernel</span> <span class="n">install</span> <span class="o">--</span><span class="n">user</span> <span class="o">--</span><span class="n">name</span><span class="o">=</span><span class="n">KULeuven</span>
+<span class="n">pyspice</span><span class="o">-</span><span class="n">post</span><span class="o">-</span><span class="n">installation</span> <span class="o">--</span><span class="n">install</span><span class="o">-</span><span class="n">ngspice</span><span class="o">-</span><span class="n">dll</span>
+</pre></div>
+</div>
+<p>Om aan te geven hoe we gebruik maken van spice voor de circuit simulatie, kijken we naar een voorbeeld van een verschilversterker op IC. Het basisschema van deze versterker is aangegeven in <a class="reference internal" href="#spicefig1"><span class="std std-numref">Fig. 1</span></a>. Het eerste wat we moeten doen in dit circuit is de verschillende knopen een nummer (of een naam) te geven. Het resultaat waarbij elke knoop een naam gekregen heeft zien we in <a class="reference internal" href="#spicefig1b"><span class="std std-numref">Fig. 2</span></a>.</p>
+<div class="cell docutils container">
+<div class="cell_output docutils container">
+<figure class="align-default" id="spicefig1">
+<img alt="_images/07522cb6fb467759ebe5cc15f303a79121075e3f4b373939245a007e0b558393.svg" src="_images/07522cb6fb467759ebe5cc15f303a79121075e3f4b373939245a007e0b558393.svg" /><figcaption>
+<p><span class="caption-number">Fig. 1 </span><span class="caption-text">Basisschema van de klasse D versterker.</span><a class="headerlink" href="#spicefig1" title="Permallink naar deze afbeelding">#</a></p>
+</figcaption>
+</figure>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_output docutils container">
+<figure class="align-default" id="spicefig1b">
+<img alt="_images/67e94157980329ad84e6b7b42804c8ceb4e116c5bc6ad250b33f1d460c593314.svg" src="_images/67e94157980329ad84e6b7b42804c8ceb4e116c5bc6ad250b33f1d460c593314.svg" /><figcaption>
+<p><span class="caption-number">Fig. 2 </span><span class="caption-text">Basisschema van de klasse D versterker.</span><a class="headerlink" href="#spicefig1b" title="Permallink naar deze afbeelding">#</a></p>
+</figcaption>
+</figure>
+</div>
+</div>
+<p>De overeenkomende SPICE code voor dit circuit zie je in <code class="xref std std-numref docutils literal notranslate"><span class="pre">spiceverschilversterker1</span></code>. Het eerste deel van deel beschrijving beschrijft de externe aangelegde spanningsbronnen. De naam van elke spanningsbron in SPICE begint met een V. We hebben de voedingsspanning (VDD) van 5 Volt tussen knoop 1 en knoop 0, de spanningsbronnen aan de positieve (10) en de negatieve (11) ingangsklem en tenslotte een biasspanning (VB) aan klem 9.</p>
+<div class="cell docutils container">
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>* CIRCUIT Spice file van een verschilversterker
+VDD    1 0 DC=5.0
+VPLUS 10 0 DC=2.5
+VMIN  11 0 SIN(2.5 50U 1E6) DC=2.5
+VB    9 0 DC=1.5
+C3     3 0   5.914fF
+C4     4 0  14.737fF
+C5     5 0  10.124fF
+C6     6 0  14.434fF
+C8     8 0   7.919fF
+C9     9 0  15.257fF
+C10   10 0 1.872fF
+C11   11 0 1.688fF
+C25    1 5  1fF
+MN1 3 5 0 0  NMOS w=1.50u L=0.50u
+MN2 0 5 5 0  NMOS w=1.50u L=0.50u
+MN3 8 10 4 0 NMOS w=1.50u L=0.50U
+MN4 0 9 8 0  NMOS w=4.50u L=0.50U
+MN5 6 11 8 0 NMOS w=1.50u L=0.50U
+MP1 1 4 3 1  PMOS w=3.50u L=0.50U
+MP2 4 4 1 1  PMOS w=3.50u L=0.50U
+MP3 1 6 5 1  PMOS w=3.50u L=0.50U
+MP4 6 6 1 1  PMOS w=3.50u L=0.50U
+.MODEL NMOS NMOS(LEVEL=1 VTO=0.50 KP=90.000E-6 LAMBDA=0.001)
+.MODEL PMOS PMOS(LEVEL=1 VTO=-0.45 KP=55.000E-6 LAMBDA=0.001)
+</pre></div>
+</div>
+</div>
+</div>
+<p class=spicecaption>basiscircuit van de verschilversterker</p><p>Vervolgens vinden we in de SPICE listing de capaciteiten (C) van alle knopen ten opzichte van de grondknoop (0) terug.
+De waarde van deze condensatoren is bekomen nadat de volledige lay-out van het chipontwerp is getekend. Daarna is er door een extractfunctie de overlap van de metaisatie van elk van deze knopen met het grondvlak bepaald, en op basis hiervan is de condensatorwaarde bepaald.
+We vinden ook een parasitaire condensator terug ten opzichte van de voeding, i.e. C25 die staat tussen knoop 5 en de voeding.
+Eigenlijk zijn deze condensatorwaardes voor een eerste simulatie van de versterking niet belangrijk. Deze waardes worden enkel belangrijk als je een exacte waarde wil uitrekenen tijdens een simulatie bij hogere frequentie.</p>
+<p>Vervolgens hebben we de nMOS transistors van dit circuit. Deze zijn:</p>
+<div class="cell docutils container">
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>MN1 3 5 0 0  NMOS w=1.50u L=0.50u
+MN2 0 5 5 0  NMOS w=1.50u L=0.50u
+MN3 8 10 4 0 NMOS w=1.50u L=0.50U
+MN4 0 9 8 0  NMOS w=4.50u L=0.50U
+MN5 6 11 8 0 NMOS w=1.50u L=0.50U
+</pre></div>
+</div>
+</div>
+</div>
+<p>We kunnen deze op het schema lokaliseren.</p>
+<div class="cell docutils container">
+<div class="cell_output docutils container">
+<figure class="align-default" id="spicefig1c">
+<img alt="_images/3bcce512ce255b2206859a27de114b5b15771de4be97c4f47e2e477c61ba7951.svg" src="_images/3bcce512ce255b2206859a27de114b5b15771de4be97c4f47e2e477c61ba7951.svg" /><figcaption>
+<p><span class="caption-number">Fig. 3 </span><span class="caption-text">Basisschema van de klasse D versterker.</span><a class="headerlink" href="#spicefig1c" title="Permallink naar deze afbeelding">#</a></p>
+</figcaption>
+</figure>
+</div>
+</div>
+<p>Daarna volgen de pMOS transistors van dit circuit. Deze zijn:</p>
+<div class="cell docutils container">
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>MP1 1 4 3 1  PMOS w=3.50u L=0.50U
+MP2 4 4 1 1  PMOS w=3.50u L=0.50U
+MP3 1 6 5 1  PMOS w=3.50u L=0.50U
+MP4 6 6 1 1  PMOS w=3.50u L=0.50U
+</pre></div>
+</div>
+</div>
+</div>
+<p>Ook deze transistor kunnen we op het schema lokaliseren.</p>
+<div class="cell docutils container">
+</div>
+<div class="cell docutils container">
+<div class="cell_output docutils container">
+<figure class="align-default" id="spicefig5">
+<img alt="_images/dd55f0ff1653d9bd8fb0c07752d69738f4585c07952c90d2eb2db7cfd306ec87.png" src="_images/dd55f0ff1653d9bd8fb0c07752d69738f4585c07952c90d2eb2db7cfd306ec87.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 4 </span><span class="caption-text">Bekomen spanningen aan de ingang (boven) en de uitgang (onder) van de verschilversterker.</span><a class="headerlink" href="#spicefig5" title="Permallink naar deze afbeelding">#</a></p>
+</figcaption>
+</figure>
+</div>
+</div>
+<p>Het ingangssignaal is gegeven in mV en het uitgangsignaal is gegeven in V. We merken dat we een versterking van ongeveer 800 hebben bekomen.</p>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "kuleuven"
+        },
+        kernelOptions: {
+            kernelName: "kuleuven",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'kuleuven'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="intro.html" title="vorige pagina">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">vorige</p>
+            <p class="prev-next-title">Toegepaste Analoge Elektronica</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="Klasse-C.html" title="volgende pagina">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">volgende</p>
+        <p class="prev-next-title">Klasse C  Versterkers</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Jan Genoe (jan.genoe@kuleuven.be)<br/>
+  
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>

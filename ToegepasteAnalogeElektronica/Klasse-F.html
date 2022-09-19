@@ -4,11 +4,13 @@
 <html lang="nl">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>Klasse F Verstekers &#8212; Toegepaste Analoge Elektronica</title>
     
-  <link href="_static/css/theme.css" rel="stylesheet">
-  <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -18,20 +20,16 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    
-      
-
-    
     <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
-    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
     
-  <link rel="preload" as="script" href="_static/js/index.be7d3bbb2ef33a8344ce.js">
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
 
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
@@ -39,19 +37,21 @@
     <script src="_static/doctools.js"></script>
     <script src="_static/clipboard.min.js"></script>
     <script src="_static/copybutton.js"></script>
-    <script>let toggleHintShow = ' ';</script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="_static/togglebutton.js"></script>
     <script src="_static/translations.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script src="_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
 const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Zoeken" href="search.html" />
     <link rel="next" title="Klasse D Versterkers" href="Klasse-D.html" />
@@ -63,7 +63,21 @@ const thebe_selector_output = ".output, .cell_output"
     <!-- Google Analytics -->
     
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
     
     <div class="container-fluid" id="banner"></div>
 
@@ -72,9 +86,10 @@ const thebe_selector_output = ".output, .cell_output"
     <div class="container-xl">
       <div class="row">
           
-<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
-    
-        <div class="navbar-brand-box">
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="index.html">
       
         <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
@@ -89,13 +104,26 @@ const thebe_selector_output = ".output, .cell_output"
     </a>
 </div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
   <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Zoek in dit boek ..." aria-label="Zoek in dit boek ..." autocomplete="off" >
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
-        <ul class="nav bd-sidenav">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Toegepaste Analoge Elektronica
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Inleiding
+ </span>
+</p>
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="intro.html">
-   Toegepaste Analoge Elektronica
+  <a class="reference internal" href="Spice-simulatie.html">
+   Spice simulatie
   </a>
  </li>
 </ul>
@@ -204,12 +232,17 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 
     </div>
-</nav> <!-- To handle the deprecated key -->
-
-<div class="navbar_extra_footer">
-  <a href="https://www.kuleuven.be"> <img src=" http://stijl.kuleuven.be/2016tmp/img/svg/logo.svg" alt="KULeuven"></a>
-</div>
-
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            <a href="https://www.kuleuven.be"> <img src=" http://stijl.kuleuven.be/2016tmp/img/svg/logo.svg" alt="KULeuven"></a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
 </div>
 
 
@@ -217,101 +250,214 @@ const thebe_selector_output = ".output, .cell_output"
 
 
           
-<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
     
-    <div class="topbar container-xl fixed-top">
-    <div class="topbar-contents row">
-        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
-        <div class="col pl-md-4 topbar-main">
-            
-            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
-                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-                aria-expanded="true" aria-label="Schakel navigatie" aria-controls="site-navigation"
-                title="Schakel navigatie" data-toggle="tooltip" data-placement="left">
-                <i class="fas fa-bars"></i>
-                <i class="fas fa-arrow-left"></i>
-                <i class="fas fa-arrow-up"></i>
-            </button>
-            
-            
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download deze pagina"><i
-            class="fas fa-download"></i></button>
-
-    <div class="dropdown-buttons">
-        <!-- ipynb file if we had a myst markdown file -->
+    <div class="header-article row sticky-top noprint">
         
-        <!-- Download raw file -->
-        <a class="dropdown-buttons" href="_sources/Klasse-F.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Download het bronbestand" data-toggle="tooltip"
-                data-placement="left">.ipynb</button></a>
-        <!-- Download PDF via print -->
-        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Afdrukken naar pdf"
-                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/jangenoe/InteractieveCursus/master?urlpath=lab/tree/ToegepasteAnalogeElektronica/Klasse-F.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://colab.research.google.com/github/jangenoe/InteractieveCursus/blob/master/ToegepasteAnalogeElektronica/Klasse-F.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Colab"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="_static/images/logo_colab.png">
+  </span>
+<span class="headerbtn__text-container">Colab</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/jangenoe/InteractieveCursus"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/jangenoe/InteractieveCursus/issues/new?title=Issue%20on%20page%20%2FKlasse-F.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/jangenoe/InteractieveCursus/edit/master/ToegepasteAnalogeElektronica/Klasse-F.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Edit this page"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="headerbtn__text-container">suggest edit</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="_sources/Klasse-F.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
     </div>
 </div>
 
-            <!-- Source interaction buttons -->
-
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
-    <div class="dropdown-buttons sourcebuttons">
-        <a class="repository-button"
-            href="https://github.com/jangenoe/InteractieveCursus"><button type="button" class="btn btn-secondary topbarbtn"
-                data-toggle="tooltip" data-placement="left" title="Bronopslagplaats"><i
-                    class="fab fa-github"></i>repository</button></a>
-        <a class="issues-button"
-            href="https://github.com/jangenoe/InteractieveCursus/issues/new?title=Issue%20on%20page%20%2FKlasse-F.html&body=Your%20issue%20content%20here."><button
-                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="Open een probleem"><i class="fas fa-lightbulb"></i>open probleem</button></a>
-        <a class="edit-button" href="https://github.com/jangenoe/InteractieveCursus/edit/master/ToegepasteAnalogeElektronica/Klasse-F.ipynb"><button
-                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="bewerk deze pagina"><i class="fas fa-pencil-alt"></i>suggereren bewerken</button></a>
-    </div>
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
 </div>
-
-            <!-- Full screen (wrap in <a> to have style consistency -->
-
-<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Volledig scherm"
-        title="Volledig scherm"><i
-            class="fas fa-expand"></i></button></a>
-
-            <!-- Launch buttons -->
-
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
-    <div class="dropdown-buttons">
-        
-        <a class="binder-button" href="https://mybinder.org/v2/gh/jangenoe/InteractieveCursus/master?urlpath=lab/tree/ToegepasteAnalogeElektronica/Klasse-F.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Lancering Binder" data-toggle="tooltip"
-                data-placement="left"><img class="binder-button-logo"
-                    src="_static/images/logo_binder.svg"
-                    alt="Interact on binder">Binder</button></a>
-        
-        
-        
-        <a class="colab-button" href="https://colab.research.google.com/github/jangenoe/InteractieveCursus/blob/master/ToegepasteAnalogeElektronica/Klasse-F.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
-                title="Lancering Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
-                    src="_static/images/logo_colab.png"
-                    alt="Interact on Colab">Colab</button></a>
-        
-        
     </div>
-</div>
-
-        </div>
-
-        <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
-            
-        </div>
-    </div>
-</div>
-    <div id="main-content" class="row">
-        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
                 <h1>Klasse F Verstekers</h1>
@@ -322,109 +468,47 @@ const thebe_selector_output = ".output, .cell_output"
                     </div>
                 </div>
             </div>
-            
+            <main id="main-content" role="main">
+                
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="klasse-f-verstekers">
-<h1>Klasse F Verstekers<a class="headerlink" href="#klasse-f-verstekers" title="Permalink naar deze titel">¶</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="klasse-f-verstekers">
+<h1>Klasse F Verstekers<a class="headerlink" href="#klasse-f-verstekers" title="Permalink naar deze titel">#</a></h1>
 <p>In de vorige hoofdstukken hebben we de laagfrequent versterkers besproken. Dit zijn versterkers met typisch een relatief grote bandbreedte. Verder hebben we de laagfrequent versterkers verder opgedeeld in de versterkers met 1 vermogen transistor in de vermogentrap (Klasse A) en de versterkers met 2 of meer vermogentransistors in de vermogentrap (Klasse B en Klasse G).
 In dit hoofdstuk bestuderen we de klasse F versterker als een uitbreiding van de klasse C versterker. Beide versterkers zijn resonante versterkers die bestaat uit een LRC trilkring (of meerdere LC kringen) die aangestuurd wordt door een enkele transistor. Als een gevolg hiervan werkt deze versterker op een vaste frequentie of binnen een zeer beperkte bandbreedte rond deze centrale frequentie. Deze bandbreedte is typisch maximaal 1%  van de resonantie frequentie.
 In <a class="reference internal" href="#vermogenversterkers2"><span class="std std-numref">Tabel 2</span></a> geven we een overzicht van deze verschillende versterkers.</p>
 <table class="colwidths-auto table" id="vermogenversterkers2">
-<caption><span class="caption-number">Tabel 2 </span><span class="caption-text">Indeling van de vermogenversterkers</span><a class="headerlink" href="#vermogenversterkers2" title="Permalink naar deze tabel">¶</a></caption>
+<caption><span class="caption-number">Tabel 2 </span><span class="caption-text">Indeling van de vermogenversterkers</span><a class="headerlink" href="#vermogenversterkers2" title="Permalink naar deze tabel">#</a></caption>
 <thead>
-<tr class="row-odd"><th class="text-align:left head"><p></p></th>
-<th class="text-align:left head"><p>laagfrequent of breedband</p></th>
-<th class="text-align:left head"><p>hoogfrequent of resonant</p></th>
+<tr class="row-odd"><th class="text-left head"><p></p></th>
+<th class="text-left head"><p>laagfrequent of breedband</p></th>
+<th class="text-left head"><p>hoogfrequent of resonant</p></th>
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td class="text-align:left"><p>1 transistor <BR> in de vermogentrap</p></td>
-<td class="text-align:left"><p>Klasse A</p></td>
-<td class="text-align:left"><p>Klasse C <BR> <strong>Klasse F</strong> <BR>Klasse E</p></td>
+<tr class="row-even"><td class="text-left"><p>1 transistor <BR> in de vermogentrap</p></td>
+<td class="text-left"><p>Klasse A</p></td>
+<td class="text-left"><p>Klasse C <BR> <strong>Klasse F</strong> <BR>Klasse E</p></td>
 </tr>
-<tr class="row-odd"><td class="text-align:left"><p>2 of meer  transistors <BR>in de vermogentrap</p></td>
-<td class="text-align:left"><p>Klasse B  <BR> Klasse G</p></td>
-<td class="text-align:left"><p>Klasse D</p></td>
+<tr class="row-odd"><td class="text-left"><p>2 of meer  transistors <BR>in de vermogentrap</p></td>
+<td class="text-left"><p>Klasse B  <BR> Klasse G</p></td>
+<td class="text-left"><p>Klasse D</p></td>
 </tr>
 </tbody>
 </table>
-<p class=tabcaption>Indeling van de vermogenversterkers</p><div class="cell tag_hide-input docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-<span class="kn">import</span> <span class="nn">matplotlib.ticker</span> <span class="k">as</span> <span class="nn">ticker</span>
-<span class="kn">from</span>  <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">patches</span>
-<span class="kn">import</span> <span class="nn">scipy.signal</span> <span class="k">as</span> <span class="nn">signal</span>
-<span class="c1">#import pandas as pd  # nakijken of nog nodig</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">from</span> <span class="nn">PySpice.Probe.Plot</span> <span class="kn">import</span> <span class="n">plot</span>
-<span class="kn">from</span> <span class="nn">PySpice.Spice.Parser</span> <span class="kn">import</span> <span class="n">SpiceParser</span>
-<span class="kn">from</span> <span class="nn">PySpice.Spice.Netlist</span> <span class="kn">import</span> <span class="n">Circuit</span>
-<span class="kn">from</span> <span class="nn">PySpice.Unit</span> <span class="kn">import</span> <span class="o">*</span>
-<span class="kn">import</span> <span class="nn">schemdraw</span> <span class="k">as</span> <span class="nn">schem</span>
-<span class="kn">import</span> <span class="nn">schemdraw.elements</span> <span class="k">as</span> <span class="nn">e</span>
-<span class="kn">from</span> <span class="nn">ipywidgets</span> <span class="kn">import</span> <span class="n">interact</span><span class="p">,</span><span class="n">FloatSlider</span>
-<span class="n">usewidgets</span><span class="o">=</span><span class="kc">True</span><span class="p">;</span>
-    
-<span class="k">def</span> <span class="nf">spicelisting</span><span class="p">(</span><span class="n">filename</span><span class="p">):</span>
-    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
-        <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">f</span><span class="p">:</span>
-            <span class="nb">print</span><span class="p">(</span><span class="n">line</span><span class="o">.</span><span class="n">strip</span><span class="p">())</span>
-    <span class="nb">print</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
+<p class=tabcaption>Indeling van de vermogenversterkers</p><div class="cell docutils container">
 </div>
 <p>Wanneer de gelijkaardige stroompulsen aangelegd worden op 2 parallelle L(R)C kringen in serie, zal dezelfde stroom door de kringen lopen, maar zullen de spanningen over beide kringen opgeteld worden.</p>
-<div class="cell tag_hide-input docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">d</span> <span class="o">=</span> <span class="n">schem</span><span class="o">.</span><span class="n">Drawing</span><span class="p">()</span>
-<span class="n">T</span> <span class="o">=</span> <span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">BJT_NPN</span><span class="p">)</span>
-<span class="n">Ri</span> <span class="o">=</span> <span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">RES</span><span class="p">,</span> <span class="n">d</span><span class="o">=</span><span class="s1">&#39;left&#39;</span><span class="p">,</span> <span class="n">xy</span><span class="o">=</span><span class="n">T</span><span class="o">.</span><span class="n">base</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;$R_</span><span class="si">{in}</span><span class="s1">$&#39;</span><span class="p">)</span>
-<span class="c1">#d.labelI(Ri, &#39;input current&#39;)</span>
-<span class="n">dot1</span> <span class="o">=</span> <span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">DOT</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">)</span>
-<span class="n">dot1</span><span class="o">.</span><span class="n">add_label</span><span class="p">(</span><span class="s1">&#39;1&#39;</span><span class="p">,</span>  <span class="n">loc</span><span class="o">=</span><span class="s1">&#39;center&#39;</span><span class="p">,</span> <span class="n">ofst</span><span class="o">=</span><span class="p">[</span><span class="mf">.5</span><span class="p">,</span><span class="o">-</span><span class="mf">.7</span><span class="p">],</span> <span class="n">align</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;right&#39;</span><span class="p">,</span><span class="s1">&#39;bottom&#39;</span><span class="p">))</span>
-<span class="n">Vi</span> <span class="o">=</span> <span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">SOURCE_V</span><span class="p">,</span><span class="n">d</span><span class="o">=</span><span class="s1">&#39;down&#39;</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;$V_</span><span class="si">{in}</span><span class="s1">$&#39;</span><span class="p">,</span> <span class="n">zoom</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
-<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">LINE</span><span class="p">,</span><span class="n">d</span><span class="o">=</span><span class="s1">&#39;right&#39;</span><span class="p">,</span>  <span class="n">tox</span><span class="o">=</span><span class="n">T</span><span class="o">.</span><span class="n">emitter</span><span class="p">)</span>
-<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">GND</span><span class="p">)</span>
-<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">LINE</span><span class="p">,</span><span class="n">d</span><span class="o">=</span><span class="s1">&#39;up&#39;</span><span class="p">,</span>  <span class="n">toy</span><span class="o">=</span><span class="n">T</span><span class="o">.</span><span class="n">emitter</span><span class="p">)</span>
-<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">LINE</span><span class="p">,</span> <span class="n">xy</span><span class="o">=</span><span class="n">T</span><span class="o">.</span><span class="n">collector</span><span class="p">,</span> <span class="n">d</span><span class="o">=</span><span class="s1">&#39;up&#39;</span><span class="p">,</span> <span class="n">l</span><span class="o">=</span><span class="mf">0.75</span><span class="p">)</span>
-<span class="n">dot2</span> <span class="o">=</span> <span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">DOT</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">)</span>
-<span class="n">dot2</span><span class="o">.</span><span class="n">add_label</span><span class="p">(</span><span class="s1">&#39;2&#39;</span><span class="p">,</span>  <span class="n">loc</span><span class="o">=</span><span class="s1">&#39;center&#39;</span><span class="p">,</span> <span class="n">ofst</span><span class="o">=</span><span class="p">[</span><span class="mf">.5</span><span class="p">,</span><span class="o">-</span><span class="mf">.7</span><span class="p">],</span> <span class="n">align</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;right&#39;</span><span class="p">,</span><span class="s1">&#39;bottom&#39;</span><span class="p">))</span>
-<span class="n">C3</span> <span class="o">=</span> <span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">CAP</span><span class="p">,</span> <span class="n">d</span><span class="o">=</span><span class="s1">&#39;up&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;$C_3$&#39;</span><span class="p">)</span>
-<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">LINE</span><span class="p">,</span> <span class="n">xy</span><span class="o">=</span><span class="n">C3</span><span class="o">.</span><span class="n">start</span><span class="p">,</span> <span class="n">d</span><span class="o">=</span><span class="s1">&#39;left&#39;</span><span class="p">,</span> <span class="n">l</span><span class="o">=</span><span class="mf">1.25</span><span class="p">)</span>
-<span class="n">L3</span> <span class="o">=</span> <span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">INDUCTOR2</span><span class="p">,</span> <span class="n">d</span><span class="o">=</span><span class="s1">&#39;up&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;$L_3$&#39;</span><span class="p">)</span>
-<span class="n">dot5</span> <span class="o">=</span> <span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">DOT</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">)</span>
-<span class="n">dot5</span><span class="o">.</span><span class="n">add_label</span><span class="p">(</span><span class="s1">&#39;5&#39;</span><span class="p">,</span>  <span class="n">loc</span><span class="o">=</span><span class="s1">&#39;center&#39;</span><span class="p">,</span> <span class="n">ofst</span><span class="o">=</span><span class="p">[</span><span class="mf">.5</span><span class="p">,</span><span class="o">-</span><span class="mf">.7</span><span class="p">],</span> <span class="n">align</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;right&#39;</span><span class="p">,</span><span class="s1">&#39;bottom&#39;</span><span class="p">))</span>
-<span class="n">C1</span> <span class="o">=</span> <span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">CAP</span><span class="p">,</span> <span class="n">xy</span><span class="o">=</span><span class="n">C3</span><span class="o">.</span><span class="n">end</span><span class="p">,</span> <span class="n">d</span><span class="o">=</span><span class="s1">&#39;up&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;$C_1$&#39;</span><span class="p">)</span>
-<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">LINE</span><span class="p">,</span> <span class="n">xy</span><span class="o">=</span><span class="n">C1</span><span class="o">.</span><span class="n">start</span><span class="p">,</span> <span class="n">d</span><span class="o">=</span><span class="s1">&#39;left&#39;</span><span class="p">,</span> <span class="n">l</span><span class="o">=</span><span class="mf">1.25</span><span class="p">)</span>
-<span class="n">L1</span> <span class="o">=</span> <span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">INDUCTOR2</span><span class="p">,</span> <span class="n">d</span><span class="o">=</span><span class="s1">&#39;up&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;$L_1$&#39;</span><span class="p">)</span>
-<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">LINE</span><span class="p">,</span> <span class="n">xy</span><span class="o">=</span><span class="n">C1</span><span class="o">.</span><span class="n">start</span><span class="p">,</span> <span class="n">d</span><span class="o">=</span><span class="s1">&#39;right&#39;</span><span class="p">,</span> <span class="n">l</span><span class="o">=</span><span class="mf">1.25</span><span class="p">)</span>
-<span class="n">R</span> <span class="o">=</span> <span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">RES</span><span class="p">,</span> <span class="n">d</span><span class="o">=</span><span class="s1">&#39;up&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;$R_L$&#39;</span><span class="p">)</span>
-<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">LINE</span><span class="p">,</span> <span class="n">xy</span><span class="o">=</span><span class="n">R</span><span class="o">.</span><span class="n">start</span><span class="p">,</span> <span class="n">d</span><span class="o">=</span><span class="s1">&#39;right&#39;</span><span class="p">,</span> <span class="n">l</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
-<span class="n">dot</span><span class="o">=</span><span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">DOT_OPEN</span><span class="p">,</span> <span class="n">rgtlabel</span><span class="o">=</span><span class="s1">&#39;$v_</span><span class="si">{out}</span><span class="s1">$&#39;</span><span class="p">)</span>
-<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">LINE</span><span class="p">,</span><span class="n">xy</span><span class="o">=</span><span class="n">R</span><span class="o">.</span><span class="n">end</span><span class="p">,</span> <span class="n">d</span><span class="o">=</span><span class="s1">&#39;left&#39;</span><span class="p">,</span> <span class="n">tox</span><span class="o">=</span><span class="n">C1</span><span class="o">.</span><span class="n">end</span><span class="p">)</span>
-<span class="n">dot3</span> <span class="o">=</span> <span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">DOT</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">)</span>
-<span class="n">dot3</span><span class="o">.</span><span class="n">add_label</span><span class="p">(</span><span class="s1">&#39;3&#39;</span><span class="p">,</span>  <span class="n">loc</span><span class="o">=</span><span class="s1">&#39;center&#39;</span><span class="p">,</span> <span class="n">ofst</span><span class="o">=</span><span class="p">[</span><span class="mf">.5</span><span class="p">,</span><span class="o">-</span><span class="mf">.7</span><span class="p">],</span> <span class="n">align</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;right&#39;</span><span class="p">,</span><span class="s1">&#39;bottom&#39;</span><span class="p">))</span>
-<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">LINE</span><span class="p">,</span> <span class="n">d</span><span class="o">=</span><span class="s1">&#39;right&#39;</span><span class="p">,</span><span class="n">xy</span><span class="o">=</span><span class="n">L1</span><span class="o">.</span><span class="n">end</span><span class="p">,</span> <span class="n">tox</span><span class="o">=</span><span class="n">C1</span><span class="o">.</span><span class="n">end</span><span class="p">)</span>
-<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">LINE</span><span class="p">,</span> <span class="n">d</span><span class="o">=</span><span class="s1">&#39;up&#39;</span><span class="p">,</span><span class="n">l</span><span class="o">=</span><span class="mf">0.25</span><span class="p">)</span>
-<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">VDD</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;$V_</span><span class="si">{dd}</span><span class="s1">$&#39;</span><span class="p">)</span>
-<span class="n">d</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
+<div class="cell docutils container">
 <div class="cell_output docutils container">
-<img alt="_images/Klasse-F_5_0.svg" src="_images/Klasse-F_5_0.svg" /></div>
-</div>
-<div class="figure align-default" id="ffig1">
-<img alt="_images/mpl.svg" src="_images/mpl.svg" /><p class="caption"><span class="caption-number">Fig. 31 </span><span class="caption-text">Basisschema van de klasse F versterker</span><a class="headerlink" href="#ffig1" title="Permallink naar deze afbeelding">¶</a></p>
-</div>
-<div class="cell tag_hide-input docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">spicelisting</span><span class="p">(</span><span class="s2">&quot;simul\classF.sp&quot;</span><span class="p">)</span>
-</pre></div>
+<figure class="align-default" id="ffig1">
+<img alt="_images/38e6053376ab572d73fc33cee3c94308b194b2616410bb5203cf7366572eb640.svg" src="_images/38e6053376ab572d73fc33cee3c94308b194b2616410bb5203cf7366572eb640.svg" /><figcaption>
+<p><span class="caption-number">Fig. 36 </span><span class="caption-text">Basisschema van de klasse F versterker.</span><a class="headerlink" href="#ffig1" title="Permallink naar deze afbeelding">#</a></p>
+</figcaption>
+</figure>
 </div>
 </div>
+<div class="cell docutils container">
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>* klasse F basiscircuit
 Q_Q1         2 1 0 Q2
@@ -440,130 +524,47 @@ L_L3         5 2   0.111uH
 </div>
 </div>
 </div>
-<p class=spicecaption>Basis Klasse F circuit</p><div class="cell tag_hide-input docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">circuit</span><span class="o">=</span><span class="n">SpiceParser</span><span class="p">(</span><span class="n">path</span><span class="o">=</span><span class="s1">&#39;simul\classF.sp&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">build_circuit</span><span class="p">()</span>  
-<span class="n">end_time</span><span class="o">=</span><span class="mf">1e-5</span>
-<span class="n">simulator</span> <span class="o">=</span> <span class="n">circuit</span><span class="o">.</span><span class="n">simulator</span><span class="p">(</span><span class="n">temperature</span><span class="o">=</span><span class="mi">25</span><span class="p">,</span> <span class="n">nominal_temperature</span><span class="o">=</span><span class="mi">25</span><span class="p">)</span>
-<span class="n">analysis</span> <span class="o">=</span> <span class="n">simulator</span><span class="o">.</span><span class="n">transient</span><span class="p">(</span><span class="n">step_time</span><span class="o">=</span><span class="mf">2e-10</span><span class="p">,</span> <span class="n">end_time</span><span class="o">=</span><span class="n">end_time</span><span class="p">)</span>
-
-<span class="n">figure</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">analysis</span><span class="o">.</span><span class="n">time</span><span class="o">*</span><span class="mf">1e6</span><span class="p">,</span><span class="n">analysis</span><span class="o">.</span><span class="n">nodes</span><span class="p">[</span><span class="s1">&#39;5&#39;</span><span class="p">],</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;V(5) [V]  ($V_</span><span class="si">{out}</span><span class="s1">$)&#39;</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">analysis</span><span class="o">.</span><span class="n">time</span><span class="o">*</span><span class="mf">1e6</span><span class="p">,</span><span class="n">analysis</span><span class="o">.</span><span class="n">nodes</span><span class="p">[</span><span class="s1">&#39;2&#39;</span><span class="p">],</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;V(2) [V]&#39;</span> <span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">analysis</span><span class="o">.</span><span class="n">time</span><span class="o">*</span><span class="mf">1e6</span><span class="p">,</span><span class="n">analysis</span><span class="o">.</span><span class="n">nodes</span><span class="p">[</span><span class="s1">&#39;1&#39;</span><span class="p">],</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;V(1) [V]  ($V_</span><span class="si">{in}</span><span class="s1">$)&#39;</span> <span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">analysis</span><span class="o">.</span><span class="n">time</span><span class="o">*</span><span class="mf">1e6</span><span class="p">,</span><span class="n">analysis</span><span class="o">.</span><span class="n">nodes</span><span class="p">[</span><span class="s1">&#39;3&#39;</span><span class="p">],</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;V(3) [V]  ($V_</span><span class="si">{dd}</span><span class="s1">$)&#39;</span> <span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span> <span class="n">loc</span><span class="o">=</span><span class="p">(</span><span class="mf">0.01</span><span class="p">,</span><span class="mf">.88</span><span class="p">))</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;tijd [us]&#39;</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">end_time</span><span class="o">*</span><span class="mf">1e6</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Voltage [V]&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
+<p class=spicecaption>Basis Klasse F circuit</p><div class="cell docutils container">
 <div class="cell_output docutils container">
-<img alt="_images/Klasse-F_9_0.png" src="_images/Klasse-F_9_0.png" />
+<figure class="align-default" id="ffig2">
+<img alt="_images/38c7d415a6079657b72a2164feb9ec65802acd98a3218cef17eef7acad06743a.png" src="_images/38c7d415a6079657b72a2164feb9ec65802acd98a3218cef17eef7acad06743a.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 37 </span><span class="caption-text">Spanningen op de verschillende knopen van de klasse F versterker.</span><a class="headerlink" href="#ffig2" title="Permallink naar deze afbeelding">#</a></p>
+</figcaption>
+</figure>
 </div>
-</div>
-<div class="figure align-default" id="ffig2">
-<img alt="_images/mpl.svg" src="_images/mpl.svg" /><p class="caption"><span class="caption-number">Fig. 32 </span><span class="caption-text">Spanningen op de verschillende knopen van de klasse F versterker</span><a class="headerlink" href="#ffig2" title="Permallink naar deze afbeelding">¶</a></p>
 </div>
 <p>Wanneer we op basis van de spanningen bekomen in de bovenstaande figuur de spanningen over de trilkring van de eerste hamronische en de spanningen over de trilkring van de derde harmonische plotten, zien we dat op moment dat de eerste harmonische een minimum bereikt, de derde harmonische piekt. Dit heeft een belangrijk voordeel, namelijk de spanning over het totale circuit wordt kleiner of er kan met dezelfde spanning een veel grotere swing bekomen worden.</p>
-<div class="cell tag_hide-input docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">figure</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">analysis</span><span class="o">.</span><span class="n">time</span><span class="o">*</span><span class="mf">1e6</span><span class="p">,</span><span class="n">analysis</span><span class="o">.</span><span class="n">nodes</span><span class="p">[</span><span class="s1">&#39;5&#39;</span><span class="p">]</span><span class="o">-</span><span class="n">analysis</span><span class="o">.</span><span class="n">nodes</span><span class="p">[</span><span class="s1">&#39;3&#39;</span><span class="p">],</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;LC 1&#39;</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">analysis</span><span class="o">.</span><span class="n">time</span><span class="o">*</span><span class="mf">1e6</span><span class="p">,</span><span class="n">analysis</span><span class="o">.</span><span class="n">nodes</span><span class="p">[</span><span class="s1">&#39;2&#39;</span><span class="p">]</span><span class="o">-</span><span class="n">analysis</span><span class="o">.</span><span class="n">nodes</span><span class="p">[</span><span class="s1">&#39;5&#39;</span><span class="p">],</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;LC 3&#39;</span> <span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span> <span class="n">loc</span><span class="o">=</span><span class="p">(</span><span class="mf">0.01</span><span class="p">,</span><span class="mf">.88</span><span class="p">))</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;tijd [us]&#39;</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">end_time</span><span class="o">*</span><span class="mf">1e6</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Voltage [V]&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
+<div class="cell docutils container">
 <div class="cell_output docutils container">
-<img alt="_images/Klasse-F_12_0.png" src="_images/Klasse-F_12_0.png" />
+<figure class="align-default" id="ffig3">
+<img alt="_images/e4d219152e1088fdf785f29dd116a5194ba06ce2052a265403e81d1961883196.png" src="_images/e4d219152e1088fdf785f29dd116a5194ba06ce2052a265403e81d1961883196.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 38 </span><span class="caption-text">Verloop van de spanning over de eerste (LC1) en over de derde (LC3) harmonische.</span><a class="headerlink" href="#ffig3" title="Permallink naar deze afbeelding">#</a></p>
+</figcaption>
+</figure>
 </div>
 </div>
-<div class="figure align-default" id="ffig3">
-<img alt="_images/mpl.svg" src="_images/mpl.svg" /><p class="caption"><span class="caption-number">Fig. 33 </span><span class="caption-text">Verloop van de spanning over de eerste (LC1) en over de derde (LC3) harmonische</span><a class="headerlink" href="#ffig3" title="Permallink naar deze afbeelding">¶</a></p>
-</div>
-<div class="cell tag_hide-input docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">figure</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">analysis</span><span class="o">.</span><span class="n">time</span><span class="o">*</span><span class="mf">1e6</span><span class="p">,</span><span class="o">-</span><span class="n">analysis</span><span class="o">.</span><span class="n">branches</span><span class="p">[</span><span class="s1">&#39;v_v3&#39;</span><span class="p">],</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;v_v3&#39;</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;tijd [us]&#39;</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">end_time</span><span class="o">*</span><span class="mf">1e6</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Collector Current [A]&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
+<div class="cell docutils container">
 <div class="cell_output docutils container">
-<img alt="_images/Klasse-F_14_0.png" src="_images/Klasse-F_14_0.png" />
+<figure class="align-default" id="ffig4">
+<img alt="_images/c44109b03711b28998f33dd7063a61a34862e484a4f0ad430870e501ff3dd4c1.png" src="_images/c44109b03711b28998f33dd7063a61a34862e484a4f0ad430870e501ff3dd4c1.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 39 </span><span class="caption-text">Verloop van de collector current.</span><a class="headerlink" href="#ffig4" title="Permallink naar deze afbeelding">#</a></p>
+</figcaption>
+</figure>
 </div>
 </div>
-<div class="figure align-default" id="ffig4">
-<img alt="_images/mpl.svg" src="_images/mpl.svg" /><p class="caption"><span class="caption-number">Fig. 34 </span><span class="caption-text">Verloop van de collector current</span><a class="headerlink" href="#ffig4" title="Permallink naar deze afbeelding">¶</a></p>
-</div>
-<div class="cell tag_hide-input docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">d</span> <span class="o">=</span> <span class="n">schem</span><span class="o">.</span><span class="n">Drawing</span><span class="p">()</span>
-<span class="n">T</span> <span class="o">=</span> <span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">BJT_NPN</span><span class="p">)</span>
-<span class="n">Ri</span> <span class="o">=</span> <span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">RES</span><span class="p">,</span> <span class="n">d</span><span class="o">=</span><span class="s1">&#39;left&#39;</span><span class="p">,</span> <span class="n">xy</span><span class="o">=</span><span class="n">T</span><span class="o">.</span><span class="n">base</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;$R_</span><span class="si">{in}</span><span class="s1">$&#39;</span><span class="p">)</span>
-<span class="n">dot1</span> <span class="o">=</span> <span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">DOT</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">)</span>
-<span class="n">dot1</span><span class="o">.</span><span class="n">add_label</span><span class="p">(</span><span class="s1">&#39;1&#39;</span><span class="p">,</span>  <span class="n">loc</span><span class="o">=</span><span class="s1">&#39;center&#39;</span><span class="p">,</span> <span class="n">ofst</span><span class="o">=</span><span class="p">[</span><span class="mf">.5</span><span class="p">,</span><span class="o">-</span><span class="mf">.7</span><span class="p">],</span> <span class="n">align</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;right&#39;</span><span class="p">,</span><span class="s1">&#39;bottom&#39;</span><span class="p">))</span>
-<span class="c1">#d.labelI(Ri, &#39;input current&#39;)</span>
-<span class="n">Vi</span> <span class="o">=</span> <span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">SOURCE_V</span><span class="p">,</span><span class="n">d</span><span class="o">=</span><span class="s1">&#39;down&#39;</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;$V_</span><span class="si">{in}</span><span class="s1">$&#39;</span><span class="p">,</span><span class="n">zoom</span><span class="o">=</span><span class="mf">0.75</span><span class="p">)</span>
-<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">LINE</span><span class="p">,</span><span class="n">d</span><span class="o">=</span><span class="s1">&#39;right&#39;</span><span class="p">,</span>  <span class="n">tox</span><span class="o">=</span><span class="n">T</span><span class="o">.</span><span class="n">emitter</span><span class="p">)</span>
-<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">GND</span><span class="p">)</span>
-<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">LINE</span><span class="p">,</span><span class="n">d</span><span class="o">=</span><span class="s1">&#39;up&#39;</span><span class="p">,</span>  <span class="n">toy</span><span class="o">=</span><span class="n">T</span><span class="o">.</span><span class="n">emitter</span><span class="p">)</span>
-<span class="n">dot2</span> <span class="o">=</span> <span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">DOT</span><span class="p">,</span> <span class="n">xy</span><span class="o">=</span><span class="n">T</span><span class="o">.</span><span class="n">collector</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">)</span>
-<span class="n">dot2</span><span class="o">.</span><span class="n">add_label</span><span class="p">(</span><span class="s1">&#39;2&#39;</span><span class="p">,</span>  <span class="n">loc</span><span class="o">=</span><span class="s1">&#39;center&#39;</span><span class="p">,</span> <span class="n">ofst</span><span class="o">=</span><span class="p">[</span><span class="mf">.5</span><span class="p">,</span><span class="o">-</span><span class="mf">.7</span><span class="p">],</span> <span class="n">align</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;right&#39;</span><span class="p">,</span><span class="s1">&#39;bottom&#39;</span><span class="p">))</span>
-<span class="n">L2</span> <span class="o">=</span> <span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">INDUCTOR2</span><span class="p">,</span> <span class="n">d</span><span class="o">=</span><span class="s1">&#39;up&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;$L_2$&#39;</span><span class="p">)</span>
-<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">VDD</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;$V_</span><span class="si">{dd}</span><span class="s1">$&#39;</span><span class="p">)</span>
-<span class="n">C2</span> <span class="o">=</span> <span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">CAP</span><span class="p">,</span> <span class="n">xy</span><span class="o">=</span><span class="n">T</span><span class="o">.</span><span class="n">collector</span><span class="p">,</span> <span class="n">d</span><span class="o">=</span><span class="s1">&#39;right&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;$C_2$&#39;</span><span class="p">)</span>
-<span class="n">dot5</span> <span class="o">=</span> <span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">DOT</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">)</span>
-<span class="n">dot5</span><span class="o">.</span><span class="n">add_label</span><span class="p">(</span><span class="s1">&#39;5&#39;</span><span class="p">,</span>  <span class="n">loc</span><span class="o">=</span><span class="s1">&#39;center&#39;</span><span class="p">,</span> <span class="n">ofst</span><span class="o">=</span><span class="p">[</span><span class="mf">.5</span><span class="p">,</span><span class="o">-</span><span class="mf">.7</span><span class="p">],</span> <span class="n">align</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;right&#39;</span><span class="p">,</span><span class="s1">&#39;bottom&#39;</span><span class="p">))</span>
-<span class="n">C3</span> <span class="o">=</span> <span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">CAP</span><span class="p">,</span> <span class="n">d</span><span class="o">=</span><span class="s1">&#39;right&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;$C_3$&#39;</span><span class="p">)</span>
-<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">LINE</span><span class="p">,</span> <span class="n">xy</span><span class="o">=</span><span class="n">C3</span><span class="o">.</span><span class="n">start</span><span class="p">,</span> <span class="n">d</span><span class="o">=</span><span class="s1">&#39;down&#39;</span><span class="p">,</span> <span class="n">l</span><span class="o">=</span><span class="mf">1.55</span><span class="p">)</span>
-<span class="n">L3</span> <span class="o">=</span> <span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">INDUCTOR2</span><span class="p">,</span> <span class="n">d</span><span class="o">=</span><span class="s1">&#39;right&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;$L_3$&#39;</span><span class="p">)</span>
-<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">LINE</span><span class="p">,</span> <span class="n">d</span><span class="o">=</span><span class="s1">&#39;up&#39;</span><span class="p">,</span> <span class="n">l</span><span class="o">=</span><span class="mf">1.55</span><span class="p">)</span>
-<span class="n">dot3</span> <span class="o">=</span> <span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">DOT</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">)</span>
-<span class="n">dot3</span><span class="o">.</span><span class="n">add_label</span><span class="p">(</span><span class="s1">&#39;3&#39;</span><span class="p">,</span>  <span class="n">loc</span><span class="o">=</span><span class="s1">&#39;center&#39;</span><span class="p">,</span> <span class="n">ofst</span><span class="o">=</span><span class="p">[</span><span class="mf">.5</span><span class="p">,</span><span class="o">-</span><span class="mf">.7</span><span class="p">],</span> <span class="n">align</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;right&#39;</span><span class="p">,</span><span class="s1">&#39;bottom&#39;</span><span class="p">))</span>
-<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">LINE</span><span class="p">,</span> <span class="n">d</span><span class="o">=</span><span class="s1">&#39;right&#39;</span><span class="p">,</span> <span class="n">l</span><span class="o">=</span><span class="mf">1.25</span><span class="p">)</span>
-<span class="n">L1</span> <span class="o">=</span> <span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">INDUCTOR2</span><span class="p">,</span> <span class="n">d</span><span class="o">=</span><span class="s1">&#39;down&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;$L_1$&#39;</span><span class="p">)</span>
-<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">LINE</span><span class="p">,</span> <span class="n">xy</span><span class="o">=</span><span class="n">L1</span><span class="o">.</span><span class="n">start</span><span class="p">,</span> <span class="n">d</span><span class="o">=</span><span class="s1">&#39;right&#39;</span><span class="p">,</span> <span class="n">l</span><span class="o">=</span><span class="mf">1.5</span><span class="p">)</span>
-<span class="n">C1</span> <span class="o">=</span> <span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">CAP</span><span class="p">,</span> <span class="n">d</span><span class="o">=</span><span class="s1">&#39;down&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;$C_1$&#39;</span><span class="p">)</span>
-<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">LINE</span><span class="p">,</span> <span class="n">xy</span><span class="o">=</span><span class="n">C1</span><span class="o">.</span><span class="n">start</span><span class="p">,</span> <span class="n">d</span><span class="o">=</span><span class="s1">&#39;right&#39;</span><span class="p">,</span> <span class="n">l</span><span class="o">=</span><span class="mf">1.5</span><span class="p">)</span>
-<span class="n">R</span> <span class="o">=</span> <span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">RES</span><span class="p">,</span> <span class="n">d</span><span class="o">=</span><span class="s1">&#39;down&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;$R_L$&#39;</span><span class="p">)</span>
-<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">LINE</span><span class="p">,</span> <span class="n">xy</span><span class="o">=</span><span class="n">R</span><span class="o">.</span><span class="n">start</span><span class="p">,</span> <span class="n">d</span><span class="o">=</span><span class="s1">&#39;right&#39;</span><span class="p">,</span> <span class="n">l</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
-<span class="n">dot</span><span class="o">=</span><span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">DOT_OPEN</span><span class="p">,</span> <span class="n">rgtlabel</span><span class="o">=</span><span class="s1">&#39;$v_</span><span class="si">{out}</span><span class="s1">$&#39;</span><span class="p">)</span>
-<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">LINE</span><span class="p">,</span><span class="n">xy</span><span class="o">=</span><span class="n">R</span><span class="o">.</span><span class="n">end</span><span class="p">,</span> <span class="n">d</span><span class="o">=</span><span class="s1">&#39;left&#39;</span><span class="p">,</span> <span class="n">tox</span><span class="o">=</span><span class="n">C1</span><span class="o">.</span><span class="n">end</span><span class="p">)</span>
-<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">DOT</span><span class="p">)</span>
-<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">LINE</span><span class="p">,</span> <span class="n">d</span><span class="o">=</span><span class="s1">&#39;left&#39;</span><span class="p">,</span><span class="n">xy</span><span class="o">=</span><span class="n">C1</span><span class="o">.</span><span class="n">end</span><span class="p">,</span> <span class="n">tox</span><span class="o">=</span><span class="n">L1</span><span class="o">.</span><span class="n">end</span><span class="p">)</span>
-<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">DOT</span><span class="p">)</span>
-<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">LINE</span><span class="p">,</span> <span class="n">xy</span><span class="o">=</span><span class="n">L1</span><span class="o">.</span><span class="n">end</span><span class="p">,</span>  <span class="n">tox</span><span class="o">=</span><span class="n">T</span><span class="o">.</span><span class="n">emitter</span><span class="p">,</span> <span class="n">d</span><span class="o">=</span><span class="s1">&#39;left&#39;</span><span class="p">)</span>
-<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">DOT</span><span class="p">)</span>
-<span class="n">d</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
+<div class="cell docutils container">
 <div class="cell_output docutils container">
-<img alt="_images/Klasse-F_16_0.svg" src="_images/Klasse-F_16_0.svg" /></div>
-</div>
-<div class="figure align-default" id="ffig5">
-<img alt="_images/mpl.svg" src="_images/mpl.svg" /><p class="caption"><span class="caption-number">Fig. 35 </span><span class="caption-text">Basisschema van de klasse F versterker waarbij de uitgang oscilleert rond de grond</span><a class="headerlink" href="#ffig5" title="Permallink naar deze afbeelding">¶</a></p>
-</div>
-<div class="cell tag_hide-input docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">spicelisting</span><span class="p">(</span><span class="s1">&#39;simul\classF2.sp&#39;</span><span class="p">)</span>
-</pre></div>
+<figure class="align-default" id="ffig5">
+<img alt="_images/c3ffb1093e7b53b17c8ff795b4a17040f81d8a46968c811fdabcfd0ba1b85ec2.svg" src="_images/c3ffb1093e7b53b17c8ff795b4a17040f81d8a46968c811fdabcfd0ba1b85ec2.svg" /><figcaption>
+<p><span class="caption-number">Fig. 40 </span><span class="caption-text">Basisschema van de klasse F versterker waarbij de uitgang oscilleert rond de grond.</span><a class="headerlink" href="#ffig5" title="Permallink naar deze afbeelding">#</a></p>
+</figcaption>
+</figure>
 </div>
 </div>
+<div class="cell docutils container">
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>* klasseF
 Q_Q1         2 1 0 Q2
@@ -582,56 +583,27 @@ C_C3         2 5   1000n
 </div>
 </div>
 </div>
-<p class=spicecaption>Klasse F circuit waarbij de uitgang oscilleert rond de grond</p><div class="cell tag_hide-input docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">circuit</span><span class="o">=</span><span class="n">SpiceParser</span><span class="p">(</span><span class="n">path</span><span class="o">=</span><span class="s1">&#39;simul\classF2.sp&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">build_circuit</span><span class="p">()</span>  
-<span class="n">end_time</span><span class="o">=</span><span class="mf">1e-5</span>
-<span class="n">simulator</span> <span class="o">=</span> <span class="n">circuit</span><span class="o">.</span><span class="n">simulator</span><span class="p">(</span><span class="n">temperature</span><span class="o">=</span><span class="mi">25</span><span class="p">,</span> <span class="n">nominal_temperature</span><span class="o">=</span><span class="mi">25</span><span class="p">)</span>
-<span class="n">analysis</span> <span class="o">=</span> <span class="n">simulator</span><span class="o">.</span><span class="n">transient</span><span class="p">(</span><span class="n">step_time</span><span class="o">=</span><span class="mf">2e-10</span><span class="p">,</span> <span class="n">end_time</span><span class="o">=</span><span class="n">end_time</span><span class="p">)</span>
-
-<span class="n">figure</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">analysis</span><span class="o">.</span><span class="n">time</span><span class="o">*</span><span class="mf">1e6</span><span class="p">,</span><span class="n">analysis</span><span class="o">.</span><span class="n">nodes</span><span class="p">[</span><span class="s1">&#39;3&#39;</span><span class="p">],</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;V(3) [V]  ($V_</span><span class="si">{out}</span><span class="s1">$)&#39;</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">analysis</span><span class="o">.</span><span class="n">time</span><span class="o">*</span><span class="mf">1e6</span><span class="p">,</span><span class="n">analysis</span><span class="o">.</span><span class="n">nodes</span><span class="p">[</span><span class="s1">&#39;2&#39;</span><span class="p">],</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;V(2) [V]&#39;</span> <span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">analysis</span><span class="o">.</span><span class="n">time</span><span class="o">*</span><span class="mf">1e6</span><span class="p">,</span><span class="n">analysis</span><span class="o">.</span><span class="n">nodes</span><span class="p">[</span><span class="s1">&#39;1&#39;</span><span class="p">],</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;V(1) [V]  ($V_</span><span class="si">{in}</span><span class="s1">$)&#39;</span> <span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">analysis</span><span class="o">.</span><span class="n">time</span><span class="o">*</span><span class="mf">1e6</span><span class="p">,</span><span class="n">analysis</span><span class="o">.</span><span class="n">nodes</span><span class="p">[</span><span class="s1">&#39;5&#39;</span><span class="p">],</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;V(5) [V] &#39;</span> <span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span> <span class="n">loc</span><span class="o">=</span><span class="p">(</span><span class="mf">0.61</span><span class="p">,</span><span class="mf">.86</span><span class="p">))</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;tijd [us]&#39;</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">end_time</span><span class="o">*</span><span class="mf">1e6</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Voltage [V]&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
+<p class=spicecaption>Klasse F circuit waarbij de uitgang oscilleert rond de grond</p><div class="cell docutils container">
 <div class="cell_output docutils container">
-<img alt="_images/Klasse-F_20_0.png" src="_images/Klasse-F_20_0.png" />
+<figure class="align-default" id="ffig6">
+<img alt="_images/af96962231145acc333c1a5c465e7a3646309b1a3a76caf7e72ec8f862121d3d.png" src="_images/af96962231145acc333c1a5c465e7a3646309b1a3a76caf7e72ec8f862121d3d.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 41 </span><span class="caption-text">Spice simulatie van de Klasse F waarbij de uitgang oscilleert rond de grond.</span><a class="headerlink" href="#ffig6" title="Permallink naar deze afbeelding">#</a></p>
+</figcaption>
+</figure>
 </div>
 </div>
-<div class="figure align-default" id="ffig6">
-<img alt="_images/mpl.svg" src="_images/mpl.svg" /><p class="caption"><span class="caption-number">Fig. 36 </span><span class="caption-text">Spice simulatie van de Klasse F waarbij de uitgang oscilleert rond de grond.</span><a class="headerlink" href="#ffig6" title="Permallink naar deze afbeelding">¶</a></p>
-</div>
-<div class="cell tag_hide-input docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">figure</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">analysis</span><span class="o">.</span><span class="n">time</span><span class="o">*</span><span class="mf">1e6</span><span class="p">,</span><span class="n">analysis</span><span class="o">.</span><span class="n">nodes</span><span class="p">[</span><span class="s1">&#39;3&#39;</span><span class="p">],</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;V(3) [V]  ($V_</span><span class="si">{out}</span><span class="s1">$)&#39;</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">analysis</span><span class="o">.</span><span class="n">time</span><span class="o">*</span><span class="mf">1e6</span><span class="p">,</span><span class="n">analysis</span><span class="o">.</span><span class="n">nodes</span><span class="p">[</span><span class="s1">&#39;5&#39;</span><span class="p">]</span><span class="o">-</span><span class="n">analysis</span><span class="o">.</span><span class="n">nodes</span><span class="p">[</span><span class="s1">&#39;3&#39;</span><span class="p">],</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;V(5)-V(3) [V]&#39;</span> <span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span> <span class="n">loc</span><span class="o">=</span><span class="p">(</span><span class="mf">0.01</span><span class="p">,</span><span class="mf">.88</span><span class="p">))</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;tijd [us]&#39;</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">end_time</span><span class="o">*</span><span class="mf">1e6</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Voltage [V]&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
+<div class="cell docutils container">
 <div class="cell_output docutils container">
-<img alt="_images/Klasse-F_22_0.png" src="_images/Klasse-F_22_0.png" />
+<figure class="align-default" id="ffig7">
+<img alt="_images/5e2dc237065ab5588bcb28a3e644a6ae3c314f3f9dbc86e3c5dd1487e6d04e0b.png" src="_images/5e2dc237065ab5588bcb28a3e644a6ae3c314f3f9dbc86e3c5dd1487e6d04e0b.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 42 </span><span class="caption-text">Spice simulatie van de Klasse F waarbij de uitgang oscilleert rond de grond. Verloop van de spanning over de eerste (LC1) en over de derde (LC3) harmonische.</span><a class="headerlink" href="#ffig7" title="Permallink naar deze afbeelding">#</a></p>
+</figcaption>
+</figure>
 </div>
 </div>
-<div class="figure align-default" id="ffig7">
-<img alt="_images/mpl.svg" src="_images/mpl.svg" /><p class="caption"><span class="caption-number">Fig. 37 </span><span class="caption-text">Spice simulatie van de Klasse F waarbij de uitgang oscilleert rond de grond. Verloop van de spanning over de eerste (LC1) en over de derde (LC3) harmonische</span><a class="headerlink" href="#ffig7" title="Permallink naar deze afbeelding">¶</a></p>
-</div>
-</div>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -655,9 +627,11 @@ C_C3         2 5   1000n
 
               </div>
               
-            
-                <!-- Previous / next buttons -->
-<div class='prev-next-area'> 
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
     <a class='left-prev' id="prev-link" href="Klasse-C.html" title="vorige pagina">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
@@ -673,23 +647,27 @@ C_C3         2 5   1000n
     <i class="fas fa-angle-right"></i>
     </a>
 </div>
-            
+            </footer>
         </div>
     </div>
-    <footer class="footer">
-  <p>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Jan Genoe (jan.genoe@kuleuven.be)<br/>
+  
+</p>
+        </footer>
+    </div>
     
-      Door Jan Genoe (jan.genoe@kuleuven.be)<br/>
-    
-  </p>
-</footer>
-</main>
+</div>
 
 
       </div>
     </div>
   
-  <script src="_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
 
   </body>
 </html>

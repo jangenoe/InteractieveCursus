@@ -4,11 +4,13 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>Capacitive voltage conversion &#8212; Analog Design Techniques</title>
     
-  <link href="_static/css/theme.css" rel="stylesheet">
-  <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -18,20 +20,16 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    
-      
-
-    
     <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
-    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
     
-  <link rel="preload" as="script" href="_static/js/index.be7d3bbb2ef33a8344ce.js">
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
 
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
@@ -39,18 +37,20 @@
     <script src="_static/doctools.js"></script>
     <script src="_static/clipboard.min.js"></script>
     <script src="_static/copybutton.js"></script>
-    <script>let toggleHintShow = ' ';</script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="_static/togglebutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script src="_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
 const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="prev" title="Folded cascode stage" href="FoldedCascode.html" />
@@ -61,7 +61,21 @@ const thebe_selector_output = ".output, .cell_output"
     <!-- Google Analytics -->
     
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
     
     <div class="container-fluid" id="banner"></div>
 
@@ -70,9 +84,10 @@ const thebe_selector_output = ".output, .cell_output"
     <div class="container-xl">
       <div class="row">
           
-<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
-    
-        <div class="navbar-brand-box">
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="index.html">
       
         <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
@@ -90,14 +105,15 @@ const thebe_selector_output = ".output, .cell_output"
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
-        <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="intro.html">
-   Analog Design Techniques
-  </a>
- </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Analog Design Techniques
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Chip Design
  </span>
@@ -128,12 +144,17 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 
     </div>
-</nav> <!-- To handle the deprecated key -->
-
-<div class="navbar_extra_footer">
-  <a href="https://www.kuleuven.be"> <img src=" http://stijl.kuleuven.be/2016tmp/img/svg/logo.svg" alt="KULeuven"></a>
-</div>
-
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            <a href="https://www.kuleuven.be"> <img src=" http://stijl.kuleuven.be/2016tmp/img/svg/logo.svg" alt="KULeuven"></a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
 </div>
 
 
@@ -141,101 +162,214 @@ const thebe_selector_output = ".output, .cell_output"
 
 
           
-<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
     
-    <div class="topbar container-xl fixed-top">
-    <div class="topbar-contents row">
-        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
-        <div class="col pl-md-4 topbar-main">
-            
-            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
-                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
-                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
-                <i class="fas fa-bars"></i>
-                <i class="fas fa-arrow-left"></i>
-                <i class="fas fa-arrow-up"></i>
-            </button>
-            
-            
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
-            class="fas fa-download"></i></button>
-
-    <div class="dropdown-buttons">
-        <!-- ipynb file if we had a myst markdown file -->
+    <div class="header-article row sticky-top noprint">
         
-        <!-- Download raw file -->
-        <a class="dropdown-buttons" href="_sources/Capacitive voltage conversion.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.ipynb</button></a>
-        <!-- Download PDF via print -->
-        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
-                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/jangenoe/InteractieveCursus/master?urlpath=lab/tree/AnalogDesignTechniques/Capacitive voltage conversion.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://colab.research.google.com/github/jangenoe/InteractieveCursus/blob/master/AnalogDesignTechniques/Capacitive voltage conversion.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Colab"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="_static/images/logo_colab.png">
+  </span>
+<span class="headerbtn__text-container">Colab</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/jangenoe/InteractieveCursus"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/jangenoe/InteractieveCursus/issues/new?title=Issue%20on%20page%20%2FCapacitive voltage conversion.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/jangenoe/InteractieveCursus/edit/master/AnalogDesignTechniques/Capacitive voltage conversion.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Edit this page"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="headerbtn__text-container">suggest edit</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="_sources/Capacitive voltage conversion.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
     </div>
 </div>
 
-            <!-- Source interaction buttons -->
-
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
-    <div class="dropdown-buttons sourcebuttons">
-        <a class="repository-button"
-            href="https://github.com/jangenoe/InteractieveCursus"><button type="button" class="btn btn-secondary topbarbtn"
-                data-toggle="tooltip" data-placement="left" title="Source repository"><i
-                    class="fab fa-github"></i>repository</button></a>
-        <a class="issues-button"
-            href="https://github.com/jangenoe/InteractieveCursus/issues/new?title=Issue%20on%20page%20%2FCapacitive voltage conversion.html&body=Your%20issue%20content%20here."><button
-                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
-        <a class="edit-button" href="https://github.com/jangenoe/InteractieveCursus/edit/master/AnalogDesignTechniques/Capacitive voltage conversion.ipynb"><button
-                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
-    </div>
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
 </div>
-
-            <!-- Full screen (wrap in <a> to have style consistency -->
-
-<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
-        title="Fullscreen mode"><i
-            class="fas fa-expand"></i></button></a>
-
-            <!-- Launch buttons -->
-
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
-    <div class="dropdown-buttons">
-        
-        <a class="binder-button" href="https://mybinder.org/v2/gh/jangenoe/InteractieveCursus/master?urlpath=lab/tree/AnalogDesignTechniques/Capacitive voltage conversion.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
-                data-placement="left"><img class="binder-button-logo"
-                    src="_static/images/logo_binder.svg"
-                    alt="Interact on binder">Binder</button></a>
-        
-        
-        
-        <a class="colab-button" href="https://colab.research.google.com/github/jangenoe/InteractieveCursus/blob/master/AnalogDesignTechniques/Capacitive voltage conversion.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
-                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
-                    src="_static/images/logo_colab.png"
-                    alt="Interact on Colab">Colab</button></a>
-        
-        
     </div>
-</div>
-
-        </div>
-
-        <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
-            
-        </div>
-    </div>
-</div>
-    <div id="main-content" class="row">
-        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
                 <h1>Capacitive voltage conversion</h1>
@@ -246,215 +380,99 @@ const thebe_selector_output = ".output, .cell_output"
                     </div>
                 </div>
             </div>
-            
+            <main id="main-content" role="main">
+                
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="capacitive-voltage-conversion">
-<h1>Capacitive voltage conversion<a class="headerlink" href="#capacitive-voltage-conversion" title="Permalink to this headline">¶</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="capacitive-voltage-conversion">
+<h1>Capacitive voltage conversion<a class="headerlink" href="#capacitive-voltage-conversion" title="Permalink to this headline">#</a></h1>
 <p><a href="./slides/Capacitive voltage conversion.slides.html"><img alt="slides" src="https://img.shields.io/badge/slides-available-blue" /></a></p>
 <p>Classical power conversion makes use of inductors and transformers to deliver power at different voltage levels. However, these components typically transform these power converters into bulky and heavy components. However, there are several applications where we only need a voltage and a rather limited current sourced. Moreover, for power converters on silicon chips, efficient inductors are not possible and capacitive prower converters are needed. In this chapter we discuss those power converters.</p>
 <div class="cell tag_hide-input docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-<span class="kn">import</span> <span class="nn">SchemDraw</span>
-<span class="kn">from</span> <span class="nn">SchemDraw</span> <span class="kn">import</span> <span class="n">elements</span> <span class="k">as</span> <span class="n">e</span>
-
-<span class="k">def</span> <span class="nf">pilarschema</span><span class="p">(</span><span class="n">numberstages</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">add_resistor</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">add_transformer</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
-    <span class="n">d</span> <span class="o">=</span> <span class="n">SchemDraw</span><span class="o">.</span><span class="n">Drawing</span><span class="p">()</span>
-    <span class="k">if</span> <span class="n">add_transformer</span><span class="p">:</span>
-        <span class="n">xf</span><span class="o">=</span><span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">transformer</span><span class="p">(</span><span class="n">t1</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">t2</span><span class="o">=</span><span class="mi">7</span> <span class="p">))</span>
-        <span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">LINE</span><span class="p">,</span> <span class="n">xy</span><span class="o">=</span><span class="n">xf</span><span class="o">.</span><span class="n">p1</span><span class="p">,</span> <span class="n">l</span><span class="o">=</span><span class="n">d</span><span class="o">.</span><span class="n">unit</span><span class="o">/</span><span class="mi">4</span><span class="p">,</span> <span class="n">d</span><span class="o">=</span><span class="s1">&#39;left&#39;</span><span class="p">,</span> <span class="n">lftlabel</span><span class="o">=</span><span class="s1">&#39;p1&#39;</span><span class="p">)</span>
-        <span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">LINE</span><span class="p">,</span> <span class="n">xy</span><span class="o">=</span><span class="n">xf</span><span class="o">.</span><span class="n">p2</span><span class="p">,</span> <span class="n">l</span><span class="o">=</span><span class="n">d</span><span class="o">.</span><span class="n">unit</span><span class="o">/</span><span class="mi">4</span><span class="p">,</span> <span class="n">d</span><span class="o">=</span><span class="s1">&#39;left&#39;</span><span class="p">,</span> <span class="n">lftlabel</span><span class="o">=</span><span class="s1">&#39;p2&#39;</span><span class="p">)</span>
-        <span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">LINE</span><span class="p">,</span> <span class="n">xy</span><span class="o">=</span><span class="n">xf</span><span class="o">.</span><span class="n">s1</span><span class="p">,</span>  <span class="n">d</span><span class="o">=</span><span class="s1">&#39;right&#39;</span><span class="p">,</span> <span class="n">l</span><span class="o">=</span><span class="mf">1.9</span><span class="p">)</span>
-        <span class="n">startpos</span><span class="o">=</span><span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span> <span class="n">e</span><span class="o">.</span><span class="n">DOT</span> <span class="p">)</span>
-        <span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">LINE</span><span class="p">,</span> <span class="n">xy</span><span class="o">=</span><span class="n">xf</span><span class="o">.</span><span class="n">s2</span><span class="p">,</span>  <span class="n">d</span><span class="o">=</span><span class="s1">&#39;right&#39;</span><span class="p">,</span> <span class="n">l</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="n">startpos</span><span class="o">=</span><span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span> <span class="n">e</span><span class="o">.</span><span class="n">DOT</span> <span class="p">)</span>
-        <span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span> <span class="n">e</span><span class="o">.</span><span class="n">LINE</span><span class="p">,</span> <span class="n">d</span><span class="o">=</span><span class="s1">&#39;left&#39;</span><span class="p">,</span> <span class="n">l</span><span class="o">=</span><span class="mf">1.9</span><span class="p">)</span>
-        <span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span> <span class="n">e</span><span class="o">.</span><span class="n">SOURCE_SIN</span><span class="p">,</span> <span class="n">d</span><span class="o">=</span><span class="s1">&#39;down&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;20V&#39;</span><span class="p">)</span>
-        <span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span> <span class="n">e</span><span class="o">.</span><span class="n">LINE</span><span class="p">,</span> <span class="n">d</span><span class="o">=</span><span class="s1">&#39;right&#39;</span><span class="p">,</span> <span class="n">l</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
-    <span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span> <span class="n">e</span><span class="o">.</span><span class="n">DOT</span> <span class="p">)</span>
-    <span class="n">grond</span><span class="o">=</span><span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">GND</span><span class="p">)</span>
-    <span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span> <span class="n">e</span><span class="o">.</span><span class="n">LINE</span><span class="p">,</span> <span class="n">d</span><span class="o">=</span><span class="s1">&#39;right&#39;</span><span class="p">,</span> <span class="n">l</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
-    <span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span> <span class="n">e</span><span class="o">.</span><span class="n">DOT</span> <span class="p">)</span>
-    <span class="n">l1</span><span class="o">=</span><span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span> <span class="n">e</span><span class="o">.</span><span class="n">LINE</span><span class="p">,</span> <span class="n">d</span><span class="o">=</span><span class="s1">&#39;up&#39;</span><span class="p">,</span> <span class="n">toy</span><span class="o">=</span><span class="n">startpos</span><span class="o">.</span><span class="n">end</span><span class="p">,</span><span class="n">xy</span><span class="o">=</span><span class="n">grond</span><span class="o">.</span><span class="n">start</span><span class="p">)</span>
-    <span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span> <span class="n">e</span><span class="o">.</span><span class="n">DOT</span> <span class="p">)</span>
-    <span class="n">pos</span><span class="o">=</span><span class="n">l1</span><span class="o">.</span><span class="n">end</span>
-    <span class="k">for</span> <span class="n">stage</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">numberstages</span><span class="p">):</span> 
-        <span class="n">D1</span><span class="o">=</span><span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">DIODE_F</span><span class="p">,</span> <span class="n">theta</span><span class="o">=</span><span class="mi">135</span><span class="p">,</span> <span class="n">flip</span><span class="o">=</span><span class="kc">True</span> <span class="p">,</span><span class="n">xy</span><span class="o">=</span><span class="n">pos</span><span class="p">)</span>
-        <span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span> <span class="n">e</span><span class="o">.</span><span class="n">DOT</span> <span class="p">)</span>
-        <span class="n">C1</span><span class="o">=</span><span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">CAP</span><span class="p">,</span> <span class="n">d</span><span class="o">=</span><span class="s1">&#39;down&#39;</span><span class="p">,</span> <span class="n">toy</span><span class="o">=</span><span class="n">D1</span><span class="o">.</span><span class="n">start</span> <span class="p">)</span>
-        <span class="n">C1</span><span class="o">.</span><span class="n">add_label</span><span class="p">(</span> <span class="sa">r</span><span class="s1">&#39;$C1_{&#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">stage</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39;}$&#39;</span><span class="p">,</span> <span class="n">loc</span><span class="o">=</span><span class="s1">&#39;top&#39;</span> <span class="p">)</span>
-        <span class="n">D2</span><span class="o">=</span><span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">DIODE_F</span><span class="p">,</span> <span class="n">theta</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">flip</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span><span class="n">xy</span><span class="o">=</span><span class="n">D1</span><span class="o">.</span><span class="n">end</span><span class="p">,</span> <span class="n">tox</span><span class="o">=</span><span class="n">D1</span><span class="o">.</span><span class="n">start</span><span class="p">)</span>
-        <span class="n">D2</span><span class="o">.</span><span class="n">add_label</span><span class="p">(</span> <span class="sa">r</span><span class="s1">&#39;$\alpha_{&#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">stage</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39;}$&#39;</span><span class="p">,</span> <span class="n">loc</span><span class="o">=</span><span class="s1">&#39;lft&#39;</span> <span class="p">)</span>
-        <span class="k">if</span> <span class="n">stage</span> <span class="o">!=</span><span class="n">numberstages</span><span class="o">-</span><span class="mi">1</span><span class="p">:</span>
-            <span class="n">D2</span><span class="o">.</span><span class="n">add_label</span><span class="p">(</span> <span class="sa">r</span><span class="s1">&#39;$\beta_{&#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">stage</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39;}$&#39;</span><span class="p">,</span> <span class="n">loc</span><span class="o">=</span><span class="s1">&#39;rgt&#39;</span> <span class="p">)</span>
-        <span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span> <span class="n">e</span><span class="o">.</span><span class="n">DOT</span> <span class="p">)</span>
-        <span class="n">C2</span><span class="o">=</span><span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">CAP</span><span class="p">,</span> <span class="n">d</span><span class="o">=</span><span class="s1">&#39;down&#39;</span><span class="p">,</span> <span class="n">toy</span><span class="o">=</span><span class="n">D1</span><span class="o">.</span><span class="n">start</span> <span class="p">)</span>
-        <span class="n">C2</span><span class="o">.</span><span class="n">add_label</span><span class="p">(</span> <span class="sa">r</span><span class="s1">&#39;$C2_{&#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">stage</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39;}$&#39;</span><span class="p">,</span> <span class="n">loc</span><span class="o">=</span><span class="s1">&#39;bot&#39;</span> <span class="p">)</span>
-        <span class="n">pos</span><span class="o">=</span><span class="n">D2</span><span class="o">.</span><span class="n">end</span>
-    <span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span> <span class="n">e</span><span class="o">.</span><span class="n">LINE</span><span class="p">,</span> <span class="n">d</span><span class="o">=</span><span class="s1">&#39;right&#39;</span><span class="p">,</span> <span class="n">l</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span><span class="n">xy</span><span class="o">=</span><span class="n">pos</span><span class="p">)</span>
-    <span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span> <span class="n">e</span><span class="o">.</span><span class="n">DOT</span> <span class="p">)</span>
-    <span class="k">if</span> <span class="n">add_resistor</span><span class="p">:</span>
-        <span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span> <span class="n">e</span><span class="o">.</span><span class="n">RES</span><span class="p">,</span> <span class="n">d</span><span class="o">=</span><span class="s1">&#39;down&#39;</span><span class="p">,</span> <span class="n">toy</span><span class="o">=</span><span class="n">grond</span><span class="o">.</span><span class="n">start</span><span class="p">)</span>
-    <span class="n">d</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
-    
-
-<span class="k">def</span> <span class="nf">HVPilar</span><span class="p">(</span><span class="n">vamplitude</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span><span class="n">numberstages</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">vd</span><span class="o">=</span><span class="mf">0.7</span><span class="p">,</span><span class="n">tmax</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span><span class="n">f</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span><span class="n">c1</span><span class="o">=</span><span class="mf">150e-9</span><span class="p">,</span><span class="n">c2</span><span class="o">=</span><span class="mf">150e-9</span><span class="p">,</span><span class="n">g</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">numberofsteps</span><span class="o">=</span><span class="mi">500</span><span class="p">):</span>
-    <span class="n">step</span><span class="o">=</span><span class="n">tmax</span><span class="o">/</span><span class="n">numberofsteps</span>
-    <span class="n">factor</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">numberstages</span><span class="o">*</span><span class="n">g</span><span class="o">/</span><span class="n">c2</span><span class="o">*</span><span class="n">step</span><span class="p">)</span>
-    <span class="n">factor1</span><span class="o">=</span><span class="n">c2</span><span class="o">/</span><span class="p">(</span><span class="n">c1</span><span class="o">+</span><span class="n">c2</span><span class="p">)</span>
-    <span class="n">omega</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">*</span><span class="mi">2</span><span class="o">*</span><span class="n">f</span>
-    <span class="n">time</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">tmax</span><span class="p">,</span><span class="n">step</span><span class="p">)</span>
-    <span class="n">alpha</span><span class="o">=</span><span class="p">[</span><span class="n">vamplitude</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">omega</span><span class="o">*</span><span class="n">time</span><span class="p">)]</span>
-    <span class="n">beta</span><span class="o">=</span><span class="p">[</span><span class="n">time</span><span class="o">*</span><span class="mf">0.0</span><span class="p">]</span>
-    <span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">8</span><span class="p">))</span>
-    <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">time</span><span class="p">,</span><span class="n">alpha</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;input&#39;</span><span class="p">)</span>
-    <span class="k">for</span> <span class="n">stage</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">numberstages</span><span class="p">):</span> 
-        <span class="n">vB</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
-        <span class="n">vE</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
-        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="nb">len</span><span class="p">(</span><span class="n">time</span><span class="p">)):</span>
-            <span class="n">vnext1_1</span><span class="o">=</span><span class="n">vB</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">+</span><span class="n">alpha</span><span class="p">[</span><span class="n">stage</span><span class="p">][</span><span class="n">i</span><span class="p">]</span><span class="o">-</span><span class="n">alpha</span><span class="p">[</span><span class="n">stage</span><span class="p">][</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
-            <span class="n">vnext1_2</span><span class="o">=</span><span class="n">vB</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">+</span><span class="p">(</span><span class="n">alpha</span><span class="p">[</span><span class="n">stage</span><span class="p">][</span><span class="n">i</span><span class="p">]</span><span class="o">-</span><span class="n">alpha</span><span class="p">[</span><span class="n">stage</span><span class="p">][</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span><span class="o">*</span><span class="n">factor1</span> <span class="c1">#  ladingsherverdeling</span>
-            <span class="n">vnext2</span><span class="o">=</span><span class="n">vnext1_2</span><span class="o">-</span><span class="n">vd</span>  
-            <span class="k">if</span> <span class="n">vnext1_1</span><span class="o">&lt;</span><span class="n">beta</span><span class="p">[</span><span class="n">stage</span><span class="p">][</span><span class="n">i</span><span class="p">]</span><span class="o">-</span><span class="n">vd</span><span class="p">:</span>
-                <span class="n">vE</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">vE</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">*</span><span class="n">factor</span><span class="p">)</span>
-                <span class="n">vB</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">beta</span><span class="p">[</span><span class="n">stage</span><span class="p">][</span><span class="n">i</span><span class="p">]</span><span class="o">-</span><span class="n">vd</span><span class="p">)</span>  <span class="c1"># ook hier moet ladingsherverdeling op  te doen</span>
-            <span class="k">else</span><span class="p">:</span>
-                <span class="k">if</span> <span class="n">vnext2</span><span class="o">&gt;</span><span class="n">vE</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]:</span>
-                    <span class="n">vE</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">vnext2</span><span class="p">)</span>
-                    <span class="n">vB</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">vnext1_2</span><span class="p">)</span>
-                <span class="k">else</span><span class="p">:</span>
-                    <span class="n">vB</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">vnext1_1</span><span class="p">)</span>
-                    <span class="n">vE</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">vE</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">*</span><span class="n">factor</span><span class="p">)</span>
-        <span class="n">alpha</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">vB</span><span class="p">)</span>
-        <span class="n">beta</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">vE</span><span class="p">)</span>
-        <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">time</span><span class="p">,</span><span class="n">alpha</span><span class="p">[</span><span class="n">stage</span><span class="o">+</span><span class="mi">1</span><span class="p">],</span><span class="n">label</span><span class="o">=</span><span class="sa">r</span><span class="s1">&#39;$\alpha_{&#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">stage</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39;}$&#39;</span><span class="p">)</span>
-        <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">time</span><span class="p">,</span><span class="n">beta</span><span class="p">[</span><span class="n">stage</span><span class="o">+</span><span class="mi">1</span><span class="p">],</span><span class="n">label</span><span class="o">=</span><span class="sa">r</span><span class="s1">&#39;$\beta_{&#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">stage</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39;}$&#39;</span><span class="p">)</span>
-    <span class="n">ax</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="n">linestyle</span><span class="o">=</span><span class="s2">&quot;-.&quot;</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">)</span>
-    <span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;time (s)&#39;</span><span class="p">)</span>
-    <span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Voltage (V)&#39;</span><span class="p">)</span>
-    <span class="n">ax</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">tmax</span><span class="p">)</span>
-    <span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="s1">&#39;upper left&#39;</span><span class="p">);</span>
-</pre></div>
-</div>
-</div>
 </div>
 <div class="cell tag_hide-input docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pilarschema</span><span class="p">(</span><span class="n">numberstages</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">add_transformer</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
 <div class="cell_output docutils container">
-<img alt="_images/Capacitive voltage conversion_3_0.png" src="_images/Capacitive voltage conversion_3_0.png" />
+<img alt="_images/b5c11994a9c5f1b77e986f0e634ec577806edb70d326ac16c98c3363f9d6b433.png" src="_images/b5c11994a9c5f1b77e986f0e634ec577806edb70d326ac16c98c3363f9d6b433.png" />
 </div>
 </div>
-<div class="figure align-default" id="cfig1">
-<img alt="_images/mpl.svg" src="_images/mpl.svg" /><p class="caption"><span class="caption-number">Fig. 12 </span><span class="caption-text">Voltage doubler schematic with large C2 without resistive load</span><a class="headerlink" href="#cfig1" title="Permalink to this image">¶</a></p>
-</div>
+<figure class="align-default" id="cfig1">
+<img alt="_images/mpl.svg" src="_images/mpl.svg" /><figcaption>
+<p><span class="caption-number">Fig. 12 </span><span class="caption-text">Voltage doubler schematic with large C2 without resistive load</span><a class="headerlink" href="#cfig1" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 <div class="cell tag_hide-input docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">HVPilar</span><span class="p">(</span><span class="n">c1</span><span class="o">=</span><span class="mf">1e-9</span><span class="p">,</span><span class="n">c2</span><span class="o">=</span><span class="mf">150e-9</span><span class="p">,</span> <span class="n">tmax</span><span class="o">=</span><span class="mf">0.1</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
 <div class="cell_output docutils container">
-<img alt="_images/Capacitive voltage conversion_5_0.png" src="_images/Capacitive voltage conversion_5_0.png" />
+<img alt="_images/40b414dfc28aec3cb445d998df5fe5ccbbc4956d4a4151d90dae8722d8e5f4fa.png" src="_images/40b414dfc28aec3cb445d998df5fe5ccbbc4956d4a4151d90dae8722d8e5f4fa.png" />
 </div>
 </div>
-<div class="figure align-default" id="cfig2">
-<img alt="_images/mpl.svg" src="_images/mpl.svg" /><p class="caption"><span class="caption-number">Fig. 13 </span><span class="caption-text">Voltage doubler with large C2 node voltages without resistive load</span><a class="headerlink" href="#cfig2" title="Permalink to this image">¶</a></p>
-</div>
+<figure class="align-default" id="cfig2">
+<img alt="_images/mpl.svg" src="_images/mpl.svg" /><figcaption>
+<p><span class="caption-number">Fig. 13 </span><span class="caption-text">Voltage doubler with large C2 node voltages without resistive load</span><a class="headerlink" href="#cfig2" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 <div class="cell tag_hide-input docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pilarschema</span><span class="p">(</span><span class="n">numberstages</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">add_resistor</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
 <div class="cell_output docutils container">
-<img alt="_images/Capacitive voltage conversion_7_0.png" src="_images/Capacitive voltage conversion_7_0.png" />
+<img alt="_images/ab5e6171238795fb64360c3793b34a9a718c004bf6ec04537be24b7a7e0ffeb7.png" src="_images/ab5e6171238795fb64360c3793b34a9a718c004bf6ec04537be24b7a7e0ffeb7.png" />
 </div>
 </div>
-<div class="figure align-default" id="cfig3">
-<img alt="_images/mpl.svg" src="_images/mpl.svg" /><p class="caption"><span class="caption-number">Fig. 14 </span><span class="caption-text">Voltage doubler schematic with large C2 with resistive load</span><a class="headerlink" href="#cfig3" title="Permalink to this image">¶</a></p>
-</div>
+<figure class="align-default" id="cfig3">
+<img alt="_images/mpl.svg" src="_images/mpl.svg" /><figcaption>
+<p><span class="caption-number">Fig. 14 </span><span class="caption-text">Voltage doubler schematic with large C2 with resistive load</span><a class="headerlink" href="#cfig3" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 <div class="cell tag_hide-input docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">HVPilar</span><span class="p">(</span><span class="n">c1</span><span class="o">=</span><span class="mf">1e-9</span><span class="p">,</span><span class="n">c2</span><span class="o">=</span><span class="mf">150e-9</span><span class="p">,</span> <span class="n">tmax</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span><span class="n">g</span><span class="o">=</span><span class="mf">1e-6</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
 <div class="cell_output docutils container">
-<img alt="_images/Capacitive voltage conversion_9_0.png" src="_images/Capacitive voltage conversion_9_0.png" />
+<img alt="_images/5ee56322102df012a2bc9e24ffcf9c87059cb7ed56625635168b130c0fcf9eea.png" src="_images/5ee56322102df012a2bc9e24ffcf9c87059cb7ed56625635168b130c0fcf9eea.png" />
 </div>
 </div>
-<div class="figure align-default" id="cfig4">
-<img alt="_images/mpl.svg" src="_images/mpl.svg" /><p class="caption"><span class="caption-number">Fig. 15 </span><span class="caption-text">Voltage doubler voltages with large C2 in the presence of resistive load</span><a class="headerlink" href="#cfig4" title="Permalink to this image">¶</a></p>
-</div>
+<figure class="align-default" id="cfig4">
+<img alt="_images/mpl.svg" src="_images/mpl.svg" /><figcaption>
+<p><span class="caption-number">Fig. 15 </span><span class="caption-text">Voltage doubler voltages with large C2 in the presence of resistive load</span><a class="headerlink" href="#cfig4" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 <div class="cell tag_hide-input docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">HVPilar</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
 <div class="cell_output docutils container">
-<img alt="_images/Capacitive voltage conversion_11_0.png" src="_images/Capacitive voltage conversion_11_0.png" />
+<img alt="_images/91f7a8f01aa98f0d1961205c89a1d8a866b0bba6fe1031c11f79c3bdb5e58de9.png" src="_images/91f7a8f01aa98f0d1961205c89a1d8a866b0bba6fe1031c11f79c3bdb5e58de9.png" />
 </div>
 </div>
-<div class="figure align-default" id="cfig5">
-<img alt="_images/mpl.svg" src="_images/mpl.svg" /><p class="caption"><span class="caption-number">Fig. 16 </span><span class="caption-text">Voltage doubler with equal capacitances</span><a class="headerlink" href="#cfig5" title="Permalink to this image">¶</a></p>
-</div>
+<figure class="align-default" id="cfig5">
+<img alt="_images/mpl.svg" src="_images/mpl.svg" /><figcaption>
+<p><span class="caption-number">Fig. 16 </span><span class="caption-text">Voltage doubler with equal capacitances</span><a class="headerlink" href="#cfig5" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 <div class="cell tag_hide-input docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">HVPilar</span><span class="p">(</span><span class="n">g</span><span class="o">=</span><span class="mf">1e-6</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
 <div class="cell_output docutils container">
-<img alt="_images/Capacitive voltage conversion_13_0.png" src="_images/Capacitive voltage conversion_13_0.png" />
+<img alt="_images/f5d2b75bed8bfb0b86e577f5a70034ff608791032567221aacbc948134893d5c.png" src="_images/f5d2b75bed8bfb0b86e577f5a70034ff608791032567221aacbc948134893d5c.png" />
 </div>
 </div>
-<div class="figure align-default" id="cfig6">
-<img alt="_images/mpl.svg" src="_images/mpl.svg" /><p class="caption"><span class="caption-number">Fig. 17 </span><span class="caption-text">Voltage doubler with equal capacitances node voltages and a resistive load</span><a class="headerlink" href="#cfig6" title="Permalink to this image">¶</a></p>
-</div>
+<figure class="align-default" id="cfig6">
+<img alt="_images/mpl.svg" src="_images/mpl.svg" /><figcaption>
+<p><span class="caption-number">Fig. 17 </span><span class="caption-text">Voltage doubler with equal capacitances node voltages and a resistive load</span><a class="headerlink" href="#cfig6" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 <div class="cell tag_hide-input docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pilarschema</span><span class="p">(</span><span class="n">numberstages</span><span class="o">=</span><span class="mi">7</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
 <div class="cell_output docutils container">
-<img alt="_images/Capacitive voltage conversion_15_0.png" src="_images/Capacitive voltage conversion_15_0.png" />
+<img alt="_images/d0d3b5a770801c0a0cbc0d7e7267c74b51b665e1a1f3bde4f8e9489b020fa8cc.png" src="_images/d0d3b5a770801c0a0cbc0d7e7267c74b51b665e1a1f3bde4f8e9489b020fa8cc.png" />
 </div>
 </div>
-<div class="figure align-default" id="cfig7">
-<img alt="_images/mpl.svg" src="_images/mpl.svg" /><p class="caption"><span class="caption-number">Fig. 18 </span><span class="caption-text">Capacitive Voltage upconvertor schematic comprising 7 stages</span><a class="headerlink" href="#cfig7" title="Permalink to this image">¶</a></p>
-</div>
+<figure class="align-default" id="cfig7">
+<img alt="_images/mpl.svg" src="_images/mpl.svg" /><figcaption>
+<p><span class="caption-number">Fig. 18 </span><span class="caption-text">Capacitive Voltage upconvertor schematic comprising 7 stages</span><a class="headerlink" href="#cfig7" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 <div class="cell tag_hide-input docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">HVPilar</span><span class="p">(</span><span class="n">numberstages</span><span class="o">=</span><span class="mi">7</span><span class="p">,</span><span class="n">tmax</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
 <div class="cell_output docutils container">
-<img alt="_images/Capacitive voltage conversion_17_0.png" src="_images/Capacitive voltage conversion_17_0.png" />
+<img alt="_images/30f219568141c8ba490b4c335075ef65e8697f41254f691750f0ad8b5129caac.png" src="_images/30f219568141c8ba490b4c335075ef65e8697f41254f691750f0ad8b5129caac.png" />
 </div>
 </div>
-<div class="figure align-default" id="cfig7b">
-<img alt="_images/mpl.svg" src="_images/mpl.svg" /><p class="caption"><span class="caption-number">Fig. 19 </span><span class="caption-text">Capacitive Voltage upconvertor comprising 7 stages node voltages</span><a class="headerlink" href="#cfig7b" title="Permalink to this image">¶</a></p>
-</div>
+<figure class="align-default" id="cfig7b">
+<img alt="_images/mpl.svg" src="_images/mpl.svg" /><figcaption>
+<p><span class="caption-number">Fig. 19 </span><span class="caption-text">Capacitive Voltage upconvertor comprising 7 stages node voltages</span><a class="headerlink" href="#cfig7b" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 <div class="cell tag_hide-input docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Test including spice-file  (dit werk nog niet)</span>
-
-<span class="c1">#  ![spice](step2.sp)</span>
-</pre></div>
 </div>
-</div>
-</div>
-</div>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -478,9 +496,11 @@ const thebe_selector_output = ".output, .cell_output"
 
               </div>
               
-            
-                <!-- Previous / next buttons -->
-<div class='prev-next-area'> 
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
     <a class='left-prev' id="prev-link" href="FoldedCascode.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
@@ -489,24 +509,27 @@ const thebe_selector_output = ".output, .cell_output"
         </div>
     </a>
 </div>
-            
+            </footer>
         </div>
     </div>
-    <footer class="footer">
-  <p>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Jan Genoe (jan.genoe@kuleuven.be)<br/>
+  
+</p>
+        </footer>
+    </div>
     
-      By Jan Genoe (jan.genoe@kuleuven.be)<br/>
-    
-        &copy; Copyright 2022.<br/>
-  </p>
-</footer>
-</main>
+</div>
 
 
       </div>
     </div>
   
-  <script src="_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
 
   </body>
 </html>
