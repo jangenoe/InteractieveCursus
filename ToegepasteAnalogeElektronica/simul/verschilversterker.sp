@@ -2,7 +2,7 @@
 VDD    1 0 DC=5.0
 VPLUS 10 0 DC=2.5
 VMIN  11 0 SIN(2.5 50U 1E6) DC=2.5
-VIN    9 0 DC=1.5
+VB    9 0 DC=1.5
 C3     3 0   5.914fF
 C4     4 0  14.737fF
 C5     5 0  10.124fF
