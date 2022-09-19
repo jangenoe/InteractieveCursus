@@ -35,5 +35,4 @@ sphinx:
   config:
     language: nl
     html_show_copyright: false
-    nb_render_figure_options: {"caption":"caption to be completed"}
     nb_remove_code_source: true
