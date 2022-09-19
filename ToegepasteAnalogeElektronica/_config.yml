@@ -6,6 +6,7 @@ repository:
   url: https://github.com/jangenoe/InteractieveCursus
   path_to_book: ToegepasteAnalogeElektronica 
 html:
+  favicon: images/favicon.ico
   use_issues_button: true
   use_edit_page_button: true
   use_repository_button: true

@@ -1,15 +1,10 @@
-# Book settings
-# Learn more at https://jupyterbook.org/customize/config.html
-
 title: Interactieve Cursussen 
 author: Jan Genoe (jan.genoe@kuleuven.be)
 logo: images/logo.svg
 only_build_toc_files: true
-
 repository:
   url: https://github.com/jangenoe/InteractieveCursus
   path_to_book: CursusIndex
-
 html:
   favicon: images/favicon.ico
   use_issues_button: false
@@ -40,5 +35,5 @@ parse:
 sphinx:
   config:
     language: nl
-    togglebutton_hint: " "
+    nb_remove_code_source: true
     html_show_copyright: false
