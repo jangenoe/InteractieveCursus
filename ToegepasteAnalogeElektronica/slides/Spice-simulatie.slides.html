@@ -15046,9 +15046,7 @@ div .csl-right-inline{text-align: left}</style>
     <!-- End of mathjax configuration --></head>
 <body class="jp-Notebook" data-jp-theme-light="true" data-jp-theme-name="JupyterLab Light">
 <div class="reveal">
-<div class="slides"><section data-state='kuleuven_title_slide reveal'><section><div class="title">Spice simulatie</div><div class="subtitle">Berekening van elektronische circuits</div><div class="speaker kuleuvenwhite" >Jan Genoe</div><div class="date kuleuvenwhite" >December 2021</div></section></section><section data-state="kuleuven_slide"><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs jp-mod-noInput ">
-
-</div></section></section><section data-state="kuleuven_slide"><section><h6>Basisschema van de verschilversterker</h6><div class="jp-Cell jp-CodeCell jp-Notebook-cell  jp-mod-noInput ">
+<div class="slides"><section data-state='kuleuven_title_slide reveal'><section><div class="title">Spice simulatie</div><div class="subtitle">Berekening van elektronische circuits</div><div class="speaker kuleuvenwhite" >Jan Genoe</div><div class="date kuleuvenwhite" >September 2022</div></section></section><section data-state="kuleuven_slide"><section><h6>Basisschema van de verschilversterker</h6><div class="jp-Cell jp-CodeCell jp-Notebook-cell  jp-mod-noInput ">
 
 <div class="jp-Cell-outputWrapper">
 <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
@@ -17339,21 +17337,7 @@ MP4 6 6 1 1  PMOS w=3.50u L=0.50U
 
 </div>
 
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Vervolgens vinden we in de SPICE listing de capaciteiten (C) van alle knopen ten opzichte van de grondknoop (0) terug. 
-De waarde van deze condensatoren is bekomen nadat de volledige lay-out van het chipontwerp is getekend. Daarna is er door een extractfunctie de overlap van de metaisatie van elk van deze knopen met het grondvlak bepaald, en op basis hiervan is de condensatorwaarde bepaald.
-We vinden ook een parasitaire condensator terug ten opzichte van de voeding, i.e. C25 die staat tussen knoop 5 en de voeding.
-Eigenlijk zijn deze condensatorwaardes voor een eerste simulatie van de versterking niet belangrijk. Deze waardes worden enkel belangrijk als je een exacte waarde wil uitrekenen tijdens een simulatie bij hogere frequentie.</p>
-
-</div>
-</div>
-</div>
-</div></section></section><section data-state="kuleuven_slide"><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell  jp-mod-noInput ">
+</div></section></section><section data-state="kuleuven_slide"><section><h6>nMOS transistors</h6><div class="jp-Cell jp-CodeCell jp-Notebook-cell  jp-mod-noInput ">
 
 <div class="jp-Cell-outputWrapper">
 <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
@@ -17378,7 +17362,7 @@ MN5 6 11 8 0 NMOS w=1.50u L=0.50U
 
 </div>
 
-</div></section></section><section data-state="kuleuven_slide"><section><h6>Basisschema van de verschilversterker</h6><div class="jp-Cell jp-CodeCell jp-Notebook-cell  jp-mod-noInput ">
+</div><div class="fragment"><h6>Basisschema van de verschilversterker</h6><div class="jp-Cell jp-CodeCell jp-Notebook-cell  jp-mod-noInput ">
 
 <div class="jp-Cell-outputWrapper">
 <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
@@ -18130,7 +18114,7 @@ z
 
 </div>
 
-</div></section></section><section data-state="kuleuven_slide"><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell  jp-mod-noInput ">
+</div></div></section></section><section data-state="kuleuven_slide"><section><h6>pMOS transistors</h6><div class="jp-Cell jp-CodeCell jp-Notebook-cell  jp-mod-noInput ">
 
 <div class="jp-Cell-outputWrapper">
 <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
@@ -18154,9 +18138,9 @@ MP4 6 6 1 1  PMOS w=3.50u L=0.50U
 
 </div>
 
-</div></section></section><section data-state="kuleuven_slide"><section><h6>Basisschema van de verschilversterker</h6><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs jp-mod-noInput ">
+</div><div class="fragment"><h6>Basisschema van de verschilversterker</h6><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs jp-mod-noInput ">
 
-</div></section></section><section data-state="kuleuven_slide"><section><h6>Simulatie</h6><div class="jp-Cell jp-CodeCell jp-Notebook-cell  jp-mod-noInput ">
+</div></div></section></section><section data-state="kuleuven_slide"><section><h6>Simulatie</h6><div class="jp-Cell jp-CodeCell jp-Notebook-cell  jp-mod-noInput ">
 
 <div class="jp-Cell-outputWrapper">
 <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
@@ -18182,19 +18166,6 @@ jp-needs-light-background
 </div>
 
 </div>
-
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Het ingangssignaal is gegeven in mV en het uitgangsignaal is gegeven in V. We merken dat we een versterking van ongeveer 800 hebben bekomen.</p>
-
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs jp-mod-noInput ">
 
 </div></section></section><section data-state='kuleuven_structure_slide reveal'><section><div class="endquote">I would rather have questions that can't be answered<BR>than answers that can't be questioned.</div>
   <div class="quoteauthor">Richard Feynman</div></section></section></div>
