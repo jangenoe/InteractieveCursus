@@ -681,7 +681,7 @@ title="Print to PDF"
                 
   <section class="tex2jax_ignore mathjax_ignore" id="klasse-c-versterkers">
 <h1>Klasse C  Versterkers<a class="headerlink" href="#klasse-c-versterkers" title="Permalink naar deze titel">#</a></h1>
-<p><a href="./slides/Klasse-C.slides.html"><img alt="slides" src="_images/slides-beschikbaar-blue.svg" /></a></p>
+<p><a href="./slides/Klasse-C.slides.html" target="_blank"><img alt="slides" src="_images/slides-beschikbaar-blue.svg" /></a></p>
 <div class="cell docutils container">
 </div>
 <p>In de vorige hoofdstukken hebben we de laagfrequent versterkers besproken. Dit zijn versterkers met typisch een relatief grote bandbreedte. Verder hebben we de laagfrequent versterkers verder opgedeeld in de versterkers met 1 vermogen transistor in de vermogentrap (Klasse A) en de versterkers met 2 of meer vermogentransistors in de vermogentrap (Klasse B en Klasse G).
@@ -763,19 +763,19 @@ De vermogentransistor levert het vermogen dat verloren/uitgestraald wordt door d
 \[ \frac{d I_L}{dt} =\frac{1}{L} V \]</div>
 <p>Invullen geeft dan:</p>
 <div class="math notranslate nohighlight">
-\[ C \frac{d^2 V}{dt^2}+ \frac{1}{R_L} \frac{d V}{dt}  + \frac{1}{L} V =0 \]</div>
+\[ C \frac{d^2 V}{dt^2} + \frac{1}{R_L} \frac{d V}{dt}  + \frac{1}{L} V = 0\]</div>
 <p>Deze vergelijking kunnen we oplossen door de <a class="reference external" href="https://nl.wikipedia.org/wiki/Laplacetransformatie">Laplace transformatie</a> te nemen van de functie <span class="math notranslate nohighlight">\(V(t)\)</span>. De bekomen oplossing is dan:</p>
 <div class="math notranslate nohighlight">
-\[ V(t)= V_o \sin(\omega t +\phi) \exp(-\beta t)  \]</div>
+\[ V(t)= V_o \cos(\omega t +\phi) \exp(-\beta t)\]</div>
 <div class="math notranslate nohighlight">
 \[ \beta=\frac{1}{2 R_L C} \]</div>
 <div class="math notranslate nohighlight">
 \[ \omega =\sqrt{\frac{1}{L C}- \beta^2}\]</div>
-<p>Waarbij <span class="math notranslate nohighlight">\(V_o\)</span> en <span class="math notranslate nohighlight">\(\phi\)</span> de integratieconstanten zijn. <a class="reference internal" href="#sinfunct"><span class="std std-numref">Fig. 8</span></a> toont deze oplossing voor een uitdempende trilling van 50 V rond een spanning van 80 V.</p>
+<p>Waarbij <span class="math notranslate nohighlight">\(V_o\)</span> en <span class="math notranslate nohighlight">\(\phi\)</span> de integratieconstanten zijn. <a class="reference internal" href="#sinfunct"><span class="std std-numref">Fig. 8</span></a> toont deze oplossing voor een uitdempende trilling van 50 V rond een spanning van 80 V. In het rood is de spanning aangegeven die we elke periode verliezen en die dus moet gecompenseerd worden om de trilling op gang te houden.</p>
 <div class="cell docutils container">
 <div class="cell_output docutils container">
 <figure class="align-default" id="sinfunct">
-<img alt="_images/15ea57cddab8563f2f73c210d255edf40c19923a208890e455b0fac54ae7fa8f.png" src="_images/15ea57cddab8563f2f73c210d255edf40c19923a208890e455b0fac54ae7fa8f.png" />
+<img alt="_images/c9803976174a84ba84ed407e9e69bf7ac5ff485e1e86808c39afb13cfe1c1796.png" src="_images/c9803976174a84ba84ed407e9e69bf7ac5ff485e1e86808c39afb13cfe1c1796.png" />
 <figcaption>
 <p><span class="caption-number">Fig. 8 </span><span class="caption-text">Voorbeeld van een gedempte trilling van 50V rond een referentiespaning van 80V</span><a class="headerlink" href="#sinfunct" title="Permallink naar deze afbeelding">#</a></p>
 </figcaption>
@@ -833,12 +833,6 @@ V_Vin        4 0 sin(-1.5 2.7 1591500) DC=-1.5
 .model Q2  NPN(Is=14.34f BF=200)
 </pre></div>
 </div>
-</div>
-</div>
-<div class="literal-block-wrapper docutils container" id="listing1">
-<div class="code-block-caption"><span class="caption-number">Codefragment 1 </span><span class="caption-text">basis Klasse C circuit</span><a class="headerlink" href="#listing1" title="Permalink naar deze broncode">#</a></div>
-<div class="highlight-spice notranslate"><div class="highlight"><pre><span></span>
-</pre></div>
 </div>
 </div>
 <p>In de <code class="docutils literal notranslate"><span class="pre">.model</span></code> kaart zien we dat we voor de bipolaire transistor een model gebruiken dat we Q2 hebben genoemd. Dit zijn biploaire transistors waar we een <span class="math notranslate nohighlight">\(\beta_{Forward}\)</span> hebben gelijk aan 200.</p>
@@ -1000,7 +994,7 @@ voornamelijk bijdragen tot het bepalen van de oscillatiefrequentie, namelijk:</p
 </ul>
 <p>In de meeste gevallen willen we <span class="math notranslate nohighlight">\(V_{DD}\)</span> als oscillatie amplitude. Daarom zullen we <span class="math notranslate nohighlight">\(I_p\)</span> kiezen als:</p>
 <div class="math notranslate nohighlight">
-\[ I_{p,max}= 2 \pi \frac{V_{DD} }{R_L} \frac{1-\cos(\alpha)}{ 2 \alpha - \sin(2 \alpha)} \]</div>
+\[ I_{p,max}= 2 \pi \frac{V_{DD} }{R_L} \frac{1-\cos(\alpha)}{ 2 \alpha - \sin(2 \alpha)}\]</div>
 <div class="cell docutils container">
 <div class="cell_output docutils container">
 <figure class="align-default" id="cfig12">
@@ -1014,7 +1008,7 @@ voornamelijk bijdragen tot het bepalen van de oscillatiefrequentie, namelijk:</p
 <div class="math notranslate nohighlight">
 \[P_{ac}=I_p^2 R_L \frac{(2 \alpha-\sin (2 \alpha))^2}{8 \pi ^2 (1-\cos (\alpha))^2}\]</div>
 <div class="math notranslate nohighlight">
-\[P_{dc}=\frac{V_{dd} I_p}{\pi}\frac {\sin(\alpha)-\alpha\cos(\alpha)}{1-\cos(\alpha)} \]</div>
+\[P_{dc}=\frac{V_{dd} I_p}{\pi}\frac {\sin(\alpha)-\alpha\cos(\alpha)}{1-\cos(\alpha)}\]</div>
 <p>Het redemement wordt dan, rekening houdende met dat <span class="math notranslate nohighlight">\(I_p\)</span> niet groter mag worden dan <span class="math notranslate nohighlight">\(I_{P,max}\)</span></p>
 <div class="math notranslate nohighlight">
 \[ \eta=\frac{I_p R_L}{V_{dd}}\frac{(2 \alpha-\sin (2 \alpha))^2}{8  \pi (1-\cos (\alpha)) (\sin (\alpha)-\alpha \cos (\alpha))} \]</div>
@@ -1072,12 +1066,6 @@ V_VinDC      5 0 0.7V
 </div>
 </div>
 </div>
-<div class="literal-block-wrapper docutils container" id="listing2">
-<div class="code-block-caption"><span class="caption-number">Codefragment 2 </span><span class="caption-text">Klasse C voor AC simulatie</span><a class="headerlink" href="#listing2" title="Permalink naar deze broncode">#</a></div>
-<div class="highlight-spice notranslate"><div class="highlight"><pre><span></span>
-</pre></div>
-</div>
-</div>
 <div class="cell docutils container">
 <div class="cell_output docutils container">
 <figure class="align-default" id="cfig15">
@@ -1102,10 +1090,11 @@ V_VinDC      5 0 0.7V
 <section id="berekening-van-de-harmonische-componenten">
 <h3>Berekening van de harmonische componenten<a class="headerlink" href="#berekening-van-de-harmonische-componenten" title="Permalink naar deze titel">#</a></h3>
 <div class="math notranslate nohighlight">
-\[ V_{a,n}= \frac{Z_L(n \omega_c)}{\pi} \int_{-\pi}^{\pi} {\cos(n u) I_c(u) du }= 
-    \frac{Z_L(n \omega_c)}{\pi} \int_{-\alpha}^{\alpha} {\cos(n u) \frac{\cos(u)-\cos(\alpha)}{1-\cos(\alpha)}I_p  du }=
-    \frac{2 I_p Z_L(n \omega_c)}{\pi}
-    \frac{ \cos (\alpha) \sin ( n \alpha)-n \sin (\alpha) \cos (n \alpha)}{n(n^2-1)(1-\cos(\alpha))}\]</div>
+\[ V_{a,n}= \frac{Z_L(n \omega_c)}{\pi} \int_{-\pi}^{\pi} {\cos(n u) I_c(u) du }\]</div>
+<div class="math notranslate nohighlight">
+\[ V_{a,n}= \frac{Z_L(n \omega_c)}{\pi} \int_{-\alpha}^{\alpha} {\cos(n u) \frac{\cos(u)-\cos(\alpha)}{1-\cos(\alpha)}I_p  du }\]</div>
+<div class="math notranslate nohighlight">
+\[ V_{a,n}=\frac{2 I_p Z_L(n \omega_c)}{\pi} \frac{ \cos (\alpha) \sin ( n \alpha)-n \sin (\alpha) \cos (n \alpha)}{n(n^2-1)(1-\cos(\alpha))}\]</div>
 <div class="cell docutils container">
 <div class="cell_output docutils container">
 <figure class="align-default" id="cfig16">
@@ -1192,12 +1181,6 @@ L_L2         2 4    20uH
 .model Q2  NPN(Is=14.34f BF=255.9 Rb=100 )
 </pre></div>
 </div>
-</div>
-</div>
-<div class="literal-block-wrapper docutils container" id="listing3">
-<div class="code-block-caption"><span class="caption-number">Codefragment 3 </span><span class="caption-text">Basisschema van de klasse C versterker waarbij de uitgangspanning oscilleert rond de grond</span><a class="headerlink" href="#listing3" title="Permalink naar deze broncode">#</a></div>
-<div class="highlight-spice notranslate"><div class="highlight"><pre><span></span>
-</pre></div>
 </div>
 </div>
 <div class="cell docutils container">

@@ -695,7 +695,7 @@ title="Print to PDF"
                 
   <section class="tex2jax_ignore mathjax_ignore" id="klasse-e-versterkers">
 <h1>Klasse E  Versterkers<a class="headerlink" href="#klasse-e-versterkers" title="Permalink naar deze titel">#</a></h1>
-<p><a href="./slides/Klasse-E.slides.html"><img alt="sildes" src="_images/slides-beschikbaar-blue.svg" /></a></p>
+<p><a href="./slides/Klasse-E.slides.html" target="_blank"><img alt="sildes" src="_images/slides-beschikbaar-blue.svg" /></a></p>
 <div class="cell docutils container">
 </div>
 <p>In de vorige hoofdstukken hebben we de C en F versterkers besproken. Dit zijn hoogfrequent versterkers met 1 vermogen transistor in de vermogentrap.</p>
@@ -856,7 +856,7 @@ We kunnen de uitgang omwerken naar een impedantie van 50 Ohm door een transforma
 <div class="cell tag_full-width docutils container">
 <div class="cell_output docutils container">
 <div class="literal-block-wrapper docutils container" id="espice2">
-<div class="code-block-caption"><span class="caption-number">Codefragment 4 </span><span class="caption-text">Klasse E spice file</span><a class="headerlink" href="#espice2" title="Permalink naar deze broncode">#</a></div>
+<div class="code-block-caption"><span class="caption-number">Codefragment 1 </span><span class="caption-text">Klasse E spice file</span><a class="headerlink" href="#espice2" title="Permalink naar deze broncode">#</a></div>
 <div class="highlight-spice notranslate"><div class="highlight"><pre><span></span><span class="o">*</span><span class="w"> </span><span class="nx">Class</span><span class="w"> </span><span class="nx">E</span><span class="w"> </span><span class="nx">amp</span><span class="w"> </span><span class="mi">1</span><span class="w"></span>
 <span class="nx">M_M1</span><span class="w">         </span><span class="mi">2</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="nx">FDB33N25</span><span class="w"> </span>
 <span class="nx">L_L1</span><span class="w">         </span><span class="mi">2</span><span class="w"> </span><span class="mi">3</span><span class="w">  </span><span class="mi">1000</span><span class="nx">uH</span><span class="w">  </span>
@@ -964,7 +964,7 @@ We kunnen de uitgang omwerken naar een impedantie van 50 Ohm door een transforma
 <div class="cell tag_full-width docutils container">
 <div class="cell_output docutils container">
 <div class="literal-block-wrapper docutils container" id="espice">
-<div class="code-block-caption"><span class="caption-number">Codefragment 5 </span><span class="caption-text">Klasse E spice file</span><a class="headerlink" href="#espice" title="Permalink naar deze broncode">#</a></div>
+<div class="code-block-caption"><span class="caption-number">Codefragment 2 </span><span class="caption-text">Klasse E spice file</span><a class="headerlink" href="#espice" title="Permalink naar deze broncode">#</a></div>
 <div class="highlight-spice notranslate"><div class="highlight"><pre><span></span><span class="o">*</span><span class="w"> </span><span class="nx">Class</span><span class="w"> </span><span class="nx">E</span><span class="w"> </span><span class="nx">amp</span><span class="w"> </span><span class="mi">1</span><span class="w"></span>
 <span class="nx">M_M1</span><span class="w">         </span><span class="mi">2</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="nx">FDB33N25</span><span class="w"> </span>
 <span class="nx">L_L1</span><span class="w">         </span><span class="mi">2</span><span class="w"> </span><span class="mi">3</span><span class="w">  </span><span class="mi">270</span><span class="nx">uH</span><span class="w">  </span>
@@ -1057,11 +1057,11 @@ We kunnen de uitgang omwerken naar een impedantie van 50 Ohm door een transforma
 <p><span class="caption-number">Fig. 69 </span><span class="caption-text">Schema van de klasse E versterker met injection locking.</span><a class="headerlink" href="#tsai-schema" title="Permallink naar deze afbeelding">#</a></p>
 </figcaption>
 </figure>
-<p>We kunnen dit schema uitwerken als een spice file (zie <a class="reference internal" href="#espicetsai"><span class="std std-numref">Codefragment 6</span></a>) en deze spice file simuleren.</p>
+<p>We kunnen dit schema uitwerken als een spice file (zie <a class="reference internal" href="#espicetsai"><span class="std std-numref">Codefragment 3</span></a>) en deze spice file simuleren.</p>
 <div class="cell docutils container">
 <div class="cell_output docutils container">
 <div class="literal-block-wrapper docutils container" id="espicetsai">
-<div class="code-block-caption"><span class="caption-number">Codefragment 6 </span><span class="caption-text">Klasse E spice file</span><a class="headerlink" href="#espicetsai" title="Permalink naar deze broncode">#</a></div>
+<div class="code-block-caption"><span class="caption-number">Codefragment 3 </span><span class="caption-text">Klasse E spice file</span><a class="headerlink" href="#espicetsai" title="Permalink naar deze broncode">#</a></div>
 <div class="highlight-spice notranslate"><div class="highlight"><pre><span></span><span class="o">*</span><span class="w"> </span><span class="nx">Class</span><span class="w"> </span><span class="nx">E</span><span class="w"> </span><span class="nx">Tsai</span><span class="w"></span>
 <span class="nx">M_SWn</span><span class="w">        </span><span class="mi">0</span><span class="w"> </span><span class="mi">11</span><span class="w"> </span><span class="mi">10</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="nx">nmos</span><span class="w"> </span><span class="nx">W</span><span class="p">=</span><span class="mi">31580</span><span class="nx">u</span><span class="w"> </span><span class="nx">L</span><span class="p">=</span><span class="m m-Double">0.35</span><span class="nx">u</span><span class="w"></span>
 <span class="nx">M_SWp</span><span class="w">        </span><span class="mi">3</span><span class="w"> </span><span class="mi">11</span><span class="w"> </span><span class="mi">10</span><span class="w"> </span><span class="mi">3</span><span class="w"> </span><span class="nx">pmos</span><span class="w"> </span><span class="nx">W</span><span class="p">=</span><span class="mi">500</span><span class="nx">u</span><span class="w"> </span><span class="nx">L</span><span class="p">=</span><span class="m m-Double">0.35</span><span class="nx">u</span><span class="w"></span>
