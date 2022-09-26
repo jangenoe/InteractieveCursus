@@ -37,3 +37,5 @@ sphinx:
     language: nl
     html_show_copyright: false
     nb_remove_code_source: true
+    numfig_format : 
+       code-block: 'Spice Listing %s'
