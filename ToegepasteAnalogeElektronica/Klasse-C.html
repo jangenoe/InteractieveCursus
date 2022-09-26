@@ -755,7 +755,7 @@ De vermogentransistor levert het vermogen dat verloren/uitgestraald wordt door d
 \[ L \frac{d I_L}{dt} = V \]</div>
 <p>Aangezien de stroom-spanningsvergelijking van het spoel de afgeleide van de stroom bevat, kunnen we de  <a class="reference external" href="https://nl.wikipedia.org/wiki/Elektriciteitswetten_van_Kirchhoff">eerste wet van Kirkhoff</a> niet onmiddellijk gebruiken, maar we kunnen wel de afgeleide van deze wet gebruiken. De vergelijkingen worden dan:</p>
 <div class="math notranslate nohighlight">
-\[ \frac{I_C}{dt}+ \frac{I_R}{dt} + \frac{I_L}{dt} =0 \]</div>
+\[ \frac{d I_C}{dt}+ \frac{d I_R}{dt} + \frac{d I_L}{dt} =0 \]</div>
 <div class="math notranslate nohighlight">
 \[ \frac{d I_C}{dt}= C \frac{d^2 V}{dt^2} \]</div>
 <div class="math notranslate nohighlight">
@@ -764,10 +764,10 @@ De vermogentransistor levert het vermogen dat verloren/uitgestraald wordt door d
 \[ \frac{d I_L}{dt} =\frac{1}{L} V \]</div>
 <p>Invullen geeft dan:</p>
 <div class="math notranslate nohighlight">
-\[ C \frac{d^2 V}{dt^2} + \frac{1}{R_L} \frac{d V}{dt}  + \frac{1}{L} V = 0\]</div>
+\[C \frac{d^2 V}{dt^2} + \frac{1}{R_L} \frac{d V}{dt}  + \frac{1}{L} V = 0\]</div>
 <p>Deze vergelijking kunnen we oplossen door de <a class="reference external" href="https://nl.wikipedia.org/wiki/Laplacetransformatie">Laplace transformatie</a> te nemen van de functie <span class="math notranslate nohighlight">\(V(t)\)</span>. De bekomen oplossing is dan:</p>
 <div class="math notranslate nohighlight">
-\[ V(t)= V_o \cos(\omega t +\phi) \exp(-\beta t)\]</div>
+\[V(t)= V_o \cos(\omega t +\phi) \exp(-\beta t)\]</div>
 <div class="math notranslate nohighlight">
 \[ \beta=\frac{1}{2 R_L C} \]</div>
 <div class="math notranslate nohighlight">
@@ -837,7 +837,7 @@ V_Vin        4 0 sin(-1.5 2.7 1591500) DC=-1.5
 </div>
 </div>
 <div class="literal-block-wrapper docutils container" id="listing1">
-<div class="code-block-caption"><span class="caption-number">Codefragment 1 </span><span class="caption-text">basis Klasse C circuit</span><a class="headerlink" href="#listing1" title="Permalink naar deze broncode">#</a></div>
+<div class="code-block-caption"><span class="caption-number">Spice Listing 1 </span><span class="caption-text">basis Klasse C circuit</span><a class="headerlink" href="#listing1" title="Permalink naar deze broncode">#</a></div>
 <div class="highlight-spice notranslate"><div class="highlight"><pre><span></span>
 </pre></div>
 </div>
@@ -1074,7 +1074,7 @@ V_VinDC      5 0 0.7V
 </div>
 </div>
 <div class="literal-block-wrapper docutils container" id="listing2">
-<div class="code-block-caption"><span class="caption-number">Codefragment 2 </span><span class="caption-text">Klasse C voor AC simulatie</span><a class="headerlink" href="#listing2" title="Permalink naar deze broncode">#</a></div>
+<div class="code-block-caption"><span class="caption-number">Spice Listing 2 </span><span class="caption-text">Klasse C voor AC simulatie</span><a class="headerlink" href="#listing2" title="Permalink naar deze broncode">#</a></div>
 <div class="highlight-spice notranslate"><div class="highlight"><pre><span></span>
 </pre></div>
 </div>
@@ -1197,7 +1197,7 @@ L_L2         2 4    20uH
 </div>
 </div>
 <div class="literal-block-wrapper docutils container" id="listing3">
-<div class="code-block-caption"><span class="caption-number">Codefragment 3 </span><span class="caption-text">Basisschema van de klasse C versterker waarbij de uitgangspanning oscilleert rond de grond</span><a class="headerlink" href="#listing3" title="Permalink naar deze broncode">#</a></div>
+<div class="code-block-caption"><span class="caption-number">Spice Listing 3 </span><span class="caption-text">Basisschema van de klasse C versterker waarbij de uitgangspanning oscilleert rond de grond</span><a class="headerlink" href="#listing3" title="Permalink naar deze broncode">#</a></div>
 <div class="highlight-spice notranslate"><div class="highlight"><pre><span></span>
 </pre></div>
 </div>
