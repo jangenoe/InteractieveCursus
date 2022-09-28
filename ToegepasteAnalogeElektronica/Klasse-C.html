@@ -548,6 +548,38 @@ title="Print to PDF"
     <a class="reference internal nav-link" href="#meerdere-versterkingstrappen">
      Meerdere versterkingstrappen
     </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#versterker-met-2-klasse-c-trappen-stap-1">
+       Versterker met 2 Klasse C trappen: stap 1
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#versterker-met-2-klasse-c-trappen-stap-2">
+       Versterker met 2 Klasse C trappen: stap 2
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#versterker-met-2-klasse-c-trappen-stap-3">
+       Versterker met 2 Klasse C trappen: stap 3
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#versterker-met-2-klasse-c-trappen-stap-4">
+       Versterker met 2 Klasse C trappen: stap 4
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#versterker-met-2-klasse-c-trappen-stap-5">
+       Versterker met 2 Klasse C trappen: stap 5
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#versterker-met-3-klasse-c-trappen">
+       Versterker met 3 Klasse C trappen
+      </a>
+     </li>
+    </ul>
    </li>
   </ul>
  </li>
@@ -656,6 +688,38 @@ title="Print to PDF"
     <a class="reference internal nav-link" href="#meerdere-versterkingstrappen">
      Meerdere versterkingstrappen
     </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#versterker-met-2-klasse-c-trappen-stap-1">
+       Versterker met 2 Klasse C trappen: stap 1
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#versterker-met-2-klasse-c-trappen-stap-2">
+       Versterker met 2 Klasse C trappen: stap 2
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#versterker-met-2-klasse-c-trappen-stap-3">
+       Versterker met 2 Klasse C trappen: stap 3
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#versterker-met-2-klasse-c-trappen-stap-4">
+       Versterker met 2 Klasse C trappen: stap 4
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#versterker-met-2-klasse-c-trappen-stap-5">
+       Versterker met 2 Klasse C trappen: stap 5
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#versterker-met-3-klasse-c-trappen">
+       Versterker met 3 Klasse C trappen
+      </a>
+     </li>
+    </ul>
    </li>
   </ul>
  </li>
@@ -823,18 +887,90 @@ De hoeveelheid stroom die we krijgn wordt bepaald door <span class="math notrans
 <p>De overeenkomende SPICE code voor dit circuit is:</p>
 <div class="cell docutils container">
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>* Class C amp 1
-Q_Q1         2 1 0 Q2
-L_L1         2 3  1uH
-C_C1         2 3  10nF
-R_RL         2 3  60
-V_Vdd        3 0 11V
-R_Rin        4 1 100
-V_Vin        4 0 sin(-1.5 2.7 1591500) DC=-1.5
-.model Q2  NPN(Is=14.34f BF=200)
+<div class="output text_html"><style>pre { line-height: 125%; }
+td.linenos .normal { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
+span.linenos { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
+td.linenos .special { color: #000000; background-color: #ffffc0; padding-left: 5px; padding-right: 5px; }
+span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 5px; padding-right: 5px; }
+.output_html .hll { background-color: #ffffcc }
+.output_html { background: #f8f8f8; }
+.output_html .c { color: #3D7B7B; font-style: italic } /* Comment */
+.output_html .err { border: 1px solid #FF0000 } /* Error */
+.output_html .k { color: #008000; font-weight: bold } /* Keyword */
+.output_html .o { color: #666666 } /* Operator */
+.output_html .ch { color: #3D7B7B; font-style: italic } /* Comment.Hashbang */
+.output_html .cm { color: #3D7B7B; font-style: italic } /* Comment.Multiline */
+.output_html .cp { color: #9C6500 } /* Comment.Preproc */
+.output_html .cpf { color: #3D7B7B; font-style: italic } /* Comment.PreprocFile */
+.output_html .c1 { color: #3D7B7B; font-style: italic } /* Comment.Single */
+.output_html .cs { color: #3D7B7B; font-style: italic } /* Comment.Special */
+.output_html .gd { color: #A00000 } /* Generic.Deleted */
+.output_html .ge { font-style: italic } /* Generic.Emph */
+.output_html .gr { color: #E40000 } /* Generic.Error */
+.output_html .gh { color: #000080; font-weight: bold } /* Generic.Heading */
+.output_html .gi { color: #008400 } /* Generic.Inserted */
+.output_html .go { color: #717171 } /* Generic.Output */
+.output_html .gp { color: #000080; font-weight: bold } /* Generic.Prompt */
+.output_html .gs { font-weight: bold } /* Generic.Strong */
+.output_html .gu { color: #800080; font-weight: bold } /* Generic.Subheading */
+.output_html .gt { color: #0044DD } /* Generic.Traceback */
+.output_html .kc { color: #008000; font-weight: bold } /* Keyword.Constant */
+.output_html .kd { color: #008000; font-weight: bold } /* Keyword.Declaration */
+.output_html .kn { color: #008000; font-weight: bold } /* Keyword.Namespace */
+.output_html .kp { color: #008000 } /* Keyword.Pseudo */
+.output_html .kr { color: #008000; font-weight: bold } /* Keyword.Reserved */
+.output_html .kt { color: #B00040 } /* Keyword.Type */
+.output_html .m { color: #666666 } /* Literal.Number */
+.output_html .s { color: #BA2121 } /* Literal.String */
+.output_html .na { color: #687822 } /* Name.Attribute */
+.output_html .nb { color: #008000 } /* Name.Builtin */
+.output_html .nc { color: #0000FF; font-weight: bold } /* Name.Class */
+.output_html .no { color: #880000 } /* Name.Constant */
+.output_html .nd { color: #AA22FF } /* Name.Decorator */
+.output_html .ni { color: #717171; font-weight: bold } /* Name.Entity */
+.output_html .ne { color: #CB3F38; font-weight: bold } /* Name.Exception */
+.output_html .nf { color: #0000FF } /* Name.Function */
+.output_html .nl { color: #767600 } /* Name.Label */
+.output_html .nn { color: #0000FF; font-weight: bold } /* Name.Namespace */
+.output_html .nt { color: #008000; font-weight: bold } /* Name.Tag */
+.output_html .nv { color: #19177C } /* Name.Variable */
+.output_html .ow { color: #AA22FF; font-weight: bold } /* Operator.Word */
+.output_html .w { color: #bbbbbb } /* Text.Whitespace */
+.output_html .mb { color: #666666 } /* Literal.Number.Bin */
+.output_html .mf { color: #666666 } /* Literal.Number.Float */
+.output_html .mh { color: #666666 } /* Literal.Number.Hex */
+.output_html .mi { color: #666666 } /* Literal.Number.Integer */
+.output_html .mo { color: #666666 } /* Literal.Number.Oct */
+.output_html .sa { color: #BA2121 } /* Literal.String.Affix */
+.output_html .sb { color: #BA2121 } /* Literal.String.Backtick */
+.output_html .sc { color: #BA2121 } /* Literal.String.Char */
+.output_html .dl { color: #BA2121 } /* Literal.String.Delimiter */
+.output_html .sd { color: #BA2121; font-style: italic } /* Literal.String.Doc */
+.output_html .s2 { color: #BA2121 } /* Literal.String.Double */
+.output_html .se { color: #AA5D1F; font-weight: bold } /* Literal.String.Escape */
+.output_html .sh { color: #BA2121 } /* Literal.String.Heredoc */
+.output_html .si { color: #A45A77; font-weight: bold } /* Literal.String.Interpol */
+.output_html .sx { color: #008000 } /* Literal.String.Other */
+.output_html .sr { color: #A45A77 } /* Literal.String.Regex */
+.output_html .s1 { color: #BA2121 } /* Literal.String.Single */
+.output_html .ss { color: #19177C } /* Literal.String.Symbol */
+.output_html .bp { color: #008000 } /* Name.Builtin.Pseudo */
+.output_html .fm { color: #0000FF } /* Name.Function.Magic */
+.output_html .vc { color: #19177C } /* Name.Variable.Class */
+.output_html .vg { color: #19177C } /* Name.Variable.Global */
+.output_html .vi { color: #19177C } /* Name.Variable.Instance */
+.output_html .vm { color: #19177C } /* Name.Variable.Magic */
+.output_html .il { color: #666666 } /* Literal.Number.Integer.Long */</style><div class="highlight"><pre><span></span><span class="o">*</span><span class="w"> </span><span class="nx">Class</span><span class="w"> </span><span class="nx">C</span><span class="w"> </span><span class="nx">amp</span><span class="w"> </span><span class="mi">1</span><span class="w"></span>
+<span class="nx">Q_Q1</span><span class="w">         </span><span class="mi">2</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="nx">Q2</span><span class="w"></span>
+<span class="nx">L_L1</span><span class="w">         </span><span class="mi">2</span><span class="w"> </span><span class="mi">3</span><span class="w">  </span><span class="mi">1</span><span class="nx">uH</span><span class="w">  </span>
+<span class="nx">C_C1</span><span class="w">         </span><span class="mi">2</span><span class="w"> </span><span class="mi">3</span><span class="w">  </span><span class="mi">10</span><span class="nx">nF</span><span class="w">  </span>
+<span class="nx">R_RL</span><span class="w">         </span><span class="mi">2</span><span class="w"> </span><span class="mi">3</span><span class="w">  </span><span class="mi">60</span><span class="w">  </span>
+<span class="nx">V_Vdd</span><span class="w">        </span><span class="mi">3</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="mi">11</span><span class="nx">V</span><span class="w"></span>
+<span class="nx">R_Rin</span><span class="w">        </span><span class="mi">4</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="mi">100</span><span class="w"></span>
+<span class="nx">V_Vin</span><span class="w">        </span><span class="mi">4</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="nx">sin</span><span class="p">(</span><span class="o">-</span><span class="m m-Double">1.5</span><span class="w"> </span><span class="m m-Double">2.7</span><span class="w"> </span><span class="mi">1591500</span><span class="p">)</span><span class="w"> </span><span class="nx">DC</span><span class="p">=</span><span class="o">-</span><span class="m m-Double">1.5</span><span class="w"></span>
+<span class="p">.</span><span class="nx">model</span><span class="w"> </span><span class="nx">Q2</span><span class="w">  </span><span class="nx">NPN</span><span class="p">(</span><span class="nx">Is</span><span class="p">=</span><span class="m m-Double">14.34</span><span class="kd">f</span><span class="w"> </span><span class="nx">BF</span><span class="p">=</span><span class="mi">200</span><span class="p">)</span><span class="w"></span>
 </pre></div>
-</div>
-</div>
+</div></div>
 </div>
 <div class="literal-block-wrapper docutils container" id="listing1">
 <div class="code-block-caption"><span class="caption-number">Spice Listing 1 </span><span class="caption-text">basis Klasse C circuit</span><a class="headerlink" href="#listing1" title="Permalink naar deze broncode">#</a></div>
@@ -996,7 +1132,7 @@ voornamelijk bijdragen tot het bepalen van de oscillatiefrequentie, namelijk:</p
 </div>
 <p>opmerking:</p>
 <ul class="simple">
-<li><p>De grafiek in deze jupyter notebook geeft de maximale oscillatiespanning <span class="math notranslate nohighlight">\(V_{max}\)</span> weer die bekomen wordt in de resonante kring in functie van de geleidingshoek ten opzichte van het product van de piekstroom <span class="math notranslate nohighlight">\(I_p\)</span> en de weerstand <span class="math notranslate nohighlight">\(R_L\)</span>.  Dus de plot geeft dus de waarde van <span class="math notranslate nohighlight">\(u= \frac{V_{max}}{I_p R_L}\)</span></p></li>
+<li><p>De grafiek in deze jupyter notebook geeft de maximale oscillatiespanning <span class="math notranslate nohighlight">\(V_{max}\)</span> weer die bekomen wordt in de resonante kring in functie van de geleidingshoek (<span class="math notranslate nohighlight">\(\alpha\)</span>) ten opzichte van het product van de piekstroom <span class="math notranslate nohighlight">\(I_p\)</span> en de weerstand <span class="math notranslate nohighlight">\(R_L\)</span>.  Dus de plot geeft dus de waarde van <span class="math notranslate nohighlight">\(u= \frac{V_{max}}{I_p R_L}\)</span></p></li>
 <li><p>De grafiek in de powerpoint slides van de les geeft het maximale vermogen <span class="math notranslate nohighlight">\(P_{max}\)</span> dat bekomen wordt in functie van de geleidingshoek ten opzichte van het product van de piekstroom Ip en de voedingspanning.  <span class="math notranslate nohighlight">\(P_{max} =\frac{V_{max} I_{max}}{2}\)</span>. Dus de plot is  <span class="math notranslate nohighlight">\(w=\frac{P_{max}}{V_{DD} I_p} = \frac{\frac{V_{max}*I_{max}}{2}}{V_{DD} I_p} = \frac{V_{max} \frac{Vmax}{2 R_L}}{Vdd I_p}\)</span>.   Bovendien weten we dat <span class="math notranslate nohighlight">\(V_{max}&lt; V_{DD}\)</span> en in het beste geval (= verzadiging) <span class="math notranslate nohighlight">\(V_{max}\)</span> gelijk wordt aan <span class="math notranslate nohighlight">\(V_{DD}\)</span>.  Dus bij verzadiging geldt   <span class="math notranslate nohighlight">\(w=\frac{Vmax}{2 R_L I_p}\)</span></p></li>
 </ul>
 <p>In de meeste gevallen willen we <span class="math notranslate nohighlight">\(V_{DD}\)</span> als oscillatie amplitude. Daarom zullen we <span class="math notranslate nohighlight">\(I_p\)</span> kiezen als:</p>
@@ -1016,7 +1152,7 @@ voornamelijk bijdragen tot het bepalen van de oscillatiefrequentie, namelijk:</p
 \[P_{ac}=I_p^2 R_L \frac{(2 \alpha-\sin (2 \alpha))^2}{8 \pi ^2 (1-\cos (\alpha))^2}\]</div>
 <div class="math notranslate nohighlight">
 \[P_{dc}=\frac{V_{dd} I_p}{\pi}\frac {\sin(\alpha)-\alpha\cos(\alpha)}{1-\cos(\alpha)}\]</div>
-<p>Het redemement wordt dan, rekening houdende met dat <span class="math notranslate nohighlight">\(I_p\)</span> niet groter mag worden dan <span class="math notranslate nohighlight">\(I_{P,max}\)</span></p>
+<p>Het rendement wordt dan, rekening houdende met dat <span class="math notranslate nohighlight">\(I_p\)</span> niet groter mag worden dan <span class="math notranslate nohighlight">\(I_{P,max}\)</span></p>
 <div class="math notranslate nohighlight">
 \[ \eta=\frac{I_p R_L}{V_{dd}}\frac{(2 \alpha-\sin (2 \alpha))^2}{8  \pi (1-\cos (\alpha)) (\sin (\alpha)-\alpha \cos (\alpha))} \]</div>
 <section id="maximale-uitsturing">
@@ -1059,19 +1195,91 @@ voornamelijk bijdragen tot het bepalen van de oscillatiefrequentie, namelijk:</p
 Op het eerste zicht lijkt het <code class="docutils literal notranslate"><span class="pre">.ac</span></code> commando in SPICE hier de aangeweze methode. Dit is echter niet het geval. Het <code class="docutils literal notranslate"><span class="pre">.ac</span></code> commando in SPICE doet een klein signaal simulatie, en hierbij wordt aangenomen dat een volledig sinusvormig signaal zich doorheen het circuit beweegt van de ingang naar de uitgang. Dat is voor een klasse C versterker zeker niet het geval. Eigenlijk is het enige werkingsregime waar we een kleinsignaalsimulatie zouden kunnen uitvoeren het instelpunt waarbij <span class="math notranslate nohighlight">\(\alpha=\pi\)</span>, met andere woorden de klasse-A modus.</p>
 <div class="cell docutils container">
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>* Class C amp 1
-Q_Q1         2 1 0 Q2
-L_L1         2 3  1uH
-C_C1         2 3  10n
-R_RL         2 3  60
-V_Vdd        3 0 11V
-R_Rin        4 1 100
-V_Vin        4 5  AC 0.5V 0
-V_VinDC      5 0 0.7V
-.model Q2  NPN(Is=14.34f BF=200)
+<div class="output text_html"><style>pre { line-height: 125%; }
+td.linenos .normal { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
+span.linenos { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
+td.linenos .special { color: #000000; background-color: #ffffc0; padding-left: 5px; padding-right: 5px; }
+span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 5px; padding-right: 5px; }
+.output_html .hll { background-color: #ffffcc }
+.output_html { background: #f8f8f8; }
+.output_html .c { color: #3D7B7B; font-style: italic } /* Comment */
+.output_html .err { border: 1px solid #FF0000 } /* Error */
+.output_html .k { color: #008000; font-weight: bold } /* Keyword */
+.output_html .o { color: #666666 } /* Operator */
+.output_html .ch { color: #3D7B7B; font-style: italic } /* Comment.Hashbang */
+.output_html .cm { color: #3D7B7B; font-style: italic } /* Comment.Multiline */
+.output_html .cp { color: #9C6500 } /* Comment.Preproc */
+.output_html .cpf { color: #3D7B7B; font-style: italic } /* Comment.PreprocFile */
+.output_html .c1 { color: #3D7B7B; font-style: italic } /* Comment.Single */
+.output_html .cs { color: #3D7B7B; font-style: italic } /* Comment.Special */
+.output_html .gd { color: #A00000 } /* Generic.Deleted */
+.output_html .ge { font-style: italic } /* Generic.Emph */
+.output_html .gr { color: #E40000 } /* Generic.Error */
+.output_html .gh { color: #000080; font-weight: bold } /* Generic.Heading */
+.output_html .gi { color: #008400 } /* Generic.Inserted */
+.output_html .go { color: #717171 } /* Generic.Output */
+.output_html .gp { color: #000080; font-weight: bold } /* Generic.Prompt */
+.output_html .gs { font-weight: bold } /* Generic.Strong */
+.output_html .gu { color: #800080; font-weight: bold } /* Generic.Subheading */
+.output_html .gt { color: #0044DD } /* Generic.Traceback */
+.output_html .kc { color: #008000; font-weight: bold } /* Keyword.Constant */
+.output_html .kd { color: #008000; font-weight: bold } /* Keyword.Declaration */
+.output_html .kn { color: #008000; font-weight: bold } /* Keyword.Namespace */
+.output_html .kp { color: #008000 } /* Keyword.Pseudo */
+.output_html .kr { color: #008000; font-weight: bold } /* Keyword.Reserved */
+.output_html .kt { color: #B00040 } /* Keyword.Type */
+.output_html .m { color: #666666 } /* Literal.Number */
+.output_html .s { color: #BA2121 } /* Literal.String */
+.output_html .na { color: #687822 } /* Name.Attribute */
+.output_html .nb { color: #008000 } /* Name.Builtin */
+.output_html .nc { color: #0000FF; font-weight: bold } /* Name.Class */
+.output_html .no { color: #880000 } /* Name.Constant */
+.output_html .nd { color: #AA22FF } /* Name.Decorator */
+.output_html .ni { color: #717171; font-weight: bold } /* Name.Entity */
+.output_html .ne { color: #CB3F38; font-weight: bold } /* Name.Exception */
+.output_html .nf { color: #0000FF } /* Name.Function */
+.output_html .nl { color: #767600 } /* Name.Label */
+.output_html .nn { color: #0000FF; font-weight: bold } /* Name.Namespace */
+.output_html .nt { color: #008000; font-weight: bold } /* Name.Tag */
+.output_html .nv { color: #19177C } /* Name.Variable */
+.output_html .ow { color: #AA22FF; font-weight: bold } /* Operator.Word */
+.output_html .w { color: #bbbbbb } /* Text.Whitespace */
+.output_html .mb { color: #666666 } /* Literal.Number.Bin */
+.output_html .mf { color: #666666 } /* Literal.Number.Float */
+.output_html .mh { color: #666666 } /* Literal.Number.Hex */
+.output_html .mi { color: #666666 } /* Literal.Number.Integer */
+.output_html .mo { color: #666666 } /* Literal.Number.Oct */
+.output_html .sa { color: #BA2121 } /* Literal.String.Affix */
+.output_html .sb { color: #BA2121 } /* Literal.String.Backtick */
+.output_html .sc { color: #BA2121 } /* Literal.String.Char */
+.output_html .dl { color: #BA2121 } /* Literal.String.Delimiter */
+.output_html .sd { color: #BA2121; font-style: italic } /* Literal.String.Doc */
+.output_html .s2 { color: #BA2121 } /* Literal.String.Double */
+.output_html .se { color: #AA5D1F; font-weight: bold } /* Literal.String.Escape */
+.output_html .sh { color: #BA2121 } /* Literal.String.Heredoc */
+.output_html .si { color: #A45A77; font-weight: bold } /* Literal.String.Interpol */
+.output_html .sx { color: #008000 } /* Literal.String.Other */
+.output_html .sr { color: #A45A77 } /* Literal.String.Regex */
+.output_html .s1 { color: #BA2121 } /* Literal.String.Single */
+.output_html .ss { color: #19177C } /* Literal.String.Symbol */
+.output_html .bp { color: #008000 } /* Name.Builtin.Pseudo */
+.output_html .fm { color: #0000FF } /* Name.Function.Magic */
+.output_html .vc { color: #19177C } /* Name.Variable.Class */
+.output_html .vg { color: #19177C } /* Name.Variable.Global */
+.output_html .vi { color: #19177C } /* Name.Variable.Instance */
+.output_html .vm { color: #19177C } /* Name.Variable.Magic */
+.output_html .il { color: #666666 } /* Literal.Number.Integer.Long */</style><div class="highlight"><pre><span></span><span class="o">*</span><span class="w"> </span><span class="nx">Class</span><span class="w"> </span><span class="nx">C</span><span class="w"> </span><span class="nx">amp</span><span class="w"> </span><span class="mi">1</span><span class="w"></span>
+<span class="nx">Q_Q1</span><span class="w">         </span><span class="mi">2</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="nx">Q2</span><span class="w"></span>
+<span class="nx">L_L1</span><span class="w">         </span><span class="mi">2</span><span class="w"> </span><span class="mi">3</span><span class="w">  </span><span class="mi">1</span><span class="nx">uH</span><span class="w">  </span>
+<span class="nx">C_C1</span><span class="w">         </span><span class="mi">2</span><span class="w"> </span><span class="mi">3</span><span class="w">  </span><span class="mi">10</span><span class="nx">n</span><span class="w">  </span>
+<span class="nx">R_RL</span><span class="w">         </span><span class="mi">2</span><span class="w"> </span><span class="mi">3</span><span class="w">  </span><span class="mi">60</span><span class="w">  </span>
+<span class="nx">V_Vdd</span><span class="w">        </span><span class="mi">3</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="mi">11</span><span class="nx">V</span><span class="w"></span>
+<span class="nx">R_Rin</span><span class="w">        </span><span class="mi">4</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="mi">100</span><span class="w"></span>
+<span class="nx">V_Vin</span><span class="w">        </span><span class="mi">4</span><span class="w"> </span><span class="mi">5</span><span class="w">  </span><span class="nx">AC</span><span class="w"> </span><span class="m m-Double">0.5</span><span class="nx">V</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="nx">DC</span><span class="w"> </span><span class="mi">0</span><span class="w"></span>
+<span class="nx">V_VinDC</span><span class="w">      </span><span class="mi">5</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="m m-Double">0.7</span><span class="nx">V</span><span class="w"></span>
+<span class="p">.</span><span class="nx">model</span><span class="w"> </span><span class="nx">Q2</span><span class="w">  </span><span class="nx">NPN</span><span class="p">(</span><span class="nx">Is</span><span class="p">=</span><span class="m m-Double">14.34</span><span class="kd">f</span><span class="w"> </span><span class="nx">BF</span><span class="p">=</span><span class="mi">200</span><span class="p">)</span><span class="w"></span>
 </pre></div>
-</div>
-</div>
+</div></div>
 </div>
 <div class="literal-block-wrapper docutils container" id="listing2">
 <div class="code-block-caption"><span class="caption-number">Spice Listing 2 </span><span class="caption-text">Klasse C voor AC simulatie</span><a class="headerlink" href="#listing2" title="Permalink naar deze broncode">#</a></div>
@@ -1182,19 +1390,91 @@ Een van de opties om de reference van de voeding naar de grond te brengen, is he
 <p>Wanneer we het bovenstaand circuit simuleren in spice, krijgen we hetvolgende resultaat.</p>
 <div class="cell docutils container">
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>* klasseC   versie2
-Q_Q1         2 1 0  Q2
-L_L1         0 3    1uH
-C_C1         0 3    10n
-R_R1         0 3    100
-V_V3         4 0    11V
-V_V5         1 0    sin(-2 3.09 1591500)
-C_C2         2 3    100n
-L_L2         2 4    20uH
-.model Q2  NPN(Is=14.34f BF=255.9 Rb=100 )
+<div class="output text_html"><style>pre { line-height: 125%; }
+td.linenos .normal { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
+span.linenos { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
+td.linenos .special { color: #000000; background-color: #ffffc0; padding-left: 5px; padding-right: 5px; }
+span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 5px; padding-right: 5px; }
+.output_html .hll { background-color: #ffffcc }
+.output_html { background: #f8f8f8; }
+.output_html .c { color: #3D7B7B; font-style: italic } /* Comment */
+.output_html .err { border: 1px solid #FF0000 } /* Error */
+.output_html .k { color: #008000; font-weight: bold } /* Keyword */
+.output_html .o { color: #666666 } /* Operator */
+.output_html .ch { color: #3D7B7B; font-style: italic } /* Comment.Hashbang */
+.output_html .cm { color: #3D7B7B; font-style: italic } /* Comment.Multiline */
+.output_html .cp { color: #9C6500 } /* Comment.Preproc */
+.output_html .cpf { color: #3D7B7B; font-style: italic } /* Comment.PreprocFile */
+.output_html .c1 { color: #3D7B7B; font-style: italic } /* Comment.Single */
+.output_html .cs { color: #3D7B7B; font-style: italic } /* Comment.Special */
+.output_html .gd { color: #A00000 } /* Generic.Deleted */
+.output_html .ge { font-style: italic } /* Generic.Emph */
+.output_html .gr { color: #E40000 } /* Generic.Error */
+.output_html .gh { color: #000080; font-weight: bold } /* Generic.Heading */
+.output_html .gi { color: #008400 } /* Generic.Inserted */
+.output_html .go { color: #717171 } /* Generic.Output */
+.output_html .gp { color: #000080; font-weight: bold } /* Generic.Prompt */
+.output_html .gs { font-weight: bold } /* Generic.Strong */
+.output_html .gu { color: #800080; font-weight: bold } /* Generic.Subheading */
+.output_html .gt { color: #0044DD } /* Generic.Traceback */
+.output_html .kc { color: #008000; font-weight: bold } /* Keyword.Constant */
+.output_html .kd { color: #008000; font-weight: bold } /* Keyword.Declaration */
+.output_html .kn { color: #008000; font-weight: bold } /* Keyword.Namespace */
+.output_html .kp { color: #008000 } /* Keyword.Pseudo */
+.output_html .kr { color: #008000; font-weight: bold } /* Keyword.Reserved */
+.output_html .kt { color: #B00040 } /* Keyword.Type */
+.output_html .m { color: #666666 } /* Literal.Number */
+.output_html .s { color: #BA2121 } /* Literal.String */
+.output_html .na { color: #687822 } /* Name.Attribute */
+.output_html .nb { color: #008000 } /* Name.Builtin */
+.output_html .nc { color: #0000FF; font-weight: bold } /* Name.Class */
+.output_html .no { color: #880000 } /* Name.Constant */
+.output_html .nd { color: #AA22FF } /* Name.Decorator */
+.output_html .ni { color: #717171; font-weight: bold } /* Name.Entity */
+.output_html .ne { color: #CB3F38; font-weight: bold } /* Name.Exception */
+.output_html .nf { color: #0000FF } /* Name.Function */
+.output_html .nl { color: #767600 } /* Name.Label */
+.output_html .nn { color: #0000FF; font-weight: bold } /* Name.Namespace */
+.output_html .nt { color: #008000; font-weight: bold } /* Name.Tag */
+.output_html .nv { color: #19177C } /* Name.Variable */
+.output_html .ow { color: #AA22FF; font-weight: bold } /* Operator.Word */
+.output_html .w { color: #bbbbbb } /* Text.Whitespace */
+.output_html .mb { color: #666666 } /* Literal.Number.Bin */
+.output_html .mf { color: #666666 } /* Literal.Number.Float */
+.output_html .mh { color: #666666 } /* Literal.Number.Hex */
+.output_html .mi { color: #666666 } /* Literal.Number.Integer */
+.output_html .mo { color: #666666 } /* Literal.Number.Oct */
+.output_html .sa { color: #BA2121 } /* Literal.String.Affix */
+.output_html .sb { color: #BA2121 } /* Literal.String.Backtick */
+.output_html .sc { color: #BA2121 } /* Literal.String.Char */
+.output_html .dl { color: #BA2121 } /* Literal.String.Delimiter */
+.output_html .sd { color: #BA2121; font-style: italic } /* Literal.String.Doc */
+.output_html .s2 { color: #BA2121 } /* Literal.String.Double */
+.output_html .se { color: #AA5D1F; font-weight: bold } /* Literal.String.Escape */
+.output_html .sh { color: #BA2121 } /* Literal.String.Heredoc */
+.output_html .si { color: #A45A77; font-weight: bold } /* Literal.String.Interpol */
+.output_html .sx { color: #008000 } /* Literal.String.Other */
+.output_html .sr { color: #A45A77 } /* Literal.String.Regex */
+.output_html .s1 { color: #BA2121 } /* Literal.String.Single */
+.output_html .ss { color: #19177C } /* Literal.String.Symbol */
+.output_html .bp { color: #008000 } /* Name.Builtin.Pseudo */
+.output_html .fm { color: #0000FF } /* Name.Function.Magic */
+.output_html .vc { color: #19177C } /* Name.Variable.Class */
+.output_html .vg { color: #19177C } /* Name.Variable.Global */
+.output_html .vi { color: #19177C } /* Name.Variable.Instance */
+.output_html .vm { color: #19177C } /* Name.Variable.Magic */
+.output_html .il { color: #666666 } /* Literal.Number.Integer.Long */</style><div class="highlight"><pre><span></span><span class="o">*</span><span class="w"> </span><span class="nx">klasseC</span><span class="w">   </span><span class="nx">versie2</span><span class="w"></span>
+<span class="nx">Q_Q1</span><span class="w">         </span><span class="mi">2</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="mi">0</span><span class="w">  </span><span class="nx">Q2</span><span class="w"></span>
+<span class="nx">L_L1</span><span class="w">         </span><span class="mi">0</span><span class="w"> </span><span class="mi">3</span><span class="w">    </span><span class="mi">1</span><span class="nx">uH</span><span class="w">  </span>
+<span class="nx">C_C1</span><span class="w">         </span><span class="mi">0</span><span class="w"> </span><span class="mi">3</span><span class="w">    </span><span class="mi">10</span><span class="nx">n</span><span class="w">  </span>
+<span class="nx">R_R1</span><span class="w">         </span><span class="mi">0</span><span class="w"> </span><span class="mi">3</span><span class="w">    </span><span class="mi">100</span><span class="w">  </span>
+<span class="nx">V_V3</span><span class="w">         </span><span class="mi">4</span><span class="w"> </span><span class="mi">0</span><span class="w">    </span><span class="mi">11</span><span class="nx">V</span><span class="w"></span>
+<span class="nx">V_V5</span><span class="w">         </span><span class="mi">1</span><span class="w"> </span><span class="mi">0</span><span class="w">    </span><span class="nx">sin</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="w"> </span><span class="m m-Double">3.09</span><span class="w"> </span><span class="mi">1591500</span><span class="p">)</span><span class="w"> </span><span class="nx">DC</span><span class="p">=</span><span class="o">-</span><span class="mi">2</span><span class="w"></span>
+<span class="nx">C_C2</span><span class="w">         </span><span class="mi">2</span><span class="w"> </span><span class="mi">3</span><span class="w">    </span><span class="mi">100</span><span class="nx">n</span><span class="w">  </span>
+<span class="nx">L_L2</span><span class="w">         </span><span class="mi">2</span><span class="w"> </span><span class="mi">4</span><span class="w">    </span><span class="mi">20</span><span class="nx">uH</span><span class="w"></span>
+<span class="p">.</span><span class="nx">model</span><span class="w"> </span><span class="nx">Q2</span><span class="w">  </span><span class="nx">NPN</span><span class="p">(</span><span class="nx">Is</span><span class="p">=</span><span class="m m-Double">14.34</span><span class="kd">f</span><span class="w"> </span><span class="nx">BF</span><span class="p">=</span><span class="m m-Double">255.9</span><span class="w"> </span><span class="nx">Rb</span><span class="p">=</span><span class="mi">100</span><span class="w"> </span><span class="p">)</span><span class="w"></span>
 </pre></div>
-</div>
-</div>
+</div></div>
 </div>
 <div class="literal-block-wrapper docutils container" id="listing3">
 <div class="code-block-caption"><span class="caption-number">Spice Listing 3 </span><span class="caption-text">Basisschema van de klasse C versterker waarbij de uitgangspanning oscilleert rond de grond</span><a class="headerlink" href="#listing3" title="Permalink naar deze broncode">#</a></div>
@@ -1217,6 +1497,9 @@ L_L2         2 4    20uH
 <h3>Meerdere versterkingstrappen<a class="headerlink" href="#meerdere-versterkingstrappen" title="Permalink naar deze titel">#</a></h3>
 <p>In praktijk is het vaak zo dat een klasse C versterker gebruikt wordt om een klein ingangssignaal om te zetten naar een uitgangssignaal dat veel vermogen aan de belasting kan leveren. Vaak is echter een versterkertrap niet voldoende om van het klein ingangssignaal naar het groot uitgangssignaal te gaan, zowel in spanning als in stroom. Om dit te bekomen maken we meestal gebruik van meerdere versterkertrappen.</p>
 <p>Hieronder bouwen we stap voor stap op van het hierboven besproken schema naar een schema met 3 klasse C versterkerstrappen. Dit schema met 3 versterkerstrappen sluit aan bij een schema dat gebruikt wordt voor mobiele communicatie.</p>
+<section id="versterker-met-2-klasse-c-trappen-stap-1">
+<h4>Versterker met 2 Klasse C trappen: stap 1<a class="headerlink" href="#versterker-met-2-klasse-c-trappen-stap-1" title="Permalink naar deze titel">#</a></h4>
+<p>We vertrekken van het schema van de klasse C versterker zoals gegeven in <a class="reference internal" href="#cfig1"><span class="std std-numref">Fig. 6</span></a>. We laten in dit schema de belasting <span class="math notranslate nohighlight">\(R_L\)</span> voorlopig eventjes weg. De vergelijking die we hierboven gebruikt hebben om de stroom naar <span class="math notranslate nohighlight">\(C_1\)</span> uit te rekenen is <span class="math notranslate nohighlight">\(I_C= C \frac{d V}{dt}\)</span>. We merken op dat deze stroom <span class="math notranslate nohighlight">\(I_C\)</span> niet verandert als we een extra DC spanning over <span class="math notranslate nohighlight">\(C_1\)</span> zetten. We kunnen het schema in <a class="reference internal" href="#cfig1"><span class="std std-numref">Fig. 6</span></a> dus aanpassen met een extra spanning over de condensator <span class="math notranslate nohighlight">\(C_1\)</span>. Dit levert ons het schema op in <a class="reference internal" href="#cfig22"><span class="std std-numref">Fig. 31</span></a>.</p>
 <div class="cell docutils container">
 <div class="cell_output docutils container">
 <figure class="align-default" id="cfig22">
@@ -1226,7 +1509,11 @@ L_L2         2 4    20uH
 </figure>
 </div>
 </div>
-<p>De werking van dit schema blijft intact gelijk. Als we kijken naar de spanning over <span class="math notranslate nohighlight">\(C_1\)</span> merken we wel op dat er naast een AC spanning ook een DC component van de spanning is. Daardoor neemt de piekspanning toe en zal <span class="math notranslate nohighlight">\(C_1\)</span> sneller doorslagen.</p>
+<p>De werking van dit schema blijft intact gelijk. Als we kijken naar de spanning over <span class="math notranslate nohighlight">\(C_1\)</span> merken we wel op dat er naast een AC spanning ook een DC component van de spanning is. Daardoor neemt de piekspanning toe en zal <span class="math notranslate nohighlight">\(C_1\)</span> sneller doorslagen. We moeten bij de selectie van <span class="math notranslate nohighlight">\(C_1\)</span> dus de keuze maken voor een condensator die een iets hogere spanning aankan. Normaal zal dat betekenen een iets dikker dielectricum en dus een iets hogere prijs.</p>
+</section>
+<section id="versterker-met-2-klasse-c-trappen-stap-2">
+<h4>Versterker met 2 Klasse C trappen: stap 2<a class="headerlink" href="#versterker-met-2-klasse-c-trappen-stap-2" title="Permalink naar deze titel">#</a></h4>
+<p>Een volgende stap naar een meertraps klasse C versterker is de uitvoering van <span class="math notranslate nohighlight">\(V_{dd2}\)</span> op basis van een spanningsdeling vanuit <span class="math notranslate nohighlight">\(V_{dd}\)</span>. Dit schema kan je zien in <a class="reference internal" href="#cfig23"><span class="std std-numref">Fig. 32</span></a>. Hiervoor gebruiken we de 2 weerstanden <span class="math notranslate nohighlight">\(R_L\)</span> en <span class="math notranslate nohighlight">\(R_{L2}\)</span>. Een gevolg hiervan gaat zijn dat de AC-stroom die door de condensator <span class="math notranslate nohighlight">\(C_1\)</span> loopt ook door de weerstanden <span class="math notranslate nohighlight">\(R_L\)</span> of <span class="math notranslate nohighlight">\(R_{L2}\)</span> gaat lopen (i.e. verdeeld proportioneel met de geleidbaarheden van <span class="math notranslate nohighlight">\(R_L\)</span> en <span class="math notranslate nohighlight">\(R_{L2}\)</span>).  Hierdoor voeren we terug de belastingsweerstand in die we in de vorige stap weggelaten hebben.</p>
 <div class="cell docutils container">
 <div class="cell_output docutils container">
 <figure class="align-default" id="cfig23">
@@ -1236,6 +1523,10 @@ L_L2         2 4    20uH
 </figure>
 </div>
 </div>
+</section>
+<section id="versterker-met-2-klasse-c-trappen-stap-3">
+<h4>Versterker met 2 Klasse C trappen: stap 3<a class="headerlink" href="#versterker-met-2-klasse-c-trappen-stap-3" title="Permalink naar deze titel">#</a></h4>
+<p>De belastingsweerstand <span class="math notranslate nohighlight">\(R_{L2}\)</span> kunnen we vervangen door een (voorwaarts gebiaste) diode (<span class="math notranslate nohighlight">\(D_L\)</span>). Dit schema zie je in <a class="reference internal" href="#cfig24"><span class="std std-numref">Fig. 33</span></a>. Aangezien een voorwaarts gebiaste diode een lage aanweerstand heeft (of dus een hoge geleidbaarheid), zal de meerderheid van de stroom tijdens het voorwaarts gedeelte van de swing door de diode gaan.</p>
 <div class="cell docutils container">
 <div class="cell_output docutils container">
 <figure class="align-default" id="cfig24">
@@ -1245,7 +1536,10 @@ L_L2         2 4    20uH
 </figure>
 </div>
 </div>
-<p>In een volgende stap versterken we de stroom door de last diode <span class="math notranslate nohighlight">\(D_L\)</span> met een factor <span class="math notranslate nohighlight">\(\beta_F\)</span> van een transistor.</p>
+</section>
+<section id="versterker-met-2-klasse-c-trappen-stap-4">
+<h4>Versterker met 2 Klasse C trappen: stap 4<a class="headerlink" href="#versterker-met-2-klasse-c-trappen-stap-4" title="Permalink naar deze titel">#</a></h4>
+<p>In een volgende stap versterken we de stroom door de last diode <span class="math notranslate nohighlight">\(D_L\)</span> met een factor <span class="math notranslate nohighlight">\(\beta_F\)</span> van een transistor. De werking blijft hetzelfde, maar in <span class="math notranslate nohighlight">\(R_L\)</span> krijgen we een factor <span class="math notranslate nohighlight">\(\beta_F\)</span> meer stroom. Dit schema zie je in <a class="reference internal" href="#cfig26"><span class="std std-numref">Fig. 34</span></a>.</p>
 <div class="cell docutils container">
 <div class="cell_output docutils container">
 <figure class="align-default" id="cfig26">
@@ -1255,6 +1549,13 @@ L_L2         2 4    20uH
 </figure>
 </div>
 </div>
+</section>
+<section id="versterker-met-2-klasse-c-trappen-stap-5">
+<h4>Versterker met 2 Klasse C trappen: stap 5<a class="headerlink" href="#versterker-met-2-klasse-c-trappen-stap-5" title="Permalink naar deze titel">#</a></h4>
+<p>De belasting <span class="math notranslate nohighlight">\(R_L\)</span> in <a class="reference internal" href="#cfig26"><span class="std std-numref">Fig. 34</span></a> kan nu terug resonant gemaakt worden door het invoeren van de 2de trilkring op basis van <span class="math notranslate nohighlight">\(L_2\)</span> en <span class="math notranslate nohighlight">\(C_2\)</span>. We hebben nu een 2-trap klasse C versterker met 2 resonante kringen. Dit schema zie je in in <a class="reference internal" href="#cfig27"><span class="std std-numref">Fig. 35</span></a>. Het spreek vanzelf dat we hier</p>
+<div class="math notranslate nohighlight">
+\[\frac{1}{L_1 C_1} = \frac{1}{L_2 C_2}\]</div>
+<p>moeten kiezen.</p>
 <div class="cell docutils container">
 <div class="cell_output docutils container">
 <figure class="align-default" id="cfig27">
@@ -1264,6 +1565,12 @@ L_L2         2 4    20uH
 </figure>
 </div>
 </div>
+</section>
+<section id="versterker-met-3-klasse-c-trappen">
+<h4>Versterker met 3 Klasse C trappen<a class="headerlink" href="#versterker-met-3-klasse-c-trappen" title="Permalink naar deze titel">#</a></h4>
+<p>Volgens de zelfde redenering kunnen we ook een derde klasse C versterkertrap toevoegen. Dit schema zie je in <a class="reference internal" href="#cfig28"><span class="std std-numref">Fig. 36</span></a>. Hier geldt:</p>
+<div class="math notranslate nohighlight">
+\[\frac{1}{L_1 C_1} = \frac{1}{L_2 C_2}= \frac{1}{L_3 C_3}\]</div>
 <div class="cell docutils container">
 <div class="cell_output docutils container">
 <figure class="align-default" id="cfig28">
@@ -1273,24 +1580,32 @@ L_L2         2 4    20uH
 </figure>
 </div>
 </div>
-<p>Het bovenstaand circuit wordt ook gebruikt in de GSM transmitter ICs RFMD RF2140 en RF2174. Deze ICs werken tussen 1710 en 1785 MHz, gebruiken een voedingsspanning van 3.2V en bekomen en zendvermogen van 32.7 dBm (ongeveer 2 W) met een efficiëntie van 50.6%. De spoelen worden wel extern uitgevoerd en zitten dus niet in de IC.  <cite id="i5wtl"><a href="#zotero|11916217/62LG3FWV">[2]</a></cite></p>
-<p><img alt="icGSM" src="_images/RF2140.png" /></p>
+<p>Het circuit in <a class="reference internal" href="#cfig28"><span class="std std-numref">Fig. 36</span></a>wordt ook gebruikt in de GSM transmitter ICs RFMD RF2140 en RF2174. Deze ICs werken tussen 1710 en 1785 MHz, gebruiken een voedingsspanning van 3.2V en bekomen en zendvermogen van 32.7 dBm (ongeveer 2 W) met een efficiëntie van 50.6%. De spoelen (<span class="math notranslate nohighlight">\(L_1\)</span>,<span class="math notranslate nohighlight">\(L_2\)</span> en <span class="math notranslate nohighlight">\(L_3\)</span>) en de condensator <span class="math notranslate nohighlight">\(C_3\)</span> worden wel extern uitgevoerd en zitten dus niet in de IC <cite id="i5wtl"><a href="#zotero|11916217/62LG3FWV">[2]</a></cite>. We herkennen <span class="math notranslate nohighlight">\(L_1\)</span> tussen <code class="docutils literal notranslate"><span class="pre">VCC1</span></code> (Pin 5) en <span class="math notranslate nohighlight">\(V_{dd}\)</span>, <span class="math notranslate nohighlight">\(L_2\)</span> tussen <code class="docutils literal notranslate"><span class="pre">VCC2</span></code> (Pinnen 14,15,en 16) en <span class="math notranslate nohighlight">\(V_{dd}\)</span> en <span class="math notranslate nohighlight">\(L_3\)</span> tussen <code class="docutils literal notranslate"><span class="pre">RF</span> <span class="pre">OUT</span></code> (Pinnen 10,11,en 12) en <span class="math notranslate nohighlight">\(V_{dd}\)</span>.</p>
+<div class="cell docutils container">
+<div class="cell_output docutils container">
 <figure class="align-default" id="figgsm">
-<img alt="_images/mpl.svg" src="_images/mpl.svg" /><figcaption>
+<img alt="_images/0a89ab10a8352ca87ea82c7dca7cca9917226c81cda3703b766b9cbfb6a92bd5.png" src="_images/0a89ab10a8352ca87ea82c7dca7cca9917226c81cda3703b766b9cbfb6a92bd5.png" />
+<figcaption>
 <p><span class="caption-number">Fig. 37 </span><span class="caption-text">IC schema en fotos van de RFMD RF2140 en RF2174 [2]</span><a class="headerlink" href="#figgsm" title="Permallink naar deze afbeelding">#</a></p>
 </figcaption>
 </figure>
+</div>
+</div>
+</section>
 </section>
 </section>
 <section id="plaatmodulatie">
 <h2>Plaatmodulatie<a class="headerlink" href="#plaatmodulatie" title="Permalink naar deze titel">#</a></h2>
-<p>Wanneer we <a class="reference external" href="https://en.wikipedia.org/wiki/Amplitude_modulation">amplitude modulatie</a> willen bekomen op hoge frequentie, kunnen we dit bekomen door een klasse B versterker te gebruiken om de voedingsspanning van een klasse C versterker aan te sturen. Dit concept noemen we plaatmodulatie.</p>
+<p>Wanneer we <a class="reference external" href="https://en.wikipedia.org/wiki/Amplitude_modulation">amplitude modulatie</a> willen bekomen op hoge frequentie, kunnen we dit bekomen door de amplitude aan te passen bij een vaste voedingsspanning. Dit kan door ofwel de amplitude van de stroompulsen (<span class="math notranslate nohighlight">\(I_p\)</span>) aan te passen of door de geleidingshoek (<span class="math notranslate nohighlight">\(\alpha\)</span>) aan te passen.</p>
+<p>Echter, zoals we uit de berekeningen van het rendement (<span class="math notranslate nohighlight">\(\eta\)</span>) bij niet-volledige uitsturing en ook uit simulaties zoals bijvoorbeeld aan de hand van widgets kunnen uitgevoerd worden zoals in <a class="reference internal" href="#cfig7"><span class="std std-numref">Fig. 16</span></a>
+kunnen afleiden, is het rendement (<span class="math notranslate nohighlight">\(\eta\)</span>) van een klasse C versterker die niet volledig uitgestuurd wordt tot een amplitude lager dan de voedingsspanning, altijd lager dan wanneer dat wel het geval is. Daarom verkiezen we steeds de klasse C versterker te gebruiken met een amplitude die overeenkomt met de voedingsspanning.</p>
+<p>Hoe kunnen we dan die amplitude aanpassen, wel door een klasse B versterker te gebruiken om de voedingsspanning van een klasse C versterker aan te sturen. Dit concept noemen we plaatmodulatie.</p>
 <p><a class="reference internal" href="#cfigplaatmodulatie"><span class="std std-numref">Fig. 38</span></a> toont schematisch aan hoe zo een plaatmodulatie kan gerealiseerd worden.</p>
 <p>In dit geval levert de voeding (<span class="math notranslate nohighlight">\(V_{dd}\)</span>) het DC vermogen en dus ook de DC stroom die naar de voeding van klasse C versterker gaat. De spoel <span class="math notranslate nohighlight">\(L\)</span> moet dan voldoende groot zijn om deze DC stroom nauwkeurig constant te houden. De klasse B versterker moet dan enkel het vermogen leveren om de veranderingen van voedingsspanningen van de klasse C te kunnen bekomen. De condensator <span class="math notranslate nohighlight">\(C\)</span> moet derhalve ook groot genoeg zijn om snel genoeg de AC stroom te kunnen leveren die de aanpassingen van de voeding mogelijk maakt.</p>
 <div class="cell docutils container">
 <div class="cell_output docutils container">
 <figure class="align-default" id="cfigplaatmodulatie">
-<img alt="_images/a7c4600c527dd02fbbf89ef2193a6808e7a7abde1f23fb421243860c967cb3bc.svg" src="_images/a7c4600c527dd02fbbf89ef2193a6808e7a7abde1f23fb421243860c967cb3bc.svg" /><figcaption>
+<img alt="_images/9996a8030515a28d4f7a694c081a0664518b73f05bed8de8abee02169408e8a6.svg" src="_images/9996a8030515a28d4f7a694c081a0664518b73f05bed8de8abee02169408e8a6.svg" /><figcaption>
 <p><span class="caption-number">Fig. 38 </span><span class="caption-text">Amplitude modulatie bekomen door een klasse B versterker te gebruiken om de voeding van de klasse C versterker aan te sturen.</span><a class="headerlink" href="#cfigplaatmodulatie" title="Permallink naar deze afbeelding">#</a></p>
 </figcaption>
 </figure>
