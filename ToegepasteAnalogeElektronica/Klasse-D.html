@@ -24,8 +24,9 @@
     <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/exercise.css" />
     <link rel="stylesheet" type="text/css" href="_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
     
   <!-- Pre-loaded scripts that we'll load fully later -->
@@ -43,7 +44,7 @@
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="_static/togglebutton.js"></script>
     <script src="_static/translations.js"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
@@ -513,7 +514,26 @@ title="Print to PDF"
                 
   <section class="tex2jax_ignore mathjax_ignore" id="klasse-d-versterkers">
 <h1>Klasse D  Versterkers<a class="headerlink" href="#klasse-d-versterkers" title="Permalink naar deze titel">#</a></h1>
-<p><a href="./slides/Klasse-D.slides.html"><img alt="slides" src="_images/slides-beschikbaar-blue.svg" /></a></p>
+<p><a href="./slides/Klasse-D.slides.html" target="_blank"><img alt="slides" src="_images/slides-beschikbaar-blue.svg" /></a></p>
+<table class="colwidths-auto table" id="vermogenversterkersd">
+<caption><span class="caption-number">Tabel 3 </span><span class="caption-text">Indeling van de vermogenversterkers</span><a class="headerlink" href="#vermogenversterkersd" title="Permalink naar deze tabel">#</a></caption>
+<thead>
+<tr class="row-odd"><th class="text-left head"><p></p></th>
+<th class="text-left head"><p>laagfrequent of breedband</p></th>
+<th class="text-left head"><p>hoogfrequent of resonant</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-left"><p>1 transistor <BR> in de vermogentrap</p></td>
+<td class="text-left"><p>Klasse A</p></td>
+<td class="text-left"><p>Klasse C <BR> Klasse F <BR>Klasse E</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>2 of meer  transistors <BR>in de vermogentrap</p></td>
+<td class="text-left"><p>Klasse B  <BR> Klasse G</p></td>
+<td class="text-left"><p><strong>Klasse D</strong></p></td>
+</tr>
+</tbody>
+</table>
 <div class="cell docutils container">
 </div>
 <div class="cell docutils container">
@@ -534,25 +554,103 @@ title="Print to PDF"
 </figure>
 </div>
 </div>
-<p>De overeenkomende SPICE code voor dit circuit is:</p>
+<p>De overeenkomende SPICE code voor dit circuit is kan je zien in <a class="reference internal" href="#listingd1"><span class="std std-numref">Spice Listing 10</span></a>.</p>
 <div class="cell docutils container">
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>* Class D amp 1
-Q_Q1         3 1 2 Q2
-Q_Qp         0 1 2 Qp
-L_L1         5 2 1uH
-C_C1         5 6 10n
-R_RL         6 0 6
-V_Vdd        3 0 20V
-R_Rin        4 1 1
-V_Vin        4 0 PULSE(0 20 0 20ns 20ns 294ns 628ns) DC=0
-.model Q2  NPN(Is=14.34f BF=200)
-.model Qp  PNP(Is=5.34f BF=100)
+<div class="output text_html"><style>pre { line-height: 125%; }
+td.linenos .normal { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
+span.linenos { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
+td.linenos .special { color: #000000; background-color: #ffffc0; padding-left: 5px; padding-right: 5px; }
+span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 5px; padding-right: 5px; }
+.output_html .hll { background-color: #ffffcc }
+.output_html { background: #f8f8f8; }
+.output_html .c { color: #3D7B7B; font-style: italic } /* Comment */
+.output_html .err { border: 1px solid #FF0000 } /* Error */
+.output_html .k { color: #008000; font-weight: bold } /* Keyword */
+.output_html .o { color: #666666 } /* Operator */
+.output_html .ch { color: #3D7B7B; font-style: italic } /* Comment.Hashbang */
+.output_html .cm { color: #3D7B7B; font-style: italic } /* Comment.Multiline */
+.output_html .cp { color: #9C6500 } /* Comment.Preproc */
+.output_html .cpf { color: #3D7B7B; font-style: italic } /* Comment.PreprocFile */
+.output_html .c1 { color: #3D7B7B; font-style: italic } /* Comment.Single */
+.output_html .cs { color: #3D7B7B; font-style: italic } /* Comment.Special */
+.output_html .gd { color: #A00000 } /* Generic.Deleted */
+.output_html .ge { font-style: italic } /* Generic.Emph */
+.output_html .gr { color: #E40000 } /* Generic.Error */
+.output_html .gh { color: #000080; font-weight: bold } /* Generic.Heading */
+.output_html .gi { color: #008400 } /* Generic.Inserted */
+.output_html .go { color: #717171 } /* Generic.Output */
+.output_html .gp { color: #000080; font-weight: bold } /* Generic.Prompt */
+.output_html .gs { font-weight: bold } /* Generic.Strong */
+.output_html .gu { color: #800080; font-weight: bold } /* Generic.Subheading */
+.output_html .gt { color: #0044DD } /* Generic.Traceback */
+.output_html .kc { color: #008000; font-weight: bold } /* Keyword.Constant */
+.output_html .kd { color: #008000; font-weight: bold } /* Keyword.Declaration */
+.output_html .kn { color: #008000; font-weight: bold } /* Keyword.Namespace */
+.output_html .kp { color: #008000 } /* Keyword.Pseudo */
+.output_html .kr { color: #008000; font-weight: bold } /* Keyword.Reserved */
+.output_html .kt { color: #B00040 } /* Keyword.Type */
+.output_html .m { color: #666666 } /* Literal.Number */
+.output_html .s { color: #BA2121 } /* Literal.String */
+.output_html .na { color: #687822 } /* Name.Attribute */
+.output_html .nb { color: #008000 } /* Name.Builtin */
+.output_html .nc { color: #0000FF; font-weight: bold } /* Name.Class */
+.output_html .no { color: #880000 } /* Name.Constant */
+.output_html .nd { color: #AA22FF } /* Name.Decorator */
+.output_html .ni { color: #717171; font-weight: bold } /* Name.Entity */
+.output_html .ne { color: #CB3F38; font-weight: bold } /* Name.Exception */
+.output_html .nf { color: #0000FF } /* Name.Function */
+.output_html .nl { color: #767600 } /* Name.Label */
+.output_html .nn { color: #0000FF; font-weight: bold } /* Name.Namespace */
+.output_html .nt { color: #008000; font-weight: bold } /* Name.Tag */
+.output_html .nv { color: #19177C } /* Name.Variable */
+.output_html .ow { color: #AA22FF; font-weight: bold } /* Operator.Word */
+.output_html .w { color: #bbbbbb } /* Text.Whitespace */
+.output_html .mb { color: #666666 } /* Literal.Number.Bin */
+.output_html .mf { color: #666666 } /* Literal.Number.Float */
+.output_html .mh { color: #666666 } /* Literal.Number.Hex */
+.output_html .mi { color: #666666 } /* Literal.Number.Integer */
+.output_html .mo { color: #666666 } /* Literal.Number.Oct */
+.output_html .sa { color: #BA2121 } /* Literal.String.Affix */
+.output_html .sb { color: #BA2121 } /* Literal.String.Backtick */
+.output_html .sc { color: #BA2121 } /* Literal.String.Char */
+.output_html .dl { color: #BA2121 } /* Literal.String.Delimiter */
+.output_html .sd { color: #BA2121; font-style: italic } /* Literal.String.Doc */
+.output_html .s2 { color: #BA2121 } /* Literal.String.Double */
+.output_html .se { color: #AA5D1F; font-weight: bold } /* Literal.String.Escape */
+.output_html .sh { color: #BA2121 } /* Literal.String.Heredoc */
+.output_html .si { color: #A45A77; font-weight: bold } /* Literal.String.Interpol */
+.output_html .sx { color: #008000 } /* Literal.String.Other */
+.output_html .sr { color: #A45A77 } /* Literal.String.Regex */
+.output_html .s1 { color: #BA2121 } /* Literal.String.Single */
+.output_html .ss { color: #19177C } /* Literal.String.Symbol */
+.output_html .bp { color: #008000 } /* Name.Builtin.Pseudo */
+.output_html .fm { color: #0000FF } /* Name.Function.Magic */
+.output_html .vc { color: #19177C } /* Name.Variable.Class */
+.output_html .vg { color: #19177C } /* Name.Variable.Global */
+.output_html .vi { color: #19177C } /* Name.Variable.Instance */
+.output_html .vm { color: #19177C } /* Name.Variable.Magic */
+.output_html .il { color: #666666 } /* Literal.Number.Integer.Long */</style><div class="highlight"><pre><span></span><span class="o">*</span><span class="w"> </span><span class="nx">Class</span><span class="w"> </span><span class="nx">D</span><span class="w"> </span><span class="nx">amp</span><span class="w"> </span><span class="mi">1</span><span class="w"></span>
+<span class="nx">Q_Q1</span><span class="w">         </span><span class="mi">3</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="nx">Q2</span><span class="w"></span>
+<span class="nx">Q_Qp</span><span class="w">         </span><span class="mi">0</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="nx">Qp</span><span class="w"></span>
+<span class="nx">L_L1</span><span class="w">         </span><span class="mi">5</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="mi">1</span><span class="nx">uH</span><span class="w"></span>
+<span class="nx">C_C1</span><span class="w">         </span><span class="mi">5</span><span class="w"> </span><span class="mi">6</span><span class="w"> </span><span class="mi">10</span><span class="nx">n</span><span class="w"></span>
+<span class="nx">R_RL</span><span class="w">         </span><span class="mi">6</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="mi">6</span><span class="w"></span>
+<span class="nx">V_Vdd</span><span class="w">        </span><span class="mi">3</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="mi">20</span><span class="nx">V</span><span class="w"></span>
+<span class="nx">R_Rin</span><span class="w">        </span><span class="mi">4</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="mi">1</span><span class="w"></span>
+<span class="nx">V_Vin</span><span class="w">        </span><span class="mi">4</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="nx">PULSE</span><span class="p">(</span><span class="mi">0</span><span class="w"> </span><span class="mi">20</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="mi">20</span><span class="nx">ns</span><span class="w"> </span><span class="mi">20</span><span class="nx">ns</span><span class="w"> </span><span class="mi">294</span><span class="nx">ns</span><span class="w"> </span><span class="mi">628</span><span class="nx">ns</span><span class="p">)</span><span class="w"> </span><span class="nx">DC</span><span class="p">=</span><span class="mi">0</span><span class="w"></span>
+<span class="p">.</span><span class="nx">model</span><span class="w"> </span><span class="nx">Q2</span><span class="w">  </span><span class="nx">NPN</span><span class="p">(</span><span class="nx">Is</span><span class="p">=</span><span class="m m-Double">14.34</span><span class="kd">f</span><span class="w"> </span><span class="nx">BF</span><span class="p">=</span><span class="mi">200</span><span class="p">)</span><span class="w"></span>
+<span class="p">.</span><span class="nx">model</span><span class="w"> </span><span class="nx">Qp</span><span class="w">  </span><span class="nx">PNP</span><span class="p">(</span><span class="nx">Is</span><span class="p">=</span><span class="m m-Double">5.34</span><span class="kd">f</span><span class="w"> </span><span class="nx">BF</span><span class="p">=</span><span class="mi">100</span><span class="p">)</span><span class="w"></span>
+</pre></div>
+</div></div>
+</div>
+<div class="literal-block-wrapper docutils container" id="listingd1">
+<div class="code-block-caption"><span class="caption-number">Spice Listing 10 </span><span class="caption-text">basis Klasse D circuit</span><a class="headerlink" href="#listingd1" title="Permalink naar deze broncode">#</a></div>
+<div class="highlight-spice notranslate"><div class="highlight"><pre><span></span>
 </pre></div>
 </div>
 </div>
-</div>
-<p class=spicecaption>basiscircuit van de Klasse D versterker</p><div class="cell docutils container">
+<div class="cell docutils container">
 <div class="cell_output docutils container">
 <figure class="align-default" id="dfig5">
 <img alt="_images/90d90970c83d7ac1021108ca893c550ea0794bfe3e616dca9e20bb7f38f7aaf3.png" src="_images/90d90970c83d7ac1021108ca893c550ea0794bfe3e616dca9e20bb7f38f7aaf3.png" />

@@ -24,8 +24,9 @@
     <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/exercise.css" />
     <link rel="stylesheet" type="text/css" href="_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
     
   <!-- Pre-loaded scripts that we'll load fully later -->
@@ -43,7 +44,7 @@
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="_static/togglebutton.js"></script>
     <script src="_static/translations.js"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
@@ -973,7 +974,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 </div></div>
 </div>
 <div class="literal-block-wrapper docutils container" id="listing1">
-<div class="code-block-caption"><span class="caption-number">Spice Listing 1 </span><span class="caption-text">basis Klasse C circuit</span><a class="headerlink" href="#listing1" title="Permalink naar deze broncode">#</a></div>
+<div class="code-block-caption"><span class="caption-number">Spice Listing 5 </span><span class="caption-text">basis Klasse C circuit</span><a class="headerlink" href="#listing1" title="Permalink naar deze broncode">#</a></div>
 <div class="highlight-spice notranslate"><div class="highlight"><pre><span></span>
 </pre></div>
 </div>
@@ -1282,7 +1283,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 </div></div>
 </div>
 <div class="literal-block-wrapper docutils container" id="listing2">
-<div class="code-block-caption"><span class="caption-number">Spice Listing 2 </span><span class="caption-text">Klasse C voor AC simulatie</span><a class="headerlink" href="#listing2" title="Permalink naar deze broncode">#</a></div>
+<div class="code-block-caption"><span class="caption-number">Spice Listing 6 </span><span class="caption-text">Klasse C voor AC simulatie</span><a class="headerlink" href="#listing2" title="Permalink naar deze broncode">#</a></div>
 <div class="highlight-spice notranslate"><div class="highlight"><pre><span></span>
 </pre></div>
 </div>
@@ -1302,7 +1303,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 <p>en de stroompuls <span class="math notranslate nohighlight">\(I(\omega)\)</span> hetzelfde blijft wanneer de freqentie hetzelfde bij alle frequenties.</p>
 <section id="alternatieve-berekening-van-v-a">
 <h3>Alternatieve berekening van <span class="math notranslate nohighlight">\(V_a\)</span><a class="headerlink" href="#alternatieve-berekening-van-v-a" title="Permalink naar deze titel">#</a></h3>
-<p>In sectie xx werd <span class="math notranslate nohighlight">\(V_a\)</span> berekend op basis van een vermogenevenwicht, namelijk het totale vermogen dat in de trilkring gaat, is ook het totale vermogen dat in de belasting wordt bekomen. Hierbij werd echter verondersteld dat alle vermogen in de eerste harmonische van de trilkring terechtkomt. Dat hoeft natuurlijk niet helemaal het geval te zijn. Een alternatieve berekening voor <span class="math notranslate nohighlight">\(V_a\)</span> is het opsplitsen van de aangelegde stroompulsen in een fourier reeks en elk van de sinusfucties die dan bekomen wordt leggen we dan aan aan de LRC kring. Hierdoor krijgen we de amplitude van alle harmonischen <span class="math notranslate nohighlight">\(V_{a,n}\)</span>. Het is natuurlijk wel zo dat de impedantie van de LRC kring off-resonance groot is (zie bovenstaande grafiek), wat maakt dat <span class="math notranslate nohighlight">\(V_{a,n}\)</span> voor <span class="math notranslate nohighlight">\( n &gt; 1\)</span> klein zal zijn.</p>
+<p>In vergelijking <a class="reference internal" href="#equation-eq8">(8)</a> werd <span class="math notranslate nohighlight">\(V_a\)</span> berekend op basis van een vermogenevenwicht, namelijk het totale vermogen dat in de trilkring gaat, is ook het totale vermogen dat in de belasting wordt bekomen. Hierbij werd echter verondersteld dat alle vermogen in de eerste harmonische van de trilkring terechtkomt. Dat hoeft natuurlijk niet helemaal het geval te zijn. Een alternatieve berekening voor <span class="math notranslate nohighlight">\(V_a\)</span> is het opsplitsen van de aangelegde stroompulsen in een fourier reeks en elk van de sinusfucties die dan bekomen wordt leggen we dan aan aan de LRC kring. Hierdoor krijgen we de amplitude van alle harmonischen <span class="math notranslate nohighlight">\(V_{a,n}\)</span>. Het is natuurlijk wel zo dat de impedantie van de LRC kring off-resonance groot is (zie bovenstaande grafiek), wat maakt dat <span class="math notranslate nohighlight">\(V_{a,n}\)</span> voor <span class="math notranslate nohighlight">\( n &gt; 1\)</span> klein zal zijn.</p>
 <div class="math notranslate nohighlight">
 \[ V_{a,1}= \frac{R_L}{\pi} \int_{-\pi}^{\pi} {\cos(u) I_c(u) du }= 
             \frac{R_L}{\pi} \int_{-\alpha}^{\alpha} {\cos(u) \frac{\cos(u)-\cos(\alpha)}{1-\cos(\alpha)}I_p  du }=
@@ -1477,7 +1478,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 </div></div>
 </div>
 <div class="literal-block-wrapper docutils container" id="listing3">
-<div class="code-block-caption"><span class="caption-number">Spice Listing 3 </span><span class="caption-text">Basisschema van de klasse C versterker waarbij de uitgangspanning oscilleert rond de grond</span><a class="headerlink" href="#listing3" title="Permalink naar deze broncode">#</a></div>
+<div class="code-block-caption"><span class="caption-number">Spice Listing 7 </span><span class="caption-text">Basisschema van de klasse C versterker waarbij de uitgangspanning oscilleert rond de grond</span><a class="headerlink" href="#listing3" title="Permalink naar deze broncode">#</a></div>
 <div class="highlight-spice notranslate"><div class="highlight"><pre><span></span>
 </pre></div>
 </div>

@@ -17302,35 +17302,110 @@ z
 
 <div class="jp-OutputArea-child">
 
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>* CIRCUIT Spice file van een verschilversterker
-VDD    1 0 DC=5.0
-VPLUS 10 0 DC=2.5
-VMIN  11 0 SIN(2.5 50U 1E6) DC=2.5
-VB    9 0 DC=1.5
-C3     3 0   5.914fF
-C4     4 0  14.737fF
-C5     5 0  10.124fF
-C6     6 0  14.434fF
-C8     8 0   7.919fF
-C9     9 0  15.257fF
-C10   10 0 1.872fF
-C11   11 0 1.688fF
-C25    1 5  1fF
-MN1 3 5 0 0  NMOS w=1.50u L=0.50u
-MN2 0 5 5 0  NMOS w=1.50u L=0.50u
-MN3 8 10 4 0 NMOS w=1.50u L=0.50U
-MN4 0 9 8 0  NMOS w=4.50u L=0.50U
-MN5 6 11 8 0 NMOS w=1.50u L=0.50U
-MP1 1 4 3 1  PMOS w=3.50u L=0.50U
-MP2 4 4 1 1  PMOS w=3.50u L=0.50U
-MP3 1 6 5 1  PMOS w=3.50u L=0.50U
-MP4 6 6 1 1  PMOS w=3.50u L=0.50U
-.MODEL NMOS NMOS(LEVEL=1 VTO=0.50 KP=90.000E-6 LAMBDA=0.001)
-.MODEL PMOS PMOS(LEVEL=1 VTO=-0.45 KP=55.000E-6 LAMBDA=0.001)
 
-</pre>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
+<style>pre { line-height: 125%; }
+td.linenos .normal { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
+span.linenos { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
+td.linenos .special { color: #000000; background-color: #ffffc0; padding-left: 5px; padding-right: 5px; }
+span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 5px; padding-right: 5px; }
+.output_html .hll { background-color: #ffffcc }
+.output_html { background: #f8f8f8; }
+.output_html .c { color: #3D7B7B; font-style: italic } /* Comment */
+.output_html .err { border: 1px solid #FF0000 } /* Error */
+.output_html .k { color: #008000; font-weight: bold } /* Keyword */
+.output_html .o { color: #666666 } /* Operator */
+.output_html .ch { color: #3D7B7B; font-style: italic } /* Comment.Hashbang */
+.output_html .cm { color: #3D7B7B; font-style: italic } /* Comment.Multiline */
+.output_html .cp { color: #9C6500 } /* Comment.Preproc */
+.output_html .cpf { color: #3D7B7B; font-style: italic } /* Comment.PreprocFile */
+.output_html .c1 { color: #3D7B7B; font-style: italic } /* Comment.Single */
+.output_html .cs { color: #3D7B7B; font-style: italic } /* Comment.Special */
+.output_html .gd { color: #A00000 } /* Generic.Deleted */
+.output_html .ge { font-style: italic } /* Generic.Emph */
+.output_html .gr { color: #E40000 } /* Generic.Error */
+.output_html .gh { color: #000080; font-weight: bold } /* Generic.Heading */
+.output_html .gi { color: #008400 } /* Generic.Inserted */
+.output_html .go { color: #717171 } /* Generic.Output */
+.output_html .gp { color: #000080; font-weight: bold } /* Generic.Prompt */
+.output_html .gs { font-weight: bold } /* Generic.Strong */
+.output_html .gu { color: #800080; font-weight: bold } /* Generic.Subheading */
+.output_html .gt { color: #0044DD } /* Generic.Traceback */
+.output_html .kc { color: #008000; font-weight: bold } /* Keyword.Constant */
+.output_html .kd { color: #008000; font-weight: bold } /* Keyword.Declaration */
+.output_html .kn { color: #008000; font-weight: bold } /* Keyword.Namespace */
+.output_html .kp { color: #008000 } /* Keyword.Pseudo */
+.output_html .kr { color: #008000; font-weight: bold } /* Keyword.Reserved */
+.output_html .kt { color: #B00040 } /* Keyword.Type */
+.output_html .m { color: #666666 } /* Literal.Number */
+.output_html .s { color: #BA2121 } /* Literal.String */
+.output_html .na { color: #687822 } /* Name.Attribute */
+.output_html .nb { color: #008000 } /* Name.Builtin */
+.output_html .nc { color: #0000FF; font-weight: bold } /* Name.Class */
+.output_html .no { color: #880000 } /* Name.Constant */
+.output_html .nd { color: #AA22FF } /* Name.Decorator */
+.output_html .ni { color: #717171; font-weight: bold } /* Name.Entity */
+.output_html .ne { color: #CB3F38; font-weight: bold } /* Name.Exception */
+.output_html .nf { color: #0000FF } /* Name.Function */
+.output_html .nl { color: #767600 } /* Name.Label */
+.output_html .nn { color: #0000FF; font-weight: bold } /* Name.Namespace */
+.output_html .nt { color: #008000; font-weight: bold } /* Name.Tag */
+.output_html .nv { color: #19177C } /* Name.Variable */
+.output_html .ow { color: #AA22FF; font-weight: bold } /* Operator.Word */
+.output_html .w { color: #bbbbbb } /* Text.Whitespace */
+.output_html .mb { color: #666666 } /* Literal.Number.Bin */
+.output_html .mf { color: #666666 } /* Literal.Number.Float */
+.output_html .mh { color: #666666 } /* Literal.Number.Hex */
+.output_html .mi { color: #666666 } /* Literal.Number.Integer */
+.output_html .mo { color: #666666 } /* Literal.Number.Oct */
+.output_html .sa { color: #BA2121 } /* Literal.String.Affix */
+.output_html .sb { color: #BA2121 } /* Literal.String.Backtick */
+.output_html .sc { color: #BA2121 } /* Literal.String.Char */
+.output_html .dl { color: #BA2121 } /* Literal.String.Delimiter */
+.output_html .sd { color: #BA2121; font-style: italic } /* Literal.String.Doc */
+.output_html .s2 { color: #BA2121 } /* Literal.String.Double */
+.output_html .se { color: #AA5D1F; font-weight: bold } /* Literal.String.Escape */
+.output_html .sh { color: #BA2121 } /* Literal.String.Heredoc */
+.output_html .si { color: #A45A77; font-weight: bold } /* Literal.String.Interpol */
+.output_html .sx { color: #008000 } /* Literal.String.Other */
+.output_html .sr { color: #A45A77 } /* Literal.String.Regex */
+.output_html .s1 { color: #BA2121 } /* Literal.String.Single */
+.output_html .ss { color: #19177C } /* Literal.String.Symbol */
+.output_html .bp { color: #008000 } /* Name.Builtin.Pseudo */
+.output_html .fm { color: #0000FF } /* Name.Function.Magic */
+.output_html .vc { color: #19177C } /* Name.Variable.Class */
+.output_html .vg { color: #19177C } /* Name.Variable.Global */
+.output_html .vi { color: #19177C } /* Name.Variable.Instance */
+.output_html .vm { color: #19177C } /* Name.Variable.Magic */
+.output_html .il { color: #666666 } /* Literal.Number.Integer.Long */</style><div class="highlight"><pre><span></span><span class="o">*</span><span class="w"> </span><span class="nx">CIRCUIT</span><span class="w"> </span><span class="nx">Spice</span><span class="w"> </span><span class="nx">file</span><span class="w"> </span><span class="nx">van</span><span class="w"> </span><span class="nx">een</span><span class="w"> </span><span class="nx">verschilversterker</span><span class="w"></span>
+<span class="nx">VDD</span><span class="w">    </span><span class="mi">1</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="nx">DC</span><span class="p">=</span><span class="m m-Double">5.0</span><span class="w"></span>
+<span class="nx">VPLUS</span><span class="w"> </span><span class="mi">10</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="nx">DC</span><span class="p">=</span><span class="m m-Double">2.5</span><span class="w"></span>
+<span class="nx">VMIN</span><span class="w">  </span><span class="mi">11</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="nx">SIN</span><span class="p">(</span><span class="m m-Double">2.5</span><span class="w"> </span><span class="mi">50</span><span class="nx">U</span><span class="w"> </span><span class="m m-Double">1E6</span><span class="p">)</span><span class="w"> </span><span class="nx">DC</span><span class="p">=</span><span class="m m-Double">2.5</span><span class="w"></span>
+<span class="nx">VB</span><span class="w">    </span><span class="mi">9</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="nx">DC</span><span class="p">=</span><span class="m m-Double">1.5</span><span class="w"></span>
+<span class="nx">C3</span><span class="w">     </span><span class="mi">3</span><span class="w"> </span><span class="mi">0</span><span class="w">   </span><span class="m m-Double">5.914</span><span class="nx">fF</span><span class="w"></span>
+<span class="nx">C4</span><span class="w">     </span><span class="mi">4</span><span class="w"> </span><span class="mi">0</span><span class="w">  </span><span class="m m-Double">14.737</span><span class="nx">fF</span><span class="w"></span>
+<span class="nx">C5</span><span class="w">     </span><span class="mi">5</span><span class="w"> </span><span class="mi">0</span><span class="w">  </span><span class="m m-Double">10.124</span><span class="nx">fF</span><span class="w"></span>
+<span class="nx">C6</span><span class="w">     </span><span class="mi">6</span><span class="w"> </span><span class="mi">0</span><span class="w">  </span><span class="m m-Double">14.434</span><span class="nx">fF</span><span class="w"></span>
+<span class="nx">C8</span><span class="w">     </span><span class="mi">8</span><span class="w"> </span><span class="mi">0</span><span class="w">   </span><span class="m m-Double">7.919</span><span class="nx">fF</span><span class="w"></span>
+<span class="nx">C9</span><span class="w">     </span><span class="mi">9</span><span class="w"> </span><span class="mi">0</span><span class="w">  </span><span class="m m-Double">15.257</span><span class="nx">fF</span><span class="w"></span>
+<span class="nx">C10</span><span class="w">   </span><span class="mi">10</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="m m-Double">1.872</span><span class="nx">fF</span><span class="w"></span>
+<span class="nx">C11</span><span class="w">   </span><span class="mi">11</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="m m-Double">1.688</span><span class="nx">fF</span><span class="w"></span>
+<span class="nx">C25</span><span class="w">    </span><span class="mi">1</span><span class="w"> </span><span class="mi">5</span><span class="w">  </span><span class="mi">1</span><span class="nx">fF</span><span class="w"></span>
+<span class="nx">MN1</span><span class="w"> </span><span class="mi">3</span><span class="w"> </span><span class="mi">5</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="mi">0</span><span class="w">  </span><span class="nx">NMOS</span><span class="w"> </span><span class="nx">w</span><span class="p">=</span><span class="m m-Double">1.50</span><span class="nx">u</span><span class="w"> </span><span class="nx">L</span><span class="p">=</span><span class="m m-Double">0.50</span><span class="nx">u</span><span class="w"></span>
+<span class="nx">MN2</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="mi">5</span><span class="w"> </span><span class="mi">5</span><span class="w"> </span><span class="mi">0</span><span class="w">  </span><span class="nx">NMOS</span><span class="w"> </span><span class="nx">w</span><span class="p">=</span><span class="m m-Double">1.50</span><span class="nx">u</span><span class="w"> </span><span class="nx">L</span><span class="p">=</span><span class="m m-Double">0.50</span><span class="nx">u</span><span class="w"></span>
+<span class="nx">MN3</span><span class="w"> </span><span class="mi">8</span><span class="w"> </span><span class="mi">10</span><span class="w"> </span><span class="mi">4</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="nx">NMOS</span><span class="w"> </span><span class="nx">w</span><span class="p">=</span><span class="m m-Double">1.50</span><span class="nx">u</span><span class="w"> </span><span class="nx">L</span><span class="p">=</span><span class="m m-Double">0.50</span><span class="nx">U</span><span class="w"></span>
+<span class="nx">MN4</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="mi">9</span><span class="w"> </span><span class="mi">8</span><span class="w"> </span><span class="mi">0</span><span class="w">  </span><span class="nx">NMOS</span><span class="w"> </span><span class="nx">w</span><span class="p">=</span><span class="m m-Double">4.50</span><span class="nx">u</span><span class="w"> </span><span class="nx">L</span><span class="p">=</span><span class="m m-Double">0.50</span><span class="nx">U</span><span class="w"></span>
+<span class="nx">MN5</span><span class="w"> </span><span class="mi">6</span><span class="w"> </span><span class="mi">11</span><span class="w"> </span><span class="mi">8</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="nx">NMOS</span><span class="w"> </span><span class="nx">w</span><span class="p">=</span><span class="m m-Double">1.50</span><span class="nx">u</span><span class="w"> </span><span class="nx">L</span><span class="p">=</span><span class="m m-Double">0.50</span><span class="nx">U</span><span class="w"></span>
+<span class="nx">MP1</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="mi">4</span><span class="w"> </span><span class="mi">3</span><span class="w"> </span><span class="mi">1</span><span class="w">  </span><span class="nx">PMOS</span><span class="w"> </span><span class="nx">w</span><span class="p">=</span><span class="m m-Double">3.50</span><span class="nx">u</span><span class="w"> </span><span class="nx">L</span><span class="p">=</span><span class="m m-Double">0.50</span><span class="nx">U</span><span class="w"></span>
+<span class="nx">MP2</span><span class="w"> </span><span class="mi">4</span><span class="w"> </span><span class="mi">4</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="mi">1</span><span class="w">  </span><span class="nx">PMOS</span><span class="w"> </span><span class="nx">w</span><span class="p">=</span><span class="m m-Double">3.50</span><span class="nx">u</span><span class="w"> </span><span class="nx">L</span><span class="p">=</span><span class="m m-Double">0.50</span><span class="nx">U</span><span class="w"></span>
+<span class="nx">MP3</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="mi">6</span><span class="w"> </span><span class="mi">5</span><span class="w"> </span><span class="mi">1</span><span class="w">  </span><span class="nx">PMOS</span><span class="w"> </span><span class="nx">w</span><span class="p">=</span><span class="m m-Double">3.50</span><span class="nx">u</span><span class="w"> </span><span class="nx">L</span><span class="p">=</span><span class="m m-Double">0.50</span><span class="nx">U</span><span class="w"></span>
+<span class="nx">MP4</span><span class="w"> </span><span class="mi">6</span><span class="w"> </span><span class="mi">6</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="mi">1</span><span class="w">  </span><span class="nx">PMOS</span><span class="w"> </span><span class="nx">w</span><span class="p">=</span><span class="m m-Double">3.50</span><span class="nx">u</span><span class="w"> </span><span class="nx">L</span><span class="p">=</span><span class="m m-Double">0.50</span><span class="nx">U</span><span class="w"></span>
+<span class="p">.</span><span class="nx">MODEL</span><span class="w"> </span><span class="nx">NMOS</span><span class="w"> </span><span class="nx">NMOS</span><span class="p">(</span><span class="nx">LEVEL</span><span class="p">=</span><span class="mi">1</span><span class="w"> </span><span class="nx">VTO</span><span class="p">=</span><span class="m m-Double">0.50</span><span class="w"> </span><span class="nx">KP</span><span class="p">=</span><span class="m m-Double">90.000E-6</span><span class="w"> </span><span class="nx">LAMBDA</span><span class="p">=</span><span class="m m-Double">0.001</span><span class="p">)</span><span class="w"></span>
+<span class="p">.</span><span class="nx">MODEL</span><span class="w"> </span><span class="nx">PMOS</span><span class="w"> </span><span class="nx">PMOS</span><span class="p">(</span><span class="nx">LEVEL</span><span class="p">=</span><span class="mi">1</span><span class="w"> </span><span class="nx">VTO</span><span class="p">=</span><span class="o">-</span><span class="m m-Double">0.45</span><span class="w"> </span><span class="nx">KP</span><span class="p">=</span><span class="m m-Double">55.000E-6</span><span class="w"> </span><span class="nx">LAMBDA</span><span class="p">=</span><span class="m m-Double">0.001</span><span class="p">)</span><span class="w"></span>
+</pre></div>
+
 </div>
+
 </div>
 
 </div>
@@ -17347,15 +17422,90 @@ MP4 6 6 1 1  PMOS w=3.50u L=0.50U
 
 <div class="jp-OutputArea-child">
 
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>MN1 3 5 0 0  NMOS w=1.50u L=0.50u
-MN2 0 5 5 0  NMOS w=1.50u L=0.50u
-MN3 8 10 4 0 NMOS w=1.50u L=0.50U
-MN4 0 9 8 0  NMOS w=4.50u L=0.50U
-MN5 6 11 8 0 NMOS w=1.50u L=0.50U
 
-</pre>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
+<style>pre { line-height: 125%; }
+td.linenos .normal { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
+span.linenos { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
+td.linenos .special { color: #000000; background-color: #ffffc0; padding-left: 5px; padding-right: 5px; }
+span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 5px; padding-right: 5px; }
+.output_html .hll { background-color: #ffffcc }
+.output_html { background: #f8f8f8; }
+.output_html .c { color: #3D7B7B; font-style: italic } /* Comment */
+.output_html .err { border: 1px solid #FF0000 } /* Error */
+.output_html .k { color: #008000; font-weight: bold } /* Keyword */
+.output_html .o { color: #666666 } /* Operator */
+.output_html .ch { color: #3D7B7B; font-style: italic } /* Comment.Hashbang */
+.output_html .cm { color: #3D7B7B; font-style: italic } /* Comment.Multiline */
+.output_html .cp { color: #9C6500 } /* Comment.Preproc */
+.output_html .cpf { color: #3D7B7B; font-style: italic } /* Comment.PreprocFile */
+.output_html .c1 { color: #3D7B7B; font-style: italic } /* Comment.Single */
+.output_html .cs { color: #3D7B7B; font-style: italic } /* Comment.Special */
+.output_html .gd { color: #A00000 } /* Generic.Deleted */
+.output_html .ge { font-style: italic } /* Generic.Emph */
+.output_html .gr { color: #E40000 } /* Generic.Error */
+.output_html .gh { color: #000080; font-weight: bold } /* Generic.Heading */
+.output_html .gi { color: #008400 } /* Generic.Inserted */
+.output_html .go { color: #717171 } /* Generic.Output */
+.output_html .gp { color: #000080; font-weight: bold } /* Generic.Prompt */
+.output_html .gs { font-weight: bold } /* Generic.Strong */
+.output_html .gu { color: #800080; font-weight: bold } /* Generic.Subheading */
+.output_html .gt { color: #0044DD } /* Generic.Traceback */
+.output_html .kc { color: #008000; font-weight: bold } /* Keyword.Constant */
+.output_html .kd { color: #008000; font-weight: bold } /* Keyword.Declaration */
+.output_html .kn { color: #008000; font-weight: bold } /* Keyword.Namespace */
+.output_html .kp { color: #008000 } /* Keyword.Pseudo */
+.output_html .kr { color: #008000; font-weight: bold } /* Keyword.Reserved */
+.output_html .kt { color: #B00040 } /* Keyword.Type */
+.output_html .m { color: #666666 } /* Literal.Number */
+.output_html .s { color: #BA2121 } /* Literal.String */
+.output_html .na { color: #687822 } /* Name.Attribute */
+.output_html .nb { color: #008000 } /* Name.Builtin */
+.output_html .nc { color: #0000FF; font-weight: bold } /* Name.Class */
+.output_html .no { color: #880000 } /* Name.Constant */
+.output_html .nd { color: #AA22FF } /* Name.Decorator */
+.output_html .ni { color: #717171; font-weight: bold } /* Name.Entity */
+.output_html .ne { color: #CB3F38; font-weight: bold } /* Name.Exception */
+.output_html .nf { color: #0000FF } /* Name.Function */
+.output_html .nl { color: #767600 } /* Name.Label */
+.output_html .nn { color: #0000FF; font-weight: bold } /* Name.Namespace */
+.output_html .nt { color: #008000; font-weight: bold } /* Name.Tag */
+.output_html .nv { color: #19177C } /* Name.Variable */
+.output_html .ow { color: #AA22FF; font-weight: bold } /* Operator.Word */
+.output_html .w { color: #bbbbbb } /* Text.Whitespace */
+.output_html .mb { color: #666666 } /* Literal.Number.Bin */
+.output_html .mf { color: #666666 } /* Literal.Number.Float */
+.output_html .mh { color: #666666 } /* Literal.Number.Hex */
+.output_html .mi { color: #666666 } /* Literal.Number.Integer */
+.output_html .mo { color: #666666 } /* Literal.Number.Oct */
+.output_html .sa { color: #BA2121 } /* Literal.String.Affix */
+.output_html .sb { color: #BA2121 } /* Literal.String.Backtick */
+.output_html .sc { color: #BA2121 } /* Literal.String.Char */
+.output_html .dl { color: #BA2121 } /* Literal.String.Delimiter */
+.output_html .sd { color: #BA2121; font-style: italic } /* Literal.String.Doc */
+.output_html .s2 { color: #BA2121 } /* Literal.String.Double */
+.output_html .se { color: #AA5D1F; font-weight: bold } /* Literal.String.Escape */
+.output_html .sh { color: #BA2121 } /* Literal.String.Heredoc */
+.output_html .si { color: #A45A77; font-weight: bold } /* Literal.String.Interpol */
+.output_html .sx { color: #008000 } /* Literal.String.Other */
+.output_html .sr { color: #A45A77 } /* Literal.String.Regex */
+.output_html .s1 { color: #BA2121 } /* Literal.String.Single */
+.output_html .ss { color: #19177C } /* Literal.String.Symbol */
+.output_html .bp { color: #008000 } /* Name.Builtin.Pseudo */
+.output_html .fm { color: #0000FF } /* Name.Function.Magic */
+.output_html .vc { color: #19177C } /* Name.Variable.Class */
+.output_html .vg { color: #19177C } /* Name.Variable.Global */
+.output_html .vi { color: #19177C } /* Name.Variable.Instance */
+.output_html .vm { color: #19177C } /* Name.Variable.Magic */
+.output_html .il { color: #666666 } /* Literal.Number.Integer.Long */</style><div class="highlight"><pre><span></span><span class="nx">MN1</span><span class="w"> </span><span class="mi">3</span><span class="w"> </span><span class="mi">5</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="mi">0</span><span class="w">  </span><span class="nx">NMOS</span><span class="w"> </span><span class="nx">w</span><span class="p">=</span><span class="m m-Double">1.50</span><span class="nx">u</span><span class="w"> </span><span class="nx">L</span><span class="p">=</span><span class="m m-Double">0.50</span><span class="nx">u</span><span class="w"></span>
+<span class="nx">MN2</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="mi">5</span><span class="w"> </span><span class="mi">5</span><span class="w"> </span><span class="mi">0</span><span class="w">  </span><span class="nx">NMOS</span><span class="w"> </span><span class="nx">w</span><span class="p">=</span><span class="m m-Double">1.50</span><span class="nx">u</span><span class="w"> </span><span class="nx">L</span><span class="p">=</span><span class="m m-Double">0.50</span><span class="nx">u</span><span class="w"></span>
+<span class="nx">MN3</span><span class="w"> </span><span class="mi">8</span><span class="w"> </span><span class="mi">10</span><span class="w"> </span><span class="mi">4</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="nx">NMOS</span><span class="w"> </span><span class="nx">w</span><span class="p">=</span><span class="m m-Double">1.50</span><span class="nx">u</span><span class="w"> </span><span class="nx">L</span><span class="p">=</span><span class="m m-Double">0.50</span><span class="nx">U</span><span class="w"></span>
+<span class="nx">MN4</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="mi">9</span><span class="w"> </span><span class="mi">8</span><span class="w"> </span><span class="mi">0</span><span class="w">  </span><span class="nx">NMOS</span><span class="w"> </span><span class="nx">w</span><span class="p">=</span><span class="m m-Double">4.50</span><span class="nx">u</span><span class="w"> </span><span class="nx">L</span><span class="p">=</span><span class="m m-Double">0.50</span><span class="nx">U</span><span class="w"></span>
+<span class="nx">MN5</span><span class="w"> </span><span class="mi">6</span><span class="w"> </span><span class="mi">11</span><span class="w"> </span><span class="mi">8</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="nx">NMOS</span><span class="w"> </span><span class="nx">w</span><span class="p">=</span><span class="m m-Double">1.50</span><span class="nx">u</span><span class="w"> </span><span class="nx">L</span><span class="p">=</span><span class="m m-Double">0.50</span><span class="nx">U</span><span class="w"></span>
+</pre></div>
+
 </div>
+
 </div>
 
 </div>
@@ -18114,7 +18264,7 @@ z
 
 </div>
 
-</div></section></section><section data-state="kuleuven_slide"><section><h6>pMOS transistors</h6><div class="jp-Cell jp-CodeCell jp-Notebook-cell  jp-mod-noInput ">
+</div></section></section><section data-state="kuleuven_slide"><section><h6>Eenvoudige transistormodellen</h6><div class="jp-Cell jp-CodeCell jp-Notebook-cell  jp-mod-noInput ">
 
 <div class="jp-Cell-outputWrapper">
 <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
@@ -18124,14 +18274,87 @@ z
 
 <div class="jp-OutputArea-child">
 
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>MP1 1 4 3 1  PMOS w=3.50u L=0.50U
-MP2 4 4 1 1  PMOS w=3.50u L=0.50U
-MP3 1 6 5 1  PMOS w=3.50u L=0.50U
-MP4 6 6 1 1  PMOS w=3.50u L=0.50U
 
-</pre>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
+<style>pre { line-height: 125%; }
+td.linenos .normal { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
+span.linenos { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
+td.linenos .special { color: #000000; background-color: #ffffc0; padding-left: 5px; padding-right: 5px; }
+span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 5px; padding-right: 5px; }
+.output_html .hll { background-color: #ffffcc }
+.output_html { background: #f8f8f8; }
+.output_html .c { color: #3D7B7B; font-style: italic } /* Comment */
+.output_html .err { border: 1px solid #FF0000 } /* Error */
+.output_html .k { color: #008000; font-weight: bold } /* Keyword */
+.output_html .o { color: #666666 } /* Operator */
+.output_html .ch { color: #3D7B7B; font-style: italic } /* Comment.Hashbang */
+.output_html .cm { color: #3D7B7B; font-style: italic } /* Comment.Multiline */
+.output_html .cp { color: #9C6500 } /* Comment.Preproc */
+.output_html .cpf { color: #3D7B7B; font-style: italic } /* Comment.PreprocFile */
+.output_html .c1 { color: #3D7B7B; font-style: italic } /* Comment.Single */
+.output_html .cs { color: #3D7B7B; font-style: italic } /* Comment.Special */
+.output_html .gd { color: #A00000 } /* Generic.Deleted */
+.output_html .ge { font-style: italic } /* Generic.Emph */
+.output_html .gr { color: #E40000 } /* Generic.Error */
+.output_html .gh { color: #000080; font-weight: bold } /* Generic.Heading */
+.output_html .gi { color: #008400 } /* Generic.Inserted */
+.output_html .go { color: #717171 } /* Generic.Output */
+.output_html .gp { color: #000080; font-weight: bold } /* Generic.Prompt */
+.output_html .gs { font-weight: bold } /* Generic.Strong */
+.output_html .gu { color: #800080; font-weight: bold } /* Generic.Subheading */
+.output_html .gt { color: #0044DD } /* Generic.Traceback */
+.output_html .kc { color: #008000; font-weight: bold } /* Keyword.Constant */
+.output_html .kd { color: #008000; font-weight: bold } /* Keyword.Declaration */
+.output_html .kn { color: #008000; font-weight: bold } /* Keyword.Namespace */
+.output_html .kp { color: #008000 } /* Keyword.Pseudo */
+.output_html .kr { color: #008000; font-weight: bold } /* Keyword.Reserved */
+.output_html .kt { color: #B00040 } /* Keyword.Type */
+.output_html .m { color: #666666 } /* Literal.Number */
+.output_html .s { color: #BA2121 } /* Literal.String */
+.output_html .na { color: #687822 } /* Name.Attribute */
+.output_html .nb { color: #008000 } /* Name.Builtin */
+.output_html .nc { color: #0000FF; font-weight: bold } /* Name.Class */
+.output_html .no { color: #880000 } /* Name.Constant */
+.output_html .nd { color: #AA22FF } /* Name.Decorator */
+.output_html .ni { color: #717171; font-weight: bold } /* Name.Entity */
+.output_html .ne { color: #CB3F38; font-weight: bold } /* Name.Exception */
+.output_html .nf { color: #0000FF } /* Name.Function */
+.output_html .nl { color: #767600 } /* Name.Label */
+.output_html .nn { color: #0000FF; font-weight: bold } /* Name.Namespace */
+.output_html .nt { color: #008000; font-weight: bold } /* Name.Tag */
+.output_html .nv { color: #19177C } /* Name.Variable */
+.output_html .ow { color: #AA22FF; font-weight: bold } /* Operator.Word */
+.output_html .w { color: #bbbbbb } /* Text.Whitespace */
+.output_html .mb { color: #666666 } /* Literal.Number.Bin */
+.output_html .mf { color: #666666 } /* Literal.Number.Float */
+.output_html .mh { color: #666666 } /* Literal.Number.Hex */
+.output_html .mi { color: #666666 } /* Literal.Number.Integer */
+.output_html .mo { color: #666666 } /* Literal.Number.Oct */
+.output_html .sa { color: #BA2121 } /* Literal.String.Affix */
+.output_html .sb { color: #BA2121 } /* Literal.String.Backtick */
+.output_html .sc { color: #BA2121 } /* Literal.String.Char */
+.output_html .dl { color: #BA2121 } /* Literal.String.Delimiter */
+.output_html .sd { color: #BA2121; font-style: italic } /* Literal.String.Doc */
+.output_html .s2 { color: #BA2121 } /* Literal.String.Double */
+.output_html .se { color: #AA5D1F; font-weight: bold } /* Literal.String.Escape */
+.output_html .sh { color: #BA2121 } /* Literal.String.Heredoc */
+.output_html .si { color: #A45A77; font-weight: bold } /* Literal.String.Interpol */
+.output_html .sx { color: #008000 } /* Literal.String.Other */
+.output_html .sr { color: #A45A77 } /* Literal.String.Regex */
+.output_html .s1 { color: #BA2121 } /* Literal.String.Single */
+.output_html .ss { color: #19177C } /* Literal.String.Symbol */
+.output_html .bp { color: #008000 } /* Name.Builtin.Pseudo */
+.output_html .fm { color: #0000FF } /* Name.Function.Magic */
+.output_html .vc { color: #19177C } /* Name.Variable.Class */
+.output_html .vg { color: #19177C } /* Name.Variable.Global */
+.output_html .vi { color: #19177C } /* Name.Variable.Instance */
+.output_html .vm { color: #19177C } /* Name.Variable.Magic */
+.output_html .il { color: #666666 } /* Literal.Number.Integer.Long */</style><div class="highlight"><pre><span></span><span class="p">.</span><span class="nx">MODEL</span><span class="w"> </span><span class="nx">NMOS</span><span class="w"> </span><span class="nx">NMOS</span><span class="p">(</span><span class="nx">LEVEL</span><span class="p">=</span><span class="mi">1</span><span class="w"> </span><span class="nx">VTO</span><span class="p">=</span><span class="m m-Double">0.50</span><span class="w"> </span><span class="nx">KP</span><span class="p">=</span><span class="m m-Double">90.000E-6</span><span class="w"> </span><span class="nx">LAMBDA</span><span class="p">=</span><span class="m m-Double">0.001</span><span class="p">)</span><span class="w"></span>
+<span class="p">.</span><span class="nx">MODEL</span><span class="w"> </span><span class="nx">PMOS</span><span class="w"> </span><span class="nx">PMOS</span><span class="p">(</span><span class="nx">LEVEL</span><span class="p">=</span><span class="mi">1</span><span class="w"> </span><span class="nx">VTO</span><span class="p">=</span><span class="o">-</span><span class="m m-Double">0.45</span><span class="w"> </span><span class="nx">KP</span><span class="p">=</span><span class="m m-Double">55.000E-6</span><span class="w"> </span><span class="nx">LAMBDA</span><span class="p">=</span><span class="m m-Double">0.001</span><span class="p">)</span><span class="w"></span>
+</pre></div>
+
 </div>
+
 </div>
 
 </div>
@@ -18778,6 +19001,114 @@ z
 
 </div>
 
+</div></section></section><section data-state="kuleuven_slide"><section><h6>Eenvoudige transistormodellen</h6><div class="jp-Cell jp-CodeCell jp-Notebook-cell  jp-mod-noInput ">
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
+<style>pre { line-height: 125%; }
+td.linenos .normal { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
+span.linenos { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
+td.linenos .special { color: #000000; background-color: #ffffc0; padding-left: 5px; padding-right: 5px; }
+span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 5px; padding-right: 5px; }
+.output_html .hll { background-color: #ffffcc }
+.output_html { background: #f8f8f8; }
+.output_html .c { color: #3D7B7B; font-style: italic } /* Comment */
+.output_html .err { border: 1px solid #FF0000 } /* Error */
+.output_html .k { color: #008000; font-weight: bold } /* Keyword */
+.output_html .o { color: #666666 } /* Operator */
+.output_html .ch { color: #3D7B7B; font-style: italic } /* Comment.Hashbang */
+.output_html .cm { color: #3D7B7B; font-style: italic } /* Comment.Multiline */
+.output_html .cp { color: #9C6500 } /* Comment.Preproc */
+.output_html .cpf { color: #3D7B7B; font-style: italic } /* Comment.PreprocFile */
+.output_html .c1 { color: #3D7B7B; font-style: italic } /* Comment.Single */
+.output_html .cs { color: #3D7B7B; font-style: italic } /* Comment.Special */
+.output_html .gd { color: #A00000 } /* Generic.Deleted */
+.output_html .ge { font-style: italic } /* Generic.Emph */
+.output_html .gr { color: #E40000 } /* Generic.Error */
+.output_html .gh { color: #000080; font-weight: bold } /* Generic.Heading */
+.output_html .gi { color: #008400 } /* Generic.Inserted */
+.output_html .go { color: #717171 } /* Generic.Output */
+.output_html .gp { color: #000080; font-weight: bold } /* Generic.Prompt */
+.output_html .gs { font-weight: bold } /* Generic.Strong */
+.output_html .gu { color: #800080; font-weight: bold } /* Generic.Subheading */
+.output_html .gt { color: #0044DD } /* Generic.Traceback */
+.output_html .kc { color: #008000; font-weight: bold } /* Keyword.Constant */
+.output_html .kd { color: #008000; font-weight: bold } /* Keyword.Declaration */
+.output_html .kn { color: #008000; font-weight: bold } /* Keyword.Namespace */
+.output_html .kp { color: #008000 } /* Keyword.Pseudo */
+.output_html .kr { color: #008000; font-weight: bold } /* Keyword.Reserved */
+.output_html .kt { color: #B00040 } /* Keyword.Type */
+.output_html .m { color: #666666 } /* Literal.Number */
+.output_html .s { color: #BA2121 } /* Literal.String */
+.output_html .na { color: #687822 } /* Name.Attribute */
+.output_html .nb { color: #008000 } /* Name.Builtin */
+.output_html .nc { color: #0000FF; font-weight: bold } /* Name.Class */
+.output_html .no { color: #880000 } /* Name.Constant */
+.output_html .nd { color: #AA22FF } /* Name.Decorator */
+.output_html .ni { color: #717171; font-weight: bold } /* Name.Entity */
+.output_html .ne { color: #CB3F38; font-weight: bold } /* Name.Exception */
+.output_html .nf { color: #0000FF } /* Name.Function */
+.output_html .nl { color: #767600 } /* Name.Label */
+.output_html .nn { color: #0000FF; font-weight: bold } /* Name.Namespace */
+.output_html .nt { color: #008000; font-weight: bold } /* Name.Tag */
+.output_html .nv { color: #19177C } /* Name.Variable */
+.output_html .ow { color: #AA22FF; font-weight: bold } /* Operator.Word */
+.output_html .w { color: #bbbbbb } /* Text.Whitespace */
+.output_html .mb { color: #666666 } /* Literal.Number.Bin */
+.output_html .mf { color: #666666 } /* Literal.Number.Float */
+.output_html .mh { color: #666666 } /* Literal.Number.Hex */
+.output_html .mi { color: #666666 } /* Literal.Number.Integer */
+.output_html .mo { color: #666666 } /* Literal.Number.Oct */
+.output_html .sa { color: #BA2121 } /* Literal.String.Affix */
+.output_html .sb { color: #BA2121 } /* Literal.String.Backtick */
+.output_html .sc { color: #BA2121 } /* Literal.String.Char */
+.output_html .dl { color: #BA2121 } /* Literal.String.Delimiter */
+.output_html .sd { color: #BA2121; font-style: italic } /* Literal.String.Doc */
+.output_html .s2 { color: #BA2121 } /* Literal.String.Double */
+.output_html .se { color: #AA5D1F; font-weight: bold } /* Literal.String.Escape */
+.output_html .sh { color: #BA2121 } /* Literal.String.Heredoc */
+.output_html .si { color: #A45A77; font-weight: bold } /* Literal.String.Interpol */
+.output_html .sx { color: #008000 } /* Literal.String.Other */
+.output_html .sr { color: #A45A77 } /* Literal.String.Regex */
+.output_html .s1 { color: #BA2121 } /* Literal.String.Single */
+.output_html .ss { color: #19177C } /* Literal.String.Symbol */
+.output_html .bp { color: #008000 } /* Name.Builtin.Pseudo */
+.output_html .fm { color: #0000FF } /* Name.Function.Magic */
+.output_html .vc { color: #19177C } /* Name.Variable.Class */
+.output_html .vg { color: #19177C } /* Name.Variable.Global */
+.output_html .vi { color: #19177C } /* Name.Variable.Instance */
+.output_html .vm { color: #19177C } /* Name.Variable.Magic */
+.output_html .il { color: #666666 } /* Literal.Number.Integer.Long */</style><div class="highlight"><pre><span></span><span class="p">.</span><span class="nx">MODEL</span><span class="w"> </span><span class="nx">NMOS</span><span class="w"> </span><span class="nx">NMOS</span><span class="p">(</span><span class="nx">LEVEL</span><span class="p">=</span><span class="mi">1</span><span class="w"> </span><span class="nx">VTO</span><span class="p">=</span><span class="m m-Double">0.50</span><span class="w"> </span><span class="nx">KP</span><span class="p">=</span><span class="m m-Double">90.000E-6</span><span class="w"> </span><span class="nx">LAMBDA</span><span class="p">=</span><span class="m m-Double">0.001</span><span class="p">)</span><span class="w"></span>
+<span class="p">.</span><span class="nx">MODEL</span><span class="w"> </span><span class="nx">PMOS</span><span class="w"> </span><span class="nx">PMOS</span><span class="p">(</span><span class="nx">LEVEL</span><span class="p">=</span><span class="mi">1</span><span class="w"> </span><span class="nx">VTO</span><span class="p">=</span><span class="o">-</span><span class="m m-Double">0.45</span><span class="w"> </span><span class="nx">KP</span><span class="p">=</span><span class="m m-Double">55.000E-6</span><span class="w"> </span><span class="nx">LAMBDA</span><span class="p">=</span><span class="m m-Double">0.001</span><span class="p">)</span><span class="w"></span>
+</pre></div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Wanneer we nu een simulatie uitvoeren met een signaal van 50 $\mu V$ aan de ingangsklem 11, krijgen we een signaal van meer dan 40 $mV$ aan de uitgangsklem 3 (zie {numref}<code>spicefig5</code>. Dit geeft dus een versterking van meer dan 800.</p>
+
+</div>
+</div>
+</div>
 </div></section></section><section data-state="kuleuven_slide"><section><h6>Simulatie</h6><div class="jp-Cell jp-CodeCell jp-Notebook-cell  jp-mod-noInput ">
 
 <div class="jp-Cell-outputWrapper">

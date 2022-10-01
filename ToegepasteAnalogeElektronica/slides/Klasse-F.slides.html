@@ -15046,76 +15046,7 @@ div .csl-right-inline{text-align: left}</style>
     <!-- End of mathjax configuration --></head>
 <body class="jp-Notebook" data-jp-theme-light="true" data-jp-theme-name="JupyterLab Light">
 <div class="reveal">
-<div class="slides"><section data-state='kuleuven_title_slide reveal'><section><div class="title">titel</div><div class="subtitle">subtitle</div><div class="speaker kuleuvenwhite" >Jan Genoe</div><div class="date kuleuvenwhite" >December 2022</div></section></section><section data-state="kuleuven_slide"><section>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h1 id="Klasse-F-Verstekers">Klasse F Verstekers<a class="anchor-link" href="#Klasse-F-Verstekers">&#182;</a></h1>
-</div>
-</div>
-</div>
-</div></section></section><section data-state="kuleuven_slide"><section>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>In de vorige hoofdstukken hebben we de laagfrequent versterkers besproken. Dit zijn versterkers met typisch een relatief grote bandbreedte. Verder hebben we de laagfrequent versterkers verder opgedeeld in de versterkers met 1 vermogen transistor in de vermogentrap (Klasse A) en de versterkers met 2 of meer vermogentransistors in de vermogentrap (Klasse B en Klasse G).
-In dit hoofdstuk bestuderen we de klasse F versterker als een uitbreiding van de klasse C versterker. Beide versterkers zijn resonante versterkers die bestaat uit een LRC trilkring (of meerdere LC kringen) die aangestuurd wordt door een enkele transistor. Als een gevolg hiervan werkt deze versterker op een vaste frequentie of binnen een zeer beperkte bandbreedte rond deze centrale frequentie. Deze bandbreedte is typisch maximaal 1%  van de resonantie frequentie.
-In {numref}<code>vermogenversterkers2</code> geven we een overzicht van deze verschillende versterkers.</p>
-<p>```{table} Indeling van de vermogenversterkers
-:name: vermogenversterkers2</p>
-<table>
-<thead><tr>
-<th style="text-align:left"></th>
-<th style="text-align:left">laagfrequent of breedband</th>
-<th style="text-align:left">hoogfrequent of resonant</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">1 transistor <BR> in de vermogentrap</td>
-<td style="text-align:left">Klasse A</td>
-<td style="text-align:left">Klasse C <BR> <strong>Klasse F</strong> <BR>Klasse E</td>
-</tr>
-<tr>
-<td style="text-align:left">2 of meer  transistors <BR>in de vermogentrap</td>
-<td style="text-align:left">Klasse B  <BR> Klasse G</td>
-<td style="text-align:left">Klasse D</td>
-</tr>
-</tbody>
-</table>
-<p>```</p>
-
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p class=tabcaption>Indeling van de vermogenversterkers</p>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs jp-mod-noInput ">
-
-</div></section></section><section data-state="kuleuven_slide"><section>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Wanneer de gelijkaardige stroompulsen aangelegd worden op 2 parallelle L(R)C kringen in serie, zal dezelfde stroom door de kringen lopen, maar zullen de spanningen over beide kringen opgeteld worden.</p>
-
-</div>
-</div>
-</div>
-</div></section></section><section data-state="kuleuven_slide"><section><h6>Basisschema van de klasse F versterker.</h6><div class="jp-Cell jp-CodeCell jp-Notebook-cell  jp-mod-noInput ">
+<div class="slides"><section data-state='kuleuven_title_slide reveal'><section><div class="title">Klasse F versterker</div><div class="subtitle">met trilkring 3de harmonische</div><div class="speaker kuleuvenwhite" >Jan Genoe</div><div class="date kuleuvenwhite" >September 2022</div></section></section><section data-state="kuleuven_slide"><section><h6>Basisschema van de klasse F versterker</h6><div class="jp-Cell jp-CodeCell jp-Notebook-cell  jp-mod-noInput ">
 
 <div class="jp-Cell-outputWrapper">
 <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
@@ -16131,7 +16062,7 @@ z
 
 </div>
 
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell  jp-mod-noInput ">
+</div></section></section><section data-state="kuleuven_slide"><section><h6>Spice code van de klasse F versterker</h6><div class="jp-Cell jp-CodeCell jp-Notebook-cell  jp-mod-noInput ">
 
 <div class="jp-Cell-outputWrapper">
 <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
@@ -16141,36 +16072,101 @@ z
 
 <div class="jp-OutputArea-child">
 
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>* klasse F basiscircuit
-Q_Q1         2 1 0 Q2
-L_L1         5 3   1uH
-C_C1         5 3   10n
-R_R1         5 3   60
-V_V3         3 0   11V
-V_V5         1 0   sin(0.7 0.8 1591500) DC=0
-C_C3         5 2   10n
-L_L3         5 2   0.111uH
-.model Q2  NPN(Is=14.34f BF=200 RB=200 )
 
-</pre>
-</div>
-</div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
+<style>pre { line-height: 125%; }
+td.linenos .normal { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
+span.linenos { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
+td.linenos .special { color: #000000; background-color: #ffffc0; padding-left: 5px; padding-right: 5px; }
+span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 5px; padding-right: 5px; }
+.output_html .hll { background-color: #ffffcc }
+.output_html { background: #f8f8f8; }
+.output_html .c { color: #3D7B7B; font-style: italic } /* Comment */
+.output_html .err { border: 1px solid #FF0000 } /* Error */
+.output_html .k { color: #008000; font-weight: bold } /* Keyword */
+.output_html .o { color: #666666 } /* Operator */
+.output_html .ch { color: #3D7B7B; font-style: italic } /* Comment.Hashbang */
+.output_html .cm { color: #3D7B7B; font-style: italic } /* Comment.Multiline */
+.output_html .cp { color: #9C6500 } /* Comment.Preproc */
+.output_html .cpf { color: #3D7B7B; font-style: italic } /* Comment.PreprocFile */
+.output_html .c1 { color: #3D7B7B; font-style: italic } /* Comment.Single */
+.output_html .cs { color: #3D7B7B; font-style: italic } /* Comment.Special */
+.output_html .gd { color: #A00000 } /* Generic.Deleted */
+.output_html .ge { font-style: italic } /* Generic.Emph */
+.output_html .gr { color: #E40000 } /* Generic.Error */
+.output_html .gh { color: #000080; font-weight: bold } /* Generic.Heading */
+.output_html .gi { color: #008400 } /* Generic.Inserted */
+.output_html .go { color: #717171 } /* Generic.Output */
+.output_html .gp { color: #000080; font-weight: bold } /* Generic.Prompt */
+.output_html .gs { font-weight: bold } /* Generic.Strong */
+.output_html .gu { color: #800080; font-weight: bold } /* Generic.Subheading */
+.output_html .gt { color: #0044DD } /* Generic.Traceback */
+.output_html .kc { color: #008000; font-weight: bold } /* Keyword.Constant */
+.output_html .kd { color: #008000; font-weight: bold } /* Keyword.Declaration */
+.output_html .kn { color: #008000; font-weight: bold } /* Keyword.Namespace */
+.output_html .kp { color: #008000 } /* Keyword.Pseudo */
+.output_html .kr { color: #008000; font-weight: bold } /* Keyword.Reserved */
+.output_html .kt { color: #B00040 } /* Keyword.Type */
+.output_html .m { color: #666666 } /* Literal.Number */
+.output_html .s { color: #BA2121 } /* Literal.String */
+.output_html .na { color: #687822 } /* Name.Attribute */
+.output_html .nb { color: #008000 } /* Name.Builtin */
+.output_html .nc { color: #0000FF; font-weight: bold } /* Name.Class */
+.output_html .no { color: #880000 } /* Name.Constant */
+.output_html .nd { color: #AA22FF } /* Name.Decorator */
+.output_html .ni { color: #717171; font-weight: bold } /* Name.Entity */
+.output_html .ne { color: #CB3F38; font-weight: bold } /* Name.Exception */
+.output_html .nf { color: #0000FF } /* Name.Function */
+.output_html .nl { color: #767600 } /* Name.Label */
+.output_html .nn { color: #0000FF; font-weight: bold } /* Name.Namespace */
+.output_html .nt { color: #008000; font-weight: bold } /* Name.Tag */
+.output_html .nv { color: #19177C } /* Name.Variable */
+.output_html .ow { color: #AA22FF; font-weight: bold } /* Operator.Word */
+.output_html .w { color: #bbbbbb } /* Text.Whitespace */
+.output_html .mb { color: #666666 } /* Literal.Number.Bin */
+.output_html .mf { color: #666666 } /* Literal.Number.Float */
+.output_html .mh { color: #666666 } /* Literal.Number.Hex */
+.output_html .mi { color: #666666 } /* Literal.Number.Integer */
+.output_html .mo { color: #666666 } /* Literal.Number.Oct */
+.output_html .sa { color: #BA2121 } /* Literal.String.Affix */
+.output_html .sb { color: #BA2121 } /* Literal.String.Backtick */
+.output_html .sc { color: #BA2121 } /* Literal.String.Char */
+.output_html .dl { color: #BA2121 } /* Literal.String.Delimiter */
+.output_html .sd { color: #BA2121; font-style: italic } /* Literal.String.Doc */
+.output_html .s2 { color: #BA2121 } /* Literal.String.Double */
+.output_html .se { color: #AA5D1F; font-weight: bold } /* Literal.String.Escape */
+.output_html .sh { color: #BA2121 } /* Literal.String.Heredoc */
+.output_html .si { color: #A45A77; font-weight: bold } /* Literal.String.Interpol */
+.output_html .sx { color: #008000 } /* Literal.String.Other */
+.output_html .sr { color: #A45A77 } /* Literal.String.Regex */
+.output_html .s1 { color: #BA2121 } /* Literal.String.Single */
+.output_html .ss { color: #19177C } /* Literal.String.Symbol */
+.output_html .bp { color: #008000 } /* Name.Builtin.Pseudo */
+.output_html .fm { color: #0000FF } /* Name.Function.Magic */
+.output_html .vc { color: #19177C } /* Name.Variable.Class */
+.output_html .vg { color: #19177C } /* Name.Variable.Global */
+.output_html .vi { color: #19177C } /* Name.Variable.Instance */
+.output_html .vm { color: #19177C } /* Name.Variable.Magic */
+.output_html .il { color: #666666 } /* Literal.Number.Integer.Long */</style><div class="highlight"><pre><span></span><span class="o">*</span><span class="w"> </span><span class="nx">klasse</span><span class="w"> </span><span class="nx">F</span><span class="w"> </span><span class="nx">basiscircuit</span><span class="w"></span>
+<span class="nx">Q_Q1</span><span class="w">         </span><span class="mi">2</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="nx">Q2</span><span class="w"></span>
+<span class="nx">L_L1</span><span class="w">         </span><span class="mi">5</span><span class="w"> </span><span class="mi">3</span><span class="w">   </span><span class="mi">1</span><span class="nx">uH</span><span class="w"></span>
+<span class="nx">C_C1</span><span class="w">         </span><span class="mi">5</span><span class="w"> </span><span class="mi">3</span><span class="w">   </span><span class="mi">10</span><span class="nx">n</span><span class="w"></span>
+<span class="nx">R_R1</span><span class="w">         </span><span class="mi">5</span><span class="w"> </span><span class="mi">3</span><span class="w">   </span><span class="mi">60</span><span class="w"></span>
+<span class="nx">V_V3</span><span class="w">         </span><span class="mi">3</span><span class="w"> </span><span class="mi">0</span><span class="w">   </span><span class="mi">11</span><span class="nx">V</span><span class="w"></span>
+<span class="nx">V_V5</span><span class="w">         </span><span class="mi">1</span><span class="w"> </span><span class="mi">0</span><span class="w">   </span><span class="nx">sin</span><span class="p">(</span><span class="m m-Double">0.7</span><span class="w"> </span><span class="m m-Double">0.8</span><span class="w"> </span><span class="mi">1591500</span><span class="p">)</span><span class="w"> </span><span class="nx">DC</span><span class="p">=</span><span class="m m-Double">0.7</span><span class="w"></span>
+<span class="nx">C_C3</span><span class="w">         </span><span class="mi">5</span><span class="w"> </span><span class="mi">2</span><span class="w">   </span><span class="mi">10</span><span class="nx">n</span><span class="w"></span>
+<span class="nx">L_L3</span><span class="w">         </span><span class="mi">5</span><span class="w"> </span><span class="mi">2</span><span class="w">   </span><span class="m m-Double">0.111</span><span class="nx">uH</span><span class="w"></span>
+<span class="p">.</span><span class="nx">model</span><span class="w"> </span><span class="nx">Q2</span><span class="w">  </span><span class="nx">NPN</span><span class="p">(</span><span class="nx">Is</span><span class="p">=</span><span class="m m-Double">14.34</span><span class="kd">f</span><span class="w"> </span><span class="nx">BF</span><span class="p">=</span><span class="mi">200</span><span class="w"> </span><span class="nx">RB</span><span class="p">=</span><span class="mi">200</span><span class="w"> </span><span class="p">)</span><span class="w"></span>
+</pre></div>
 
 </div>
 
 </div>
 
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+
 </div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p class=spicecaption>Basis Klasse F circuit</p>
-</div>
-</div>
-</div>
+
 </div></section></section><section data-state="kuleuven_slide"><section><h6>Spanningen op de verschillende knopen van de klasse F versterker.</h6><div class="jp-Cell jp-CodeCell jp-Notebook-cell  jp-mod-noInput ">
 
 <div class="jp-Cell-outputWrapper">
@@ -16198,17 +16194,6 @@ jp-needs-light-background
 
 </div>
 
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Wanneer we op basis van de spanningen bekomen in de bovenstaande figuur de spanningen over de trilkring van de eerste hamronische en de spanningen over de trilkring van de derde harmonische plotten, zien we dat op moment dat de eerste harmonische een minimum bereikt, de derde harmonische piekt. Dit heeft een belangrijk voordeel, namelijk de spanning over het totale circuit wordt kleiner of er kan met dezelfde spanning een veel grotere swing bekomen worden.</p>
-
-</div>
-</div>
-</div>
 </div></section></section><section data-state="kuleuven_slide"><section><h6>Verloop van de spanning over de eerste (LC1) en over de derde (LC3) harmonische.</h6><div class="jp-Cell jp-CodeCell jp-Notebook-cell  jp-mod-noInput ">
 
 <div class="jp-Cell-outputWrapper">
@@ -16236,7 +16221,7 @@ jp-needs-light-background
 
 </div>
 
-</div></section></section><section data-state="kuleuven_slide"><section><h6>Verloop van de collector current.</h6><div class="jp-Cell jp-CodeCell jp-Notebook-cell  jp-mod-noInput ">
+</div></section></section><section data-state="kuleuven_slide"><section><h6>Verloop van de collector current</h6><div class="jp-Cell jp-CodeCell jp-Notebook-cell  jp-mod-noInput ">
 
 <div class="jp-Cell-outputWrapper">
 <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
@@ -17482,7 +17467,7 @@ z
 
 </div>
 
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell  jp-mod-noInput ">
+</div></section></section><section data-state="kuleuven_slide"><section><h6>Klasse F versterker met oscillatie rond de grond</h6><div class="jp-Cell jp-CodeCell jp-Notebook-cell  jp-mod-noInput ">
 
 <div class="jp-Cell-outputWrapper">
 <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
@@ -17492,39 +17477,104 @@ z
 
 <div class="jp-OutputArea-child">
 
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>* klasseF
-Q_Q1         2 1 0 Q2
-L_L1         0 3   1uH
-C_C1         0 3   10n
-R_R1         0 3   100
-V_V3         4 0   10V
-V_V5         1 0   sin(0.4 0.8 1591500) DC=0.4
-C_C2         5 3   10n
-L_L3         6 3   0.111uH
-R_R3         6 5   0.001
-L_L2         2 4   2mH
-C_C3         2 5   1000n
-.model Q2  NPN(Is=14.34f BF=200 Rb=100 )
 
-</pre>
-</div>
-</div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
+<style>pre { line-height: 125%; }
+td.linenos .normal { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
+span.linenos { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
+td.linenos .special { color: #000000; background-color: #ffffc0; padding-left: 5px; padding-right: 5px; }
+span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 5px; padding-right: 5px; }
+.output_html .hll { background-color: #ffffcc }
+.output_html { background: #f8f8f8; }
+.output_html .c { color: #3D7B7B; font-style: italic } /* Comment */
+.output_html .err { border: 1px solid #FF0000 } /* Error */
+.output_html .k { color: #008000; font-weight: bold } /* Keyword */
+.output_html .o { color: #666666 } /* Operator */
+.output_html .ch { color: #3D7B7B; font-style: italic } /* Comment.Hashbang */
+.output_html .cm { color: #3D7B7B; font-style: italic } /* Comment.Multiline */
+.output_html .cp { color: #9C6500 } /* Comment.Preproc */
+.output_html .cpf { color: #3D7B7B; font-style: italic } /* Comment.PreprocFile */
+.output_html .c1 { color: #3D7B7B; font-style: italic } /* Comment.Single */
+.output_html .cs { color: #3D7B7B; font-style: italic } /* Comment.Special */
+.output_html .gd { color: #A00000 } /* Generic.Deleted */
+.output_html .ge { font-style: italic } /* Generic.Emph */
+.output_html .gr { color: #E40000 } /* Generic.Error */
+.output_html .gh { color: #000080; font-weight: bold } /* Generic.Heading */
+.output_html .gi { color: #008400 } /* Generic.Inserted */
+.output_html .go { color: #717171 } /* Generic.Output */
+.output_html .gp { color: #000080; font-weight: bold } /* Generic.Prompt */
+.output_html .gs { font-weight: bold } /* Generic.Strong */
+.output_html .gu { color: #800080; font-weight: bold } /* Generic.Subheading */
+.output_html .gt { color: #0044DD } /* Generic.Traceback */
+.output_html .kc { color: #008000; font-weight: bold } /* Keyword.Constant */
+.output_html .kd { color: #008000; font-weight: bold } /* Keyword.Declaration */
+.output_html .kn { color: #008000; font-weight: bold } /* Keyword.Namespace */
+.output_html .kp { color: #008000 } /* Keyword.Pseudo */
+.output_html .kr { color: #008000; font-weight: bold } /* Keyword.Reserved */
+.output_html .kt { color: #B00040 } /* Keyword.Type */
+.output_html .m { color: #666666 } /* Literal.Number */
+.output_html .s { color: #BA2121 } /* Literal.String */
+.output_html .na { color: #687822 } /* Name.Attribute */
+.output_html .nb { color: #008000 } /* Name.Builtin */
+.output_html .nc { color: #0000FF; font-weight: bold } /* Name.Class */
+.output_html .no { color: #880000 } /* Name.Constant */
+.output_html .nd { color: #AA22FF } /* Name.Decorator */
+.output_html .ni { color: #717171; font-weight: bold } /* Name.Entity */
+.output_html .ne { color: #CB3F38; font-weight: bold } /* Name.Exception */
+.output_html .nf { color: #0000FF } /* Name.Function */
+.output_html .nl { color: #767600 } /* Name.Label */
+.output_html .nn { color: #0000FF; font-weight: bold } /* Name.Namespace */
+.output_html .nt { color: #008000; font-weight: bold } /* Name.Tag */
+.output_html .nv { color: #19177C } /* Name.Variable */
+.output_html .ow { color: #AA22FF; font-weight: bold } /* Operator.Word */
+.output_html .w { color: #bbbbbb } /* Text.Whitespace */
+.output_html .mb { color: #666666 } /* Literal.Number.Bin */
+.output_html .mf { color: #666666 } /* Literal.Number.Float */
+.output_html .mh { color: #666666 } /* Literal.Number.Hex */
+.output_html .mi { color: #666666 } /* Literal.Number.Integer */
+.output_html .mo { color: #666666 } /* Literal.Number.Oct */
+.output_html .sa { color: #BA2121 } /* Literal.String.Affix */
+.output_html .sb { color: #BA2121 } /* Literal.String.Backtick */
+.output_html .sc { color: #BA2121 } /* Literal.String.Char */
+.output_html .dl { color: #BA2121 } /* Literal.String.Delimiter */
+.output_html .sd { color: #BA2121; font-style: italic } /* Literal.String.Doc */
+.output_html .s2 { color: #BA2121 } /* Literal.String.Double */
+.output_html .se { color: #AA5D1F; font-weight: bold } /* Literal.String.Escape */
+.output_html .sh { color: #BA2121 } /* Literal.String.Heredoc */
+.output_html .si { color: #A45A77; font-weight: bold } /* Literal.String.Interpol */
+.output_html .sx { color: #008000 } /* Literal.String.Other */
+.output_html .sr { color: #A45A77 } /* Literal.String.Regex */
+.output_html .s1 { color: #BA2121 } /* Literal.String.Single */
+.output_html .ss { color: #19177C } /* Literal.String.Symbol */
+.output_html .bp { color: #008000 } /* Name.Builtin.Pseudo */
+.output_html .fm { color: #0000FF } /* Name.Function.Magic */
+.output_html .vc { color: #19177C } /* Name.Variable.Class */
+.output_html .vg { color: #19177C } /* Name.Variable.Global */
+.output_html .vi { color: #19177C } /* Name.Variable.Instance */
+.output_html .vm { color: #19177C } /* Name.Variable.Magic */
+.output_html .il { color: #666666 } /* Literal.Number.Integer.Long */</style><div class="highlight"><pre><span></span><span class="o">*</span><span class="w"> </span><span class="nx">klasseF</span><span class="w"></span>
+<span class="nx">Q_Q1</span><span class="w">         </span><span class="mi">2</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="nx">Q2</span><span class="w"></span>
+<span class="nx">L_L1</span><span class="w">         </span><span class="mi">0</span><span class="w"> </span><span class="mi">3</span><span class="w">   </span><span class="mi">1</span><span class="nx">uH</span><span class="w"></span>
+<span class="nx">C_C1</span><span class="w">         </span><span class="mi">0</span><span class="w"> </span><span class="mi">3</span><span class="w">   </span><span class="mi">10</span><span class="nx">n</span><span class="w"></span>
+<span class="nx">R_R1</span><span class="w">         </span><span class="mi">0</span><span class="w"> </span><span class="mi">3</span><span class="w">   </span><span class="mi">100</span><span class="w"></span>
+<span class="nx">V_V3</span><span class="w">         </span><span class="mi">4</span><span class="w"> </span><span class="mi">0</span><span class="w">   </span><span class="mi">10</span><span class="nx">V</span><span class="w"></span>
+<span class="nx">V_V5</span><span class="w">         </span><span class="mi">1</span><span class="w"> </span><span class="mi">0</span><span class="w">   </span><span class="nx">sin</span><span class="p">(</span><span class="m m-Double">0.4</span><span class="w"> </span><span class="m m-Double">0.8</span><span class="w"> </span><span class="mi">1591500</span><span class="p">)</span><span class="w"> </span><span class="nx">DC</span><span class="p">=</span><span class="m m-Double">0.4</span><span class="w"></span>
+<span class="nx">C_C2</span><span class="w">         </span><span class="mi">5</span><span class="w"> </span><span class="mi">3</span><span class="w">   </span><span class="mi">10</span><span class="nx">n</span><span class="w"></span>
+<span class="nx">L_L3</span><span class="w">         </span><span class="mi">6</span><span class="w"> </span><span class="mi">3</span><span class="w">   </span><span class="m m-Double">0.111</span><span class="nx">uH</span><span class="w"></span>
+<span class="nx">R_R3</span><span class="w">         </span><span class="mi">6</span><span class="w"> </span><span class="mi">5</span><span class="w">   </span><span class="m m-Double">0.001</span><span class="w"></span>
+<span class="nx">L_L2</span><span class="w">         </span><span class="mi">2</span><span class="w"> </span><span class="mi">4</span><span class="w">   </span><span class="mi">2</span><span class="nx">mH</span><span class="w"></span>
+<span class="nx">C_C3</span><span class="w">         </span><span class="mi">2</span><span class="w"> </span><span class="mi">5</span><span class="w">   </span><span class="mi">1000</span><span class="nx">n</span><span class="w"></span>
+<span class="p">.</span><span class="nx">model</span><span class="w"> </span><span class="nx">Q2</span><span class="w">  </span><span class="nx">NPN</span><span class="p">(</span><span class="nx">Is</span><span class="p">=</span><span class="m m-Double">14.34</span><span class="kd">f</span><span class="w"> </span><span class="nx">BF</span><span class="p">=</span><span class="mi">200</span><span class="w"> </span><span class="nx">Rb</span><span class="p">=</span><span class="mi">100</span><span class="w"> </span><span class="p">)</span><span class="w"></span>
+</pre></div>
 
 </div>
 
 </div>
 
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+
 </div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p class=spicecaption>Klasse F circuit waarbij de uitgang oscilleert rond de grond</p>
-</div>
-</div>
-</div>
+
 </div></section></section><section data-state="kuleuven_slide"><section><h6>Spice simulatie van de Klasse F waarbij de uitgang oscilleert rond de grond.</h6><div class="jp-Cell jp-CodeCell jp-Notebook-cell  jp-mod-noInput ">
 
 <div class="jp-Cell-outputWrapper">
@@ -17552,7 +17602,7 @@ jp-needs-light-background
 
 </div>
 
-</div><h6>Spice simulatie van de Klasse F waarbij de uitgang oscilleert rond de grond. Verloop van de spanning over de eerste (LC1) en over de derde (LC3) harmonische.</h6><div class="jp-Cell jp-CodeCell jp-Notebook-cell  jp-mod-noInput ">
+</div></section></section><section data-state="kuleuven_slide"><section><h6>Spice simulatie van de Klasse F waarbij de uitgang oscilleert rond de grond. Verloop van de spanning over de eerste (LC1) en over de derde (LC3) harmonische.</h6><div class="jp-Cell jp-CodeCell jp-Notebook-cell  jp-mod-noInput ">
 
 <div class="jp-Cell-outputWrapper">
 <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
