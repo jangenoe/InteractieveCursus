@@ -852,13 +852,29 @@ De vermogentransistor levert het vermogen dat verloren/uitgestraald wordt door d
 <section id="keuze-van-de-parameters-van-de-resonante-kring">
 <h2>Keuze van de parameters van de resonante kring<a class="headerlink" href="#keuze-van-de-parameters-van-de-resonante-kring" title="Permalink naar deze titel">#</a></h2>
 <p>Om een vermogenversterker te ontwerpen die actief is bij een bepaalde frequentie moeten in eerste instantie de parameters van de resonante kring gekozen worden, namelijk <span class="math notranslate nohighlight">\(L_1\)</span>  en <span class="math notranslate nohighlight">\(C_1\)</span>.
-Deze parameters kunnen we bepalen op basis van de gegevens die de ingenieur normaal in een ontwerpopgave ter beschikking krijgt, namelijk de impedantie van de belasting</p>
+Deze parameters kunnen we bepalen op basis van de gegevens die de ingenieur normaal in een ontwerpopgave ter beschikking krijgt, namelijk de impedantie van de belasting <span class="math notranslate nohighlight">\(R_L\)</span> en het maximum vermogen <span class="math notranslate nohighlight">\(P_{AC}\)</span> dat moet geleverd kunnen worden op de frequentie <span class="math notranslate nohighlight">\(\omega\)</span>. Het is belangrijk dat we <span class="math notranslate nohighlight">\(\beta &lt;&lt;&lt; \omega\)</span> kiezen. In eerste instantie kunnen we bijvoorbeeld vertrekken van <span class="math notranslate nohighlight">\(\beta = 0.1 \omega\)</span>, waarna we dan</p>
+<div class="math notranslate nohighlight">
+\[ \beta=\frac{1}{2 R_L C_1} \]</div>
+<p>gebruiken om de condensator <span class="math notranslate nohighlight">\(C_1\)</span> te kiezen. Vervolgens gebruiken we</p>
 <div class="math notranslate nohighlight">
 \[ \omega =\sqrt{\frac{1}{L_1 C_1}- \beta^2}\]</div>
+<p>om de waarde van de spoel <span class="math notranslate nohighlight">\(L_1\)</span> te kiezen.</p>
 <p>Merk op:</p>
 <p>Aangezien we in de meeste gevallen <span class="math notranslate nohighlight">\(\beta &lt;&lt;&lt; \omega\)</span> kiezen kunnen we in deze gevallen vaak de resonatiefrequentie benaderen als:</p>
 <div class="math notranslate nohighlight">
 \[ \omega =\sqrt{\frac{1}{L_1 C_1}}\]</div>
+<p>Vervolgens gebruiken we de formule</p>
+<div class="math notranslate nohighlight">
+\[ P_{AC} =\frac{V_{AC}^2}{2 R_L}\]</div>
+<p>om de spanningsamplitude te <span class="math notranslate nohighlight">\(V_{AC}\)</span> te berekenen en dus daaruit ook de nodige voedingsspanning <span class="math notranslate nohighlight">\(V_{DD}\)</span>.</p>
+<div class="exercise dropdown admonition" id="Klasse-C-exercise-0">
+
+<p class="admonition-title"><span class="caption-number">Opdracht 2 </span> (Ontwerpparamters klasse C versterker)</p>
+<section id="exercise-content">
+<p>Ontwerp een Klasse C versterker die gebruik maakt van een <span class="math notranslate nohighlight">\(\lambda /2\)</span> antenne die een stralingsweerstand heeft van 60 Ohm, om 10 W AC-vermogen uit te zenden op 104.7 MHz.
+Kies geschikte waardes voor de capaciteit <span class="math notranslate nohighlight">\(C_1\)</span> en de inductantie <span class="math notranslate nohighlight">\(L_1\)</span>. Bepaal ook de nodige voedingsspanning <span class="math notranslate nohighlight">\(V_{DD}\)</span></p>
+</section>
+</div>
 </section>
 <section id="aansturingsprincipe-van-de-versterker">
 <h2>Aansturingsprincipe van de versterker<a class="headerlink" href="#aansturingsprincipe-van-de-versterker" title="Permalink naar deze titel">#</a></h2>
@@ -1042,7 +1058,7 @@ voornamelijk bijdragen tot het bepalen van de oscillatiefrequentie, namelijk:</p
 <li><p><span class="math notranslate nohighlight">\(L_1\)</span></p></li>
 <li><p><span class="math notranslate nohighlight">\(C_1\)</span></p></li>
 </ul>
-<p>en 4 elementen die bijdragen to het opimaliseren van et bekomen vermogen, namelijk:</p>
+<p>en 4 elementen die bijdragen to het optimaliseren van et bekomen vermogen, namelijk:</p>
 <ul class="simple">
 <li><p>De belastingsweerstand <span class="math notranslate nohighlight">\(R_L\)</span></p></li>
 <li><p>De voedingsspanning <span class="math notranslate nohighlight">\(V_{dd}\)</span></p></li>
@@ -1173,6 +1189,16 @@ voornamelijk bijdragen tot het bepalen van de oscillatiefrequentie, namelijk:</p
 </figcaption>
 </figure>
 </div>
+</div>
+<div class="exercise dropdown admonition" id="Klasse-C-exercise-1">
+
+<p class="admonition-title"><span class="caption-number">Opdracht 3 </span> (Keuze van de geleidingshoek)</p>
+<section id="exercise-content">
+<p>Een belasting met een weerstand van 60 Ohm wensen we te gebruiken om 1 W over te brengen op 1.591 MHz, aan de hand van een vermogentransistor met een maximale stroom van  660 mA
+Kies geschikte waardes voor de capaciteit <span class="math notranslate nohighlight">\(C_1\)</span>, de inductantie <span class="math notranslate nohighlight">\(L_1\)</span>, de voedingsspanning <span class="math notranslate nohighlight">\(V_{DD}\)</span> en de hoek <span class="math notranslate nohighlight">\(\alpha\)</span>.
+Hoe groot is het rendement?
+Wat kiezen we als de maximale stroom van de transistor 360 mA is?</p>
+</section>
 </div>
 </section>
 </section>
