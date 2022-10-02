@@ -474,8 +474,13 @@ title="Print to PDF"
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#simulatie-met-aansturing-off-frequency">
-   simulatie met aansturing off frequency
+  <a class="reference internal nav-link" href="#basisschema-met-spanningssturing">
+   Basisschema met spanningssturing
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#simulatie-met-aansturing-off-resonantie">
+   Simulatie met aansturing off resonantie
   </a>
  </li>
 </ul>
@@ -498,8 +503,13 @@ title="Print to PDF"
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#simulatie-met-aansturing-off-frequency">
-   simulatie met aansturing off frequency
+  <a class="reference internal nav-link" href="#basisschema-met-spanningssturing">
+   Basisschema met spanningssturing
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#simulatie-met-aansturing-off-resonantie">
+   Simulatie met aansturing off resonantie
   </a>
  </li>
 </ul>
@@ -536,6 +546,11 @@ title="Print to PDF"
 </table>
 <div class="cell docutils container">
 </div>
+<section id="basisschema-met-spanningssturing">
+<h2>Basisschema met spanningssturing<a class="headerlink" href="#basisschema-met-spanningssturing" title="Permalink naar deze titel">#</a></h2>
+<p><code class="xref std std-numref docutils literal notranslate"><span class="pre">dfig1</span></code> toont het basisschema van de klasse D versterker met spanningssturing. Hiervoor gebruiken we een serie-resonante kring. Deze serie-resonante kring zal de opgelegde spanningspulsen (wat ook de vorm van deze pulsen is) omzetten in een sinusoidale stroom doorheen de kring. Aangezien deze sinusoidale stroom ook door de belasting <span class="math notranslate nohighlight">\(R_L\)</span> loopt, zullen we over de belasting <span class="math notranslate nohighlight">\(R_L\)</span> ook een sinusoidale spanning krijgen. Op deze mannier hebben we zowel een sinusoidale spanning over als een sinusoidale stroom door de belasting <span class="math notranslate nohighlight">\(R_L\)</span>.</p>
+<p>De aansturing gebeurt aan de hand van een blokgolf en bij de klasse D versterker gebruiken we hiervoor 2 vermogentransistors, een pull-up transistor en een pull down transistor. In <code class="xref std std-numref docutils literal notranslate"><span class="pre">dfig1</span></code> is het de bedoeling dat deze transistors gewoon de blokgolf aan de ingang volgen maar wel meer stroom kunnen leveren. Daarom worden de transistors hier in <a class="reference external" href="https://en.wikipedia.org/wiki/Common_collector">gemeenschappelijke collector schakeling</a> (in het geval van bipolaire transistors) of <a class="reference external" href="https://en.wikipedia.org/wiki/Common_drain">gemeenschappelijke drain schakeling</a> (in het geval van MOS transistors) gebruikt. Hierdoor volgt de uitgang de ingang op een vaste offset na.</p>
+<p>In <code class="xref std std-numref docutils literal notranslate"><span class="pre">dfig1</span></code> is er gekozen voor een implementatie met bipolaire transistors. Het gebruik van de gemeenschappelijke collector schakeling wil zeggen dat we voor de pull-up transistor hier steeds een npn transistor gaan gebruiken en voor de pull-down transistor een pnp-transistor. De stroom aan de ingang zal een factor <span class="math notranslate nohighlight">\(\beta_{F}\)</span> lager liggen dan de stroom die naar de trilkring loopt.</p>
 <div class="cell docutils container">
 <div class="cell_output docutils container">
 <figure class="align-default" id="dfig1">
@@ -545,6 +560,7 @@ title="Print to PDF"
 </figure>
 </div>
 </div>
+<p>In <a class="reference internal" href="#dfig2"><span class="std std-numref">Fig. 47</span></a> hebben we de verschillende knopen van het schema een nummer gegeven om tot een spice-simulatie te kunnen komen.</p>
 <div class="cell docutils container">
 <div class="cell_output docutils container">
 <figure class="align-default" id="dfig2">
@@ -554,7 +570,7 @@ title="Print to PDF"
 </figure>
 </div>
 </div>
-<p>De overeenkomende SPICE code voor dit circuit is kan je zien in <a class="reference internal" href="#listingd1"><span class="std std-numref">Spice Listing 10</span></a>.</p>
+<p>De overeenkomende SPICE code voor dit circuit is kan je zien in <a class="reference internal" href="#listingd1"><span class="std std-numref">Spice Listing 10</span></a>. We werken hier met een voedingsspanning <span class="math notranslate nohighlight">\(V_{dd}\)</span> van 20V en we leggen ook pulsen aan van 20V aan de ingangsknoop 1. De spanning op knoop 2 zal dan typisch 0.6V tot 0.7V verschillen van de ingangsspanning.</p>
 <div class="cell docutils container">
 <div class="cell_output docutils container">
 <div class="output text_html"><style>pre { line-height: 125%; }
@@ -650,10 +666,11 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 </pre></div>
 </div>
 </div>
+<p>In <a class="reference internal" href="#dfig5"><span class="std std-numref">Fig. 48</span></a> tonen we de spanningen die we bekomen uit de SPICE simulatie.</p>
 <div class="cell docutils container">
 <div class="cell_output docutils container">
 <figure class="align-default" id="dfig5">
-<img alt="_images/90d90970c83d7ac1021108ca893c550ea0794bfe3e616dca9e20bb7f38f7aaf3.png" src="_images/90d90970c83d7ac1021108ca893c550ea0794bfe3e616dca9e20bb7f38f7aaf3.png" />
+<img alt="_images/6ac0c529be1aba3c2077d46e7a787dd1533c0c36599178d93c90753f7629f573.png" src="_images/6ac0c529be1aba3c2077d46e7a787dd1533c0c36599178d93c90753f7629f573.png" />
 <figcaption>
 <p><span class="caption-number">Fig. 48 </span><span class="caption-text">Bekomen spanningen op de verschillende knopen in het hierboven aangegeven schema van de Klasse D versterker.</span><a class="headerlink" href="#dfig5" title="Permallink naar deze afbeelding">#</a></p>
 </figcaption>
@@ -661,19 +678,161 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 </div>
 </div>
 <p>We merken op dat de spanning aan knoop 5 een veel grotere swing heeft dan de uitgangspanning over <span class="math notranslate nohighlight">\(R_L\)</span> (i.e. knoop 6). De spanning op knoop 2 is typisch de verzadigingsspanning van Q1 lager dan de voedingsspanning (hier 20V) of de verzadigingsspanning van Qp hoger dan de grond.</p>
+<p>In <a class="reference internal" href="#dfig6"><span class="std std-numref">Fig. 49</span></a> tonen we de stromen die we bekomen uit de SPICE simulatie. De pull-up transistor levert alle positieve stromen en de pulldown transistor levert alle negatieve stromen. Dit is hier enkel maar zo omdat de aansturing perfect op de resonantiefrequentie gedaan wordt.</p>
 <div class="cell docutils container">
 <div class="cell_output docutils container">
 <figure class="align-default" id="dfig6">
-<img alt="_images/f2f0e3fed134a2c4f0c2c8faeb1f0debacbcab40565a58e7a1663dfff152b648.png" src="_images/f2f0e3fed134a2c4f0c2c8faeb1f0debacbcab40565a58e7a1663dfff152b648.png" />
+<img alt="_images/8113cc29ca67c435db2aaba5d5cf4c254888dbd045c1807e4431ba43507d4338.png" src="_images/8113cc29ca67c435db2aaba5d5cf4c254888dbd045c1807e4431ba43507d4338.png" />
 <figcaption>
 <p><span class="caption-number">Fig. 49 </span><span class="caption-text">Stromen in de NPN en de PNP transistor van het hierboven aangegeven schema van de Klasse D versterker.</span><a class="headerlink" href="#dfig6" title="Permallink naar deze afbeelding">#</a></p>
 </figcaption>
 </figure>
 </div>
 </div>
-<section id="simulatie-met-aansturing-off-frequency">
-<h2>simulatie met aansturing off frequency<a class="headerlink" href="#simulatie-met-aansturing-off-frequency" title="Permalink naar deze titel">#</a></h2>
-<p>Alleen tijdens het opstarten is kort deze spanning 0.7 V hoger dan voedingsspanning of 0.7V lager dan de grond. Merk op in de onderstaande figuur dat de stromen op deze momenten ook het ander teken hebben.</p>
+</section>
+<section id="simulatie-met-aansturing-off-resonantie">
+<h2>Simulatie met aansturing off resonantie<a class="headerlink" href="#simulatie-met-aansturing-off-resonantie" title="Permalink naar deze titel">#</a></h2>
+<p>Wanneer het mogelijk is dat de aansturing van de klasse D versterker niet helemaal exact gelijk met de resonantie frequentie gebeurt,moeten we het schema van <code class="xref std std-numref docutils literal notranslate"><span class="pre">dfig1</span></code>uitbreiden met diodes om een omgekeerde stroom door de transistors mogelijk te maken. Het nieuwe schema zien we in <code class="xref std std-numref docutils literal notranslate"><span class="pre">dfig1diode</span></code></p>
+<div class="cell docutils container">
+<div class="cell_output docutils container">
+<figure class="align-default" id="id1">
+<img alt="_images/c7c8e658443ff9b1f516872c2aa0ffadac2d66bb7a1c7b665e3fe0fcb6e5cbbc.svg" src="_images/c7c8e658443ff9b1f516872c2aa0ffadac2d66bb7a1c7b665e3fe0fcb6e5cbbc.svg" /><figcaption>
+<p><span class="caption-number">Fig. 50 </span><span class="caption-text">Basisschema van de klasse D versterker.</span><a class="headerlink" href="#id1" title="Permallink naar deze afbeelding">#</a></p>
+</figcaption>
+</figure>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_output docutils container">
+<div class="output text_html"><style>pre { line-height: 125%; }
+td.linenos .normal { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
+span.linenos { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
+td.linenos .special { color: #000000; background-color: #ffffc0; padding-left: 5px; padding-right: 5px; }
+span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 5px; padding-right: 5px; }
+.output_html .hll { background-color: #ffffcc }
+.output_html { background: #f8f8f8; }
+.output_html .c { color: #3D7B7B; font-style: italic } /* Comment */
+.output_html .err { border: 1px solid #FF0000 } /* Error */
+.output_html .k { color: #008000; font-weight: bold } /* Keyword */
+.output_html .o { color: #666666 } /* Operator */
+.output_html .ch { color: #3D7B7B; font-style: italic } /* Comment.Hashbang */
+.output_html .cm { color: #3D7B7B; font-style: italic } /* Comment.Multiline */
+.output_html .cp { color: #9C6500 } /* Comment.Preproc */
+.output_html .cpf { color: #3D7B7B; font-style: italic } /* Comment.PreprocFile */
+.output_html .c1 { color: #3D7B7B; font-style: italic } /* Comment.Single */
+.output_html .cs { color: #3D7B7B; font-style: italic } /* Comment.Special */
+.output_html .gd { color: #A00000 } /* Generic.Deleted */
+.output_html .ge { font-style: italic } /* Generic.Emph */
+.output_html .gr { color: #E40000 } /* Generic.Error */
+.output_html .gh { color: #000080; font-weight: bold } /* Generic.Heading */
+.output_html .gi { color: #008400 } /* Generic.Inserted */
+.output_html .go { color: #717171 } /* Generic.Output */
+.output_html .gp { color: #000080; font-weight: bold } /* Generic.Prompt */
+.output_html .gs { font-weight: bold } /* Generic.Strong */
+.output_html .gu { color: #800080; font-weight: bold } /* Generic.Subheading */
+.output_html .gt { color: #0044DD } /* Generic.Traceback */
+.output_html .kc { color: #008000; font-weight: bold } /* Keyword.Constant */
+.output_html .kd { color: #008000; font-weight: bold } /* Keyword.Declaration */
+.output_html .kn { color: #008000; font-weight: bold } /* Keyword.Namespace */
+.output_html .kp { color: #008000 } /* Keyword.Pseudo */
+.output_html .kr { color: #008000; font-weight: bold } /* Keyword.Reserved */
+.output_html .kt { color: #B00040 } /* Keyword.Type */
+.output_html .m { color: #666666 } /* Literal.Number */
+.output_html .s { color: #BA2121 } /* Literal.String */
+.output_html .na { color: #687822 } /* Name.Attribute */
+.output_html .nb { color: #008000 } /* Name.Builtin */
+.output_html .nc { color: #0000FF; font-weight: bold } /* Name.Class */
+.output_html .no { color: #880000 } /* Name.Constant */
+.output_html .nd { color: #AA22FF } /* Name.Decorator */
+.output_html .ni { color: #717171; font-weight: bold } /* Name.Entity */
+.output_html .ne { color: #CB3F38; font-weight: bold } /* Name.Exception */
+.output_html .nf { color: #0000FF } /* Name.Function */
+.output_html .nl { color: #767600 } /* Name.Label */
+.output_html .nn { color: #0000FF; font-weight: bold } /* Name.Namespace */
+.output_html .nt { color: #008000; font-weight: bold } /* Name.Tag */
+.output_html .nv { color: #19177C } /* Name.Variable */
+.output_html .ow { color: #AA22FF; font-weight: bold } /* Operator.Word */
+.output_html .w { color: #bbbbbb } /* Text.Whitespace */
+.output_html .mb { color: #666666 } /* Literal.Number.Bin */
+.output_html .mf { color: #666666 } /* Literal.Number.Float */
+.output_html .mh { color: #666666 } /* Literal.Number.Hex */
+.output_html .mi { color: #666666 } /* Literal.Number.Integer */
+.output_html .mo { color: #666666 } /* Literal.Number.Oct */
+.output_html .sa { color: #BA2121 } /* Literal.String.Affix */
+.output_html .sb { color: #BA2121 } /* Literal.String.Backtick */
+.output_html .sc { color: #BA2121 } /* Literal.String.Char */
+.output_html .dl { color: #BA2121 } /* Literal.String.Delimiter */
+.output_html .sd { color: #BA2121; font-style: italic } /* Literal.String.Doc */
+.output_html .s2 { color: #BA2121 } /* Literal.String.Double */
+.output_html .se { color: #AA5D1F; font-weight: bold } /* Literal.String.Escape */
+.output_html .sh { color: #BA2121 } /* Literal.String.Heredoc */
+.output_html .si { color: #A45A77; font-weight: bold } /* Literal.String.Interpol */
+.output_html .sx { color: #008000 } /* Literal.String.Other */
+.output_html .sr { color: #A45A77 } /* Literal.String.Regex */
+.output_html .s1 { color: #BA2121 } /* Literal.String.Single */
+.output_html .ss { color: #19177C } /* Literal.String.Symbol */
+.output_html .bp { color: #008000 } /* Name.Builtin.Pseudo */
+.output_html .fm { color: #0000FF } /* Name.Function.Magic */
+.output_html .vc { color: #19177C } /* Name.Variable.Class */
+.output_html .vg { color: #19177C } /* Name.Variable.Global */
+.output_html .vi { color: #19177C } /* Name.Variable.Instance */
+.output_html .vm { color: #19177C } /* Name.Variable.Magic */
+.output_html .il { color: #666666 } /* Literal.Number.Integer.Long */</style><div class="highlight"><pre><span></span><span class="o">*</span><span class="w"> </span><span class="nx">Class</span><span class="w"> </span><span class="nx">D</span><span class="w"> </span><span class="nx">amp</span><span class="w"> </span><span class="mi">1</span><span class="w"></span>
+<span class="nx">Q_Q1</span><span class="w">         </span><span class="mi">3</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="nx">Q2</span><span class="w"></span>
+<span class="nx">Q_Qp</span><span class="w">         </span><span class="mi">0</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="nx">Qp</span><span class="w"></span>
+<span class="nx">D_D1</span><span class="w">         </span><span class="mi">2</span><span class="w"> </span><span class="mi">3</span><span class="w"> </span><span class="nx">DD</span><span class="w"></span>
+<span class="nx">D_D2</span><span class="w">         </span><span class="mi">0</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="nx">DD</span><span class="w"></span>
+<span class="nx">L_L1</span><span class="w">         </span><span class="mi">5</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="mi">1</span><span class="nx">uH</span><span class="w"></span>
+<span class="nx">C_C1</span><span class="w">         </span><span class="mi">5</span><span class="w"> </span><span class="mi">6</span><span class="w"> </span><span class="mi">10</span><span class="nx">n</span><span class="w"></span>
+<span class="nx">R_RL</span><span class="w">         </span><span class="mi">6</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="mi">6</span><span class="w"></span>
+<span class="nx">V_Vdd</span><span class="w">        </span><span class="mi">3</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="mi">20</span><span class="nx">V</span><span class="w"></span>
+<span class="nx">R_Rin</span><span class="w">        </span><span class="mi">4</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="mi">1</span><span class="w"></span>
+<span class="nx">V_Vin</span><span class="w">        </span><span class="mi">4</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="nx">PULSE</span><span class="p">(</span><span class="mi">0</span><span class="w"> </span><span class="mi">20</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="mi">20</span><span class="nx">ns</span><span class="w"> </span><span class="mi">20</span><span class="nx">ns</span><span class="w"> </span><span class="mi">280</span><span class="nx">ns</span><span class="w"> </span><span class="mi">600</span><span class="nx">ns</span><span class="p">)</span><span class="w"> </span><span class="nx">DC</span><span class="p">=</span><span class="mi">0</span><span class="w"></span>
+<span class="p">.</span><span class="nx">model</span><span class="w"> </span><span class="nx">Q2</span><span class="w">  </span><span class="nx">NPN</span><span class="p">(</span><span class="nx">Is</span><span class="p">=</span><span class="m m-Double">14.34</span><span class="kd">f</span><span class="w"> </span><span class="nx">BF</span><span class="p">=</span><span class="mi">200</span><span class="p">)</span><span class="w"></span>
+<span class="p">.</span><span class="nx">model</span><span class="w"> </span><span class="nx">Qp</span><span class="w">  </span><span class="nx">PNP</span><span class="p">(</span><span class="nx">Is</span><span class="p">=</span><span class="m m-Double">5.34</span><span class="kd">f</span><span class="w"> </span><span class="nx">BF</span><span class="p">=</span><span class="mi">100</span><span class="p">)</span><span class="w"></span>
+<span class="p">.</span><span class="nx">model</span><span class="w"> </span><span class="nx">DD</span><span class="w">   </span><span class="nx">D</span><span class="p">(</span><span class="w"> </span><span class="nx">IS</span><span class="p">=</span><span class="m m-Double">0.0002</span><span class="w"> </span><span class="nx">RS</span><span class="p">=</span><span class="m m-Double">0.05</span><span class="w"> </span><span class="nx">CJO</span><span class="p">=</span><span class="m m-Double">5e-10</span><span class="w"> </span><span class="p">)</span><span class="w"></span>
+</pre></div>
+</div></div>
+</div>
+<div class="literal-block-wrapper docutils container" id="listingd2">
+<div class="code-block-caption"><span class="caption-number">Spice Listing 11 </span><span class="caption-text">basis Klasse D circuit met diodes</span><a class="headerlink" href="#listingd2" title="Permalink naar deze broncode">#</a></div>
+<div class="highlight-spice notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+</div>
+<p>In <a class="reference internal" href="#dfig5diode"><span class="std std-numref">Fig. 51</span></a> tonen we de spanningen die we bekomen uit de SPICE simulatie.</p>
+<div class="cell docutils container">
+<div class="cell_output docutils container">
+<figure class="align-default" id="dfig5diode">
+<img alt="_images/2c653fdf3c649bcb266e3273f7c29fd9f575a7023739459a74f95c28e8635afb.png" src="_images/2c653fdf3c649bcb266e3273f7c29fd9f575a7023739459a74f95c28e8635afb.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 51 </span><span class="caption-text">Bekomen spanningen op de verschillende knopen in het hierboven aangegeven schema van de Klasse D versterker.</span><a class="headerlink" href="#dfig5diode" title="Permallink naar deze afbeelding">#</a></p>
+</figcaption>
+</figure>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_output docutils container">
+<figure class="align-default" id="dfig5diodedetail">
+<img alt="_images/84c47ddc936850e8063823480a18787964e5ffd8317a5f8070be7a821065e394.png" src="_images/84c47ddc936850e8063823480a18787964e5ffd8317a5f8070be7a821065e394.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 52 </span><span class="caption-text">Detail van de spanningen gedurende 1 periode van de Klasse D versterker.</span><a class="headerlink" href="#dfig5diodedetail" title="Permallink naar deze afbeelding">#</a></p>
+</figcaption>
+</figure>
+</div>
+</div>
+<p>We stellen vast in <a class="reference internal" href="#dfig5diodedetail"><span class="std std-numref">Fig. 52</span></a> dat de spanning op knoop 2 buiten de voedingsspanning komt te liggen als een van de diodes geleidt en binnen de voedingsspanning ligt als een van de transistors geleidt.</p>
+<p>In <a class="reference internal" href="#dfig6diode"><span class="std std-numref">Fig. 53</span></a> tonen we de stromen die we bekomen uit de SPICE simulatie.</p>
+<div class="cell docutils container">
+<div class="cell_output docutils container">
+<figure class="align-default" id="dfig6diode">
+<img alt="_images/e586a999737dbcf7ae859a0b161204b4cbf57889380ec2933cf59d0ddf086c26.png" src="_images/e586a999737dbcf7ae859a0b161204b4cbf57889380ec2933cf59d0ddf086c26.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 53 </span><span class="caption-text">Stromen in de NPN en de PNP transistor van het hierboven aangegeven schema van de Klasse D versterker.</span><a class="headerlink" href="#dfig6diode" title="Permallink naar deze afbeelding">#</a></p>
+</figcaption>
+</figure>
+</div>
+</div>
 </section>
 </section>
 
