@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Klasse D Versterkers &#8212; Toegepaste Analoge Elektronica</title>
+    <title>Klasse D resonante Versterkers &#8212; Toegepaste Analoge Elektronica</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -148,7 +148,7 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   Klasse D  Versterkers
+   Klasse D resonante Versterkers
   </a>
  </li>
  <li class="toctree-l1">
@@ -483,6 +483,11 @@ title="Print to PDF"
    Simulatie met aansturing off resonantie
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#aansturing-van-de-seriekring-aan-de-hand-van-2-npn-transistors">
+   Aansturing van de seriekring aan de hand van 2 NPN transistors
+  </a>
+ </li>
 </ul>
 
     </nav>
@@ -492,7 +497,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Klasse D  Versterkers</h1>
+                <h1>Klasse D resonante Versterkers</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -512,6 +517,11 @@ title="Print to PDF"
    Simulatie met aansturing off resonantie
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#aansturing-van-de-seriekring-aan-de-hand-van-2-npn-transistors">
+   Aansturing van de seriekring aan de hand van 2 NPN transistors
+  </a>
+ </li>
 </ul>
 
                         </nav>
@@ -522,9 +532,12 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="klasse-d-versterkers">
-<h1>Klasse D  Versterkers<a class="headerlink" href="#klasse-d-versterkers" title="Permalink naar deze titel">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="klasse-d-resonante-versterkers">
+<h1>Klasse D resonante Versterkers<a class="headerlink" href="#klasse-d-resonante-versterkers" title="Permalink naar deze titel">#</a></h1>
 <p><a href="./slides/Klasse-D.slides.html" target="_blank"><img alt="slides" src="_images/slides-beschikbaar-blue.svg" /></a></p>
+<p>In dit hoofdstuk bespreken we de klasse D resonante hoogfrequent versterkers. Hierbij gebruiken we 2 vermogentransistors die een resonante kring aan hoge frequentie aanstuurt. Het ontwerp van de kring is dusdanig dat enkel maar de component op resonantie door de resonante kring doorgelaten wordt naar de belasting. In die optiek kunnen we ook de resonante kring beschouwen als een banddoorlaatfilter.</p>
+<p>Het is belangrijk hierin een verschil te maken met de klasse D audio versterkers. Hierin worden beide vermogentransistors ook aan hoge frequenties geschakeld maar dient het LRC filtercircuit dat erachter hangt als een laagdoorlaatfilter, zodat de belasting enkel maar de laagfrequente component van het stuursignaal ziet.</p>
+<p>In <a class="reference internal" href="#vermogenversterkersd"><span class="std std-numref">Tabel 3</span></a> situeren we de klasse D versterkers tussen de andere vermogenversterkers.</p>
 <table class="colwidths-auto table" id="vermogenversterkersd">
 <caption><span class="caption-number">Tabel 3 </span><span class="caption-text">Indeling van de vermogenversterkers</span><a class="headerlink" href="#vermogenversterkersd" title="Permalink naar deze tabel">#</a></caption>
 <thead>
@@ -554,7 +567,7 @@ title="Print to PDF"
 <div class="cell docutils container">
 <div class="cell_output docutils container">
 <figure class="align-default" id="dfig1">
-<img alt="_images/b5bda88dd669ee5ab923c995a0e9c5531be7473c8c9bbe5809b9d49e2b8bf817.svg" src="_images/b5bda88dd669ee5ab923c995a0e9c5531be7473c8c9bbe5809b9d49e2b8bf817.svg" /><figcaption>
+<img alt="_images/9ba20796ffe66fb66515ca785649960062cd9edbf55cffa19828d236f522557a.svg" src="_images/9ba20796ffe66fb66515ca785649960062cd9edbf55cffa19828d236f522557a.svg" /><figcaption>
 <p><span class="caption-number">Fig. 46 </span><span class="caption-text">Basisschema van de klasse D versterker.</span><a class="headerlink" href="#dfig1" title="Permallink naar deze afbeelding">#</a></p>
 </figcaption>
 </figure>
@@ -829,6 +842,64 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 <img alt="_images/e586a999737dbcf7ae859a0b161204b4cbf57889380ec2933cf59d0ddf086c26.png" src="_images/e586a999737dbcf7ae859a0b161204b4cbf57889380ec2933cf59d0ddf086c26.png" />
 <figcaption>
 <p><span class="caption-number">Fig. 53 </span><span class="caption-text">Stromen in de NPN en de PNP transistor van het hierboven aangegeven schema van de Klasse D versterker.</span><a class="headerlink" href="#dfig6diode" title="Permallink naar deze afbeelding">#</a></p>
+</figcaption>
+</figure>
+</div>
+</div>
+</section>
+<section id="aansturing-van-de-seriekring-aan-de-hand-van-2-npn-transistors">
+<h2>Aansturing van de seriekring aan de hand van 2 NPN transistors<a class="headerlink" href="#aansturing-van-de-seriekring-aan-de-hand-van-2-npn-transistors" title="Permalink naar deze titel">#</a></h2>
+<p>Aangezien de stroomversterking <span class="math notranslate nohighlight">\(\beta_F\)</span> van NPN transistors typisch groter is dan deze van PNP transistors, is het vaak interessant om een schemauit te werken waarin er enkel NPN transistors gebruit worden. <a class="reference internal" href="#dfig1npn"><span class="std std-numref">Fig. 54</span></a> toont hiervan de meest eenvoudige implementatie.</p>
+<div class="cell docutils container">
+<div class="cell_output docutils container">
+<figure class="align-default" id="dfig1npn">
+<img alt="_images/d857dc4073c30214be8c511f26936e20d9f422ac136005331f52cc9447df61c0.svg" src="_images/d857dc4073c30214be8c511f26936e20d9f422ac136005331f52cc9447df61c0.svg" /><figcaption>
+<p><span class="caption-number">Fig. 54 </span><span class="caption-text">Schema van de klasse D versterker met enkel NPN transistors.</span><a class="headerlink" href="#dfig1npn" title="Permallink naar deze afbeelding">#</a></p>
+</figcaption>
+</figure>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_output docutils container">
+<figure class="align-default" id="dfig1npndiode">
+<img alt="_images/7d3ff81930816ac0090a900eaa7f04d7c6a78b558111d1ee42a914f74256ddd2.svg" src="_images/7d3ff81930816ac0090a900eaa7f04d7c6a78b558111d1ee42a914f74256ddd2.svg" /><figcaption>
+<p><span class="caption-number">Fig. 55 </span><span class="caption-text">Schema van de klasse D versterker met enkel NPN transistors.</span><a class="headerlink" href="#dfig1npndiode" title="Permallink naar deze afbeelding">#</a></p>
+</figcaption>
+</figure>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_output docutils container">
+<figure class="align-default" id="dfig3spanning">
+<img alt="_images/50f9db51ab72cd9d8e94b047c2ecc8033ffbac07dcbc0d4db036112707645b36.svg" src="_images/50f9db51ab72cd9d8e94b047c2ecc8033ffbac07dcbc0d4db036112707645b36.svg" /><figcaption>
+<p><span class="caption-number">Fig. 56 </span><span class="caption-text">Schema van de klasse D versterker met spanningssturing.</span><a class="headerlink" href="#dfig3spanning" title="Permallink naar deze afbeelding">#</a></p>
+</figcaption>
+</figure>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_output docutils container">
+<figure class="align-default" id="dfig3spanningdiode">
+<img alt="_images/9bb98b2d15ebc9addf27aa34211cecbd53fa581e6ea449261fcb1c65ee01d1fb.svg" src="_images/9bb98b2d15ebc9addf27aa34211cecbd53fa581e6ea449261fcb1c65ee01d1fb.svg" /><figcaption>
+<p><span class="caption-number">Fig. 57 </span><span class="caption-text">Schema van de klasse D versterker met spanningssturing en beveiligingsdiodes.</span><a class="headerlink" href="#dfig3spanningdiode" title="Permallink naar deze afbeelding">#</a></p>
+</figcaption>
+</figure>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_output docutils container">
+<figure class="align-default" id="dfig4stroom">
+<img alt="_images/83d7d13c9e605721d6e51d8c95001b090fa327e6458771142b8434cb625ece80.svg" src="_images/83d7d13c9e605721d6e51d8c95001b090fa327e6458771142b8434cb625ece80.svg" /><figcaption>
+<p><span class="caption-number">Fig. 58 </span><span class="caption-text">Schema van de klasse D versterker met stroomsturing.</span><a class="headerlink" href="#dfig4stroom" title="Permallink naar deze afbeelding">#</a></p>
+</figcaption>
+</figure>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_output docutils container">
+<figure class="align-default" id="dfig4stroomdiode">
+<img alt="_images/7801b28e3195efa35f35434b05c474f4edfa941b9adf60b3b0a91ebdeca2e4e1.svg" src="_images/7801b28e3195efa35f35434b05c474f4edfa941b9adf60b3b0a91ebdeca2e4e1.svg" /><figcaption>
+<p><span class="caption-number">Fig. 59 </span><span class="caption-text">Schema van de klasse D versterker met stroomsturing en beveiligingsdiodes.</span><a class="headerlink" href="#dfig4stroomdiode" title="Permallink naar deze afbeelding">#</a></p>
 </figcaption>
 </figure>
 </div>
