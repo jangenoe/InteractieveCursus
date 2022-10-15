@@ -15046,17 +15046,7 @@ div .csl-right-inline{text-align: left}</style>
     <!-- End of mathjax configuration --></head>
 <body class="jp-Notebook" data-jp-theme-light="true" data-jp-theme-name="JupyterLab Light">
 <div class="reveal">
-<div class="slides"><section data-state='kuleuven_title_slide reveal'><section><div class="title">titel</div><div class="subtitle">subtitle</div><div class="speaker kuleuvenwhite" >Jan Genoe</div><div class="date kuleuvenwhite" >December 2022</div></section></section><section data-state="kuleuven_slide"><section>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Specifieke-filter-blokken">Specifieke filter blokken<a class="anchor-link" href="#Specifieke-filter-blokken">&#182;</a></h2>
-</div>
-</div>
-</div>
-</div></section></section><section data-state="kuleuven_slide"><section>
+<div class="slides"><section data-state='kuleuven_title_slide reveal'><section><div class="title">Filters</div><div class="subtitle">Synthese aan de hand van opamps</div><div class="speaker kuleuvenwhite" >Jan Genoe</div><div class="date kuleuvenwhite" >December 2022</div></section></section><section data-state="kuleuven_slide"><section>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
@@ -16055,22 +16045,7 @@ z
 
 </div>
 
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>De uitgang $V_{out}$ van dit bouwblok kunnen we schrijven als functie van de ingang $V_{in}$ als het volgt:</p>
-$$ V_{out} \approx -\frac{Z_2}{Z_1} V_{in} $$<p>met</p>
-$$\frac{1}{Z_1}=j \omega C_1 +\frac{1}{R_1}$$$$\frac{1}{Z_2}= j \omega C_2 +\frac{1}{R_2}$$<p>Indien $C_1$ en $C_2$ niet nul zijn, kunnen we dit verder uitwerken als:</p>
-$$ V_{out} \approx -\frac{C_1}{C_2} \frac{j \omega  +\frac{1}{R_1 C_1}}{j \omega  +\frac{1}{R_2 C_2}} V_{in} $$$$ V_{out} \approx -\frac{C_1}{C_2} \frac{j \omega  -n_1 }{j \omega  -p_1} V_{in} $$<p>waarbij $n_1 = \frac{1}{R_1 C_1} $ en $ p_1= \frac{1}{R_2 C_2} $. Het bovenstaande bouwblok kunnen we in zijn algemene vorm gebruiken (met dus 2 weerstanden en 2 condensators), waarbij we zowel een pool als een nul bekomen. Voor heel wat toepassingen kunnen we echter een van de 4 elementen weglaten. {numref}<code>fig3</code>  toont het circuit voor een eerste orde laagdoorlaat met transferfunctie:</p>
-$$ V_{out} \approx -\frac{1}{R_1 C_2} \frac{1 }{j \omega  -p_1} V_{in} $$<p>wat bij voldoende lage frequentie $ V_{out} \approx -\frac{R_2}{R_1 }  V_{in} $ geeft</p>
-
-</div>
-</div>
-</div>
-</div><h6>eerste orde laagdoorlaatfilter.</h6><div class="jp-Cell jp-CodeCell jp-Notebook-cell  jp-mod-noInput ">
+</div></section></section><section data-state="kuleuven_slide"><section><h6>eerste orde laagdoorlaatfilter.</h6><div class="jp-Cell jp-CodeCell jp-Notebook-cell  jp-mod-noInput ">
 
 <div class="jp-Cell-outputWrapper">
 <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
@@ -16589,18 +16564,7 @@ z
 
 </div>
 
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Op een gelijkaardige wijze kunnen we uitrekenen dat het circuit in {numref}<code>fig4</code>  ons een hoogdoorlaatfilter geeft met responsie:</p>
-$$ V_{out} \approx -\frac{C_1}{ C_2} \frac{j \omega }{j \omega  -p_1} V_{in} $$
-</div>
-</div>
-</div>
-</div><h6>eerste orde hoogdoorlaatfilter.</h6><div class="jp-Cell jp-CodeCell jp-Notebook-cell  jp-mod-noInput ">
+</div></section></section><section data-state="kuleuven_slide"><section><h6>eerste orde hoogdoorlaatfilter</h6><div class="jp-Cell jp-CodeCell jp-Notebook-cell  jp-mod-noInput ">
 
 <div class="jp-Cell-outputWrapper">
 <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
@@ -17115,7 +17079,7 @@ z
 
 </div>
 
-</div>
+</div></section></section><section data-state="kuleuven_slide"><section>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
@@ -17127,28 +17091,7 @@ $$ V_{out} = - \frac{b_2 (j \omega)^2  + b_1(j \omega) +b_0}{a_2 (j \omega)^2  +
 </div>
 </div>
 </div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h4 id="BiQuad-filter">BiQuad filter<a class="anchor-link" href="#BiQuad-filter">&#182;</a></h4>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h5 id="Het-gedeelte-van-het-biquad-circuit-dat-de-polen-bepaalt">Het gedeelte van het biquad circuit dat de polen bepaalt<a class="anchor-link" href="#Het-gedeelte-van-het-biquad-circuit-dat-de-polen-bepaalt">&#182;</a></h5><p>We werken hieronder het circuit uit in 2 stappen. We berekenen hiervoor eerst de spanningen uit op de knopen van het bovenste gedeelte van het BiQuad circuit dat we tonen in {numref}<code>fig5</code> .  Het doel van dit deel van het circuit is dit uit te rekenen als een universeel circuit voor:</p>
-$$ V_{out*} = - \frac{1}{a_2 (j \omega)^2  + a_1 (j \omega) +a_0} V_{in} $$
-</div>
-</div>
-</div>
-</div></section></section><section data-state="kuleuven_slide"><section><h6>Bovenste gedeelte van het BiQuad circuit.</h6><div class="jp-Cell jp-CodeCell jp-Notebook-cell  jp-mod-noInput ">
+</div></section></section><section data-state="kuleuven_slide"><section><h6>Bovenste gedeelte van het BiQuad circuit</h6><div class="jp-Cell jp-CodeCell jp-Notebook-cell  jp-mod-noInput ">
 
 <div class="jp-Cell-outputWrapper">
 <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
@@ -18112,40 +18055,6 @@ z
 
 </div>
 
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Om het gedrag van het bovenste gedeelte van het BiQuad filter te beschrijven, werken we eerst de impedantie uit van de elementen die verschillen van de weerstanden, namelijk $Z_1$ en $Z_2$:</p>
-$$\frac{1}{Z_1}=j \omega C_1 +\frac{1}{R_{12}}$$$$\frac{1}{Z_2}= j \omega C_2 $$<p>Omdat we weten dat de derde opamp een eenvoudige inverterende opamp is, hoeven we enkel de relatie tussen in en out van de 2 eerste opamps uit te werken. We bekomen het stelsel:</p>
-$$V_*=-\frac{Z_1}{R_{11}} V_{in} -\frac{Z_1}{R_{13}} V_{out*}$$$$ -V_{out*}= -\frac{Z_2}{R_{2}} V_* $$<p>of</p>
-$$ V_* =\frac{R_2}{Z_2} V_{out*}  $$<p>wanneer we vervolgens $ V_* $ elimineren krijgen we de volgende vergelijking voor $ V_{out*}$</p>
-$$ \frac{R_2}{Z_2} V_{out*} =-\frac{Z_1}{R_{11}} V_{in} -\frac{Z_1}{R_{13}} V_{out*}$$$$ \left(\frac{R_2}{Z_2}+\frac{Z_1}{R_{13}}\right)  V_{out*} =-\frac{Z_1}{R_{11}} V_{in} $$$$   V_{out*} =-\frac{Z_1}{R_{11}\left(\frac{R_2}{Z_2}+\frac{Z_1}{R_{13}}\right)} V_{in} $$$$   V_{out*} =-\frac{1}{R_{11}\left(\frac{R_2}{Z_2 Z_1}+\frac{1}{R_{13}}\right)} V_{in} $$$$   V_{out*} =-\frac{1}{R_{11}\left(R_2 j \omega C_2 (j \omega C_1 +\frac{1}{R_{12}}) +\frac{1}{R_{13}}\right)} V_{in} $$$$   V_{out*} =-\frac{1}{R_{11} R_2 C_2 C_1(j \omega)^2  + \frac{R_{11}R_2 C_2}{R_{12}}(j \omega) +\frac{R_{11}}{R_{13}}} V_{in} $$<p>En $V_*$ wordt dan:</p>
-$$   V_{*} =-\frac{C_2 R_2 j \omega }{R_{11} R_2 C_2 C_1(j \omega)^2  + \frac{R_{11}R_2 C_2}{R_{12}}(j \omega) +\frac{R_{11}}{R_{13}}} V_{in} $$<p>Dit kunnen we vervolgens herschrijven als</p>
-$$ V_{out*} =-\frac{1}{a_2 (j \omega)^2  + a_1 (j \omega) +a_0} V_{in} $$<p>(biquadout)</p>
-<p>en</p>
-$$ V_{*} =-\frac{C_2 R_2(j \omega)}{a_2 (j \omega)^2  + a_1(j \omega) +a_0} V_{in} $$<p>met</p>
-$$  a_2= R_{11} C_1 R_2 C_2 $$<p>(biquada2)</p>
-$$  a_1=  \frac{R_{11} }{R_{12}} R_2 C_2$$<p>(biquada1)</p>
-$$  a_0= \frac{R_{11}}{R_{13}}$$<p>(biquada0)</p>
-<p>We zien dus inderdaad uit vergelijkingen ({eq}<code>biquadout</code>,{eq}<code>biquada2</code>,{eq}<code>biquada1</code>,{eq}<code>biquada0</code>) dat we dit kunnen uitwerken als de gevraagde universele oplossing op voorwaarde dat de coeficienten $a_2,a_1$ en $a_0$ allemaal positieve coeficienten zijn.</p>
-
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h5 id="Het-volledige-BiQuad-circuit">Het volledige BiQuad circuit<a class="anchor-link" href="#Het-volledige-BiQuad-circuit">&#182;</a></h5><p>Het hierboven aangegeven circuit kunnen we verder uitbreiden om ook nog 2 (complexen) nullen toe te voegen. Hiervoor combineren we de spanning op 3 knopen van het circuit in {numref}<code>fig5</code> , namelijk $V_{in}$,  $V_{*}$ en$V_{out*}$. Dit geeft dan het circuit in {numref}<code>fig6</code> .</p>
-
-</div>
-</div>
-</div>
 </div></section></section><section data-state="kuleuven_slide"><section><h6>Het volledige BiQuad circuit.</h6><div class="jp-Cell jp-CodeCell jp-Notebook-cell  jp-mod-noInput ">
 
 <div class="jp-Cell-outputWrapper">
@@ -19436,30 +19345,7 @@ z
 
 </div>
 
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-$$ V_{out}=-\frac{R_{40}}{R_{41}} V_{in}- \frac{R_{40}}{R_{42}} V_{*} - \frac{R_{40}}{R_{43}} V_{out*} $$$$ V_{out}=-\frac{\frac{R_{40}}{R_{41}} (a_2 (j \omega)^2  + a_1(j \omega) +a_0) - \frac{R_{40}}{R_{42}} C_2 R_2(j \omega) - \frac{R_{40}}{R_{43}}  }{a_2 (j \omega)^2  + a_1(j \omega) +a_0} V_{in}$$$$ V_{out}=-\frac{a_2 \frac{R_{40}}{R_{41}}  (j \omega)^2  +\left( a_1\frac{R_{40}}{R_{41}}- C_2 R_2\frac{R_{40}}{R_{42}}\right)(j \omega) +
-\left(a_0\frac{R_{40}}{R_{41}}   - \frac{R_{40}}{R_{43}} \right) }{a_2 (j \omega)^2  + a_1(j \omega) +a_0} V_{in}$$<p>Dit kan dan weer herschreven worden als:</p>
-$$ V_{out}=-\frac{b_2(j \omega)^2  +b_1(j \omega) +b_0}{a_2 (j \omega)^2  + a_1(j \omega) +a_0} V_{in}$$<p>met</p>
-$$  b_2= a_2 \frac{R_{40}}{R_{41}}= \frac{R_{40}}{R_{41}}R_{11} C_1 R_2 C_2$$$$  b_1= a_1\frac{R_{40}}{R_{41}}- C_2 R_2\frac{R_{40}}{R_{42}}=\left( \frac{R_{11} R_{40}}{R_{12}R_{41}} -\frac{R_{40}}{R_{42}}  \right)R_2 C_2$$$$  b_0= a_0\frac{R_{40}}{R_{41}}   - \frac{R_{40}}{R_{43}} =\frac{R_{11}}{R_{13}}\frac{R_{40}}{R_{41}}   - \frac{R_{40}}{R_{43}}$$
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h4 id="Sallen-en-Key-Circuit">Sallen en Key Circuit<a class="anchor-link" href="#Sallen-en-Key-Circuit">&#182;</a></h4>
-</div>
-</div>
-</div>
-</div></section></section><section data-state="kuleuven_slide"><section><h6>Het Sallen en Key laagdoorlaat circuit.</h6><div class="jp-Cell jp-CodeCell jp-Notebook-cell  jp-mod-noInput ">
+</div></section></section><section data-state="kuleuven_slide"><section><h6>Het Sallen en Key laagdoorlaat circuit</h6><div class="jp-Cell jp-CodeCell jp-Notebook-cell  jp-mod-noInput ">
 
 <div class="jp-Cell-outputWrapper">
 <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
@@ -20048,159 +19934,12 @@ z
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Frequentietransformaties">Frequentietransformaties<a class="anchor-link" href="#Frequentietransformaties">&#182;</a></h2><p>In dit deel van het hoofdstuk over filters gaan we dieper in op de manier waarop het ontwerp van een laagdoorlaatfilter kan herschreven worden naar een hoogdoorlaatfilter, een banddoorlaatflter of een bandsper filter.</p>
-<p>Hiervoor gaan we typisch de transferfunctie herschrijven als functie van de parameter $S$, die gelijk is aan:</p>
-$$S=\frac{i \omega}{\omega_o} $$<p>Dit wil dan ook zeggen dat elke term met een pool of een nul in de vorm van $i \omega - p_i $ of $i \omega - n_i $ gelijk wordt aan</p>
-$$i \omega - p_i =\frac{i \omega}{\omega_o}- \frac{p_i}{\omega_o} = S - \frac{p_i}{\omega_o}  $$$$i \omega - n_i =\frac{i \omega}{\omega_o}- \frac{n_i}{\omega_o} = S - \frac{n_i}{\omega_o}  $$<p>Het nu vervolgens de $S$ in de bovenstaande termen die we gaan vervangen door een andere term en dan gaan bekijken waar de nieuwe polen en nullen komen te liggen.</p>
-
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="Omrekenen-van-een-laagdoorlaatfilter-naar-een-hoogdoorlaatfilter">Omrekenen van een laagdoorlaatfilter naar een hoogdoorlaatfilter<a class="anchor-link" href="#Omrekenen-van-een-laagdoorlaatfilter-naar-een-hoogdoorlaatfilter">&#182;</a></h3><p>De frequentietransformatie die we hiervoor gebruiken is:</p>
-$$S=\frac{\omega_o}{i \omega} $$<p>De termen van de vorm $S - \frac{p_i}{\omega_o}  $ kunnen we vervolgens herschrijven door de S in te vullen.</p>
-$$S - \frac{p_i}{\omega_o}  = \frac{\omega_o}{i \omega} - \frac{p_i}{\omega_o} =   \frac{\omega_o - \frac{p_i}{\omega_o} i \omega}{i \omega }
-=-\frac{\omega_o}{p_i} \frac{i \omega - \frac{\omega_o^2}{p_i}}{i \omega} $$<p></p>
-<p>Na deze transformatie van laagdoorlaatfilter naar hoogdoorlaatfilter hebben we dus een nieuwe pool $\frac{\omega_o^2}{p_i}$ en en nieuwe nul (op 0) bekomen, maar in het geval van een Butterworth filter gaat dat niet het geval zijn, want we kunnen de polen van de Butterworth filter schrijven als:</p>
-$$ p_i= \omega_o ( \cos(\phi)+ i \sin(\phi)) $$<p>In dat geval gaat</p>
-$$ \frac{\omega_o^2}{p_i}=\frac{\omega_o^2}{\omega_o ( \cos(\phi)+ i \sin(\phi))} =\omega_o ( \cos(\phi)- i \sin(\phi)) $$<p>wat dus de complex toegevoegde is van de originele pool. En aangezien de polen steeds in complex toegevoegde paren moeten voorkomen veranderen de polen van de Butterworth filter niet maar komen er wel nullen bij. Voor de  Chebyshev filters filters veranderen de polen door deze transfromatie wel van plaats.</p>
-<p>Hetzelfde kunnen we dan doen voor de eventuele termen van de vorm $S - \frac{n_i}{\omega_o}  $</p>
-
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="Omrekenen-van-een-laagdoorlaatfilter-naar-een-banddoorlaatfilter">Omrekenen van een laagdoorlaatfilter naar een banddoorlaatfilter<a class="anchor-link" href="#Omrekenen-van-een-laagdoorlaatfilter-naar-een-banddoorlaatfilter">&#182;</a></h3><p>De frequentietransformatie die we hiervoor gebruiken is:</p>
-$$S=\frac{1}{\omega_2-\omega_1}\frac{(i \omega)^2 + \omega_1\omega_2}{i \omega} $$<p>Ook hier kunnen we de termen van de vorm $S - \frac{p_i}{\omega_o}  $ en $S - \frac{n_i}{\omega_o}$ zoals hierboven herschrijven. We werken dat hieronder uit aan de hand van een voorbeeld.</p>
-
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="Voorbeeld:-Omrekenen-van-de-polen-van-een-2de-orde-laagdoorlaatfilter-naar-een-2de-orde-banddoorlaatfilter">Voorbeeld: Omrekenen van de polen van een 2de orde laagdoorlaatfilter naar een 2de orde banddoorlaatfilter<a class="anchor-link" href="#Voorbeeld:-Omrekenen-van-de-polen-van-een-2de-orde-laagdoorlaatfilter-naar-een-2de-orde-banddoorlaatfilter">&#182;</a></h3><p>In deze paragraaf rekenen we de polen van een 2de orde banddoorlaatfilter uit op basis van een 2de orde laagdoorlaatfilter.
-Als vertrekbasis nemen we een 2de orde Butterworth laagdoorlaatfilter met afsnijfrequentie 50 kHz.
-De polen van deze Butterworth laagdoorlaatfilter zijn:</p>
-$$ p_1=-\omega_o \frac{\sqrt{2}}{2}(1+ i)  $$$$ p_2=-\omega_o \frac{\sqrt{2}}{2}(1-i)  $$<p>waarbij $\omega_o = 2 \pi$  50000.  En de transferfunctie is:</p>
-$$ T(i \omega)=\frac{p_1 p_2}{(i \omega- p_1)(i \omega- p_2)} $$<p>Als een gevolg hiervan kunnen we de termen in de noemer van de transferfunctie als volgt weergeven:</p>
-$$ i \omega- p_1 = i \omega+\omega_o \frac{\sqrt{2}}{2}(1+i) =\omega_o\left( \frac{i \omega}{\omega_o}+ \frac{\sqrt{2}}{2}(1+ i) \right)$$$$ i \omega- p_2 = i \omega+\omega_o \frac{\sqrt{2}}{2}(1-i) =\omega_o\left( \frac{i \omega}{\omega_o}+ \frac{\sqrt{2}}{2}(1- i) \right)$$<p>Dit kunnen we nu uitdrukken als een functie van de parameter $S$ waarbij</p>
-$$S=\frac{i \omega}{\omega_o} $$<p>Dit geeft dan:</p>
-$$ i \omega- p_1 =\omega_o\left( S+ \frac{\sqrt{2}}{2}(1+ i) \right)$$$$ i \omega- p_2 =\omega_o\left( S+ \frac{\sqrt{2}}{2}(1- i) \right)$$<p>Voor de overeenstemmende banddoorlaatfilter kunnen we stellen:</p>
-$$S=\frac{1}{\omega_2-\omega_1}\frac{(i \omega)^2 + \omega_1\omega_2}{i \omega} $$<p>Wanneer we dit opnieuw inullen in de beide bovenstaande termen krijgen we:</p>
-$$ \omega_o\left( \frac{1}{\omega_2-\omega_1}\frac{(i \omega)^2 + \omega_1\omega_2}{i \omega}+ \frac{\sqrt{2}}{2}(1+ i) \right)$$$$ \omega_o\left( \frac{1}{\omega_2-\omega_1}\frac{(i \omega)^2 + \omega_1\omega_2}{i \omega}+ \frac{\sqrt{2}}{2}(1- i) \right)$$<p>We kunnen nu beide termen op gelijke noemer brengen. Dit geeft ons:</p>
-$$   \frac{\omega_o}{\omega_2-\omega_1}\left( \frac{(i \omega)^2 + \frac{\sqrt{2}}{2}(1+ i)(\omega_2-\omega_1)(i \omega)+ \omega_1\omega_2}{i \omega} \right)$$$$   \frac{\omega_o}{\omega_2-\omega_1}\left( \frac{(i \omega)^2 + \frac{\sqrt{2}}{2}(1- i)(\omega_2-\omega_1)(i \omega)+ \omega_1\omega_2}{i \omega} \right)$$<p>De nieuwe transferfunctie wordt dan:</p>
-$$ T(i \omega)=\frac{p_1 p_2}
-{\frac{\omega_o}{\omega_2-\omega_1}\left( \frac{(i \omega)^2 + \frac{\sqrt{2}}{2}(1+ i)(\omega_2-\omega_1)(i \omega)+ \omega_1\omega_2}{i \omega} \right)
-\frac{\omega_o}{\omega_2-\omega_1}\left( \frac{(i \omega)^2 + \frac{\sqrt{2}}{2}(1- i)(\omega_2-\omega_1)(i \omega)+ \omega_1\omega_2}{i \omega} \right)} $$<p>Dit kunner we verder uitwerken als:</p>
-$$ T(i \omega)=\frac{(\omega_2-\omega_1)^2(i \omega)^2}
-{\left((i \omega)^2 + \frac{\sqrt{2}}{2}(1+ i)(\omega_2-\omega_1)(i \omega)+ \omega_1\omega_2 \right)
-\left( (i \omega)^2 + \frac{\sqrt{2}}{2}(1- i)(\omega_2-\omega_1)(i \omega)+ \omega_1\omega_2 \right)} $$<p>In de noemer zien we nu 2 kwadratische vergelijkingen in $i \omega $ staan. we kunnen voor elk van deze vergelijkingen de nulpunten uitrekenen. Dit levert ons de volgende 4 polen op:</p>
-$$ p_{1,1}= \frac{-\frac{\sqrt{2}}{2}(1+ i)(\omega_2-\omega_1)+\sqrt{(\frac{\sqrt{2}}{2}(1+ i)(\omega_2-\omega_1))^2-4\omega_1\omega_2}}{2} $$$$ p_{1,2}= \frac{-\frac{\sqrt{2}}{2}(1+ i)(\omega_2-\omega_1)-\sqrt{(\frac{\sqrt{2}}{2}(1+ i)(\omega_2-\omega_1))^2-4\omega_1\omega_2}}{2} $$$$ p_{2,1}= \frac{-\frac{\sqrt{2}}{2}(1- i)(\omega_2-\omega_1)+\sqrt{(\frac{\sqrt{2}}{2}(1- i)(\omega_2-\omega_1))^2-4\omega_1\omega_2}}{2} $$$$ p_{2,2}= \frac{-\frac{\sqrt{2}}{2}(1- i)(\omega_2-\omega_1)-\sqrt{(\frac{\sqrt{2}}{2}(1- i)(\omega_2-\omega_1))^2-4\omega_1\omega_2}}{2} $$<p>In het geval dat we nu $\omega_2 = 3 \omega_o$ en  $\omega_1 = \omega_o$ kunnen we dit verder vereenvoudigen.</p>
-$$ p_{1,1}=\omega_o \left(-\frac{\sqrt{2}}{2}(1+ i)+\sqrt{ i-3}\right) $$$$ p_{1,2}=\omega_o \left(-\frac{\sqrt{2}}{2}(1+ i)-\sqrt{ i-3}\right) $$$$ p_{2,1}=\omega_o \left(-\frac{\sqrt{2}}{2}(1- i)+\sqrt{- i-3}\right) $$$$ p_{2,2}=\omega_o \left(-\frac{\sqrt{2}}{2}(1- i)-\sqrt{- i-3}\right) $$<p>Wanneer we deze polen in meer detail analyseren, stellen we vast dat we inderdaad 2 paren van complex toegevoegde polen krijgen, namelijk ($p_{1,1}$, $p_{2,1}$) en  ($p_{1,2}$, $p_{2,2}$). Elk van deze paren kunnen we dan vervolgens met een Sallen en Key circuit uitwerken.</p>
-<p>De numerieke waardes voor deze polen zijn:</p>
-
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell  jp-mod-noInput  celltag_hide-input">
-
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>p11 =  -132656.26200173897  + j  329305.0471051497
-p12 =  -132656.26200173897  - j  329305.0471051497
-
-p21 =  -311632.0318140976   - j  773593.3409209863
-p22 =  -311632.0318140976   + j  773593.3409209863
-</pre>
-</div>
-</div>
-
-</div>
-
-</div>
-
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>We kunnen dit ook herschrijven als:</p>
-
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell  jp-mod-noInput  celltag_hide-input">
-
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>p11 =  355020.41898628714 *(-cos( 68.05859933682078 )+ j sin( 68.05859933682078 ))
-p12 =  355020.41898628714 *(-cos( 68.05859933682078 )+ j sin( 68.05859933682078 ))
-
-p21 =  834003.105731553 *(-cos( 68.05859933682078 )+ j sin( 68.05859933682078 ))
-p22 =  834003.105731553 *(-cos( 68.05859933682078 )+ j sin( 68.05859933682078 ))
-</pre>
-</div>
-</div>
-
-</div>
-
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs jp-mod-noInput  celltag_hide-input">
-
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="Butterworth-filters">Butterworth filters<a class="anchor-link" href="#Butterworth-filters">&#182;</a></h2><p>In dit hoofdstuk werken we een aantal concrete voorbeelden uit van Butterworth filters. We vergelijken hierbij de verschillende ordes en kijken hoe deze in praktijk worden geimplementeerd in hardware circuits.</p>
 
 </div>
 </div>
 </div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="Butterworth-laagdoorlaatfilter-van-de-3de-orde">Butterworth laagdoorlaatfilter van de 3de orde<a class="anchor-link" href="#Butterworth-laagdoorlaatfilter-van-de-3de-orde">&#182;</a></h3><p>We ontwerpen een analoge 3de orde laagdoorlaatfilter van het type Butterworth met afsnijfrequentie 1 MHz. De transferfunktie $H(s)$ of $H(j\omega)$ die we bekomen is:</p>
-$$ H(s) = \frac{\sum_{n=0}^M b_n s^n}{\sum_{n=0}^N a_n s^n} $$<p>$a_n$ en $b_n$ zijn de coeficienten van de veeltermen in de transferfunktie. Voor deze oefening zijn deze coeficienten:</p>
-
-</div>
-</div>
-</div>
-</div></section></section><section data-state="kuleuven_slide"><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell  jp-mod-noInput ">
+</div></section></section><section data-state="kuleuven_slide"><section><h6>Amplitude en fase derde orde Butterworth laagdoorlaatfilter(1 MHz)</h6><div class="jp-Cell jp-CodeCell jp-Notebook-cell  jp-mod-noInput ">
 
 <div class="jp-Cell-outputWrapper">
 <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
@@ -20241,19 +19980,7 @@ jp-needs-light-background
 
 </div>
 
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>We kunnen ook schrijven als funtie van polen en nulpunten:</p>
-$$H(s) = \frac{\prod_{n=1}^M (s-z_n)}{\prod_{n=1}^N (s-p_n)} $$<p>waarbij de positie van deze nulpunten en polen de volgende is:</p>
-
-</div>
-</div>
-</div>
-</div></section></section><section data-state="kuleuven_slide"><section><h6>Polen van een derde orde Butterworth laagdoorlaatfilter met afsnijfrequentie 1 MHz.</h6><div class="jp-Cell jp-CodeCell jp-Notebook-cell  jp-mod-noInput ">
+</div></section></section><section data-state="kuleuven_slide"><section><h6>Polen derde orde Butterworth laagdoorlaatfilter(1 MHz)</h6><div class="jp-Cell jp-CodeCell jp-Notebook-cell  jp-mod-noInput ">
 
 <div class="jp-Cell-outputWrapper">
 <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
@@ -20292,21 +20019,7 @@ jp-needs-light-background
 
 </div>
 
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>We merken op dat de drie polen die bekomen werden perfect op een cirkel liggen met straal 2$\pi$ $10^6$.</p>
-<p>We kunnen deze transferfunktie nu verder uitwerken in een product van meerdere transferfucties waarbij we de complex toegevoegde polen samennemen.</p>
-$$ H(s) = H_1(s) H_2(s)= \frac{1}{(s-p_1)(s-p_3)}\frac{1}{(s-p_2)} $$$$  H_1(s)= \frac{1}{(s-p_1)(s-p_3)}$$<p></p>
-$$ H_2(s)= \frac{1}{(s-p_2)}$$<p></p>
-
-</div>
-</div>
-</div>
-</div></section></section><section data-state="kuleuven_slide"><section><h6>Opsplitsing van een derde orde Butterworth laagdoorlaatfilter met afsnijfrequentie 1 MHz in 2 transferfunkties H1 en H2.</h6><div class="jp-Cell jp-CodeCell jp-Notebook-cell  jp-mod-noInput ">
+</div></section></section><section data-state="kuleuven_slide"><section><h6>Opsplitsing derde orde Butterworth laagdoorlaatfilter</h6><div class="jp-Cell jp-CodeCell jp-Notebook-cell  jp-mod-noInput ">
 
 <div class="jp-Cell-outputWrapper">
 <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
@@ -20333,18 +20046,7 @@ jp-needs-light-background
 
 </div>
 
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>De onderstaande figuur bekijkt deze opsplitsing in detail rond de afsnijfrequentie. Hier merken we dat de overshoot in de 2de orde filter H1(s) voor een deel het sneller dalen van de eerste orde filter H2(s) compenseert</p>
-
-</div>
-</div>
-</div>
-</div></section></section><section data-state="kuleuven_slide"><section><h6>Detail rond de afsnijfrequentie van de opsplitsing van een derde orde Butterworth laagdoorlaatfilter met afsnijfrequentie 1 MHz in 2 transferfunkties H1 en H2.</h6><div class="jp-Cell jp-CodeCell jp-Notebook-cell  jp-mod-noInput ">
+</div></section></section><section data-state="kuleuven_slide"><section><h6>Detail rond de afsnijfrequentie</h6><div class="jp-Cell jp-CodeCell jp-Notebook-cell  jp-mod-noInput ">
 
 <div class="jp-Cell-outputWrapper">
 <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
@@ -20371,7 +20073,7 @@ jp-needs-light-background
 
 </div>
 
-</div></section></section><section data-state="kuleuven_slide"><section><h6>Opsplitsing van een derde orde Butterworth laagdoorlaatfilter in de bouwblokken H1 en H2.</h6><div class="jp-Cell jp-CodeCell jp-Notebook-cell  jp-mod-noInput ">
+</div></section></section><section data-state="kuleuven_slide"><section><h6>Opsplitsing in de bouwblokken H1 en H2</h6><div class="jp-Cell jp-CodeCell jp-Notebook-cell  jp-mod-noInput ">
 
 <div class="jp-Cell-outputWrapper">
 <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
@@ -20632,7 +20334,7 @@ z
 
 </div>
 
-</div></section></section><section data-state="kuleuven_slide"><section><h6>concrete implementatie van het tweede orde filter H1.</h6><div class="jp-Cell jp-CodeCell jp-Notebook-cell  jp-mod-noInput ">
+</div></section></section><section data-state="kuleuven_slide"><section><h6>implementatie tweede orde filter H1</h6><div class="jp-Cell jp-CodeCell jp-Notebook-cell  jp-mod-noInput ">
 
 <div class="jp-Cell-outputWrapper">
 <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
@@ -21217,18 +20919,7 @@ z
 
 </div>
 
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>De implementatie van H2 kan er in dit geval als het volgt  uitzien met R1= R2= 9.947 k$\Omega$ en C2 = 16pF</p>
-
-</div>
-</div>
-</div>
-</div></section></section><section data-state="kuleuven_slide"><section><h6>concrete implementatie van het eerste orde filter H2.</h6><div class="jp-Cell jp-CodeCell jp-Notebook-cell  jp-mod-noInput ">
+</div></section></section><section data-state="kuleuven_slide"><section><h6>implementatie eerste orde filter H2</h6><div class="jp-Cell jp-CodeCell jp-Notebook-cell  jp-mod-noInput ">
 
 <div class="jp-Cell-outputWrapper">
 <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
@@ -21847,31 +21538,7 @@ z
 
 </div>
 
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Een totale spice file van het gehele circuit ziet er dan als het volgt uit:</p>
-<p>:::{note}
-Dit is momenteel nog werk in progress. 
-:::</p>
-
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="Butterworth-laagdoorlaatfilter-van-de-5de-orde">Butterworth laagdoorlaatfilter van de 5de orde<a class="anchor-link" href="#Butterworth-laagdoorlaatfilter-van-de-5de-orde">&#182;</a></h3>
-</div>
-</div>
-</div>
-</div></section></section><section data-state="kuleuven_slide"><section><h6>Amplitude en fase van een vijfde orde Butterworth laagdoorlaatfilter met afsnijfrequentie 1 MHz.</h6><div class="jp-Cell jp-CodeCell jp-Notebook-cell  jp-mod-noInput ">
+</div></section></section><section data-state="kuleuven_slide"><section><h6>Amplitude en fase vijfde orde Butterworth laagdoorlaatfilter(1 MHz)</h6><div class="jp-Cell jp-CodeCell jp-Notebook-cell  jp-mod-noInput ">
 
 <div class="jp-Cell-outputWrapper">
 <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
@@ -21914,7 +21581,7 @@ jp-needs-light-background
 
 </div>
 
-</div></section></section><section data-state="kuleuven_slide"><section><h6>Polen van een vijfde orde Butterworth laagdoorlaatfilter met afsnijfrequentie 1 MHz.</h6><div class="jp-Cell jp-CodeCell jp-Notebook-cell  jp-mod-noInput ">
+</div></section></section><section data-state="kuleuven_slide"><section><h6>Polen vijfde orde Butterworth laagdoorlaatfilter (1 MHz)</h6><div class="jp-Cell jp-CodeCell jp-Notebook-cell  jp-mod-noInput ">
 
 <div class="jp-Cell-outputWrapper">
 <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
@@ -21955,7 +21622,7 @@ jp-needs-light-background
 
 </div>
 
-</div></section></section><section data-state="kuleuven_slide"><section><h6>Opsplitsing van een vijfde orde Butterworth laagdoorlaatfilter met afsnijfrequentie 1 MHz in 3 transferfunkties .</h6><div class="jp-Cell jp-CodeCell jp-Notebook-cell  jp-mod-noInput ">
+</div></section></section><section data-state="kuleuven_slide"><section><h6>Opsplitsing in 3 transferfunkties</h6><div class="jp-Cell jp-CodeCell jp-Notebook-cell  jp-mod-noInput ">
 
 <div class="jp-Cell-outputWrapper">
 <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
@@ -21982,7 +21649,7 @@ jp-needs-light-background
 
 </div>
 
-</div></section></section><section data-state="kuleuven_slide"><section><h6>Hardware implementatie van een vijfde orde Butterworth laagdoorlaatfilter in 3 building blocks.</h6><div class="jp-Cell jp-CodeCell jp-Notebook-cell  jp-mod-noInput ">
+</div></section></section><section data-state="kuleuven_slide"><section><h6>Hardware implementatie in 3 building blocks</h6><div class="jp-Cell jp-CodeCell jp-Notebook-cell  jp-mod-noInput ">
 
 <div class="jp-Cell-outputWrapper">
 <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
@@ -22313,17 +21980,7 @@ z
 
 </div>
 
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="Vergelijking-van-de-3de-en-5de-orde-Butterworth-laagdoorlaatfilter">Vergelijking van de 3de en 5de orde Butterworth laagdoorlaatfilter<a class="anchor-link" href="#Vergelijking-van-de-3de-en-5de-orde-Butterworth-laagdoorlaatfilter">&#182;</a></h3>
-</div>
-</div>
-</div>
-</div></section></section><section data-state="kuleuven_slide"><section><h6>Vergelijking van een derde en vijfde orde Butterworth laagdoorlaatfilter met afsnijfrequentie 1 MHz.</h6><div class="jp-Cell jp-CodeCell jp-Notebook-cell  jp-mod-noInput ">
+</div></section></section><section data-state="kuleuven_slide"><section><h6>Vergelijking derde en vijfde orde Butterworth laagdoorlaatfilter</h6><div class="jp-Cell jp-CodeCell jp-Notebook-cell  jp-mod-noInput ">
 
 <div class="jp-Cell-outputWrapper">
 <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
@@ -22350,18 +22007,7 @@ jp-needs-light-background
 
 </div>
 
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="zevende-orde-banddoorlaatfilter-van-10MHz--tot-50MHz">zevende orde banddoorlaatfilter van 10MHz  tot 50MHz<a class="anchor-link" href="#zevende-orde-banddoorlaatfilter-van-10MHz--tot-50MHz">&#182;</a></h3><p>In het eerste voorbeeld van een banddoorlaatfilter bekijken we een redelijk breedbandfilter: De bandbreedte(40 MHz) is in dit geval veel groter dan de laagste doorlaatfrequentie.</p>
-
-</div>
-</div>
-</div>
-</div></section></section><section data-state="kuleuven_slide"><section><h6>7de orde Butterworth banddoorlaatfilter.</h6><div class="jp-Cell jp-CodeCell jp-Notebook-cell  jp-mod-noInput ">
+</div></section></section><section data-state="kuleuven_slide"><section><h6>7de orde Butterworth banddoorlaatfilter</h6><div class="jp-Cell jp-CodeCell jp-Notebook-cell  jp-mod-noInput ">
 
 <div class="jp-Cell-outputWrapper">
 <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
@@ -22431,7 +22077,7 @@ jp-needs-light-background
 </div>
 </div>
 </div>
-</div></section></section><section data-state="kuleuven_slide"><section><h6>polen van een 7de orde Butterworth banddoorlaatfilter.</h6><div class="jp-Cell jp-CodeCell jp-Notebook-cell  jp-mod-noInput ">
+</div></section></section><section data-state="kuleuven_slide"><section><h6>polen van een 7de orde Butterworth banddoorlaatfilter</h6><div class="jp-Cell jp-CodeCell jp-Notebook-cell  jp-mod-noInput ">
 
 <div class="jp-Cell-outputWrapper">
 <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
@@ -22488,19 +22134,7 @@ jp-needs-light-background
 
 </div>
 
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Er is maar een enkele goede methode om van een laagdoorlaatfilter over te  gaan naar een banddoorlaatfilter en dat is via de transformatie die aangegeven is op slide 44. Deze staat ook in je formularium. Het is natuurlijk ook belangrijk een goed gevoel te hebben van waar je verwacht uit te komen. Als je een banddoorlaatfilter hebt met een kleine bandbreedte B in vergelijking met de centrale frequentie fo, gaat dat ook redelijk goed kloppen (zoals in slide 46. Maar als B dezelfde grootteorde krijgt als fo, dan worden de polen meer en meer getrokken in de richting van de 2 afzonderlijke filters na elkaar. Om dat toe te lichten heb ik in de Jupyter een voorbeeldje gegeven van een zevende orde banddoorlaatfilter van 10MHz tot 50MHz. De centrale frequentie is 30MHz maar de bandbreedte B is 40MHz, dus groter dan de centrale frequentie. We zien hier dat de pole niet langer liggen op de 2 halve cirkels waarop we ze verwachten maar dat ze meer en meer getrokken worden in de richting van 2 andere cirkels namelijk de hoogdoorlaat van 10 MHz en de laagdoorlaat van 50 MHz.</p>
-<p>Dit is wel een overdreven speciaal geval in de meeste gevallen is de bandbreedte B veel kleiner dan f, en dan lijkt het dat ze mooi op de kleine cirkel liggen. En dat is zeker goed als eerste benadering. Het is niet 100% exact. En dat is ook belangrijk als ingenieur om dat goed te weten.</p>
-
-</div>
-</div>
-</div>
-</div></section></section><section data-state="kuleuven_slide"><section><h6>Vergelijking tussen 7de orde Butterworth banddoorlaatfilter en een opeenvolging van laagdoorlaatfilter en een hoogdoorlaatfilter.</h6><div class="jp-Cell jp-CodeCell jp-Notebook-cell  jp-mod-noInput ">
+</div></section></section><section data-state="kuleuven_slide"><section><h6>Vergelijking banddoorlaatfilter en opeenvolging  laagdoorlaat- en hoogdoorlaatfilter</h6><div class="jp-Cell jp-CodeCell jp-Notebook-cell  jp-mod-noInput ">
 
 <div class="jp-Cell-outputWrapper">
 <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
@@ -22527,17 +22161,7 @@ jp-needs-light-background
 
 </div>
 
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="7de-orde-banddoorlaatfilter-tussen-47-en-53-MHz">7de orde banddoorlaatfilter tussen 47 en 53 MHz<a class="anchor-link" href="#7de-orde-banddoorlaatfilter-tussen-47-en-53-MHz">&#182;</a></h3>
-</div>
-</div>
-</div>
-</div></section></section><section data-state="kuleuven_slide"><section><h6>Transfer functie van een 7de orde Butterworth banddoorlaatfilter met beperkte bandbreedte.</h6><div class="jp-Cell jp-CodeCell jp-Notebook-cell  jp-mod-noInput ">
+</div></section></section><section data-state="kuleuven_slide"><section><h6>Transferfunctie 7de orde Butterworth banddoorlaatfilter</h6><div class="jp-Cell jp-CodeCell jp-Notebook-cell  jp-mod-noInput ">
 
 <div class="jp-Cell-outputWrapper">
 <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
@@ -22596,18 +22220,7 @@ jp-needs-light-background
 
 </div>
 
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Wanneer we de polen en de nullen plotten, bekomen we het volgende resultaat.</p>
-
-</div>
-</div>
-</div>
-</div></section></section><section data-state="kuleuven_slide"><section><h6>Polen van een 7de orde Butterworth banddoorlaatfilter met beperkte bandbreedte.</h6><div class="jp-Cell jp-CodeCell jp-Notebook-cell  jp-mod-noInput ">
+</div></section></section><section data-state="kuleuven_slide"><section><h6>Polen van een 7de orde Butterworth banddoorlaatfilter</h6><div class="jp-Cell jp-CodeCell jp-Notebook-cell  jp-mod-noInput ">
 
 <div class="jp-Cell-outputWrapper">
 <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
@@ -22664,18 +22277,7 @@ jp-needs-light-background
 
 </div>
 
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>We merken op dat voor de heel nauwe banddoorlaat filters de polen wel op een cirkel liggen waarvan de straal overeenkomt met de bandbreedte van de filter. Het is ook zo dat het verschil tussen deze banddoorlaatfilter en een laagdoorlaatfilter gevolgd door een hoogdoorlaatfilter nu wel enorm groot is. Dat zien we al op basis van de polen hierboven en ook op basis van de transferkarakteristieken hieronder.</p>
-
-</div>
-</div>
-</div>
-</div></section></section><section data-state="kuleuven_slide"><section><h6>Vergelijking tussen 7de orde Butterworth banddoorlaatfilter (met beperkte bandbreedte) en een opeenvolging van laagdoorlaatfilter en een hoogdoorlaatfilter.</h6><div class="jp-Cell jp-CodeCell jp-Notebook-cell  jp-mod-noInput ">
+</div></section></section><section data-state="kuleuven_slide"><section><h6>Vergelijking 7de orde banddoorlaatfilter en opeenvolging laagdoorlaat- en hoogdoorlaatfilter</h6><div class="jp-Cell jp-CodeCell jp-Notebook-cell  jp-mod-noInput ">
 
 <div class="jp-Cell-outputWrapper">
 <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
@@ -22702,17 +22304,7 @@ jp-needs-light-background
 
 </div>
 
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Chebyshev-filters">Chebyshev filters<a class="anchor-link" href="#Chebyshev-filters">&#182;</a></h2><h3 id="Chebyshev-40-MHz-laagdoorlaatfilter-van-de-3de-orde-met-6dB-maximale-ripple">Chebyshev 40 MHz laagdoorlaatfilter van de 3de orde met 6dB maximale ripple<a class="anchor-link" href="#Chebyshev-40-MHz-laagdoorlaatfilter-van-de-3de-orde-met-6dB-maximale-ripple">&#182;</a></h3>
-</div>
-</div>
-</div>
-</div></section></section><section data-state="kuleuven_slide"><section><h6>40 MHz Chebyshev laagdoorlaatfilter van de derde orde met een 6dB passband.</h6><div class="jp-Cell jp-CodeCell jp-Notebook-cell  jp-mod-noInput ">
+</div></section></section><section data-state="kuleuven_slide"><section><h6>40 MHz Chebyshev laagdoorlaatfilter</h6><div class="jp-Cell jp-CodeCell jp-Notebook-cell  jp-mod-noInput ">
 
 <div class="jp-Cell-outputWrapper">
 <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
@@ -22753,18 +22345,7 @@ jp-needs-light-background
 
 </div>
 
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Aangezien de doorlaatband 6 dB is, is het interessant hierop eens in detail in te zoemen. Dit doen we aan de hand van de onderstaande figuur.</p>
-
-</div>
-</div>
-</div>
-</div></section></section><section data-state="kuleuven_slide"><section><h6>detail van de 6dB passband van een 40 MHz Chebyshev laagdoorlaatfilter van de derde orde.</h6><div class="jp-Cell jp-CodeCell jp-Notebook-cell  jp-mod-noInput ">
+</div></section></section><section data-state="kuleuven_slide"><section><h6>detail van de 6dB passband</h6><div class="jp-Cell jp-CodeCell jp-Notebook-cell  jp-mod-noInput ">
 
 <div class="jp-Cell-outputWrapper">
 <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
@@ -22791,18 +22372,7 @@ jp-needs-light-background
 
 </div>
 
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Bij een Chebyshev filter liggen de polen niet meer op een cirkel maar wel op een ellips. De onderstaande figuur geeft de ligging van deze polen aan.</p>
-
-</div>
-</div>
-</div>
-</div></section></section><section data-state="kuleuven_slide"><section><h6>ligging van de polen 40 MHz Chebyshev laagdoorlaatfilter van de derde orde met een 6dB passband.</h6><div class="jp-Cell jp-CodeCell jp-Notebook-cell  jp-mod-noInput ">
+</div></section></section><section data-state="kuleuven_slide"><section><h6>polen derde orde 40 MHz Chebyshev laagdoorlaatfilter</h6><div class="jp-Cell jp-CodeCell jp-Notebook-cell  jp-mod-noInput ">
 
 <div class="jp-Cell-outputWrapper">
 <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
@@ -22841,17 +22411,7 @@ jp-needs-light-background
 
 </div>
 
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="Chebyshev-120-MHz-laagdoorlaatfilter-van-de-8de-orde-met-2dB-maximale-ripple">Chebyshev 120 MHz laagdoorlaatfilter van de 8de orde met 2dB maximale ripple<a class="anchor-link" href="#Chebyshev-120-MHz-laagdoorlaatfilter-van-de-8de-orde-met-2dB-maximale-ripple">&#182;</a></h3>
-</div>
-</div>
-</div>
-</div></section></section><section data-state="kuleuven_slide"><section><h6>120 MHz Chebyshev laagdoorlaatfilter van de 8ste orde met een 2dB passband.</h6><div class="jp-Cell jp-CodeCell jp-Notebook-cell  jp-mod-noInput ">
+</div></section></section><section data-state="kuleuven_slide"><section><h6>120 MHz 8ste orde Chebyshev laagdoorlaatfilter</h6><div class="jp-Cell jp-CodeCell jp-Notebook-cell  jp-mod-noInput ">
 
 <div class="jp-Cell-outputWrapper">
 <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
@@ -22897,18 +22457,7 @@ jp-needs-light-background
 
 </div>
 
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Ook voor de 8ste orde gaan we inzoemen op de doorlaatband. Hier vinden we dan ook een rimpel van 2 dB met 8 extremen terug.</p>
-
-</div>
-</div>
-</div>
-</div></section></section><section data-state="kuleuven_slide"><section><h6>detail van de 2dB passband van de 120 MHz Chebyshev laagdoorlaatfilter van de 8ste orde.</h6><div class="jp-Cell jp-CodeCell jp-Notebook-cell  jp-mod-noInput ">
+</div></section></section><section data-state="kuleuven_slide"><section><h6>detail van de 2dB passband</h6><div class="jp-Cell jp-CodeCell jp-Notebook-cell  jp-mod-noInput ">
 
 <div class="jp-Cell-outputWrapper">
 <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
@@ -22935,7 +22484,7 @@ jp-needs-light-background
 
 </div>
 
-</div></section></section><section data-state="kuleuven_slide"><section><h6>ligging van de polen 120 MHz Chebyshev laagdoorlaatfilter van de 8ste orde met een 2dB passband.</h6><div class="jp-Cell jp-CodeCell jp-Notebook-cell  jp-mod-noInput ">
+</div></section></section><section data-state="kuleuven_slide"><section><h6>polen 120 MHz Chebyshev laagdoorlaatfilter</h6><div class="jp-Cell jp-CodeCell jp-Notebook-cell  jp-mod-noInput ">
 
 <div class="jp-Cell-outputWrapper">
 <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
@@ -22979,18 +22528,7 @@ jp-needs-light-background
 
 </div>
 
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Wanneer we de Butterworth met Chebychev vergelijken merken we dat hoe meer passband we toelaten, hoe stijler flank is aan het einde van de doorlaatband. Dit is dan ook het belangrijke ontwerpcompromis.</p>
-
-</div>
-</div>
-</div>
-</div></section></section><section data-state="kuleuven_slide"><section><h6>vergelijking Butterworth en Chebyshev laagdoorlaatfilters van de 8ste orde.</h6><div class="jp-Cell jp-CodeCell jp-Notebook-cell  jp-mod-noInput ">
+</div></section></section><section data-state="kuleuven_slide"><section><h6>vergelijking Butterworth en Chebyshev laagdoorlaatfilters (8ste orde)</h6><div class="jp-Cell jp-CodeCell jp-Notebook-cell  jp-mod-noInput ">
 
 <div class="jp-Cell-outputWrapper">
 <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
@@ -23017,17 +22555,7 @@ jp-needs-light-background
 
 </div>
 
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="Chebyshev-30-MHz-laagdoorlaatfilter-van-de-2de-orde-met-6dB-maximale-ripple">Chebyshev 30 MHz laagdoorlaatfilter van de 2de orde met 6dB maximale ripple<a class="anchor-link" href="#Chebyshev-30-MHz-laagdoorlaatfilter-van-de-2de-orde-met-6dB-maximale-ripple">&#182;</a></h3>
-</div>
-</div>
-</div>
-</div></section></section><section data-state="kuleuven_slide"><section><h6>Transferfunctie van de Chebyshev 30 MHz laagdoorlaatfilter van de 2de orde.</h6><div class="jp-Cell jp-CodeCell jp-Notebook-cell  jp-mod-noInput ">
+</div></section></section><section data-state="kuleuven_slide"><section><h6>Transferfunctie Chebyshev 30 MHz laagdoorlaatfilter</h6><div class="jp-Cell jp-CodeCell jp-Notebook-cell  jp-mod-noInput ">
 
 <div class="jp-Cell-outputWrapper">
 <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
@@ -23067,7 +22595,7 @@ jp-needs-light-background
 
 </div>
 
-</div></section></section><section data-state="kuleuven_slide"><section><h6>Ligging van de polen van de Chebyshev 30 MHz laagdoorlaatfilter van de 2de orde.</h6><div class="jp-Cell jp-CodeCell jp-Notebook-cell  jp-mod-noInput ">
+</div></section></section><section data-state="kuleuven_slide"><section><h6>polen van de Chebyshev 30 MHz laagdoorlaatfilter</h6><div class="jp-Cell jp-CodeCell jp-Notebook-cell  jp-mod-noInput ">
 
 <div class="jp-Cell-outputWrapper">
 <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
@@ -23105,118 +22633,7 @@ jp-needs-light-background
 
 </div>
 
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>We kunnen deze 2de orde laagdoorlaatfilter ook maken met een Sallen en Key circuit als aangegeven in {numref}<code>Sallen_en_Key</code>. we merken op dat de frequentie waarop dit circuit gaat afsnijden een stuk lager is dan de frequentie van het overeenkomende Butterworth circuit. De juiste afsnijfrequentie kunnen we uitrekenen op basis van de  polen en deze is:</p>
-
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell  jp-mod-noInput ">
-
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-
-
-<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>25241889.828472663</pre>
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Dit is dus afgerond iets in de buurt van 25 MHz. Van de andere kant gaat de hoek dat de polen maken met de x-as een stuk groter gaan zijn dan de 45 graden bij Butterworth. Ook dit kunnen we uitrekenen op basis van de polen en we komen hiervoor de volgende waarde uit:</p>
-
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell  jp-mod-noInput ">
-
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-
-
-<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>67.46598822997034</pre>
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Als een gevolg van deze hoek van 67 graden, zullen we als ratio tussen de 2 weerstanden $R_1$ en $R_2$ van het Sallen en Key circuit uit {numref}<code>Sallen_en_Key</code> een k-factor hebben die gelijk is aan:</p>
-
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell  jp-mod-noInput  celltag_hide-output">
-
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-
-
-<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>1.23353640830558</pre>
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Bessel-Thomson-filters">Bessel Thomson filters<a class="anchor-link" href="#Bessel-Thomson-filters">&#182;</a></h2><p>In dit vak zullen we de Bessel Thomson filters steeds met de computer uitrekenen. Hieronder vind je de berekening van de coeficienten van de transfer functie een 2de orde Bessel Thomson  hoogdoorlaatfilter met afsnijfrequentie op 1 kHz.</p>
-<p>In {numref}<code>BesselTomson-fig</code>  zie je dan vervolgens de plot van de transferkarakteristiek een 2de orde Bessel Thomson  hoogdoorlaatfilter</p>
-
-</div>
-</div>
-</div>
-</div></section></section><section data-state="kuleuven_slide"><section><h6>Transfer funktie van een Bessel Thomson  hoogdoorlaatfilter met afsnijfrequentie op 1 kHz.</h6><div class="jp-Cell jp-CodeCell jp-Notebook-cell  jp-mod-noInput ">
+</div></section></section><section data-state="kuleuven_slide"><section><h6>Transferfunktie van een Bessel Thomson  hoogdoorlaatfilter (1 kHz)</h6><div class="jp-Cell jp-CodeCell jp-Notebook-cell  jp-mod-noInput ">
 
 <div class="jp-Cell-outputWrapper">
 <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
@@ -23257,32 +22674,6 @@ jp-needs-light-background
 </div>
 
 </div>
-
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="Analyze-van-deze-co%C3%ABffici%C3%ABnten">Analyze van deze co&#235;ffici&#235;nten<a class="anchor-link" href="#Analyze-van-deze-co%C3%ABffici%C3%ABnten">&#182;</a></h3><p>$a_0 = 1$</p>
-<p>$a_1 = \frac{\omega_c}{Q}$   met $ Q = 0.57735$</p>
-<p>$a_2 = \omega_c^2$</p>
-
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Toleranties">Toleranties<a class="anchor-link" href="#Toleranties">&#182;</a></h2><p>Zoals het in <a href="https://ccrma.stanford.edu/~jatin/Bad-Circuit-Modelling/Tolerances.html">toleranties</a> aangegeven is, is het heel erg belangrijk rekening te houden met de toleranties van de componenten die we hebben.</p>
-
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs jp-mod-noInput ">
 
 </div></section></section><section data-state='kuleuven_structure_slide reveal'><section><div class="endquote">I would rather have questions that can't be answered<BR>than answers that can't be questioned.</div>
   <div class="quoteauthor">Richard Feynman</div></section></section></div>
