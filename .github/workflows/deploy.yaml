@@ -54,9 +54,9 @@ jobs:
           pip install -r .github/requirements-Lite.txt
       - name: Build the JupyterLite site
         run: |
-          jupyter lite build --ToegepasteAnalogeElektronica content --output-dir dist/ToegepasteAnalogeElektronica/
-          jupyter lite build --AnalogeElektronica2 content --output-dir dist/AnalogeElektronica2/
-          jupyter lite build --AnalogDesignTechniques content --output-dir dist/AnalogDesignTechniques/
+          jupyter lite build --contents ToegepasteAnalogeElektronica --output-dir dist/ToegepasteAnalogeElektronica/
+          jupyter lite build --contents AnalogeElektronica2 --output-dir dist/AnalogeElektronica2/
+          jupyter lite build --contents AnalogDesignTechniques --output-dir dist/AnalogDesignTechniques/
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:
