@@ -40,19 +40,18 @@ jobs:
   build-jupyter-lite:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v2
-      - name: Setup Python
-        uses: actions/setup-python@v2
-        with:
-          python-version: 3.9
-      - name: Install the dependencies
-        run: |
-          pip install -r .github/requirements-Lite.txt
-      - name: Build the JupyterLite site
-        run: |
-          jupyter lite build --contents ToegepasteAnalogeElektronica --output-dir dist/ToegepasteAnalogeElektronica/
-      
+    - name: Checkout
+      uses: actions/checkout@v2
+    - name: Setup Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.9
+    - name: Install the dependencies
+      run: |
+        pip install -r .github/requirements-Lite.txt
+    - name: Build the JupyterLite site
+      run: |
+        jupyter lite build --contents ToegepasteAnalogeElektronica --output-dir dist/ToegepasteAnalogeElektronica/
     - name: GitHub Pages action
       uses: peaceiris/actions-gh-pages@v3
       with:
