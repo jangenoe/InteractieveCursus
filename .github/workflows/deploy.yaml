@@ -11,19 +11,16 @@ jobs:
   build-and-deploy-book:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
-
-    # Install dependencies
+    - name: Checkout
+      uses: actions/checkout@v2
     - name: Set up Python 3.9
       uses: actions/setup-python@v1
       with:
         python-version: 3.9
     - name: Install dependencies
       run: |
-        pip install -r requirements.txt
-
-    # Build the book
-    - name: Build the website
+        pip install -r .github/requirements-Book.txt
+    - name: Build the Jupyterbook website
       run: |
         jb build CursusIndex/
         jb build ToegepasteAnalogeElektronica/
@@ -38,10 +35,46 @@ jobs:
         jupyter nbconvert AnalogDesignTechniques/*.ipynb --to KULeuven  --no-prompt --no-input --output-dir=AnalogDesignTechniques/_build/html/slides
         sed -i -- 's:<img src="./images:<img src="../_images:g' AnalogDesignTechniques/_build/html/slides/*
         mv AnalogDesignTechniques/_build/html/ CursusIndex/_build/html/AnalogDesignTechniques
-
-    # Deploy the book's HTML to gh-pages branch
     - name: GitHub Pages action
-      uses: peaceiris/actions-gh-pages@v3.6.1
+      uses: peaceiris/actions-gh-pages@v3
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_dir: CursusIndex/_build/html
+  build-jupyter-lite:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Setup Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.9
+      - name: Install the dependencies
+        run: |
+          pip install -r .github/requirements.txt
+      - name: Build the JupyterLite site
+        run: |
+          jupyter lite build --ToegepasteAnalogeElektronica content --output-dir dist/ToegepasteAnalogeElektronica/
+          jupyter lite build --AnalogeElektronica2 content --output-dir dist/AnalogeElektronica2/
+          jupyter lite build --AnalogDesignTechniques content --output-dir dist/AnalogDesignTechniques/
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v1
+        with:
+          path: ./dist
+
+  deploy:
+    needs: build-jupyter-lite
+    if: github.ref == 'refs/heads/master'
+    permissions:
+      pages: write
+      id-token: write
+
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v1
