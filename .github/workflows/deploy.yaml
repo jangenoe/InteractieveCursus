@@ -1,12 +1,8 @@
 name: deploy
-
 on:
-  # Trigger the workflow on push to main branch
   push:
     branches:
       - master
-
-# This job installs dependencies, build the book, and pushes it to `gh-pages`
 jobs:
   build-and-deploy-book:
     runs-on: ubuntu-latest
@@ -55,26 +51,34 @@ jobs:
       - name: Build the JupyterLite site
         run: |
           jupyter lite build --contents ToegepasteAnalogeElektronica --output-dir dist/ToegepasteAnalogeElektronica/
-          # jupyter lite build --contents AnalogeElektronica2 --output-dir dist/AnalogeElektronica2/
-          # jupyter lite build --contents AnalogDesignTechniques --output-dir dist/AnalogDesignTechniques/
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v1
-        with:
-          path: ./dist
+      # jupyter lite build --contents AnalogeElektronica2 --output-dir dist/AnalogeElektronica2/
+      # jupyter lite build --contents AnalogDesignTechniques --output-dir dist/AnalogDesignTechniques/
+      
+    - name: GitHub Pages action
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./dist
+        destination_dir: Lite
+        
+      #- name: Upload artifact
+      # uses: actions/upload-pages-artifact@v1
+      #  with:
+      #    path: ./dist
 
-  deploy:
-    needs: build-jupyter-lite
-    if: github.ref == 'refs/heads/master'
-    permissions:
-      pages: write
-      id-token: write
+  # deploy:
+    # needs: build-jupyter-lite
+    # if: github.ref == 'refs/heads/main'
+    # permissions:
+      # pages: write
+      # id-token: write
 
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+    # environment:
+      # name: github-pages
+      # url: ${{ steps.deployment.outputs.page_url }}
 
-    runs-on: ubuntu-latest
-    steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v1
+    # runs-on: ubuntu-latest
+    # steps:
+      # - name: Deploy to GitHub Pages
+        # id: deployment
+        # uses: actions/deploy-pages@v1
