@@ -1,0 +1,17 @@
+jupyterlab
+jupyterlite==0.1.0b13
+jupyterlab-myst
+jupyterlab-deck
+ipympl>=0.8.2
+ipywidgets>=8.0.0
+numpy
+scipy
+matplotlib-base
+pip
+matplotlib
+sympy
+scikit-rf
+networkx
+pyspice
+schemdraw
+jupytercards
