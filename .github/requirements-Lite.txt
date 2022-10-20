@@ -6,8 +6,6 @@ ipympl>=0.8.2
 ipywidgets>=8.0.0
 numpy
 scipy
-matplotlib-base
-pip
 matplotlib
 sympy
 scikit-rf
