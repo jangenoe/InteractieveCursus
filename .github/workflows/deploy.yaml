@@ -51,7 +51,7 @@ jobs:
           python-version: 3.9
       - name: Install the dependencies
         run: |
-          pip install -r .github/requirements-Lite.txt
+          pip install -r  .github/requirements-Lite.txt
       - name: Build the JupyterLite site
         run: |
           jupyter lite build --ToegepasteAnalogeElektronica content --output-dir dist/ToegepasteAnalogeElektronica/
