@@ -9,6 +9,7 @@ from PySpice.Spice.Netlist import Circuit
 from PySpice.Unit import *
 import schemdraw as schem
 import schemdraw.elements as e
+import skrf as rf
 from ipywidgets import interact,FloatSlider
 usewidgets=False;
 from IPython import display

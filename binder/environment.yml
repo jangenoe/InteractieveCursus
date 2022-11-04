@@ -1,5 +1,5 @@
 # Een mybinder.org-ready environment om de jupyter notebooks in dit github repository te demonstreren.
-# Deze environment is ook ideaal om ook thuis lokaal op Linux/MacOS/Windows deze jupyter noteboooks uit te proberen.
+# Deze environment is ook ideaal om ook thuis lokaal op Linux/MacOS/Windows deze jupyter notebooks uit te proberen.
 # Dit zou dan ook exact dezelfde simulatieresultaten moeten geven als online beschikbaar en gebruikt in de cursus.
 #
 #   conda env update --file ./binder/environment.yml
