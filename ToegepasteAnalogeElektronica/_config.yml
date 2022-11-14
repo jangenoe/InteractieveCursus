@@ -1,6 +1,7 @@
 title: Toegepaste Analoge Elektronica
 author: Jan Genoe (jan.genoe@kuleuven.be)
 logo: images/logo.svg
+description: Aanvulling bij de cursus ToegepasteAnalogeElektronica aan de KULeuven
 only_build_toc_files: true
 repository:
   url: https://github.com/jangenoe/InteractieveCursus

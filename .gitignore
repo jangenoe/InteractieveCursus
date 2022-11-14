@@ -1,10 +1,8 @@
 .ipynb_checkpoints/
 GitStatus.md
-.gitignore
-.log
-_Build
+*.log
+_build
 .DS_Store
-.ipynb_checkpoints
 .jupyter_cache
 jupyter_execute
 src/_build/.jupyter_cache

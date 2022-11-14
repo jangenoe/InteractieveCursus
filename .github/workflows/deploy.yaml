@@ -57,9 +57,16 @@ jobs:
     - name: Install the dependencies
       run: |
         pip install -r .github/requirements-Lite.txt
+    - name: Copy common files
+      run: |
+        cp common/cursusdef_ToegepasteAnalogeElektronica_Lite.py ToegepasteAnalogeElektronica/cursusdef.py
+        cp common/cursusdef_ToegepasteAnalogeElektronica_Lite.py AnalogeElektronica2/cursusdef.py
+        cp common/cursusdef_ToegepasteAnalogeElektronica_Lite.py AnalogDesignTechniques/cursusdef.py
     - name: Build the JupyterLite site
       run: |
-        jupyter lite build --contents ToegepasteAnalogeElektronica --output-dir dist/ToegepasteAnalogeElektronica/
+        jupyter lite build --lite-dir Lite --contents ToegepasteAnalogeElektronica --output-dir dist/ToegepasteAnalogeElektronica/
+        jupyter lite build --lite-dir Lite --contents AnalogeElektronica2 --output-dir dist/AnalogeElektronica2/
+        jupyter lite build --lite-dir Lite --contents AnalogDesignTechniques --output-dir dist/AnalogDesignTechniques/
     - name: GitHub Pages action
       uses: peaceiris/actions-gh-pages@v3
       with:
