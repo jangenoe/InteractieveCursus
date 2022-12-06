@@ -8,9 +8,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout
-      uses: actions/checkout@v2
+      uses: actions/checkout@v3
     - name: Set up Python 3.9
-      uses: actions/setup-python@v1
+      uses: actions/setup-python@v4
       with:
         python-version: 3.9
     - name: Install dependencies
@@ -21,23 +21,17 @@ jobs:
       run: |
         jb build CursusIndex/
         jb build ToegepasteAnalogeElektronica/
-        jb build ToegepasteAnalogeElektronica/ --builder pdflatex
         jupyter nbconvert ToegepasteAnalogeElektronica/*.ipynb --to KULeuven  --no-prompt --no-input --output-dir=ToegepasteAnalogeElektronica/_build/html/slides
         sed -i -- 's:<img src="./images:<img src="../_images:g' ToegepasteAnalogeElektronica/_build/html/slides/*
         mv ToegepasteAnalogeElektronica/_build/html/ CursusIndex/_build/html/ToegepasteAnalogeElektronica
-        mv ToegepasteAnalogeElektronica/_build/latex/python.pdf CursusIndex/_build/html/ToegepasteAnalogeElektronica/ToegepasteAnalogeElektronica.pdf
         jb build AnalogeElektronica2/
-        jb build AnalogeElektronica2/ --builder pdflatex
         jupyter nbconvert AnalogeElektronica2/*.ipynb --to KULeuven  --no-prompt --no-input --output-dir=AnalogeElektronica2/_build/html/slides
         sed -i -- 's:<img src="./images:<img src="../_images:g' AnalogeElektronica2/_build/html/slides/*
         mv AnalogeElektronica2/_build/html/ CursusIndex/_build/html/AnalogeElektronica2/
-        mv AnalogeElektronica2/_build/latex/python.pdf CursusIndex/_build/html/AnalogeElektronica2/AnalogeElektronica2.pdf
         jb build AnalogDesignTechniques/ 
-        jb build AnalogDesignTechniques/ --builder pdflatex
         jupyter nbconvert AnalogDesignTechniques/*.ipynb --to KULeuven  --no-prompt --no-input --output-dir=AnalogDesignTechniques/_build/html/slides
         sed -i -- 's:<img src="./images:<img src="../_images:g' AnalogDesignTechniques/_build/html/slides/*
         mv AnalogDesignTechniques/_build/html/ CursusIndex/_build/html/AnalogDesignTechniques
-        mv AnalogDesignTechniques/_build/latex/python.pdf CursusIndex/_build/html/AnalogDesignTechniques/AnalogDesignTechniques.pdf
     - name: GitHub Pages action
       uses: peaceiris/actions-gh-pages@v3
       with:
@@ -49,9 +43,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout
-      uses: actions/checkout@v2
+      uses: actions/checkout@v3
     - name: Setup Python
-      uses: actions/setup-python@v2
+      uses: actions/setup-python@v4
       with:
         python-version: 3.9
     - name: Install the dependencies
