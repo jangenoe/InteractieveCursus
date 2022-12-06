@@ -1,5 +1,6 @@
 jinja2==3.0.3
 jupyter-KULeuven-slides
+git+https://github.com/executablebooks/sphinx-jupyterbook-latex#egg=sphinx-jupyterbook-latex
 git+https://github.com/jangenoe/jupyter-book#egg=jupyter-book
 ghp-import
 sphinx-exercise
