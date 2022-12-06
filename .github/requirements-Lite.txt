@@ -1,7 +1,8 @@
 jupyterlab
-jupyterlite==0.1.0b13
+jupyterlite
 jupyterlab-myst
 jupyterlab-deck
+jupyterlab-fonts
 ipympl>=0.8.2
 ipywidgets>=8.0.0
 numpy

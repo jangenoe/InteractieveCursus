@@ -1,4 +1,7 @@
 {
+  "@deathbeds/jupyterlab-deck:plugin": {
+    "active": true
+  },
   "@deathbeds/jupyterlab-fonts:fonts": {"styles": {
             ".MathJax_Display": {
               "body[data-jp-deck-mode='presenting'] &": {

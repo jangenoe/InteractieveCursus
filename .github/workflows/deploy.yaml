@@ -67,3 +67,14 @@ jobs:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_dir: ./dist
         destination_dir: Lite
+    - name: Build the JupyterLite deck site
+      run: |
+        jupyter lite build --lite-dir LiteDeck --contents ToegepasteAnalogeElektronica --output-dir distdeck/ToegepasteAnalogeElektronica/
+        jupyter lite build --lite-dir LiteDeck --contents AnalogeElektronica2 --output-dir distdeck/AnalogeElektronica2/
+        jupyter lite build --lite-dir LiteDeck --contents AnalogDesignTechniques --output-dir distdeck/AnalogDesignTechniques/
+    - name: GitHub Pages action
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./distdeck
+        destination_dir: Deck

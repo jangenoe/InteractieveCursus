@@ -1,6 +1,6 @@
 import piplite
-await piplite.install("PySpice")
-await piplite.install("schemdraw")
+piplite.install("PySpice")
+piplite.install("schemdraw")
 import matplotlib.pyplot as plt
 import matplotlib.ticker as ticker
 from  matplotlib import patches
