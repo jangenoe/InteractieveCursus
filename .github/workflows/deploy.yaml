@@ -67,6 +67,9 @@ jobs:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_dir: ./dist
         destination_dir: Lite
+    - name: convert to deck
+      run: python common/convert-to-deck.py
+      shell: sh
     - name: Build the JupyterLite deck site
       run: |
         jupyter lite build --lite-dir LiteDeck --contents ToegepasteAnalogeElektronica --output-dir distdeck/ToegepasteAnalogeElektronica/
