@@ -1,0 +1,27 @@
+# This CITATION.cff file was generated with cffinit.
+# Visit https://bit.ly/cffinit to generate yours today!
+
+cff-version: 1.2.0
+title: Interactieve cursus
+message: >-
+  If you use this software, please cite it using the
+  metadata from this file.
+type: software
+authors:
+  - given-names: Jan
+    family-names: Genoe
+    email: jan.genoe@kuleuven.be
+    affiliation: KULeuven and imec
+    orcid: 'https://orcid.org/0000-0002-4019-5979'
+repository-code: >-
+  https://github.com/jangenoe/InteractieveCursus
+url: >-
+  https://jangenoe.github.io/InteractieveCursus/intro.html
+keywords:
+  - Class A amplifiers
+  - Class B amplifiers
+  - Class C amplifiers
+  - Class D amplifiers
+  - Class E amplifiers
+  - Smith chart
+license: MIT
