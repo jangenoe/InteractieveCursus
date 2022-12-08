@@ -88,5 +88,5 @@ for ipath in notebooks:
         "tags": ["remove_cell","remove_cell4reveal"]
     }
     ntbk.cells.insert(preslides+2, u)
-    
+    # voor alle code cellen: als niet gesloten --> sluiten
     nbf.write(ntbk, ipath)
