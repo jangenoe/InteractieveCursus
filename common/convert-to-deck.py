@@ -89,4 +89,9 @@ for ipath in notebooks:
     }
     ntbk.cells.insert(preslides+2, u)
     # voor alle code cellen: als niet gesloten --> sluiten
+    
+    for index,cell in enumerate(ntbk.cells):
+        if "code" in cell.get('cell_type', {}):
+            cell.metadata|={"jupyter": {"source_hidden": true}}
+
     nbf.write(ntbk, ipath)
