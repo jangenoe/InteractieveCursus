@@ -390,21 +390,22 @@ title="Print to PDF"
   <section class="tex2jax_ignore mathjax_ignore" id="folded-cascode-stage">
 <h1>Folded cascode stage<a class="headerlink" href="#folded-cascode-stage" title="Permalink to this headline">#</a></h1>
 <p><a href="./slides/FoldedCascode.slides.html" target="_blank"><img alt="slides" src="_images/slides-beschikbaar-blue.svg" /></a>
-<a href="../Lite/ToegepasteAnalogeElektronica/lab?path=FoldedCascode.ipynb" target="_blank"><img alt="slides" src="_images/open_in-JupyterLite-blue.svg" /></a>
-<a href="../Deck/ToegepasteAnalogeElektronica/lab?path=FoldedCascode.ipynb" target="_blank"><img alt="slides" src="_images/JupyterDeck-slides-blue.svg" /></a></p>
+<a href="../Lite/AnalogDesignTechniques/lab?path=FoldedCascode.ipynb" target="_blank"><img alt="slides" src="_images/open_in-JupyterLite-blue.svg" /></a>
+<a href="../Deck/AnalogDesignTechniques/lab?path=FoldedCascode.ipynb" target="_blank"><img alt="slides" src="_images/JupyterDeck-slides-blue.svg" /></a></p>
 <div class="cell tag_hide-input docutils container">
 </div>
-<div class="cell tag_hide-input docutils container">
+<p>####### Theoretical folded cascode configuration</p>
+<div class="cell docutils container">
 <div class="cell_output docutils container">
-<img alt="_images/f3d6a0376d0ec044a6d14f426086ec7f02418ecf0f4ee3b59ea4d18b2de9e3f8.svg" src="_images/f3d6a0376d0ec044a6d14f426086ec7f02418ecf0f4ee3b59ea4d18b2de9e3f8.svg" /></div>
-</div>
 <figure class="align-default" id="afig1">
-<img alt="_images/mpl.svg" src="_images/mpl.svg" /><figcaption>
+<img alt="_images/f3d6a0376d0ec044a6d14f426086ec7f02418ecf0f4ee3b59ea4d18b2de9e3f8.svg" src="_images/f3d6a0376d0ec044a6d14f426086ec7f02418ecf0f4ee3b59ea4d18b2de9e3f8.svg" /><figcaption>
 <p><span class="caption-number">Fig. 9 </span><span class="caption-text">Theoretical folded cascode configuration</span><a class="headerlink" href="#afig1" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
+</div>
+</div>
 <p>In <a class="reference internal" href="#afig1"><span class="std std-numref">Fig. 9</span></a> we also add a cascode transistor (in red) between the input transistor and the output node. This corresponds as a consequence to a classical cascode stage. However, there is one major difference: the cascode transistor is of the opposite polarity when compared to the input transistors. In <a class="reference internal" href="#afig1"><span class="std std-numref">Fig. 9</span></a> the input transistor is a pMOS tranistor and the cascode transistor is an nMOS transitor. Obviously, this also alters the current flow, and in order to maintain the current flow between power (<span class="math notranslate nohighlight">\(V_{dd}\)</span>) and ground, an addition current source (<span class="math notranslate nohighlight">\(I_b\)</span>) needs to be added.</p>
-<p>For the practical implementation of this folded cascode, we replace the current source (<span class="math notranslate nohighlight">\(I_b\)</span>) with the transistor <span class="math notranslate nohighlight">\(T_3\)</span>, as can be seen in <a class="reference internal" href="#afig2"><span class="std std-numref">Fig. 10</span></a>.</p>
+<p>For the practical implementation of this folded cascode, we replace the current source (<span class="math notranslate nohighlight">\(I_b\)</span>) with the transistor <span class="math notranslate nohighlight">\(T_3\)</span>, as can be seen in <code class="xref std std-numref docutils literal notranslate"><span class="pre">Afig2</span></code>.</p>
 <p>The amplication of this simple folded cascode amplifier stage is defined by:</p>
 <ul class="simple">
 <li><p>the <span class="math notranslate nohighlight">\(g_m\)</span> of the input transitor <span class="math notranslate nohighlight">\(T_1\)</span></p></li>
@@ -414,23 +415,28 @@ title="Print to PDF"
 </ul>
 <div class="math notranslate nohighlight">
 \[ A=\frac{g_{m1}}{g_L+g_{casc}+j \omega C_L}  \]</div>
-<div class="cell tag_hide-input docutils container">
+<div class="cell docutils container">
 <div class="cell_output docutils container">
-<img alt="_images/fabfc77aefcfcf5923f1898566ce1a9e896cd4ef8ae412325f4ab985bd47d76d.svg" src="_images/fabfc77aefcfcf5923f1898566ce1a9e896cd4ef8ae412325f4ab985bd47d76d.svg" /></div>
-</div>
 <figure class="align-default" id="afig2">
-<img alt="_images/mpl.svg" src="_images/mpl.svg" /><figcaption>
-<p><span class="caption-number">Fig. 10 </span><span class="caption-text">Practical folded cascode amplifier stage configuration</span><a class="headerlink" href="#afig2" title="Permalink to this image">#</a></p>
+<img alt="_images/fabfc77aefcfcf5923f1898566ce1a9e896cd4ef8ae412325f4ab985bd47d76d.svg" src="_images/fabfc77aefcfcf5923f1898566ce1a9e896cd4ef8ae412325f4ab985bd47d76d.svg" /><figcaption>
+<p><span class="caption-number">Fig. 10 </span><span class="caption-text">Theoretical folded cascode configuration</span><a class="headerlink" href="#afig2" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
-<p>The important next step is obviously the determination fo <span class="math notranslate nohighlight">\(g_{casc}\)</span>. We use <a class="reference internal" href="#afig3"><span class="std std-numref">Fig. 11</span></a> for elaborating this output impedance.</p>
+</div>
+</div>
+<figure class="align-default" id="id1">
+<img alt="_images/mpl.svg" src="_images/mpl.svg" /><figcaption>
+<p><span class="caption-number">Fig. 11 </span><span class="caption-text">Practical folded cascode amplifier stage configuration</span><a class="headerlink" href="#id1" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>The important next step is obviously the determination fo <span class="math notranslate nohighlight">\(g_{casc}\)</span>. We use <a class="reference internal" href="#afig3"><span class="std std-numref">Fig. 12</span></a> for elaborating this output impedance.</p>
 <div class="cell tag_hide-input docutils container">
 <div class="cell_output docutils container">
 <img alt="_images/388c2dccde9828c97b7ed6c444a6623cd902256910a4b60b30834f31646e402e.svg" src="_images/388c2dccde9828c97b7ed6c444a6623cd902256910a4b60b30834f31646e402e.svg" /></div>
 </div>
 <figure class="align-default" id="afig3">
 <img alt="_images/mpl.svg" src="_images/mpl.svg" /><figcaption>
-<p><span class="caption-number">Fig. 11 </span><span class="caption-text">Circuit block under consideration for measuring the folded cascode output impedance</span><a class="headerlink" href="#afig3" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 12 </span><span class="caption-text">Circuit block under consideration for measuring the folded cascode output impedance</span><a class="headerlink" href="#afig3" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 </section>
