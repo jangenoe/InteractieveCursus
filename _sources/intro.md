@@ -23,8 +23,8 @@ Aanvullingen bij het vak Toegepaste Analoge Elektronica van 3ABA Elektronica.
 Aanvullingen bij het vak Analoge Elektronica van 2ABA Elektronica.
 
 [![html](./images/volledig_boek-html-blue.svg)](https://jangenoe.github.io/InteractieveCursus/AnalogeElektronica2/intro.html)
-[![pdf](./images/volledig_boek-pdf-red.svg)]
-[![jupyter-lite](./images/JupyterLite-online_environment-blue.svg)]
+[![pdf](./images/volledig_boek-pdf-red.svg)](https://jangenoe.github.io/InteractieveCursus/AnalogeElektronica2/AnalogeElektronica2.pdf)
+[![jupyter-lite](./images/JupyterLite-online_environment-blue.svg)](https://jangenoe.github.io/InteractieveCursus/Lite/AnalogeElektronica2/lab/)
 [![github](./images/github-repository-blue.svg)](https://github.com/jangenoe/InteractieveCursus/tree/master/AnalogeElektronica2)
 
 
@@ -36,8 +36,8 @@ Aanvullingen bij het vak Analog Design Techniques van de master Elektronica.
 
 
 [![html](./images/volledig_boek-html-blue.svg)](https://jangenoe.github.io/InteractieveCursus/AnalogDesignTechniques/intro.html)
-[![pdf](./images/volledig_boek-pdf-red.svg)]
-[![jupyter-lite](./images/JupyterLite-online_environment-blue.svg)]
+[![pdf](./images/volledig_boek-pdf-red.svg)](https://jangenoe.github.io/InteractieveCursus/AnalogDesignTechniques/AnalogDesignTechniques.pdf)
+[![jupyter-lite](./images/JupyterLite-online_environment-blue.svg)](https://jangenoe.github.io/InteractieveCursus/Lite/AnalogDesignTechniques/lab/)
 [![github](./images/github-repository-blue.svg)](https://github.com/jangenoe/InteractieveCursus/tree/master/AnalogDesignTechniques)
 
 
