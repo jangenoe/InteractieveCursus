@@ -54,8 +54,8 @@ jobs:
     - name: Copy common files
       run: |
         cp common/cursusdef_ToegepasteAnalogeElektronica_Lite.py ToegepasteAnalogeElektronica/cursusdef.py
-        cp common/cursusdef_ToegepasteAnalogeElektronica_Lite.py AnalogeElektronica2/cursusdef.py
-        cp common/cursusdef_ToegepasteAnalogeElektronica_Lite.py AnalogDesignTechniques/cursusdef.py
+        cp common/cursusdef_AnalogeElektronica2_Lite.py AnalogeElektronica2/cursusdef.py
+        cp common/cursusdef_AnalogDesignTechniques_Lite.py AnalogDesignTechniques/cursusdef.py
     - name: Build the JupyterLite site
       run: |
         jupyter lite build --lite-dir Lite --contents ToegepasteAnalogeElektronica --output-dir dist/ToegepasteAnalogeElektronica/
