@@ -240,7 +240,7 @@ const thebe_selector_output = ".output, .cell_output"
              <!-- To handle the deprecated key -->
             
             <div class="navbar_extra_footer">
-            <a href="https://www.kuleuven.be"> <img src=" http://stijl.kuleuven.be/2016tmp/img/svg/logo.svg" alt="KULeuven"></a>
+            <a href="https://www.kuleuven.be"> <img src="./images/KULeuven.png" alt="KULeuven"></a>
             </div>
             
         </div>
@@ -1772,7 +1772,8 @@ a[ 0 ] = 39478417.60435742
 
 
 .flip-container.flip .flipper {
-	transform: rotateY(180deg)  translateX(-10%);
+	transform: rotateY(180deg);
+	/*transform: rotateY(180deg)  translateX(-10%); */
 }
 
 
@@ -1784,8 +1785,8 @@ a[ 0 ] = 39478417.60435742
 
 .flip-container.prepare .flipper.backcard {
     opacity:1;
-    transform:  translateX(20px); 
     transition: display 0s;
+    transform:  translateX(20px); 
 }
 
 
@@ -1815,9 +1816,12 @@ a[ 0 ] = 39478417.60435742
 
 
 .flip-container, .front, .back {
-	  height: 300px;
-	  width: 640px;
+	  height: 200px;
+	  width: 100%;
 }
+
+
+
 
 .flipper.frontcard {
     position:absolute;
@@ -1840,13 +1844,30 @@ a[ 0 ] = 39478417.60435742
 .flipper {
     cursor:pointer;
 	  height: 200px;
-    margin-left:20px;
+    margin-left:10px;
 	  position: absolute;
     top: 0;
 	  transform-style: preserve-3d;
 	  transition: 0.6s;
-    width: 600px;
+    width: 95%;
 }
+
+.flashcardtext{
+    color: var(--snow);
+    margin-left:3%;
+    position:absolute;
+    text-align:center;
+    top: 50%;
+    transform: translate(0, -50%);
+    width:90%;
+    font-size: 1.5em;
+}
+
+.back .flashcardtext{
+    font-size: 1.2em;
+}
+
+
 
 /* hide back of pane during swap */
 .front, .back {
@@ -1872,16 +1893,21 @@ a[ 0 ] = 39478417.60435742
 	  transform: rotateY(180deg);
 }
 
+.jp-OutputArea-output .back {
+	  transform: rotateY(180deg) translateX(7.5%);
+}
+
 .next {
     color: var(--rich-black-fogra-39);
     cursor:pointer;
-    font-size: 16pt;
-    left:442pt;
+    font-size: 1.5em;
+    /*left:90%; */
+    margin-left: 70%;
     width: 100pt;
     height: 22pt;
     opacity:0.3;
     position:relative; 
-    top:20px;
+    top:-1em;
 }
 
 .next svg {
@@ -1906,23 +1932,76 @@ a[ 0 ] = 39478417.60435742
 
 .flashcard{
     border-radius: 10px;
+    outline: none;
     color: #fafafa;
     display:block;
     padding:10px;
   
 }
-.flashcardtext{
-    color: var(--snow);
-    font-size: 20pt;
-    margin-left:3%;
-    position:absolute;
-    text-align:center;
-    top: 50%;
-    transform: translate(0, -50%);
-    width:90%;
-  }
 
-</style></div><div class="output text_html"><div style="height:40px"></div><div class="flip-container" id="FJtCUqYYAGLe" onclick="window.flipCard(this)"></div><div style="height:40px"></div><div class="next" id="FJtCUqYYAGLe-next" onclick="window.checkFlip('FJtCUqYYAGLe')"> </div> <div style="height:40px"></div></div><script type="application/javascript">/*!
+@media only screen and (min-width:1000px) {
+
+    .flip-container, .front, .back {
+	      height: 300px;
+	      width: 640px;
+    }
+
+    .flipper {
+        margin-left:20px;
+	      height: 300px;
+        width: 600px;
+    }
+
+    .flashcardtext{
+        font-size: 20pt;
+    }
+
+    .next {
+        font-size: 16pt;
+        left:438pt;
+        margin-left: 0;
+        width: 100pt;
+        height: 22pt;
+        top:-0.5em;
+    }
+
+    .back .flashcardtext{
+        font-size: 1.5em;
+    }
+
+}
+
+@media only screen and (min-width:660px) and (max-width:999px) {
+    .next {
+        left:0;
+        margin-left: 80%;
+    }
+
+}
+
+@media only screen and (max-width:680px) and (min-height:376px) {
+    .flip-container, .front, .back {
+	      height: 300px;
+    }
+
+    .flipper {
+	      height: 300px;
+    }
+
+}
+
+@media only screen and (max-width:330px) and (max-height:600px) {
+
+    .back .flashcardtext{
+        font-size: 1em;
+    }
+    .next {
+        margin-left: 65%;
+    }
+
+}
+
+</style></div><div class="output text_html"><div style="height:40px"></div><div class="flip-container" id="quSPRKglZGjk" tabindex="0" style="outline:none;"></div><div style="height:40px"></div><div class="next" id="quSPRKglZGjk-next" onclick="window.checkFlip('quSPRKglZGjk')"> </div> <div style="height:40px"></div></div><script type="application/javascript">/*!
  * swiped-events.js - v1.1.4
  * Pure JavaScript swipe events
  * https://github.com/john-doherty/swiped-events
@@ -1977,6 +2056,7 @@ window.flipCard = function flipCard(ths) {
     ths.classList.toggle("flip"); 
     var next=document.getElementById(ths.id+'-next');
     next.style.pointerEvents='none';
+    /* ths.blur(); */
     next.classList.add('flipped');
     if (typeof MathJax != 'undefined') {
         var version = MathJax.version;
@@ -1991,11 +2071,35 @@ window.flipCard = function flipCard(ths) {
     }
 
 
-    setTimeout(reenableNext, 700, next);
+    setTimeout(reenableNext, 600, ths, next);
 }
 
-function reenableNext(next) {
+window.checkKey = function checkKey(container, event) {
+    event.stopPropagation();
+    /*
+    console.log(container);
+    console.log(event.key);
+    console.log(event.code);
+    */
+    /* JMS:  Working here*/
+    var next=document.getElementById(container.id+'-next');
+    /* Only react if not already sliding */
+    if (! next.classList.contains("hide")) {
+        if ((event.key == "j") || (event.key == "Enter") || (event.key == "ArrowRight")) {
+            window.checkFlip(container.id);
+        }
+        if (event.key == " ") {
+            window.flipCard(container);
+        }
+    }
+    event.preventDefault();
+}
+
+
+function reenableNext(ths, next) {
     next.style.pointerEvents='auto';
+    /* ths.tabIndex= 0;*/
+    /* ths.focus(); */
 }
 
 
@@ -2006,6 +2110,8 @@ function slide2(containerId) {
     var frontcard = container.children[0];
     var backcard = container.children[1];
     container.style.pointerEvents='none';
+    /* container.removeAttribute("tabindex");*/
+    /* container.blur(); */
     //backcard.style.pointerEvents='none';
     next.style.pointerEvents='none';
     next.classList.remove('flipped');
@@ -2037,7 +2143,7 @@ window.checkFlip = function checkFlip(containerId) {
 
 function slideback(container, frontcard, backcard, next) {
     container.className="flip-container slideback";
-    setTimeout(cleanup, 600, container, frontcard, backcard, next);
+    setTimeout(cleanup, 550, container, frontcard, backcard, next);
 }
 
 function cleanup(container, frontcard, backcard, next) {
@@ -2086,6 +2192,8 @@ function cleanup(container, frontcard, backcard, next) {
 
     next.style.pointerEvents='auto';
     container.style.pointerEvents='auto';
+    /* container.tabIndex= 0; */
+    /* container.focus(); */
     next.classList.remove('hide');
     container.addEventListener('swiped-left', function(e) {
         /*
@@ -2145,10 +2253,24 @@ function createOneCard  (mydiv, frontCard, cards, cardnum) {
 
 
 
-function createCards(id) {
+function createCards(id, keyControl) {
     console.log(id);
     
     var mydiv=document.getElementById(id);
+    /*mydiv.onclick = window.flipCard(mydiv);*/
+    /*
+    mydiv.addEventListener('click', function(){window.flipCard(mydiv);}, false);
+    mydiv.addEventListener('keydown', function(event){window.checkKey(mydiv,event);}, true);
+    */
+    mydiv.onclick = function(){window.flipCard(mydiv);};
+    console.log(keyControl);
+    if (keyControl == "True"){
+        mydiv.onkeydown = function(event){window.checkKey(mydiv,event);};
+    }
+    /* mydiv.addEventListener('keydown', function(event){event.stopPropagation(); console.log(event); event.preventDefault();}, true); */
+    /*mydiv.onkeypress = function(event){console.log(event); event.preventDefault();};*/
+
+    console.log(mydiv);
     
     var cards=eval('cards'+id);
     mydiv.dataset.cardnum=0;
@@ -2212,6 +2334,8 @@ function createCards(id) {
         next.innerHTML="Next >";
     }
 
+    mydiv.focus();
+
     return flipper;
 }
 
@@ -2219,9 +2343,9 @@ function createCards(id) {
 
 
 
-var cardsFJtCUqYYAGLe=[{"front": "Butterworth filter", "back": "Een filter die maximaal vlak is rond de referentiefrequentie, i.e. 0 voor een laagdoorlaatfilter, oneindig voor een hoogdoorlaatfilter en de centrale frequentie voor een banddoorlaatfilter"}, {"front": "Bessel-Thomson filter", "back": "Een filter waarbij de fase-vertraging zo lineair mogelijk verloopt met de frequentie"}];
+var cardsquSPRKglZGjk=[{"front": "Butterworth filter", "back": "Een filter die maximaal vlak is rond de referentiefrequentie, i.e. 0 voor een laagdoorlaatfilter, oneindig voor een hoogdoorlaatfilter en de centrale frequentie voor een banddoorlaatfilter"}, {"front": "Bessel-Thomson filter", "back": "Een filter waarbij de fase-vertraging zo lineair mogelijk verloopt met de frequentie"}];
     
-        createCards("FJtCUqYYAGLe");
+        createCards("quSPRKglZGjk", "True");
         </script></div>
 </div>
 </section>
