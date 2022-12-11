@@ -37,7 +37,7 @@ for ipath in notebooks:
                 "height": "13.7%",
                 "left": "9.2%",
                 "position": "fixed",
-                "top": "1.1%",
+                "top": "-15%",
                 "width": "20.4%"
                }
               }
@@ -76,9 +76,9 @@ for ipath in notebooks:
              "styles": {
               "": {
                "body[data-jp-deck-mode='presenting'] &": {
-                "bottom": "1%",
+                "top": "60%",
                 "position": "fixed",
-                "right": "11%",
+                "left": "91%",
                 "width": "6%"
                }
               }
