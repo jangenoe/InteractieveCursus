@@ -3,8 +3,8 @@ from glob import glob
 
 # Collect a list of all notebooks in the content folder
 notebooks = glob("ToegepasteAnalogeElektronica/*.ipynb", recursive=True)
-notebooks+ = glob("AnalogeElektronica2/*.ipynb", recursive=True)
-notebooks+ = glob("AnalogDesignTechniques/*.ipynb", recursive=True)
+notebooks+= glob("AnalogeElektronica2/*.ipynb", recursive=True)
+notebooks+= glob("AnalogDesignTechniques/*.ipynb", recursive=True)
 
 for ipath in notebooks:
     print("file om te zetten: ",ipath)
