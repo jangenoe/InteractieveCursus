@@ -1,0 +1,39 @@
+title: Analog Design Techniques
+author: Jan Genoe (jan.genoe@kuleuven.be)
+logo: images/logo.svg
+only_build_toc_files: true
+repository:
+  url: https://github.com/jangenoe/InteractieveCursus
+  path_to_book: AnalogDesignTechniques 
+html:
+  favicon: images/favicon.ico
+  use_issues_button: true
+  use_edit_page_button: true
+  use_repository_button: true
+  extra_navbar    : <a href="https://www.kuleuven.be"><img src=" https://stijl.kuleuven.be/2016tmp/img/svg/logo.svg" alt="KULeuven"></a> 
+execute:
+  execute_notebooks: "off"
+launch_buttons:
+  notebook_interface: "jupyterlab"
+  binderhub_url: "https://mybinder.org"
+  colab_url: "https://colab.research.google.com"
+parse:
+  myst_enable_extensions:
+    # don't forget to list any other extensions you want enabled,
+    # including those that are enabled by default!
+    - amsmath
+    - colon_fence
+    # - deflist
+    - dollarmath
+    # - html_admonition
+    # - html_image
+    - linkify
+    # - replacements
+    # - smartquotes
+    - substitution
+    - tasklist
+sphinx:
+  config:
+    language: en
+    nb_remove_code_source: true
+    html_show_copyright: false
