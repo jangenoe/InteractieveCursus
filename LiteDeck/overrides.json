@@ -7,7 +7,25 @@
               "body[data-jp-deck-mode='presenting'] &": {
                   "font-size": "8vh"}
               },
-            "h6": {
+            "h1": {
+				"body[data-jp-deck-mode='presenting'] &": {
+					"color": "#fff",
+					"font-size": "11vh",
+					"font-weight": "bold",
+					"height": "20vh",
+					"letter-spacing": "normal",
+					"line-height": "1.0",
+					"margin": "0 0 0 0",
+					"max-height": "85vh",
+					"max-width": "95vw",
+					"object-fit": "contain",
+					"text-align": "left",
+					"text-shadow": "none",
+					"text-transform": "uppercase",
+					"top": "20vh",
+					"word-wrap": "break-word"}
+			  },
+			"h6": {
               "body[data-jp-deck-mode='presenting'] &": {
                   "color": "#1D8DB0",
                   "font-size": "4vh",
