@@ -9,8 +9,11 @@ notebooks+= glob("AnalogDesignTechniques/*.ipynb", recursive=True)
 for ipath in notebooks:
     print("file om te zetten: ",ipath)
     ntbk = nbf.read(ipath, nbf.NO_CONVERT)
+    if "slideshow" in ntbk.cells[0].get('metadata', {}):
+        ntbk.cells[0].metadata.pop('slideshow')
+    else:
+        print("no slideshow on slide 0")
     
-    ntbk.cells[0].metadata.pop('slideshow')
     ntbk.cells[0].metadata|={"@deathbeds/jupyterlab-fonts": {
              "styles": {
               "": {
