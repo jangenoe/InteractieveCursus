@@ -42,4 +42,18 @@ Aanvullingen bij het vak Analog Design Techniques van de master Elektronica.
 
 
 :::
+
+:::{grid-item-card}  Micro- en nano technologie
+[![logo](./images/MinatLogo.svg)](https://jangenoe.github.io/InteractieveCursus/MicroEnNanoTechnologie/intro.html)
+
+Aanvullingen bij het vak Micro- en nano technologie van 3ABA Elektronica.
+
+
+[![html](./images/volledig_boek-html-blue.svg)](https://jangenoe.github.io/InteractieveCursus/MicroEnNanoTechnologie/intro.html)
+[![pdf](./images/volledig_boek-pdf-red.svg)](https://jangenoe.github.io/InteractieveCursus/MicroEnNanoTechnologie/MicroEnNanoTechnologie.pdf)
+[![jupyter-lite](./images/JupyterLite-online_environment-blue.svg)](https://jangenoe.github.io/InteractieveCursus/Lite/MicroEnNanoTechnologie/lab/)
+[![github](./images/github-repository-blue.svg)](https://github.com/jangenoe/InteractieveCursus/tree/master/MicroEnNanoTechnologie)
+
+
+:::
 ::::
