@@ -13,6 +13,7 @@ import skrf as rf
 from ipywidgets import interact,FloatSlider
 usewidgets=False;
 from IPython import display
+
 def spicelisting(filename,firstline=0,lastline=10000):
     ff=""
     with open(filename) as f:
@@ -20,3 +21,4 @@ def spicelisting(filename,firstline=0,lastline=10000):
             if i>=firstline and i<lastline:
                 ff+=line.strip()+"\r"
     return display.Code(data=ff, language='spice')
+

@@ -1,7 +1,5 @@
 format: jb-book
 root: intro
-options:
-  numbered: true
 parts:
 - caption: Versterkers
   chapters:
@@ -23,3 +21,12 @@ parts:
     - file: oefeningBoost3
   - file: Inverter
   - file: Flyback-converter
+- caption: References
+  chapters:
+  - file: References
+- caption: Overzicht
+  chapters:
+  - url: https://jangenoe.github.io/InteractieveCursus/intro.html
+    title: Lijst cursussen
+  - url: https://www.kuleuven.be/wieiswie/en/person/00004269
+    title: Auteur Jan Genoe

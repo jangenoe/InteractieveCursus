@@ -38,6 +38,12 @@ jobs:
         sed -i -- 's:<img src="./images:<img src="../_images:g' AnalogDesignTechniques/_build/html/slides/*
         mv AnalogDesignTechniques/_build/html/ CursusIndex/_build/html/AnalogDesignTechniques
         # mv AnalogDesignTechniques/_build/latex/python.pdf CursusIndex/_build/html/AnalogDesignTechniques/AnalogDesignTechniques.pdf
+        jb build MicroEnNanoTechnologie/ 
+        # jb build MicroEnNanoTechnologie/ --builder pdflatex
+        # jupyter nbconvert MicroEnNanoTechnologie/*.ipynb --to KULeuven  --no-prompt --no-input --output-dir=MicroEnNanoTechnologie/_build/html/slides
+        # sed -i -- 's:<img src="./images:<img src="../_images:g' MicroEnNanoTechnologie/_build/html/slides/*
+        # mv MicroEnNanoTechnologie/_build/html/ CursusIndex/_build/html/MicroEnNanoTechnologie/
+        # mv MicroEnNanoTechnologie/_build/latex/python.pdf CursusIndex/_build/html/MicroEnNanoTechnologie/MicroEnNanoTechnologie.pdf
     - name: GitHub Pages action
       uses: peaceiris/actions-gh-pages@v3
       with:

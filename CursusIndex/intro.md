@@ -2,8 +2,7 @@
 
 **door [Jan Genoe](https://www.kuleuven.be/wieiswie/nl/person/00004269)**
 
-Deze notebooks bevatten materiaal en oefeningen, in het formaat van ![jupyterbook](https://jupyterbook.org/badge.svg)s, ontwikkeld als aanvullingen bij mijn vakken aan de [KU Leuven](https://www.kuleuven.be), campus Diepenbeek. Deze pagina geeft een overzicht van de vakken waarvan ik momenteel een aantal stukken van de cursus ter beschikking stel op Github.
-
+Deze notebooks bevatten materiaal en oefeningen, in het formaat van jupyterbooks, ontwikkeld als aanvullingen bij mijn vakken aan de [KU Leuven](https://www.kuleuven.be), campus Diepenbeek.
 
 ::::{grid} 2
 :::{grid-item-card}  Toegepaste Analoge Elektronica
@@ -44,7 +43,7 @@ Aanvullingen bij het vak Analog Design Techniques van de master Elektronica.
 :::
 
 :::{grid-item-card}  Micro- en nano technologie
-[![logo](./images/MinatLogo.svg)](https://jangenoe.github.io/InteractieveCursus/MicroEnNanoTechnologie/intro.html)
+[![logo](./images/logoMinat.png)](https://jangenoe.github.io/InteractieveCursus/MicroEnNanoTechnologie/intro.html)
 
 Aanvullingen bij het vak Micro- en nano technologie van 3ABA Elektronica.
 

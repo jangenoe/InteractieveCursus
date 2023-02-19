@@ -1,11 +1,12 @@
-title: Toegepaste Analoge Elektronica
+title: Micro- en nanotechnologie
 author: Jan Genoe (jan.genoe@kuleuven.be)
 logo: images/logo.svg
-description: Aanvulling bij de cursus ToegepasteAnalogeElektronica aan de KULeuven
+description: Aanvulling bij de cursus Micro- en nanotechnologie aan de KULeuven
 only_build_toc_files: true
 repository:
   url: https://github.com/jangenoe/InteractieveCursus
-  path_to_book: ToegepasteAnalogeElektronica 
+  path_to_book: MicroEnNanoTechnologie
+  branch: master
 html:
   favicon: images/favicon.ico
   use_issues_button: true
@@ -32,7 +33,7 @@ parse:
     - substitution
     - tasklist
 bibtex_bibfiles:
-  - ToegepasteAnalogeElektronica.bib
+  - MicroEnNanoTechnologie.bib
 sphinx:
   extra_extensions:
     - sphinx_exercise
@@ -48,6 +49,7 @@ sphinx:
     bibtex_reference_style: label
     bibtex_default_style : "unsrt"
     
-    ogp_site_url: "https://jangenoe.github.io/jangenoe/InteractieveCursus/ToegepasteAnalogeElektronica/intro.html"
-    ogp_image: "https://jangenoe.github.io/InteractieveCursus/ToegepasteAnalogeElektronica/_static/logo.svg"
+    ogp_site_url: "https://jangenoe.github.io/jangenoe/InteractieveCursus/MicroEnNanoTechnologie/intro.html"
+    ogp_image: "https://jangenoe.github.io/InteractieveCursus/MicroEnNanoTechnologie/_static/logo.svg"
     ogp_description_length: 200
+

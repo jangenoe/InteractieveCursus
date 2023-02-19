@@ -10,7 +10,7 @@ channels:
   - conda-forge
   - nodefaults
 dependencies:
-  - python=3.8
+  - python
   - numpy
   - scipy
   - matplotlib-base
@@ -24,3 +24,4 @@ dependencies:
     - pyspice
     - schemdraw
     - jupytercards
+    - wikitables
