@@ -1,43 +1,63 @@
 
+
 <!DOCTYPE html>
 
-<html lang="nl">
+
+<html lang="nl" >
+
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+<meta property="og:title" content="Klasse B versterkers" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://jangenoe.github.io/jangenoe/InteractieveCursus/AnalogeElektronica2/Klasse-B.html" />
+<meta property="og:site_name" content="Python" />
+<meta property="og:description" content="slides slides slides Indeling vermogenversterkers: In Tabel 2 hernemen we een overzicht van de verschillende versterkers die we bespreken in de leerlijn analoge elektronica. Indeling van de vermoge..." />
+<meta property="og:image" content="https://jangenoe.github.io/InteractieveCursus/AnalogeElektronica2/_static/logo.svg" />
+<meta property="og:image:alt" content="Python" />
+<meta name="description" content="slides slides slides Indeling vermogenversterkers: In Tabel 2 hernemen we een overzicht van de verschillende versterkers die we bespreken in de leerlijn analoge elektronica. Indeling van de vermoge..." />
 
     <title>Klasse B versterkers &#8212; Analoge elektronische schakelingen</title>
-    
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
   <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-<link href="_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  <link href="_static/styles/theme.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
 
-    
-  <link rel="stylesheet"
-    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+  
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=56348ffd8e7ce817f831f1f32f1f7f6638896a71" type="text/css" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/exercise.css" />
     <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
-    
+  
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=12da95d707ffb74b382d" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=12da95d707ffb74b382d" />
 
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="_static/doctools.js"></script>
     <script src="_static/clipboard.min.js"></script>
     <script src="_static/copybutton.js"></script>
-    <script src="_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
@@ -53,62 +73,140 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Klasse-B';</script>
     <link rel="shortcut icon" href="_static/favicon.ico"/>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Zoeken" href="search.html" />
     <link rel="next" title="Voorbeeld 1: Klasse B versterker" href="KlasseB_vb1.html" />
     <link rel="prev" title="Klasse A versterkers" href="Klasse-A.html" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="nl">
-    
-
-    <!-- Google Analytics -->
-    
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="nl"/>
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
-<!-- Checkboxes to toggle the left sidebar -->
-<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
-<label class="overlay overlay-navbar" for="__navigation">
-    <div class="visually-hidden">Toggle navigation sidebar</div>
-</label>
-<!-- Checkboxes to toggle the in-page toc -->
-<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
-<label class="overlay overlay-pagetoc" for="__page-toc">
-    <div class="visually-hidden">Toggle in-page Table of Contents</div>
-</label>
-<!-- Headers at the top -->
-<div class="announcement header-item noprint"></div>
-<div class="header header-item noprint"></div>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
 
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+<div class="bd-header__inner bd-page-width">
+  <label class="sidebar-toggle primary-toggle" for="__primary">
+    <span class="fa-solid fa-bars"></span>
+  </label>
+  
+  
+  <div class="col-lg-9 navbar-header-items">
     
-    <div class="container-fluid" id="banner"></div>
-
     
-
-    <div class="container-xl">
-      <div class="row">
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
           
-<!-- Sidebar -->
-<div class="bd-sidebar noprint" id="site-navigation">
-    <div class="bd-sidebar__content">
-        <div class="bd-sidebar__top"><div class="navbar-brand-box">
-    <a class="navbar-brand text-wrap" href="index.html">
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Zoeken" aria-label="Zoeken" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+        </div>
       
-        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Zoeken" aria-label="Zoeken" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+    </div>
+  
+
+  
+    <label class="sidebar-toggle secondary-toggle" for="__secondary">
+      <span class="fa-solid fa-outdent"></span>
+    </label>
+  
+</div>
+
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
         
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+    
+    
       
-      
-      <img src="_static/logo.svg" class="logo" alt="logo">
-      
-      
-      <h1 class="site-logo" id="site-title">Analoge elektronische schakelingen</h1>
-      
-    </a>
-</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
-  <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
-    <div class="bd-toc-item active">
+    
+    
+    <img src="_static/logo.svg" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="_static/logo.svg" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
@@ -117,457 +215,334 @@ const thebe_selector_output = ".output, .cell_output"
                 </a>
             </li>
         </ul>
-        <p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Versterkers
- </span>
-</p>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Versterkers</span></p>
 <ul class="current nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="Klasse-A.html">
-   Klasse A versterkers
-  </a>
- </li>
- <li class="toctree-l1 current active has-children">
-  <a class="current reference internal" href="#">
-   Klasse B versterkers
-  </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
-  <label for="toctree-checkbox-1">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="KlasseB_vb1.html">
-     Voorbeeld 1: Klasse B versterker
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="KlasseB_vb2.html">
-     Voorbeeld 2: Klasse B versterker
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="KlasseB_vb3.html">
-     Voorbeeld 3: Klasse B versterker
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="Klasse-B-vb4.html">
-     Uitgewerkt voorbeeld van een klasse AB met MOS transistors
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="Klasse-G.html">
-   Klasse G versterkers
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="Klasse-A.html">Klasse A versterkers</a></li>
+<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">Klasse B versterkers</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="KlasseB_vb1.html">Voorbeeld 1: Klasse B versterker</a></li>
+<li class="toctree-l2"><a class="reference internal" href="KlasseB_vb2.html">Voorbeeld 2: Klasse B versterker</a></li>
+<li class="toctree-l2"><a class="reference internal" href="KlasseB_vb3.html">Voorbeeld 3: Klasse B versterker</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Klasse-B-vb4.html">Uitgewerkt voorbeeld van een klasse AB met MOS transistors</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Voedingen
- </span>
-</p>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Klasse-G.html">Klasse G versterkers</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Voedingen</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="Buck-converter.html">
-   Buck Converter of step-down Convertor
-  </a>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="Boost-converter.html">
-   Boost Converter of Step-up Converter
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
-  <label for="toctree-checkbox-2">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="oefeningBoost1.html">
-     Oefening Boost convertor
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="oefeningBoost2.html">
-     Boost Converter oefening 2
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="oefeningBoost3.html">
-     Boost Converter oefening 3
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="Inverter.html">
-   Inverter of Buck-Boost Converter
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="Flyback-converter.html">
-   Flyback converter
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="Buck-converter.html">Buck Converter of step-down Convertor</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="Boost-converter.html">Boost Converter of Step-up Converter</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="oefeningBoost1.html">Oefening Boost convertor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="oefeningBoost2.html">Boost Converter oefening 2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="oefeningBoost3.html">Boost Converter oefening 3</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Inverter.html">Inverter of Buck-Boost Converter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Flyback-converter.html">Flyback converter</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">References</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="References.html">Referenties</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Overzicht</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference external" href="https://jangenoe.github.io/InteractieveCursus/intro.html">Lijst cursussen</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.kuleuven.be/wieiswie/en/person/00004269">Auteur Jan Genoe</a></li>
 </ul>
 
     </div>
 </nav></div>
-        <div class="bd-sidebar__bottom">
-             <!-- To handle the deprecated key -->
-            
-            <div class="navbar_extra_footer">
-            <a href="https://www.kuleuven.be"> <img src=" https://stijl.kuleuven.be/2016tmp/img/svg/logo.svg" alt="KULeuven"></a>
-            </div>
-            
-        </div>
     </div>
-    <div id="rtd-footer-container"></div>
-</div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
 
 
-          
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
 
-
-          
-<!-- A tiny helper pixel to detect if we've scrolled -->
 <div class="sbt-scroll-pixel-helper"></div>
-<!-- Main content -->
-<div class="col py-0 content-container">
-    
-    <div class="header-article row sticky-top noprint">
-        
 
-
-
-<div class="col py-1 d-flex header-article-main">
-    <div class="header-article__left">
-        
-        <label for="__navigation"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="right"
-title="Toggle navigation"
->
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
   
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-bars"></i>
-  </span>
-
-</label>
-
-        
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
     </div>
-    <div class="header-article__right">
-<div class="menu-dropdown menu-dropdown-launch-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Launch interactive content">
-      <i class="fas fa-rocket"></i>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
   </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="https://mybinder.org/v2/gh/jangenoe/InteractieveCursus/master?urlpath=lab/tree/AnalogeElektronica2/Klasse-B.ipynb"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Launch on Binder"
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://mybinder.org/v2/gh/jangenoe/InteractieveCursus/master?urlpath=lab/tree/AnalogeElektronica2/Klasse-B.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onBinder"
+   data-bs-placement="left" data-bs-toggle="tooltip"
 >
   
 
-<span class="headerbtn__icon-container">
+<span class="btn__icon-container">
   
     <img src="_static/images/logo_binder.svg">
   </span>
-<span class="headerbtn__text-container">Binder</span>
+<span class="btn__text-container">Binder</span>
 </a>
-
-      </li>
+</li>
       
-      <li>
-        <a href="https://colab.research.google.com/github/jangenoe/InteractieveCursus/blob/master/AnalogeElektronica2/Klasse-B.ipynb"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Launch on Colab"
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/jangenoe/InteractieveCursus/blob/master/AnalogeElektronica2/Klasse-B.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onColab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
 >
   
 
-<span class="headerbtn__icon-container">
+<span class="btn__icon-container">
   
     <img src="_static/images/logo_colab.png">
   </span>
-<span class="headerbtn__text-container">Colab</span>
+<span class="btn__text-container">Colab</span>
 </a>
-
-      </li>
+</li>
       
-    </ul>
-  </div>
+  </ul>
 </div>
 
+
+
+
 <button onclick="toggleFullScreen()"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="bottom"
-title="Fullscreen mode"
+  class="btn btn-sm"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
 >
   
 
-<span class="headerbtn__icon-container">
+<span class="btn__icon-container">
   <i class="fas fa-expand"></i>
   </span>
 
 </button>
 
-<div class="menu-dropdown menu-dropdown-repository-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Source repositories">
-      <i class="fab fa-github"></i>
+
+
+
+
+
+<div class="dropdown dropdown-repository-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
   </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="https://github.com/jangenoe/InteractieveCursus"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Source repository"
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/jangenoe/InteractieveCursus" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
 >
   
 
-<span class="headerbtn__icon-container">
+<span class="btn__icon-container">
   <i class="fab fa-github"></i>
   </span>
-<span class="headerbtn__text-container">repository</span>
+<span class="btn__text-container">repository</span>
 </a>
-
-      </li>
+</li>
       
-      <li>
-        <a href="https://github.com/jangenoe/InteractieveCursus/issues/new?title=Issue%20on%20page%20%2FKlasse-B.html&body=Your%20issue%20content%20here."
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Open an issue"
+      
+      
+      
+      <li><a href="https://github.com/jangenoe/InteractieveCursus/issues/new?title=Issue%20on%20page%20%2FKlasse-B.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
 >
   
 
-<span class="headerbtn__icon-container">
+<span class="btn__icon-container">
   <i class="fas fa-lightbulb"></i>
   </span>
-<span class="headerbtn__text-container">open issue</span>
+<span class="btn__text-container">open issue</span>
 </a>
-
-      </li>
+</li>
       
-      <li>
-        <a href="https://github.com/jangenoe/InteractieveCursus/edit/master/AnalogeElektronica2/Klasse-B.ipynb"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Edit this page"
+      
+      
+      
+      <li><a href="https://github.com/jangenoe/InteractieveCursus/edit/master/AnalogeElektronica2/Klasse-B.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Edit onGitHub"
+   data-bs-placement="left" data-bs-toggle="tooltip"
 >
   
 
-<span class="headerbtn__icon-container">
+<span class="btn__icon-container">
   <i class="fas fa-pencil-alt"></i>
   </span>
-<span class="headerbtn__text-container">suggest edit</span>
+<span class="btn__text-container">suggest edit</span>
 </a>
-
-      </li>
+</li>
       
-    </ul>
-  </div>
+  </ul>
 </div>
 
-<div class="menu-dropdown menu-dropdown-download-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Download this page">
-      <i class="fas fa-download"></i>
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
   </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="_sources/Klasse-B.ipynb"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Download source file"
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/Klasse-B.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
 >
   
 
-<span class="headerbtn__icon-container">
+<span class="btn__icon-container">
   <i class="fas fa-file"></i>
   </span>
-<span class="headerbtn__text-container">.ipynb</span>
+<span class="btn__text-container">.ipynb</span>
 </a>
-
-      </li>
+</li>
+      
+      
+      
       
       <li>
-        
-<button onclick="printPdf(this)"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="left"
-title="Print to PDF"
+<button onclick="window.print()"
+  class="btn btn-sm dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
 >
   
 
-<span class="headerbtn__icon-container">
+<span class="btn__icon-container">
   <i class="fas fa-file-pdf"></i>
   </span>
-<span class="headerbtn__text-container">.pdf</span>
+<span class="btn__text-container">.pdf</span>
 </button>
-
-      </li>
+</li>
       
-    </ul>
-  </div>
+  </ul>
 </div>
-<label for="__page-toc"
-  class="headerbtn headerbtn-page-toc"
-  
->
-  
 
-<span class="headerbtn__icon-container">
-  <i class="fas fa-list"></i>
-  </span>
 
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Zoeken" aria-label="Zoeken" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
 </label>
-
+</div></div>
+      
     </div>
+  
 </div>
-
-<!-- Table of contents -->
-<div class="col-md-3 bd-toc show noprint">
-    <div class="tocsection onthispage pt-5 pb-3">
-        <i class="fas fa-list"></i> Contents
-    </div>
-    <nav id="bd-toc-nav" aria-label="Page">
-        <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#indeling-vermogenversterkers">
-   Indeling vermogenversterkers
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#basisschema">
-   Basisschema
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#schema-voor-dc-werking">
-     Schema voor DC werking
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#schema-voor-ac-werking">
-     Schema voor AC werking
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#gebruik-van-de-voorinstelspanning">
-   Gebruik van de voorinstelspanning
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#diodes-als-voorinstelspanning">
-     diodes als voorinstelspanning
-    </a>
-   </li>
-  </ul>
- </li>
-</ul>
-
-    </nav>
 </div>
-    </div>
-    <div class="article row">
-        <div class="col pl-md-3 pl-lg-5 content-container">
-            <!-- Table of contents that is only displayed when printing the page -->
-            <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Klasse B versterkers</h1>
-                <!-- Table of contents -->
-                <div id="print-main-content">
-                    <div id="jb-print-toc">
-                        
-                        <div>
-                            <h2> Contents </h2>
-                        </div>
-                        <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#indeling-vermogenversterkers">
-   Indeling vermogenversterkers
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#basisschema">
-   Basisschema
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#schema-voor-dc-werking">
-     Schema voor DC werking
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#schema-voor-ac-werking">
-     Schema voor AC werking
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#gebruik-van-de-voorinstelspanning">
-   Gebruik van de voorinstelspanning
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#diodes-als-voorinstelspanning">
-     diodes als voorinstelspanning
-    </a>
-   </li>
-  </ul>
- </li>
-</ul>
+              
+              
 
-                        </nav>
-                    </div>
-                </div>
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Klasse B versterkers</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
             </div>
-            <main id="main-content" role="main">
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#indeling-vermogenversterkers">Indeling vermogenversterkers</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#basisschema">Basisschema</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#schema-voor-dc-werking">Schema voor DC werking</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#schema-voor-ac-werking">Schema voor AC werking</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#gebruik-van-de-voorinstelspanning">Gebruik van de voorinstelspanning</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#diodes-als-voorinstelspanning">diodes als voorinstelspanning</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
                 
-              <div>
-                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
   <section class="tex2jax_ignore mathjax_ignore" id="klasse-b-versterkers">
-<h1>Klasse B versterkers<a class="headerlink" href="#klasse-b-versterkers" title="Permalink naar deze titel">#</a></h1>
+<h1>Klasse B versterkers<a class="headerlink" href="#klasse-b-versterkers" title="Permalink to this heading">#</a></h1>
 <p><a href="./slides/Klasse-B.slides.html" target="_blank"><img alt="slides" src="_images/slides-beschikbaar-blue.svg" /></a>
 <a href="../Lite/AnalogeElektronica2/lab?path=Klasse-B.ipynb" target="_blank"><img alt="slides" src="_images/open_in-JupyterLite-blue.svg" /></a>
 <a href="../Deck/AnalogeElektronica2/lab?path=Klasse-B.ipynb" target="_blank"><img alt="slides" src="_images/JupyterDeck-slides-blue.svg" /></a></p>
-<div class="cell tag_remove-input docutils container">
+<div class="cell docutils container">
 </div>
 <section id="indeling-vermogenversterkers">
-<h2>Indeling vermogenversterkers<a class="headerlink" href="#indeling-vermogenversterkers" title="Permalink naar deze titel">#</a></h2>
+<h2>Indeling vermogenversterkers<a class="headerlink" href="#indeling-vermogenversterkers" title="Permalink to this heading">#</a></h2>
 <p>In <a class="reference internal" href="#vermogenversterkersb"><span class="std std-numref">Tabel 2</span></a> hernemen we een overzicht van de verschillende versterkers die we bespreken in de leerlijn analoge elektronica.</p>
-<table class="colwidths-auto table" id="vermogenversterkersb">
+<table class="table" id="vermogenversterkersb">
 <caption><span class="caption-number">Tabel 2 </span><span class="caption-text">Indeling van de vermogenversterkers </span><a class="headerlink" href="#vermogenversterkersb" title="Permalink naar deze tabel">#</a></caption>
 <thead>
-<tr class="row-odd"><th class="text-left head"><p></p></th>
-<th class="text-left head"><p>laagfrequent of breedband</p></th>
-<th class="text-left head"><p>hoogfrequent of resonant</p></th>
+<tr class="row-odd"><th class="head text-left"><p></p></th>
+<th class="head text-left"><p>laagfrequent of breedband</p></th>
+<th class="head text-left"><p>hoogfrequent of resonant</p></th>
 </tr>
 </thead>
 <tbody>
@@ -583,9 +558,9 @@ title="Print to PDF"
 </table>
 </section>
 <section id="basisschema">
-<h2>Basisschema<a class="headerlink" href="#basisschema" title="Permalink naar deze titel">#</a></h2>
+<h2>Basisschema<a class="headerlink" href="#basisschema" title="Permalink to this heading">#</a></h2>
 <section id="schema-voor-dc-werking">
-<h3>Schema voor DC werking<a class="headerlink" href="#schema-voor-dc-werking" title="Permalink naar deze titel">#</a></h3>
+<h3>Schema voor DC werking<a class="headerlink" href="#schema-voor-dc-werking" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_output docutils container">
 <figure class="align-default" id="bfig1">
@@ -607,7 +582,7 @@ title="Print to PDF"
 </div>
 </section>
 <section id="schema-voor-ac-werking">
-<h3>Schema voor AC werking<a class="headerlink" href="#schema-voor-ac-werking" title="Permalink naar deze titel">#</a></h3>
+<h3>Schema voor AC werking<a class="headerlink" href="#schema-voor-ac-werking" title="Permalink to this heading">#</a></h3>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
 <figure class="align-default" id="bfig1ac">
@@ -617,32 +592,31 @@ title="Print to PDF"
 </figure>
 </div>
 </div>
-<div class="cell tag_remove-input docutils container">
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Klasse B versterker
-*
-* SUPPLY VOLTAGES
-VPOS 8 0 DC	+15V
-VNEG 9 0 DC	-15V
-*
-*  input source
-VS1 1 0	DC 0 SIN(0V 5VPEAK 10KHZ)
-*
-*  PUSH-PULL TRANSISTOR OUTPUT STAGE
-Q1 8 1 2 QNPN
-Q2 9 1 2 QPNP
-*
-* Load resistance
-RL1 2 0	100
-*
-* DEVICE MODELS
-.model QNPN	NPN(BF=50)
-.model QPNP	PNP(BF=50)
+<div class="literal-block-wrapper docutils container" id="listing1">
+<div class="code-block-caption"><span class="caption-number">Spice Listing 2 </span><span class="caption-text">basis Klasse B circuit</span><a class="headerlink" href="#listing1" title="Permalink naar deze broncode">#</a></div>
+<div class="highlight-spice notranslate"><div class="highlight"><pre><span></span><span class="nx">Klasse</span><span class="w"> </span><span class="nx">B</span><span class="w"> </span><span class="nx">versterker</span>
+<span class="o">*</span>
+<span class="o">*</span><span class="w"> </span><span class="nx">SUPPLY</span><span class="w"> </span><span class="nx">VOLTAGES</span>
+<span class="nx">VPOS</span><span class="w"> </span><span class="mi">8</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="nx">DC</span><span class="w">	</span><span class="o">+</span><span class="mi">15</span><span class="nx">V</span>
+<span class="nx">VNEG</span><span class="w"> </span><span class="mi">9</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="nx">DC</span><span class="w">	</span><span class="o">-</span><span class="mi">15</span><span class="nx">V</span>
+<span class="o">*</span>
+<span class="o">*</span><span class="w">  </span><span class="nx">input</span><span class="w"> </span><span class="nx">source</span>
+<span class="nx">VS1</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="mi">0</span><span class="w">	</span><span class="nx">DC</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="nx">SIN</span><span class="p">(</span><span class="mi">0</span><span class="nx">V</span><span class="w"> </span><span class="mi">5</span><span class="nx">VPEAK</span><span class="w"> </span><span class="mi">10</span><span class="nx">KHZ</span><span class="p">)</span>
+<span class="o">*</span>
+<span class="o">*</span><span class="w">  </span><span class="nx">PUSH</span><span class="o">-</span><span class="nx">PULL</span><span class="w"> </span><span class="nx">TRANSISTOR</span><span class="w"> </span><span class="nx">OUTPUT</span><span class="w"> </span><span class="nx">STAGE</span>
+<span class="nx">Q1</span><span class="w"> </span><span class="mi">8</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="nx">QNPN</span>
+<span class="nx">Q2</span><span class="w"> </span><span class="mi">9</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="nx">QPNP</span>
+<span class="o">*</span>
+<span class="o">*</span><span class="w"> </span><span class="nx">Load</span><span class="w"> </span><span class="nx">resistance</span>
+<span class="nx">RL1</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="mi">0</span><span class="w">	</span><span class="mi">100</span>
+<span class="o">*</span>
+<span class="o">*</span><span class="w"> </span><span class="nx">DEVICE</span><span class="w"> </span><span class="nx">MODELS</span>
+<span class="p">.</span><span class="nx">model</span><span class="w"> </span><span class="nx">QNPN</span><span class="w">	</span><span class="nx">NPN</span><span class="p">(</span><span class="nx">BF</span><span class="p">=</span><span class="mi">50</span><span class="p">)</span>
+<span class="p">.</span><span class="nx">model</span><span class="w"> </span><span class="nx">QPNP</span><span class="w">	</span><span class="nx">PNP</span><span class="p">(</span><span class="nx">BF</span><span class="p">=</span><span class="mi">50</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
-</div>
-<p>De simulatie van de bovenstaande spice code (zie <a class="reference internal" href="#bfig2"><span class="std std-numref">Fig. 11</span></a>) geeft duidelijk de dode zone aan bij de nuldoorgang van de spanning. In <a class="reference internal" href="#bfig2b"><span class="std std-numref">Fig. 12</span></a> bekijken we deze nuldoorgang in meer detail.</p>
+<p>De simulatie (zie <a class="reference internal" href="#bfig2"><span class="std std-numref">Fig. 11</span></a>) van de spice code<a class="reference internal" href="#listing1"><span class="std std-numref">Spice Listing 2</span></a>  geeft duidelijk de dode zone aan bij de nuldoorgang van de spanning. In <a class="reference internal" href="#bfig2b"><span class="std std-numref">Fig. 12</span></a> bekijken we deze nuldoorgang in meer detail.</p>
 <div class="cell tag_full-width docutils container">
 <div class="cell_output docutils container">
 <figure class="align-default" id="bfig2">
@@ -677,9 +651,9 @@ RL1 2 0	100
 </section>
 </section>
 <section id="gebruik-van-de-voorinstelspanning">
-<h2>Gebruik van de voorinstelspanning<a class="headerlink" href="#gebruik-van-de-voorinstelspanning" title="Permalink naar deze titel">#</a></h2>
+<h2>Gebruik van de voorinstelspanning<a class="headerlink" href="#gebruik-van-de-voorinstelspanning" title="Permalink to this heading">#</a></h2>
 <section id="diodes-als-voorinstelspanning">
-<h3>diodes als voorinstelspanning<a class="headerlink" href="#diodes-als-voorinstelspanning" title="Permalink naar deze titel">#</a></h3>
+<h3>diodes als voorinstelspanning<a class="headerlink" href="#diodes-als-voorinstelspanning" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_output docutils container">
 <figure class="align-default" id="bfig1v2">
@@ -690,32 +664,31 @@ RL1 2 0	100
 </div>
 </div>
 <p>Hieronder tonen we de spice listing van de klasse B versterker waarbij we een voorinstelspanning voorzien tussen de  basissen van de npn en de pnp transistor. Deze voorinstelspanning is hier uitgevoerd door diodes. in <a class="reference internal" href="#bfig2dio"><span class="std std-numref">Fig. 15</span></a> merken we hierbij op dat dit tot gevolg heeft dat er toch een stroom blijft lopen door de transistor die niet in geleiding is. Dit noemen we de klasse AB werking van deze klasseB versterker.</p>
-<div class="cell tag_remove-input docutils container">
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Klasse B versterker
-*
-* SUPPLY VOLTAGES
-VPOS 8 0 DC +15V
-VNEG 9 0 DC -15V
-*
-VS2 10 0 DC 0 SIN(0V 5VPEAK 10KHZ)
-*
-D1  13 10	DNOM
-RB1 13 8	10K
-Q11 8 13 12 QNPN
-*
-D2  10 14   DNOM
-RB2 14 9    10K
-Q12 9 14 12 QPNP
-*
-RL2 12 0 100
-*
-* DEVICE MODELS
-.model	QNPN	NPN(BF=50)
-.model	QPNP	PNP(BF=50)
-.model	DNOM	D()
+<div class="literal-block-wrapper docutils container" id="listing2">
+<div class="code-block-caption"><span class="caption-number">Spice Listing 3 </span><span class="caption-text">Klasse B circuit met voorinstelspanning</span><a class="headerlink" href="#listing2" title="Permalink naar deze broncode">#</a></div>
+<div class="highlight-spice notranslate"><div class="highlight"><pre><span></span><span class="nx">Klasse</span><span class="w"> </span><span class="nx">B</span><span class="w"> </span><span class="nx">versterker</span>
+<span class="o">*</span>
+<span class="o">*</span><span class="w"> </span><span class="nx">SUPPLY</span><span class="w"> </span><span class="nx">VOLTAGES</span>
+<span class="nx">VPOS</span><span class="w"> </span><span class="mi">8</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="nx">DC</span><span class="w"> </span><span class="o">+</span><span class="mi">15</span><span class="nx">V</span>
+<span class="nx">VNEG</span><span class="w"> </span><span class="mi">9</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="nx">DC</span><span class="w"> </span><span class="o">-</span><span class="mi">15</span><span class="nx">V</span>
+<span class="o">*</span>
+<span class="nx">VS2</span><span class="w"> </span><span class="mi">10</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="nx">DC</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="nx">SIN</span><span class="p">(</span><span class="mi">0</span><span class="nx">V</span><span class="w"> </span><span class="mi">5</span><span class="nx">VPEAK</span><span class="w"> </span><span class="mi">10</span><span class="nx">KHZ</span><span class="p">)</span>
+<span class="o">*</span>
+<span class="nx">D1</span><span class="w">  </span><span class="mi">13</span><span class="w"> </span><span class="mi">10</span><span class="w">   </span><span class="nx">DNOM</span>
+<span class="nx">RB1</span><span class="w"> </span><span class="mi">13</span><span class="w"> </span><span class="mi">8</span><span class="w">    </span><span class="mi">10</span><span class="nx">K</span>
+<span class="nx">Q11</span><span class="w"> </span><span class="mi">8</span><span class="w"> </span><span class="mi">13</span><span class="w"> </span><span class="mi">12</span><span class="w"> </span><span class="nx">QNPN</span>
+<span class="o">*</span>
+<span class="nx">D2</span><span class="w">  </span><span class="mi">10</span><span class="w"> </span><span class="mi">14</span><span class="w">   </span><span class="nx">DNOM</span>
+<span class="nx">RB2</span><span class="w"> </span><span class="mi">14</span><span class="w"> </span><span class="mi">9</span><span class="w">    </span><span class="mi">10</span><span class="nx">K</span>
+<span class="nx">Q12</span><span class="w"> </span><span class="mi">9</span><span class="w"> </span><span class="mi">14</span><span class="w"> </span><span class="mi">12</span><span class="w"> </span><span class="nx">QPNP</span>
+<span class="o">*</span>
+<span class="nx">RL2</span><span class="w"> </span><span class="mi">12</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="mi">100</span>
+<span class="o">*</span>
+<span class="o">*</span><span class="w"> </span><span class="nx">DEVICE</span><span class="w"> </span><span class="nx">MODELS</span>
+<span class="p">.</span><span class="nx">model</span><span class="w"> </span><span class="nx">QNPN</span><span class="w"> </span><span class="nx">NPN</span><span class="p">(</span><span class="nx">BF</span><span class="p">=</span><span class="mi">50</span><span class="p">)</span>
+<span class="p">.</span><span class="nx">model</span><span class="w"> </span><span class="nx">QPNP</span><span class="w"> </span><span class="nx">PNP</span><span class="p">(</span><span class="nx">BF</span><span class="p">=</span><span class="mi">50</span><span class="p">)</span>
+<span class="p">.</span><span class="nx">model</span><span class="w"> </span><span class="nx">DNOM</span><span class="w"> </span><span class="nx">D</span><span class="p">()</span>
 </pre></div>
-</div>
 </div>
 </div>
 <div class="cell tag_full-width tag_remove-input docutils container">
@@ -740,21 +713,27 @@ RL2 12 0 100
 </div>
 </div>
 <p>We kunnen ook proberen de dode zone weg te werken aan de hand van feedback, zoals in het onderstaande schema aan de hand van een opamp. Op het eerste zicht lijkt dat te lukken, als we de simulatie in <a class="reference internal" href="#bopmapsim"><span class="std std-numref">Fig. 17</span></a> bekijken. De <span class="math notranslate nohighlight">\(V_{in}\)</span> en <span class="math notranslate nohighlight">\(V_{out}\)</span> liggen zo goed als volledig op elkaar dat we het verschil niet merken. Enkel als we heel erg inzoemen, zoals in <a class="reference internal" href="#bopmapsimz"><span class="std std-numref">Fig. 18</span></a> lijkt er een klein verschil te zijn langs de nuldoorgang. Laat je hierbij echter niet vangen. Deze simualtie is gedaan met een ideale OpAmp, warvan de stijsnelheid niet realistisch is. Wanneer we diezelfde simulatie hernemen met een realistische OpAmp, zie onder, blijft dit bijna ideale gedrag niet behouden.</p>
-<div class="cell tag_remove-input docutils container">
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>.title Klasse B versterker  PUSH-PULL PLACED IN OPAMP FEEDBACK LOOP
-VPOS 8 0 DC +15V
-VNEG 9 0 DC -15V
-VS3 20 0 DC 0 SIN(0V 5VPEAK 10KHZ)
-Q21 8 23 22 QNPN
-Q22 9 23 22 QPNP
-RL3 22 0 100
-XOpAmp 20 22 8 9 23 opamp
-.model QNPN NPN (BF=50)
-.model QPNP PNP (BF=50)
-.model DNOM D ()
+<div class="literal-block-wrapper docutils container" id="listing3">
+<div class="code-block-caption"><span class="caption-number">Spice Listing 4 </span><span class="caption-text">SPICE code met OPAMP feedback</span><a class="headerlink" href="#listing3" title="Permalink naar deze broncode">#</a></div>
+<div class="highlight-spice notranslate"><div class="highlight"><pre><span></span><span class="p">.</span><span class="nx">title</span><span class="w"> </span><span class="nx">Klasse</span><span class="w"> </span><span class="nx">B</span><span class="w"> </span><span class="nx">versterker</span><span class="w">  </span><span class="nx">PUSH</span><span class="o">-</span><span class="nx">PULL</span><span class="w"> </span><span class="nx">PLACED</span><span class="w"> </span><span class="nx">IN</span><span class="w"> </span><span class="nx">OPAMP</span><span class="w"> </span><span class="nx">FEEDBACK</span><span class="w"> </span><span class="nx">LOOP</span>
+<span class="o">*</span>
+<span class="o">*</span><span class="w"> </span><span class="nx">SUPPLY</span><span class="w"> </span><span class="nx">VOLTAGES</span>
+<span class="nx">VPOS</span><span class="w"> </span><span class="mi">8</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="nx">DC</span><span class="w"> </span><span class="o">+</span><span class="mi">15</span><span class="nx">V</span>
+<span class="nx">VNEG</span><span class="w"> </span><span class="mi">9</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="nx">DC</span><span class="w"> </span><span class="o">-</span><span class="mi">15</span><span class="nx">V</span>
+<span class="o">*</span>
+<span class="nx">VS3</span><span class="w"> </span><span class="mi">20</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="nx">DC</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="nx">SIN</span><span class="p">(</span><span class="mi">0</span><span class="nx">V</span><span class="w"> </span><span class="mi">5</span><span class="nx">VPEAK</span><span class="w"> </span><span class="mi">10</span><span class="nx">KHZ</span><span class="p">)</span>
+<span class="o">*</span>
+<span class="nx">Q21</span><span class="w"> </span><span class="mi">8</span><span class="w"> </span><span class="mi">23</span><span class="w"> </span><span class="mi">22</span><span class="w"> </span><span class="nx">QNPN</span>
+<span class="nx">Q22</span><span class="w"> </span><span class="mi">9</span><span class="w"> </span><span class="mi">23</span><span class="w"> </span><span class="mi">22</span><span class="w"> </span><span class="nx">QPNP</span>
+<span class="nx">RL3</span><span class="w"> </span><span class="mi">22</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="mi">100</span>
+<span class="o">*</span>
+<span class="nx">XOpAmp</span><span class="w"> </span><span class="mi">20</span><span class="w"> </span><span class="mi">22</span><span class="w"> </span><span class="mi">8</span><span class="w"> </span><span class="mi">9</span><span class="w"> </span><span class="mi">23</span><span class="w"> </span><span class="mi">8</span><span class="w"> </span><span class="nx">opamp</span>
+<span class="o">*</span>
+<span class="o">*</span><span class="w"> </span><span class="nx">DEVICE</span><span class="w"> </span><span class="nx">MODELS</span>
+<span class="p">.</span><span class="nx">model</span><span class="w"> </span><span class="nx">QNPN</span><span class="w"> </span><span class="nx">NPN</span><span class="p">(</span><span class="nx">BF</span><span class="p">=</span><span class="mi">50</span><span class="p">)</span>
+<span class="p">.</span><span class="nx">model</span><span class="w"> </span><span class="nx">QPNP</span><span class="w"> </span><span class="nx">PNP</span><span class="p">(</span><span class="nx">BF</span><span class="p">=</span><span class="mi">50</span><span class="p">)</span>
+<span class="p">.</span><span class="nx">model</span><span class="w"> </span><span class="nx">DNOM</span><span class="w"> </span><span class="nx">D</span><span class="p">()</span>
 </pre></div>
-</div>
 </div>
 </div>
 <div class="cell tag_full-width docutils container">
@@ -785,6 +764,29 @@ XOpAmp 20 22 8 9 23 opamp
 <p><span class="caption-number">Fig. 19 </span><span class="caption-text">De klasse B versterker: de stroom door een npn transistor als functie van de spanning.</span><a class="headerlink" href="#bopamp-dio" title="Permallink naar deze afbeelding">#</a></p>
 </figcaption>
 </figure>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="listing4">
+<div class="code-block-caption"><span class="caption-number">Spice Listing 5 </span><span class="caption-text">SPICE code met OPAMP feedback</span><a class="headerlink" href="#listing4" title="Permalink naar deze broncode">#</a></div>
+<div class="highlight-spice notranslate"><div class="highlight"><pre><span></span><span class="p">.</span><span class="nx">title</span><span class="w"> </span><span class="nx">Klasse</span><span class="w"> </span><span class="nx">B</span><span class="w"> </span><span class="nx">versterker</span><span class="w">  </span><span class="nx">PUSH</span><span class="o">-</span><span class="nx">PULL</span><span class="w"> </span><span class="nx">PLACED</span><span class="w"> </span><span class="nx">IN</span><span class="w"> </span><span class="nx">OPAMP</span><span class="w"> </span><span class="nx">FEEDBACK</span><span class="w"> </span><span class="nx">LOOP</span>
+<span class="o">*</span>
+<span class="o">*</span><span class="w"> </span><span class="nx">SUPPLY</span><span class="w"> </span><span class="nx">VOLTAGES</span>
+<span class="nx">VPOS</span><span class="w"> </span><span class="mi">8</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="nx">DC</span><span class="w"> </span><span class="o">+</span><span class="m m-Double">2.5</span><span class="nx">V</span>
+<span class="nx">VNEG</span><span class="w"> </span><span class="mi">9</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="nx">DC</span><span class="w"> </span><span class="o">-</span><span class="m m-Double">2.5</span><span class="nx">V</span>
+<span class="o">*</span>
+<span class="nx">VS3</span><span class="w"> </span><span class="mi">20</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="nx">DC</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="nx">SIN</span><span class="p">(</span><span class="mi">0</span><span class="nx">V</span><span class="w"> </span><span class="mi">1</span><span class="nx">VPEAK</span><span class="w"> </span><span class="mi">10</span><span class="nx">KHZ</span><span class="p">)</span>
+<span class="o">*</span>
+<span class="nx">Q21</span><span class="w"> </span><span class="mi">8</span><span class="w"> </span><span class="mi">23</span><span class="w"> </span><span class="mi">22</span><span class="w"> </span><span class="nx">QNPN</span>
+<span class="nx">Q22</span><span class="w"> </span><span class="mi">9</span><span class="w"> </span><span class="mi">23</span><span class="w"> </span><span class="mi">22</span><span class="w"> </span><span class="nx">QPNP</span>
+<span class="nx">RL3</span><span class="w"> </span><span class="mi">22</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="mi">100</span>
+<span class="o">*</span>
+<span class="nx">XOpAmp</span><span class="w"> </span><span class="mi">20</span><span class="w"> </span><span class="mi">22</span><span class="w"> </span><span class="mi">8</span><span class="w"> </span><span class="mi">9</span><span class="w"> </span><span class="mi">23</span><span class="w"> </span><span class="mi">8</span><span class="w"> </span><span class="nx">opamp</span>
+<span class="o">*</span>
+<span class="o">*</span><span class="w"> </span><span class="nx">DEVICE</span><span class="w"> </span><span class="nx">MODELS</span>
+<span class="p">.</span><span class="nx">model</span><span class="w"> </span><span class="nx">QNPN</span><span class="w"> </span><span class="nx">NPN</span><span class="p">(</span><span class="nx">BF</span><span class="p">=</span><span class="mi">50</span><span class="p">)</span>
+<span class="p">.</span><span class="nx">model</span><span class="w"> </span><span class="nx">QPNP</span><span class="w"> </span><span class="nx">PNP</span><span class="p">(</span><span class="nx">BF</span><span class="p">=</span><span class="mi">50</span><span class="p">)</span>
+<span class="p">.</span><span class="nx">model</span><span class="w"> </span><span class="nx">DNOM</span><span class="w"> </span><span class="nx">D</span><span class="p">()</span>
+</pre></div>
 </div>
 </div>
 <div class="cell tag_full-width tag_remove-input docutils container">
@@ -835,7 +837,7 @@ XOpAmp 20 22 8 9 23 opamp
             mode: "kuleuven"
         },
         kernelOptions: {
-            kernelName: "kuleuven",
+            name: "kuleuven",
             path: "./."
         },
         predefinedOutput: true
@@ -843,49 +845,104 @@ XOpAmp 20 22 8 9 23 opamp
     </script>
     <script>kernelName = 'kuleuven'</script>
 
-              </div>
+                </article>
               
-            </main>
-            <footer class="footer-article noprint">
-                
-    <!-- Previous / next buttons -->
-<div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="Klasse-A.html" title="vorige pagina">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">vorige</p>
-            <p class="prev-next-title">Klasse A versterkers</p>
-        </div>
+
+              
+              
+                <footer class="bd-footer-article">
+                  <!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="Klasse-A.html"
+       title="vorige pagina">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">vorige</p>
+        <p class="prev-next-title">Klasse A versterkers</p>
+      </div>
     </a>
-    <a class='right-next' id="next-link" href="KlasseB_vb1.html" title="volgende pagina">
-    <div class="prev-next-info">
+    <a class="right-next"
+       href="KlasseB_vb1.html"
+       title="volgende pagina">
+      <div class="prev-next-info">
         <p class="prev-next-subtitle">volgende</p>
         <p class="prev-next-title">Voorbeeld 1: Klasse B versterker</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
-            </footer>
-        </div>
-    </div>
-    <div class="footer-content row">
-        <footer class="col footer"><p>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#indeling-vermogenversterkers">Indeling vermogenversterkers</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#basisschema">Basisschema</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#schema-voor-dc-werking">Schema voor DC werking</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#schema-voor-ac-werking">Schema voor AC werking</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#gebruik-van-de-voorinstelspanning">Gebruik van de voorinstelspanning</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#diodes-als-voorinstelspanning">diodes als voorinstelspanning</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            <div class="bd-footer-content__inner">
+<div class="bd-footer-content__inner container">
   
-    By Jan Genoe (jan.genoe@kuleuven.be)<br/>
-  
-</p>
-        </footer>
-    </div>
+  <div class="footer-item">
     
-</div>
+<p class="component-author">
+By Jan Genoe (jan.genoe@kuleuven.be)
+</p>
 
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    <p class="last-updated">
+  Laatste aanpassing op None.
+  <br/>
+</p>
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div></div>
+          </footer>
+        
 
-      </div>
+      </main>
     </div>
+  </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+  <script src="_static/scripts/bootstrap.js?digest=12da95d707ffb74b382d"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=12da95d707ffb74b382d"></script>
 
-
+  <footer class="bd-footer">
+  </footer>
   </body>
 </html>

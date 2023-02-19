@@ -1,44 +1,63 @@
 
+
 <!DOCTYPE html>
 
-<html lang="nl">
+
+<html lang="nl" >
+
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+<meta property="og:title" content="Klasse F Verstekers" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://jangenoe.github.io/jangenoe/InteractieveCursus/ToegepasteAnalogeElektronica/Klasse-F.html" />
+<meta property="og:site_name" content="Python" />
+<meta property="og:description" content="slides slides slides In dit hoofdstuk bestuderen we de klasse F versterker als een uitbreiding van de klasse C versterker. Beide versterkers zijn resonante versterkers die bestaat uit een LRC trilk..." />
+<meta property="og:image" content="https://jangenoe.github.io/InteractieveCursus/ToegepasteAnalogeElektronica/_static/logo.svg" />
+<meta property="og:image:alt" content="Python" />
+<meta name="description" content="slides slides slides In dit hoofdstuk bestuderen we de klasse F versterker als een uitbreiding van de klasse C versterker. Beide versterkers zijn resonante versterkers die bestaat uit een LRC trilk..." />
 
     <title>Klasse F Verstekers &#8212; Toegepaste Analoge Elektronica</title>
-    
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
   <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-<link href="_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  <link href="_static/styles/theme.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
 
-    
-  <link rel="stylesheet"
-    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+  
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=56348ffd8e7ce817f831f1f32f1f7f6638896a71" type="text/css" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
     <link rel="stylesheet" type="text/css" href="_static/exercise.css" />
     <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
-    
+  
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=12da95d707ffb74b382d" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=12da95d707ffb74b382d" />
 
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="_static/doctools.js"></script>
     <script src="_static/clipboard.min.js"></script>
     <script src="_static/copybutton.js"></script>
-    <script src="_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
@@ -52,64 +71,140 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
-    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Klasse-F';</script>
     <link rel="shortcut icon" href="_static/favicon.ico"/>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Zoeken" href="search.html" />
     <link rel="next" title="Klasse D resonante Versterkers" href="Klasse-D.html" />
     <link rel="prev" title="Klasse C Versterkers" href="Klasse-C.html" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="nl">
-    
-
-    <!-- Google Analytics -->
-    
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="nl"/>
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
-<!-- Checkboxes to toggle the left sidebar -->
-<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
-<label class="overlay overlay-navbar" for="__navigation">
-    <div class="visually-hidden">Toggle navigation sidebar</div>
-</label>
-<!-- Checkboxes to toggle the in-page toc -->
-<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
-<label class="overlay overlay-pagetoc" for="__page-toc">
-    <div class="visually-hidden">Toggle in-page Table of Contents</div>
-</label>
-<!-- Headers at the top -->
-<div class="announcement header-item noprint"></div>
-<div class="header header-item noprint"></div>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
 
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+<div class="bd-header__inner bd-page-width">
+  <label class="sidebar-toggle primary-toggle" for="__primary">
+    <span class="fa-solid fa-bars"></span>
+  </label>
+  
+  
+  <div class="col-lg-9 navbar-header-items">
     
-    <div class="container-fluid" id="banner"></div>
-
     
-
-    <div class="container-xl">
-      <div class="row">
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
           
-<!-- Sidebar -->
-<div class="bd-sidebar noprint" id="site-navigation">
-    <div class="bd-sidebar__content">
-        <div class="bd-sidebar__top"><div class="navbar-brand-box">
-    <a class="navbar-brand text-wrap" href="index.html">
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Zoeken" aria-label="Zoeken" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+        </div>
       
-        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Zoeken" aria-label="Zoeken" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+    </div>
+  
+
+  
+    <label class="sidebar-toggle secondary-toggle" for="__secondary">
+      <span class="fa-solid fa-outdent"></span>
+    </label>
+  
+</div>
+
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
         
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+    
+    
       
-      
-      <img src="_static/logo.svg" class="logo" alt="logo">
-      
-      
-      <h1 class="site-logo" id="site-title">Toegepaste Analoge Elektronica</h1>
-      
-    </a>
-</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
-  <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
-    <div class="bd-toc-item active">
+    
+    
+    <img src="_static/logo.svg" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="_static/logo.svg" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
@@ -118,413 +213,329 @@ const thebe_selector_output = ".output, .cell_output"
                 </a>
             </li>
         </ul>
-        <p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Inleiding
- </span>
-</p>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Inleiding</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="Spice-simulatie.html">
-   Spice simulatie
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="Spice-simulatie.html">Spice simulatie</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Versterkers
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Versterkers</span></p>
 <ul class="current nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="Klasse-C.html">
-   Klasse C  Versterkers
-  </a>
- </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
-   Klasse F Verstekers
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="Klasse-D.html">
-   Klasse D resonante Versterkers
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="Klasse-E.html">
-   Klasse E  Versterkers
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="Klasse-C.html">Klasse C  Versterkers</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Klasse F Verstekers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Klasse-D.html">Klasse D resonante Versterkers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Klasse-E.html">Klasse E  Versterkers</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Filters
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Filters</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="Filters.html">
-   Filters
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="Filters.html">Filters</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  transmissielijnen
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">transmissielijnen</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="transmissielijn.html">
-   Transmissie lijnen
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="reflecties.html">
-   Reflecties
-  </a>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="SmithKaart.html">
-   SmithKaart
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
-  <label for="toctree-checkbox-1">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="SmithKaartOefening1.html">
-     Smith Kaart Oefening 1
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="SmithKaartOefening2.html">
-     Smith Kaart Oefening 2
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="SmithKaartOefening3.html">
-     Smith Kaart Oefening 3
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="SmithKaartOefening4.html">
-     Smith Kaart Oefening 4
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="SmithKaartOefening5.html">
-     Smith Kaart Oefening 5
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="SmithKaartOefening6.html">
-     Smith Kaart Oefening 6
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="SmithKaartOefening7.html">
-     Smith Kaart Oefening 7
-    </a>
-   </li>
-  </ul>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="transmissielijn.html">Transmissie lijnen</a></li>
+<li class="toctree-l1"><a class="reference internal" href="reflecties.html">Reflecties</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="SmithKaart.html">SmithKaart</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="SmithKaartOefening1.html">Smith Kaart Oefening 1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="SmithKaartOefening2.html">Smith Kaart Oefening 2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="SmithKaartOefening3.html">Smith Kaart Oefening 3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="SmithKaartOefening4.html">Smith Kaart Oefening 4</a></li>
+<li class="toctree-l2"><a class="reference internal" href="SmithKaartOefening5.html">Smith Kaart Oefening 5</a></li>
+<li class="toctree-l2"><a class="reference internal" href="SmithKaartOefening6.html">Smith Kaart Oefening 6</a></li>
+<li class="toctree-l2"><a class="reference internal" href="SmithKaartOefening7.html">Smith Kaart Oefening 7</a></li>
+<li class="toctree-l2"><a class="reference internal" href="SmithKaartOefening8.html">Smith Kaart Oefening 8</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">References</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="References.html">Referenties</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Overzicht</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference external" href="https://jangenoe.github.io/InteractieveCursus/intro.html">Lijst cursussen</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.kuleuven.be/wieiswie/en/person/00004269">Auteur Jan Genoe</a></li>
 </ul>
 
     </div>
 </nav></div>
-        <div class="bd-sidebar__bottom">
-             <!-- To handle the deprecated key -->
-            
-            <div class="navbar_extra_footer">
-            <a href="https://www.kuleuven.be"> <img src=" https://stijl.kuleuven.be/2016tmp/img/svg/logo.svg" alt="KULeuven"></a>
-            </div>
-            
-        </div>
     </div>
-    <div id="rtd-footer-container"></div>
-</div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
 
 
-          
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
 
-
-          
-<!-- A tiny helper pixel to detect if we've scrolled -->
 <div class="sbt-scroll-pixel-helper"></div>
-<!-- Main content -->
-<div class="col py-0 content-container">
-    
-    <div class="header-article row sticky-top noprint">
-        
 
-
-
-<div class="col py-1 d-flex header-article-main">
-    <div class="header-article__left">
-        
-        <label for="__navigation"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="right"
-title="Toggle navigation"
->
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
   
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-bars"></i>
-  </span>
-
-</label>
-
-        
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
     </div>
-    <div class="header-article__right">
-<div class="menu-dropdown menu-dropdown-launch-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Launch interactive content">
-      <i class="fas fa-rocket"></i>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
   </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="https://mybinder.org/v2/gh/jangenoe/InteractieveCursus/master?urlpath=lab/tree/ToegepasteAnalogeElektronica/Klasse-F.ipynb"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Launch on Binder"
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://mybinder.org/v2/gh/jangenoe/InteractieveCursus/master?urlpath=lab/tree/ToegepasteAnalogeElektronica/Klasse-F.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onBinder"
+   data-bs-placement="left" data-bs-toggle="tooltip"
 >
   
 
-<span class="headerbtn__icon-container">
+<span class="btn__icon-container">
   
     <img src="_static/images/logo_binder.svg">
   </span>
-<span class="headerbtn__text-container">Binder</span>
+<span class="btn__text-container">Binder</span>
 </a>
-
-      </li>
+</li>
       
-      <li>
-        <a href="https://colab.research.google.com/github/jangenoe/InteractieveCursus/blob/master/ToegepasteAnalogeElektronica/Klasse-F.ipynb"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Launch on Colab"
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/jangenoe/InteractieveCursus/blob/master/ToegepasteAnalogeElektronica/Klasse-F.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onColab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
 >
   
 
-<span class="headerbtn__icon-container">
+<span class="btn__icon-container">
   
     <img src="_static/images/logo_colab.png">
   </span>
-<span class="headerbtn__text-container">Colab</span>
+<span class="btn__text-container">Colab</span>
 </a>
-
-      </li>
+</li>
       
-    </ul>
-  </div>
+  </ul>
 </div>
 
+
+
+
 <button onclick="toggleFullScreen()"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="bottom"
-title="Fullscreen mode"
+  class="btn btn-sm"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
 >
   
 
-<span class="headerbtn__icon-container">
+<span class="btn__icon-container">
   <i class="fas fa-expand"></i>
   </span>
 
 </button>
 
-<div class="menu-dropdown menu-dropdown-repository-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Source repositories">
-      <i class="fab fa-github"></i>
+
+
+
+
+
+<div class="dropdown dropdown-repository-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
   </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="https://github.com/jangenoe/InteractieveCursus"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Source repository"
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/jangenoe/InteractieveCursus" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
 >
   
 
-<span class="headerbtn__icon-container">
+<span class="btn__icon-container">
   <i class="fab fa-github"></i>
   </span>
-<span class="headerbtn__text-container">repository</span>
+<span class="btn__text-container">repository</span>
 </a>
-
-      </li>
+</li>
       
-      <li>
-        <a href="https://github.com/jangenoe/InteractieveCursus/issues/new?title=Issue%20on%20page%20%2FKlasse-F.html&body=Your%20issue%20content%20here."
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Open an issue"
+      
+      
+      
+      <li><a href="https://github.com/jangenoe/InteractieveCursus/issues/new?title=Issue%20on%20page%20%2FKlasse-F.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
 >
   
 
-<span class="headerbtn__icon-container">
+<span class="btn__icon-container">
   <i class="fas fa-lightbulb"></i>
   </span>
-<span class="headerbtn__text-container">open issue</span>
+<span class="btn__text-container">open issue</span>
 </a>
-
-      </li>
+</li>
       
-      <li>
-        <a href="https://github.com/jangenoe/InteractieveCursus/edit/master/ToegepasteAnalogeElektronica/Klasse-F.ipynb"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Edit this page"
+      
+      
+      
+      <li><a href="https://github.com/jangenoe/InteractieveCursus/edit/master/ToegepasteAnalogeElektronica/Klasse-F.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Edit onGitHub"
+   data-bs-placement="left" data-bs-toggle="tooltip"
 >
   
 
-<span class="headerbtn__icon-container">
+<span class="btn__icon-container">
   <i class="fas fa-pencil-alt"></i>
   </span>
-<span class="headerbtn__text-container">suggest edit</span>
+<span class="btn__text-container">suggest edit</span>
 </a>
-
-      </li>
+</li>
       
-    </ul>
-  </div>
+  </ul>
 </div>
 
-<div class="menu-dropdown menu-dropdown-download-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Download this page">
-      <i class="fas fa-download"></i>
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
   </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="_sources/Klasse-F.ipynb"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Download source file"
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/Klasse-F.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
 >
   
 
-<span class="headerbtn__icon-container">
+<span class="btn__icon-container">
   <i class="fas fa-file"></i>
   </span>
-<span class="headerbtn__text-container">.ipynb</span>
+<span class="btn__text-container">.ipynb</span>
 </a>
-
-      </li>
+</li>
+      
+      
+      
       
       <li>
-        
-<button onclick="printPdf(this)"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="left"
-title="Print to PDF"
+<button onclick="window.print()"
+  class="btn btn-sm dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
 >
   
 
-<span class="headerbtn__icon-container">
+<span class="btn__icon-container">
   <i class="fas fa-file-pdf"></i>
   </span>
-<span class="headerbtn__text-container">.pdf</span>
+<span class="btn__text-container">.pdf</span>
 </button>
-
-      </li>
+</li>
       
-    </ul>
-  </div>
+  </ul>
 </div>
-<label for="__page-toc"
-  class="headerbtn headerbtn-page-toc"
-  
->
-  
 
-<span class="headerbtn__icon-container">
-  <i class="fas fa-list"></i>
-  </span>
 
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Zoeken" aria-label="Zoeken" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
 </label>
-
+</div></div>
+      
     </div>
+  
 </div>
-
-<!-- Table of contents -->
-<div class="col-md-3 bd-toc show noprint">
-    <div class="tocsection onthispage pt-5 pb-3">
-        <i class="fas fa-list"></i> Contents
-    </div>
-    <nav id="bd-toc-nav" aria-label="Page">
-        <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#basisschema-van-de-klasse-f-versterker">
-   Basisschema van de klasse F versterker
-  </a>
- </li>
-</ul>
-
-    </nav>
 </div>
-    </div>
-    <div class="article row">
-        <div class="col pl-md-3 pl-lg-5 content-container">
-            <!-- Table of contents that is only displayed when printing the page -->
-            <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Klasse F Verstekers</h1>
-                <!-- Table of contents -->
-                <div id="print-main-content">
-                    <div id="jb-print-toc">
-                        
-                        <div>
-                            <h2> Contents </h2>
-                        </div>
-                        <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#basisschema-van-de-klasse-f-versterker">
-   Basisschema van de klasse F versterker
-  </a>
- </li>
-</ul>
+              
+              
 
-                        </nav>
-                    </div>
-                </div>
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Klasse F Verstekers</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
             </div>
-            <main id="main-content" role="main">
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#basisschema-van-de-klasse-f-versterker">Basisschema van de klasse F versterker</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
                 
-              <div>
-                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
   <section class="tex2jax_ignore mathjax_ignore" id="klasse-f-verstekers">
-<h1>Klasse F Verstekers<a class="headerlink" href="#klasse-f-verstekers" title="Permalink naar deze titel">#</a></h1>
+<h1>Klasse F Verstekers<a class="headerlink" href="#klasse-f-verstekers" title="Permalink to this heading">#</a></h1>
 <p><a href="./slides/Klasse-F.slides.html" target="_blank"><img alt="slides" src="_images/slides-beschikbaar-blue.svg" /></a>
 <a href="../Lite/ToegepasteAnalogeElektronica/lab?path=Klasse-F.ipynb" target="_blank"><img alt="slides" src="_images/open_in-JupyterLite-blue.svg" /></a>
 <a href="../Deck/ToegepasteAnalogeElektronica/lab?path=Klasse-F.ipynb" target="_blank"><img alt="slides" src="_images/JupyterDeck-slides-blue.svg" /></a></p>
 <p>In dit hoofdstuk bestuderen we de klasse F versterker als een uitbreiding van de klasse C versterker. Beide versterkers zijn resonante versterkers die bestaat uit een LRC trilkring (of meerdere LC kringen) die aangestuurd wordt door een enkele transistor. Als een gevolg hiervan werkt deze versterker op een vaste frequentie of binnen een zeer beperkte bandbreedte rond deze centrale frequentie. Deze bandbreedte is typisch maximaal 1%  van de resonantie frequentie.
 In <a class="reference internal" href="#vermogenversterkers2"><span class="std std-numref">Tabel 2</span></a> geven we een overzicht van deze verschillende versterkers.</p>
-<table class="colwidths-auto table" id="vermogenversterkers2">
+<table class="table" id="vermogenversterkers2">
 <caption><span class="caption-number">Tabel 2 </span><span class="caption-text">Indeling van de vermogenversterkers</span><a class="headerlink" href="#vermogenversterkers2" title="Permalink naar deze tabel">#</a></caption>
 <thead>
-<tr class="row-odd"><th class="text-left head"><p></p></th>
-<th class="text-left head"><p>laagfrequent of breedband</p></th>
-<th class="text-left head"><p>hoogfrequent of resonant</p></th>
+<tr class="row-odd"><th class="head text-left"><p></p></th>
+<th class="head text-left"><p>laagfrequent of breedband</p></th>
+<th class="head text-left"><p>hoogfrequent of resonant</p></th>
 </tr>
 </thead>
 <tbody>
@@ -542,7 +553,7 @@ In <a class="reference internal" href="#vermogenversterkers2"><span class="std s
 </div>
 <p>Wanneer de gelijkaardige stroompulsen aangelegd worden op 2 parallelle LRC kringen in serie, zal dezelfde stroom door de kringen lopen, maar zullen de spanningen over beide kringen opgeteld worden.</p>
 <section id="basisschema-van-de-klasse-f-versterker">
-<h2>Basisschema van de klasse F versterker<a class="headerlink" href="#basisschema-van-de-klasse-f-versterker" title="Permalink naar deze titel">#</a></h2>
+<h2>Basisschema van de klasse F versterker<a class="headerlink" href="#basisschema-van-de-klasse-f-versterker" title="Permalink to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_output docutils container">
 <figure class="align-default" id="ffig1">
@@ -552,97 +563,18 @@ In <a class="reference internal" href="#vermogenversterkers2"><span class="std s
 </figure>
 </div>
 </div>
-<div class="cell docutils container">
-<div class="cell_output docutils container">
-<div class="output text_html"><style>pre { line-height: 125%; }
-td.linenos .normal { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
-span.linenos { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
-td.linenos .special { color: #000000; background-color: #ffffc0; padding-left: 5px; padding-right: 5px; }
-span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 5px; padding-right: 5px; }
-.output_html .hll { background-color: #ffffcc }
-.output_html { background: #f8f8f8; }
-.output_html .c { color: #3D7B7B; font-style: italic } /* Comment */
-.output_html .err { border: 1px solid #FF0000 } /* Error */
-.output_html .k { color: #008000; font-weight: bold } /* Keyword */
-.output_html .o { color: #666666 } /* Operator */
-.output_html .ch { color: #3D7B7B; font-style: italic } /* Comment.Hashbang */
-.output_html .cm { color: #3D7B7B; font-style: italic } /* Comment.Multiline */
-.output_html .cp { color: #9C6500 } /* Comment.Preproc */
-.output_html .cpf { color: #3D7B7B; font-style: italic } /* Comment.PreprocFile */
-.output_html .c1 { color: #3D7B7B; font-style: italic } /* Comment.Single */
-.output_html .cs { color: #3D7B7B; font-style: italic } /* Comment.Special */
-.output_html .gd { color: #A00000 } /* Generic.Deleted */
-.output_html .ge { font-style: italic } /* Generic.Emph */
-.output_html .gr { color: #E40000 } /* Generic.Error */
-.output_html .gh { color: #000080; font-weight: bold } /* Generic.Heading */
-.output_html .gi { color: #008400 } /* Generic.Inserted */
-.output_html .go { color: #717171 } /* Generic.Output */
-.output_html .gp { color: #000080; font-weight: bold } /* Generic.Prompt */
-.output_html .gs { font-weight: bold } /* Generic.Strong */
-.output_html .gu { color: #800080; font-weight: bold } /* Generic.Subheading */
-.output_html .gt { color: #0044DD } /* Generic.Traceback */
-.output_html .kc { color: #008000; font-weight: bold } /* Keyword.Constant */
-.output_html .kd { color: #008000; font-weight: bold } /* Keyword.Declaration */
-.output_html .kn { color: #008000; font-weight: bold } /* Keyword.Namespace */
-.output_html .kp { color: #008000 } /* Keyword.Pseudo */
-.output_html .kr { color: #008000; font-weight: bold } /* Keyword.Reserved */
-.output_html .kt { color: #B00040 } /* Keyword.Type */
-.output_html .m { color: #666666 } /* Literal.Number */
-.output_html .s { color: #BA2121 } /* Literal.String */
-.output_html .na { color: #687822 } /* Name.Attribute */
-.output_html .nb { color: #008000 } /* Name.Builtin */
-.output_html .nc { color: #0000FF; font-weight: bold } /* Name.Class */
-.output_html .no { color: #880000 } /* Name.Constant */
-.output_html .nd { color: #AA22FF } /* Name.Decorator */
-.output_html .ni { color: #717171; font-weight: bold } /* Name.Entity */
-.output_html .ne { color: #CB3F38; font-weight: bold } /* Name.Exception */
-.output_html .nf { color: #0000FF } /* Name.Function */
-.output_html .nl { color: #767600 } /* Name.Label */
-.output_html .nn { color: #0000FF; font-weight: bold } /* Name.Namespace */
-.output_html .nt { color: #008000; font-weight: bold } /* Name.Tag */
-.output_html .nv { color: #19177C } /* Name.Variable */
-.output_html .ow { color: #AA22FF; font-weight: bold } /* Operator.Word */
-.output_html .w { color: #bbbbbb } /* Text.Whitespace */
-.output_html .mb { color: #666666 } /* Literal.Number.Bin */
-.output_html .mf { color: #666666 } /* Literal.Number.Float */
-.output_html .mh { color: #666666 } /* Literal.Number.Hex */
-.output_html .mi { color: #666666 } /* Literal.Number.Integer */
-.output_html .mo { color: #666666 } /* Literal.Number.Oct */
-.output_html .sa { color: #BA2121 } /* Literal.String.Affix */
-.output_html .sb { color: #BA2121 } /* Literal.String.Backtick */
-.output_html .sc { color: #BA2121 } /* Literal.String.Char */
-.output_html .dl { color: #BA2121 } /* Literal.String.Delimiter */
-.output_html .sd { color: #BA2121; font-style: italic } /* Literal.String.Doc */
-.output_html .s2 { color: #BA2121 } /* Literal.String.Double */
-.output_html .se { color: #AA5D1F; font-weight: bold } /* Literal.String.Escape */
-.output_html .sh { color: #BA2121 } /* Literal.String.Heredoc */
-.output_html .si { color: #A45A77; font-weight: bold } /* Literal.String.Interpol */
-.output_html .sx { color: #008000 } /* Literal.String.Other */
-.output_html .sr { color: #A45A77 } /* Literal.String.Regex */
-.output_html .s1 { color: #BA2121 } /* Literal.String.Single */
-.output_html .ss { color: #19177C } /* Literal.String.Symbol */
-.output_html .bp { color: #008000 } /* Name.Builtin.Pseudo */
-.output_html .fm { color: #0000FF } /* Name.Function.Magic */
-.output_html .vc { color: #19177C } /* Name.Variable.Class */
-.output_html .vg { color: #19177C } /* Name.Variable.Global */
-.output_html .vi { color: #19177C } /* Name.Variable.Instance */
-.output_html .vm { color: #19177C } /* Name.Variable.Magic */
-.output_html .il { color: #666666 } /* Literal.Number.Integer.Long */</style><div class="highlight"><pre><span></span><span class="o">*</span><span class="w"> </span><span class="nx">klasse</span><span class="w"> </span><span class="nx">F</span><span class="w"> </span><span class="nx">basiscircuit</span><span class="w"></span>
-<span class="nx">Q_Q1</span><span class="w">         </span><span class="mi">2</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="nx">Q2</span><span class="w"></span>
-<span class="nx">L_L1</span><span class="w">         </span><span class="mi">5</span><span class="w"> </span><span class="mi">3</span><span class="w">   </span><span class="mi">1</span><span class="nx">uH</span><span class="w"></span>
-<span class="nx">C_C1</span><span class="w">         </span><span class="mi">5</span><span class="w"> </span><span class="mi">3</span><span class="w">   </span><span class="mi">10</span><span class="nx">n</span><span class="w"></span>
-<span class="nx">R_R1</span><span class="w">         </span><span class="mi">5</span><span class="w"> </span><span class="mi">3</span><span class="w">   </span><span class="mi">60</span><span class="w"></span>
-<span class="nx">V_V3</span><span class="w">         </span><span class="mi">3</span><span class="w"> </span><span class="mi">0</span><span class="w">   </span><span class="mi">11</span><span class="nx">V</span><span class="w"></span>
-<span class="nx">V_V5</span><span class="w">         </span><span class="mi">1</span><span class="w"> </span><span class="mi">0</span><span class="w">   </span><span class="nx">sin</span><span class="p">(</span><span class="m m-Double">0.7</span><span class="w"> </span><span class="m m-Double">0.8</span><span class="w"> </span><span class="mi">1591500</span><span class="p">)</span><span class="w"> </span><span class="nx">DC</span><span class="p">=</span><span class="m m-Double">0.7</span><span class="w"></span>
-<span class="nx">C_C3</span><span class="w">         </span><span class="mi">5</span><span class="w"> </span><span class="mi">2</span><span class="w">   </span><span class="mi">10</span><span class="nx">n</span><span class="w"></span>
-<span class="nx">L_L3</span><span class="w">         </span><span class="mi">5</span><span class="w"> </span><span class="mi">2</span><span class="w">   </span><span class="m m-Double">0.111</span><span class="nx">uH</span><span class="w"></span>
-<span class="p">.</span><span class="nx">model</span><span class="w"> </span><span class="nx">Q2</span><span class="w">  </span><span class="nx">NPN</span><span class="p">(</span><span class="nx">Is</span><span class="p">=</span><span class="m m-Double">14.34</span><span class="kd">f</span><span class="w"> </span><span class="nx">BF</span><span class="p">=</span><span class="mi">200</span><span class="w"> </span><span class="nx">RB</span><span class="p">=</span><span class="mi">200</span><span class="w"> </span><span class="p">)</span><span class="w"></span>
-</pre></div>
-</div></div>
-</div>
-<div class="literal-block-wrapper docutils container" id="listingf1">
-<div class="code-block-caption"><span class="caption-number">Spice Listing 8 </span><span class="caption-text">basis Klasse F circuit</span><a class="headerlink" href="#listingf1" title="Permalink naar deze broncode">#</a></div>
-<div class="highlight-spice notranslate"><div class="highlight"><pre><span></span>
+<div class="literal-block-wrapper docutils container" id="espicef">
+<div class="code-block-caption"><span class="caption-number">Spice Listing 8 </span><span class="caption-text">basis Klasse F circuit spice file</span><a class="headerlink" href="#espicef" title="Permalink naar deze broncode">#</a></div>
+<div class="highlight-spice notranslate"><div class="highlight"><pre><span></span><span class="o">*</span><span class="w"> </span><span class="nx">klasse</span><span class="w"> </span><span class="nx">F</span><span class="w"> </span><span class="nx">basiscircuit</span>
+<span class="nx">Q_Q1</span><span class="w">         </span><span class="mi">2</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="nx">Q2</span>
+<span class="nx">L_L1</span><span class="w">         </span><span class="mi">5</span><span class="w"> </span><span class="mi">3</span><span class="w">   </span><span class="mi">1</span><span class="nx">uH</span><span class="w">  </span>
+<span class="nx">C_C1</span><span class="w">         </span><span class="mi">5</span><span class="w"> </span><span class="mi">3</span><span class="w">   </span><span class="mi">10</span><span class="nx">n</span><span class="w">  </span>
+<span class="nx">R_R1</span><span class="w">         </span><span class="mi">5</span><span class="w"> </span><span class="mi">3</span><span class="w">   </span><span class="mi">60</span><span class="w">  </span>
+<span class="nx">V_V3</span><span class="w">         </span><span class="mi">3</span><span class="w"> </span><span class="mi">0</span><span class="w">   </span><span class="mi">11</span><span class="nx">V</span>
+<span class="nx">V_V5</span><span class="w">         </span><span class="mi">1</span><span class="w"> </span><span class="mi">0</span><span class="w">   </span><span class="nx">sin</span><span class="p">(</span><span class="m m-Double">0.7</span><span class="w"> </span><span class="m m-Double">0.8</span><span class="w"> </span><span class="mi">1591500</span><span class="p">)</span><span class="w"> </span><span class="nx">DC</span><span class="p">=</span><span class="m m-Double">0.7</span>
+<span class="nx">C_C3</span><span class="w">         </span><span class="mi">5</span><span class="w"> </span><span class="mi">2</span><span class="w">   </span><span class="mi">10</span><span class="nx">n</span><span class="w">  </span>
+<span class="nx">L_L3</span><span class="w">         </span><span class="mi">5</span><span class="w"> </span><span class="mi">2</span><span class="w">   </span><span class="m m-Double">0.111</span><span class="nx">uH</span>
+<span class="p">.</span><span class="nx">model</span><span class="w"> </span><span class="nx">Q2</span><span class="w">  </span><span class="nx">NPN</span><span class="p">(</span><span class="nx">Is</span><span class="p">=</span><span class="m m-Double">14.34</span><span class="kd">f</span><span class="w"> </span><span class="nx">BF</span><span class="p">=</span><span class="mi">200</span><span class="w"> </span><span class="nx">RB</span><span class="p">=</span><span class="mi">200</span><span class="w"> </span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -686,100 +618,18 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 </figure>
 </div>
 </div>
-<div class="cell docutils container">
-<div class="cell_output docutils container">
-<div class="output text_html"><style>pre { line-height: 125%; }
-td.linenos .normal { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
-span.linenos { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
-td.linenos .special { color: #000000; background-color: #ffffc0; padding-left: 5px; padding-right: 5px; }
-span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 5px; padding-right: 5px; }
-.output_html .hll { background-color: #ffffcc }
-.output_html { background: #f8f8f8; }
-.output_html .c { color: #3D7B7B; font-style: italic } /* Comment */
-.output_html .err { border: 1px solid #FF0000 } /* Error */
-.output_html .k { color: #008000; font-weight: bold } /* Keyword */
-.output_html .o { color: #666666 } /* Operator */
-.output_html .ch { color: #3D7B7B; font-style: italic } /* Comment.Hashbang */
-.output_html .cm { color: #3D7B7B; font-style: italic } /* Comment.Multiline */
-.output_html .cp { color: #9C6500 } /* Comment.Preproc */
-.output_html .cpf { color: #3D7B7B; font-style: italic } /* Comment.PreprocFile */
-.output_html .c1 { color: #3D7B7B; font-style: italic } /* Comment.Single */
-.output_html .cs { color: #3D7B7B; font-style: italic } /* Comment.Special */
-.output_html .gd { color: #A00000 } /* Generic.Deleted */
-.output_html .ge { font-style: italic } /* Generic.Emph */
-.output_html .gr { color: #E40000 } /* Generic.Error */
-.output_html .gh { color: #000080; font-weight: bold } /* Generic.Heading */
-.output_html .gi { color: #008400 } /* Generic.Inserted */
-.output_html .go { color: #717171 } /* Generic.Output */
-.output_html .gp { color: #000080; font-weight: bold } /* Generic.Prompt */
-.output_html .gs { font-weight: bold } /* Generic.Strong */
-.output_html .gu { color: #800080; font-weight: bold } /* Generic.Subheading */
-.output_html .gt { color: #0044DD } /* Generic.Traceback */
-.output_html .kc { color: #008000; font-weight: bold } /* Keyword.Constant */
-.output_html .kd { color: #008000; font-weight: bold } /* Keyword.Declaration */
-.output_html .kn { color: #008000; font-weight: bold } /* Keyword.Namespace */
-.output_html .kp { color: #008000 } /* Keyword.Pseudo */
-.output_html .kr { color: #008000; font-weight: bold } /* Keyword.Reserved */
-.output_html .kt { color: #B00040 } /* Keyword.Type */
-.output_html .m { color: #666666 } /* Literal.Number */
-.output_html .s { color: #BA2121 } /* Literal.String */
-.output_html .na { color: #687822 } /* Name.Attribute */
-.output_html .nb { color: #008000 } /* Name.Builtin */
-.output_html .nc { color: #0000FF; font-weight: bold } /* Name.Class */
-.output_html .no { color: #880000 } /* Name.Constant */
-.output_html .nd { color: #AA22FF } /* Name.Decorator */
-.output_html .ni { color: #717171; font-weight: bold } /* Name.Entity */
-.output_html .ne { color: #CB3F38; font-weight: bold } /* Name.Exception */
-.output_html .nf { color: #0000FF } /* Name.Function */
-.output_html .nl { color: #767600 } /* Name.Label */
-.output_html .nn { color: #0000FF; font-weight: bold } /* Name.Namespace */
-.output_html .nt { color: #008000; font-weight: bold } /* Name.Tag */
-.output_html .nv { color: #19177C } /* Name.Variable */
-.output_html .ow { color: #AA22FF; font-weight: bold } /* Operator.Word */
-.output_html .w { color: #bbbbbb } /* Text.Whitespace */
-.output_html .mb { color: #666666 } /* Literal.Number.Bin */
-.output_html .mf { color: #666666 } /* Literal.Number.Float */
-.output_html .mh { color: #666666 } /* Literal.Number.Hex */
-.output_html .mi { color: #666666 } /* Literal.Number.Integer */
-.output_html .mo { color: #666666 } /* Literal.Number.Oct */
-.output_html .sa { color: #BA2121 } /* Literal.String.Affix */
-.output_html .sb { color: #BA2121 } /* Literal.String.Backtick */
-.output_html .sc { color: #BA2121 } /* Literal.String.Char */
-.output_html .dl { color: #BA2121 } /* Literal.String.Delimiter */
-.output_html .sd { color: #BA2121; font-style: italic } /* Literal.String.Doc */
-.output_html .s2 { color: #BA2121 } /* Literal.String.Double */
-.output_html .se { color: #AA5D1F; font-weight: bold } /* Literal.String.Escape */
-.output_html .sh { color: #BA2121 } /* Literal.String.Heredoc */
-.output_html .si { color: #A45A77; font-weight: bold } /* Literal.String.Interpol */
-.output_html .sx { color: #008000 } /* Literal.String.Other */
-.output_html .sr { color: #A45A77 } /* Literal.String.Regex */
-.output_html .s1 { color: #BA2121 } /* Literal.String.Single */
-.output_html .ss { color: #19177C } /* Literal.String.Symbol */
-.output_html .bp { color: #008000 } /* Name.Builtin.Pseudo */
-.output_html .fm { color: #0000FF } /* Name.Function.Magic */
-.output_html .vc { color: #19177C } /* Name.Variable.Class */
-.output_html .vg { color: #19177C } /* Name.Variable.Global */
-.output_html .vi { color: #19177C } /* Name.Variable.Instance */
-.output_html .vm { color: #19177C } /* Name.Variable.Magic */
-.output_html .il { color: #666666 } /* Literal.Number.Integer.Long */</style><div class="highlight"><pre><span></span><span class="o">*</span><span class="w"> </span><span class="nx">klasseF</span><span class="w"></span>
-<span class="nx">Q_Q1</span><span class="w">         </span><span class="mi">2</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="nx">Q2</span><span class="w"></span>
-<span class="nx">L_L1</span><span class="w">         </span><span class="mi">0</span><span class="w"> </span><span class="mi">3</span><span class="w">   </span><span class="mi">1</span><span class="nx">uH</span><span class="w"></span>
-<span class="nx">C_C1</span><span class="w">         </span><span class="mi">0</span><span class="w"> </span><span class="mi">3</span><span class="w">   </span><span class="mi">10</span><span class="nx">n</span><span class="w"></span>
-<span class="nx">R_R1</span><span class="w">         </span><span class="mi">0</span><span class="w"> </span><span class="mi">3</span><span class="w">   </span><span class="mi">100</span><span class="w"></span>
-<span class="nx">V_V3</span><span class="w">         </span><span class="mi">4</span><span class="w"> </span><span class="mi">0</span><span class="w">   </span><span class="mi">10</span><span class="nx">V</span><span class="w"></span>
-<span class="nx">V_V5</span><span class="w">         </span><span class="mi">1</span><span class="w"> </span><span class="mi">0</span><span class="w">   </span><span class="nx">sin</span><span class="p">(</span><span class="m m-Double">0.4</span><span class="w"> </span><span class="m m-Double">0.8</span><span class="w"> </span><span class="mi">1591500</span><span class="p">)</span><span class="w"> </span><span class="nx">DC</span><span class="p">=</span><span class="m m-Double">0.4</span><span class="w"></span>
-<span class="nx">C_C2</span><span class="w">         </span><span class="mi">5</span><span class="w"> </span><span class="mi">3</span><span class="w">   </span><span class="mi">10</span><span class="nx">n</span><span class="w"></span>
-<span class="nx">L_L3</span><span class="w">         </span><span class="mi">6</span><span class="w"> </span><span class="mi">3</span><span class="w">   </span><span class="m m-Double">0.111</span><span class="nx">uH</span><span class="w"></span>
-<span class="nx">R_R3</span><span class="w">         </span><span class="mi">6</span><span class="w"> </span><span class="mi">5</span><span class="w">   </span><span class="m m-Double">0.001</span><span class="w"></span>
-<span class="nx">L_L2</span><span class="w">         </span><span class="mi">2</span><span class="w"> </span><span class="mi">4</span><span class="w">   </span><span class="mi">2</span><span class="nx">mH</span><span class="w"></span>
-<span class="nx">C_C3</span><span class="w">         </span><span class="mi">2</span><span class="w"> </span><span class="mi">5</span><span class="w">   </span><span class="mi">1000</span><span class="nx">n</span><span class="w"></span>
-<span class="p">.</span><span class="nx">model</span><span class="w"> </span><span class="nx">Q2</span><span class="w">  </span><span class="nx">NPN</span><span class="p">(</span><span class="nx">Is</span><span class="p">=</span><span class="m m-Double">14.34</span><span class="kd">f</span><span class="w"> </span><span class="nx">BF</span><span class="p">=</span><span class="mi">200</span><span class="w"> </span><span class="nx">Rb</span><span class="p">=</span><span class="mi">100</span><span class="w"> </span><span class="p">)</span><span class="w"></span>
-</pre></div>
-</div></div>
-</div>
 <div class="literal-block-wrapper docutils container" id="listingf2">
 <div class="code-block-caption"><span class="caption-number">Spice Listing 9 </span><span class="caption-text">Klasse F circuit waarbij de uitgang oscilleert rond de grond</span><a class="headerlink" href="#listingf2" title="Permalink naar deze broncode">#</a></div>
-<div class="highlight-spice notranslate"><div class="highlight"><pre><span></span>
+<div class="highlight-spice notranslate"><div class="highlight"><pre><span></span><span class="o">*</span><span class="w"> </span><span class="nx">klasse</span><span class="w"> </span><span class="nx">F</span><span class="w"> </span><span class="nx">basiscircuit</span>
+<span class="nx">Q_Q1</span><span class="w">         </span><span class="mi">2</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="nx">Q2</span>
+<span class="nx">L_L1</span><span class="w">         </span><span class="mi">5</span><span class="w"> </span><span class="mi">3</span><span class="w">   </span><span class="mi">1</span><span class="nx">uH</span><span class="w">  </span>
+<span class="nx">C_C1</span><span class="w">         </span><span class="mi">5</span><span class="w"> </span><span class="mi">3</span><span class="w">   </span><span class="mi">10</span><span class="nx">n</span><span class="w">  </span>
+<span class="nx">R_R1</span><span class="w">         </span><span class="mi">5</span><span class="w"> </span><span class="mi">3</span><span class="w">   </span><span class="mi">60</span><span class="w">  </span>
+<span class="nx">V_V3</span><span class="w">         </span><span class="mi">3</span><span class="w"> </span><span class="mi">0</span><span class="w">   </span><span class="mi">11</span><span class="nx">V</span>
+<span class="nx">V_V5</span><span class="w">         </span><span class="mi">1</span><span class="w"> </span><span class="mi">0</span><span class="w">   </span><span class="nx">sin</span><span class="p">(</span><span class="m m-Double">0.7</span><span class="w"> </span><span class="m m-Double">0.8</span><span class="w"> </span><span class="mi">1591500</span><span class="p">)</span><span class="w"> </span><span class="nx">DC</span><span class="p">=</span><span class="m m-Double">0.7</span>
+<span class="nx">C_C3</span><span class="w">         </span><span class="mi">5</span><span class="w"> </span><span class="mi">2</span><span class="w">   </span><span class="mi">10</span><span class="nx">n</span><span class="w">  </span>
+<span class="nx">L_L3</span><span class="w">         </span><span class="mi">5</span><span class="w"> </span><span class="mi">2</span><span class="w">   </span><span class="m m-Double">0.111</span><span class="nx">uH</span>
+<span class="p">.</span><span class="nx">model</span><span class="w"> </span><span class="nx">Q2</span><span class="w">  </span><span class="nx">NPN</span><span class="p">(</span><span class="nx">Is</span><span class="p">=</span><span class="m m-Double">14.34</span><span class="kd">f</span><span class="w"> </span><span class="nx">BF</span><span class="p">=</span><span class="mi">200</span><span class="w"> </span><span class="nx">RB</span><span class="p">=</span><span class="mi">200</span><span class="w"> </span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -818,7 +668,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
             mode: "kuleuven"
         },
         kernelOptions: {
-            kernelName: "kuleuven",
+            name: "kuleuven",
             path: "./."
         },
         predefinedOutput: true
@@ -826,49 +676,95 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
     </script>
     <script>kernelName = 'kuleuven'</script>
 
-              </div>
+                </article>
               
-            </main>
-            <footer class="footer-article noprint">
-                
-    <!-- Previous / next buttons -->
-<div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="Klasse-C.html" title="vorige pagina">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">vorige</p>
-            <p class="prev-next-title">Klasse C  Versterkers</p>
-        </div>
+
+              
+              
+                <footer class="bd-footer-article">
+                  <!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="Klasse-C.html"
+       title="vorige pagina">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">vorige</p>
+        <p class="prev-next-title">Klasse C  Versterkers</p>
+      </div>
     </a>
-    <a class='right-next' id="next-link" href="Klasse-D.html" title="volgende pagina">
-    <div class="prev-next-info">
+    <a class="right-next"
+       href="Klasse-D.html"
+       title="volgende pagina">
+      <div class="prev-next-info">
         <p class="prev-next-subtitle">volgende</p>
         <p class="prev-next-title">Klasse D resonante Versterkers</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
-            </footer>
-        </div>
-    </div>
-    <div class="footer-content row">
-        <footer class="col footer"><p>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#basisschema-van-de-klasse-f-versterker">Basisschema van de klasse F versterker</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            <div class="bd-footer-content__inner">
+<div class="bd-footer-content__inner container">
   
-    By Jan Genoe (jan.genoe@kuleuven.be)<br/>
-  
-</p>
-        </footer>
-    </div>
+  <div class="footer-item">
     
-</div>
+<p class="component-author">
+By Jan Genoe (jan.genoe@kuleuven.be)
+</p>
 
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    <p class="last-updated">
+  Laatste aanpassing op None.
+  <br/>
+</p>
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div></div>
+          </footer>
+        
 
-      </div>
+      </main>
     </div>
+  </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+  <script src="_static/scripts/bootstrap.js?digest=12da95d707ffb74b382d"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=12da95d707ffb74b382d"></script>
 
-
+  <footer class="bd-footer">
+  </footer>
   </body>
 </html>

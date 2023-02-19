@@ -7,34 +7,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
 
-<title>Klasse-C slides</title><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script><script>
-(function() {
-  function addWidgetsRenderer() {
-    var mimeElement = document.querySelector('script[type="application/vnd.jupyter.widget-view+json"]');
-    var scriptElement = document.createElement('script');
-    
-    var widgetRendererSrc = 'https://unpkg.com/@jupyter-widgets/html-manager@*/dist/embed-amd.js';
-    
-    var widgetState;
-
-    // Fallback for older version:
-    try {
-      widgetState = mimeElement && JSON.parse(mimeElement.innerHTML);
-
-      if (widgetState && (widgetState.version_major < 2 || !widgetState.version_major)) {
-        
-        var widgetRendererSrc = 'https://unpkg.com/@jupyter-js-widgets@*/dist/embed.js';
-        
-      }
-    } catch(e) {}
-
-    scriptElement.src = widgetRendererSrc;
-    document.body.appendChild(scriptElement);
-  }
-
-  document.addEventListener('DOMContentLoaded', addWidgetsRenderer);
-}());
-</script>
+<title>Klasse-C slides</title><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 
 <!-- General and theme style sheets -->
 <link rel="stylesheet" href="https://unpkg.com/reveal.js@4.0.2/dist/reveal.css">
@@ -21267,7 +21240,7 @@ z
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell  jp-mod-noInput ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell  jp-mod-noInput  celltag_remove_cell">
 
 <div class="jp-Cell-outputWrapper">
 <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
@@ -47009,7 +46982,7 @@ L 824.378125 7.2
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell  jp-mod-noInput ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell  jp-mod-noInput  celltag_remove_cell">
 
 <div class="jp-Cell-outputWrapper">
 <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
@@ -57458,7 +57431,7 @@ z
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell  jp-mod-noInput ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell  jp-mod-noInput  celltag_remove_cell">
 
 <div class="jp-Cell-outputWrapper">
 <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
@@ -57541,16 +57514,16 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 .output_html .vg { color: #19177C } /* Name.Variable.Global */
 .output_html .vi { color: #19177C } /* Name.Variable.Instance */
 .output_html .vm { color: #19177C } /* Name.Variable.Magic */
-.output_html .il { color: #666666 } /* Literal.Number.Integer.Long */</style><div class="highlight"><pre><span></span><span class="o">*</span><span class="w"> </span><span class="nx">klasseC</span><span class="w">   </span><span class="nx">versie2</span><span class="w"></span>
-<span class="nx">Q_Q1</span><span class="w">         </span><span class="mi">2</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="mi">0</span><span class="w">  </span><span class="nx">Q2</span><span class="w"></span>
+.output_html .il { color: #666666 } /* Literal.Number.Integer.Long */</style><div class="highlight"><pre><span></span><span class="o">*</span><span class="w"> </span><span class="nx">klasseC</span><span class="w">   </span><span class="nx">versie2</span>
+<span class="nx">Q_Q1</span><span class="w">         </span><span class="mi">2</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="mi">0</span><span class="w">  </span><span class="nx">Q2</span>
 <span class="nx">L_L1</span><span class="w">         </span><span class="mi">0</span><span class="w"> </span><span class="mi">3</span><span class="w">    </span><span class="mi">1</span><span class="nx">uH</span><span class="w">  </span>
 <span class="nx">C_C1</span><span class="w">         </span><span class="mi">0</span><span class="w"> </span><span class="mi">3</span><span class="w">    </span><span class="mi">10</span><span class="nx">n</span><span class="w">  </span>
 <span class="nx">R_R1</span><span class="w">         </span><span class="mi">0</span><span class="w"> </span><span class="mi">3</span><span class="w">    </span><span class="mi">100</span><span class="w">  </span>
-<span class="nx">V_V3</span><span class="w">         </span><span class="mi">4</span><span class="w"> </span><span class="mi">0</span><span class="w">    </span><span class="mi">11</span><span class="nx">V</span><span class="w"></span>
-<span class="nx">V_V5</span><span class="w">         </span><span class="mi">1</span><span class="w"> </span><span class="mi">0</span><span class="w">    </span><span class="nx">sin</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="w"> </span><span class="m m-Double">3.09</span><span class="w"> </span><span class="mi">1591500</span><span class="p">)</span><span class="w"> </span><span class="nx">DC</span><span class="p">=</span><span class="o">-</span><span class="mi">2</span><span class="w"></span>
+<span class="nx">V_V3</span><span class="w">         </span><span class="mi">4</span><span class="w"> </span><span class="mi">0</span><span class="w">    </span><span class="mi">11</span><span class="nx">V</span>
+<span class="nx">V_V5</span><span class="w">         </span><span class="mi">1</span><span class="w"> </span><span class="mi">0</span><span class="w">    </span><span class="nx">sin</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="w"> </span><span class="m m-Double">3.09</span><span class="w"> </span><span class="mi">1591500</span><span class="p">)</span><span class="w"> </span><span class="nx">DC</span><span class="p">=</span><span class="o">-</span><span class="mi">2</span>
 <span class="nx">C_C2</span><span class="w">         </span><span class="mi">2</span><span class="w"> </span><span class="mi">3</span><span class="w">    </span><span class="mi">100</span><span class="nx">n</span><span class="w">  </span>
-<span class="nx">L_L2</span><span class="w">         </span><span class="mi">2</span><span class="w"> </span><span class="mi">4</span><span class="w">    </span><span class="mi">20</span><span class="nx">uH</span><span class="w"></span>
-<span class="p">.</span><span class="nx">model</span><span class="w"> </span><span class="nx">Q2</span><span class="w">  </span><span class="nx">NPN</span><span class="p">(</span><span class="nx">Is</span><span class="p">=</span><span class="m m-Double">14.34</span><span class="kd">f</span><span class="w"> </span><span class="nx">BF</span><span class="p">=</span><span class="m m-Double">255.9</span><span class="w"> </span><span class="nx">Rb</span><span class="p">=</span><span class="mi">100</span><span class="w"> </span><span class="p">)</span><span class="w"></span>
+<span class="nx">L_L2</span><span class="w">         </span><span class="mi">2</span><span class="w"> </span><span class="mi">4</span><span class="w">    </span><span class="mi">20</span><span class="nx">uH</span>
+<span class="p">.</span><span class="nx">model</span><span class="w"> </span><span class="nx">Q2</span><span class="w">  </span><span class="nx">NPN</span><span class="p">(</span><span class="nx">Is</span><span class="p">=</span><span class="m m-Double">14.34</span><span class="kd">f</span><span class="w"> </span><span class="nx">BF</span><span class="p">=</span><span class="m m-Double">255.9</span><span class="w"> </span><span class="nx">Rb</span><span class="p">=</span><span class="mi">100</span><span class="w"> </span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -68203,7 +68176,7 @@ z
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput  celltag_remove_cell" data-mime-type="text/markdown">
 <h2 id="Referenties">Referenties<a class="anchor-link" href="#Referenties">&#182;</a></h2><!-- BIBLIOGRAPHY START -->
 <div class="csl-bib-body">
   <div class="csl-entry"><i id="cite2c|1031761/4VFK3Q4R"></i>
@@ -68225,10 +68198,6 @@ z
 
 
 
-
-<script type="application/vnd.jupyter.widget-state+json">
-{"state": {}, "version_major": 2, "version_minor": 0}
-</script>
 
 
 

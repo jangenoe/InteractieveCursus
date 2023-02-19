@@ -1,44 +1,63 @@
 
+
 <!DOCTYPE html>
 
-<html lang="nl">
+
+<html lang="nl" >
+
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+<meta property="og:title" content="Filters" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://jangenoe.github.io/jangenoe/InteractieveCursus/ToegepasteAnalogeElektronica/Filters.html" />
+<meta property="og:site_name" content="Python" />
+<meta property="og:description" content="slides slides slides In dit hoofdstuk werk ik een aantal voorbeelden uit van berekening van filters. Dit hoofdstuk is slechts ter illustratie van een aantal voorbeelden. De eigenlijke cursus blijft..." />
+<meta property="og:image" content="https://jangenoe.github.io/InteractieveCursus/ToegepasteAnalogeElektronica/_static/logo.svg" />
+<meta property="og:image:alt" content="Python" />
+<meta name="description" content="slides slides slides In dit hoofdstuk werk ik een aantal voorbeelden uit van berekening van filters. Dit hoofdstuk is slechts ter illustratie van een aantal voorbeelden. De eigenlijke cursus blijft..." />
 
     <title>Filters &#8212; Toegepaste Analoge Elektronica</title>
-    
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
   <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-<link href="_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  <link href="_static/styles/theme.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
 
-    
-  <link rel="stylesheet"
-    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+  
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=56348ffd8e7ce817f831f1f32f1f7f6638896a71" type="text/css" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
     <link rel="stylesheet" type="text/css" href="_static/exercise.css" />
     <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
-    
+  
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=12da95d707ffb74b382d" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=12da95d707ffb74b382d" />
 
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="_static/doctools.js"></script>
     <script src="_static/clipboard.min.js"></script>
     <script src="_static/copybutton.js"></script>
-    <script src="_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
@@ -54,62 +73,140 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Filters';</script>
     <link rel="shortcut icon" href="_static/favicon.ico"/>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Zoeken" href="search.html" />
     <link rel="next" title="Transmissie lijnen" href="transmissielijn.html" />
     <link rel="prev" title="Klasse E Versterkers" href="Klasse-E.html" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="nl">
-    
-
-    <!-- Google Analytics -->
-    
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="nl"/>
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
-<!-- Checkboxes to toggle the left sidebar -->
-<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
-<label class="overlay overlay-navbar" for="__navigation">
-    <div class="visually-hidden">Toggle navigation sidebar</div>
-</label>
-<!-- Checkboxes to toggle the in-page toc -->
-<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
-<label class="overlay overlay-pagetoc" for="__page-toc">
-    <div class="visually-hidden">Toggle in-page Table of Contents</div>
-</label>
-<!-- Headers at the top -->
-<div class="announcement header-item noprint"></div>
-<div class="header header-item noprint"></div>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
 
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+<div class="bd-header__inner bd-page-width">
+  <label class="sidebar-toggle primary-toggle" for="__primary">
+    <span class="fa-solid fa-bars"></span>
+  </label>
+  
+  
+  <div class="col-lg-9 navbar-header-items">
     
-    <div class="container-fluid" id="banner"></div>
-
     
-
-    <div class="container-xl">
-      <div class="row">
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
           
-<!-- Sidebar -->
-<div class="bd-sidebar noprint" id="site-navigation">
-    <div class="bd-sidebar__content">
-        <div class="bd-sidebar__top"><div class="navbar-brand-box">
-    <a class="navbar-brand text-wrap" href="index.html">
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Zoeken" aria-label="Zoeken" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+        </div>
       
-        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Zoeken" aria-label="Zoeken" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+    </div>
+  
+
+  
+    <label class="sidebar-toggle secondary-toggle" for="__secondary">
+      <span class="fa-solid fa-outdent"></span>
+    </label>
+  
+</div>
+
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
         
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+    
+    
       
-      
-      <img src="_static/logo.svg" class="logo" alt="logo">
-      
-      
-      <h1 class="site-logo" id="site-title">Toegepaste Analoge Elektronica</h1>
-      
-    </a>
-</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
-  <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
-    <div class="bd-toc-item active">
+    
+    
+    <img src="_static/logo.svg" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="_static/logo.svg" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
@@ -118,694 +215,373 @@ const thebe_selector_output = ".output, .cell_output"
                 </a>
             </li>
         </ul>
-        <p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Inleiding
- </span>
-</p>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Inleiding</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="Spice-simulatie.html">
-   Spice simulatie
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="Spice-simulatie.html">Spice simulatie</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Versterkers
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Versterkers</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="Klasse-C.html">
-   Klasse C  Versterkers
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="Klasse-F.html">
-   Klasse F Verstekers
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="Klasse-D.html">
-   Klasse D resonante Versterkers
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="Klasse-E.html">
-   Klasse E  Versterkers
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="Klasse-C.html">Klasse C  Versterkers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Klasse-F.html">Klasse F Verstekers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Klasse-D.html">Klasse D resonante Versterkers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Klasse-E.html">Klasse E  Versterkers</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Filters
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Filters</span></p>
 <ul class="current nav bd-sidenav">
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
-   Filters
-  </a>
- </li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Filters</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  transmissielijnen
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">transmissielijnen</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="transmissielijn.html">
-   Transmissie lijnen
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="reflecties.html">
-   Reflecties
-  </a>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="SmithKaart.html">
-   SmithKaart
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
-  <label for="toctree-checkbox-1">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="SmithKaartOefening1.html">
-     Smith Kaart Oefening 1
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="SmithKaartOefening2.html">
-     Smith Kaart Oefening 2
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="SmithKaartOefening3.html">
-     Smith Kaart Oefening 3
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="SmithKaartOefening4.html">
-     Smith Kaart Oefening 4
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="SmithKaartOefening5.html">
-     Smith Kaart Oefening 5
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="SmithKaartOefening6.html">
-     Smith Kaart Oefening 6
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="SmithKaartOefening7.html">
-     Smith Kaart Oefening 7
-    </a>
-   </li>
-  </ul>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="transmissielijn.html">Transmissie lijnen</a></li>
+<li class="toctree-l1"><a class="reference internal" href="reflecties.html">Reflecties</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="SmithKaart.html">SmithKaart</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="SmithKaartOefening1.html">Smith Kaart Oefening 1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="SmithKaartOefening2.html">Smith Kaart Oefening 2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="SmithKaartOefening3.html">Smith Kaart Oefening 3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="SmithKaartOefening4.html">Smith Kaart Oefening 4</a></li>
+<li class="toctree-l2"><a class="reference internal" href="SmithKaartOefening5.html">Smith Kaart Oefening 5</a></li>
+<li class="toctree-l2"><a class="reference internal" href="SmithKaartOefening6.html">Smith Kaart Oefening 6</a></li>
+<li class="toctree-l2"><a class="reference internal" href="SmithKaartOefening7.html">Smith Kaart Oefening 7</a></li>
+<li class="toctree-l2"><a class="reference internal" href="SmithKaartOefening8.html">Smith Kaart Oefening 8</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">References</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="References.html">Referenties</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Overzicht</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference external" href="https://jangenoe.github.io/InteractieveCursus/intro.html">Lijst cursussen</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.kuleuven.be/wieiswie/en/person/00004269">Auteur Jan Genoe</a></li>
 </ul>
 
     </div>
 </nav></div>
-        <div class="bd-sidebar__bottom">
-             <!-- To handle the deprecated key -->
-            
-            <div class="navbar_extra_footer">
-            <a href="https://www.kuleuven.be"> <img src=" https://stijl.kuleuven.be/2016tmp/img/svg/logo.svg" alt="KULeuven"></a>
-            </div>
-            
-        </div>
     </div>
-    <div id="rtd-footer-container"></div>
-</div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
 
 
-          
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
 
-
-          
-<!-- A tiny helper pixel to detect if we've scrolled -->
 <div class="sbt-scroll-pixel-helper"></div>
-<!-- Main content -->
-<div class="col py-0 content-container">
-    
-    <div class="header-article row sticky-top noprint">
-        
 
-
-
-<div class="col py-1 d-flex header-article-main">
-    <div class="header-article__left">
-        
-        <label for="__navigation"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="right"
-title="Toggle navigation"
->
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
   
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-bars"></i>
-  </span>
-
-</label>
-
-        
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
     </div>
-    <div class="header-article__right">
-<div class="menu-dropdown menu-dropdown-launch-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Launch interactive content">
-      <i class="fas fa-rocket"></i>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
   </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="https://mybinder.org/v2/gh/jangenoe/InteractieveCursus/master?urlpath=lab/tree/ToegepasteAnalogeElektronica/Filters.ipynb"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Launch on Binder"
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://mybinder.org/v2/gh/jangenoe/InteractieveCursus/master?urlpath=lab/tree/ToegepasteAnalogeElektronica/Filters.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onBinder"
+   data-bs-placement="left" data-bs-toggle="tooltip"
 >
   
 
-<span class="headerbtn__icon-container">
+<span class="btn__icon-container">
   
     <img src="_static/images/logo_binder.svg">
   </span>
-<span class="headerbtn__text-container">Binder</span>
+<span class="btn__text-container">Binder</span>
 </a>
-
-      </li>
+</li>
       
-      <li>
-        <a href="https://colab.research.google.com/github/jangenoe/InteractieveCursus/blob/master/ToegepasteAnalogeElektronica/Filters.ipynb"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Launch on Colab"
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/jangenoe/InteractieveCursus/blob/master/ToegepasteAnalogeElektronica/Filters.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onColab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
 >
   
 
-<span class="headerbtn__icon-container">
+<span class="btn__icon-container">
   
     <img src="_static/images/logo_colab.png">
   </span>
-<span class="headerbtn__text-container">Colab</span>
+<span class="btn__text-container">Colab</span>
 </a>
-
-      </li>
+</li>
       
-    </ul>
-  </div>
+  </ul>
 </div>
 
+
+
+
 <button onclick="toggleFullScreen()"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="bottom"
-title="Fullscreen mode"
+  class="btn btn-sm"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
 >
   
 
-<span class="headerbtn__icon-container">
+<span class="btn__icon-container">
   <i class="fas fa-expand"></i>
   </span>
 
 </button>
 
-<div class="menu-dropdown menu-dropdown-repository-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Source repositories">
-      <i class="fab fa-github"></i>
+
+
+
+
+
+<div class="dropdown dropdown-repository-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
   </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="https://github.com/jangenoe/InteractieveCursus"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Source repository"
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/jangenoe/InteractieveCursus" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
 >
   
 
-<span class="headerbtn__icon-container">
+<span class="btn__icon-container">
   <i class="fab fa-github"></i>
   </span>
-<span class="headerbtn__text-container">repository</span>
+<span class="btn__text-container">repository</span>
 </a>
-
-      </li>
+</li>
       
-      <li>
-        <a href="https://github.com/jangenoe/InteractieveCursus/issues/new?title=Issue%20on%20page%20%2FFilters.html&body=Your%20issue%20content%20here."
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Open an issue"
+      
+      
+      
+      <li><a href="https://github.com/jangenoe/InteractieveCursus/issues/new?title=Issue%20on%20page%20%2FFilters.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
 >
   
 
-<span class="headerbtn__icon-container">
+<span class="btn__icon-container">
   <i class="fas fa-lightbulb"></i>
   </span>
-<span class="headerbtn__text-container">open issue</span>
+<span class="btn__text-container">open issue</span>
 </a>
-
-      </li>
+</li>
       
-      <li>
-        <a href="https://github.com/jangenoe/InteractieveCursus/edit/master/ToegepasteAnalogeElektronica/Filters.ipynb"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Edit this page"
+      
+      
+      
+      <li><a href="https://github.com/jangenoe/InteractieveCursus/edit/master/ToegepasteAnalogeElektronica/Filters.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Edit onGitHub"
+   data-bs-placement="left" data-bs-toggle="tooltip"
 >
   
 
-<span class="headerbtn__icon-container">
+<span class="btn__icon-container">
   <i class="fas fa-pencil-alt"></i>
   </span>
-<span class="headerbtn__text-container">suggest edit</span>
+<span class="btn__text-container">suggest edit</span>
 </a>
-
-      </li>
+</li>
       
-    </ul>
-  </div>
+  </ul>
 </div>
 
-<div class="menu-dropdown menu-dropdown-download-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Download this page">
-      <i class="fas fa-download"></i>
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
   </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="_sources/Filters.ipynb"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Download source file"
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/Filters.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
 >
   
 
-<span class="headerbtn__icon-container">
+<span class="btn__icon-container">
   <i class="fas fa-file"></i>
   </span>
-<span class="headerbtn__text-container">.ipynb</span>
+<span class="btn__text-container">.ipynb</span>
 </a>
-
-      </li>
+</li>
+      
+      
+      
       
       <li>
-        
-<button onclick="printPdf(this)"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="left"
-title="Print to PDF"
+<button onclick="window.print()"
+  class="btn btn-sm dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
 >
   
 
-<span class="headerbtn__icon-container">
+<span class="btn__icon-container">
   <i class="fas fa-file-pdf"></i>
   </span>
-<span class="headerbtn__text-container">.pdf</span>
+<span class="btn__text-container">.pdf</span>
 </button>
-
-      </li>
+</li>
       
-    </ul>
-  </div>
+  </ul>
 </div>
-<label for="__page-toc"
-  class="headerbtn headerbtn-page-toc"
-  
->
-  
 
-<span class="headerbtn__icon-container">
-  <i class="fas fa-list"></i>
-  </span>
 
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Zoeken" aria-label="Zoeken" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
 </label>
-
+</div></div>
+      
     </div>
+  
 </div>
-
-<!-- Table of contents -->
-<div class="col-md-3 bd-toc show noprint">
-    <div class="tocsection onthispage pt-5 pb-3">
-        <i class="fas fa-list"></i> Contents
-    </div>
-    <nav id="bd-toc-nav" aria-label="Page">
-        <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#aanpak-en-algemeen-perspectief">
-   Aanpak en algemeen perspectief
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#specifieke-filter-blokken">
-   Specifieke filter blokken
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#eerste-orde-filter-bouwblokken">
-     Eerste orde filter bouwblokken
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#tweede-orde-filter-blokken">
-     Tweede orde filter blokken
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#biquad-filter">
-       BiQuad filter
-      </a>
-      <ul class="nav section-nav flex-column">
-       <li class="toc-h5 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#het-gedeelte-van-het-biquad-circuit-dat-de-polen-bepaalt">
-         Het gedeelte van het biquad circuit dat de polen bepaalt
-        </a>
-       </li>
-       <li class="toc-h5 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#het-volledige-biquad-circuit">
-         Het volledige BiQuad circuit
-        </a>
-       </li>
-      </ul>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#sallen-en-key-circuit">
-       Sallen en Key Circuit
-      </a>
-     </li>
-    </ul>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#frequentietransformaties">
-   Frequentietransformaties
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#omrekenen-van-een-laagdoorlaatfilter-naar-een-hoogdoorlaatfilter">
-     Omrekenen van een laagdoorlaatfilter naar een hoogdoorlaatfilter
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#omrekenen-van-een-laagdoorlaatfilter-naar-een-banddoorlaatfilter">
-     Omrekenen van een laagdoorlaatfilter naar een banddoorlaatfilter
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#voorbeeld-omrekenen-van-de-polen-van-een-2de-orde-laagdoorlaatfilter-naar-een-2de-orde-banddoorlaatfilter">
-     Voorbeeld: Omrekenen van de polen van een 2de orde laagdoorlaatfilter naar een 2de orde banddoorlaatfilter
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#butterworth-filters">
-   Butterworth filters
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#butterworth-laagdoorlaatfilter-van-de-3de-orde">
-     Butterworth laagdoorlaatfilter van de 3de orde
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#butterworth-laagdoorlaatfilter-van-de-5de-orde">
-     Butterworth laagdoorlaatfilter van de 5de orde
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#vergelijking-van-de-3de-en-5de-orde-butterworth-laagdoorlaatfilter">
-     Vergelijking van de 3de en 5de orde Butterworth laagdoorlaatfilter
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#zevende-orde-banddoorlaatfilter-van-10mhz-tot-50mhz">
-     zevende orde banddoorlaatfilter van 10MHz  tot 50MHz
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#de-orde-banddoorlaatfilter-tussen-47-en-53-mhz">
-     7de orde banddoorlaatfilter tussen 47 en 53 MHz
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#chebyshev-filters">
-   Chebyshev filters
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#chebyshev-40-mhz-laagdoorlaatfilter-van-de-3de-orde-met-6db-maximale-ripple">
-     Chebyshev 40 MHz laagdoorlaatfilter van de 3de orde met 6dB maximale ripple
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#chebyshev-120-mhz-laagdoorlaatfilter-van-de-8de-orde-met-2db-maximale-ripple">
-     Chebyshev 120 MHz laagdoorlaatfilter van de 8de orde met 2dB maximale ripple
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#chebyshev-30-mhz-laagdoorlaatfilter-van-de-2de-orde-met-6db-maximale-ripple">
-     Chebyshev 30 MHz laagdoorlaatfilter van de 2de orde met 6dB maximale ripple
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#bessel-thomson-filters">
-   Bessel Thomson filters
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#analyze-van-deze-coefficienten">
-     Analyze van deze coëfficiënten
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#toleranties">
-   Toleranties
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#herhaling-gebruikte-termen">
-   Herhaling gebruikte termen
-  </a>
- </li>
-</ul>
-
-    </nav>
 </div>
-    </div>
-    <div class="article row">
-        <div class="col pl-md-3 pl-lg-5 content-container">
-            <!-- Table of contents that is only displayed when printing the page -->
-            <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Filters</h1>
-                <!-- Table of contents -->
-                <div id="print-main-content">
-                    <div id="jb-print-toc">
-                        
-                        <div>
-                            <h2> Contents </h2>
-                        </div>
-                        <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#aanpak-en-algemeen-perspectief">
-   Aanpak en algemeen perspectief
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#specifieke-filter-blokken">
-   Specifieke filter blokken
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#eerste-orde-filter-bouwblokken">
-     Eerste orde filter bouwblokken
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#tweede-orde-filter-blokken">
-     Tweede orde filter blokken
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#biquad-filter">
-       BiQuad filter
-      </a>
-      <ul class="nav section-nav flex-column">
-       <li class="toc-h5 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#het-gedeelte-van-het-biquad-circuit-dat-de-polen-bepaalt">
-         Het gedeelte van het biquad circuit dat de polen bepaalt
-        </a>
-       </li>
-       <li class="toc-h5 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#het-volledige-biquad-circuit">
-         Het volledige BiQuad circuit
-        </a>
-       </li>
-      </ul>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#sallen-en-key-circuit">
-       Sallen en Key Circuit
-      </a>
-     </li>
-    </ul>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#frequentietransformaties">
-   Frequentietransformaties
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#omrekenen-van-een-laagdoorlaatfilter-naar-een-hoogdoorlaatfilter">
-     Omrekenen van een laagdoorlaatfilter naar een hoogdoorlaatfilter
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#omrekenen-van-een-laagdoorlaatfilter-naar-een-banddoorlaatfilter">
-     Omrekenen van een laagdoorlaatfilter naar een banddoorlaatfilter
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#voorbeeld-omrekenen-van-de-polen-van-een-2de-orde-laagdoorlaatfilter-naar-een-2de-orde-banddoorlaatfilter">
-     Voorbeeld: Omrekenen van de polen van een 2de orde laagdoorlaatfilter naar een 2de orde banddoorlaatfilter
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#butterworth-filters">
-   Butterworth filters
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#butterworth-laagdoorlaatfilter-van-de-3de-orde">
-     Butterworth laagdoorlaatfilter van de 3de orde
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#butterworth-laagdoorlaatfilter-van-de-5de-orde">
-     Butterworth laagdoorlaatfilter van de 5de orde
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#vergelijking-van-de-3de-en-5de-orde-butterworth-laagdoorlaatfilter">
-     Vergelijking van de 3de en 5de orde Butterworth laagdoorlaatfilter
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#zevende-orde-banddoorlaatfilter-van-10mhz-tot-50mhz">
-     zevende orde banddoorlaatfilter van 10MHz  tot 50MHz
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#de-orde-banddoorlaatfilter-tussen-47-en-53-mhz">
-     7de orde banddoorlaatfilter tussen 47 en 53 MHz
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#chebyshev-filters">
-   Chebyshev filters
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#chebyshev-40-mhz-laagdoorlaatfilter-van-de-3de-orde-met-6db-maximale-ripple">
-     Chebyshev 40 MHz laagdoorlaatfilter van de 3de orde met 6dB maximale ripple
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#chebyshev-120-mhz-laagdoorlaatfilter-van-de-8de-orde-met-2db-maximale-ripple">
-     Chebyshev 120 MHz laagdoorlaatfilter van de 8de orde met 2dB maximale ripple
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#chebyshev-30-mhz-laagdoorlaatfilter-van-de-2de-orde-met-6db-maximale-ripple">
-     Chebyshev 30 MHz laagdoorlaatfilter van de 2de orde met 6dB maximale ripple
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#bessel-thomson-filters">
-   Bessel Thomson filters
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#analyze-van-deze-coefficienten">
-     Analyze van deze coëfficiënten
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#toleranties">
-   Toleranties
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#herhaling-gebruikte-termen">
-   Herhaling gebruikte termen
-  </a>
- </li>
-</ul>
+              
+              
 
-                        </nav>
-                    </div>
-                </div>
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Filters</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
             </div>
-            <main id="main-content" role="main">
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#aanpak-en-algemeen-perspectief">Aanpak en algemeen perspectief</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#specifieke-filter-blokken">Specifieke filter blokken</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#eerste-orde-filter-bouwblokken">Eerste orde filter bouwblokken</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tweede-orde-filter-blokken">Tweede orde filter blokken</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#biquad-filter">BiQuad filter</a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#het-gedeelte-van-het-biquad-circuit-dat-de-polen-bepaalt">Het gedeelte van het biquad circuit dat de polen bepaalt</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#het-volledige-biquad-circuit">Het volledige BiQuad circuit</a></li>
+</ul>
+</li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#sallen-en-key-circuit">Sallen en Key Circuit</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#frequentietransformaties">Frequentietransformaties</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#omrekenen-van-een-laagdoorlaatfilter-naar-een-hoogdoorlaatfilter">Omrekenen van een laagdoorlaatfilter naar een hoogdoorlaatfilter</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#omrekenen-van-een-laagdoorlaatfilter-naar-een-banddoorlaatfilter">Omrekenen van een laagdoorlaatfilter naar een banddoorlaatfilter</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#voorbeeld-omrekenen-van-de-polen-van-een-2de-orde-laagdoorlaatfilter-naar-een-2de-orde-banddoorlaatfilter">Voorbeeld: Omrekenen van de polen van een 2de orde laagdoorlaatfilter naar een 2de orde banddoorlaatfilter</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#butterworth-filters">Butterworth filters</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#butterworth-laagdoorlaatfilter-van-de-3de-orde">Butterworth laagdoorlaatfilter van de 3de orde</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#butterworth-laagdoorlaatfilter-van-de-5de-orde">Butterworth laagdoorlaatfilter van de 5de orde</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vergelijking-van-de-3de-en-5de-orde-butterworth-laagdoorlaatfilter">Vergelijking van de 3de en 5de orde Butterworth laagdoorlaatfilter</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#zevende-orde-banddoorlaatfilter-van-10mhz-tot-50mhz">zevende orde banddoorlaatfilter van 10MHz  tot 50MHz</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#de-orde-banddoorlaatfilter-tussen-47-en-53-mhz">7de orde banddoorlaatfilter tussen 47 en 53 MHz</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#chebyshev-filters">Chebyshev filters</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#chebyshev-40-mhz-laagdoorlaatfilter-van-de-3de-orde-met-6db-maximale-ripple">Chebyshev 40 MHz laagdoorlaatfilter van de 3de orde met 6dB maximale ripple</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#chebyshev-120-mhz-laagdoorlaatfilter-van-de-8de-orde-met-2db-maximale-ripple">Chebyshev 120 MHz laagdoorlaatfilter van de 8de orde met 2dB maximale ripple</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#chebyshev-30-mhz-laagdoorlaatfilter-van-de-2de-orde-met-6db-maximale-ripple">Chebyshev 30 MHz laagdoorlaatfilter van de 2de orde met 6dB maximale ripple</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bessel-thomson-filters">Bessel Thomson filters</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#analyze-van-deze-coefficienten">Analyze van deze coëfficiënten</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#toleranties">Toleranties</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#herhaling-gebruikte-termen">Herhaling gebruikte termen</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
                 
-              <div>
-                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
   <section class="tex2jax_ignore mathjax_ignore" id="filters">
-<h1>Filters<a class="headerlink" href="#filters" title="Permalink naar deze titel">#</a></h1>
+<h1>Filters<a class="headerlink" href="#filters" title="Permalink to this heading">#</a></h1>
 <p><a href="./slides/Filters.slides.html" target="_blank"><img alt="slides" src="_images/slides-beschikbaar-blue.svg" /></a>
 <a href="../Lite/ToegepasteAnalogeElektronica/lab?path=Filters.ipynb" target="_blank"><img alt="slides" src="_images/open_in-JupyterLite-blue.svg" /></a>
 <a href="../Deck/ToegepasteAnalogeElektronica/lab?path=Filters.ipynb" target="_blank"><img alt="slides" src="_images/JupyterDeck-slides-blue.svg" /></a></p>
 <p>In dit hoofdstuk werk ik een aantal voorbeelden uit van berekening van filters. Dit hoofdstuk is slechts ter illustratie van een aantal voorbeelden. De eigenlijke cursus blijft wat te vinden is op Toledo.</p>
 <section id="aanpak-en-algemeen-perspectief">
-<h2>Aanpak en algemeen perspectief<a class="headerlink" href="#aanpak-en-algemeen-perspectief" title="Permalink naar deze titel">#</a></h2>
+<h2>Aanpak en algemeen perspectief<a class="headerlink" href="#aanpak-en-algemeen-perspectief" title="Permalink to this heading">#</a></h2>
 <p>Het ontwerp van een filter is eigenlijk het ontwerp van een zo compact mogelijk elektronisch circuit dat voldoet aan de vooraf opgelegde specificaties. In die zin is een filterontwerp een synthese oefening die het omgekeerde is van een analyse oefening.</p>
 <div class="cell docutils container">
 </div>
 </section>
 <section id="specifieke-filter-blokken">
-<h2>Specifieke filter blokken<a class="headerlink" href="#specifieke-filter-blokken" title="Permalink naar deze titel">#</a></h2>
+<h2>Specifieke filter blokken<a class="headerlink" href="#specifieke-filter-blokken" title="Permalink to this heading">#</a></h2>
 <section id="eerste-orde-filter-bouwblokken">
-<h3>Eerste orde filter bouwblokken<a class="headerlink" href="#eerste-orde-filter-bouwblokken" title="Permalink naar deze titel">#</a></h3>
+<h3>Eerste orde filter bouwblokken<a class="headerlink" href="#eerste-orde-filter-bouwblokken" title="Permalink to this heading">#</a></h3>
 <p>De transfer functie van een eerste orde blok is:</p>
 <div class="math notranslate nohighlight">
 \[ V_{out}=-\frac{b_1(j \omega) +b_0}{a_1(j \omega) +a_0} V_{in}\]</div>
@@ -869,15 +645,15 @@ title="Print to PDF"
 </div>
 </section>
 <section id="tweede-orde-filter-blokken">
-<h3>Tweede orde filter blokken<a class="headerlink" href="#tweede-orde-filter-blokken" title="Permalink naar deze titel">#</a></h3>
+<h3>Tweede orde filter blokken<a class="headerlink" href="#tweede-orde-filter-blokken" title="Permalink to this heading">#</a></h3>
 <p>De transfer functie van een tweede orde blok is:</p>
 <div class="math notranslate nohighlight">
 \[ V_{out} = - \frac{b_2 (j \omega)^2  + b_1(j \omega) +b_0}{a_2 (j \omega)^2  + a_1(j \omega) +a_0} V_{in}\]</div>
 <p>Dit algemene tweede orde blok kan uitgewerkt worden in een BiQuad filter. Maar het algemene BiQuad blok vereist 4 Opamps. Daarom is het voor de meeste toepassingen handig gebruik te maken van de Sallen en Key filter, die maar 1 opamp nodig heeft.</p>
 <section id="biquad-filter">
-<h4>BiQuad filter<a class="headerlink" href="#biquad-filter" title="Permalink naar deze titel">#</a></h4>
+<h4>BiQuad filter<a class="headerlink" href="#biquad-filter" title="Permalink to this heading">#</a></h4>
 <section id="het-gedeelte-van-het-biquad-circuit-dat-de-polen-bepaalt">
-<h5>Het gedeelte van het biquad circuit dat de polen bepaalt<a class="headerlink" href="#het-gedeelte-van-het-biquad-circuit-dat-de-polen-bepaalt" title="Permalink naar deze titel">#</a></h5>
+<h5>Het gedeelte van het biquad circuit dat de polen bepaalt<a class="headerlink" href="#het-gedeelte-van-het-biquad-circuit-dat-de-polen-bepaalt" title="Permalink to this heading">#</a></h5>
 <p>We werken hieronder het circuit uit in 2 stappen. We berekenen hiervoor eerst de spanningen uit op de knopen van het bovenste gedeelte van het BiQuad circuit dat we tonen in <a class="reference internal" href="#fig5"><span class="std std-numref">Fig. 92</span></a> .  Het doel van dit deel van het circuit is dit uit te rekenen als een universeel circuit voor:</p>
 <div class="math notranslate nohighlight">
 \[ V_{out*} = - \frac{1}{a_2 (j \omega)^2  + a_1 (j \omega) +a_0} V_{in} \]</div>
@@ -935,7 +711,7 @@ title="Print to PDF"
 <p>We zien dus inderdaad uit vergelijkingen (<a class="reference internal" href="#equation-biquadout">(9)</a>,<a class="reference internal" href="#equation-biquada2">(10)</a>,<a class="reference internal" href="#equation-biquada1">(11)</a>,<a class="reference internal" href="#equation-biquada0">(12)</a>) dat we dit kunnen uitwerken als de gevraagde universele oplossing op voorwaarde dat de coeficienten <span class="math notranslate nohighlight">\(a_2,a_1\)</span> en <span class="math notranslate nohighlight">\(a_0\)</span> allemaal positieve coeficienten zijn.</p>
 </section>
 <section id="het-volledige-biquad-circuit">
-<h5>Het volledige BiQuad circuit<a class="headerlink" href="#het-volledige-biquad-circuit" title="Permalink naar deze titel">#</a></h5>
+<h5>Het volledige BiQuad circuit<a class="headerlink" href="#het-volledige-biquad-circuit" title="Permalink to this heading">#</a></h5>
 <p>Het hierboven aangegeven circuit kunnen we verder uitbreiden om ook nog 2 (complexen) nullen toe te voegen. Hiervoor combineren we de spanning op 3 knopen van het circuit in <a class="reference internal" href="#fig5"><span class="std std-numref">Fig. 92</span></a> , namelijk <span class="math notranslate nohighlight">\(V_{in}\)</span>,  <span class="math notranslate nohighlight">\(V_{*}\)</span> en<span class="math notranslate nohighlight">\(V_{out*}\)</span>. Dit geeft dan het circuit in <a class="reference internal" href="#fig6"><span class="std std-numref">Fig. 93</span></a> .</p>
 <div class="cell docutils container">
 <div class="cell_output docutils container">
@@ -966,7 +742,7 @@ title="Print to PDF"
 </section>
 </section>
 <section id="sallen-en-key-circuit">
-<h4>Sallen en Key Circuit<a class="headerlink" href="#sallen-en-key-circuit" title="Permalink naar deze titel">#</a></h4>
+<h4>Sallen en Key Circuit<a class="headerlink" href="#sallen-en-key-circuit" title="Permalink to this heading">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_output docutils container">
 <figure class="align-default" id="sallen-en-key">
@@ -980,7 +756,7 @@ title="Print to PDF"
 </section>
 </section>
 <section id="frequentietransformaties">
-<h2>Frequentietransformaties<a class="headerlink" href="#frequentietransformaties" title="Permalink naar deze titel">#</a></h2>
+<h2>Frequentietransformaties<a class="headerlink" href="#frequentietransformaties" title="Permalink to this heading">#</a></h2>
 <p>In dit deel van het hoofdstuk over filters gaan we dieper in op de manier waarop het ontwerp van een laagdoorlaatfilter kan herschreven worden naar een hoogdoorlaatfilter, een banddoorlaatflter of een bandsper filter.</p>
 <p>Hiervoor gaan we typisch de transferfunctie herschrijven als functie van de parameter <span class="math notranslate nohighlight">\(S\)</span>, die gelijk is aan:</p>
 <div class="math notranslate nohighlight">
@@ -992,7 +768,7 @@ title="Print to PDF"
 \[i \omega - n_i =\frac{i \omega}{\omega_o}- \frac{n_i}{\omega_o} = S - \frac{n_i}{\omega_o}  \]</div>
 <p>Het nu vervolgens de <span class="math notranslate nohighlight">\(S\)</span> in de bovenstaande termen die we gaan vervangen door een andere term en dan gaan bekijken waar de nieuwe polen en nullen komen te liggen.</p>
 <section id="omrekenen-van-een-laagdoorlaatfilter-naar-een-hoogdoorlaatfilter">
-<h3>Omrekenen van een laagdoorlaatfilter naar een hoogdoorlaatfilter<a class="headerlink" href="#omrekenen-van-een-laagdoorlaatfilter-naar-een-hoogdoorlaatfilter" title="Permalink naar deze titel">#</a></h3>
+<h3>Omrekenen van een laagdoorlaatfilter naar een hoogdoorlaatfilter<a class="headerlink" href="#omrekenen-van-een-laagdoorlaatfilter-naar-een-hoogdoorlaatfilter" title="Permalink to this heading">#</a></h3>
 <p>De frequentietransformatie die we hiervoor gebruiken is:</p>
 <div class="math notranslate nohighlight">
 \[S=\frac{\omega_o}{i \omega} \]</div>
@@ -1010,14 +786,14 @@ title="Print to PDF"
 <p>Hetzelfde kunnen we dan doen voor de eventuele termen van de vorm <span class="math notranslate nohighlight">\(S - \frac{n_i}{\omega_o}  \)</span></p>
 </section>
 <section id="omrekenen-van-een-laagdoorlaatfilter-naar-een-banddoorlaatfilter">
-<h3>Omrekenen van een laagdoorlaatfilter naar een banddoorlaatfilter<a class="headerlink" href="#omrekenen-van-een-laagdoorlaatfilter-naar-een-banddoorlaatfilter" title="Permalink naar deze titel">#</a></h3>
+<h3>Omrekenen van een laagdoorlaatfilter naar een banddoorlaatfilter<a class="headerlink" href="#omrekenen-van-een-laagdoorlaatfilter-naar-een-banddoorlaatfilter" title="Permalink to this heading">#</a></h3>
 <p>De frequentietransformatie die we hiervoor gebruiken is:</p>
 <div class="math notranslate nohighlight">
 \[S=\frac{1}{\omega_2-\omega_1}\frac{(i \omega)^2 + \omega_1\omega_2}{i \omega} \]</div>
 <p>Ook hier kunnen we de termen van de vorm <span class="math notranslate nohighlight">\(S - \frac{p_i}{\omega_o}  \)</span> en <span class="math notranslate nohighlight">\(S - \frac{n_i}{\omega_o}\)</span> zoals hierboven herschrijven. We werken dat hieronder uit aan de hand van een voorbeeld.</p>
 </section>
 <section id="voorbeeld-omrekenen-van-de-polen-van-een-2de-orde-laagdoorlaatfilter-naar-een-2de-orde-banddoorlaatfilter">
-<h3>Voorbeeld: Omrekenen van de polen van een 2de orde laagdoorlaatfilter naar een 2de orde banddoorlaatfilter<a class="headerlink" href="#voorbeeld-omrekenen-van-de-polen-van-een-2de-orde-laagdoorlaatfilter-naar-een-2de-orde-banddoorlaatfilter" title="Permalink naar deze titel">#</a></h3>
+<h3>Voorbeeld: Omrekenen van de polen van een 2de orde laagdoorlaatfilter naar een 2de orde banddoorlaatfilter<a class="headerlink" href="#voorbeeld-omrekenen-van-de-polen-van-een-2de-orde-laagdoorlaatfilter-naar-een-2de-orde-banddoorlaatfilter" title="Permalink to this heading">#</a></h3>
 <p>In deze paragraaf rekenen we de polen van een 2de orde banddoorlaatfilter uit op basis van een 2de orde laagdoorlaatfilter.
 Als vertrekbasis nemen we een 2de orde Butterworth laagdoorlaatfilter met afsnijfrequentie 50 kHz.
 De polen van deze Butterworth laagdoorlaatfilter zijn:</p>
@@ -1112,10 +888,10 @@ p22 =  834003.105731553 *(-cos( 68.05859933682078 )+ j sin( 68.05859933682078 ))
 </section>
 </section>
 <section id="butterworth-filters">
-<h2>Butterworth filters<a class="headerlink" href="#butterworth-filters" title="Permalink naar deze titel">#</a></h2>
+<h2>Butterworth filters<a class="headerlink" href="#butterworth-filters" title="Permalink to this heading">#</a></h2>
 <p>In dit hoofdstuk werken we een aantal concrete voorbeelden uit van Butterworth filters. We vergelijken hierbij de verschillende ordes en kijken hoe deze in praktijk worden geimplementeerd in hardware circuits.</p>
 <section id="butterworth-laagdoorlaatfilter-van-de-3de-orde">
-<h3>Butterworth laagdoorlaatfilter van de 3de orde<a class="headerlink" href="#butterworth-laagdoorlaatfilter-van-de-3de-orde" title="Permalink naar deze titel">#</a></h3>
+<h3>Butterworth laagdoorlaatfilter van de 3de orde<a class="headerlink" href="#butterworth-laagdoorlaatfilter-van-de-3de-orde" title="Permalink to this heading">#</a></h3>
 <p>We ontwerpen een analoge 3de orde laagdoorlaatfilter van het type Butterworth met afsnijfrequentie 1 MHz. De transferfunktie <span class="math notranslate nohighlight">\(H(s)\)</span> of <span class="math notranslate nohighlight">\(H(j\omega)\)</span> die we bekomen is:</p>
 <div class="math notranslate nohighlight">
 \[ H(s) = \frac{\sum_{n=0}^M b_n s^n}{\sum_{n=0}^N a_n s^n} \]</div>
@@ -1232,7 +1008,7 @@ p[ 3 ] = (-3141592.6535897935-5441398.092702653j)
 </div>
 </section>
 <section id="butterworth-laagdoorlaatfilter-van-de-5de-orde">
-<h3>Butterworth laagdoorlaatfilter van de 5de orde<a class="headerlink" href="#butterworth-laagdoorlaatfilter-van-de-5de-orde" title="Permalink naar deze titel">#</a></h3>
+<h3>Butterworth laagdoorlaatfilter van de 5de orde<a class="headerlink" href="#butterworth-laagdoorlaatfilter-van-de-5de-orde" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Veelterm coefficienten teller: M= 0
@@ -1297,7 +1073,7 @@ p[ 5 ] = (-1941611.0387254667-5975664.329483111j)
 </div>
 </section>
 <section id="vergelijking-van-de-3de-en-5de-orde-butterworth-laagdoorlaatfilter">
-<h3>Vergelijking van de 3de en 5de orde Butterworth laagdoorlaatfilter<a class="headerlink" href="#vergelijking-van-de-3de-en-5de-orde-butterworth-laagdoorlaatfilter" title="Permalink naar deze titel">#</a></h3>
+<h3>Vergelijking van de 3de en 5de orde Butterworth laagdoorlaatfilter<a class="headerlink" href="#vergelijking-van-de-3de-en-5de-orde-butterworth-laagdoorlaatfilter" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_output docutils container">
 <figure class="align-default" id="fig20">
@@ -1310,7 +1086,7 @@ p[ 5 ] = (-1941611.0387254667-5975664.329483111j)
 </div>
 </section>
 <section id="zevende-orde-banddoorlaatfilter-van-10mhz-tot-50mhz">
-<h3>zevende orde banddoorlaatfilter van 10MHz  tot 50MHz<a class="headerlink" href="#zevende-orde-banddoorlaatfilter-van-10mhz-tot-50mhz" title="Permalink naar deze titel">#</a></h3>
+<h3>zevende orde banddoorlaatfilter van 10MHz  tot 50MHz<a class="headerlink" href="#zevende-orde-banddoorlaatfilter-van-10mhz-tot-50mhz" title="Permalink to this heading">#</a></h3>
 <p>In het eerste voorbeeld van een banddoorlaatfilter bekijken we een redelijk breedbandfilter: De bandbreedte(40 MHz) is in dit geval veel groter dan de laagste doorlaatfrequentie.</p>
 <div class="cell docutils container">
 <div class="cell_output docutils container">
@@ -1402,7 +1178,7 @@ p[ 14 ] = (-46458057.493502825-307739438.435567j)
 </div>
 </section>
 <section id="de-orde-banddoorlaatfilter-tussen-47-en-53-mhz">
-<h3>7de orde banddoorlaatfilter tussen 47 en 53 MHz<a class="headerlink" href="#de-orde-banddoorlaatfilter-tussen-47-en-53-mhz" title="Permalink naar deze titel">#</a></h3>
+<h3>7de orde banddoorlaatfilter tussen 47 en 53 MHz<a class="headerlink" href="#de-orde-banddoorlaatfilter-tussen-47-en-53-mhz" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Veelterm coefficienten teller: M= 7
@@ -1498,9 +1274,9 @@ p[ 14 ] = (-4439819.935339821-332480313.6424786j)
 </section>
 </section>
 <section id="chebyshev-filters">
-<h2>Chebyshev filters<a class="headerlink" href="#chebyshev-filters" title="Permalink naar deze titel">#</a></h2>
+<h2>Chebyshev filters<a class="headerlink" href="#chebyshev-filters" title="Permalink to this heading">#</a></h2>
 <section id="chebyshev-40-mhz-laagdoorlaatfilter-van-de-3de-orde-met-6db-maximale-ripple">
-<h3>Chebyshev 40 MHz laagdoorlaatfilter van de 3de orde met 6dB maximale ripple<a class="headerlink" href="#chebyshev-40-mhz-laagdoorlaatfilter-van-de-3de-orde-met-6db-maximale-ripple" title="Permalink naar deze titel">#</a></h3>
+<h3>Chebyshev 40 MHz laagdoorlaatfilter van de 3de orde met 6dB maximale ripple<a class="headerlink" href="#chebyshev-40-mhz-laagdoorlaatfilter-van-de-3de-orde-met-6db-maximale-ripple" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Veelterm coefficienten teller: M= 0
@@ -1559,7 +1335,7 @@ p[ 3 ] = (-23205546.204611413-221335928.5095666j)
 </div>
 </section>
 <section id="chebyshev-120-mhz-laagdoorlaatfilter-van-de-8de-orde-met-2db-maximale-ripple">
-<h3>Chebyshev 120 MHz laagdoorlaatfilter van de 8de orde met 2dB maximale ripple<a class="headerlink" href="#chebyshev-120-mhz-laagdoorlaatfilter-van-de-8de-orde-met-2db-maximale-ripple" title="Permalink naar deze titel">#</a></h3>
+<h3>Chebyshev 120 MHz laagdoorlaatfilter van de 8de orde met 2dB maximale ripple<a class="headerlink" href="#chebyshev-120-mhz-laagdoorlaatfilter-van-de-8de-orde-met-2db-maximale-ripple" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Veelterm coefficienten teller: M= 0
@@ -1638,7 +1414,7 @@ p[ 8 ] = (-19974783.518686887-746281824.2305412j)
 </div>
 </section>
 <section id="chebyshev-30-mhz-laagdoorlaatfilter-van-de-2de-orde-met-6db-maximale-ripple">
-<h3>Chebyshev 30 MHz laagdoorlaatfilter van de 2de orde met 6dB maximale ripple<a class="headerlink" href="#chebyshev-30-mhz-laagdoorlaatfilter-van-de-2de-orde-met-6db-maximale-ripple" title="Permalink naar deze titel">#</a></h3>
+<h3>Chebyshev 30 MHz laagdoorlaatfilter van de 2de orde met 6dB maximale ripple<a class="headerlink" href="#chebyshev-30-mhz-laagdoorlaatfilter-van-de-2de-orde-met-6db-maximale-ripple" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Veelterm coefficienten teller: M= 0
@@ -1708,7 +1484,7 @@ p[ 2 ] = (-60780360.20507117-146490750.93199244j)
 </section>
 </section>
 <section id="bessel-thomson-filters">
-<h2>Bessel Thomson filters<a class="headerlink" href="#bessel-thomson-filters" title="Permalink naar deze titel">#</a></h2>
+<h2>Bessel Thomson filters<a class="headerlink" href="#bessel-thomson-filters" title="Permalink to this heading">#</a></h2>
 <p>In dit vak zullen we de Bessel Thomson filters steeds met de computer uitrekenen. Hieronder vind je de berekening van de coeficienten van de transfer functie een 2de orde Bessel Thomson  hoogdoorlaatfilter met afsnijfrequentie op 1 kHz.</p>
 <p>In <a class="reference internal" href="#besseltomson-fig"><span class="std std-numref">Fig. 120</span></a>  zie je dan vervolgens de plot van de transferkarakteristiek een 2de orde Bessel Thomson  hoogdoorlaatfilter</p>
 <div class="cell docutils container">
@@ -1736,18 +1512,17 @@ a[ 0 ] = 39478417.60435742
 </div>
 </div>
 <section id="analyze-van-deze-coefficienten">
-<h3>Analyze van deze coëfficiënten<a class="headerlink" href="#analyze-van-deze-coefficienten" title="Permalink naar deze titel">#</a></h3>
+<h3>Analyze van deze coëfficiënten<a class="headerlink" href="#analyze-van-deze-coefficienten" title="Permalink to this heading">#</a></h3>
 <p><span class="math notranslate nohighlight">\(a_0 = 1\)</span></p>
 <p><span class="math notranslate nohighlight">\(a_1 = \frac{\omega_c}{Q}\)</span>   met <span class="math notranslate nohighlight">\( Q = 0.57735\)</span></p>
 <p><span class="math notranslate nohighlight">\(a_2 = \omega_c^2\)</span></p>
 </section>
 </section>
 <section id="toleranties">
-<h2>Toleranties<a class="headerlink" href="#toleranties" title="Permalink naar deze titel">#</a></h2>
+<h2>Toleranties<a class="headerlink" href="#toleranties" title="Permalink to this heading">#</a></h2>
 <p>Zoals het in <a class="reference external" href="https://ccrma.stanford.edu/~jatin/Bad-Circuit-Modelling/Tolerances.html">toleranties</a> aangegeven is, is het heel erg belangrijk rekening te houden met de toleranties van de componenten die we hebben.</p>
-</section>
 <section id="herhaling-gebruikte-termen">
-<h2>Herhaling gebruikte termen<a class="headerlink" href="#herhaling-gebruikte-termen" title="Permalink naar deze titel">#</a></h2>
+<h3>Herhaling gebruikte termen<a class="headerlink" href="#herhaling-gebruikte-termen" title="Permalink to this heading">#</a></h3>
 <div class="cell tag_remove_cell4reveal docutils container">
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
@@ -2001,7 +1776,7 @@ a[ 0 ] = 39478417.60435742
 
 }
 
-</style></div><div class="output text_html"><div style="height:40px"></div><div class="flip-container" id="quSPRKglZGjk" tabindex="0" style="outline:none;"></div><div style="height:40px"></div><div class="next" id="quSPRKglZGjk-next" onclick="window.checkFlip('quSPRKglZGjk')"> </div> <div style="height:40px"></div></div><script type="application/javascript">/*!
+</style></div><div class="output text_html"><div style="height:40px"></div><div class="flip-container" id="rhszBTqYztnm" tabindex="0" style="outline:none;"></div><div style="height:40px"></div><div class="next" id="rhszBTqYztnm-next" onclick="window.checkFlip('rhszBTqYztnm')"> </div> <div style="height:40px"></div></div><script type="application/javascript">/*!
  * swiped-events.js - v1.1.4
  * Pure JavaScript swipe events
  * https://github.com/john-doherty/swiped-events
@@ -2343,11 +2118,12 @@ function createCards(id, keyControl) {
 
 
 
-var cardsquSPRKglZGjk=[{"front": "Butterworth filter", "back": "Een filter die maximaal vlak is rond de referentiefrequentie, i.e. 0 voor een laagdoorlaatfilter, oneindig voor een hoogdoorlaatfilter en de centrale frequentie voor een banddoorlaatfilter"}, {"front": "Bessel-Thomson filter", "back": "Een filter waarbij de fase-vertraging zo lineair mogelijk verloopt met de frequentie"}];
+var cardsrhszBTqYztnm=[{"front": "Butterworth filter", "back": "Een filter die maximaal vlak is rond de referentiefrequentie, i.e. 0 voor een laagdoorlaatfilter, oneindig voor een hoogdoorlaatfilter en de centrale frequentie voor een banddoorlaatfilter"}, {"front": "Bessel-Thomson filter", "back": "Een filter waarbij de fase-vertraging zo lineair mogelijk verloopt met de frequentie"}];
     
-        createCards("quSPRKglZGjk", "True");
+        createCards("rhszBTqYztnm", "True");
         </script></div>
 </div>
+</section>
 </section>
 </section>
 
@@ -2363,7 +2139,7 @@ var cardsquSPRKglZGjk=[{"front": "Butterworth filter", "back": "Een filter die m
             mode: "kuleuven"
         },
         kernelOptions: {
-            kernelName: "kuleuven",
+            name: "kuleuven",
             path: "./."
         },
         predefinedOutput: true
@@ -2371,49 +2147,136 @@ var cardsquSPRKglZGjk=[{"front": "Butterworth filter", "back": "Een filter die m
     </script>
     <script>kernelName = 'kuleuven'</script>
 
-              </div>
+                </article>
               
-            </main>
-            <footer class="footer-article noprint">
-                
-    <!-- Previous / next buttons -->
-<div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="Klasse-E.html" title="vorige pagina">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">vorige</p>
-            <p class="prev-next-title">Klasse E  Versterkers</p>
-        </div>
+
+              
+              
+                <footer class="bd-footer-article">
+                  <!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="Klasse-E.html"
+       title="vorige pagina">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">vorige</p>
+        <p class="prev-next-title">Klasse E  Versterkers</p>
+      </div>
     </a>
-    <a class='right-next' id="next-link" href="transmissielijn.html" title="volgende pagina">
-    <div class="prev-next-info">
+    <a class="right-next"
+       href="transmissielijn.html"
+       title="volgende pagina">
+      <div class="prev-next-info">
         <p class="prev-next-subtitle">volgende</p>
         <p class="prev-next-title">Transmissie lijnen</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
-            </footer>
-        </div>
-    </div>
-    <div class="footer-content row">
-        <footer class="col footer"><p>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#aanpak-en-algemeen-perspectief">Aanpak en algemeen perspectief</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#specifieke-filter-blokken">Specifieke filter blokken</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#eerste-orde-filter-bouwblokken">Eerste orde filter bouwblokken</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tweede-orde-filter-blokken">Tweede orde filter blokken</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#biquad-filter">BiQuad filter</a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#het-gedeelte-van-het-biquad-circuit-dat-de-polen-bepaalt">Het gedeelte van het biquad circuit dat de polen bepaalt</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#het-volledige-biquad-circuit">Het volledige BiQuad circuit</a></li>
+</ul>
+</li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#sallen-en-key-circuit">Sallen en Key Circuit</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#frequentietransformaties">Frequentietransformaties</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#omrekenen-van-een-laagdoorlaatfilter-naar-een-hoogdoorlaatfilter">Omrekenen van een laagdoorlaatfilter naar een hoogdoorlaatfilter</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#omrekenen-van-een-laagdoorlaatfilter-naar-een-banddoorlaatfilter">Omrekenen van een laagdoorlaatfilter naar een banddoorlaatfilter</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#voorbeeld-omrekenen-van-de-polen-van-een-2de-orde-laagdoorlaatfilter-naar-een-2de-orde-banddoorlaatfilter">Voorbeeld: Omrekenen van de polen van een 2de orde laagdoorlaatfilter naar een 2de orde banddoorlaatfilter</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#butterworth-filters">Butterworth filters</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#butterworth-laagdoorlaatfilter-van-de-3de-orde">Butterworth laagdoorlaatfilter van de 3de orde</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#butterworth-laagdoorlaatfilter-van-de-5de-orde">Butterworth laagdoorlaatfilter van de 5de orde</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vergelijking-van-de-3de-en-5de-orde-butterworth-laagdoorlaatfilter">Vergelijking van de 3de en 5de orde Butterworth laagdoorlaatfilter</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#zevende-orde-banddoorlaatfilter-van-10mhz-tot-50mhz">zevende orde banddoorlaatfilter van 10MHz  tot 50MHz</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#de-orde-banddoorlaatfilter-tussen-47-en-53-mhz">7de orde banddoorlaatfilter tussen 47 en 53 MHz</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#chebyshev-filters">Chebyshev filters</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#chebyshev-40-mhz-laagdoorlaatfilter-van-de-3de-orde-met-6db-maximale-ripple">Chebyshev 40 MHz laagdoorlaatfilter van de 3de orde met 6dB maximale ripple</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#chebyshev-120-mhz-laagdoorlaatfilter-van-de-8de-orde-met-2db-maximale-ripple">Chebyshev 120 MHz laagdoorlaatfilter van de 8de orde met 2dB maximale ripple</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#chebyshev-30-mhz-laagdoorlaatfilter-van-de-2de-orde-met-6db-maximale-ripple">Chebyshev 30 MHz laagdoorlaatfilter van de 2de orde met 6dB maximale ripple</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bessel-thomson-filters">Bessel Thomson filters</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#analyze-van-deze-coefficienten">Analyze van deze coëfficiënten</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#toleranties">Toleranties</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#herhaling-gebruikte-termen">Herhaling gebruikte termen</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            <div class="bd-footer-content__inner">
+<div class="bd-footer-content__inner container">
   
-    By Jan Genoe (jan.genoe@kuleuven.be)<br/>
-  
-</p>
-        </footer>
-    </div>
+  <div class="footer-item">
     
-</div>
+<p class="component-author">
+By Jan Genoe (jan.genoe@kuleuven.be)
+</p>
 
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    <p class="last-updated">
+  Laatste aanpassing op None.
+  <br/>
+</p>
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div></div>
+          </footer>
+        
 
-      </div>
+      </main>
     </div>
+  </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+  <script src="_static/scripts/bootstrap.js?digest=12da95d707ffb74b382d"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=12da95d707ffb74b382d"></script>
 
-
+  <footer class="bd-footer">
+  </footer>
   </body>
 </html>

@@ -1,44 +1,63 @@
 
+
 <!DOCTYPE html>
 
-<html lang="nl">
+
+<html lang="nl" >
+
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+<meta property="og:title" content="Smith Kaart Oefening 1" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://jangenoe.github.io/jangenoe/InteractieveCursus/ToegepasteAnalogeElektronica/SmithKaartOefening1.html" />
+<meta property="og:site_name" content="Python" />
+<meta property="og:description" content="slides slides slides Oefening 1: Pas aan de hand van een Smith kaart om een antenne van 128 Ohm aan aan een striplijn printbaan van 50 Ohm voor een frequentie van 1.2 GHz (\lambda= 12.5 cm;\epsilon..." />
+<meta property="og:image" content="https://jangenoe.github.io/InteractieveCursus/ToegepasteAnalogeElektronica/_static/logo.svg" />
+<meta property="og:image:alt" content="Python" />
+<meta name="description" content="slides slides slides Oefening 1: Pas aan de hand van een Smith kaart om een antenne van 128 Ohm aan aan een striplijn printbaan van 50 Ohm voor een frequentie van 1.2 GHz (\lambda= 12.5 cm;\epsilon..." />
 
     <title>Smith Kaart Oefening 1 &#8212; Toegepaste Analoge Elektronica</title>
-    
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
   <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-<link href="_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  <link href="_static/styles/theme.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
 
-    
-  <link rel="stylesheet"
-    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+  
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=56348ffd8e7ce817f831f1f32f1f7f6638896a71" type="text/css" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
     <link rel="stylesheet" type="text/css" href="_static/exercise.css" />
     <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
-    
+  
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=12da95d707ffb74b382d" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=12da95d707ffb74b382d" />
 
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="_static/doctools.js"></script>
     <script src="_static/clipboard.min.js"></script>
     <script src="_static/copybutton.js"></script>
-    <script src="_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
@@ -54,62 +73,140 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'SmithKaartOefening1';</script>
     <link rel="shortcut icon" href="_static/favicon.ico"/>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Zoeken" href="search.html" />
     <link rel="next" title="Smith Kaart Oefening 2" href="SmithKaartOefening2.html" />
     <link rel="prev" title="SmithKaart" href="SmithKaart.html" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="nl">
-    
-
-    <!-- Google Analytics -->
-    
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="nl"/>
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
-<!-- Checkboxes to toggle the left sidebar -->
-<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
-<label class="overlay overlay-navbar" for="__navigation">
-    <div class="visually-hidden">Toggle navigation sidebar</div>
-</label>
-<!-- Checkboxes to toggle the in-page toc -->
-<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
-<label class="overlay overlay-pagetoc" for="__page-toc">
-    <div class="visually-hidden">Toggle in-page Table of Contents</div>
-</label>
-<!-- Headers at the top -->
-<div class="announcement header-item noprint"></div>
-<div class="header header-item noprint"></div>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
 
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+<div class="bd-header__inner bd-page-width">
+  <label class="sidebar-toggle primary-toggle" for="__primary">
+    <span class="fa-solid fa-bars"></span>
+  </label>
+  
+  
+  <div class="col-lg-9 navbar-header-items">
     
-    <div class="container-fluid" id="banner"></div>
-
     
-
-    <div class="container-xl">
-      <div class="row">
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
           
-<!-- Sidebar -->
-<div class="bd-sidebar noprint" id="site-navigation">
-    <div class="bd-sidebar__content">
-        <div class="bd-sidebar__top"><div class="navbar-brand-box">
-    <a class="navbar-brand text-wrap" href="index.html">
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Zoeken" aria-label="Zoeken" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+        </div>
       
-        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Zoeken" aria-label="Zoeken" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+    </div>
+  
+
+  
+    <label class="sidebar-toggle secondary-toggle" for="__secondary">
+      <span class="fa-solid fa-outdent"></span>
+    </label>
+  
+</div>
+
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
         
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+    
+    
       
-      
-      <img src="_static/logo.svg" class="logo" alt="logo">
-      
-      
-      <h1 class="site-logo" id="site-title">Toegepaste Analoge Elektronica</h1>
-      
-    </a>
-</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
-  <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
-    <div class="bd-toc-item active">
+    
+    
+    <img src="_static/logo.svg" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="_static/logo.svg" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
@@ -118,446 +215,333 @@ const thebe_selector_output = ".output, .cell_output"
                 </a>
             </li>
         </ul>
-        <p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Inleiding
- </span>
-</p>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Inleiding</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="Spice-simulatie.html">
-   Spice simulatie
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="Spice-simulatie.html">Spice simulatie</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Versterkers
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Versterkers</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="Klasse-C.html">
-   Klasse C  Versterkers
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="Klasse-F.html">
-   Klasse F Verstekers
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="Klasse-D.html">
-   Klasse D resonante Versterkers
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="Klasse-E.html">
-   Klasse E  Versterkers
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="Klasse-C.html">Klasse C  Versterkers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Klasse-F.html">Klasse F Verstekers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Klasse-D.html">Klasse D resonante Versterkers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Klasse-E.html">Klasse E  Versterkers</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Filters
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Filters</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="Filters.html">
-   Filters
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="Filters.html">Filters</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  transmissielijnen
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">transmissielijnen</span></p>
 <ul class="current nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="transmissielijn.html">
-   Transmissie lijnen
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="reflecties.html">
-   Reflecties
-  </a>
- </li>
- <li class="toctree-l1 current active has-children">
-  <a class="reference internal" href="SmithKaart.html">
-   SmithKaart
-  </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
-  <label for="toctree-checkbox-1">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul class="current">
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
-     Smith Kaart Oefening 1
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="SmithKaartOefening2.html">
-     Smith Kaart Oefening 2
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="SmithKaartOefening3.html">
-     Smith Kaart Oefening 3
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="SmithKaartOefening4.html">
-     Smith Kaart Oefening 4
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="SmithKaartOefening5.html">
-     Smith Kaart Oefening 5
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="SmithKaartOefening6.html">
-     Smith Kaart Oefening 6
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="SmithKaartOefening7.html">
-     Smith Kaart Oefening 7
-    </a>
-   </li>
-  </ul>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="transmissielijn.html">Transmissie lijnen</a></li>
+<li class="toctree-l1"><a class="reference internal" href="reflecties.html">Reflecties</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="SmithKaart.html">SmithKaart</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Smith Kaart Oefening 1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="SmithKaartOefening2.html">Smith Kaart Oefening 2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="SmithKaartOefening3.html">Smith Kaart Oefening 3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="SmithKaartOefening4.html">Smith Kaart Oefening 4</a></li>
+<li class="toctree-l2"><a class="reference internal" href="SmithKaartOefening5.html">Smith Kaart Oefening 5</a></li>
+<li class="toctree-l2"><a class="reference internal" href="SmithKaartOefening6.html">Smith Kaart Oefening 6</a></li>
+<li class="toctree-l2"><a class="reference internal" href="SmithKaartOefening7.html">Smith Kaart Oefening 7</a></li>
+<li class="toctree-l2"><a class="reference internal" href="SmithKaartOefening8.html">Smith Kaart Oefening 8</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">References</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="References.html">Referenties</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Overzicht</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference external" href="https://jangenoe.github.io/InteractieveCursus/intro.html">Lijst cursussen</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.kuleuven.be/wieiswie/en/person/00004269">Auteur Jan Genoe</a></li>
 </ul>
 
     </div>
 </nav></div>
-        <div class="bd-sidebar__bottom">
-             <!-- To handle the deprecated key -->
-            
-            <div class="navbar_extra_footer">
-            <a href="https://www.kuleuven.be"> <img src=" https://stijl.kuleuven.be/2016tmp/img/svg/logo.svg" alt="KULeuven"></a>
-            </div>
-            
-        </div>
     </div>
-    <div id="rtd-footer-container"></div>
-</div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
 
 
-          
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
 
-
-          
-<!-- A tiny helper pixel to detect if we've scrolled -->
 <div class="sbt-scroll-pixel-helper"></div>
-<!-- Main content -->
-<div class="col py-0 content-container">
-    
-    <div class="header-article row sticky-top noprint">
-        
 
-
-
-<div class="col py-1 d-flex header-article-main">
-    <div class="header-article__left">
-        
-        <label for="__navigation"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="right"
-title="Toggle navigation"
->
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
   
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-bars"></i>
-  </span>
-
-</label>
-
-        
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
     </div>
-    <div class="header-article__right">
-<div class="menu-dropdown menu-dropdown-launch-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Launch interactive content">
-      <i class="fas fa-rocket"></i>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
   </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="https://mybinder.org/v2/gh/jangenoe/InteractieveCursus/master?urlpath=lab/tree/ToegepasteAnalogeElektronica/SmithKaartOefening1.ipynb"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Launch on Binder"
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://mybinder.org/v2/gh/jangenoe/InteractieveCursus/master?urlpath=lab/tree/ToegepasteAnalogeElektronica/SmithKaartOefening1.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onBinder"
+   data-bs-placement="left" data-bs-toggle="tooltip"
 >
   
 
-<span class="headerbtn__icon-container">
+<span class="btn__icon-container">
   
     <img src="_static/images/logo_binder.svg">
   </span>
-<span class="headerbtn__text-container">Binder</span>
+<span class="btn__text-container">Binder</span>
 </a>
-
-      </li>
+</li>
       
-      <li>
-        <a href="https://colab.research.google.com/github/jangenoe/InteractieveCursus/blob/master/ToegepasteAnalogeElektronica/SmithKaartOefening1.ipynb"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Launch on Colab"
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/jangenoe/InteractieveCursus/blob/master/ToegepasteAnalogeElektronica/SmithKaartOefening1.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onColab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
 >
   
 
-<span class="headerbtn__icon-container">
+<span class="btn__icon-container">
   
     <img src="_static/images/logo_colab.png">
   </span>
-<span class="headerbtn__text-container">Colab</span>
+<span class="btn__text-container">Colab</span>
 </a>
-
-      </li>
+</li>
       
-    </ul>
-  </div>
+  </ul>
 </div>
 
+
+
+
 <button onclick="toggleFullScreen()"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="bottom"
-title="Fullscreen mode"
+  class="btn btn-sm"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
 >
   
 
-<span class="headerbtn__icon-container">
+<span class="btn__icon-container">
   <i class="fas fa-expand"></i>
   </span>
 
 </button>
 
-<div class="menu-dropdown menu-dropdown-repository-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Source repositories">
-      <i class="fab fa-github"></i>
+
+
+
+
+
+<div class="dropdown dropdown-repository-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
   </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="https://github.com/jangenoe/InteractieveCursus"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Source repository"
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/jangenoe/InteractieveCursus" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
 >
   
 
-<span class="headerbtn__icon-container">
+<span class="btn__icon-container">
   <i class="fab fa-github"></i>
   </span>
-<span class="headerbtn__text-container">repository</span>
+<span class="btn__text-container">repository</span>
 </a>
-
-      </li>
+</li>
       
-      <li>
-        <a href="https://github.com/jangenoe/InteractieveCursus/issues/new?title=Issue%20on%20page%20%2FSmithKaartOefening1.html&body=Your%20issue%20content%20here."
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Open an issue"
+      
+      
+      
+      <li><a href="https://github.com/jangenoe/InteractieveCursus/issues/new?title=Issue%20on%20page%20%2FSmithKaartOefening1.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
 >
   
 
-<span class="headerbtn__icon-container">
+<span class="btn__icon-container">
   <i class="fas fa-lightbulb"></i>
   </span>
-<span class="headerbtn__text-container">open issue</span>
+<span class="btn__text-container">open issue</span>
 </a>
-
-      </li>
+</li>
       
-      <li>
-        <a href="https://github.com/jangenoe/InteractieveCursus/edit/master/ToegepasteAnalogeElektronica/SmithKaartOefening1.ipynb"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Edit this page"
+      
+      
+      
+      <li><a href="https://github.com/jangenoe/InteractieveCursus/edit/master/ToegepasteAnalogeElektronica/SmithKaartOefening1.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Edit onGitHub"
+   data-bs-placement="left" data-bs-toggle="tooltip"
 >
   
 
-<span class="headerbtn__icon-container">
+<span class="btn__icon-container">
   <i class="fas fa-pencil-alt"></i>
   </span>
-<span class="headerbtn__text-container">suggest edit</span>
+<span class="btn__text-container">suggest edit</span>
 </a>
-
-      </li>
+</li>
       
-    </ul>
-  </div>
+  </ul>
 </div>
 
-<div class="menu-dropdown menu-dropdown-download-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Download this page">
-      <i class="fas fa-download"></i>
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
   </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="_sources/SmithKaartOefening1.ipynb"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Download source file"
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/SmithKaartOefening1.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
 >
   
 
-<span class="headerbtn__icon-container">
+<span class="btn__icon-container">
   <i class="fas fa-file"></i>
   </span>
-<span class="headerbtn__text-container">.ipynb</span>
+<span class="btn__text-container">.ipynb</span>
 </a>
-
-      </li>
+</li>
+      
+      
+      
       
       <li>
-        
-<button onclick="printPdf(this)"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="left"
-title="Print to PDF"
+<button onclick="window.print()"
+  class="btn btn-sm dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
 >
   
 
-<span class="headerbtn__icon-container">
+<span class="btn__icon-container">
   <i class="fas fa-file-pdf"></i>
   </span>
-<span class="headerbtn__text-container">.pdf</span>
+<span class="btn__text-container">.pdf</span>
 </button>
-
-      </li>
+</li>
       
-    </ul>
-  </div>
+  </ul>
 </div>
-<label for="__page-toc"
-  class="headerbtn headerbtn-page-toc"
-  
->
-  
 
-<span class="headerbtn__icon-container">
-  <i class="fas fa-list"></i>
-  </span>
 
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Zoeken" aria-label="Zoeken" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
 </label>
-
+</div></div>
+      
     </div>
+  
 </div>
-
-<!-- Table of contents -->
-<div class="col-md-3 bd-toc show noprint">
-    <div class="tocsection onthispage pt-5 pb-3">
-        <i class="fas fa-list"></i> Contents
-    </div>
-    <nav id="bd-toc-nav" aria-label="Page">
-        <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#oefening-1">
-   Oefening 1
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#deel-a-bijplaatsen-van-een-capaciteit-in-parallel">
-     deel A: Bijplaatsen van een capaciteit in parallel
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#deel-b-spanning-aan-de-voet-van-de-antenne">
-     deel B: Spanning aan de voet van de antenne
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#deel-c-maximale-spanning-op-het-gedeelte-van-de-kabel-voor-de-aansluiting-van-de-condensator">
-     deel C: Maximale spanning op het gedeelte van de kabel voor de aansluiting van de condensator
-    </a>
-   </li>
-  </ul>
- </li>
-</ul>
-
-    </nav>
 </div>
-    </div>
-    <div class="article row">
-        <div class="col pl-md-3 pl-lg-5 content-container">
-            <!-- Table of contents that is only displayed when printing the page -->
-            <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Smith Kaart Oefening 1</h1>
-                <!-- Table of contents -->
-                <div id="print-main-content">
-                    <div id="jb-print-toc">
-                        
-                        <div>
-                            <h2> Contents </h2>
-                        </div>
-                        <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#oefening-1">
-   Oefening 1
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#deel-a-bijplaatsen-van-een-capaciteit-in-parallel">
-     deel A: Bijplaatsen van een capaciteit in parallel
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#deel-b-spanning-aan-de-voet-van-de-antenne">
-     deel B: Spanning aan de voet van de antenne
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#deel-c-maximale-spanning-op-het-gedeelte-van-de-kabel-voor-de-aansluiting-van-de-condensator">
-     deel C: Maximale spanning op het gedeelte van de kabel voor de aansluiting van de condensator
-    </a>
-   </li>
-  </ul>
- </li>
-</ul>
+              
+              
 
-                        </nav>
-                    </div>
-                </div>
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Smith Kaart Oefening 1</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
             </div>
-            <main id="main-content" role="main">
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#oefening-1">Oefening 1</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#deel-a-bijplaatsen-van-een-capaciteit-in-parallel">deel A: Bijplaatsen van een capaciteit in parallel</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#deel-b-spanning-aan-de-voet-van-de-antenne">deel B: Spanning aan de voet van de antenne</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#deel-c-maximale-spanning-op-het-gedeelte-van-de-kabel-voor-de-aansluiting-van-de-condensator">deel C: Maximale spanning op het gedeelte van de kabel voor de aansluiting van de condensator</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
                 
-              <div>
-                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
   <section class="tex2jax_ignore mathjax_ignore" id="smith-kaart-oefening-1">
-<h1>Smith Kaart Oefening 1<a class="headerlink" href="#smith-kaart-oefening-1" title="Permalink naar deze titel">#</a></h1>
+<h1>Smith Kaart Oefening 1<a class="headerlink" href="#smith-kaart-oefening-1" title="Permalink to this heading">#</a></h1>
 <p><a href="./slides/SmithKaartOefening1.slides.html" target="_blank"><img alt="slides" src="_images/slides-beschikbaar-blue.svg" /></a>
 <a href="../Lite/ToegepasteAnalogeElektronica/lab?path=SmithKaartOefening1.ipynb" target="_blank"><img alt="slides" src="_images/open_in-JupyterLite-blue.svg" /></a>
 <a href="../Deck/ToegepasteAnalogeElektronica/lab?path=SmithKaartOefening1.ipynb" target="_blank"><img alt="slides" src="_images/JupyterDeck-slides-blue.svg" /></a></p>
 <div class="cell docutils container">
 </div>
 <section id="oefening-1">
-<h2>Oefening 1<a class="headerlink" href="#oefening-1" title="Permalink naar deze titel">#</a></h2>
+<h2>Oefening 1<a class="headerlink" href="#oefening-1" title="Permalink to this heading">#</a></h2>
 <p>Pas aan de hand van een Smith kaart om een antenne van 128 Ohm aan aan een striplijn printbaan van 50 Ohm voor een frequentie van 1.2 GHz (<span class="math notranslate nohighlight">\(\lambda\)</span>= 12.5 cm; <span class="math notranslate nohighlight">\(\epsilon_r\)</span>=4).Doe dit door een condensator in parallel op de 50 Ohm lijn te plaatsen. Waar moet deze condensator staan en hoe groot moet deze zijn? Wanneer 250 mW naar deze antenne gestuurd wordt, hoe groot is dan de maximale spanning aan de voet van de antenne? Hoe groot is de maximale spanning op de plaats waar de condensator is aangesloten?</p>
 <section id="deel-a-bijplaatsen-van-een-capaciteit-in-parallel">
-<h3>deel A: Bijplaatsen van een capaciteit in parallel<a class="headerlink" href="#deel-a-bijplaatsen-van-een-capaciteit-in-parallel" title="Permalink naar deze titel">#</a></h3>
+<h3>deel A: Bijplaatsen van een capaciteit in parallel<a class="headerlink" href="#deel-a-bijplaatsen-van-een-capaciteit-in-parallel" title="Permalink to this heading">#</a></h3>
 <p>Om uiteindelijk een impedantie van 50 Ohm te bekomen, moet de parallel schakeling van het laatste stuk van de coax kabel met de bij te plaatsen condensator een uiteindelijke <a class="reference external" href="https://nl.wikipedia.org/wiki/Admittantie">admittantie</a> van 20 mS opleveren.</p>
 <p>We plaatsen <span class="math notranslate nohighlight">\(\frac{Z_L}{Z_0}=2.56\)</span> op de Smith kaart en we zoeken waar we de y=1 cirkel snijden in het bovenste deel van de kaart.</p>
 <div class="cell docutils container">
@@ -618,7 +602,7 @@ De optimale condensatorwaarde in parallel wordt dus  2.59 pF en de lengte van de
 </div>
 </section>
 <section id="deel-b-spanning-aan-de-voet-van-de-antenne">
-<h3>deel B: Spanning aan de voet van de antenne<a class="headerlink" href="#deel-b-spanning-aan-de-voet-van-de-antenne" title="Permalink naar deze titel">#</a></h3>
+<h3>deel B: Spanning aan de voet van de antenne<a class="headerlink" href="#deel-b-spanning-aan-de-voet-van-de-antenne" title="Permalink to this heading">#</a></h3>
 <p>Aangezien we een perfecte aanpassing hebben uitgevoerd, wordt het volledige vermogen dat op de kabel gestuurd wordt ook bekomen op de antenne. Derhalve kunnen we schrijven:</p>
 <div class="math notranslate nohighlight">
 \[ P_{in}= \frac{V_L^2}{2 R_L}  \]</div>
@@ -628,7 +612,7 @@ Hieruit volgt dat de amplitude van de spanning die op de antenne bekomen wordt g
 </div>
 </section>
 <section id="deel-c-maximale-spanning-op-het-gedeelte-van-de-kabel-voor-de-aansluiting-van-de-condensator">
-<h3>deel C: Maximale spanning op het gedeelte van de kabel voor de aansluiting van de condensator<a class="headerlink" href="#deel-c-maximale-spanning-op-het-gedeelte-van-de-kabel-voor-de-aansluiting-van-de-condensator" title="Permalink naar deze titel">#</a></h3>
+<h3>deel C: Maximale spanning op het gedeelte van de kabel voor de aansluiting van de condensator<a class="headerlink" href="#deel-c-maximale-spanning-op-het-gedeelte-van-de-kabel-voor-de-aansluiting-van-de-condensator" title="Permalink to this heading">#</a></h3>
 <p>De spanningsamplitude <span class="math notranslate nohighlight">\(V_a\)</span> op de kabel kunnen we afleiden uit he vermogen en de karakteristieke impedantie <span class="math notranslate nohighlight">\(Z_o\)</span>:</p>
 <div class="math notranslate nohighlight">
 \[ P_{in}= \frac{V_a^2}{2 Z_o}  \]</div>
@@ -665,7 +649,7 @@ Het omgekeerde gebeurt echter met de stroomamplitude: deze daalt van 100 mA op d
             mode: "kuleuven"
         },
         kernelOptions: {
-            kernelName: "kuleuven",
+            name: "kuleuven",
             path: "./."
         },
         predefinedOutput: true
@@ -673,49 +657,100 @@ Het omgekeerde gebeurt echter met de stroomamplitude: deze daalt van 100 mA op d
     </script>
     <script>kernelName = 'kuleuven'</script>
 
-              </div>
+                </article>
               
-            </main>
-            <footer class="footer-article noprint">
-                
-    <!-- Previous / next buttons -->
-<div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="SmithKaart.html" title="vorige pagina">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">vorige</p>
-            <p class="prev-next-title">SmithKaart</p>
-        </div>
+
+              
+              
+                <footer class="bd-footer-article">
+                  <!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="SmithKaart.html"
+       title="vorige pagina">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">vorige</p>
+        <p class="prev-next-title">SmithKaart</p>
+      </div>
     </a>
-    <a class='right-next' id="next-link" href="SmithKaartOefening2.html" title="volgende pagina">
-    <div class="prev-next-info">
+    <a class="right-next"
+       href="SmithKaartOefening2.html"
+       title="volgende pagina">
+      <div class="prev-next-info">
         <p class="prev-next-subtitle">volgende</p>
         <p class="prev-next-title">Smith Kaart Oefening 2</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
-            </footer>
-        </div>
-    </div>
-    <div class="footer-content row">
-        <footer class="col footer"><p>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#oefening-1">Oefening 1</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#deel-a-bijplaatsen-van-een-capaciteit-in-parallel">deel A: Bijplaatsen van een capaciteit in parallel</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#deel-b-spanning-aan-de-voet-van-de-antenne">deel B: Spanning aan de voet van de antenne</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#deel-c-maximale-spanning-op-het-gedeelte-van-de-kabel-voor-de-aansluiting-van-de-condensator">deel C: Maximale spanning op het gedeelte van de kabel voor de aansluiting van de condensator</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            <div class="bd-footer-content__inner">
+<div class="bd-footer-content__inner container">
   
-    By Jan Genoe (jan.genoe@kuleuven.be)<br/>
-  
-</p>
-        </footer>
-    </div>
+  <div class="footer-item">
     
-</div>
+<p class="component-author">
+By Jan Genoe (jan.genoe@kuleuven.be)
+</p>
 
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    <p class="last-updated">
+  Laatste aanpassing op None.
+  <br/>
+</p>
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div></div>
+          </footer>
+        
 
-      </div>
+      </main>
     </div>
+  </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+  <script src="_static/scripts/bootstrap.js?digest=12da95d707ffb74b382d"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=12da95d707ffb74b382d"></script>
 
-
+  <footer class="bd-footer">
+  </footer>
   </body>
 </html>
