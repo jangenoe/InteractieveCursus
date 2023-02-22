@@ -38,7 +38,7 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=56348ffd8e7ce817f831f1f32f1f7f6638896a71" type="text/css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=18134341461cad4d0490f915e28f299975ce52b8" type="text/css" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
@@ -124,52 +124,6 @@ const thebe_selector_output = ".output, .cell_output"
   </div>
   
     <nav class="bd-header navbar navbar-expand-lg bd-navbar">
-<div class="bd-header__inner bd-page-width">
-  <label class="sidebar-toggle primary-toggle" for="__primary">
-    <span class="fa-solid fa-bars"></span>
-  </label>
-  
-  
-  <div class="col-lg-9 navbar-header-items">
-    
-    
-    <div class="navbar-header-items__end">
-      
-        <div class="navbar-item navbar-persistent--container">
-          
-<script>
-document.write(`
-  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Zoeken" aria-label="Zoeken" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-  </button>
-`);
-</script>
-        </div>
-      
-      
-    </div>
-    
-  </div>
-  
-  
-    <div class="navbar-persistent--mobile">
-<script>
-document.write(`
-  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Zoeken" aria-label="Zoeken" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-  </button>
-`);
-</script>
-    </div>
-  
-
-  
-    <label class="sidebar-toggle secondary-toggle" for="__secondary">
-      <span class="fa-solid fa-outdent"></span>
-    </label>
-  
-</div>
-
     </nav>
   
   <div class="bd-container">
@@ -525,11 +479,11 @@ document.write(`
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#aansturing-met-transformator-aan-de-kant-van-de-belasting">Aansturing met transformator aan de kant van de belasting</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#keuze-van-de-wikkelverhouding">Keuze van de wikkelverhouding</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Aanpassing voor de aansturing off-resonantie</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Aanpassing voor de aansturing off-resonantie</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#klasse-d-met-stroomsturing">Klasse D met stroomsturing</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Aanpassing voor de aansturing off-resonantie</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Aanpassing voor de aansturing off-resonantie</a></li>
 </ul>
 </li>
 </ul>
@@ -606,9 +560,9 @@ document.write(`
 </figure>
 </div>
 </div>
-<p>De overeenkomende SPICE code voor dit circuit is kan je zien in <code class="xref std std-numref docutils literal notranslate"><span class="pre">listingD1</span></code>. We werken hier met een voedingsspanning <span class="math notranslate nohighlight">\(V_{dd}\)</span> van 20V en we leggen ook pulsen aan van 20V aan de ingangsknoop 1. De spanning op knoop 2 zal dan typisch 0.6V tot 0.7V verschillen van de ingangsspanning.</p>
-<div class="literal-block-wrapper docutils container" id="listing1d">
-<div class="code-block-caption"><span class="caption-number">Spice Listing 10 </span><span class="caption-text">Basis Klasse D circuit</span><a class="headerlink" href="#listing1d" title="Permalink naar deze broncode">#</a></div>
+<p>De overeenkomende SPICE code voor dit circuit is kan je zien in <a class="reference internal" href="#listingd1"><span class="std std-numref">Spice Listing 10</span></a>. We werken hier met een voedingsspanning <span class="math notranslate nohighlight">\(V_{dd}\)</span> van 20V en we leggen ook pulsen aan van 20V aan de ingangsknoop 1. De spanning op knoop 2 zal dan typisch 0.6V tot 0.7V verschillen van de ingangsspanning.</p>
+<div class="literal-block-wrapper docutils container" id="listingd1">
+<div class="code-block-caption"><span class="caption-number">Spice Listing 10 </span><span class="caption-text">Basis Klasse D circuit</span><a class="headerlink" href="#listingd1" title="Permalink naar deze broncode">#</a></div>
 <div class="highlight-spice notranslate"><div class="highlight"><pre><span></span><span class="o">*</span><span class="w"> </span><span class="nx">Class</span><span class="w"> </span><span class="nx">D</span><span class="w"> </span><span class="nx">amp</span><span class="w"> </span><span class="mi">1</span>
 <span class="nx">Q_Q1</span><span class="w">         </span><span class="mi">3</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="nx">Q2</span>
 <span class="nx">Q_Qp</span><span class="w">         </span><span class="mi">0</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="nx">Qp</span>
@@ -720,8 +674,8 @@ j \omega L_1 =-\frac{1}{j \omega C_1}
 </figure>
 </div>
 </div>
-<div class="literal-block-wrapper docutils container" id="id1">
-<div class="code-block-caption"><span class="caption-number">Spice Listing 11 </span><span class="caption-text">Basis Klasse D circuit met diodes</span><a class="headerlink" href="#id1" title="Permalink naar deze broncode">#</a></div>
+<div class="literal-block-wrapper docutils container" id="listingd1d">
+<div class="code-block-caption"><span class="caption-number">Spice Listing 11 </span><span class="caption-text">Basis Klasse D circuit met diodes</span><a class="headerlink" href="#listingd1d" title="Permalink naar deze broncode">#</a></div>
 <div class="highlight-spice notranslate"><div class="highlight"><pre><span></span><span class="o">*</span><span class="w"> </span><span class="nx">Class</span><span class="w"> </span><span class="nx">D</span><span class="w"> </span><span class="nx">amp</span><span class="w"> </span><span class="mi">1</span>
 <span class="nx">Q_Q1</span><span class="w">         </span><span class="mi">3</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="nx">Q2</span>
 <span class="nx">Q_Qp</span><span class="w">         </span><span class="mi">0</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="nx">Qp</span>
@@ -835,12 +789,12 @@ P_{ac}=\frac{V_{ac}^2}{2 R_L}
 
 <p class="admonition-title"><span class="caption-number">Opdracht 4 </span> (Keuze van de wikkelverhouding)</p>
 <section id="exercise-content">
-<p>De implementatie van <code class="xref std std-numref docutils literal notranslate"><span class="pre">listingD1</span></code> heeft een voedingsspanning <span class="math notranslate nohighlight">\(V_{dd}\)</span> van 20V nodig om een vermogen van 11.3 W te bekomen. We willen hetzelfde vermogen bekomen gebruikmakende van <a class="reference internal" href="#dfig3spanning-npns"><span class="std std-numref">Fig. 61</span></a> en een voedingsspanning van <span class="math notranslate nohighlight">\(V_{dd}\)</span>=6V. De frequentie en alle elementen van de trilkring blijven hetzelfde. Wat moet de wikkelverhouding zijn?</p>
+<p>De implementatie van <a class="reference internal" href="#listingd1"><span class="std std-numref">Spice Listing 10</span></a> heeft een voedingsspanning <span class="math notranslate nohighlight">\(V_{dd}\)</span> van 20V nodig om een vermogen van 11.3 W te bekomen. We willen hetzelfde vermogen bekomen gebruikmakende van <a class="reference internal" href="#dfig3spanning-npns"><span class="std std-numref">Fig. 61</span></a> en een voedingsspanning van <span class="math notranslate nohighlight">\(V_{dd}\)</span>=6V. De frequentie en alle elementen van de trilkring blijven hetzelfde. Wat moet de wikkelverhouding zijn?</p>
 </section>
 </div>
 </section>
-<section id="id2">
-<h3>Aanpassing voor de aansturing off-resonantie<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h3>
+<section id="id1">
+<h3>Aanpassing voor de aansturing off-resonantie<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h3>
 <p>Het schema in <a class="reference internal" href="#dfig3spanning"><span class="std std-numref">Fig. 60</span></a> kan ook verder aangepast worden om aansturing toe te laten op frequenties die een klein beetje verschillen van de resonantiefrequentie. Hiervoor is het nodig dat we diodes toevoegen die stroom toelaten die in de omgekeerde richting loopt dan deze van de vermogentransistors.  <a class="reference internal" href="#dfig3spanningdiode"><span class="std std-numref">Fig. 62</span></a> toont het aangepaste schema.</p>
 <div class="cell docutils container">
 <div class="cell_output docutils container">
@@ -865,8 +819,8 @@ P_{ac}=\frac{V_{ac}^2}{2 R_L}
 </figure>
 </div>
 </div>
-<section id="id3">
-<h3>Aanpassing voor de aansturing off-resonantie<a class="headerlink" href="#id3" title="Permalink to this heading">#</a></h3>
+<section id="id2">
+<h3>Aanpassing voor de aansturing off-resonantie<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h3>
 <p>Het schema in <a class="reference internal" href="#dfig4stroom"><span class="std std-numref">Fig. 63</span></a> kan ook verder aangepast worden om aansturing toe te laten op frequenties die een klein beetje verschillen van de resonantiefrequentie. Hiervoor is het nodig dat we diodes toevoegen die stroom toelaten die in de omgekeerde richting loopt dan deze van de vermogentransistors.  <a class="reference internal" href="#dfig4stroomdiode"><span class="std std-numref">Fig. 64</span></a> toont het aangepaste schema.</p>
 <div class="cell docutils container">
 <div class="cell_output docutils container">
@@ -954,11 +908,11 @@ P_{ac}=\frac{V_{ac}^2}{2 R_L}
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#aansturing-met-transformator-aan-de-kant-van-de-belasting">Aansturing met transformator aan de kant van de belasting</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#keuze-van-de-wikkelverhouding">Keuze van de wikkelverhouding</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Aanpassing voor de aansturing off-resonantie</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Aanpassing voor de aansturing off-resonantie</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#klasse-d-met-stroomsturing">Klasse D met stroomsturing</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Aanpassing voor de aansturing off-resonantie</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Aanpassing voor de aansturing off-resonantie</a></li>
 </ul>
 </li>
 </ul>

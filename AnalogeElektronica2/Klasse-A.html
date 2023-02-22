@@ -38,7 +38,7 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=56348ffd8e7ce817f831f1f32f1f7f6638896a71" type="text/css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=18134341461cad4d0490f915e28f299975ce52b8" type="text/css" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
@@ -124,52 +124,6 @@ const thebe_selector_output = ".output, .cell_output"
   </div>
   
     <nav class="bd-header navbar navbar-expand-lg bd-navbar">
-<div class="bd-header__inner bd-page-width">
-  <label class="sidebar-toggle primary-toggle" for="__primary">
-    <span class="fa-solid fa-bars"></span>
-  </label>
-  
-  
-  <div class="col-lg-9 navbar-header-items">
-    
-    
-    <div class="navbar-header-items__end">
-      
-        <div class="navbar-item navbar-persistent--container">
-          
-<script>
-document.write(`
-  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Zoeken" aria-label="Zoeken" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-  </button>
-`);
-</script>
-        </div>
-      
-      
-    </div>
-    
-  </div>
-  
-  
-    <div class="navbar-persistent--mobile">
-<script>
-document.write(`
-  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Zoeken" aria-label="Zoeken" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-  </button>
-`);
-</script>
-    </div>
-  
-
-  
-    <label class="sidebar-toggle secondary-toggle" for="__secondary">
-      <span class="fa-solid fa-outdent"></span>
-    </label>
-  
-</div>
-
     </nav>
   
   <div class="bd-container">
@@ -576,6 +530,22 @@ document.write(`
 <section id="overeenkomende-spice-listing">
 <h3>Overeenkomende Spice listing<a class="headerlink" href="#overeenkomende-spice-listing" title="Permalink to this heading">#</a></h3>
 <p>De overeenkomende spice listing wordt dan:</p>
+<div class="literal-block-wrapper docutils container" id="listinga1">
+<div class="code-block-caption"><span class="caption-number">Spice Listing 1 </span><span class="caption-text">basis Klasse A circuit</span><a class="headerlink" href="#listinga1" title="Permalink naar deze broncode">#</a></div>
+<div class="highlight-spice notranslate"><div class="highlight"><pre><span></span><span class="o">*</span><span class="w"> </span><span class="nx">Spice</span><span class="w"> </span><span class="nx">file</span><span class="w"> </span><span class="nx">van</span><span class="w"> </span><span class="nx">een</span><span class="w"> </span><span class="nx">eenvoudige</span><span class="w"> </span><span class="nx">Klasse</span><span class="w"> </span><span class="nx">A</span><span class="w"> </span><span class="nx">versterker</span>
+<span class="nx">R_R6</span><span class="w">         </span><span class="mi">0</span><span class="w"> </span><span class="mi">1</span><span class="w">  </span><span class="mi">8</span><span class="w">  </span>
+<span class="nx">R_R7</span><span class="w">         </span><span class="mi">3</span><span class="w"> </span><span class="mi">2</span><span class="w">  </span><span class="mi">1</span><span class="w">  </span>
+<span class="nx">L1_TX1</span><span class="w">       </span><span class="mi">3</span><span class="w"> </span><span class="mi">4</span><span class="w"> </span><span class="mi">25</span><span class="nx">m</span>
+<span class="nx">L2_TX1</span><span class="w">       </span><span class="mi">1</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="mi">1</span><span class="nx">m</span>
+<span class="nx">K_TX1</span><span class="w">        </span><span class="nx">L1_TX1</span><span class="w"> </span><span class="nx">L2_TX1</span><span class="w"> </span><span class="mi">1</span><span class="p">.</span>
+<span class="nx">Q_Q5</span><span class="w">         </span><span class="mi">4</span><span class="w"> </span><span class="mi">5</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="nx">Q2</span>
+<span class="nx">I_I4</span><span class="w">         </span><span class="mi">0</span><span class="w"> </span><span class="mi">5</span><span class="w">  </span><span class="nx">SIN</span><span class="p">(</span><span class="mi">17</span><span class="nx">m</span><span class="w"> </span><span class="mi">15</span><span class="nx">m</span><span class="w"> </span><span class="mi">10</span><span class="nx">k</span><span class="p">)</span><span class="w"> </span><span class="nx">DC</span><span class="p">=</span><span class="mi">17</span><span class="nx">m</span>
+<span class="nx">V_VDD</span><span class="w">        </span><span class="mi">2</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="mi">66</span><span class="nx">V</span>
+
+<span class="p">.</span><span class="nx">model</span><span class="w"> </span><span class="nx">Q2</span><span class="w">  </span><span class="nx">NPN</span><span class="p">(</span><span class="nx">Is</span><span class="p">=</span><span class="m m-Double">14.34</span><span class="kd">p</span><span class="w"> </span><span class="nx">BF</span><span class="p">=</span><span class="mi">20</span><span class="w"> </span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
 <p>Vergelijk deze Spice list aandachtig met <a class="reference internal" href="#afig1-2"><span class="std std-numref">Fig. 2</span></a>. Voor elk element, met uitzondering van de transformator, vinden we de 2 of 3 knopen terug die ook in het schema staan. De uitgang wordt belast met een weerstand van 8 <span class="math notranslate nohighlight">\(\Omega\)</span>. De weerstand van de primaire wikkeling van de transformator is natuurlijk ongewenst maar we kunnen deze niet zomaar verwaarlozen. We moeten dit correct inbrengen om een realistische simulatie te bekomen. We doen dit door een weerstand van 1 <span class="math notranslate nohighlight">\(\Omega\)</span> te plaatsen tussen knopen 2 en 3. Voor de vermogentransistor (Q5) nemen we in deze simulatie een bipolaire transistor. In het model van deze transistor (de naam van het model is Q2) zien we dat deze transistor een voorwaartse stroomversterking (<span class="math notranslate nohighlight">\(\beta_F\)</span>) heeft van 20.</p>
 <p>De transformator TX1 implementeren we in spice aan de hand van de 2 spoelen L1_TX1 en L2_TX1 die gekoppeld worden door de koppeling K_TX1. De koppelingsfactor is 1. Uit de ratio van de 2 spoelwaardes (<span class="math notranslate nohighlight">\(\frac{25 mH}{1 mH}\)</span> =25) kunnen we ook de wikkelverhouding (N) afleiden: <span class="math notranslate nohighlight">\( 5 = \sqrt{25}\)</span>.</p>
 <p>De bovenstaande netwerkcode simuleren we in Spice. <a class="reference internal" href="#afigstroomvsspanning"><span class="std std-numref">Fig. 3</span></a>  toont zowel de stromen (rechts) als de spanningen (links) als functie van de tijd.</p>
@@ -601,6 +571,22 @@ document.write(`
 </div>
 </div>
 <p>Wanneer we de spoelwaarde van de primaire en de secundaire wikkeling heel erg sterk verhogen (zonder de wikkelverhouding van 5 hierbij aan te passen), valt het faseverschil tussen de stroom en de spanning weg en krijgen we een plot waarbij we een mooi linair verband zien tussen stroom en spanning, zowel over de primaire (blauwe curve) als over de secundaire wikkeling (orange curve) (zie <a class="reference internal" href="#afig3"><span class="std std-numref">Fig. 5</span></a>). De spice code voor deze simulatie met aangepaste wikkelverhouding kan je hieronder terugvinden.</p>
+<div class="literal-block-wrapper docutils container" id="listinga2">
+<div class="code-block-caption"><span class="caption-number">Spice Listing 2 </span><span class="caption-text">basis Klasse A circuit</span><a class="headerlink" href="#listinga2" title="Permalink naar deze broncode">#</a></div>
+<div class="highlight-spice notranslate"><div class="highlight"><pre><span></span><span class="o">*</span><span class="w"> </span><span class="nx">Spice</span><span class="w"> </span><span class="nx">file</span><span class="w"> </span><span class="nx">van</span><span class="w"> </span><span class="nx">een</span><span class="w"> </span><span class="nx">eenvoudige</span><span class="w"> </span><span class="nx">Klasse</span><span class="w"> </span><span class="nx">A</span><span class="w"> </span><span class="nx">versterker</span>
+<span class="nx">R_R6</span><span class="w">         </span><span class="mi">0</span><span class="w"> </span><span class="mi">1</span><span class="w">  </span><span class="mi">8</span><span class="w">  </span>
+<span class="nx">R_R7</span><span class="w">         </span><span class="mi">3</span><span class="w"> </span><span class="mi">2</span><span class="w">  </span><span class="mi">1</span><span class="w">  </span>
+<span class="nx">L1_TX1</span><span class="w">       </span><span class="mi">3</span><span class="w"> </span><span class="mi">4</span><span class="w"> </span><span class="mi">25</span>
+<span class="nx">L2_TX1</span><span class="w">       </span><span class="mi">1</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="mi">1</span>
+<span class="nx">K_TX1</span><span class="w">        </span><span class="nx">L1_TX1</span><span class="w"> </span><span class="nx">L2_TX1</span><span class="w"> </span><span class="mi">1</span><span class="p">.</span>
+<span class="nx">Q_Q5</span><span class="w">         </span><span class="mi">4</span><span class="w"> </span><span class="mi">5</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="nx">Q2</span>
+<span class="nx">I_I4</span><span class="w">         </span><span class="mi">0</span><span class="w"> </span><span class="mi">5</span><span class="w">  </span><span class="nx">SIN</span><span class="p">(</span><span class="mi">17</span><span class="nx">m</span><span class="w"> </span><span class="mi">15</span><span class="nx">m</span><span class="w"> </span><span class="mi">10</span><span class="nx">k</span><span class="p">)</span><span class="w"> </span><span class="nx">DC</span><span class="p">=</span><span class="mi">17</span><span class="nx">m</span>
+<span class="nx">V_VDD</span><span class="w">        </span><span class="mi">2</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="mi">66</span><span class="nx">V</span>
+
+<span class="p">.</span><span class="nx">model</span><span class="w"> </span><span class="nx">Q2</span><span class="w">  </span><span class="nx">NPN</span><span class="p">(</span><span class="nx">Is</span><span class="p">=</span><span class="m m-Double">14.34</span><span class="kd">p</span><span class="w"> </span><span class="nx">BF</span><span class="p">=</span><span class="mi">20</span><span class="w"> </span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
 <figure class="align-default" id="afig3">
@@ -613,7 +599,7 @@ document.write(`
 </div>
 <p>Het verschil in fase tussen de stroom door de transistor en de spanning over de transistor kunnen we ook verkleinen door de frequentie te verhogen. In de onderstaande spice listing is de frequentie van de stroombron I4 aan de basis van de bipolaire transistor verhoogt van 10 kHz naar 100 kHz. Uit de simulatie in <a class="reference internal" href="#afighf"><span class="std std-numref">Fig. 6</span></a> zien we dat ook hier weer een bijna linair verloop tussen stroom en spanning wodt bekomen.</p>
 <div class="literal-block-wrapper docutils container" id="listinga3">
-<div class="code-block-caption"><span class="caption-number">Spice Listing 1 </span><span class="caption-text">basis Klasse A circuit</span><a class="headerlink" href="#listinga3" title="Permalink naar deze broncode">#</a></div>
+<div class="code-block-caption"><span class="caption-number">Spice Listing 3 </span><span class="caption-text">basis Klasse A circuit</span><a class="headerlink" href="#listinga3" title="Permalink naar deze broncode">#</a></div>
 <div class="highlight-spice notranslate"><div class="highlight"><pre><span></span><span class="o">*</span><span class="w"> </span><span class="nx">Spice</span><span class="w"> </span><span class="nx">file</span><span class="w"> </span><span class="nx">van</span><span class="w"> </span><span class="nx">een</span><span class="w"> </span><span class="nx">eenvoudige</span><span class="w"> </span><span class="nx">Klasse</span><span class="w"> </span><span class="nx">A</span><span class="w"> </span><span class="nx">versterker</span>
 <span class="nx">R_R6</span><span class="w">         </span><span class="mi">0</span><span class="w"> </span><span class="mi">1</span><span class="w">  </span><span class="mi">8</span><span class="w">  </span>
 <span class="nx">R_R7</span><span class="w">         </span><span class="mi">3</span><span class="w"> </span><span class="mi">2</span><span class="w">  </span><span class="mi">1</span><span class="w">  </span>

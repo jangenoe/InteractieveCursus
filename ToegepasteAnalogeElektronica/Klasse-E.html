@@ -38,7 +38,7 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=56348ffd8e7ce817f831f1f32f1f7f6638896a71" type="text/css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=18134341461cad4d0490f915e28f299975ce52b8" type="text/css" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
@@ -124,52 +124,6 @@ const thebe_selector_output = ".output, .cell_output"
   </div>
   
     <nav class="bd-header navbar navbar-expand-lg bd-navbar">
-<div class="bd-header__inner bd-page-width">
-  <label class="sidebar-toggle primary-toggle" for="__primary">
-    <span class="fa-solid fa-bars"></span>
-  </label>
-  
-  
-  <div class="col-lg-9 navbar-header-items">
-    
-    
-    <div class="navbar-header-items__end">
-      
-        <div class="navbar-item navbar-persistent--container">
-          
-<script>
-document.write(`
-  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Zoeken" aria-label="Zoeken" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-  </button>
-`);
-</script>
-        </div>
-      
-      
-    </div>
-    
-  </div>
-  
-  
-    <div class="navbar-persistent--mobile">
-<script>
-document.write(`
-  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Zoeken" aria-label="Zoeken" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-  </button>
-`);
-</script>
-    </div>
-  
-
-  
-    <label class="sidebar-toggle secondary-toggle" for="__secondary">
-      <span class="fa-solid fa-outdent"></span>
-    </label>
-  
-</div>
-
     </nav>
   
   <div class="bd-container">
@@ -530,8 +484,8 @@ document.write(`
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vb2-een-50w-versterker-of-137-77-khz">VB2: Een 50W versterker of 137.77 kHz</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">detail van de opstartsequentie</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">1 periode van de Steady State</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">detail van de opstartsequentie</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">1 periode van de Steady State</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#w-aan-1mhz">2 W aan 1MHz</a></li>
 </ul>
 </li>
@@ -710,8 +664,8 @@ We kunnen de uitgang omwerken naar een impedantie van 50 Ohm door een transforma
 </figure>
 </div>
 </div>
-<div class="literal-block-wrapper docutils container" id="espice2">
-<div class="code-block-caption"><span class="caption-number">Spice Listing 12 </span><span class="caption-text">Klasse E spice file</span><a class="headerlink" href="#espice2" title="Permalink naar deze broncode">#</a></div>
+<div class="literal-block-wrapper docutils container" id="espice1">
+<div class="code-block-caption"><span class="caption-number">Spice Listing 12 </span><span class="caption-text">Klasse E spice file</span><a class="headerlink" href="#espice1" title="Permalink naar deze broncode">#</a></div>
 <div class="highlight-spice notranslate"><div class="highlight"><pre><span></span><span class="o">*</span><span class="w"> </span><span class="nx">Class</span><span class="w"> </span><span class="nx">E</span><span class="w"> </span><span class="nx">amp</span><span class="w"> </span><span class="mi">1</span>
 <span class="nx">M_M1</span><span class="w">         </span><span class="mi">2</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="nx">FDB33N25</span><span class="w"> </span>
 <span class="nx">L_L1</span><span class="w">         </span><span class="mi">2</span><span class="w"> </span><span class="mi">3</span><span class="w">  </span><span class="mi">1000</span><span class="nx">uH</span><span class="w">  </span>
@@ -814,8 +768,8 @@ We kunnen de uitgang omwerken naar een impedantie van 50 Ohm door een transforma
 </figure>
 </div>
 </div>
-<div class="literal-block-wrapper docutils container" id="id1">
-<div class="code-block-caption"><span class="caption-number">Spice Listing 13 </span><span class="caption-text">Klasse E spice file</span><a class="headerlink" href="#id1" title="Permalink naar deze broncode">#</a></div>
+<div class="literal-block-wrapper docutils container" id="espice2">
+<div class="code-block-caption"><span class="caption-number">Spice Listing 13 </span><span class="caption-text">Klasse E spice file</span><a class="headerlink" href="#espice2" title="Permalink naar deze broncode">#</a></div>
 <div class="highlight-spice notranslate"><div class="highlight"><pre><span></span><span class="o">*</span><span class="w"> </span><span class="nx">Class</span><span class="w"> </span><span class="nx">E</span><span class="w"> </span><span class="nx">amp</span><span class="w"> </span><span class="mi">1</span>
 <span class="nx">M_M1</span><span class="w">         </span><span class="mi">2</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="nx">FDB33N25</span><span class="w"> </span>
 <span class="nx">L_L1</span><span class="w">         </span><span class="mi">2</span><span class="w"> </span><span class="mi">3</span><span class="w">  </span><span class="mi">270</span><span class="nx">uH</span><span class="w">  </span>
@@ -839,8 +793,8 @@ We kunnen de uitgang omwerken naar een impedantie van 50 Ohm door een transforma
 </figure>
 </div>
 </div>
-<section id="id2">
-<h3>detail van de opstartsequentie<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h3>
+<section id="id1">
+<h3>detail van de opstartsequentie<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h3>
 <div class="cell tag_full-width docutils container">
 <div class="cell_output docutils container">
 <figure class="align-default" id="efig18">
@@ -852,8 +806,8 @@ We kunnen de uitgang omwerken naar een impedantie van 50 Ohm door een transforma
 </div>
 </div>
 </section>
-<section id="id3">
-<h3>1 periode van de Steady State<a class="headerlink" href="#id3" title="Permalink to this heading">#</a></h3>
+<section id="id2">
+<h3>1 periode van de Steady State<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h3>
 <div class="cell tag_full-width docutils container">
 <div class="cell_output docutils container">
 <figure class="align-default" id="efig19">
@@ -911,7 +865,36 @@ We kunnen de uitgang omwerken naar een impedantie van 50 Ohm door een transforma
 <p><span class="caption-number">Fig. 84 </span><span class="caption-text">Schema van de klasse E versterker met injection locking.</span><a class="headerlink" href="#tsai-schema" title="Permallink naar deze afbeelding">#</a></p>
 </figcaption>
 </figure>
-<p>We kunnen dit schema uitwerken als een spice file (zie <code class="xref std std-numref docutils literal notranslate"><span class="pre">eSpiceTsai</span></code>) en deze spice file simuleren.</p>
+<p>We kunnen dit schema uitwerken als een spice file (zie <a class="reference internal" href="#espicetsai"><span class="std std-numref">Spice Listing 14</span></a>) en deze spice file simuleren.</p>
+<div class="literal-block-wrapper docutils container" id="espicetsai">
+<div class="code-block-caption"><span class="caption-number">Spice Listing 14 </span><span class="caption-text">Klasse E spice file met injection locking</span><a class="headerlink" href="#espicetsai" title="Permalink naar deze broncode">#</a></div>
+<div class="highlight-spice notranslate"><div class="highlight"><pre><span></span><span class="o">*</span><span class="w"> </span><span class="nx">Class</span><span class="w"> </span><span class="nx">E</span><span class="w"> </span><span class="nx">Tsai</span>
+<span class="nx">M_SWn</span><span class="w">        </span><span class="mi">0</span><span class="w"> </span><span class="mi">11</span><span class="w"> </span><span class="mi">10</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="nx">nmos</span><span class="w"> </span><span class="nx">W</span><span class="p">=</span><span class="mi">31580</span><span class="nx">u</span><span class="w"> </span><span class="nx">L</span><span class="p">=</span><span class="m m-Double">0.35</span><span class="nx">u</span>
+<span class="nx">M_SWp</span><span class="w">        </span><span class="mi">3</span><span class="w"> </span><span class="mi">11</span><span class="w"> </span><span class="mi">10</span><span class="w"> </span><span class="mi">3</span><span class="w"> </span><span class="nx">pmos</span><span class="w"> </span><span class="nx">W</span><span class="p">=</span><span class="mi">500</span><span class="nx">u</span><span class="w"> </span><span class="nx">L</span><span class="p">=</span><span class="m m-Double">0.35</span><span class="nx">u</span>
+<span class="o">*</span><span class="w"> </span><span class="nx">stage</span><span class="w"> </span><span class="mi">1</span>
+<span class="nx">L_L1</span><span class="w">         </span><span class="mi">3</span><span class="w"> </span><span class="mi">6</span><span class="w">  </span><span class="m m-Double">0.37</span><span class="nx">nH</span>
+<span class="nx">L_L2</span><span class="w">         </span><span class="mi">3</span><span class="w"> </span><span class="mi">7</span><span class="w">  </span><span class="m m-Double">0.37</span><span class="nx">nH</span>
+<span class="nx">M_11</span><span class="w">         </span><span class="mi">10</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="mi">6</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="nx">nmos</span><span class="w"> </span><span class="nx">W</span><span class="p">=</span><span class="mi">980</span><span class="nx">u</span><span class="w"> </span><span class="nx">L</span><span class="p">=</span><span class="m m-Double">0.35</span><span class="nx">u</span>
+<span class="nx">M_12</span><span class="w">         </span><span class="mi">10</span><span class="w"> </span><span class="mi">7</span><span class="w"> </span><span class="mi">6</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="nx">nmos</span><span class="w"> </span><span class="nx">W</span><span class="p">=</span><span class="mi">980</span><span class="nx">u</span><span class="w"> </span><span class="nx">L</span><span class="p">=</span><span class="m m-Double">0.35</span><span class="nx">u</span>
+<span class="nx">M_13</span><span class="w">         </span><span class="mi">10</span><span class="w"> </span><span class="mi">6</span><span class="w"> </span><span class="mi">7</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="nx">nmos</span><span class="w"> </span><span class="nx">W</span><span class="p">=</span><span class="mi">980</span><span class="nx">u</span><span class="w"> </span><span class="nx">L</span><span class="p">=</span><span class="m m-Double">0.35</span><span class="nx">u</span>
+<span class="nx">M_14</span><span class="w">         </span><span class="mi">10</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="mi">7</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="nx">nmos</span><span class="w"> </span><span class="nx">W</span><span class="p">=</span><span class="mi">980</span><span class="nx">u</span><span class="w"> </span><span class="nx">L</span><span class="p">=</span><span class="m m-Double">0.35</span><span class="nx">u</span>
+<span class="o">*</span><span class="w"> </span><span class="nx">stage</span><span class="w"> </span><span class="mi">2</span>
+<span class="nx">M_21</span><span class="w">         </span><span class="mi">10</span><span class="w"> </span><span class="mi">6</span><span class="w"> </span><span class="mi">8</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="nx">nmos</span><span class="w"> </span><span class="nx">W</span><span class="p">=</span><span class="mi">3600</span><span class="nx">u</span><span class="w"> </span><span class="nx">L</span><span class="p">=</span><span class="m m-Double">0.35</span><span class="nx">u</span>
+<span class="nx">M_22</span><span class="w">         </span><span class="mi">10</span><span class="w"> </span><span class="mi">9</span><span class="w"> </span><span class="mi">8</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="nx">nmos</span><span class="w"> </span><span class="nx">W</span><span class="p">=</span><span class="mi">4800</span><span class="nx">u</span><span class="w"> </span><span class="nx">L</span><span class="p">=</span><span class="m m-Double">0.35</span><span class="nx">u</span>
+<span class="nx">M_23</span><span class="w">         </span><span class="mi">10</span><span class="w"> </span><span class="mi">8</span><span class="w"> </span><span class="mi">9</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="nx">nmos</span><span class="w"> </span><span class="nx">W</span><span class="p">=</span><span class="mi">4800</span><span class="nx">u</span><span class="w"> </span><span class="nx">L</span><span class="p">=</span><span class="m m-Double">0.35</span><span class="nx">u</span>
+<span class="nx">M_24</span><span class="w">         </span><span class="mi">10</span><span class="w"> </span><span class="mi">7</span><span class="w"> </span><span class="mi">9</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="nx">nmos</span><span class="w"> </span><span class="nx">W</span><span class="p">=</span><span class="mi">3600</span><span class="nx">u</span><span class="w"> </span><span class="nx">L</span><span class="p">=</span><span class="m m-Double">0.35</span><span class="nx">u</span>
+<span class="nx">L_L3</span><span class="w">         </span><span class="mi">3</span><span class="w"> </span><span class="mi">8</span><span class="w">  </span><span class="m m-Double">0.37</span><span class="nx">nH</span>
+<span class="nx">L_L4</span><span class="w">         </span><span class="mi">3</span><span class="w"> </span><span class="mi">9</span><span class="w">  </span><span class="m m-Double">0.37</span><span class="nx">nH</span>
+<span class="nx">L_L5</span><span class="w">         </span><span class="mi">8</span><span class="w"> </span><span class="mi">4</span><span class="w">  </span><span class="m m-Double">0.8</span><span class="nx">nH</span><span class="w"> </span>
+<span class="nx">L_L6</span><span class="w">         </span><span class="mi">9</span><span class="w"> </span><span class="mi">5</span><span class="w">  </span><span class="m m-Double">0.8</span><span class="nx">nH</span><span class="w"> </span>
+<span class="nx">C_C1</span><span class="w">         </span><span class="mi">4</span><span class="w"> </span><span class="mi">5</span><span class="w">  </span><span class="m m-Double">5.1</span><span class="nx">pF</span>
+<span class="o">*</span><span class="w"> </span><span class="nx">belasting</span>
+<span class="nx">R_RL1</span><span class="w">        </span><span class="mi">4</span><span class="w"> </span><span class="mi">0</span><span class="w">  </span><span class="mi">50</span><span class="w"> </span>
+<span class="nx">R_RL2</span><span class="w">        </span><span class="mi">5</span><span class="w"> </span><span class="mi">0</span><span class="w">  </span><span class="mi">50</span><span class="w"> </span>
+<span class="p">.</span><span class="nx">include</span><span class="w"> </span><span class="nx">simul</span><span class="o">/</span><span class="nx">berkeley35</span><span class="p">.</span><span class="nx">lib</span>
+</pre></div>
+</div>
+</div>
 <p>Het circuit is uitgevoerd in een 0.35 <span class="math notranslate nohighlight">\(\mu\)</span>m technologie. Normaal kan deze technologie gebruik maken van 5V voedingsspanning. Toch gebruiken we dit circuit met een voedingsspanning tussen de 1V en 2V. Dit is omdat er door de oscillatie hogere gate-spanningen worden bekomen en de maximale spanning over de gate is 5V.</p>
 <div class="cell tag_full-width docutils container">
 <div class="cell_output docutils container">
@@ -1027,8 +1010,8 @@ We kunnen de uitgang omwerken naar een impedantie van 50 Ohm door een transforma
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vb2-een-50w-versterker-of-137-77-khz">VB2: Een 50W versterker of 137.77 kHz</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">detail van de opstartsequentie</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">1 periode van de Steady State</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">detail van de opstartsequentie</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">1 periode van de Steady State</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#w-aan-1mhz">2 W aan 1MHz</a></li>
 </ul>
 </li>
