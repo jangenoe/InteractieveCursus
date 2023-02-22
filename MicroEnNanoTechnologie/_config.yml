@@ -1,6 +1,6 @@
 title: Micro- en nanotechnologie
 author: Jan Genoe (jan.genoe@kuleuven.be)
-logo: images/logo.svg
+logo: images/logo.png
 description: Aanvulling bij de cursus Micro- en nanotechnologie aan de KULeuven
 only_build_toc_files: true
 repository:
@@ -50,6 +50,6 @@ sphinx:
     bibtex_default_style : "unsrt"
     
     ogp_site_url: "https://jangenoe.github.io/jangenoe/InteractieveCursus/MicroEnNanoTechnologie/intro.html"
-    ogp_image: "https://jangenoe.github.io/InteractieveCursus/MicroEnNanoTechnologie/_static/logo.svg"
+    ogp_image: "https://jangenoe.github.io/InteractieveCursus/MicroEnNanoTechnologie/_static/logo.png"
     ogp_description_length: 200
 
