@@ -16,7 +16,7 @@ jobs:
     - name: Install dependencies
       run: |
         pip install -r .github/requirements-Book.txt
-        sudo apt-get install texlive-latex-recommended texlive-fonts-recommended texlive-latex-extra latexmk
+        sudo apt-get install texlive-xetex texlive-latex-recommended texlive-fonts-recommended texlive-fonts-extra texlive-latex-extra latexmk imagemagick
     - name: Build the Jupyterbook website
       run: |
         jb build CursusIndex/
@@ -40,9 +40,9 @@ jobs:
         # mv AnalogDesignTechniques/_build/latex/python.pdf CursusIndex/_build/html/AnalogDesignTechniques/AnalogDesignTechniques.pdf
         jb build MicroEnNanoTechnologie/ 
         # jb build MicroEnNanoTechnologie/ --builder pdflatex
-        # jupyter nbconvert MicroEnNanoTechnologie/*.ipynb --to KULeuven  --no-prompt --no-input --output-dir=MicroEnNanoTechnologie/_build/html/slides
-        # sed -i -- 's:<img src="./images:<img src="../_images:g' MicroEnNanoTechnologie/_build/html/slides/*
-        # mv MicroEnNanoTechnologie/_build/html/ CursusIndex/_build/html/MicroEnNanoTechnologie/
+        jupyter nbconvert MicroEnNanoTechnologie/*.ipynb --to KULeuven  --no-prompt --no-input --output-dir=MicroEnNanoTechnologie/_build/html/slides
+        sed -i -- 's:<img src="./images:<img src="../_images:g' MicroEnNanoTechnologie/_build/html/slides/*
+        mv MicroEnNanoTechnologie/_build/html/ CursusIndex/_build/html/MicroEnNanoTechnologie/
         # mv MicroEnNanoTechnologie/_build/latex/python.pdf CursusIndex/_build/html/MicroEnNanoTechnologie/MicroEnNanoTechnologie.pdf
     - name: GitHub Pages action book
       uses: peaceiris/actions-gh-pages@v3
@@ -68,11 +68,13 @@ jobs:
         cp common/cursusdef_ToegepasteAnalogeElektronica_Lite.py ToegepasteAnalogeElektronica/cursusdef.py
         cp common/cursusdef_AnalogeElektronica2_Lite.py AnalogeElektronica2/cursusdef.py
         cp common/cursusdef_AnalogDesignTechniques_Lite.py AnalogDesignTechniques/cursusdef.py
+        # cp common/cursusdef_MicroEnNanoTechnologie_Lite.py MicroEnNanoTechnologie/cursusdef.py
     - name: Build the JupyterLite site
       run: |
         jupyter lite build --lite-dir Lite --contents ToegepasteAnalogeElektronica --output-dir dist/ToegepasteAnalogeElektronica/
         jupyter lite build --lite-dir Lite --contents AnalogeElektronica2 --output-dir dist/AnalogeElektronica2/
         jupyter lite build --lite-dir Lite --contents AnalogDesignTechniques --output-dir dist/AnalogDesignTechniques/
+        jupyter lite build --lite-dir Lite --contents MicroEnNanoTechnologie --output-dir dist/MicroEnNanoTechnologie/
     - name: GitHub Pages action Lite
       uses: peaceiris/actions-gh-pages@v3
       with:
@@ -87,6 +89,7 @@ jobs:
         jupyter lite build --lite-dir LiteDeck --contents ToegepasteAnalogeElektronica --output-dir distdeck/ToegepasteAnalogeElektronica/
         jupyter lite build --lite-dir LiteDeck --contents AnalogeElektronica2 --output-dir distdeck/AnalogeElektronica2/
         jupyter lite build --lite-dir LiteDeck --contents AnalogDesignTechniques --output-dir distdeck/AnalogDesignTechniques/
+        jupyter lite build --lite-dir LiteDeck --contents MicroEnNanoTechnologie --output-dir distdeck/MicroEnNanoTechnologie/
     - name: GitHub Pages action Deck
       uses: peaceiris/actions-gh-pages@v3
       with:
