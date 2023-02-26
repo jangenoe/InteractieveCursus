@@ -46,7 +46,7 @@ sphinx:
        code-block: 'Spice Listing %s'
        exercise: "Opdracht %s"
        
-    latex_logo: images/logo.svg   # logo.png
+    #latex_logo: images/logo.svg   # logo.png
     latex_elements:
       extraclassoptions: 'openany,oneside'
       papersize: 'a4paper'
