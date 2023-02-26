@@ -21,13 +21,13 @@ jobs:
       run: |
         jb build CursusIndex/
         jb build ToegepasteAnalogeElektronica/
-        #jb build  --toc tocpdf.yml  --builder pdflatex  ToegepasteAnalogeElektronica/
+        #jb build  --toc _tocpdf.yml  --builder pdflatex  ToegepasteAnalogeElektronica/
         jupyter nbconvert ToegepasteAnalogeElektronica/*.ipynb --to KULeuven  --no-prompt --no-input --output-dir=ToegepasteAnalogeElektronica/_build/html/slides
         sed -i -- 's:<img src="./images:<img src="../_images:g' ToegepasteAnalogeElektronica/_build/html/slides/*
         mv ToegepasteAnalogeElektronica/_build/html/ CursusIndex/_build/html/ToegepasteAnalogeElektronica
         #mv ToegepasteAnalogeElektronica/_build/latex/python.pdf CursusIndex/_build/html/ToegepasteAnalogeElektronica/ToegepasteAnalogeElektronica.pdf
         jb build AnalogeElektronica2/
-        jb build  --toc tocpdf.yml --builder pdflatex AnalogeElektronica2/
+        jb build AnalogeElektronica2/  --builder pdflatex 
         jupyter nbconvert AnalogeElektronica2/*.ipynb --to KULeuven  --no-prompt --no-input --output-dir=AnalogeElektronica2/_build/html/slides
         sed -i -- 's:<img src="./images:<img src="../_images:g' AnalogeElektronica2/_build/html/slides/*
         mv AnalogeElektronica2/_build/html/ CursusIndex/_build/html/AnalogeElektronica2/
