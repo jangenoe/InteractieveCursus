@@ -5,8 +5,7 @@ description: Aanvulling bij de cursus Analoge Elektronica aan de KULeuven
 only_build_toc_files: true
 repository:
   url: https://github.com/jangenoe/InteractieveCursus
-  path_to_book: AnalogeElektronica2
-  branch: master 
+  path_to_book: AnalogeElektronica2 
 html:
   favicon: images/favicon.ico
   use_issues_button: true
@@ -46,6 +45,11 @@ sphinx:
     numfig_format : 
        code-block: 'Spice Listing %s'
        exercise: "Opdracht %s"
+       
+    latex_logo: images/logo.svg   # logo.png
+    latex_elements:
+      extraclassoptions: 'openany,oneside'
+      papersize: 'a4paper'
     bibtex_reference_style: label
     bibtex_default_style : "unsrt"
     
