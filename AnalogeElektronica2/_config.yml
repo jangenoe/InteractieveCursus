@@ -11,7 +11,7 @@ html:
   use_issues_button: true
   use_edit_page_button: true
   use_repository_button: true
-  extra_navbar    : <a href="https://www.kuleuven.be"> <img src=" https://stijl.kuleuven.be/2016tmp/img/svg/logo.svg" alt="KULeuven"></a> 
+  # extra_navbar    : <a href="https://www.kuleuven.be"> <img src=" https://stijl.kuleuven.be/2016tmp/img/svg/logo.svg" alt="KULeuven"></a> 
 execute:
   execute_notebooks: "off"
 launch_buttons:
@@ -38,15 +38,19 @@ sphinx:
     - sphinx_exercise
     - sphinxext.opengraph
   config:
-    html_theme: sphinx_book_theme
+    # html_theme: sphinx_book_theme  # is reeds default
     language: nl
     html_show_copyright: false
     nb_remove_code_source: true
     numfig_format : 
        code-block: 'Spice Listing %s'
        exercise: "Opdracht %s"
-       
-    #latex_logo: images/logo.svg   # logo.png
+    # templates_path : ["_templates"]
+    # html_sidebars : {"**": ["navbar-logo.html","search-field.html","sbt-sidebar-nav.html","kuleuven.html"]}                     #.html mag weg
+    # navbar_end: ["deck-lite-button.html"]
+    # html_static_path : ['_static']
+    # html_css_files : ['custom.css']   
+    # latex_logo: images/logo.svg   # logo.png
     latex_elements:
       extraclassoptions: 'openany,oneside'
       papersize: 'a4paper'

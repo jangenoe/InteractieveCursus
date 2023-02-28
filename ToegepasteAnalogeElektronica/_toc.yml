@@ -13,7 +13,7 @@ parts:
 - caption: Filters
   chapters:  
   - file: Filters
-- caption: transmissielijnen
+- caption: Transmissielijnen
   chapters:
   - file: transmissielijn
   - file: reflecties
@@ -27,8 +27,6 @@ parts:
       - file: SmithKaartOefening6
       - file: SmithKaartOefening7
       - file: SmithKaartOefening8
-- caption: References
-  chapters:
   - file: References
 - caption: Overzicht
   chapters:
