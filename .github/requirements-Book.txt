@@ -1,4 +1,5 @@
 jinja2==3.0.3
+git+https://github.com/jangenoe/sphinx-book-theme#egg=sphinx-book-theme
 jupyter-KULeuven-slides
 jupyter-book>=0.15
 ghp-import

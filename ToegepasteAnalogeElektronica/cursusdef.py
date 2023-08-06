@@ -11,8 +11,10 @@ import schemdraw as schem
 import schemdraw.elements as e
 import skrf as rf
 from ipywidgets import interact,FloatSlider
-usewidgets=False;
+
 from IPython import display
+import os
+
 def spicelisting(filename,firstline=0,lastline=10000):
     ff=""
     with open(filename) as f:
@@ -20,3 +22,9 @@ def spicelisting(filename,firstline=0,lastline=10000):
             if i>=firstline and i<lastline:
                 ff+=line.strip()+"\r"
     return display.Code(data=ff, language='spice')
+
+if 'USEWIDGETS' in os.environ:
+    usewidgets= (os.environ['USEWIDGETS']=='True')
+else:
+    usewidgets=False;
+
