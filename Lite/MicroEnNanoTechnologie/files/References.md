@@ -1,7 +1,0 @@
-# Referenties
-
-```{bibliography}
-:style: unsrt
-```
-
-

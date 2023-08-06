@@ -8,68 +8,68 @@ msgstr ""
 "Language: sl\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-msgid "suggest edit"
-msgstr "predlagajte urejanje"
-
-msgid "Last updated on"
-msgstr "Nazadnje posodobljeno dne"
-
-msgid "Edit this page"
-msgstr "Uredite to stran"
+msgid "open issue"
+msgstr "odprto vprašanje"
 
 msgid "Launch"
 msgstr "Kosilo"
 
-msgid "Print to PDF"
-msgstr "Natisni v PDF"
-
-msgid "open issue"
-msgstr "odprto vprašanje"
-
-msgid "Download notebook file"
-msgstr "Prenesite datoteko zvezka"
-
-msgid "Toggle navigation"
-msgstr "Preklopi navigacijo"
-
-msgid "Source repository"
-msgstr "Izvorno skladišče"
-
-msgid "By the"
-msgstr "Avtor"
-
-msgid "next page"
-msgstr "Naslednja stran"
+msgid "Theme by the"
+msgstr "Tema avtorja"
 
 msgid "repository"
 msgstr "odlagališče"
 
-msgid "Sphinx Book Theme"
-msgstr "Tema knjige Sphinx"
+msgid "Print to PDF"
+msgstr "Natisni v PDF"
 
-msgid "Download source file"
-msgstr "Prenesite izvorno datoteko"
-
-msgid "Contents"
-msgstr "Vsebina"
-
-msgid "By"
+msgid "By the"
 msgstr "Avtor"
-
-msgid "Copyright"
-msgstr "avtorske pravice"
 
 msgid "Fullscreen mode"
 msgstr "Celozaslonski način"
 
-msgid "Open an issue"
-msgstr "Odprite številko"
+msgid "Edit this page"
+msgstr "Uredite to stran"
+
+msgid "next page"
+msgstr "Naslednja stran"
+
+msgid "Toggle navigation"
+msgstr "Preklopi navigacijo"
+
+msgid "Sphinx Book Theme"
+msgstr "Tema knjige Sphinx"
 
 msgid "previous page"
 msgstr "Prejšnja stran"
 
+msgid "Download source file"
+msgstr "Prenesite izvorno datoteko"
+
+msgid "Source repository"
+msgstr "Izvorno skladišče"
+
+msgid "suggest edit"
+msgstr "predlagajte urejanje"
+
 msgid "Download this page"
 msgstr "Prenesite to stran"
 
-msgid "Theme by the"
-msgstr "Tema avtorja"
+msgid "Contents"
+msgstr "Vsebina"
+
+msgid "Open an issue"
+msgstr "Odprite številko"
+
+msgid "Last updated on"
+msgstr "Nazadnje posodobljeno dne"
+
+msgid "Copyright"
+msgstr "avtorske pravice"
+
+msgid "Download notebook file"
+msgstr "Prenesite datoteko zvezka"
+
+msgid "By"
+msgstr "Avtor"

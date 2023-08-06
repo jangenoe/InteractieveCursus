@@ -290,6 +290,60 @@ const thebe_selector_output = ".output, .cell_output"
 </a>
 </li>
       
+      
+      
+      
+      <li><a href="../Lite/ToegepasteAnalogeElektronica/lab?path=ToegepasteAnalogeElektronica/Klasse-F.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onJupyterLite"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="_static/images/logo_jupyterlite.svg">
+  </span>
+<span class="btn__text-container">JupyterLite</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="./slides/ToegepasteAnalogeElektronica/Klasse-F.slides.html" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Slides bekijken met Reveal.js"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="_static/images/Logo_revealjs.png">
+  </span>
+<span class="btn__text-container">Reveal.js</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="../Deck/ToegepasteAnalogeElektronica/lab?path=ToegepasteAnalogeElektronica/Klasse-F.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onJupyterDeck"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="_static/images/logo_jupyterdeck.svg">
+  </span>
+<span class="btn__text-container">JupyterDeck</span>
+</a>
+</li>
+      
   </ul>
 </div>
 
@@ -308,7 +362,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       <li><a href="https://github.com/jangenoe/InteractieveCursus" target="_blank"
    class="btn btn-sm btn-source-repository-button dropdown-item"
-   title="Bronopslagplaats"
+   title="Source repository"
    data-bs-placement="left" data-bs-toggle="tooltip"
 >
   
@@ -342,7 +396,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       <li><a href="https://github.com/jangenoe/InteractieveCursus/issues/new?title=Issue%20on%20page%20%2FKlasse-F.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
-   title="Open een probleem"
+   title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
 >
   
@@ -363,7 +417,7 @@ const thebe_selector_output = ".output, .cell_output"
 
 
 <div class="dropdown dropdown-download-buttons">
-  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download deze pagina">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
     <i class="fas fa-download"></i>
   </button>
   <ul class="dropdown-menu">
@@ -372,7 +426,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       <li><a href="_sources/Klasse-F.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
-   title="Download het bronbestand"
+   title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
 >
   
@@ -390,7 +444,7 @@ const thebe_selector_output = ".output, .cell_output"
       <li>
 <button onclick="window.print()"
   class="btn btn-sm btn-download-pdf-button dropdown-item"
-  title="Afdrukken naar pdf"
+  title="Print to PDF"
   data-bs-placement="left" data-bs-toggle="tooltip"
 >
   
@@ -410,7 +464,7 @@ const thebe_selector_output = ".output, .cell_output"
 
 <button onclick="toggleFullScreen()"
   class="btn btn-sm btn-fullscreen-button"
-  title="Volledig scherm"
+  title="Fullscreen mode"
   data-bs-placement="bottom" data-bs-toggle="tooltip"
 >
   
@@ -506,7 +560,7 @@ In <a class="reference internal" href="#vermogenversterkers2"><span class="std s
 <div class="code-block-caption"><span class="caption-number">Spice Listing 8 </span><span class="caption-text">basis Klasse F circuit spice file</span><a class="headerlink" href="#espicef" title="Permalink naar deze broncode">#</a></div>
 <div class="highlight-spice notranslate"><div class="highlight"><pre><span></span><span class="o">*</span><span class="w"> </span><span class="nx">klasse</span><span class="w"> </span><span class="nx">F</span><span class="w"> </span><span class="nx">basiscircuit</span>
 <span class="nx">Q_Q1</span><span class="w">         </span><span class="mi">2</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="nx">Q2</span>
-<span class="nx">L_L1</span><span class="w">         </span><span class="mi">5</span><span class="w"> </span><span class="mi">3</span><span class="w">   </span><span class="mi">1</span><span class="nx">uH</span><span class="w">  </span>
+<span class="nx">L_L1</span><span class="w">         </span><span class="mi">5</span><span class="w"> </span><span class="mi">3</span><span class="w">   </span><span class="mi">1u</span><span class="nx">H</span><span class="w">  </span>
 <span class="nx">C_C1</span><span class="w">         </span><span class="mi">5</span><span class="w"> </span><span class="mi">3</span><span class="w">   </span><span class="mi">10</span><span class="nx">n</span><span class="w">  </span>
 <span class="nx">R_R1</span><span class="w">         </span><span class="mi">5</span><span class="w"> </span><span class="mi">3</span><span class="w">   </span><span class="mi">60</span><span class="w">  </span>
 <span class="nx">V_V3</span><span class="w">         </span><span class="mi">3</span><span class="w"> </span><span class="mi">0</span><span class="w">   </span><span class="mi">11</span><span class="nx">V</span>
@@ -561,7 +615,7 @@ In <a class="reference internal" href="#vermogenversterkers2"><span class="std s
 <div class="code-block-caption"><span class="caption-number">Spice Listing 9 </span><span class="caption-text">Klasse F circuit waarbij de uitgang oscilleert rond de grond</span><a class="headerlink" href="#listingf2" title="Permalink naar deze broncode">#</a></div>
 <div class="highlight-spice notranslate"><div class="highlight"><pre><span></span><span class="o">*</span><span class="w"> </span><span class="nx">klasse</span><span class="w"> </span><span class="nx">F</span><span class="w"> </span><span class="nx">basiscircuit</span>
 <span class="nx">Q_Q1</span><span class="w">         </span><span class="mi">2</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="nx">Q2</span>
-<span class="nx">L_L1</span><span class="w">         </span><span class="mi">5</span><span class="w"> </span><span class="mi">3</span><span class="w">   </span><span class="mi">1</span><span class="nx">uH</span><span class="w">  </span>
+<span class="nx">L_L1</span><span class="w">         </span><span class="mi">5</span><span class="w"> </span><span class="mi">3</span><span class="w">   </span><span class="mi">1u</span><span class="nx">H</span><span class="w">  </span>
 <span class="nx">C_C1</span><span class="w">         </span><span class="mi">5</span><span class="w"> </span><span class="mi">3</span><span class="w">   </span><span class="mi">10</span><span class="nx">n</span><span class="w">  </span>
 <span class="nx">R_R1</span><span class="w">         </span><span class="mi">5</span><span class="w"> </span><span class="mi">3</span><span class="w">   </span><span class="mi">60</span><span class="w">  </span>
 <span class="nx">V_V3</span><span class="w">         </span><span class="mi">3</span><span class="w"> </span><span class="mi">0</span><span class="w">   </span><span class="mi">11</span><span class="nx">V</span>
@@ -662,7 +716,7 @@ In <a class="reference internal" href="#vermogenversterkers2"><span class="std s
   <div class="footer-item">
     
 <p class="component-author">
-Door Jan Genoe (jan.genoe@kuleuven.be)
+By Jan Genoe (jan.genoe@kuleuven.be)
 </p>
 
   </div>

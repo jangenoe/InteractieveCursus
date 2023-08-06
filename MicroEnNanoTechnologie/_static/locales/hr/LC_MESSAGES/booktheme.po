@@ -8,68 +8,68 @@ msgstr ""
 "Language: hr\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-msgid "suggest edit"
-msgstr "predloži uređivanje"
-
-msgid "Last updated on"
-msgstr "Posljednje ažuriranje:"
-
-msgid "Edit this page"
-msgstr "Uredite ovu stranicu"
+msgid "open issue"
+msgstr "otvoreno izdanje"
 
 msgid "Launch"
 msgstr "Pokrenite"
 
-msgid "Print to PDF"
-msgstr "Ispis u PDF"
-
-msgid "open issue"
-msgstr "otvoreno izdanje"
-
-msgid "Download notebook file"
-msgstr "Preuzmi datoteku bilježnice"
-
-msgid "Toggle navigation"
-msgstr "Uključi / isključi navigaciju"
-
-msgid "Source repository"
-msgstr "Izvorno spremište"
-
-msgid "By the"
-msgstr "Od strane"
-
-msgid "next page"
-msgstr "sljedeća stranica"
+msgid "Theme by the"
+msgstr "Tema autora"
 
 msgid "repository"
 msgstr "spremište"
 
-msgid "Sphinx Book Theme"
-msgstr "Tema knjige Sphinx"
+msgid "Print to PDF"
+msgstr "Ispis u PDF"
 
-msgid "Download source file"
-msgstr "Preuzmi izvornu datoteku"
-
-msgid "Contents"
-msgstr "Sadržaj"
-
-msgid "By"
-msgstr "Po"
-
-msgid "Copyright"
-msgstr "Autorska prava"
+msgid "By the"
+msgstr "Od strane"
 
 msgid "Fullscreen mode"
 msgstr "Način preko cijelog zaslona"
 
-msgid "Open an issue"
-msgstr "Otvorite izdanje"
+msgid "Edit this page"
+msgstr "Uredite ovu stranicu"
+
+msgid "next page"
+msgstr "sljedeća stranica"
+
+msgid "Toggle navigation"
+msgstr "Uključi / isključi navigaciju"
+
+msgid "Sphinx Book Theme"
+msgstr "Tema knjige Sphinx"
 
 msgid "previous page"
 msgstr "Prethodna stranica"
 
+msgid "Download source file"
+msgstr "Preuzmi izvornu datoteku"
+
+msgid "Source repository"
+msgstr "Izvorno spremište"
+
+msgid "suggest edit"
+msgstr "predloži uređivanje"
+
 msgid "Download this page"
 msgstr "Preuzmite ovu stranicu"
 
-msgid "Theme by the"
-msgstr "Tema autora"
+msgid "Contents"
+msgstr "Sadržaj"
+
+msgid "Open an issue"
+msgstr "Otvorite izdanje"
+
+msgid "Last updated on"
+msgstr "Posljednje ažuriranje:"
+
+msgid "Copyright"
+msgstr "Autorska prava"
+
+msgid "Download notebook file"
+msgstr "Preuzmi datoteku bilježnice"
+
+msgid "By"
+msgstr "Po"
