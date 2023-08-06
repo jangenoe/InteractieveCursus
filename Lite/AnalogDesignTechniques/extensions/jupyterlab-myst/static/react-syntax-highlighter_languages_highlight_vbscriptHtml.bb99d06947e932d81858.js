@@ -1,0 +1,1 @@
+(self.webpackChunkjupyterlab_myst=self.webpackChunkjupyterlab_myst||[]).push([[8884],{3316:e=>{e.exports=function(e){return{name:"VBScript in HTML",subLanguage:"xml",contains:[{begin:"<%",end:"%>",subLanguage:"vbscript"}]}}}}]);
