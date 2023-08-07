@@ -1,12 +1,12 @@
 channels:
   - conda-forge
 dependencies:
-  - jupyterlab-myst         # https://github.com/executablebooks/jupyterlab-myst
+  - jupyterlab-myst==1.2.0  # https://github.com/executablebooks/jupyterlab-myst PS:  for Jlab4.0 >=2.0.0
   - scikit-rf==0.28.0       # https://github.com/scikit-rf/scikit-rf
   - pyspice==1.5            # https://github.com/PySpice-org/PySpice
   - pip:
     - schemdraw==0.17       # https://github.com/cdelker/schemdraw
-    - jupytercards==2.5.6   # https://github.com/jmshea/jupytercards   https://pypi.org/project/jupytercards/#history
+    - jupytercards==2.5.6   # https://github.com/jmshea/jupytercards (__version__ in __init__.py file maar niet in release, zie ook  https://pypi.org/project/jupytercards/#history )
     - wikitables==0.5.5     # https://github.com/bcicen/wikitables
 variables:
   USEWIDGETS: True
