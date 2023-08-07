@@ -1,0 +1,61 @@
+{
+  "content": [
+    {
+      "content": null,
+      "created": "2023-08-07T16:59:03.447846Z",
+      "format": null,
+      "last_modified": "2023-08-07T16:57:47.298957Z",
+      "mimetype": "image/vnd.microsoft.icon",
+      "name": "favicon.ico",
+      "path": "images/favicon.ico",
+      "size": 7358,
+      "type": "file",
+      "writable": true
+    },
+    {
+      "content": null,
+      "created": "2023-08-07T16:59:03.447846Z",
+      "format": null,
+      "last_modified": "2023-08-07T16:57:47.298957Z",
+      "mimetype": "image/png",
+      "name": "KULeuven.png",
+      "path": "images/KULeuven.png",
+      "size": 6025,
+      "type": "file",
+      "writable": true
+    },
+    {
+      "content": null,
+      "created": "2023-08-07T16:59:03.447846Z",
+      "format": null,
+      "last_modified": "2023-08-07T16:57:47.298957Z",
+      "mimetype": "text/markdown",
+      "name": "bronnen.md",
+      "path": "images/bronnen.md",
+      "size": 344,
+      "type": "file",
+      "writable": true
+    },
+    {
+      "content": null,
+      "created": "2023-08-07T16:59:03.451846Z",
+      "format": null,
+      "last_modified": "2023-08-07T16:57:47.298957Z",
+      "mimetype": "image/png",
+      "name": "logo.png",
+      "path": "images/logo.png",
+      "size": 30374,
+      "type": "file",
+      "writable": true
+    }
+  ],
+  "created": "2023-08-07T16:59:03.451846Z",
+  "format": "json",
+  "last_modified": "2023-08-07T16:59:03.451846Z",
+  "mimetype": null,
+  "name": "images",
+  "path": "images",
+  "size": null,
+  "type": "directory",
+  "writable": true
+}
