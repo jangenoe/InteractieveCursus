@@ -1,0 +1,109 @@
+{
+  "content": [
+    {
+      "content": null,
+      "created": "2023-08-07T23:41:06.955578Z",
+      "format": null,
+      "last_modified": "2023-08-07T23:39:59.762986Z",
+      "mimetype": "image/vnd.microsoft.icon",
+      "name": "favicon.ico",
+      "path": "images/favicon.ico",
+      "size": 7358,
+      "type": "file",
+      "writable": true
+    },
+    {
+      "content": null,
+      "created": "2023-08-07T23:41:06.951577Z",
+      "format": null,
+      "last_modified": "2023-08-07T23:39:59.762986Z",
+      "mimetype": "image/png",
+      "name": "KULeuven.png",
+      "path": "images/KULeuven.png",
+      "size": 6025,
+      "type": "file",
+      "writable": true
+    },
+    {
+      "content": null,
+      "created": "2023-08-07T23:41:06.955578Z",
+      "format": null,
+      "last_modified": "2023-08-07T23:39:59.762986Z",
+      "mimetype": "image/svg+xml",
+      "name": "logo.svg",
+      "path": "images/logo.svg",
+      "size": 9018,
+      "type": "file",
+      "writable": true
+    },
+    {
+      "content": null,
+      "created": "2023-08-07T23:41:06.955578Z",
+      "format": null,
+      "last_modified": "2023-08-07T23:39:59.762986Z",
+      "mimetype": "image/png",
+      "name": "STep-UP-TI.png",
+      "path": "images/STep-UP-TI.png",
+      "size": 19335,
+      "type": "file",
+      "writable": true
+    },
+    {
+      "content": null,
+      "created": "2023-08-07T23:41:06.943577Z",
+      "format": null,
+      "last_modified": "2023-08-07T23:39:59.758986Z",
+      "mimetype": "image/png",
+      "name": "ClassB_Bias.png",
+      "path": "images/ClassB_Bias.png",
+      "size": 23603,
+      "type": "file",
+      "writable": true
+    },
+    {
+      "content": null,
+      "created": "2023-08-07T23:41:06.955578Z",
+      "format": null,
+      "last_modified": "2023-08-07T23:39:59.762986Z",
+      "mimetype": "image/png",
+      "name": "StepUp1.png",
+      "path": "images/StepUp1.png",
+      "size": 47536,
+      "type": "file",
+      "writable": true
+    },
+    {
+      "content": null,
+      "created": "2023-08-07T23:41:06.951577Z",
+      "format": null,
+      "last_modified": "2023-08-07T23:41:06.951577Z",
+      "mimetype": null,
+      "name": "ClassB_vb",
+      "path": "images/ClassB_vb",
+      "size": null,
+      "type": "directory",
+      "writable": true
+    },
+    {
+      "content": null,
+      "created": "2023-08-07T23:41:06.955578Z",
+      "format": null,
+      "last_modified": "2023-08-07T23:39:59.762986Z",
+      "mimetype": "text/markdown",
+      "name": "bronnen.md",
+      "path": "images/bronnen.md",
+      "size": 344,
+      "type": "file",
+      "writable": true
+    }
+  ],
+  "created": "2023-08-07T23:41:06.955578Z",
+  "format": "json",
+  "last_modified": "2023-08-07T23:41:06.955578Z",
+  "mimetype": null,
+  "name": "images",
+  "path": "images",
+  "size": null,
+  "type": "directory",
+  "writable": true
+}
