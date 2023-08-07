@@ -518,9 +518,10 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#differentiaalvergelijking-van-de-trilkring">Differentiaalvergelijking van de trilkring</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#keuze-van-de-parameters-van-de-resonante-kring">Keuze van de parameters van de resonante kring</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#aansturingsprincipe-van-de-versterker">Aansturingsprincipe van de versterker</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#basisprincipe-van-de-werking">basisprincipe van de werking</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#differentiaalvergelijking-van-de-trilkring">Differentiaalvergelijking van de trilkring</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#keuze-van-de-parameters-van-de-resonante-kring">Keuze van de parameters van de resonante kring</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#aansturingsprincipe-van-de-versterker">Aansturingsprincipe van de versterker</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#maximale-uitsturing">Maximale uitsturing</a></li>
 </ul>
 </li>
@@ -535,15 +536,15 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gebruik-makende-van-een-transformator">Gebruik makende van een transformator</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gebruik-makende-van-een-lc-kring-aan-de-ingang">Gebruik makende van een LC kring aan de ingang</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#uitgangsspanning-oscillatie-rond-de-grond">Uitgangsspanning oscillatie rond de grond</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#meerdere-versterkingstrappen">Meerdere versterkingstrappen</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#versterker-met-2-klasse-c-trappen-stap-1">Versterker met 2 Klasse C trappen: stap 1</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#versterker-met-2-klasse-c-trappen-stap-2">Versterker met 2 Klasse C trappen: stap 2</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#versterker-met-2-klasse-c-trappen-stap-3">Versterker met 2 Klasse C trappen: stap 3</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#versterker-met-2-klasse-c-trappen-stap-4">Versterker met 2 Klasse C trappen: stap 4</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#versterker-met-2-klasse-c-trappen-stap-5">Versterker met 2 Klasse C trappen: stap 5</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#versterker-met-3-klasse-c-trappen">Versterker met 3 Klasse C trappen</a></li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#meerdere-versterkingstrappen">Meerdere versterkingstrappen</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#versterker-met-2-klasse-c-trappen-stap-1">Versterker met 2 Klasse C trappen: stap 1</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#versterker-met-2-klasse-c-trappen-stap-2">Versterker met 2 Klasse C trappen: stap 2</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#versterker-met-2-klasse-c-trappen-stap-3">Versterker met 2 Klasse C trappen: stap 3</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#versterker-met-2-klasse-c-trappen-stap-4">Versterker met 2 Klasse C trappen: stap 4</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#versterker-met-2-klasse-c-trappen-stap-5">Versterker met 2 Klasse C trappen: stap 5</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#versterker-met-3-klasse-c-trappen">Versterker met 3 Klasse C trappen</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#plaatmodulatie">Plaatmodulatie</a></li>
@@ -587,6 +588,8 @@ In <a class="reference internal" href="#vermogenversterkers"><span class="std st
 </table>
 <p>De toepassingen liggen in de eerste plaats in het domain van de telecomunicatie waar de Klasse C versterker gebruikt wordt om signalen door te sturen, gemoduleerd op de draaggolf van de zender. Deze draaggolf heeft typisch een vaste frequentie.
 Daarnaast zijn er nog industriele toepassingen mogelijk, zoals bijvoorbeeld het inductief verwarmen (zoals in smeltovens) of het dielectrisch verwarmen (voor het drogen, bakken en polymeriseren).</p>
+<section id="basisprincipe-van-de-werking">
+<h2>basisprincipe van de werking<a class="headerlink" href="#basisprincipe-van-de-werking" title="Permalink to this heading">#</a></h2>
 <p>Het basisprincipe is steeds als het volgt:
 We gebruiken de eigenfrequentie van een resonante kring om de oscillatie op de juiste frequentie te genereren en om harmonischen weg te filteren.
 Deze resonante kring vormt de belasting van de vermogentransistor.
@@ -603,7 +606,7 @@ De vermogentransistor levert het vermogen dat verloren/uitgestraald wordt door d
 </div>
 <p>We maken gebruik van de eigenfrequentie van de resonante kring om de oscillatie op de juiste frequentie te genereren en om de harmonischen weg te filteren. De resonante kring verliest vermogen tijdens de trilling en de vermogentransistor zal dit vermogen terug toevoegen aan de kring. Dit gebeurt door korte stroompulsen te leveren.</p>
 <section id="differentiaalvergelijking-van-de-trilkring">
-<h2>Differentiaalvergelijking van de trilkring<a class="headerlink" href="#differentiaalvergelijking-van-de-trilkring" title="Permalink to this heading">#</a></h2>
+<h3>Differentiaalvergelijking van de trilkring<a class="headerlink" href="#differentiaalvergelijking-van-de-trilkring" title="Permalink to this heading">#</a></h3>
 <p>Voordat we de werking van de versterker bekijken, bestuderen we in meer detail de trilkring en de bekomen trilling die we bekomen indien de trilling spontaan verloopt (i.e. niet aangestuurd door de transistor). Het schema dat we hiervoor bestuderen kan je zien in <a class="reference internal" href="#cfigtrilkring"><span class="std std-numref">Fig. 7</span></a></p>
 <div class="cell docutils container">
 <div class="cell_output docutils container">
@@ -664,9 +667,9 @@ De vermogentransistor levert het vermogen dat verloren/uitgestraald wordt door d
 </div>
 </section>
 <section id="keuze-van-de-parameters-van-de-resonante-kring">
-<h2>Keuze van de parameters van de resonante kring<a class="headerlink" href="#keuze-van-de-parameters-van-de-resonante-kring" title="Permalink to this heading">#</a></h2>
+<h3>Keuze van de parameters van de resonante kring<a class="headerlink" href="#keuze-van-de-parameters-van-de-resonante-kring" title="Permalink to this heading">#</a></h3>
 <p>Om een vermogenversterker te ontwerpen die actief is bij een bepaalde frequentie moeten in eerste instantie de parameters van de resonante kring gekozen worden, namelijk <span class="math notranslate nohighlight">\(L_1\)</span>  en <span class="math notranslate nohighlight">\(C_1\)</span>.
-Deze parameters kunnen we bepalen op basis van de gegevens die de ingenieur normaal in een ontwerpopgave ter beschikking krijgt, namelijk de impedantie van de belasting <span class="math notranslate nohighlight">\(R_L\)</span> en het maximum vermogen <span class="math notranslate nohighlight">\(P_{AC}\)</span> dat moet geleverd kunnen worden op de frequentie <span class="math notranslate nohighlight">\(\omega\)</span>. Het is belangrijk dat we <span class="math notranslate nohighlight">\(\beta &lt;&lt;&lt; \omega\)</span> kiezen. In eerste instantie kunnen we bijvoorbeeld vertrekken van <span class="math notranslate nohighlight">\(\beta = 0.1 \omega\)</span>, waarna we dan</p>
+Deze parameters kunnen we bepalen op basis van de gegevens die de ingenieur normaal in een ontwerp opgave ter beschikking krijgt, namelijk de impedantie van de belasting <span class="math notranslate nohighlight">\(R_L\)</span> en het maximum vermogen <span class="math notranslate nohighlight">\(P_{AC}\)</span> dat moet geleverd kunnen worden op de frequentie <span class="math notranslate nohighlight">\(\omega\)</span>. Het is belangrijk dat we <span class="math notranslate nohighlight">\(\beta &lt;&lt;&lt; \omega\)</span> kiezen. In eerste instantie kunnen we bijvoorbeeld vertrekken van <span class="math notranslate nohighlight">\(\beta = 0.1 \omega\)</span>, waarna we dan</p>
 <div class="math notranslate nohighlight">
 \[ \beta=\frac{1}{2 R_L C_1} \]</div>
 <p>gebruiken om de condensator <span class="math notranslate nohighlight">\(C_1\)</span> te kiezen. Vervolgens gebruiken we</p>
@@ -691,8 +694,8 @@ Kies geschikte waardes voor de capaciteit <span class="math notranslate nohighli
 </div>
 </section>
 <section id="aansturingsprincipe-van-de-versterker">
-<h2>Aansturingsprincipe van de versterker<a class="headerlink" href="#aansturingsprincipe-van-de-versterker" title="Permalink to this heading">#</a></h2>
-<p>Het basis werkingsprincipe van de Klasse C versterker is als het volgt: We leggen een sinusvormige spanning met een negatieve offset aan de hand van een serieweerstand aan aan de basis van de bipolaire transistor. De ingang van de bipolaire transistor  vormt een diode naar de emitter en als gevolg hiervan loopt er enkel een basisstroom wanneer de ingangspanning positief is. Deze basisstroom wordt dan een factor <span class="math notranslate nohighlight">\(\beta_F\)</span> versterkt in de collectorstroom. Deze gepulste collectorstroom wordt dan aangelegd aan de LRC trilkring. <span id="id1">[<a class="reference internal" href="References.html#id3" title="John W. Wood. High efficiency class c amplifier. February 1969.">1</a>]</span></p>
+<h3>Aansturingsprincipe van de versterker<a class="headerlink" href="#aansturingsprincipe-van-de-versterker" title="Permalink to this heading">#</a></h3>
+<p>Het basis werkingsprincipe van de Klasse C versterker is als het volgt: We leggen een sinusvormige spanning met een negatieve offset aan de hand van een serieweerstand aan aan de basis van de bipolaire transistor. De ingang van de bipolaire transistor  vormt een diode naar de emitter en als gevolg hiervan loopt er enkel een basisstroom wanneer de ingangspanning positief is. Deze basisstroom wordt dan een factor <span class="math notranslate nohighlight">\(\beta_F\)</span> versterkt in de collectorstroom. Deze gepulste collectorstroom wordt dan aangelegd aan de LRC trilkring.</p>
 <div class="cell docutils container">
 <div class="cell_output docutils container">
 <figure class="align-default" id="cfig2">
@@ -907,6 +910,7 @@ voornamelijk bijdragen tot het bepalen van de oscillatiefrequentie, namelijk:</p
 <p>Het rendement wordt dan, rekening houdende met dat <span class="math notranslate nohighlight">\(I_p\)</span> niet groter mag worden dan <span class="math notranslate nohighlight">\(I_{P,max}\)</span></p>
 <div class="math notranslate nohighlight">
 \[ \eta=\frac{I_p R_L}{V_{dd}}\frac{(2 \alpha-\sin (2 \alpha))^2}{8  \pi (1-\cos (\alpha)) (\sin (\alpha)-\alpha \cos (\alpha))} \]</div>
+</section>
 <section id="maximale-uitsturing">
 <h3>Maximale uitsturing<a class="headerlink" href="#maximale-uitsturing" title="Permalink to this heading">#</a></h3>
 <p>Omdat we het maximale rendement gaan bekomen bij maximale uitsturing kunnen we voor <span class="math notranslate nohighlight">\(I_p\)</span> de bekomen waarde van <span class="math notranslate nohighlight">\(I_{p,max}\)</span> invullen:</p>
@@ -1097,12 +1101,13 @@ Een van de opties om de reference van de voeding naar de grond te brengen, is he
 </div>
 </div>
 </section>
+</section>
 <section id="meerdere-versterkingstrappen">
-<h3>Meerdere versterkingstrappen<a class="headerlink" href="#meerdere-versterkingstrappen" title="Permalink to this heading">#</a></h3>
+<h2>Meerdere versterkingstrappen<a class="headerlink" href="#meerdere-versterkingstrappen" title="Permalink to this heading">#</a></h2>
 <p>In praktijk is het vaak zo dat een klasse C versterker gebruikt wordt om een klein ingangssignaal om te zetten naar een uitgangssignaal dat veel vermogen aan de belasting kan leveren. Vaak is echter een versterkertrap niet voldoende om van het klein ingangssignaal naar het groot uitgangssignaal te gaan, zowel in spanning als in stroom. Om dit te bekomen maken we meestal gebruik van meerdere versterkertrappen.</p>
-<p>Hieronder bouwen we stap voor stap op van het hierboven besproken schema naar een schema met 3 klasse C versterkerstrappen. Dit schema met 3 versterkerstrappen sluit aan bij een schema dat gebruikt wordt voor mobiele communicatie.</p>
+<p>Hieronder bouwen we stap voor stap op van het hierboven besproken schema naar een schema met 3 achtereenvolgende klasse C versterkerstrappen. Dit schema met 3 versterkerstrappen sluit aan bij een schema dat gebruikt wordt voor mobiele communicatie. Als voorbeeld nemen we <span id="id1">[<a class="reference internal" href="References.html#id2" title="B. Schmukler and J. Jorgenson. Design of a 3-Volt HBT power amplifier for DCS. Applied Microwave and wireless, pages 116–125, June 2000.">1</a>]</span>.</p>
 <section id="versterker-met-2-klasse-c-trappen-stap-1">
-<h4>Versterker met 2 Klasse C trappen: stap 1<a class="headerlink" href="#versterker-met-2-klasse-c-trappen-stap-1" title="Permalink to this heading">#</a></h4>
+<h3>Versterker met 2 Klasse C trappen: stap 1<a class="headerlink" href="#versterker-met-2-klasse-c-trappen-stap-1" title="Permalink to this heading">#</a></h3>
 <p>We vertrekken van het schema van de klasse C versterker zoals gegeven in <a class="reference internal" href="#cfig1"><span class="std std-numref">Fig. 6</span></a>. We laten in dit schema de belasting <span class="math notranslate nohighlight">\(R_L\)</span> voorlopig eventjes weg. De vergelijking die we hierboven gebruikt hebben om de stroom naar <span class="math notranslate nohighlight">\(C_1\)</span> uit te rekenen is <span class="math notranslate nohighlight">\(I_C= C \frac{d V}{dt}\)</span>. We merken op dat deze stroom <span class="math notranslate nohighlight">\(I_C\)</span> niet verandert als we een extra DC spanning over <span class="math notranslate nohighlight">\(C_1\)</span> zetten. We kunnen het schema in <a class="reference internal" href="#cfig1"><span class="std std-numref">Fig. 6</span></a> dus aanpassen met een extra spanning over de condensator <span class="math notranslate nohighlight">\(C_1\)</span>. Dit levert ons het schema op in <a class="reference internal" href="#cfig22"><span class="std std-numref">Fig. 31</span></a>.</p>
 <div class="cell docutils container">
 <div class="cell_output docutils container">
@@ -1116,7 +1121,7 @@ Een van de opties om de reference van de voeding naar de grond te brengen, is he
 <p>De werking van dit schema blijft intact gelijk. Als we kijken naar de spanning over <span class="math notranslate nohighlight">\(C_1\)</span> merken we wel op dat er naast een AC spanning ook een DC component van de spanning is. Daardoor neemt de piekspanning toe en zal <span class="math notranslate nohighlight">\(C_1\)</span> sneller doorslagen. We moeten bij de selectie van <span class="math notranslate nohighlight">\(C_1\)</span> dus de keuze maken voor een condensator die een iets hogere spanning aankan. Normaal zal dat betekenen een iets dikker dielectricum en dus een iets hogere prijs.</p>
 </section>
 <section id="versterker-met-2-klasse-c-trappen-stap-2">
-<h4>Versterker met 2 Klasse C trappen: stap 2<a class="headerlink" href="#versterker-met-2-klasse-c-trappen-stap-2" title="Permalink to this heading">#</a></h4>
+<h3>Versterker met 2 Klasse C trappen: stap 2<a class="headerlink" href="#versterker-met-2-klasse-c-trappen-stap-2" title="Permalink to this heading">#</a></h3>
 <p>Een volgende stap naar een meertraps klasse C versterker is de uitvoering van <span class="math notranslate nohighlight">\(V_{dd2}\)</span> op basis van een spanningsdeling vanuit <span class="math notranslate nohighlight">\(V_{dd}\)</span>. Dit schema kan je zien in <a class="reference internal" href="#cfig23"><span class="std std-numref">Fig. 32</span></a>. Hiervoor gebruiken we de 2 weerstanden <span class="math notranslate nohighlight">\(R_L\)</span> en <span class="math notranslate nohighlight">\(R_{L2}\)</span>. Een gevolg hiervan gaat zijn dat de AC-stroom die door de condensator <span class="math notranslate nohighlight">\(C_1\)</span> loopt ook door de weerstanden <span class="math notranslate nohighlight">\(R_L\)</span> of <span class="math notranslate nohighlight">\(R_{L2}\)</span> gaat lopen (i.e. verdeeld proportioneel met de geleidbaarheden van <span class="math notranslate nohighlight">\(R_L\)</span> en <span class="math notranslate nohighlight">\(R_{L2}\)</span>).  Hierdoor voeren we terug de belastingsweerstand in die we in de vorige stap weggelaten hebben.</p>
 <div class="cell docutils container">
 <div class="cell_output docutils container">
@@ -1129,7 +1134,7 @@ Een van de opties om de reference van de voeding naar de grond te brengen, is he
 </div>
 </section>
 <section id="versterker-met-2-klasse-c-trappen-stap-3">
-<h4>Versterker met 2 Klasse C trappen: stap 3<a class="headerlink" href="#versterker-met-2-klasse-c-trappen-stap-3" title="Permalink to this heading">#</a></h4>
+<h3>Versterker met 2 Klasse C trappen: stap 3<a class="headerlink" href="#versterker-met-2-klasse-c-trappen-stap-3" title="Permalink to this heading">#</a></h3>
 <p>De belastingsweerstand <span class="math notranslate nohighlight">\(R_{L2}\)</span> kunnen we vervangen door een (voorwaarts gebiaste) diode (<span class="math notranslate nohighlight">\(D_L\)</span>). Dit schema zie je in <a class="reference internal" href="#cfig24"><span class="std std-numref">Fig. 33</span></a>. Aangezien een voorwaarts gebiaste diode een lage aanweerstand heeft (of dus een hoge geleidbaarheid), zal de meerderheid van de stroom tijdens het voorwaarts gedeelte van de swing door de diode gaan.</p>
 <div class="cell docutils container">
 <div class="cell_output docutils container">
@@ -1142,7 +1147,7 @@ Een van de opties om de reference van de voeding naar de grond te brengen, is he
 </div>
 </section>
 <section id="versterker-met-2-klasse-c-trappen-stap-4">
-<h4>Versterker met 2 Klasse C trappen: stap 4<a class="headerlink" href="#versterker-met-2-klasse-c-trappen-stap-4" title="Permalink to this heading">#</a></h4>
+<h3>Versterker met 2 Klasse C trappen: stap 4<a class="headerlink" href="#versterker-met-2-klasse-c-trappen-stap-4" title="Permalink to this heading">#</a></h3>
 <p>In een volgende stap versterken we de stroom door de last diode <span class="math notranslate nohighlight">\(D_L\)</span> met een factor <span class="math notranslate nohighlight">\(\beta_F\)</span> van een transistor. De werking blijft hetzelfde, maar in <span class="math notranslate nohighlight">\(R_L\)</span> krijgen we een factor <span class="math notranslate nohighlight">\(\beta_F\)</span> meer stroom. Dit schema zie je in <a class="reference internal" href="#cfig26"><span class="std std-numref">Fig. 34</span></a>.</p>
 <div class="cell docutils container">
 <div class="cell_output docutils container">
@@ -1155,7 +1160,7 @@ Een van de opties om de reference van de voeding naar de grond te brengen, is he
 </div>
 </section>
 <section id="versterker-met-2-klasse-c-trappen-stap-5">
-<h4>Versterker met 2 Klasse C trappen: stap 5<a class="headerlink" href="#versterker-met-2-klasse-c-trappen-stap-5" title="Permalink to this heading">#</a></h4>
+<h3>Versterker met 2 Klasse C trappen: stap 5<a class="headerlink" href="#versterker-met-2-klasse-c-trappen-stap-5" title="Permalink to this heading">#</a></h3>
 <p>De belasting <span class="math notranslate nohighlight">\(R_L\)</span> in <a class="reference internal" href="#cfig26"><span class="std std-numref">Fig. 34</span></a> kan nu terug resonant gemaakt worden door het invoeren van de 2de trilkring op basis van <span class="math notranslate nohighlight">\(L_2\)</span> en <span class="math notranslate nohighlight">\(C_2\)</span>. We hebben nu een 2-trap klasse C versterker met 2 resonante kringen. Dit schema zie je in in <a class="reference internal" href="#cfig27"><span class="std std-numref">Fig. 35</span></a>. Het spreek vanzelf dat we hier</p>
 <div class="math notranslate nohighlight">
 \[\frac{1}{L_1 C_1} = \frac{1}{L_2 C_2}\]</div>
@@ -1171,7 +1176,7 @@ Een van de opties om de reference van de voeding naar de grond te brengen, is he
 </div>
 </section>
 <section id="versterker-met-3-klasse-c-trappen">
-<h4>Versterker met 3 Klasse C trappen<a class="headerlink" href="#versterker-met-3-klasse-c-trappen" title="Permalink to this heading">#</a></h4>
+<h3>Versterker met 3 Klasse C trappen<a class="headerlink" href="#versterker-met-3-klasse-c-trappen" title="Permalink to this heading">#</a></h3>
 <p>Volgens de zelfde redenering kunnen we ook een derde klasse C versterkertrap toevoegen. Dit schema zie je in <a class="reference internal" href="#cfig28"><span class="std std-numref">Fig. 36</span></a>. Hier geldt:</p>
 <div class="math notranslate nohighlight">
 \[\frac{1}{L_1 C_1} = \frac{1}{L_2 C_2}= \frac{1}{L_3 C_3}\]</div>
@@ -1184,18 +1189,17 @@ Een van de opties om de reference van de voeding naar de grond te brengen, is he
 </figure>
 </div>
 </div>
-<p>Het circuit in <a class="reference internal" href="#cfig28"><span class="std std-numref">Fig. 36</span></a>wordt ook gebruikt in de GSM transmitter ICs RFMD RF2140 en RF2174. Deze ICs werken tussen 1710 en 1785 MHz, gebruiken een voedingsspanning van 3.2V en bekomen en zendvermogen van 32.7 dBm (ongeveer 2 W) met een efficiëntie van 50.6%. De spoelen (<span class="math notranslate nohighlight">\(L_1\)</span>,<span class="math notranslate nohighlight">\(L_2\)</span> en <span class="math notranslate nohighlight">\(L_3\)</span>) en de condensator <span class="math notranslate nohighlight">\(C_3\)</span> worden wel extern uitgevoerd en zitten dus niet in de IC <span id="id2">[<a class="reference internal" href="References.html#id2" title="B. Schmukler and J. Jorgenson. Design of a 3-Volt HBT power amplifier for DCS. Applied Microwave and wireless, pages 116–125, June 2000.">2</a>]</span>. We herkennen <span class="math notranslate nohighlight">\(L_1\)</span> tussen <code class="docutils literal notranslate"><span class="pre">VCC1</span></code> (Pin 5) en <span class="math notranslate nohighlight">\(V_{dd}\)</span>, <span class="math notranslate nohighlight">\(L_2\)</span> tussen <code class="docutils literal notranslate"><span class="pre">VCC2</span></code> (Pinnen 14,15,en 16) en <span class="math notranslate nohighlight">\(V_{dd}\)</span> en <span class="math notranslate nohighlight">\(L_3\)</span> tussen <code class="docutils literal notranslate"><span class="pre">RF</span> <span class="pre">OUT</span></code> (Pinnen 10,11,en 12) en <span class="math notranslate nohighlight">\(V_{dd}\)</span>.</p>
+<p>Het circuit in <a class="reference internal" href="#cfig28"><span class="std std-numref">Fig. 36</span></a>wordt ook gebruikt in de GSM transmitter ICs RFMD RF2140 en RF2174. Deze ICs werken tussen 1710 en 1785 MHz, gebruiken een voedingsspanning van 3.2V en bekomen en zendvermogen van 32.7 dBm (ongeveer 2 W) met een efficiëntie van 50.6%. De spoelen (<span class="math notranslate nohighlight">\(L_1\)</span>,<span class="math notranslate nohighlight">\(L_2\)</span> en <span class="math notranslate nohighlight">\(L_3\)</span>) en de condensator <span class="math notranslate nohighlight">\(C_3\)</span> worden wel extern uitgevoerd en zitten dus niet in de IC <span id="id2">[<a class="reference internal" href="References.html#id2" title="B. Schmukler and J. Jorgenson. Design of a 3-Volt HBT power amplifier for DCS. Applied Microwave and wireless, pages 116–125, June 2000.">1</a>]</span>. We herkennen <span class="math notranslate nohighlight">\(L_1\)</span> tussen <code class="docutils literal notranslate"><span class="pre">VCC1</span></code> (Pin 5) en <span class="math notranslate nohighlight">\(V_{dd}\)</span>, <span class="math notranslate nohighlight">\(L_2\)</span> tussen <code class="docutils literal notranslate"><span class="pre">VCC2</span></code> (Pinnen 14,15,en 16) en <span class="math notranslate nohighlight">\(V_{dd}\)</span> en <span class="math notranslate nohighlight">\(L_3\)</span> tussen <code class="docutils literal notranslate"><span class="pre">RF</span> <span class="pre">OUT</span></code> (Pinnen 10,11,en 12) en <span class="math notranslate nohighlight">\(V_{dd}\)</span>.</p>
 <div class="cell docutils container">
 <div class="cell_output docutils container">
 <figure class="align-default" id="figgsm">
 <img alt="_images/0a89ab10a8352ca87ea82c7dca7cca9917226c81cda3703b766b9cbfb6a92bd5.png" src="_images/0a89ab10a8352ca87ea82c7dca7cca9917226c81cda3703b766b9cbfb6a92bd5.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 37 </span><span class="caption-text">IC schema en fotos van de RFMD RF2140 en RF2174 <span id="id3">[<a class="reference internal" href="References.html#id2" title="B. Schmukler and J. Jorgenson. Design of a 3-Volt HBT power amplifier for DCS. Applied Microwave and wireless, pages 116–125, June 2000.">2</a>]</span></span><a class="headerlink" href="#figgsm" title="Permallink naar deze afbeelding">#</a></p>
+<p><span class="caption-number">Fig. 37 </span><span class="caption-text">IC schema en fotos van de RFMD RF2140 en RF2174 <span id="id3">[<a class="reference internal" href="References.html#id2" title="B. Schmukler and J. Jorgenson. Design of a 3-Volt HBT power amplifier for DCS. Applied Microwave and wireless, pages 116–125, June 2000.">1</a>]</span></span><a class="headerlink" href="#figgsm" title="Permallink naar deze afbeelding">#</a></p>
 </figcaption>
 </figure>
 </div>
 </div>
-</section>
 </section>
 </section>
 <section id="plaatmodulatie">
@@ -1909,9 +1913,10 @@ try_create(); </script></div>
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#differentiaalvergelijking-van-de-trilkring">Differentiaalvergelijking van de trilkring</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#keuze-van-de-parameters-van-de-resonante-kring">Keuze van de parameters van de resonante kring</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#aansturingsprincipe-van-de-versterker">Aansturingsprincipe van de versterker</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#basisprincipe-van-de-werking">basisprincipe van de werking</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#differentiaalvergelijking-van-de-trilkring">Differentiaalvergelijking van de trilkring</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#keuze-van-de-parameters-van-de-resonante-kring">Keuze van de parameters van de resonante kring</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#aansturingsprincipe-van-de-versterker">Aansturingsprincipe van de versterker</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#maximale-uitsturing">Maximale uitsturing</a></li>
 </ul>
 </li>
@@ -1926,15 +1931,15 @@ try_create(); </script></div>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gebruik-makende-van-een-transformator">Gebruik makende van een transformator</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gebruik-makende-van-een-lc-kring-aan-de-ingang">Gebruik makende van een LC kring aan de ingang</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#uitgangsspanning-oscillatie-rond-de-grond">Uitgangsspanning oscillatie rond de grond</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#meerdere-versterkingstrappen">Meerdere versterkingstrappen</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#versterker-met-2-klasse-c-trappen-stap-1">Versterker met 2 Klasse C trappen: stap 1</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#versterker-met-2-klasse-c-trappen-stap-2">Versterker met 2 Klasse C trappen: stap 2</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#versterker-met-2-klasse-c-trappen-stap-3">Versterker met 2 Klasse C trappen: stap 3</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#versterker-met-2-klasse-c-trappen-stap-4">Versterker met 2 Klasse C trappen: stap 4</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#versterker-met-2-klasse-c-trappen-stap-5">Versterker met 2 Klasse C trappen: stap 5</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#versterker-met-3-klasse-c-trappen">Versterker met 3 Klasse C trappen</a></li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#meerdere-versterkingstrappen">Meerdere versterkingstrappen</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#versterker-met-2-klasse-c-trappen-stap-1">Versterker met 2 Klasse C trappen: stap 1</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#versterker-met-2-klasse-c-trappen-stap-2">Versterker met 2 Klasse C trappen: stap 2</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#versterker-met-2-klasse-c-trappen-stap-3">Versterker met 2 Klasse C trappen: stap 3</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#versterker-met-2-klasse-c-trappen-stap-4">Versterker met 2 Klasse C trappen: stap 4</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#versterker-met-2-klasse-c-trappen-stap-5">Versterker met 2 Klasse C trappen: stap 5</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#versterker-met-3-klasse-c-trappen">Versterker met 3 Klasse C trappen</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#plaatmodulatie">Plaatmodulatie</a></li>
