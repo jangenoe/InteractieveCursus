@@ -1,6 +1,6 @@
 format: jb-book
 root: intro
-parts:
+chapters:
 - url: https://jangenoe.github.io/InteractieveCursus/ToegepasteAnalogeElektronica/intro.html
   title: Toegepaste Analoge Elektronica
 - url: https://jangenoe.github.io/InteractieveCursus/AnalogeElektronica2/intro.html
@@ -9,8 +9,8 @@ parts:
   title: Analog Design Techniques
 - url: https://jangenoe.github.io/InteractieveCursus/MicroEnNanoTechnologie/intro.html
   title: Micro- en nano technologie
-- caption: Achtergrond informatie
-  chapters:
+- file: Achtergrond
+  sections:
   - file: Hoe_dit_werkboek_gebruiken
   - file: How-To-Interact-With-This-Book
   - url: https://www.kuleuven.be/wieiswie/en/person/00004269
