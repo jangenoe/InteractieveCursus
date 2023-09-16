@@ -9,10 +9,10 @@ jobs:
     steps:
     - name: Checkout
       uses: actions/checkout@v3
-    - name: Set up Python 3.9
+    - name: Set up Python 3.11
       uses: actions/setup-python@v4
       with:
-        python-version: 3.9
+        python-version: 3.11
     - name: Install dependencies
       run: |
         pip install -r .github/requirements-Book.txt
@@ -24,10 +24,11 @@ jobs:
         jb build CursusIndex/
         jb build ToegepasteAnalogeElektronica/
         #jb build  --toc _tocpdf.yml  --builder pdflatex  ToegepasteAnalogeElektronica/
+        jb build  ToegepasteAnalogeElektronica/  --builder pdflatex  
         jupyter nbconvert ToegepasteAnalogeElektronica/*.ipynb --to KULeuven  --no-prompt --no-input --output-dir=ToegepasteAnalogeElektronica/_build/html/slides
         sed -i -- 's:<img src="./images:<img src="../_images:g' ToegepasteAnalogeElektronica/_build/html/slides/*
         mv ToegepasteAnalogeElektronica/_build/html/ CursusIndex/_build/html/ToegepasteAnalogeElektronica
-        #mv ToegepasteAnalogeElektronica/_build/latex/python.pdf CursusIndex/_build/html/ToegepasteAnalogeElektronica/ToegepasteAnalogeElektronica.pdf
+        mv ToegepasteAnalogeElektronica/_build/latex/python.pdf CursusIndex/_build/html/ToegepasteAnalogeElektronica/ToegepasteAnalogeElektronica.pdf
         jb build AnalogeElektronica2/
         jb build AnalogeElektronica2/  --builder pdflatex 
         jupyter nbconvert AnalogeElektronica2/*.ipynb --to KULeuven  --no-prompt --no-input --output-dir=AnalogeElektronica2/_build/html/slides
@@ -61,7 +62,7 @@ jobs:
     - name: Setup Python
       uses: actions/setup-python@v4
       with:
-        python-version: 3.9
+        python-version: 3.11
     - name: Install the dependencies
       run: |
         pip install -r .github/requirements-Lite.txt
