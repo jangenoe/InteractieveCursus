@@ -9,7 +9,7 @@ chapters:
   title: Analog Design Techniques
 - url: https://jangenoe.github.io/InteractieveCursus/MicroEnNanoTechnologie/intro.html
   title: Micro- en nano technologie
-- title: Achtergrond informatie
+- caption: Achtergrond informatie
   sections:
   - file: Hoe_dit_werkboek_gebruiken
   - file: How-To-Interact-With-This-Book
