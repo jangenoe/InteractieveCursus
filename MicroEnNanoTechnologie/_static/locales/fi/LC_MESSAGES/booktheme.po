@@ -8,44 +8,26 @@ msgstr ""
 "Language: fi\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-msgid "open issue"
-msgstr "avoin ongelma"
-
-msgid "Launch"
-msgstr "Tuoda markkinoille"
-
-msgid "Theme by the"
-msgstr "Teeman tekijä"
-
-msgid "repository"
-msgstr "arkisto"
-
-msgid "Print to PDF"
-msgstr "Tulosta PDF-tiedostoon"
-
-msgid "By the"
-msgstr "Mukaan"
-
-msgid "Fullscreen mode"
-msgstr "Koko näytön tila"
-
-msgid "Edit this page"
-msgstr "Muokkaa tätä sivua"
-
-msgid "next page"
-msgstr "seuraava sivu"
-
-msgid "Toggle navigation"
-msgstr "Vaihda navigointia"
-
 msgid "Sphinx Book Theme"
 msgstr "Sphinx-kirjan teema"
+
+msgid "By"
+msgstr "Tekijä"
 
 msgid "previous page"
 msgstr "Edellinen sivu"
 
-msgid "Download source file"
-msgstr "Lataa lähdetiedosto"
+msgid "repository"
+msgstr "arkisto"
+
+msgid "Copyright"
+msgstr "Tekijänoikeus"
+
+msgid "Edit this page"
+msgstr "Muokkaa tätä sivua"
+
+msgid "Theme by the"
+msgstr "Teeman tekijä"
 
 msgid "Source repository"
 msgstr "Lähteen arkisto"
@@ -53,23 +35,41 @@ msgstr "Lähteen arkisto"
 msgid "suggest edit"
 msgstr "ehdottaa muokkausta"
 
-msgid "Download this page"
-msgstr "Lataa tämä sivu"
+msgid "Fullscreen mode"
+msgstr "Koko näytön tila"
 
 msgid "Contents"
 msgstr "Sisällys"
 
+msgid "Download notebook file"
+msgstr "Lataa muistikirjatiedosto"
+
+msgid "Toggle navigation"
+msgstr "Vaihda navigointia"
+
 msgid "Open an issue"
 msgstr "Avaa ongelma"
+
+msgid "By the"
+msgstr "Mukaan"
+
+msgid "open issue"
+msgstr "avoin ongelma"
 
 msgid "Last updated on"
 msgstr "Viimeksi päivitetty"
 
-msgid "Copyright"
-msgstr "Tekijänoikeus"
+msgid "Download source file"
+msgstr "Lataa lähdetiedosto"
 
-msgid "Download notebook file"
-msgstr "Lataa muistikirjatiedosto"
+msgid "Print to PDF"
+msgstr "Tulosta PDF-tiedostoon"
 
-msgid "By"
-msgstr "Tekijä"
+msgid "Launch"
+msgstr "Tuoda markkinoille"
+
+msgid "Download this page"
+msgstr "Lataa tämä sivu"
+
+msgid "next page"
+msgstr "seuraava sivu"

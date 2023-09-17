@@ -8,44 +8,26 @@ msgstr ""
 "Language: th\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-msgid "open issue"
-msgstr "เปิดปัญหา"
-
-msgid "Launch"
-msgstr "เปิด"
-
-msgid "Theme by the"
-msgstr "ธีมโดย"
-
-msgid "repository"
-msgstr "ที่เก็บ"
-
-msgid "Print to PDF"
-msgstr "พิมพ์เป็น PDF"
-
-msgid "By the"
-msgstr "โดย"
-
-msgid "Fullscreen mode"
-msgstr "โหมดเต็มหน้าจอ"
-
-msgid "Edit this page"
-msgstr "แก้ไขหน้านี้"
-
-msgid "next page"
-msgstr "หน้าต่อไป"
-
-msgid "Toggle navigation"
-msgstr "ไม่ต้องสลับช่องทาง"
-
 msgid "Sphinx Book Theme"
 msgstr "ธีมหนังสือสฟิงซ์"
+
+msgid "By"
+msgstr "โดย"
 
 msgid "previous page"
 msgstr "หน้าที่แล้ว"
 
-msgid "Download source file"
-msgstr "ดาวน์โหลดไฟล์ต้นฉบับ"
+msgid "repository"
+msgstr "ที่เก็บ"
+
+msgid "Copyright"
+msgstr "ลิขสิทธิ์"
+
+msgid "Edit this page"
+msgstr "แก้ไขหน้านี้"
+
+msgid "Theme by the"
+msgstr "ธีมโดย"
 
 msgid "Source repository"
 msgstr "ที่เก็บซอร์ส"
@@ -53,23 +35,41 @@ msgstr "ที่เก็บซอร์ส"
 msgid "suggest edit"
 msgstr "แนะนำแก้ไข"
 
-msgid "Download this page"
-msgstr "ดาวน์โหลดหน้านี้"
+msgid "Fullscreen mode"
+msgstr "โหมดเต็มหน้าจอ"
 
 msgid "Contents"
 msgstr "สารบัญ"
 
+msgid "Download notebook file"
+msgstr "ดาวน์โหลดไฟล์สมุดบันทึก"
+
+msgid "Toggle navigation"
+msgstr "ไม่ต้องสลับช่องทาง"
+
 msgid "Open an issue"
+msgstr "เปิดปัญหา"
+
+msgid "By the"
+msgstr "โดย"
+
+msgid "open issue"
 msgstr "เปิดปัญหา"
 
 msgid "Last updated on"
 msgstr "ปรับปรุงล่าสุดเมื่อ"
 
-msgid "Copyright"
-msgstr "ลิขสิทธิ์"
+msgid "Download source file"
+msgstr "ดาวน์โหลดไฟล์ต้นฉบับ"
 
-msgid "Download notebook file"
-msgstr "ดาวน์โหลดไฟล์สมุดบันทึก"
+msgid "Print to PDF"
+msgstr "พิมพ์เป็น PDF"
 
-msgid "By"
-msgstr "โดย"
+msgid "Launch"
+msgstr "เปิด"
+
+msgid "Download this page"
+msgstr "ดาวน์โหลดหน้านี้"
+
+msgid "next page"
+msgstr "หน้าต่อไป"
