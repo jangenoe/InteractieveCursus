@@ -24,7 +24,7 @@ jobs:
         jb build CursusIndex/
         jb build ToegepasteAnalogeElektronica/
         #jb build  --toc _tocpdf.yml  --builder pdflatex  ToegepasteAnalogeElektronica/
-        jb build  ToegepasteAnalogeElektronica/  --builder pdflatex  
+        #jb build  ToegepasteAnalogeElektronica/  --builder pdflatex  
         jupyter nbconvert ToegepasteAnalogeElektronica/*.ipynb --to KULeuven  --no-prompt --no-input --output-dir=ToegepasteAnalogeElektronica/_build/html/slides
         sed -i -- 's:<img src="./images:<img src="../_images:g' ToegepasteAnalogeElektronica/_build/html/slides/*
         mv ToegepasteAnalogeElektronica/_build/html/ CursusIndex/_build/html/ToegepasteAnalogeElektronica
