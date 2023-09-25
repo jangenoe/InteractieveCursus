@@ -586,34 +586,34 @@ document.write(`
 </table>
 <section id="basisschema-met-spanningssturing">
 <h2>Basisschema met spanningssturing<a class="headerlink" href="#basisschema-met-spanningssturing" title="Permalink to this heading">#</a></h2>
-<p><a class="reference internal" href="#dfig1"><span class="std std-numref">Fig. 46</span></a> toont het basisschema van de klasse D versterker met spanningssturing. Hiervoor gebruiken we een serie-resonante kring. Deze serie-resonante kring zal de opgelegde spanningspulsen (wat ook de vorm van deze pulsen is) omzetten in een sinusoidale stroom doorheen de kring. Aangezien deze sinusoidale stroom ook door de belasting <span class="math notranslate nohighlight">\(R_L\)</span> loopt, zullen we over de belasting <span class="math notranslate nohighlight">\(R_L\)</span> ook een sinusoidale spanning krijgen. Op deze mannier hebben we zowel een sinusoidale spanning over als een sinusoidale stroom door de belasting <span class="math notranslate nohighlight">\(R_L\)</span>.</p>
-<p>De aansturing gebeurt aan de hand van een blokgolf en bij de klasse D versterker gebruiken we hiervoor 2 vermogentransistors, een pull-up transistor en een pull down transistor. In <a class="reference internal" href="#dfig1"><span class="std std-numref">Fig. 46</span></a> is het de bedoeling dat deze transistors gewoon de blokgolf aan de ingang volgen maar wel meer stroom kunnen leveren dan de ingang normaal levert. Daarom worden de transistors hier in <a class="reference external" href="https://en.wikipedia.org/wiki/Common_collector">gemeenschappelijke collector schakeling</a> (in het geval van bipolaire transistors) of <a class="reference external" href="https://en.wikipedia.org/wiki/Common_drain">gemeenschappelijke drain schakeling</a> (in het geval van MOS transistors) gebruikt. Hierdoor volgt de uitgang de ingang op een vaste offset na.</p>
-<p>In <a class="reference internal" href="#dfig1"><span class="std std-numref">Fig. 46</span></a> is er gekozen voor een implementatie met bipolaire transistors. Het gebruik van de gemeenschappelijke collector schakeling wil zeggen dat we voor de pull-up transistor hier steeds een npn transistor gaan gebruiken en voor de pull-down transistor een pnp-transistor. De stroom aan de ingang zal een factor <span class="math notranslate nohighlight">\(\beta_{F}\)</span> lager liggen dan de stroom die naar de trilkring loopt.</p>
+<p><a class="reference internal" href="#dfig1"><span class="std std-numref">Fig. 47</span></a> toont het basisschema van de klasse D versterker met spanningssturing. Hiervoor gebruiken we een serie-resonante kring. Deze serie-resonante kring zal de opgelegde spanningspulsen (wat ook de vorm van deze pulsen is) omzetten in een sinusoidale stroom doorheen de kring. Aangezien deze sinusoidale stroom ook door de belasting <span class="math notranslate nohighlight">\(R_L\)</span> loopt, zullen we over de belasting <span class="math notranslate nohighlight">\(R_L\)</span> ook een sinusoidale spanning krijgen. Op deze mannier hebben we zowel een sinusoidale spanning over als een sinusoidale stroom door de belasting <span class="math notranslate nohighlight">\(R_L\)</span>.</p>
+<p>De aansturing gebeurt aan de hand van een blokgolf en bij de klasse D versterker gebruiken we hiervoor 2 vermogentransistors, een pull-up transistor en een pull down transistor. In <a class="reference internal" href="#dfig1"><span class="std std-numref">Fig. 47</span></a> is het de bedoeling dat deze transistors gewoon de blokgolf aan de ingang volgen maar wel meer stroom kunnen leveren dan de ingang normaal levert. Daarom worden de transistors hier in <a class="reference external" href="https://en.wikipedia.org/wiki/Common_collector">gemeenschappelijke collector schakeling</a> (in het geval van bipolaire transistors) of <a class="reference external" href="https://en.wikipedia.org/wiki/Common_drain">gemeenschappelijke drain schakeling</a> (in het geval van MOS transistors) gebruikt. Hierdoor volgt de uitgang de ingang op een vaste offset na.</p>
+<p>In <a class="reference internal" href="#dfig1"><span class="std std-numref">Fig. 47</span></a> is er gekozen voor een implementatie met bipolaire transistors. Het gebruik van de gemeenschappelijke collector schakeling wil zeggen dat we voor de pull-up transistor hier steeds een npn transistor gaan gebruiken en voor de pull-down transistor een pnp-transistor. De stroom aan de ingang zal een factor <span class="math notranslate nohighlight">\(\beta_{F}\)</span> lager liggen dan de stroom die naar de trilkring loopt.</p>
 <div class="cell docutils container">
 <div class="cell_output docutils container">
 <figure class="align-default" id="dfig1">
 <img alt="_images/8a95752991fd449046bfc56a1334a45d5b2faf790ace0839633907e90c2dd60b.svg" src="_images/8a95752991fd449046bfc56a1334a45d5b2faf790ace0839633907e90c2dd60b.svg" /><figcaption>
-<p><span class="caption-number">Fig. 46 </span><span class="caption-text">Basisschema van de klasse D versterker.</span><a class="headerlink" href="#dfig1" title="Permallink naar deze afbeelding">#</a></p>
+<p><span class="caption-number">Fig. 47 </span><span class="caption-text">Basisschema van de klasse D versterker.</span><a class="headerlink" href="#dfig1" title="Permallink naar deze afbeelding">#</a></p>
 </figcaption>
 </figure>
 </div>
 </div>
-<p>In de literatuur vinden we ook de Klasse D versterker vaak terug met MOS transistors in de gemeenschappelijke source schakeling (GSS). Een voorbeeld hiervan zien we in <a class="reference internal" href="#dfig1mos"><span class="std std-numref">Fig. 47</span></a>. In dit geval werken de 2 vermogentransistors als een inverter.</p>
+<p>In de literatuur vinden we ook de Klasse D versterker vaak terug met MOS transistors in de gemeenschappelijke source schakeling (GSS). Een voorbeeld hiervan zien we in <a class="reference internal" href="#dfig1mos"><span class="std std-numref">Fig. 48</span></a>. In dit geval werken de 2 vermogentransistors als een inverter.</p>
 <div class="cell docutils container">
 <div class="cell_output docutils container">
 <figure class="align-default" id="dfig1mos">
 <img alt="_images/4c317d3104acc61d9e1e97eb0cdb3ef910277e8f8bfb987b14be7ff248c92e25.svg" src="_images/4c317d3104acc61d9e1e97eb0cdb3ef910277e8f8bfb987b14be7ff248c92e25.svg" /><figcaption>
-<p><span class="caption-number">Fig. 47 </span><span class="caption-text">Klasse D versterker met MOS transistors in Gemeenschappelijke Source Schakeling (GSS).</span><a class="headerlink" href="#dfig1mos" title="Permallink naar deze afbeelding">#</a></p>
+<p><span class="caption-number">Fig. 48 </span><span class="caption-text">Klasse D versterker met MOS transistors in Gemeenschappelijke Source Schakeling (GSS).</span><a class="headerlink" href="#dfig1mos" title="Permallink naar deze afbeelding">#</a></p>
 </figcaption>
 </figure>
 </div>
 </div>
-<p>In <a class="reference internal" href="#dfig2"><span class="std std-numref">Fig. 48</span></a> hebben we de verschillende knopen van <a class="reference internal" href="#dfig1"><span class="std std-numref">Fig. 46</span></a> een nummer gegeven om tot een spice-simulatie te kunnen komen.</p>
+<p>In <a class="reference internal" href="#dfig2"><span class="std std-numref">Fig. 49</span></a> hebben we de verschillende knopen van <a class="reference internal" href="#dfig1"><span class="std std-numref">Fig. 47</span></a> een nummer gegeven om tot een spice-simulatie te kunnen komen.</p>
 <div class="cell docutils container">
 <div class="cell_output docutils container">
 <figure class="align-default" id="dfig2">
 <img alt="_images/8db3951f30034218417ac06890d8b530a1f8e3cd133ff300715452b4bc848564.svg" src="_images/8db3951f30034218417ac06890d8b530a1f8e3cd133ff300715452b4bc848564.svg" /><figcaption>
-<p><span class="caption-number">Fig. 48 </span><span class="caption-text">Basisschema van de klasse D versterker, met nummering van de knopen overeenkomende met de onderstaande SPICE file.</span><a class="headerlink" href="#dfig2" title="Permallink naar deze afbeelding">#</a></p>
+<p><span class="caption-number">Fig. 49 </span><span class="caption-text">Basisschema van de klasse D versterker, met nummering van de knopen overeenkomende met de onderstaande SPICE file.</span><a class="headerlink" href="#dfig2" title="Permallink naar deze afbeelding">#</a></p>
 </figcaption>
 </figure>
 </div>
@@ -635,36 +635,36 @@ document.write(`
 </pre></div>
 </div>
 </div>
-<p>In <a class="reference internal" href="#dfig5"><span class="std std-numref">Fig. 49</span></a> tonen we de spanningen die we bekomen uit de SPICE simulatie.</p>
+<p>In <a class="reference internal" href="#dfig5"><span class="std std-numref">Fig. 50</span></a> tonen we de spanningen die we bekomen uit de SPICE simulatie.</p>
 <div class="cell docutils container">
 <div class="cell_output docutils container">
 <figure class="align-default" id="dfig5">
 <img alt="_images/e2fb1f689c37b4d3ceb521f511656321e93a84c194cdf0a32a7f676e7e9f558c.png" src="_images/e2fb1f689c37b4d3ceb521f511656321e93a84c194cdf0a32a7f676e7e9f558c.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 49 </span><span class="caption-text">Bekomen spanningen op de verschillende knopen in het hierboven aangegeven schema van de Klasse D versterker.</span><a class="headerlink" href="#dfig5" title="Permallink naar deze afbeelding">#</a></p>
+<p><span class="caption-number">Fig. 50 </span><span class="caption-text">Bekomen spanningen op de verschillende knopen in het hierboven aangegeven schema van de Klasse D versterker.</span><a class="headerlink" href="#dfig5" title="Permallink naar deze afbeelding">#</a></p>
 </figcaption>
 </figure>
 </div>
 </div>
 <p>We merken op dat de spanning aan knoop 5 een veel grotere swing heeft dan de uitgangspanning over <span class="math notranslate nohighlight">\(R_L\)</span> (i.e. knoop 6). De spanning op knoop 2 is typisch de verzadigingsspanning van Q1 lager dan de voedingsspanning (hier 20V) of de verzadigingsspanning van Qp hoger dan de grond.</p>
-<p>In <a class="reference internal" href="#dfig6"><span class="std std-numref">Fig. 50</span></a> tonen we de stromen die we bekomen uit de SPICE simulatie. De pull-up transistor levert alle positieve stromen en de pulldown transistor levert alle negatieve stromen. Dit is hier enkel maar zo omdat de aansturing perfect op de resonantiefrequentie gedaan wordt.</p>
+<p>In <a class="reference internal" href="#dfig6"><span class="std std-numref">Fig. 51</span></a> tonen we de stromen die we bekomen uit de SPICE simulatie. De pull-up transistor levert alle positieve stromen en de pulldown transistor levert alle negatieve stromen. Dit is hier enkel maar zo omdat de aansturing perfect op de resonantiefrequentie gedaan wordt.</p>
 <div class="cell docutils container">
 <div class="cell_output docutils container">
 <figure class="align-default" id="dfig6">
 <img alt="_images/4839eb5133ca0375e296d508ee6ae6b3690c105b1c520debe8bc1f2f1ed659f5.png" src="_images/4839eb5133ca0375e296d508ee6ae6b3690c105b1c520debe8bc1f2f1ed659f5.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 50 </span><span class="caption-text">Stromen in de NPN en de PNP transistor van het hierboven aangegeven schema van de Klasse D versterker.</span><a class="headerlink" href="#dfig6" title="Permallink naar deze afbeelding">#</a></p>
+<p><span class="caption-number">Fig. 51 </span><span class="caption-text">Stromen in de NPN en de PNP transistor van het hierboven aangegeven schema van de Klasse D versterker.</span><a class="headerlink" href="#dfig6" title="Permallink naar deze afbeelding">#</a></p>
 </figcaption>
 </figure>
 </div>
 </div>
 <section id="harmonische-componenten">
 <h3>Harmonische componenten<a class="headerlink" href="#harmonische-componenten" title="Permalink to this heading">#</a></h3>
-<p>De spanning aan knoop 2 is de uitgang van de vermogentransistors. Deze spanning kunnen we, na een overgangsverschijnsel (in <a class="reference internal" href="#dfig5"><span class="std std-numref">Fig. 49</span></a> is dit ongeveer <span class="math notranslate nohighlight">\(2\mu s\)</span>), benaderen als een blokgolf. De Fourrier reeks van deze blokgolf is:</p>
+<p>De spanning aan knoop 2 is de uitgang van de vermogentransistors. Deze spanning kunnen we, na een overgangsverschijnsel (in <a class="reference internal" href="#dfig5"><span class="std std-numref">Fig. 50</span></a> is dit ongeveer <span class="math notranslate nohighlight">\(2\mu s\)</span>), benaderen als een blokgolf. De Fourrier reeks van deze blokgolf is:</p>
 <div class="math notranslate nohighlight">
 \[ V[2] = \frac{V_{dd}}{2} +\frac{2 V_{dd}}{\pi}\left(\sin(\omega t) +\frac{\sin(3\omega t)}{3} +\frac{\sin(5\omega t)}{5} + ... \right)\]</div>
-<p>In <a class="reference internal" href="#dfft1"><span class="std std-numref">Fig. 51</span></a> tonen we de verschillende componenten van de spanning op knoop 2.</p>
-<p>In praktijk zal de amplitude van de eerste harmonische op knoop 2 (iets) lager zijn dan <span class="math notranslate nohighlight">\(\frac{2 V_{dd}}{\pi}\)</span> omdat we over de vermogentransistors een spanning verliezen. In het geval van het gebruik van de vermogentransistors in de gemeenschappelijke collector schakeling (zoals boven) verliezen we typisch de diode spanning tussen basis en emitter (hier ongeveer 0.7 V). In andere gevallen is het vaak de saturatiespanning van de bipolaire transistor of de spanning over de aan weerstand in het geval van een MOS transistor. We zien in <a class="reference internal" href="#dfft1"><span class="std std-numref">Fig. 51</span></a> dat deze overeenkomt met <span class="math notranslate nohighlight">\(\frac{2 (V_{dd}-1.4V)}{\pi}\)</span> = 11.84V. Dit is ook de spanningpiek die we zien op knoop 6 (<span class="math notranslate nohighlight">\(V_{out}\)</span>) in <a class="reference internal" href="#dfig5"><span class="std std-numref">Fig. 49</span></a> wanneer de steady-state oscillatie bekomen wordt.</p>
+<p>In <a class="reference internal" href="#dfft1"><span class="std std-numref">Fig. 52</span></a> tonen we de verschillende componenten van de spanning op knoop 2.</p>
+<p>In praktijk zal de amplitude van de eerste harmonische op knoop 2 (iets) lager zijn dan <span class="math notranslate nohighlight">\(\frac{2 V_{dd}}{\pi}\)</span> omdat we over de vermogentransistors een spanning verliezen. In het geval van het gebruik van de vermogentransistors in de gemeenschappelijke collector schakeling (zoals boven) verliezen we typisch de diode spanning tussen basis en emitter (hier ongeveer 0.7 V). In andere gevallen is het vaak de saturatiespanning van de bipolaire transistor of de spanning over de aan weerstand in het geval van een MOS transistor. We zien in <a class="reference internal" href="#dfft1"><span class="std std-numref">Fig. 52</span></a> dat deze overeenkomt met <span class="math notranslate nohighlight">\(\frac{2 (V_{dd}-1.4V)}{\pi}\)</span> = 11.84V. Dit is ook de spanningpiek die we zien op knoop 6 (<span class="math notranslate nohighlight">\(V_{out}\)</span>) in <a class="reference internal" href="#dfig5"><span class="std std-numref">Fig. 50</span></a> wanneer de steady-state oscillatie bekomen wordt.</p>
 <div class="cell docutils container">
 <div class="cell_output docutils container">
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(PeriodValue(3.9650000000000475e-07 s),
@@ -683,7 +683,7 @@ document.write(`
 <figure class="align-default" id="dfft1">
 <img alt="_images/9b7ebacd21bf80b70d88850c618168953ea1265821f915861e19a48bd6c82f8c.png" src="_images/9b7ebacd21bf80b70d88850c618168953ea1265821f915861e19a48bd6c82f8c.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 51 </span><span class="caption-text">Harmonische componenten in de spanning van knoop 2 van de Klasse D versterker.</span><a class="headerlink" href="#dfft1" title="Permallink naar deze afbeelding">#</a></p>
+<p><span class="caption-number">Fig. 52 </span><span class="caption-text">Harmonische componenten in de spanning van knoop 2 van de Klasse D versterker.</span><a class="headerlink" href="#dfft1" title="Permallink naar deze afbeelding">#</a></p>
 </figcaption>
 </figure>
 </div>
@@ -696,7 +696,7 @@ document.write(`
 \[
 Z(\omega) = j \omega L_1 +\frac{1}{j \omega C_1} + R_L
 \]</div>
-<p>Elk van de harmonische componenten <span class="math notranslate nohighlight">\(V(\omega)\)</span> uit <a class="reference internal" href="#dfft1"><span class="std std-numref">Fig. 51</span></a> levert dus een <span class="math notranslate nohighlight">\(I(\omega)\)</span> die overeenkomt met</p>
+<p>Elk van de harmonische componenten <span class="math notranslate nohighlight">\(V(\omega)\)</span> uit <a class="reference internal" href="#dfft1"><span class="std std-numref">Fig. 52</span></a> levert dus een <span class="math notranslate nohighlight">\(I(\omega)\)</span> die overeenkomt met</p>
 <div class="math notranslate nohighlight">
 \[
 I(\omega) = \frac{V(\omega)}{Z(\omega)}
@@ -711,24 +711,24 @@ I(\omega) = \frac{V(\omega)}{j \omega L_1 +\frac{1}{j \omega C_1} + R_L}
 \[
 j \omega L_1 =-\frac{1}{j \omega C_1}
 \]</div>
-<p>waardoor <span class="math notranslate nohighlight">\(Z(\omega_c) =  R_L \)</span> en we dus een hoge stroom harmonische <span class="math notranslate nohighlight">\(I(\omega_c) = \frac{V(\omega_c)}{R_L}\)</span> krijgen. Bij alle andere frequenties wordt de stroom <span class="math notranslate nohighlight">\(I(\omega)\)</span> veel kleiner. <a class="reference internal" href="#dfft2"><span class="std std-numref">Fig. 52</span></a> toont de amplitude van de stroom bij de verschillende harmonische frequenties. We herkennen de stroomamplitude van bijna 2A die we ook in de simulatie van <a class="reference internal" href="#dfig6"><span class="std std-numref">Fig. 50</span></a> terugvinden.</p>
+<p>waardoor <span class="math notranslate nohighlight">\(Z(\omega_c) =  R_L \)</span> en we dus een hoge stroom harmonische <span class="math notranslate nohighlight">\(I(\omega_c) = \frac{V(\omega_c)}{R_L}\)</span> krijgen. Bij alle andere frequenties wordt de stroom <span class="math notranslate nohighlight">\(I(\omega)\)</span> veel kleiner. <a class="reference internal" href="#dfft2"><span class="std std-numref">Fig. 53</span></a> toont de amplitude van de stroom bij de verschillende harmonische frequenties. We herkennen de stroomamplitude van bijna 2A die we ook in de simulatie van <a class="reference internal" href="#dfig6"><span class="std std-numref">Fig. 51</span></a> terugvinden.</p>
 <div class="cell docutils container">
 <div class="cell_output docutils container">
 <figure class="align-default" id="dfft2">
 <img alt="_images/443df4fa35bbf23760411def391afe8579405f2e6347f8c343cb51fed2c11642.png" src="_images/443df4fa35bbf23760411def391afe8579405f2e6347f8c343cb51fed2c11642.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 52 </span><span class="caption-text">Harmonische componenten van de uitgangsstroom van de Klasse D versterker.</span><a class="headerlink" href="#dfft2" title="Permallink naar deze afbeelding">#</a></p>
+<p><span class="caption-number">Fig. 53 </span><span class="caption-text">Harmonische componenten van de uitgangsstroom van de Klasse D versterker.</span><a class="headerlink" href="#dfft2" title="Permallink naar deze afbeelding">#</a></p>
 </figcaption>
 </figure>
 </div>
 </div>
-<p>Aangezien de stroomamplitudes in <a class="reference internal" href="#dfft2"><span class="std std-numref">Fig. 52</span></a> stel heel klein worden voor de hogere harmonischen plotten we ditzelfde nogmaals op een log-schaal (zie <a class="reference internal" href="#dfft2log"><span class="std std-numref">Fig. 53</span></a>).</p>
+<p>Aangezien de stroomamplitudes in <a class="reference internal" href="#dfft2"><span class="std std-numref">Fig. 53</span></a> stel heel klein worden voor de hogere harmonischen plotten we ditzelfde nogmaals op een log-schaal (zie <a class="reference internal" href="#dfft2log"><span class="std std-numref">Fig. 54</span></a>).</p>
 <div class="cell docutils container">
 <div class="cell_output docutils container">
 <figure class="align-default" id="dfft2log">
 <img alt="_images/44ba4fcd47bef9688b1d36df05a3869b29cb0794572cdfcf6ddfad42fb2345b6.png" src="_images/44ba4fcd47bef9688b1d36df05a3869b29cb0794572cdfcf6ddfad42fb2345b6.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 53 </span><span class="caption-text">Harmonische componenten van de uitgangsstroom van de Klasse D versterker.</span><a class="headerlink" href="#dfft2log" title="Permallink naar deze afbeelding">#</a></p>
+<p><span class="caption-number">Fig. 54 </span><span class="caption-text">Harmonische componenten van de uitgangsstroom van de Klasse D versterker.</span><a class="headerlink" href="#dfft2log" title="Permallink naar deze afbeelding">#</a></p>
 </figcaption>
 </figure>
 </div>
@@ -736,12 +736,12 @@ j \omega L_1 =-\frac{1}{j \omega C_1}
 </section>
 <section id="simulatie-met-aansturing-off-resonantie">
 <h3>Simulatie met aansturing off-resonantie<a class="headerlink" href="#simulatie-met-aansturing-off-resonantie" title="Permalink to this heading">#</a></h3>
-<p>Wanneer het mogelijk is dat de aansturing van de klasse D versterker niet helemaal exact gelijk met de resonantie frequentie gebeurt,moeten we het schema van <a class="reference internal" href="#dfig1"><span class="std std-numref">Fig. 46</span></a> uitbreiden met diodes om een omgekeerde stroom door de transistors mogelijk te maken. Het nieuwe schema zien we in <a class="reference internal" href="#dfig1diode"><span class="std std-numref">Fig. 54</span></a> .</p>
+<p>Wanneer het mogelijk is dat de aansturing van de klasse D versterker niet helemaal exact gelijk met de resonantie frequentie gebeurt,moeten we het schema van <a class="reference internal" href="#dfig1"><span class="std std-numref">Fig. 47</span></a> uitbreiden met diodes om een omgekeerde stroom door de transistors mogelijk te maken. Het nieuwe schema zien we in <a class="reference internal" href="#dfig1diode"><span class="std std-numref">Fig. 55</span></a> .</p>
 <div class="cell docutils container">
 <div class="cell_output docutils container">
 <figure class="align-default" id="dfig1diode">
 <img alt="_images/8b18daedea94cc0133e997c51b31502602f27293363682a76883fcedbacb4ab4.svg" src="_images/8b18daedea94cc0133e997c51b31502602f27293363682a76883fcedbacb4ab4.svg" /><figcaption>
-<p><span class="caption-number">Fig. 54 </span><span class="caption-text">Basisschema van de klasse D versterker met beschermdiodes.</span><a class="headerlink" href="#dfig1diode" title="Permallink naar deze afbeelding">#</a></p>
+<p><span class="caption-number">Fig. 55 </span><span class="caption-text">Basisschema van de klasse D versterker met beschermdiodes.</span><a class="headerlink" href="#dfig1diode" title="Permallink naar deze afbeelding">#</a></p>
 </figcaption>
 </figure>
 </div>
@@ -765,13 +765,13 @@ j \omega L_1 =-\frac{1}{j \omega C_1}
 </pre></div>
 </div>
 </div>
-<p>In <a class="reference internal" href="#dfig5diode"><span class="std std-numref">Fig. 55</span></a> tonen we de spanningen die we bekomen uit de SPICE simulatie.</p>
+<p>In <a class="reference internal" href="#dfig5diode"><span class="std std-numref">Fig. 56</span></a> tonen we de spanningen die we bekomen uit de SPICE simulatie.</p>
 <div class="cell docutils container">
 <div class="cell_output docutils container">
 <figure class="align-default" id="dfig5diode">
 <img alt="_images/7e309e9f7af31822caa1d5b9bb65e06bcf47ec2690b522d95db12e6c5119a498.png" src="_images/7e309e9f7af31822caa1d5b9bb65e06bcf47ec2690b522d95db12e6c5119a498.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 55 </span><span class="caption-text">Bekomen spanningen in de Klasse D versterker met diodes.</span><a class="headerlink" href="#dfig5diode" title="Permallink naar deze afbeelding">#</a></p>
+<p><span class="caption-number">Fig. 56 </span><span class="caption-text">Bekomen spanningen in de Klasse D versterker met diodes.</span><a class="headerlink" href="#dfig5diode" title="Permallink naar deze afbeelding">#</a></p>
 </figcaption>
 </figure>
 </div>
@@ -781,19 +781,19 @@ j \omega L_1 =-\frac{1}{j \omega C_1}
 <figure class="align-default" id="dfig5diodedetail">
 <img alt="_images/c2dd93b18d7bd2bfc2c1d7bd7b2d66a5c10086c2961821b733449e6f22704311.png" src="_images/c2dd93b18d7bd2bfc2c1d7bd7b2d66a5c10086c2961821b733449e6f22704311.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 56 </span><span class="caption-text">Detail van de spanningen gedurende 1 periode van de Klasse D versterker.</span><a class="headerlink" href="#dfig5diodedetail" title="Permallink naar deze afbeelding">#</a></p>
+<p><span class="caption-number">Fig. 57 </span><span class="caption-text">Detail van de spanningen gedurende 1 periode van de Klasse D versterker.</span><a class="headerlink" href="#dfig5diodedetail" title="Permallink naar deze afbeelding">#</a></p>
 </figcaption>
 </figure>
 </div>
 </div>
-<p>We stellen vast in <a class="reference internal" href="#dfig5diodedetail"><span class="std std-numref">Fig. 56</span></a> dat de spanning op knoop 2 buiten de voedingsspanning komt te liggen als een van de diodes geleidt en binnen de voedingsspanning ligt als een van de transistors geleidt.</p>
-<p>In <a class="reference internal" href="#dfig6diode"><span class="std std-numref">Fig. 57</span></a> tonen we de stromen die we bekomen uit de SPICE simulatie.</p>
+<p>We stellen vast in <a class="reference internal" href="#dfig5diodedetail"><span class="std std-numref">Fig. 57</span></a> dat de spanning op knoop 2 buiten de voedingsspanning komt te liggen als een van de diodes geleidt en binnen de voedingsspanning ligt als een van de transistors geleidt.</p>
+<p>In <a class="reference internal" href="#dfig6diode"><span class="std std-numref">Fig. 58</span></a> tonen we de stromen die we bekomen uit de SPICE simulatie.</p>
 <div class="cell docutils container">
 <div class="cell_output docutils container">
 <figure class="align-default" id="dfig6diode">
 <img alt="_images/a4cab2c9a99e91e26d8ce0f3808b100aaad3ae144628679e9f8d61edf6698b03.png" src="_images/a4cab2c9a99e91e26d8ce0f3808b100aaad3ae144628679e9f8d61edf6698b03.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 57 </span><span class="caption-text">Stromen in de NPN en de PNP transistor van het hierboven aangegeven schema van de Klasse D versterker.</span><a class="headerlink" href="#dfig6diode" title="Permallink naar deze afbeelding">#</a></p>
+<p><span class="caption-number">Fig. 58 </span><span class="caption-text">Stromen in de NPN en de PNP transistor van het hierboven aangegeven schema van de Klasse D versterker.</span><a class="headerlink" href="#dfig6diode" title="Permallink naar deze afbeelding">#</a></p>
 </figcaption>
 </figure>
 </div>
@@ -802,24 +802,24 @@ j \omega L_1 =-\frac{1}{j \omega C_1}
 </section>
 <section id="aansturing-van-de-seriekring-aan-de-hand-van-2-npn-transistors">
 <h2>Aansturing van de seriekring aan de hand van 2 NPN transistors<a class="headerlink" href="#aansturing-van-de-seriekring-aan-de-hand-van-2-npn-transistors" title="Permalink to this heading">#</a></h2>
-<p>Aangezien de stroomversterking <span class="math notranslate nohighlight">\(\beta_F\)</span> van NPN transistors typisch groter is dan deze van PNP transistors, is het vaak interessant om een schema uit te werken waarin er enkel NPN transistors gebruikt worden. <a class="reference internal" href="#dfig1npn"><span class="std std-numref">Fig. 58</span></a> toont hiervan de meest eenvoudige implementatie.</p>
+<p>Aangezien de stroomversterking <span class="math notranslate nohighlight">\(\beta_F\)</span> van NPN transistors typisch groter is dan deze van PNP transistors, is het vaak interessant om een schema uit te werken waarin er enkel NPN transistors gebruikt worden. <a class="reference internal" href="#dfig1npn"><span class="std std-numref">Fig. 59</span></a> toont hiervan de meest eenvoudige implementatie.</p>
 <div class="cell docutils container">
 <div class="cell_output docutils container">
 <figure class="align-default" id="dfig1npn">
 <img alt="_images/679b944b2652df604af1c9baa981809112f7bc3539e17d4147b4faabfff5b82b.svg" src="_images/679b944b2652df604af1c9baa981809112f7bc3539e17d4147b4faabfff5b82b.svg" /><figcaption>
-<p><span class="caption-number">Fig. 58 </span><span class="caption-text">Schema van de klasse D versterker met enkel NPN transistors.</span><a class="headerlink" href="#dfig1npn" title="Permallink naar deze afbeelding">#</a></p>
+<p><span class="caption-number">Fig. 59 </span><span class="caption-text">Schema van de klasse D versterker met enkel NPN transistors.</span><a class="headerlink" href="#dfig1npn" title="Permallink naar deze afbeelding">#</a></p>
 </figcaption>
 </figure>
 </div>
 </div>
 <section id="aanpassing-voor-de-aansturing-off-resonantie">
 <h3>Aanpassing voor de aansturing off-resonantie<a class="headerlink" href="#aanpassing-voor-de-aansturing-off-resonantie" title="Permalink to this heading">#</a></h3>
-<p>Het schema in <a class="reference internal" href="#dfig1npn"><span class="std std-numref">Fig. 58</span></a> kan ook verder aangepast worden om aansturing toe te laten op frequenties die een klein beetje verschillen van de resonantiefrequentie. Hiervoor is het nodig dat we diodes toevoegen die stroom toelaten die in de omgekeerde richting loopt dan deze van de vermogentransistors.  <a class="reference internal" href="#dfig1npndiode"><span class="std std-numref">Fig. 59</span></a> toont het aangepaste schema.</p>
+<p>Het schema in <a class="reference internal" href="#dfig1npn"><span class="std std-numref">Fig. 59</span></a> kan ook verder aangepast worden om aansturing toe te laten op frequenties die een klein beetje verschillen van de resonantiefrequentie. Hiervoor is het nodig dat we diodes toevoegen die stroom toelaten die in de omgekeerde richting loopt dan deze van de vermogentransistors.  <a class="reference internal" href="#dfig1npndiode"><span class="std std-numref">Fig. 60</span></a> toont het aangepaste schema.</p>
 <div class="cell docutils container">
 <div class="cell_output docutils container">
 <figure class="align-default" id="dfig1npndiode">
 <img alt="_images/77b5dea715ab832d8eb4dc312e1c3144708a57223caafd72dca4ce551e237a01.svg" src="_images/77b5dea715ab832d8eb4dc312e1c3144708a57223caafd72dca4ce551e237a01.svg" /><figcaption>
-<p><span class="caption-number">Fig. 59 </span><span class="caption-text">Schema van de klasse D versterker met enkel NPN transistors.</span><a class="headerlink" href="#dfig1npndiode" title="Permallink naar deze afbeelding">#</a></p>
+<p><span class="caption-number">Fig. 60 </span><span class="caption-text">Schema van de klasse D versterker met enkel NPN transistors.</span><a class="headerlink" href="#dfig1npndiode" title="Permallink naar deze afbeelding">#</a></p>
 </figcaption>
 </figure>
 </div>
@@ -828,34 +828,34 @@ j \omega L_1 =-\frac{1}{j \omega C_1}
 </section>
 <section id="aansturing-met-transformator-aan-de-kant-van-de-belasting">
 <h2>Aansturing met transformator aan de kant van de belasting<a class="headerlink" href="#aansturing-met-transformator-aan-de-kant-van-de-belasting" title="Permalink to this heading">#</a></h2>
-<p>Het schema in <a class="reference internal" href="#dfig1npn"><span class="std std-numref">Fig. 58</span></a> heeft de transformator aan de kant van de bron. Doordat de NPN transistors moeten aangestuurd worden door een verschil tussen basis en emitter is het hiervoor nodig dat een verschil tussen 2 spanning moet aangelegd worden aan deze transistor,en er dus moet gebruik gemaakt worden van beide klemmen van de secundaire wikkelingen van de transformator.</p>
+<p>Het schema in <a class="reference internal" href="#dfig1npn"><span class="std std-numref">Fig. 59</span></a> heeft de transformator aan de kant van de bron. Doordat de NPN transistors moeten aangestuurd worden door een verschil tussen basis en emitter is het hiervoor nodig dat een verschil tussen 2 spanning moet aangelegd worden aan deze transistor,en er dus moet gebruik gemaakt worden van beide klemmen van de secundaire wikkelingen van de transformator.</p>
 <p>we kunnen, als alternatief hiervoor, ook de transformator plaatsen aan de kant van de belasting.
-<a class="reference internal" href="#dfig3spanning"><span class="std std-numref">Fig. 60</span></a> toont hiervan de meest eenvoudige implementatie. De ingangsspanningen (<span class="math notranslate nohighlight">\(Vin+\)</span> en <span class="math notranslate nohighlight">\(Vin-\)</span>) kunnen hiervoor dan rechtstreeks komen van de aanstuurlogica en kunnen eventueel werken op een heel andere (eventueel lagere) spanning.</p>
+<a class="reference internal" href="#dfig3spanning"><span class="std std-numref">Fig. 61</span></a> toont hiervan de meest eenvoudige implementatie. De ingangsspanningen (<span class="math notranslate nohighlight">\(Vin+\)</span> en <span class="math notranslate nohighlight">\(Vin-\)</span>) kunnen hiervoor dan rechtstreeks komen van de aanstuurlogica en kunnen eventueel werken op een heel andere (eventueel lagere) spanning.</p>
 <div class="cell docutils container">
 <div class="cell_output docutils container">
 <figure class="align-default" id="dfig3spanning">
 <img alt="_images/5fd1441d2cbe7c0e659f8b187b6967d42f1e08b5d2895061f224e6a75545e374.svg" src="_images/5fd1441d2cbe7c0e659f8b187b6967d42f1e08b5d2895061f224e6a75545e374.svg" /><figcaption>
-<p><span class="caption-number">Fig. 60 </span><span class="caption-text">Schema van de klasse D versterker met spanningssturing.</span><a class="headerlink" href="#dfig3spanning" title="Permallink naar deze afbeelding">#</a></p>
+<p><span class="caption-number">Fig. 61 </span><span class="caption-text">Schema van de klasse D versterker met spanningssturing.</span><a class="headerlink" href="#dfig3spanning" title="Permallink naar deze afbeelding">#</a></p>
 </figcaption>
 </figure>
 </div>
 </div>
 <section id="keuze-van-de-wikkelverhouding">
 <h3>Keuze van de wikkelverhouding<a class="headerlink" href="#keuze-van-de-wikkelverhouding" title="Permalink to this heading">#</a></h3>
-<p>Een bijkomend belangrijk voordeel van <a class="reference internal" href="#dfig3spanning"><span class="std std-numref">Fig. 60</span></a>is dat de wikkelverhouding van de transformator kan aangepast worden aan het gewenste vermogen (<span class="math notranslate nohighlight">\(P_{ac}\)</span>) en de beschikbare voedingsspanning.</p>
+<p>Een bijkomend belangrijk voordeel van <a class="reference internal" href="#dfig3spanning"><span class="std std-numref">Fig. 61</span></a>is dat de wikkelverhouding van de transformator kan aangepast worden aan het gewenste vermogen (<span class="math notranslate nohighlight">\(P_{ac}\)</span>) en de beschikbare voedingsspanning.</p>
 <div class="math notranslate nohighlight">
 \[
 P_{ac}=\frac{V_{ac}^2}{2 R_L}
 \]</div>
-<p>En in het schema van <a class="reference internal" href="#dfig1"><span class="std std-numref">Fig. 46</span></a> wordt de <span class="math notranslate nohighlight">\(V_{dd}\)</span> vastgelegd uit de vergelijking:</p>
+<p>En in het schema van <a class="reference internal" href="#dfig1"><span class="std std-numref">Fig. 47</span></a> wordt de <span class="math notranslate nohighlight">\(V_{dd}\)</span> vastgelegd uit de vergelijking:</p>
 <div class="math notranslate nohighlight">
 \[V_{ac}=\frac{2 V_{dd}}{\pi}\]</div>
-<p>Als een gevolg hiervan wordt de voedingsspanning <span class="math notranslate nohighlight">\(V_{dd}\)</span> bepaald door het gewenste vermogen in <a class="reference internal" href="#dfig1"><span class="std std-numref">Fig. 46</span></a>. Echter in <a class="reference internal" href="#dfig3spanning-npns"><span class="std std-numref">Fig. 61</span></a> kunnen we de wikkelverhouding tussen de primaire en de secundaire wikkeling <span class="math notranslate nohighlight">\(n_p\)</span>:<span class="math notranslate nohighlight">\(n_s\)</span> aanpassen om overeen te komen met een vooraf gegeven voedingsspanning.</p>
+<p>Als een gevolg hiervan wordt de voedingsspanning <span class="math notranslate nohighlight">\(V_{dd}\)</span> bepaald door het gewenste vermogen in <a class="reference internal" href="#dfig1"><span class="std std-numref">Fig. 47</span></a>. Echter in <a class="reference internal" href="#dfig3spanning-npns"><span class="std std-numref">Fig. 62</span></a> kunnen we de wikkelverhouding tussen de primaire en de secundaire wikkeling <span class="math notranslate nohighlight">\(n_p\)</span>:<span class="math notranslate nohighlight">\(n_s\)</span> aanpassen om overeen te komen met een vooraf gegeven voedingsspanning.</p>
 <div class="cell docutils container">
 <div class="cell_output docutils container">
 <figure class="align-default" id="dfig3spanning-npns">
 <img alt="_images/fb2041b166a632518ad2e4ca6ca8976742f885a59a0424b88ca08d2c6339eac7.svg" src="_images/fb2041b166a632518ad2e4ca6ca8976742f885a59a0424b88ca08d2c6339eac7.svg" /><figcaption>
-<p><span class="caption-number">Fig. 61 </span><span class="caption-text">Schema van de klasse D versterker met spanningssturing, met aanduiding van de wikkelverhouding tussen beide primaire wikkelingen (<span class="math notranslate nohighlight">\(n_{pi}\)</span>) en de secundaire wikkeling (<span class="math notranslate nohighlight">\(n_s\)</span>)</span><a class="headerlink" href="#dfig3spanning-npns" title="Permallink naar deze afbeelding">#</a></p>
+<p><span class="caption-number">Fig. 62 </span><span class="caption-text">Schema van de klasse D versterker met spanningssturing, met aanduiding van de wikkelverhouding tussen beide primaire wikkelingen (<span class="math notranslate nohighlight">\(n_{pi}\)</span>) en de secundaire wikkeling (<span class="math notranslate nohighlight">\(n_s\)</span>)</span><a class="headerlink" href="#dfig3spanning-npns" title="Permallink naar deze afbeelding">#</a></p>
 </figcaption>
 </figure>
 </div>
@@ -864,18 +864,18 @@ P_{ac}=\frac{V_{ac}^2}{2 R_L}
 
 <p class="admonition-title"><span class="caption-number">Opdracht 4 </span> (Keuze van de wikkelverhouding)</p>
 <section id="exercise-content">
-<p>De implementatie van <a class="reference internal" href="#listingd1"><span class="std std-numref">Spice Listing 10</span></a> heeft een voedingsspanning <span class="math notranslate nohighlight">\(V_{dd}\)</span> van 20V nodig om een vermogen van 11.3 W te bekomen. We willen hetzelfde vermogen bekomen gebruikmakende van <a class="reference internal" href="#dfig3spanning-npns"><span class="std std-numref">Fig. 61</span></a> en een voedingsspanning van <span class="math notranslate nohighlight">\(V_{dd}\)</span>=6V. De frequentie en alle elementen van de trilkring blijven hetzelfde. Wat moet de wikkelverhouding zijn?</p>
+<p>De implementatie van <a class="reference internal" href="#listingd1"><span class="std std-numref">Spice Listing 10</span></a> heeft een voedingsspanning <span class="math notranslate nohighlight">\(V_{dd}\)</span> van 20V nodig om een vermogen van 11.3 W te bekomen. We willen hetzelfde vermogen bekomen gebruikmakende van <a class="reference internal" href="#dfig3spanning-npns"><span class="std std-numref">Fig. 62</span></a> en een voedingsspanning van <span class="math notranslate nohighlight">\(V_{dd}\)</span>=6V. De frequentie en alle elementen van de trilkring blijven hetzelfde. Wat moet de wikkelverhouding zijn?</p>
 </section>
 </div>
 </section>
 <section id="id1">
 <h3>Aanpassing voor de aansturing off-resonantie<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h3>
-<p>Het schema in <a class="reference internal" href="#dfig3spanning"><span class="std std-numref">Fig. 60</span></a> kan ook verder aangepast worden om aansturing toe te laten op frequenties die een klein beetje verschillen van de resonantiefrequentie. Hiervoor is het nodig dat we diodes toevoegen die stroom toelaten die in de omgekeerde richting loopt dan deze van de vermogentransistors.  <a class="reference internal" href="#dfig3spanningdiode"><span class="std std-numref">Fig. 62</span></a> toont het aangepaste schema.</p>
+<p>Het schema in <a class="reference internal" href="#dfig3spanning"><span class="std std-numref">Fig. 61</span></a> kan ook verder aangepast worden om aansturing toe te laten op frequenties die een klein beetje verschillen van de resonantiefrequentie. Hiervoor is het nodig dat we diodes toevoegen die stroom toelaten die in de omgekeerde richting loopt dan deze van de vermogentransistors.  <a class="reference internal" href="#dfig3spanningdiode"><span class="std std-numref">Fig. 63</span></a> toont het aangepaste schema.</p>
 <div class="cell docutils container">
 <div class="cell_output docutils container">
 <figure class="align-default" id="dfig3spanningdiode">
 <img alt="_images/ce076fabe42acb2aa03f85538557f3da7d1bef4aedb8b46b2e611eebf8f7eca6.svg" src="_images/ce076fabe42acb2aa03f85538557f3da7d1bef4aedb8b46b2e611eebf8f7eca6.svg" /><figcaption>
-<p><span class="caption-number">Fig. 62 </span><span class="caption-text">Schema van de klasse D versterker met spanningssturing en beveiligingsdiodes.</span><a class="headerlink" href="#dfig3spanningdiode" title="Permallink naar deze afbeelding">#</a></p>
+<p><span class="caption-number">Fig. 63 </span><span class="caption-text">Schema van de klasse D versterker met spanningssturing en beveiligingsdiodes.</span><a class="headerlink" href="#dfig3spanningdiode" title="Permallink naar deze afbeelding">#</a></p>
 </figcaption>
 </figure>
 </div>
@@ -884,24 +884,24 @@ P_{ac}=\frac{V_{ac}^2}{2 R_L}
 </section>
 <section id="klasse-d-met-stroomsturing">
 <h2>Klasse D met stroomsturing<a class="headerlink" href="#klasse-d-met-stroomsturing" title="Permalink to this heading">#</a></h2>
-<p>Alle bovenstaande implementaties toonden een klasse D versterker met spanningssturing. Een Klasse D versterker kan echter ook met stroomsturing worden uitgevoerd. <a class="reference internal" href="#dfig4stroom"><span class="std std-numref">Fig. 63</span></a> toont hiervan de meest eenvoudige implementatie. Het is hierbij belangrijk dat er pulsen met een constante stroom naar de parallelkring gestuurd worden. Daarom is er in <a class="reference internal" href="#dfig4stroom"><span class="std std-numref">Fig. 63</span></a> een grote spoel toegevoegd (<span class="math notranslate nohighlight">\(L_{DC}\)</span>). De grote waarde van deze spoel zal ervoor zorgen dat de stroom constant is. De richting van deze stroom door de primaire van de transformator (en dus ook richting van de magnetisatie van de transformator) wordt aangepast door afwisselend <span class="math notranslate nohighlight">\(Vin+\)</span> en <span class="math notranslate nohighlight">\(Vin-\)</span> aan te sturen.</p>
+<p>Alle bovenstaande implementaties toonden een klasse D versterker met spanningssturing. Een Klasse D versterker kan echter ook met stroomsturing worden uitgevoerd. <a class="reference internal" href="#dfig4stroom"><span class="std std-numref">Fig. 64</span></a> toont hiervan de meest eenvoudige implementatie. Het is hierbij belangrijk dat er pulsen met een constante stroom naar de parallelkring gestuurd worden. Daarom is er in <a class="reference internal" href="#dfig4stroom"><span class="std std-numref">Fig. 64</span></a> een grote spoel toegevoegd (<span class="math notranslate nohighlight">\(L_{DC}\)</span>). De grote waarde van deze spoel zal ervoor zorgen dat de stroom constant is. De richting van deze stroom door de primaire van de transformator (en dus ook richting van de magnetisatie van de transformator) wordt aangepast door afwisselend <span class="math notranslate nohighlight">\(Vin+\)</span> en <span class="math notranslate nohighlight">\(Vin-\)</span> aan te sturen.</p>
 <div class="cell docutils container">
 <div class="cell_output docutils container">
 <figure class="align-default" id="dfig4stroom">
 <img alt="_images/da6fecf9565bb2003cd7503ee6a321fb7a120b0f659bf92a92daa8d19a8449ac.svg" src="_images/da6fecf9565bb2003cd7503ee6a321fb7a120b0f659bf92a92daa8d19a8449ac.svg" /><figcaption>
-<p><span class="caption-number">Fig. 63 </span><span class="caption-text">Schema van de klasse D versterker met stroomsturing.</span><a class="headerlink" href="#dfig4stroom" title="Permallink naar deze afbeelding">#</a></p>
+<p><span class="caption-number">Fig. 64 </span><span class="caption-text">Schema van de klasse D versterker met stroomsturing.</span><a class="headerlink" href="#dfig4stroom" title="Permallink naar deze afbeelding">#</a></p>
 </figcaption>
 </figure>
 </div>
 </div>
 <section id="id2">
 <h3>Aanpassing voor de aansturing off-resonantie<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h3>
-<p>Het schema in <a class="reference internal" href="#dfig4stroom"><span class="std std-numref">Fig. 63</span></a> kan ook verder aangepast worden om aansturing toe te laten op frequenties die een klein beetje verschillen van de resonantiefrequentie. Hiervoor is het nodig dat we diodes toevoegen die stroom toelaten die in de omgekeerde richting loopt dan deze van de vermogentransistors.  <a class="reference internal" href="#dfig4stroomdiode"><span class="std std-numref">Fig. 64</span></a> toont het aangepaste schema.</p>
+<p>Het schema in <a class="reference internal" href="#dfig4stroom"><span class="std std-numref">Fig. 64</span></a> kan ook verder aangepast worden om aansturing toe te laten op frequenties die een klein beetje verschillen van de resonantiefrequentie. Hiervoor is het nodig dat we diodes toevoegen die stroom toelaten die in de omgekeerde richting loopt dan deze van de vermogentransistors.  <a class="reference internal" href="#dfig4stroomdiode"><span class="std std-numref">Fig. 65</span></a> toont het aangepaste schema.</p>
 <div class="cell docutils container">
 <div class="cell_output docutils container">
 <figure class="align-default" id="dfig4stroomdiode">
 <img alt="_images/d30bcc63ded40ec70c0a44377ba96ee0b3e2a585c0da81f10ef90f7a49b39295.svg" src="_images/d30bcc63ded40ec70c0a44377ba96ee0b3e2a585c0da81f10ef90f7a49b39295.svg" /><figcaption>
-<p><span class="caption-number">Fig. 64 </span><span class="caption-text">Schema van de klasse D versterker met stroomsturing en beveiligingsdiodes.</span><a class="headerlink" href="#dfig4stroomdiode" title="Permallink naar deze afbeelding">#</a></p>
+<p><span class="caption-number">Fig. 65 </span><span class="caption-text">Schema van de klasse D versterker met stroomsturing en beveiligingsdiodes.</span><a class="headerlink" href="#dfig4stroomdiode" title="Permallink naar deze afbeelding">#</a></p>
 </figcaption>
 </figure>
 </div>
