@@ -7,8 +7,8 @@ from PySpice.Probe.Plot import plot
 from PySpice.Spice.Parser import SpiceParser
 from PySpice.Spice.Netlist import Circuit
 from PySpice.Unit import *
-import schemdraw as schem
-import schemdraw.elements as e
+import schemdraw
+from schemdraw.elements import *
 import skrf as rf
 from ipywidgets import interact,FloatSlider
 
@@ -24,7 +24,6 @@ def spicelisting(filename,firstline=0,lastline=10000):
     return display.Code(data=ff, language='spice')
 
 if 'USEWIDGETS' in os.environ:
-    usewidgets= (os.environ['USEWIDGETS']=='True')
+    usewidgets= (os.getenv('USEWIDGETS')=='True')
 else:
     usewidgets=False;
-

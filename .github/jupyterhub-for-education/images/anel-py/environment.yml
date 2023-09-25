@@ -1,7 +1,10 @@
 channels:
   - conda-forge
 dependencies:
-  - jupyterlab-myst==1.2.0  # https://github.com/executablebooks/jupyterlab-myst PS:  for Jlab4.0 >=2.0.0
+  - jupyterhub==4.0.1
+  - jupyterlab==4.0.4
+  - nbgitpuller==1.2.0
+  - jupyterlab-myst==2.0.1  # https://github.com/executablebooks/jupyterlab-myst PS:  for Jlab4.0 >=2.0.0
   - scikit-rf==0.28.0       # https://github.com/scikit-rf/scikit-rf
   - pyspice==1.5            # https://github.com/PySpice-org/PySpice
   - pip:
