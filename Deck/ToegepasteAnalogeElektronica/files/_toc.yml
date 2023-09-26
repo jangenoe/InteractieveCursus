@@ -1,0 +1,36 @@
+format: jb-book
+root: intro
+parts:
+- caption: Inleiding
+  chapters:
+  - file: Spice-simulatie
+- caption: Versterkers
+  chapters:
+  - file: Klasse-C
+  - file: Klasse-F
+  - file: Klasse-D
+  - file: Klasse-E
+- caption: Filters
+  chapters:  
+  - file: Filters
+- caption: Transmissielijnen
+  chapters:
+  - file: transmissielijn
+  - file: reflecties
+  - file: SmithKaart
+    sections:
+      - file: SmithKaartOefening1
+      - file: SmithKaartOefening2
+      - file: SmithKaartOefening3
+      - file: SmithKaartOefening4
+      - file: SmithKaartOefening5
+      - file: SmithKaartOefening6
+      - file: SmithKaartOefening7
+      - file: SmithKaartOefening8
+  - file: References
+- caption: Overzicht
+  chapters:
+  - url: https://jangenoe.github.io/InteractieveCursus/intro.html
+    title: Lijst cursussen
+  - url: https://www.kuleuven.be/wieiswie/en/person/00004269
+    title: Auteur Jan Genoe
