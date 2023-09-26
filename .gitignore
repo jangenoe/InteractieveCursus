@@ -8,3 +8,5 @@ jupyter_execute
 src/_build/.jupyter_cache
 src/_build/jupyter_execute
 desktop.ini
+__pycache__
+*.mp4
