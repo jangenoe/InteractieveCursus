@@ -1,0 +1,133 @@
+{
+  "content": [
+    {
+      "content": null,
+      "created": "2023-09-26T22:47:59.248830Z",
+      "format": null,
+      "last_modified": "2023-09-26T22:46:56.007583Z",
+      "mimetype": "image/vnd.microsoft.icon",
+      "name": "favicon.ico",
+      "path": "images/favicon.ico",
+      "size": 7358,
+      "type": "file",
+      "writable": true
+    },
+    {
+      "content": null,
+      "created": "2023-09-26T22:47:59.248830Z",
+      "format": null,
+      "last_modified": "2023-09-26T22:46:56.007583Z",
+      "mimetype": "image/png",
+      "name": "logo.png",
+      "path": "images/logo.png",
+      "size": 44496,
+      "type": "file",
+      "writable": true
+    },
+    {
+      "content": null,
+      "created": "2023-09-26T22:47:59.248830Z",
+      "format": null,
+      "last_modified": "2023-09-26T22:46:56.007583Z",
+      "mimetype": "image/png",
+      "name": "coax.png",
+      "path": "images/coax.png",
+      "size": 18254,
+      "type": "file",
+      "writable": true
+    },
+    {
+      "content": null,
+      "created": "2023-09-26T22:47:59.248830Z",
+      "format": null,
+      "last_modified": "2023-09-26T22:46:56.003583Z",
+      "mimetype": "text/markdown",
+      "name": "bronnen.md",
+      "path": "images/bronnen.md",
+      "size": 131,
+      "type": "file",
+      "writable": true
+    },
+    {
+      "content": null,
+      "created": "2023-09-26T22:47:59.244830Z",
+      "format": null,
+      "last_modified": "2023-09-26T22:46:56.003583Z",
+      "mimetype": "image/svg+xml",
+      "name": "Smith_chart3.svg",
+      "path": "images/Smith_chart3.svg",
+      "size": 1291625,
+      "type": "file",
+      "writable": true
+    },
+    {
+      "content": null,
+      "created": "2023-09-26T22:47:59.248830Z",
+      "format": null,
+      "last_modified": "2023-09-26T22:46:56.003583Z",
+      "mimetype": "image/png",
+      "name": "Tsai.png",
+      "path": "images/Tsai.png",
+      "size": 35650,
+      "type": "file",
+      "writable": true
+    },
+    {
+      "content": null,
+      "created": "2023-09-26T22:47:59.240830Z",
+      "format": null,
+      "last_modified": "2023-09-26T22:46:55.999583Z",
+      "mimetype": "image/png",
+      "name": "KULeuven.png",
+      "path": "images/KULeuven.png",
+      "size": 6025,
+      "type": "file",
+      "writable": true
+    },
+    {
+      "content": null,
+      "created": "2023-09-26T22:47:59.248830Z",
+      "format": null,
+      "last_modified": "2023-09-26T22:46:56.007583Z",
+      "mimetype": "image/svg+xml",
+      "name": "logo.svg",
+      "path": "images/logo.svg",
+      "size": 12322,
+      "type": "file",
+      "writable": true
+    },
+    {
+      "content": null,
+      "created": "2023-09-26T22:47:59.240830Z",
+      "format": null,
+      "last_modified": "2023-09-26T22:46:55.999583Z",
+      "mimetype": "image/png",
+      "name": "RF2140.png",
+      "path": "images/RF2140.png",
+      "size": 134033,
+      "type": "file",
+      "writable": true
+    },
+    {
+      "content": null,
+      "created": "2023-09-26T22:47:59.248830Z",
+      "format": null,
+      "last_modified": "2023-09-26T22:46:56.007583Z",
+      "mimetype": "image/png",
+      "name": "twisted_pair.png",
+      "path": "images/twisted_pair.png",
+      "size": 13420,
+      "type": "file",
+      "writable": true
+    }
+  ],
+  "created": "2023-09-26T22:47:59.248830Z",
+  "format": "json",
+  "last_modified": "2023-09-26T22:47:59.248830Z",
+  "mimetype": null,
+  "name": "images",
+  "path": "images",
+  "size": null,
+  "type": "directory",
+  "writable": true
+}
