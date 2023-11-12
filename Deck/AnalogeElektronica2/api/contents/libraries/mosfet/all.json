@@ -1,0 +1,25 @@
+{
+  "content": [
+    {
+      "content": null,
+      "created": "2023-11-12T22:07:16.594845Z",
+      "format": null,
+      "last_modified": "2023-11-12T22:06:06.123438Z",
+      "mimetype": null,
+      "name": "irf150.lib",
+      "path": "libraries/mosfet/irf150.lib",
+      "size": 1772,
+      "type": "file",
+      "writable": true
+    }
+  ],
+  "created": "2023-11-12T22:07:16.594845Z",
+  "format": "json",
+  "last_modified": "2023-11-12T22:07:16.594845Z",
+  "mimetype": null,
+  "name": "mosfet",
+  "path": "libraries/mosfet",
+  "size": null,
+  "type": "directory",
+  "writable": true
+}
