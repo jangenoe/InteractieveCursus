@@ -74,12 +74,12 @@ def first_Order_LP_draw(labels=True, Freq=1e6,Cref=16e-12,inches_per_unit=0.5, R
     if labels:
         Clabel='$C_2$'
         R1label='$R_1$'
-        R2label='$R_1$'
+        R2label='$R_2$'
     else:
         R2=1/Cref/2/np.pi/Freq
         R2label=human_format(R2)+'$\Omega$'
         Clabel=human_format(Cref)+'F'
-        R1label=human_format(R2)+'$\Omega$'
+        R1label=human_format(R2/LFgain)+'$\Omega$'
     with schemdraw.Drawing(inches_per_unit=inches_per_unit) as d:
      d += (op := Opamp())
      d += ( Line( d='left', xy=op.in2, l=d.unit/4))
