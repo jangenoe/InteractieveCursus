@@ -8,35 +8,11 @@ msgstr ""
 "Language: et\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-msgid "Last updated on"
-msgstr "Viimati uuendatud"
+msgid "Fullscreen mode"
+msgstr "Täisekraanirežiim"
 
-msgid "suggest edit"
-msgstr "soovita muuta"
-
-msgid "repository"
-msgstr "hoidla"
-
-msgid "Toggle navigation"
-msgstr "Lülita navigeerimine sisse"
-
-msgid "Edit this page"
-msgstr "Muutke seda lehte"
-
-msgid "open issue"
-msgstr "avatud küsimus"
-
-msgid "Sphinx Book Theme"
-msgstr "Sfinksiraamatu teema"
-
-msgid "Download source file"
-msgstr "Laadige alla lähtefail"
-
-msgid "Source repository"
-msgstr "Allikahoidla"
-
-msgid "Print to PDF"
-msgstr "Prindi PDF-i"
+msgid "Open an issue"
+msgstr "Avage probleem"
 
 msgid "Theme by the"
 msgstr "Teema"
@@ -44,32 +20,56 @@ msgstr "Teema"
 msgid "Launch"
 msgstr "Käivitage"
 
+msgid "Source repository"
+msgstr "Allikahoidla"
+
+msgid "Toggle navigation"
+msgstr "Lülita navigeerimine sisse"
+
+msgid "By"
+msgstr "Kõrval"
+
+msgid "Edit this page"
+msgstr "Muutke seda lehte"
+
+msgid "Contents"
+msgstr "Sisu"
+
+msgid "Download this page"
+msgstr "Laadige see leht alla"
+
+msgid "By the"
+msgstr "Autor"
+
+msgid "Print to PDF"
+msgstr "Prindi PDF-i"
+
+msgid "Sphinx Book Theme"
+msgstr "Sfinksiraamatu teema"
+
 msgid "Copyright"
 msgstr "Autoriõigus"
 
 msgid "previous page"
 msgstr "eelmine leht"
 
-msgid "Open an issue"
-msgstr "Avage probleem"
+msgid "Download notebook file"
+msgstr "Laadige sülearvuti fail alla"
 
 msgid "next page"
 msgstr "järgmine leht"
 
-msgid "By"
-msgstr "Kõrval"
+msgid "open issue"
+msgstr "avatud küsimus"
 
-msgid "Fullscreen mode"
-msgstr "Täisekraanirežiim"
+msgid "Last updated on"
+msgstr "Viimati uuendatud"
 
-msgid "By the"
-msgstr "Autor"
+msgid "repository"
+msgstr "hoidla"
 
-msgid "Download this page"
-msgstr "Laadige see leht alla"
+msgid "suggest edit"
+msgstr "soovita muuta"
 
-msgid "Download notebook file"
-msgstr "Laadige sülearvuti fail alla"
-
-msgid "Contents"
-msgstr "Sisu"
+msgid "Download source file"
+msgstr "Laadige alla lähtefail"

@@ -8,35 +8,11 @@ msgstr ""
 "Language: es\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-msgid "Last updated on"
-msgstr "Ultima actualización en"
+msgid "Fullscreen mode"
+msgstr "Modo de pantalla completa"
 
-msgid "suggest edit"
-msgstr "sugerir editar"
-
-msgid "repository"
-msgstr "repositorio"
-
-msgid "Toggle navigation"
-msgstr "Navegación de palanca"
-
-msgid "Edit this page"
-msgstr "Edita esta página"
-
-msgid "open issue"
-msgstr "Tema abierto"
-
-msgid "Sphinx Book Theme"
-msgstr "Tema del libro de la esfinge"
-
-msgid "Download source file"
-msgstr "Descargar archivo fuente"
-
-msgid "Source repository"
-msgstr "Repositorio de origen"
-
-msgid "Print to PDF"
-msgstr "Imprimir en PDF"
+msgid "Open an issue"
+msgstr "Abrir un problema"
 
 msgid "Theme by the"
 msgstr "Tema por el"
@@ -44,32 +20,56 @@ msgstr "Tema por el"
 msgid "Launch"
 msgstr "Lanzamiento"
 
+msgid "Source repository"
+msgstr "Repositorio de origen"
+
+msgid "Toggle navigation"
+msgstr "Navegación de palanca"
+
+msgid "By"
+msgstr "Por"
+
+msgid "Edit this page"
+msgstr "Edita esta página"
+
+msgid "Contents"
+msgstr "Contenido"
+
+msgid "Download this page"
+msgstr "Descarga esta pagina"
+
+msgid "By the"
+msgstr "Por el"
+
+msgid "Print to PDF"
+msgstr "Imprimir en PDF"
+
+msgid "Sphinx Book Theme"
+msgstr "Tema del libro de la esfinge"
+
 msgid "Copyright"
 msgstr "Derechos de autor"
 
 msgid "previous page"
 msgstr "pagina anterior"
 
-msgid "Open an issue"
-msgstr "Abrir un problema"
+msgid "Download notebook file"
+msgstr "Descargar archivo de cuaderno"
 
 msgid "next page"
 msgstr "siguiente página"
 
-msgid "By"
-msgstr "Por"
+msgid "open issue"
+msgstr "Tema abierto"
 
-msgid "Fullscreen mode"
-msgstr "Modo de pantalla completa"
+msgid "Last updated on"
+msgstr "Ultima actualización en"
 
-msgid "By the"
-msgstr "Por el"
+msgid "repository"
+msgstr "repositorio"
 
-msgid "Download this page"
-msgstr "Descarga esta pagina"
+msgid "suggest edit"
+msgstr "sugerir editar"
 
-msgid "Download notebook file"
-msgstr "Descargar archivo de cuaderno"
-
-msgid "Contents"
-msgstr "Contenido"
+msgid "Download source file"
+msgstr "Descargar archivo fuente"

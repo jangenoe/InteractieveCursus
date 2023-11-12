@@ -8,35 +8,11 @@ msgstr ""
 "Language: sk\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-msgid "Last updated on"
-msgstr "Posledná aktualizácia dňa"
+msgid "Fullscreen mode"
+msgstr "Režim celej obrazovky"
 
-msgid "suggest edit"
-msgstr "navrhnúť úpravu"
-
-msgid "repository"
-msgstr "Úložisko"
-
-msgid "Toggle navigation"
-msgstr "Prepnúť navigáciu"
-
-msgid "Edit this page"
-msgstr "Upraviť túto stránku"
-
-msgid "open issue"
-msgstr "otvorené vydanie"
-
-msgid "Sphinx Book Theme"
-msgstr "Téma knihy Sfinga"
-
-msgid "Download source file"
-msgstr "Stiahnite si zdrojový súbor"
-
-msgid "Source repository"
-msgstr "Zdrojové úložisko"
-
-msgid "Print to PDF"
-msgstr "Tlač do PDF"
+msgid "Open an issue"
+msgstr "Otvorte problém"
 
 msgid "Theme by the"
 msgstr "Téma od"
@@ -44,32 +20,56 @@ msgstr "Téma od"
 msgid "Launch"
 msgstr "Spustiť"
 
+msgid "Source repository"
+msgstr "Zdrojové úložisko"
+
+msgid "Toggle navigation"
+msgstr "Prepnúť navigáciu"
+
+msgid "By"
+msgstr "Autor:"
+
+msgid "Edit this page"
+msgstr "Upraviť túto stránku"
+
+msgid "Contents"
+msgstr "Obsah"
+
+msgid "Download this page"
+msgstr "Stiahnite si túto stránku"
+
+msgid "By the"
+msgstr "Podľa"
+
+msgid "Print to PDF"
+msgstr "Tlač do PDF"
+
+msgid "Sphinx Book Theme"
+msgstr "Téma knihy Sfinga"
+
 msgid "Copyright"
 msgstr "Autorské práva"
 
 msgid "previous page"
 msgstr "predchádzajúca strana"
 
-msgid "Open an issue"
-msgstr "Otvorte problém"
+msgid "Download notebook file"
+msgstr "Stiahnite si zošit"
 
 msgid "next page"
 msgstr "ďalšia strana"
 
-msgid "By"
-msgstr "Autor:"
+msgid "open issue"
+msgstr "otvorené vydanie"
 
-msgid "Fullscreen mode"
-msgstr "Režim celej obrazovky"
+msgid "Last updated on"
+msgstr "Posledná aktualizácia dňa"
 
-msgid "By the"
-msgstr "Podľa"
+msgid "repository"
+msgstr "Úložisko"
 
-msgid "Download this page"
-msgstr "Stiahnite si túto stránku"
+msgid "suggest edit"
+msgstr "navrhnúť úpravu"
 
-msgid "Download notebook file"
-msgstr "Stiahnite si zošit"
-
-msgid "Contents"
-msgstr "Obsah"
+msgid "Download source file"
+msgstr "Stiahnite si zdrojový súbor"

@@ -8,35 +8,11 @@ msgstr ""
 "Language: sv\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-msgid "Last updated on"
-msgstr "Senast uppdaterad den"
+msgid "Fullscreen mode"
+msgstr "Fullskärmsläge"
 
-msgid "suggest edit"
-msgstr "föreslå ändring"
-
-msgid "repository"
-msgstr "repositorium"
-
-msgid "Toggle navigation"
-msgstr "Växla navigering"
-
-msgid "Edit this page"
-msgstr "Redigera den här sidan"
-
-msgid "open issue"
-msgstr "öppna problemrapport"
-
-msgid "Sphinx Book Theme"
-msgstr "Sphinx Boktema"
-
-msgid "Download source file"
-msgstr "Ladda ner källfil"
-
-msgid "Source repository"
-msgstr "Källkodsrepositorium"
-
-msgid "Print to PDF"
-msgstr "Skriv ut till PDF"
+msgid "Open an issue"
+msgstr "Öppna en problemrapport"
 
 msgid "Theme by the"
 msgstr "Tema av"
@@ -44,32 +20,56 @@ msgstr "Tema av"
 msgid "Launch"
 msgstr "Öppna"
 
+msgid "Source repository"
+msgstr "Källkodsrepositorium"
+
+msgid "Toggle navigation"
+msgstr "Växla navigering"
+
+msgid "By"
+msgstr "Av"
+
+msgid "Edit this page"
+msgstr "Redigera den här sidan"
+
+msgid "Contents"
+msgstr "Innehåll"
+
+msgid "Download this page"
+msgstr "Ladda ner den här sidan"
+
+msgid "By the"
+msgstr "Av den"
+
+msgid "Print to PDF"
+msgstr "Skriv ut till PDF"
+
+msgid "Sphinx Book Theme"
+msgstr "Sphinx Boktema"
+
 msgid "Copyright"
 msgstr "Upphovsrätt"
 
 msgid "previous page"
 msgstr "föregående sida"
 
-msgid "Open an issue"
-msgstr "Öppna en problemrapport"
+msgid "Download notebook file"
+msgstr "Ladda ner notebook-fil"
 
 msgid "next page"
 msgstr "nästa sida"
 
-msgid "By"
-msgstr "Av"
+msgid "open issue"
+msgstr "öppna problemrapport"
 
-msgid "Fullscreen mode"
-msgstr "Fullskärmsläge"
+msgid "Last updated on"
+msgstr "Senast uppdaterad den"
 
-msgid "By the"
-msgstr "Av den"
+msgid "repository"
+msgstr "repositorium"
 
-msgid "Download this page"
-msgstr "Ladda ner den här sidan"
+msgid "suggest edit"
+msgstr "föreslå ändring"
 
-msgid "Download notebook file"
-msgstr "Ladda ner notebook-fil"
-
-msgid "Contents"
-msgstr "Innehåll"
+msgid "Download source file"
+msgstr "Ladda ner källfil"

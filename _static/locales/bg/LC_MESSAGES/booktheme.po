@@ -8,35 +8,11 @@ msgstr ""
 "Language: bg\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-msgid "Last updated on"
-msgstr "Последна актуализация на"
+msgid "Fullscreen mode"
+msgstr "Режим на цял екран"
 
-msgid "suggest edit"
-msgstr "предложи редактиране"
-
-msgid "repository"
-msgstr "хранилище"
-
-msgid "Toggle navigation"
-msgstr "Превключване на навигацията"
-
-msgid "Edit this page"
-msgstr "Редактирайте тази страница"
-
-msgid "open issue"
-msgstr "отворен брой"
-
-msgid "Sphinx Book Theme"
-msgstr "Тема на книгата Sphinx"
-
-msgid "Download source file"
-msgstr "Изтеглете изходния файл"
-
-msgid "Source repository"
-msgstr "Хранилище на източника"
-
-msgid "Print to PDF"
-msgstr "Печат в PDF"
+msgid "Open an issue"
+msgstr "Отворете проблем"
 
 msgid "Theme by the"
 msgstr "Тема от"
@@ -44,32 +20,56 @@ msgstr "Тема от"
 msgid "Launch"
 msgstr "Стартиране"
 
+msgid "Source repository"
+msgstr "Хранилище на източника"
+
+msgid "Toggle navigation"
+msgstr "Превключване на навигацията"
+
+msgid "By"
+msgstr "От"
+
+msgid "Edit this page"
+msgstr "Редактирайте тази страница"
+
+msgid "Contents"
+msgstr "Съдържание"
+
+msgid "Download this page"
+msgstr "Изтеглете тази страница"
+
+msgid "By the"
+msgstr "По"
+
+msgid "Print to PDF"
+msgstr "Печат в PDF"
+
+msgid "Sphinx Book Theme"
+msgstr "Тема на книгата Sphinx"
+
 msgid "Copyright"
 msgstr "Авторско право"
 
 msgid "previous page"
 msgstr "предишна страница"
 
-msgid "Open an issue"
-msgstr "Отворете проблем"
+msgid "Download notebook file"
+msgstr "Изтеглете файла на бележника"
 
 msgid "next page"
 msgstr "Следваща страница"
 
-msgid "By"
-msgstr "От"
+msgid "open issue"
+msgstr "отворен брой"
 
-msgid "Fullscreen mode"
-msgstr "Режим на цял екран"
+msgid "Last updated on"
+msgstr "Последна актуализация на"
 
-msgid "By the"
-msgstr "По"
+msgid "repository"
+msgstr "хранилище"
 
-msgid "Download this page"
-msgstr "Изтеглете тази страница"
+msgid "suggest edit"
+msgstr "предложи редактиране"
 
-msgid "Download notebook file"
-msgstr "Изтеглете файла на бележника"
-
-msgid "Contents"
-msgstr "Съдържание"
+msgid "Download source file"
+msgstr "Изтеглете изходния файл"

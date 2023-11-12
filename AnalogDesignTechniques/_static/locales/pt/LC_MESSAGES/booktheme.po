@@ -8,35 +8,11 @@ msgstr ""
 "Language: pt\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-msgid "Last updated on"
-msgstr "Última atualização em"
+msgid "Fullscreen mode"
+msgstr "Modo tela cheia"
 
-msgid "suggest edit"
-msgstr "sugerir edição"
-
-msgid "repository"
-msgstr "repositório"
-
-msgid "Toggle navigation"
-msgstr "Alternar de navegação"
-
-msgid "Edit this page"
-msgstr "Edite essa página"
-
-msgid "open issue"
-msgstr "questão aberta"
-
-msgid "Sphinx Book Theme"
-msgstr "Tema do livro Sphinx"
-
-msgid "Download source file"
-msgstr "Baixar arquivo fonte"
-
-msgid "Source repository"
-msgstr "Repositório fonte"
-
-msgid "Print to PDF"
-msgstr "Imprimir em PDF"
+msgid "Open an issue"
+msgstr "Abra um problema"
 
 msgid "Theme by the"
 msgstr "Tema por"
@@ -44,32 +20,56 @@ msgstr "Tema por"
 msgid "Launch"
 msgstr "Lançamento"
 
+msgid "Source repository"
+msgstr "Repositório fonte"
+
+msgid "Toggle navigation"
+msgstr "Alternar de navegação"
+
+msgid "By"
+msgstr "De"
+
+msgid "Edit this page"
+msgstr "Edite essa página"
+
+msgid "Contents"
+msgstr "Conteúdo"
+
+msgid "Download this page"
+msgstr "Baixe esta página"
+
+msgid "By the"
+msgstr "Pelo"
+
+msgid "Print to PDF"
+msgstr "Imprimir em PDF"
+
+msgid "Sphinx Book Theme"
+msgstr "Tema do livro Sphinx"
+
 msgid "Copyright"
 msgstr "direito autoral"
 
 msgid "previous page"
 msgstr "página anterior"
 
-msgid "Open an issue"
-msgstr "Abra um problema"
+msgid "Download notebook file"
+msgstr "Baixar arquivo de notebook"
 
 msgid "next page"
 msgstr "próxima página"
 
-msgid "By"
-msgstr "De"
+msgid "open issue"
+msgstr "questão aberta"
 
-msgid "Fullscreen mode"
-msgstr "Modo tela cheia"
+msgid "Last updated on"
+msgstr "Última atualização em"
 
-msgid "By the"
-msgstr "Pelo"
+msgid "repository"
+msgstr "repositório"
 
-msgid "Download this page"
-msgstr "Baixe esta página"
+msgid "suggest edit"
+msgstr "sugerir edição"
 
-msgid "Download notebook file"
-msgstr "Baixar arquivo de notebook"
-
-msgid "Contents"
-msgstr "Conteúdo"
+msgid "Download source file"
+msgstr "Baixar arquivo fonte"

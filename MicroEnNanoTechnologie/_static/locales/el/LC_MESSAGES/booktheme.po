@@ -8,35 +8,11 @@ msgstr ""
 "Language: el\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-msgid "Last updated on"
-msgstr "Τελευταία ενημέρωση στις"
+msgid "Fullscreen mode"
+msgstr "ΛΕΙΤΟΥΡΓΙΑ ΠΛΗΡΟΥΣ ΟΘΟΝΗΣ"
 
-msgid "suggest edit"
-msgstr "προτείνω επεξεργασία"
-
-msgid "repository"
-msgstr "αποθήκη"
-
-msgid "Toggle navigation"
-msgstr "Εναλλαγή πλοήγησης"
-
-msgid "Edit this page"
-msgstr "Επεξεργαστείτε αυτήν τη σελίδα"
-
-msgid "open issue"
-msgstr "ανοιχτό ζήτημα"
-
-msgid "Sphinx Book Theme"
-msgstr "Θέμα βιβλίου Sphinx"
-
-msgid "Download source file"
-msgstr "Λήψη αρχείου προέλευσης"
-
-msgid "Source repository"
-msgstr "Αποθήκη πηγής"
-
-msgid "Print to PDF"
-msgstr "Εκτύπωση σε PDF"
+msgid "Open an issue"
+msgstr "Ανοίξτε ένα ζήτημα"
 
 msgid "Theme by the"
 msgstr "Θέμα από το"
@@ -44,32 +20,56 @@ msgstr "Θέμα από το"
 msgid "Launch"
 msgstr "Εκτόξευση"
 
+msgid "Source repository"
+msgstr "Αποθήκη πηγής"
+
+msgid "Toggle navigation"
+msgstr "Εναλλαγή πλοήγησης"
+
+msgid "By"
+msgstr "Με"
+
+msgid "Edit this page"
+msgstr "Επεξεργαστείτε αυτήν τη σελίδα"
+
+msgid "Contents"
+msgstr "Περιεχόμενα"
+
+msgid "Download this page"
+msgstr "Λήψη αυτής της σελίδας"
+
+msgid "By the"
+msgstr "Από το"
+
+msgid "Print to PDF"
+msgstr "Εκτύπωση σε PDF"
+
+msgid "Sphinx Book Theme"
+msgstr "Θέμα βιβλίου Sphinx"
+
 msgid "Copyright"
 msgstr "Πνευματική ιδιοκτησία"
 
 msgid "previous page"
 msgstr "προηγούμενη σελίδα"
 
-msgid "Open an issue"
-msgstr "Ανοίξτε ένα ζήτημα"
+msgid "Download notebook file"
+msgstr "Λήψη αρχείου σημειωματάριου"
 
 msgid "next page"
 msgstr "επόμενη σελίδα"
 
-msgid "By"
-msgstr "Με"
+msgid "open issue"
+msgstr "ανοιχτό ζήτημα"
 
-msgid "Fullscreen mode"
-msgstr "ΛΕΙΤΟΥΡΓΙΑ ΠΛΗΡΟΥΣ ΟΘΟΝΗΣ"
+msgid "Last updated on"
+msgstr "Τελευταία ενημέρωση στις"
 
-msgid "By the"
-msgstr "Από το"
+msgid "repository"
+msgstr "αποθήκη"
 
-msgid "Download this page"
-msgstr "Λήψη αυτής της σελίδας"
+msgid "suggest edit"
+msgstr "προτείνω επεξεργασία"
 
-msgid "Download notebook file"
-msgstr "Λήψη αρχείου σημειωματάριου"
-
-msgid "Contents"
-msgstr "Περιεχόμενα"
+msgid "Download source file"
+msgstr "Λήψη αρχείου προέλευσης"

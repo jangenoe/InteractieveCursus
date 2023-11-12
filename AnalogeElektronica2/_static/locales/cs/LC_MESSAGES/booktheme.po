@@ -8,35 +8,11 @@ msgstr ""
 "Language: cs\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-msgid "Last updated on"
-msgstr "Naposledy aktualizováno"
+msgid "Fullscreen mode"
+msgstr "Režim celé obrazovky"
 
-msgid "suggest edit"
-msgstr "navrhnout úpravy"
-
-msgid "repository"
-msgstr "úložiště"
-
-msgid "Toggle navigation"
-msgstr "Přepnout navigaci"
-
-msgid "Edit this page"
-msgstr "Upravit tuto stránku"
-
-msgid "open issue"
-msgstr "otevřené číslo"
-
-msgid "Sphinx Book Theme"
-msgstr "Téma knihy Sfinga"
-
-msgid "Download source file"
-msgstr "Stáhněte si zdrojový soubor"
-
-msgid "Source repository"
-msgstr "Zdrojové úložiště"
-
-msgid "Print to PDF"
-msgstr "Tisk do PDF"
+msgid "Open an issue"
+msgstr "Otevřete problém"
 
 msgid "Theme by the"
 msgstr "Téma od"
@@ -44,32 +20,56 @@ msgstr "Téma od"
 msgid "Launch"
 msgstr "Zahájení"
 
+msgid "Source repository"
+msgstr "Zdrojové úložiště"
+
+msgid "Toggle navigation"
+msgstr "Přepnout navigaci"
+
+msgid "By"
+msgstr "Podle"
+
+msgid "Edit this page"
+msgstr "Upravit tuto stránku"
+
+msgid "Contents"
+msgstr "Obsah"
+
+msgid "Download this page"
+msgstr "Stáhněte si tuto stránku"
+
+msgid "By the"
+msgstr "Podle"
+
+msgid "Print to PDF"
+msgstr "Tisk do PDF"
+
+msgid "Sphinx Book Theme"
+msgstr "Téma knihy Sfinga"
+
 msgid "Copyright"
 msgstr "autorská práva"
 
 msgid "previous page"
 msgstr "předchozí stránka"
 
-msgid "Open an issue"
-msgstr "Otevřete problém"
+msgid "Download notebook file"
+msgstr "Stáhnout soubor poznámkového bloku"
 
 msgid "next page"
 msgstr "další strana"
 
-msgid "By"
-msgstr "Podle"
+msgid "open issue"
+msgstr "otevřené číslo"
 
-msgid "Fullscreen mode"
-msgstr "Režim celé obrazovky"
+msgid "Last updated on"
+msgstr "Naposledy aktualizováno"
 
-msgid "By the"
-msgstr "Podle"
+msgid "repository"
+msgstr "úložiště"
 
-msgid "Download this page"
-msgstr "Stáhněte si tuto stránku"
+msgid "suggest edit"
+msgstr "navrhnout úpravy"
 
-msgid "Download notebook file"
-msgstr "Stáhnout soubor poznámkového bloku"
-
-msgid "Contents"
-msgstr "Obsah"
+msgid "Download source file"
+msgstr "Stáhněte si zdrojový soubor"

@@ -8,35 +8,11 @@ msgstr ""
 "Language: sl\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-msgid "Last updated on"
-msgstr "Nazadnje posodobljeno dne"
+msgid "Fullscreen mode"
+msgstr "Celozaslonski način"
 
-msgid "suggest edit"
-msgstr "predlagajte urejanje"
-
-msgid "repository"
-msgstr "odlagališče"
-
-msgid "Toggle navigation"
-msgstr "Preklopi navigacijo"
-
-msgid "Edit this page"
-msgstr "Uredite to stran"
-
-msgid "open issue"
-msgstr "odprto vprašanje"
-
-msgid "Sphinx Book Theme"
-msgstr "Tema knjige Sphinx"
-
-msgid "Download source file"
-msgstr "Prenesite izvorno datoteko"
-
-msgid "Source repository"
-msgstr "Izvorno skladišče"
-
-msgid "Print to PDF"
-msgstr "Natisni v PDF"
+msgid "Open an issue"
+msgstr "Odprite številko"
 
 msgid "Theme by the"
 msgstr "Tema avtorja"
@@ -44,32 +20,56 @@ msgstr "Tema avtorja"
 msgid "Launch"
 msgstr "Kosilo"
 
+msgid "Source repository"
+msgstr "Izvorno skladišče"
+
+msgid "Toggle navigation"
+msgstr "Preklopi navigacijo"
+
+msgid "By"
+msgstr "Avtor"
+
+msgid "Edit this page"
+msgstr "Uredite to stran"
+
+msgid "Contents"
+msgstr "Vsebina"
+
+msgid "Download this page"
+msgstr "Prenesite to stran"
+
+msgid "By the"
+msgstr "Avtor"
+
+msgid "Print to PDF"
+msgstr "Natisni v PDF"
+
+msgid "Sphinx Book Theme"
+msgstr "Tema knjige Sphinx"
+
 msgid "Copyright"
 msgstr "avtorske pravice"
 
 msgid "previous page"
 msgstr "Prejšnja stran"
 
-msgid "Open an issue"
-msgstr "Odprite številko"
+msgid "Download notebook file"
+msgstr "Prenesite datoteko zvezka"
 
 msgid "next page"
 msgstr "Naslednja stran"
 
-msgid "By"
-msgstr "Avtor"
+msgid "open issue"
+msgstr "odprto vprašanje"
 
-msgid "Fullscreen mode"
-msgstr "Celozaslonski način"
+msgid "Last updated on"
+msgstr "Nazadnje posodobljeno dne"
 
-msgid "By the"
-msgstr "Avtor"
+msgid "repository"
+msgstr "odlagališče"
 
-msgid "Download this page"
-msgstr "Prenesite to stran"
+msgid "suggest edit"
+msgstr "predlagajte urejanje"
 
-msgid "Download notebook file"
-msgstr "Prenesite datoteko zvezka"
-
-msgid "Contents"
-msgstr "Vsebina"
+msgid "Download source file"
+msgstr "Prenesite izvorno datoteko"

@@ -8,35 +8,11 @@ msgstr ""
 "Language: ru\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-msgid "Last updated on"
-msgstr "Последнее обновление"
+msgid "Fullscreen mode"
+msgstr "Полноэкранный режим"
 
-msgid "suggest edit"
-msgstr "предложить редактировать"
-
-msgid "repository"
-msgstr "хранилище"
-
-msgid "Toggle navigation"
-msgstr "Переключить навигацию"
-
-msgid "Edit this page"
-msgstr "Редактировать эту страницу"
-
-msgid "open issue"
-msgstr "открытый вопрос"
-
-msgid "Sphinx Book Theme"
-msgstr "Тема книги Сфинкс"
-
-msgid "Download source file"
-msgstr "Скачать исходный файл"
-
-msgid "Source repository"
-msgstr "Исходный репозиторий"
-
-msgid "Print to PDF"
-msgstr "Распечатать в PDF"
+msgid "Open an issue"
+msgstr "Открыть вопрос"
 
 msgid "Theme by the"
 msgstr "Тема от"
@@ -44,32 +20,56 @@ msgstr "Тема от"
 msgid "Launch"
 msgstr "Запуск"
 
+msgid "Source repository"
+msgstr "Исходный репозиторий"
+
+msgid "Toggle navigation"
+msgstr "Переключить навигацию"
+
+msgid "By"
+msgstr "По"
+
+msgid "Edit this page"
+msgstr "Редактировать эту страницу"
+
+msgid "Contents"
+msgstr "Содержание"
+
+msgid "Download this page"
+msgstr "Загрузите эту страницу"
+
+msgid "By the"
+msgstr "Посредством"
+
+msgid "Print to PDF"
+msgstr "Распечатать в PDF"
+
+msgid "Sphinx Book Theme"
+msgstr "Тема книги Сфинкс"
+
 msgid "Copyright"
 msgstr "авторское право"
 
 msgid "previous page"
 msgstr "Предыдущая страница"
 
-msgid "Open an issue"
-msgstr "Открыть вопрос"
+msgid "Download notebook file"
+msgstr "Скачать файл записной книжки"
 
 msgid "next page"
 msgstr "Следующая страница"
 
-msgid "By"
-msgstr "По"
+msgid "open issue"
+msgstr "открытый вопрос"
 
-msgid "Fullscreen mode"
-msgstr "Полноэкранный режим"
+msgid "Last updated on"
+msgstr "Последнее обновление"
 
-msgid "By the"
-msgstr "Посредством"
+msgid "repository"
+msgstr "хранилище"
 
-msgid "Download this page"
-msgstr "Загрузите эту страницу"
+msgid "suggest edit"
+msgstr "предложить редактировать"
 
-msgid "Download notebook file"
-msgstr "Скачать файл записной книжки"
-
-msgid "Contents"
-msgstr "Содержание"
+msgid "Download source file"
+msgstr "Скачать исходный файл"

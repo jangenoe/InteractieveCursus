@@ -8,35 +8,11 @@ msgstr ""
 "Language: uk\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-msgid "Last updated on"
-msgstr "Останнє оновлення:"
+msgid "Fullscreen mode"
+msgstr "Повноекранний режим"
 
-msgid "suggest edit"
-msgstr "запропонувати редагувати"
-
-msgid "repository"
-msgstr "сховище"
-
-msgid "Toggle navigation"
-msgstr "Переключити навігацію"
-
-msgid "Edit this page"
-msgstr "Редагувати цю сторінку"
-
-msgid "open issue"
-msgstr "відкритий випуск"
-
-msgid "Sphinx Book Theme"
-msgstr "Тема книги \"Сфінкс\""
-
-msgid "Download source file"
-msgstr "Завантажити вихідний файл"
-
-msgid "Source repository"
-msgstr "Джерело сховища"
-
-msgid "Print to PDF"
-msgstr "Друк у форматі PDF"
+msgid "Open an issue"
+msgstr "Відкрийте випуск"
 
 msgid "Theme by the"
 msgstr "Тема від"
@@ -44,32 +20,56 @@ msgstr "Тема від"
 msgid "Launch"
 msgstr "Запуск"
 
+msgid "Source repository"
+msgstr "Джерело сховища"
+
+msgid "Toggle navigation"
+msgstr "Переключити навігацію"
+
+msgid "By"
+msgstr "Автор"
+
+msgid "Edit this page"
+msgstr "Редагувати цю сторінку"
+
+msgid "Contents"
+msgstr "Зміст"
+
+msgid "Download this page"
+msgstr "Завантажте цю сторінку"
+
+msgid "By the"
+msgstr "По"
+
+msgid "Print to PDF"
+msgstr "Друк у форматі PDF"
+
+msgid "Sphinx Book Theme"
+msgstr "Тема книги \"Сфінкс\""
+
 msgid "Copyright"
 msgstr "Авторське право"
 
 msgid "previous page"
 msgstr "Попередня сторінка"
 
-msgid "Open an issue"
-msgstr "Відкрийте випуск"
+msgid "Download notebook file"
+msgstr "Завантажте файл блокнота"
 
 msgid "next page"
 msgstr "Наступна сторінка"
 
-msgid "By"
-msgstr "Автор"
+msgid "open issue"
+msgstr "відкритий випуск"
 
-msgid "Fullscreen mode"
-msgstr "Повноекранний режим"
+msgid "Last updated on"
+msgstr "Останнє оновлення:"
 
-msgid "By the"
-msgstr "По"
+msgid "repository"
+msgstr "сховище"
 
-msgid "Download this page"
-msgstr "Завантажте цю сторінку"
+msgid "suggest edit"
+msgstr "запропонувати редагувати"
 
-msgid "Download notebook file"
-msgstr "Завантажте файл блокнота"
-
-msgid "Contents"
-msgstr "Зміст"
+msgid "Download source file"
+msgstr "Завантажити вихідний файл"

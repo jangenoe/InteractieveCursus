@@ -8,35 +8,11 @@ msgstr ""
 "Language: fi\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-msgid "Last updated on"
-msgstr "Viimeksi päivitetty"
+msgid "Fullscreen mode"
+msgstr "Koko näytön tila"
 
-msgid "suggest edit"
-msgstr "ehdottaa muokkausta"
-
-msgid "repository"
-msgstr "arkisto"
-
-msgid "Toggle navigation"
-msgstr "Vaihda navigointia"
-
-msgid "Edit this page"
-msgstr "Muokkaa tätä sivua"
-
-msgid "open issue"
-msgstr "avoin ongelma"
-
-msgid "Sphinx Book Theme"
-msgstr "Sphinx-kirjan teema"
-
-msgid "Download source file"
-msgstr "Lataa lähdetiedosto"
-
-msgid "Source repository"
-msgstr "Lähteen arkisto"
-
-msgid "Print to PDF"
-msgstr "Tulosta PDF-tiedostoon"
+msgid "Open an issue"
+msgstr "Avaa ongelma"
 
 msgid "Theme by the"
 msgstr "Teeman tekijä"
@@ -44,32 +20,56 @@ msgstr "Teeman tekijä"
 msgid "Launch"
 msgstr "Tuoda markkinoille"
 
+msgid "Source repository"
+msgstr "Lähteen arkisto"
+
+msgid "Toggle navigation"
+msgstr "Vaihda navigointia"
+
+msgid "By"
+msgstr "Tekijä"
+
+msgid "Edit this page"
+msgstr "Muokkaa tätä sivua"
+
+msgid "Contents"
+msgstr "Sisällys"
+
+msgid "Download this page"
+msgstr "Lataa tämä sivu"
+
+msgid "By the"
+msgstr "Mukaan"
+
+msgid "Print to PDF"
+msgstr "Tulosta PDF-tiedostoon"
+
+msgid "Sphinx Book Theme"
+msgstr "Sphinx-kirjan teema"
+
 msgid "Copyright"
 msgstr "Tekijänoikeus"
 
 msgid "previous page"
 msgstr "Edellinen sivu"
 
-msgid "Open an issue"
-msgstr "Avaa ongelma"
+msgid "Download notebook file"
+msgstr "Lataa muistikirjatiedosto"
 
 msgid "next page"
 msgstr "seuraava sivu"
 
-msgid "By"
-msgstr "Tekijä"
+msgid "open issue"
+msgstr "avoin ongelma"
 
-msgid "Fullscreen mode"
-msgstr "Koko näytön tila"
+msgid "Last updated on"
+msgstr "Viimeksi päivitetty"
 
-msgid "By the"
-msgstr "Mukaan"
+msgid "repository"
+msgstr "arkisto"
 
-msgid "Download this page"
-msgstr "Lataa tämä sivu"
+msgid "suggest edit"
+msgstr "ehdottaa muokkausta"
 
-msgid "Download notebook file"
-msgstr "Lataa muistikirjatiedosto"
-
-msgid "Contents"
-msgstr "Sisällys"
+msgid "Download source file"
+msgstr "Lataa lähdetiedosto"

@@ -8,35 +8,11 @@ msgstr ""
 "Language: hr\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-msgid "Last updated on"
-msgstr "Posljednje ažuriranje:"
+msgid "Fullscreen mode"
+msgstr "Način preko cijelog zaslona"
 
-msgid "suggest edit"
-msgstr "predloži uređivanje"
-
-msgid "repository"
-msgstr "spremište"
-
-msgid "Toggle navigation"
-msgstr "Uključi / isključi navigaciju"
-
-msgid "Edit this page"
-msgstr "Uredite ovu stranicu"
-
-msgid "open issue"
-msgstr "otvoreno izdanje"
-
-msgid "Sphinx Book Theme"
-msgstr "Tema knjige Sphinx"
-
-msgid "Download source file"
-msgstr "Preuzmi izvornu datoteku"
-
-msgid "Source repository"
-msgstr "Izvorno spremište"
-
-msgid "Print to PDF"
-msgstr "Ispis u PDF"
+msgid "Open an issue"
+msgstr "Otvorite izdanje"
 
 msgid "Theme by the"
 msgstr "Tema autora"
@@ -44,32 +20,56 @@ msgstr "Tema autora"
 msgid "Launch"
 msgstr "Pokrenite"
 
+msgid "Source repository"
+msgstr "Izvorno spremište"
+
+msgid "Toggle navigation"
+msgstr "Uključi / isključi navigaciju"
+
+msgid "By"
+msgstr "Po"
+
+msgid "Edit this page"
+msgstr "Uredite ovu stranicu"
+
+msgid "Contents"
+msgstr "Sadržaj"
+
+msgid "Download this page"
+msgstr "Preuzmite ovu stranicu"
+
+msgid "By the"
+msgstr "Od strane"
+
+msgid "Print to PDF"
+msgstr "Ispis u PDF"
+
+msgid "Sphinx Book Theme"
+msgstr "Tema knjige Sphinx"
+
 msgid "Copyright"
 msgstr "Autorska prava"
 
 msgid "previous page"
 msgstr "Prethodna stranica"
 
-msgid "Open an issue"
-msgstr "Otvorite izdanje"
+msgid "Download notebook file"
+msgstr "Preuzmi datoteku bilježnice"
 
 msgid "next page"
 msgstr "sljedeća stranica"
 
-msgid "By"
-msgstr "Po"
+msgid "open issue"
+msgstr "otvoreno izdanje"
 
-msgid "Fullscreen mode"
-msgstr "Način preko cijelog zaslona"
+msgid "Last updated on"
+msgstr "Posljednje ažuriranje:"
 
-msgid "By the"
-msgstr "Od strane"
+msgid "repository"
+msgstr "spremište"
 
-msgid "Download this page"
-msgstr "Preuzmite ovu stranicu"
+msgid "suggest edit"
+msgstr "predloži uređivanje"
 
-msgid "Download notebook file"
-msgstr "Preuzmi datoteku bilježnice"
-
-msgid "Contents"
-msgstr "Sadržaj"
+msgid "Download source file"
+msgstr "Preuzmi izvornu datoteku"

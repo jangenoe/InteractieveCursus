@@ -8,35 +8,11 @@ msgstr ""
 "Language: ro\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-msgid "Last updated on"
-msgstr "Ultima actualizare la"
+msgid "Fullscreen mode"
+msgstr "Modul ecran întreg"
 
-msgid "suggest edit"
-msgstr "sugerează editare"
-
-msgid "repository"
-msgstr "repertoriu"
-
-msgid "Toggle navigation"
-msgstr "Comutare navigare"
-
-msgid "Edit this page"
-msgstr "Editați această pagină"
-
-msgid "open issue"
-msgstr "problema deschisă"
-
-msgid "Sphinx Book Theme"
-msgstr "Tema Sphinx Book"
-
-msgid "Download source file"
-msgstr "Descărcați fișierul sursă"
-
-msgid "Source repository"
-msgstr "Depozit sursă"
-
-msgid "Print to PDF"
-msgstr "Imprimați în PDF"
+msgid "Open an issue"
+msgstr "Deschideți o problemă"
 
 msgid "Theme by the"
 msgstr "Tema de"
@@ -44,32 +20,56 @@ msgstr "Tema de"
 msgid "Launch"
 msgstr "Lansa"
 
+msgid "Source repository"
+msgstr "Depozit sursă"
+
+msgid "Toggle navigation"
+msgstr "Comutare navigare"
+
+msgid "By"
+msgstr "De"
+
+msgid "Edit this page"
+msgstr "Editați această pagină"
+
+msgid "Contents"
+msgstr "Cuprins"
+
+msgid "Download this page"
+msgstr "Descarcă această pagină"
+
+msgid "By the"
+msgstr "Langa"
+
+msgid "Print to PDF"
+msgstr "Imprimați în PDF"
+
+msgid "Sphinx Book Theme"
+msgstr "Tema Sphinx Book"
+
 msgid "Copyright"
 msgstr "Drepturi de autor"
 
 msgid "previous page"
 msgstr "pagina anterioară"
 
-msgid "Open an issue"
-msgstr "Deschideți o problemă"
+msgid "Download notebook file"
+msgstr "Descărcați fișierul notebook"
 
 msgid "next page"
 msgstr "pagina următoare"
 
-msgid "By"
-msgstr "De"
+msgid "open issue"
+msgstr "problema deschisă"
 
-msgid "Fullscreen mode"
-msgstr "Modul ecran întreg"
+msgid "Last updated on"
+msgstr "Ultima actualizare la"
 
-msgid "By the"
-msgstr "Langa"
+msgid "repository"
+msgstr "repertoriu"
 
-msgid "Download this page"
-msgstr "Descarcă această pagină"
+msgid "suggest edit"
+msgstr "sugerează editare"
 
-msgid "Download notebook file"
-msgstr "Descărcați fișierul notebook"
-
-msgid "Contents"
-msgstr "Cuprins"
+msgid "Download source file"
+msgstr "Descărcați fișierul sursă"
