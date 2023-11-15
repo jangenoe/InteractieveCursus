@@ -12,7 +12,7 @@ jobs:
     - name: Set up Python 
       uses: actions/setup-python@v4
       with:
-        python-version: '3.10'
+        python-version: '3.11'
     - name: Install dependencies
       run: |
         pip install -r .github/requirements-Book.txt
@@ -30,43 +30,23 @@ jobs:
         mv ToegepasteAnalogeElektronica/_tochtml.yml ToegepasteAnalogeElektronica/_toc.yml        
         jupyter nbconvert ToegepasteAnalogeElektronica/*.ipynb --to KULeuven  --no-prompt --no-input --output-dir=ToegepasteAnalogeElektronica/_build/html/slides
         sed -i -- 's:<img src="./images:<img src="../_images:g' ToegepasteAnalogeElektronica/_build/html/slides/*
-        mv ToegepasteAnalogeElektronica/_build/html/ CursusIndex/_build/html/ToegepasteAnalogeElektronica
-        mv ToegepasteAnalogeElektronica/_build/latex/python.pdf CursusIndex/_build/html/ToegepasteAnalogeElektronica/ToegepasteAnalogeElektronica.pdf
+        mv ToegepasteAnalogeElektronica/_build/latex/python.pdf ToegepasteAnalogeElektronica/_build/html/ToegepasteAnalogeElektronica.pdf
         jb build AnalogeElektronica2/
         jb build AnalogeElektronica2/  --builder pdflatex 
         jupyter nbconvert AnalogeElektronica2/*.ipynb --to KULeuven  --no-prompt --no-input --output-dir=AnalogeElektronica2/_build/html/slides
         sed -i -- 's:<img src="./images:<img src="../_images:g' AnalogeElektronica2/_build/html/slides/*
-        mv AnalogeElektronica2/_build/html/ CursusIndex/_build/html/AnalogeElektronica2/
-        mv AnalogeElektronica2/_build/latex/python.pdf CursusIndex/_build/html/AnalogeElektronica2/AnalogeElektronica2.pdf
+        mv AnalogeElektronica2/_build/latex/python.pdf AnalogeElektronica2/_build/html/AnalogeElektronica2.pdf
         jb build AnalogDesignTechniques/ 
         jb build AnalogDesignTechniques/ --builder pdflatex
         jupyter nbconvert AnalogDesignTechniques/*.ipynb --to KULeuven  --no-prompt --no-input --output-dir=AnalogDesignTechniques/_build/html/slides
         sed -i -- 's:<img src="./images:<img src="../_images:g' AnalogDesignTechniques/_build/html/slides/*
-        mv AnalogDesignTechniques/_build/html/ CursusIndex/_build/html/AnalogDesignTechniques
-        mv AnalogDesignTechniques/_build/latex/python.pdf CursusIndex/_build/html/AnalogDesignTechniques/AnalogDesignTechniques.pdf
+        mv AnalogDesignTechniques/_build/latex/python.pdf AnalogDesignTechniques/_build/html/AnalogDesignTechniques.pdf
         jb build MicroEnNanoTechnologie/ 
         jb build MicroEnNanoTechnologie/ --builder pdflatex
         jupyter nbconvert MicroEnNanoTechnologie/*.ipynb --to KULeuven  --no-prompt --no-input --output-dir=MicroEnNanoTechnologie/_build/html/slides
         sed -i -- 's:<img src="./images:<img src="../_images:g' MicroEnNanoTechnologie/_build/html/slides/*
-        mv MicroEnNanoTechnologie/_build/html/ CursusIndex/_build/html/MicroEnNanoTechnologie/
-        mv MicroEnNanoTechnologie/_build/latex/python.pdf CursusIndex/_build/html/MicroEnNanoTechnologie/MicroEnNanoTechnologie.pdf
-    - name: GitHub Pages action book
-      uses: peaceiris/actions-gh-pages@v3
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: CursusIndex/_build/html
-        
-  build-jupyter-lite:
-    needs: build-and-deploy-book
-    runs-on: ubuntu-latest
-    steps:
-    - name: Checkout
-      uses: actions/checkout@v3
-    - name: Setup Python
-      uses: actions/setup-python@v4
-      with:
-        python-version: '3.10'
-    - name: Install the dependencies
+        mv MicroEnNanoTechnologie/_build/latex/python.pdf MicroEnNanoTechnologie/_build/html/MicroEnNanoTechnologie.pdf
+    - name: Install the dependencies for Lite
       run: |
         pip install -r .github/requirements-Lite.txt
     - name: Copy common files
@@ -77,28 +57,36 @@ jobs:
         # cp common/cursusdef_MicroEnNanoTechnologie_Lite.py MicroEnNanoTechnologie/cursusdef.py
     - name: Build the JupyterLite site
       run: |
-        jupyter lite build --lite-dir Lite --contents ToegepasteAnalogeElektronica --output-dir dist/ToegepasteAnalogeElektronica/
-        jupyter lite build --lite-dir Lite --contents AnalogeElektronica2 --output-dir dist/AnalogeElektronica2/
-        jupyter lite build --lite-dir Lite --contents AnalogDesignTechniques --output-dir dist/AnalogDesignTechniques/
-        jupyter lite build --lite-dir Lite --contents MicroEnNanoTechnologie --output-dir dist/MicroEnNanoTechnologie/
-    - name: GitHub Pages action Lite
-      uses: peaceiris/actions-gh-pages@v3
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./dist
-        destination_dir: Lite
+        jupyter lite build --lite-dir Lite --contents ToegepasteAnalogeElektronica --output-dir ToegepasteAnalogeElektronica/_build/html/Lite/
+        jupyter lite build --lite-dir Lite --contents AnalogeElektronica2 --output-dir AnalogeElektronica2/_build/html/Lite/
+        jupyter lite build --lite-dir Lite --contents AnalogDesignTechniques --output-dir AnalogDesignTechniques/_build/html/Lite/
+        jupyter lite build --lite-dir Lite --contents MicroEnNanoTechnologie --output-dir MicroEnNanoTechnologie/_build/html/Lite/
     - name: convert to deck
       run: python common/convert-to-deck.py
       shell: sh
     - name: Build the JupyterLite deck site
       run: |
-        jupyter lite build --lite-dir LiteDeck --contents ToegepasteAnalogeElektronica --output-dir distdeck/ToegepasteAnalogeElektronica/
-        jupyter lite build --lite-dir LiteDeck --contents AnalogeElektronica2 --output-dir distdeck/AnalogeElektronica2/
-        jupyter lite build --lite-dir LiteDeck --contents AnalogDesignTechniques --output-dir distdeck/AnalogDesignTechniques/
-        jupyter lite build --lite-dir LiteDeck --contents MicroEnNanoTechnologie --output-dir distdeck/MicroEnNanoTechnologie/
-    - name: GitHub Pages action Deck
+        jupyter lite build --lite-dir LiteDeck --contents ToegepasteAnalogeElektronica --output-dir ToegepasteAnalogeElektronica/_build/html/Deck/
+        jupyter lite build --lite-dir LiteDeck --contents AnalogeElektronica2 --output-dir AnalogeElektronica2/_build/html/Deck/
+        jupyter lite build --lite-dir LiteDeck --contents AnalogDesignTechniques --output-dir AnalogDesignTechniques/_build/html/Deck/
+        jupyter lite build --lite-dir LiteDeck --contents MicroEnNanoTechnologie --output-dir MicroEnNanoTechnologie/_build/html/Deck/
+    # - name: Install the dependencies for PowerPoint building
+    #   run: |
+    #     pip install -r .github/requirements-PowerPoint.txt
+    # - name: Build PowerPoint in /_build/html/PowerPoint/
+    #   run: |
+    #     
+    - name: Move all to CursusIndex
+      run: |
+        mv ToegepasteAnalogeElektronica/_build/html/ CursusIndex/_build/html/ToegepasteAnalogeElektronica
+        mv AnalogeElektronica2/_build/html/ CursusIndex/_build/html/AnalogeElektronica2/
+        mv AnalogDesignTechniques/_build/html/ CursusIndex/_build/html/AnalogDesignTechniques      
+        mv MicroEnNanoTechnologie/_build/html/ CursusIndex/_build/html/MicroEnNanoTechnologie/    
+    - name: GitHub Pages action book
       uses: peaceiris/actions-gh-pages@v3
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./distdeck
-        destination_dir: Deck
+        publish_dir: CursusIndex/_build/html
+
+
+
