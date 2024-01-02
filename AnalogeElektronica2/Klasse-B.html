@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 
 
-<html lang="nl" >
+<html lang="nl" data-content_root="" >
 
   <head>
     <meta charset="utf-8" />
@@ -27,18 +27,18 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
-<link href="_static/styles/bootstrap.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
-<link href="_static/styles/pydata-sphinx-theme.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+  <link href="_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
 
   
-  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
   <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=41c72bc4263f8e9482fe863810199f661dcf9fa4" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
@@ -47,9 +47,9 @@
     <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=365ca57ee442770a23c6" />
-<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=365ca57ee442770a23c6" />
-  <script src="_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=365ca57ee442770a23c6"></script>
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
+  <script src="_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
 
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
@@ -58,7 +58,7 @@
     <script src="_static/doctools.js"></script>
     <script src="_static/clipboard.min.js"></script>
     <script src="_static/copybutton.js"></script>
-    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="_static/scripts/sphinx-book-theme.js"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
@@ -152,6 +152,7 @@ const thebe_selector_output = ".output, .cell_output"
   
     <div class="sidebar-primary-items__start sidebar-primary__section">
         <div class="sidebar-primary-item">
+
   
 
 <a class="navbar-brand logo" href="intro.html">
@@ -170,6 +171,17 @@ const thebe_selector_output = ".output, .cell_output"
   
   
 </a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Zoeken" aria-label="Zoeken" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Zoeken</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
         <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
@@ -503,6 +515,7 @@ const thebe_selector_output = ".output, .cell_output"
 </button>
 
 
+
 <script>
 document.write(`
   <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
@@ -512,6 +525,7 @@ document.write(`
   </button>
 `);
 </script>
+
 
 <script>
 document.write(`
@@ -550,7 +564,9 @@ document.write(`
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#gebruik-van-de-voorinstelspanning">Gebruik van de voorinstelspanning</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#diodes-als-voorinstelspanning">diodes als voorinstelspanning</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#weerstand-als-voorinstelspanning">Weerstand als voorinstelspanning</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#diodes-als-voorinstelspanning">Diodes als voorinstelspanning</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#transistor-als-voorinstelspanning">Transistor als voorinstelspanning</a></li>
 </ul>
 </li>
 </ul>
@@ -598,7 +614,7 @@ document.write(`
 <div class="cell docutils container">
 <div class="cell_output docutils container">
 <figure class="align-default" id="bfig1">
-<img alt="_images/5f275309bf41feb18832939d8266fe980fec30e337013be85a9952351fa0568d.svg" src="_images/5f275309bf41feb18832939d8266fe980fec30e337013be85a9952351fa0568d.svg" /><figcaption>
+<img alt="_images/561c4dd88c2120df96aa4402720bed1566467db5ad524feb0234a9e43e666376.svg" src="_images/561c4dd88c2120df96aa4402720bed1566467db5ad524feb0234a9e43e666376.svg" /><figcaption>
 <p><span class="caption-number">Fig. 8 </span><span class="caption-text">Basisschema van de klasse B versterker voor DC werking.</span><a class="headerlink" href="#bfig1" title="Permallink naar deze afbeelding">#</a></p>
 </figcaption>
 </figure>
@@ -608,7 +624,7 @@ document.write(`
 <div class="cell docutils container">
 <div class="cell_output docutils container">
 <figure class="align-default" id="bfig1anot">
-<img alt="_images/5629fbfbf8ba9e898d7af7b6d6c5016921c494e014cce029dd26c209c007e66c.svg" src="_images/5629fbfbf8ba9e898d7af7b6d6c5016921c494e014cce029dd26c209c007e66c.svg" /><figcaption>
+<img alt="_images/f5320bc953cd1376cac7eb34dacb41c3b6087e5ef8239d3fb424e82de5648d50.svg" src="_images/f5320bc953cd1376cac7eb34dacb41c3b6087e5ef8239d3fb424e82de5648d50.svg" /><figcaption>
 <p><span class="caption-number">Fig. 9 </span><span class="caption-text">Basisschema van de klasse B versterker voor DC werking met aangeduide bouwblokken.</span><a class="headerlink" href="#bfig1anot" title="Permallink naar deze afbeelding">#</a></p>
 </figcaption>
 </figure>
@@ -617,10 +633,10 @@ document.write(`
 </section>
 <section id="schema-voor-ac-werking">
 <h3>Schema voor AC werking<a class="headerlink" href="#schema-voor-ac-werking" title="Permalink to this heading">#</a></h3>
-<div class="cell tag_remove-input docutils container">
+<div class="cell docutils container">
 <div class="cell_output docutils container">
 <figure class="align-default" id="bfig1ac">
-<img alt="_images/00e1ceafb13b22e259e62d3a949bec3dec12994ba9a98af5322cc659551eb116.svg" src="_images/00e1ceafb13b22e259e62d3a949bec3dec12994ba9a98af5322cc659551eb116.svg" /><figcaption>
+<img alt="_images/099f217a9fee2c338491a57e5149e9b6fd6875e3c0960cc3c73b5bb43c360158.svg" src="_images/099f217a9fee2c338491a57e5149e9b6fd6875e3c0960cc3c73b5bb43c360158.svg" /><figcaption>
 <p><span class="caption-number">Fig. 10 </span><span class="caption-text">Basisschema van de klasse B versterker voor AC werking.</span><a class="headerlink" href="#bfig1ac" title="Permallink naar deze afbeelding">#</a></p>
 </figcaption>
 </figure>
@@ -651,20 +667,20 @@ document.write(`
 </div>
 </div>
 <p>De simulatie (zie <a class="reference internal" href="#bfig2"><span class="std std-numref">Fig. 11</span></a>) van de spice code<a class="reference internal" href="#listing1"><span class="std std-numref">Spice Listing 4</span></a>  geeft duidelijk de dode zone aan bij de nuldoorgang van de spanning. In <a class="reference internal" href="#bfig2b"><span class="std std-numref">Fig. 12</span></a> bekijken we deze nuldoorgang in meer detail.</p>
-<div class="cell tag_full-width docutils container">
+<div class="cell docutils container">
 <div class="cell_output docutils container">
 <figure class="align-default" id="bfig2">
-<img alt="_images/7e7513da27d9deff41c30e519bd1930691f166b88efaf72ff5b5b9cfd4a7311c.png" src="_images/7e7513da27d9deff41c30e519bd1930691f166b88efaf72ff5b5b9cfd4a7311c.png" />
+<img alt="_images/c3e32fdd9035feaa5449780d4d32d5ffe63685aba7c8d03062e18492bbb09282.png" src="_images/c3e32fdd9035feaa5449780d4d32d5ffe63685aba7c8d03062e18492bbb09282.png" />
 <figcaption>
 <p><span class="caption-number">Fig. 11 </span><span class="caption-text">De klasse B versterker: stromen en spanningen als functie van de tijd.</span><a class="headerlink" href="#bfig2" title="Permallink naar deze afbeelding">#</a></p>
 </figcaption>
 </figure>
 </div>
 </div>
-<div class="cell tag_full-width docutils container">
+<div class="cell docutils container">
 <div class="cell_output docutils container">
 <figure class="align-default" id="bfig2b">
-<img alt="_images/08712a4614ef7f91f5e0551c51aa5f59e1d42cb44ddc4a58b4ca08f30b916844.png" src="_images/08712a4614ef7f91f5e0551c51aa5f59e1d42cb44ddc4a58b4ca08f30b916844.png" />
+<img alt="_images/fa95e1f21b8517bd2b7575c4a365cbb889b6684a4d02d96cb2478eeb09bc15d2.png" src="_images/fa95e1f21b8517bd2b7575c4a365cbb889b6684a4d02d96cb2478eeb09bc15d2.png" />
 <figcaption>
 <p><span class="caption-number">Fig. 12 </span><span class="caption-text">De klasse B versterker: detail van de stromen en spanningen als functie van de tijd in de buurt van de nuldoorgang.</span><a class="headerlink" href="#bfig2b" title="Permallink naar deze afbeelding">#</a></p>
 </figcaption>
@@ -675,7 +691,7 @@ document.write(`
 <div class="cell docutils container">
 <div class="cell_output docutils container">
 <figure class="align-default" id="bfig2c">
-<img alt="_images/a8e81ae3fdbe6a62f1956d034b51a9ffe27f0457c6a64e77f22182c416236cc5.png" src="_images/a8e81ae3fdbe6a62f1956d034b51a9ffe27f0457c6a64e77f22182c416236cc5.png" />
+<img alt="_images/8d56d5ba234147d30b3c365fdb49e006b90c27564f5f84081d4b7248e905eb9f.png" src="_images/8d56d5ba234147d30b3c365fdb49e006b90c27564f5f84081d4b7248e905eb9f.png" />
 <figcaption>
 <p><span class="caption-number">Fig. 13 </span><span class="caption-text">De klasse B versterker: de stroom door een npn transistor als functie van de spanning.</span><a class="headerlink" href="#bfig2c" title="Permallink naar deze afbeelding">#</a></p>
 </figcaption>
@@ -686,16 +702,30 @@ document.write(`
 </section>
 <section id="gebruik-van-de-voorinstelspanning">
 <h2>Gebruik van de voorinstelspanning<a class="headerlink" href="#gebruik-van-de-voorinstelspanning" title="Permalink to this heading">#</a></h2>
+<section id="weerstand-als-voorinstelspanning">
+<h3>Weerstand als voorinstelspanning<a class="headerlink" href="#weerstand-als-voorinstelspanning" title="Permalink to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_output docutils container">
+<img alt="_images/a9e52aebaa890e09d48d013f17fe7f6a8aea9cfcb5513c7b9098b4b09f555d72.svg" src="_images/a9e52aebaa890e09d48d013f17fe7f6a8aea9cfcb5513c7b9098b4b09f555d72.svg" /></div>
+</div>
+</section>
 <section id="diodes-als-voorinstelspanning">
-<h3>diodes als voorinstelspanning<a class="headerlink" href="#diodes-als-voorinstelspanning" title="Permalink to this heading">#</a></h3>
+<h3>Diodes als voorinstelspanning<a class="headerlink" href="#diodes-als-voorinstelspanning" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_output docutils container">
 <figure class="align-default" id="bfig1v2">
-<img alt="_images/5ed04407faa78a23ae6d77e147934906d12b61b2155508d98c4e3f4a559e61ec.svg" src="_images/5ed04407faa78a23ae6d77e147934906d12b61b2155508d98c4e3f4a559e61ec.svg" /><figcaption>
+<img alt="_images/68f4ced68fb503654fe271e14ab745d6c6bebaf0b48662f37dd0e33eaf9bbd85.svg" src="_images/68f4ced68fb503654fe271e14ab745d6c6bebaf0b48662f37dd0e33eaf9bbd85.svg" /><figcaption>
 <p><span class="caption-number">Fig. 14 </span><span class="caption-text">Basisschema van de klasse B versterker voor DC werking met diode voorinstelspanning.</span><a class="headerlink" href="#bfig1v2" title="Permallink naar deze afbeelding">#</a></p>
 </figcaption>
 </figure>
 </div>
+</div>
+</section>
+<section id="transistor-als-voorinstelspanning">
+<h3>Transistor als voorinstelspanning<a class="headerlink" href="#transistor-als-voorinstelspanning" title="Permalink to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_output docutils container">
+<img alt="_images/2e9843a55b83a777c18f8a5b49cc15d3ba20a5a487a01a9aca74eb3507b24342.svg" src="_images/2e9843a55b83a777c18f8a5b49cc15d3ba20a5a487a01a9aca74eb3507b24342.svg" /></div>
 </div>
 <p>Hieronder tonen we de spice listing van de klasse B versterker waarbij we een voorinstelspanning voorzien tussen de  basissen van de npn en de pnp transistor. Deze voorinstelspanning is hier uitgevoerd door diodes. in <a class="reference internal" href="#bfig2dio"><span class="std std-numref">Fig. 15</span></a> merken we hierbij op dat dit tot gevolg heeft dat er toch een stroom blijft lopen door de transistor die niet in geleiding is. Dit noemen we de klasse AB werking van deze klasseB versterker.</p>
 <div class="literal-block-wrapper docutils container" id="listing2">
@@ -725,10 +755,10 @@ document.write(`
 </pre></div>
 </div>
 </div>
-<div class="cell tag_full-width tag_remove-input docutils container">
+<div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
 <figure class="align-default" id="bfig2dio">
-<img alt="_images/48b2460e54bf06052333f6110451408212d075a0250b31623dbe33486ac4f5e9.png" src="_images/48b2460e54bf06052333f6110451408212d075a0250b31623dbe33486ac4f5e9.png" />
+<img alt="_images/f2851c8db6bb0a746aa7f8ec817d05a526610760845000c0bf31fc3e20b2c65d.png" src="_images/f2851c8db6bb0a746aa7f8ec817d05a526610760845000c0bf31fc3e20b2c65d.png" />
 <figcaption>
 <p><span class="caption-number">Fig. 15 </span><span class="caption-text">De klasse B versterker: stromen en spanningen als functie van de tijd.</span><a class="headerlink" href="#bfig2dio" title="Permallink naar deze afbeelding">#</a></p>
 </figcaption>
@@ -739,7 +769,7 @@ document.write(`
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
 <figure class="align-default" id="bfig2dioss">
-<img alt="_images/ba57d8989e7b781a59d1aa81c0b1ee8fcf6e8a9c7657c692d1e0a62be12cf710.png" src="_images/ba57d8989e7b781a59d1aa81c0b1ee8fcf6e8a9c7657c692d1e0a62be12cf710.png" />
+<img alt="_images/5ef8a8201db443efeaa8dcaddedf20b8426cdf9fc3aac9d754f5201106d890a0.png" src="_images/5ef8a8201db443efeaa8dcaddedf20b8426cdf9fc3aac9d754f5201106d890a0.png" />
 <figcaption>
 <p><span class="caption-number">Fig. 16 </span><span class="caption-text">De klasse B versterker: de stroom door een npn transistor als functie van de spanning.</span><a class="headerlink" href="#bfig2dioss" title="Permallink naar deze afbeelding">#</a></p>
 </figcaption>
@@ -770,20 +800,20 @@ document.write(`
 </pre></div>
 </div>
 </div>
-<div class="cell tag_full-width docutils container">
+<div class="cell docutils container">
 <div class="cell_output docutils container">
 <figure class="align-default" id="bopmapsim">
-<img alt="_images/c5960667cf61140f53d18793d9b2d33adbefd4ea4a25af3551d2dde701b0fca3.png" src="_images/c5960667cf61140f53d18793d9b2d33adbefd4ea4a25af3551d2dde701b0fca3.png" />
+<img alt="_images/59387b33b1f002d8a48e5bdb203e308ed3a70bf9706756e4386c1ecb12f527ea.png" src="_images/59387b33b1f002d8a48e5bdb203e308ed3a70bf9706756e4386c1ecb12f527ea.png" />
 <figcaption>
 <p><span class="caption-number">Fig. 17 </span><span class="caption-text">De klasse B versterker teruggekoppeld met een ideale OpAmp: stromen en spanningen als functie van de tijd.</span><a class="headerlink" href="#bopmapsim" title="Permallink naar deze afbeelding">#</a></p>
 </figcaption>
 </figure>
 </div>
 </div>
-<div class="cell tag_full-width tag_remove-input docutils container">
+<div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
 <figure class="align-default" id="bopmapsimz">
-<img alt="_images/938a517ee11a1d7848d864564db49253205d0c318570e5007a7f38c481bd17ed.png" src="_images/938a517ee11a1d7848d864564db49253205d0c318570e5007a7f38c481bd17ed.png" />
+<img alt="_images/b75d851927a413fd219cb5255ceca7331f05ffe886f40375db4dff0dacd58a9b.png" src="_images/b75d851927a413fd219cb5255ceca7331f05ffe886f40375db4dff0dacd58a9b.png" />
 <figcaption>
 <p><span class="caption-number">Fig. 18 </span><span class="caption-text">De klasse B versterker teruggekoppeld met een ideale OpAmp: stromen en spanningen als functie van de tijd in de nabijheid van de nuldoorgang.</span><a class="headerlink" href="#bopmapsimz" title="Permallink naar deze afbeelding">#</a></p>
 </figcaption>
@@ -793,7 +823,7 @@ document.write(`
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
 <figure class="align-default" id="bopamp-dio">
-<img alt="_images/b479fc533372f09cb677c556a78dae1cdfeac64aee68b333f9364d2d8e9dce4f.png" src="_images/b479fc533372f09cb677c556a78dae1cdfeac64aee68b333f9364d2d8e9dce4f.png" />
+<img alt="_images/4ff30a974856b76bc4fdb34325b56a2b2dbd9945a6bd2c5836495ce69aa64819.png" src="_images/4ff30a974856b76bc4fdb34325b56a2b2dbd9945a6bd2c5836495ce69aa64819.png" />
 <figcaption>
 <p><span class="caption-number">Fig. 19 </span><span class="caption-text">De klasse B versterker: de stroom door een npn transistor als functie van de spanning.</span><a class="headerlink" href="#bopamp-dio" title="Permallink naar deze afbeelding">#</a></p>
 </figcaption>
@@ -823,10 +853,10 @@ document.write(`
 </pre></div>
 </div>
 </div>
-<div class="cell tag_full-width tag_remove-input docutils container">
+<div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
 <figure class="align-default" id="bopmapsiml">
-<img alt="_images/1e96210784a2924b30b4c1b8c68a6f6af49a78b2fd7758b06071a4fa2a1ddb7e.png" src="_images/1e96210784a2924b30b4c1b8c68a6f6af49a78b2fd7758b06071a4fa2a1ddb7e.png" />
+<img alt="_images/65294cdc51855d47e60338591c52229c88fd17acd1c3529e9cd817d5a6b655ed.png" src="_images/65294cdc51855d47e60338591c52229c88fd17acd1c3529e9cd817d5a6b655ed.png" />
 <figcaption>
 <p><span class="caption-number">Fig. 20 </span><span class="caption-text">De klasse B versterker met lagere voedingsspanning teruggekoppeld met een ideale OpAmp: stromen en spanningen als functie van de tijd.</span><a class="headerlink" href="#bopmapsiml" title="Permallink naar deze afbeelding">#</a></p>
 </figcaption>
@@ -834,20 +864,24 @@ document.write(`
 </div>
 </div>
 <p>Echter, wanneer we een realistisch model van een opamp invoeren, zoals de <a class="reference external" href="https://www.ti.com/product/LMV981-N">LMV981-N</a> van Texas Instruments, zien we een heel ander gedrag in de dode zone.</p>
-<div class="cell tag_full-width tag_remove-input docutils container">
+<div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
 <figure class="align-default" id="bopmapsiml2">
-<img alt="_images/27cd85462b9d4c9365dfb72043c7985d4abea4b63a70d6820a51db6d566367e2.png" src="_images/27cd85462b9d4c9365dfb72043c7985d4abea4b63a70d6820a51db6d566367e2.png" />
+<img alt="_images/2515f4bb8a0983e72f46b9e4e960c2974eef0cc45746f98b7fc315352d49f2c0.png" src="_images/2515f4bb8a0983e72f46b9e4e960c2974eef0cc45746f98b7fc315352d49f2c0.png" />
 <figcaption>
 <p><span class="caption-number">Fig. 21 </span><span class="caption-text">De klasse B versterker met lagere voedinsspanning teruggekoppeld met een realistisch OpAmp model <a class="reference external" href="https://www.ti.com/product/LMV981-N">LMV981-N</a>: stromen en spanningen als functie van de tijd.</span><a class="headerlink" href="#bopmapsiml2" title="Permallink naar deze afbeelding">#</a></p>
 </figcaption>
 </figure>
 </div>
 </div>
+<div class="cell docutils container">
+<div class="cell_output docutils container">
+<img alt="_images/dd861e8fa06906a559caf1321a13fd3389444a51252afe2d565f6408c7178295.svg" src="_images/dd861e8fa06906a559caf1321a13fd3389444a51252afe2d565f6408c7178295.svg" /></div>
+</div>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
 <figure class="align-default" id="bdoubledriver">
-<img alt="_images/cc783fdc0298dcdf067bea63d4a6d0ef95ad0747b2b2bf0f4bc5b3d6367fe9d6.svg" src="_images/cc783fdc0298dcdf067bea63d4a6d0ef95ad0747b2b2bf0f4bc5b3d6367fe9d6.svg" /><figcaption>
+<img alt="_images/3898a557f91af3e684800a318e731b4c207f7e0aba907ef88291983c7015fcf7.svg" src="_images/3898a557f91af3e684800a318e731b4c207f7e0aba907ef88291983c7015fcf7.svg" /><figcaption>
 <p><span class="caption-number">Fig. 22 </span><span class="caption-text">De klasse B versterker met 2 opeenvolgende drive transistors.</span><a class="headerlink" href="#bdoubledriver" title="Permallink naar deze afbeelding">#</a></p>
 </figcaption>
 </figure>
@@ -887,7 +921,7 @@ document.write(`
               
               
                 <footer class="prev-next-footer">
-                  <!-- Previous / next buttons -->
+                  
 <div class="prev-next-area">
     <a class="left-prev"
        href="Klasse-A.html"
@@ -929,7 +963,9 @@ document.write(`
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#gebruik-van-de-voorinstelspanning">Gebruik van de voorinstelspanning</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#diodes-als-voorinstelspanning">diodes als voorinstelspanning</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#weerstand-als-voorinstelspanning">Weerstand als voorinstelspanning</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#diodes-als-voorinstelspanning">Diodes als voorinstelspanning</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#transistor-als-voorinstelspanning">Transistor als voorinstelspanning</a></li>
 </ul>
 </li>
 </ul>
@@ -953,6 +989,7 @@ By Jan Genoe (jan.genoe@kuleuven.be)
   
   <div class="footer-item">
     
+
   </div>
   
   <div class="footer-item">
@@ -972,8 +1009,8 @@ By Jan Genoe (jan.genoe@kuleuven.be)
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="_static/scripts/bootstrap.js?digest=365ca57ee442770a23c6"></script>
-<script src="_static/scripts/pydata-sphinx-theme.js?digest=365ca57ee442770a23c6"></script>
+  <script src="_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
 
   <footer class="bd-footer">
   </footer>

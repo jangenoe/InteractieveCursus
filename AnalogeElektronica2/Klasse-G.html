@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 
 
-<html lang="nl" >
+<html lang="nl" data-content_root="" >
 
   <head>
     <meta charset="utf-8" />
@@ -27,18 +27,18 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
-<link href="_static/styles/bootstrap.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
-<link href="_static/styles/pydata-sphinx-theme.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+  <link href="_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
 
   
-  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
   <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=41c72bc4263f8e9482fe863810199f661dcf9fa4" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
@@ -47,9 +47,9 @@
     <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=365ca57ee442770a23c6" />
-<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=365ca57ee442770a23c6" />
-  <script src="_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=365ca57ee442770a23c6"></script>
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
+  <script src="_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
 
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
@@ -58,7 +58,7 @@
     <script src="_static/doctools.js"></script>
     <script src="_static/clipboard.min.js"></script>
     <script src="_static/copybutton.js"></script>
-    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="_static/scripts/sphinx-book-theme.js"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
@@ -150,6 +150,7 @@ const thebe_selector_output = ".output, .cell_output"
   
     <div class="sidebar-primary-items__start sidebar-primary__section">
         <div class="sidebar-primary-item">
+
   
 
 <a class="navbar-brand logo" href="intro.html">
@@ -168,6 +169,17 @@ const thebe_selector_output = ".output, .cell_output"
   
   
 </a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Zoeken" aria-label="Zoeken" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Zoeken</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
         <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
@@ -501,6 +513,7 @@ const thebe_selector_output = ".output, .cell_output"
 </button>
 
 
+
 <script>
 document.write(`
   <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
@@ -510,6 +523,7 @@ document.write(`
   </button>
 `);
 </script>
+
 
 <script>
 document.write(`
@@ -583,20 +597,11 @@ document.write(`
 </section>
 <section id="basisschema">
 <h2>Basisschema<a class="headerlink" href="#basisschema" title="Permalink to this heading">#</a></h2>
-<div class="cell tag_remove-input docutils container">
-<div class="cell_output docutils container">
-<figure class="align-default" id="gfig1">
-<img alt="_images/4db9a3c0f0e6876691e07817f5fa40e68ca5001890c066881d5b1cafc2af6bb4.svg" src="_images/4db9a3c0f0e6876691e07817f5fa40e68ca5001890c066881d5b1cafc2af6bb4.svg" /><figcaption>
-<p><span class="caption-number">Fig. 39 </span><span class="caption-text">Basisschema van de Klasse G versterker.</span><a class="headerlink" href="#gfig1" title="Permallink naar deze afbeelding">#</a></p>
-</figcaption>
-</figure>
-</div>
-</div>
-<div class="cell tag_remove-input docutils container">
+<div class="cell docutils container">
 <div class="cell_output docutils container">
 <figure class="align-default" id="gfig2">
-<img alt="_images/c3a15ddcadf586af6747b4149b5e09b07e7a18465dc6470bf46951b47c4e25c0.svg" src="_images/c3a15ddcadf586af6747b4149b5e09b07e7a18465dc6470bf46951b47c4e25c0.svg" /><figcaption>
-<p><span class="caption-number">Fig. 40 </span><span class="caption-text">Basisschema van de klasse G versterker met compensatie voor de saturatie spanning.</span><a class="headerlink" href="#gfig2" title="Permallink naar deze afbeelding">#</a></p>
+<img alt="_images/f6301ec365034dd24a9c53ce6c5840ef821a3fc4374d604cfb67fcbb874ce96e.svg" src="_images/f6301ec365034dd24a9c53ce6c5840ef821a3fc4374d604cfb67fcbb874ce96e.svg" /><figcaption>
+<p><span class="caption-number">Fig. 39 </span><span class="caption-text">Basisschema van de klasse G versterker met compensatie voor de saturatie spanning.</span><a class="headerlink" href="#gfig2" title="Permallink naar deze afbeelding">#</a></p>
 </figcaption>
 </figure>
 </div>
@@ -637,12 +642,12 @@ document.write(`
 </pre></div>
 </div>
 </div>
-<div class="cell tag_full-width tag_remove-input docutils container">
+<div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
 <figure class="align-default" id="gfig3">
-<img alt="_images/0ad881347a62b4a7b70c2fccdc13f0cf0a9e6c9946e759761f52fb886d26c33f.png" src="_images/0ad881347a62b4a7b70c2fccdc13f0cf0a9e6c9946e759761f52fb886d26c33f.png" />
+<img alt="_images/6afda69fd55e00eec7568a90989f87ee6b0a16bc71f980bfdc61b0e701de21bb.png" src="_images/6afda69fd55e00eec7568a90989f87ee6b0a16bc71f980bfdc61b0e701de21bb.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 41 </span><span class="caption-text">Klasse G versterker: stromen en spanningen als functie van de tijd.</span><a class="headerlink" href="#gfig3" title="Permallink naar deze afbeelding">#</a></p>
+<p><span class="caption-number">Fig. 40 </span><span class="caption-text">Klasse G versterker: stromen en spanningen als functie van de tijd.</span><a class="headerlink" href="#gfig3" title="Permallink naar deze afbeelding">#</a></p>
 </figcaption>
 </figure>
 </div>
@@ -650,9 +655,9 @@ document.write(`
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
 <figure class="align-default" id="gfig4">
-<img alt="_images/47358d9cd095edfcd33eb16a4954e9ff9139b41b2ceaa73c3371db30642bf83f.png" src="_images/47358d9cd095edfcd33eb16a4954e9ff9139b41b2ceaa73c3371db30642bf83f.png" />
+<img alt="_images/9252caecf83801b61edeb51787e8d0cf78808854aa930e6652f4324218d09b68.png" src="_images/9252caecf83801b61edeb51787e8d0cf78808854aa930e6652f4324218d09b68.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 42 </span><span class="caption-text">Klasse G versterker: de stroom door de verschillende transistor als functie van de spanning over deze transistors.</span><a class="headerlink" href="#gfig4" title="Permallink naar deze afbeelding">#</a></p>
+<p><span class="caption-number">Fig. 41 </span><span class="caption-text">Klasse G versterker: de stroom door de verschillende transistor als functie van de spanning over deze transistors.</span><a class="headerlink" href="#gfig4" title="Permallink naar deze afbeelding">#</a></p>
 </figcaption>
 </figure>
 </div>
@@ -688,7 +693,7 @@ document.write(`
               
               
                 <footer class="prev-next-footer">
-                  <!-- Previous / next buttons -->
+                  
 <div class="prev-next-area">
     <a class="left-prev"
        href="Klasse-B-vb4.html"
@@ -746,6 +751,7 @@ By Jan Genoe (jan.genoe@kuleuven.be)
   
   <div class="footer-item">
     
+
   </div>
   
   <div class="footer-item">
@@ -765,8 +771,8 @@ By Jan Genoe (jan.genoe@kuleuven.be)
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="_static/scripts/bootstrap.js?digest=365ca57ee442770a23c6"></script>
-<script src="_static/scripts/pydata-sphinx-theme.js?digest=365ca57ee442770a23c6"></script>
+  <script src="_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
 
   <footer class="bd-footer">
   </footer>

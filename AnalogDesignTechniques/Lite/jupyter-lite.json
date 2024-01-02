@@ -2,7 +2,7 @@
   "jupyter-config-data": {
     "appName": "JupyterLite",
     "appUrl": "./lab",
-    "appVersion": "0.2.0",
+    "appVersion": "0.2.1",
     "baseUrl": "./",
     "defaultKernelName": "python",
     "faviconUrl": "./lab/favicon.ico",
@@ -10,31 +10,37 @@
       {
         "extension": "./extension",
         "liteExtension": false,
-        "load": "static/remoteEntry.fed96ba8c65972f90efd.js",
+        "load": "static/remoteEntry.009d8686d52fe5d2e0a6.js",
         "name": "@deathbeds/jupyterlab-deck"
       },
       {
         "extension": "./extension",
         "liteExtension": false,
-        "load": "static/remoteEntry.7dafa2779237f8a139cd.js",
+        "load": "static/remoteEntry.84fb12a2d77d4fba138f.js",
         "name": "@deathbeds/jupyterlab-font-anonymous-pro"
       },
       {
         "extension": "./extension",
         "liteExtension": false,
-        "load": "static/remoteEntry.72ec8004b3300a2556a1.js",
+        "load": "static/remoteEntry.9d0e0e02cf346a361924.js",
+        "name": "@deathbeds/jupyterlab-font-atkinson-hyperlegible"
+      },
+      {
+        "extension": "./extension",
+        "liteExtension": false,
+        "load": "static/remoteEntry.fc308494b30447aef557.js",
         "name": "@deathbeds/jupyterlab-font-dejavu-sans-mono"
       },
       {
         "extension": "./extension",
         "liteExtension": false,
-        "load": "static/remoteEntry.b480a1e5ecf432206aaf.js",
+        "load": "static/remoteEntry.6fc3ad6366d192f9df4d.js",
         "name": "@deathbeds/jupyterlab-font-fira-code"
       },
       {
         "extension": "./extension",
         "liteExtension": false,
-        "load": "static/remoteEntry.986f2c58c16721840289.js",
+        "load": "static/remoteEntry.90fd4745446ff9dd5871.js",
         "name": "@deathbeds/jupyterlab-fonts"
       },
       {
@@ -46,7 +52,7 @@
       {
         "extension": "./extension",
         "liteExtension": true,
-        "load": "static/remoteEntry.1d5a607f7ce2715cd56c.js",
+        "load": "static/remoteEntry.d32483ece0ef677860da.js",
         "name": "@jupyterlite/javascript-kernel-extension"
       },
       {
@@ -71,7 +77,7 @@
       {
         "extension": "./extension",
         "liteExtension": false,
-        "load": "static/remoteEntry.aa1060b2d1221f8e5688.js",
+        "load": "static/remoteEntry.5cbb9d2323598fbda535.js",
         "name": "jupyterlab_pygments",
         "style": "./style"
       }

@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 
 
-<html lang="nl" >
+<html lang="nl" data-content_root="" >
 
   <head>
     <meta charset="utf-8" />
@@ -27,18 +27,18 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
-<link href="_static/styles/bootstrap.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
-<link href="_static/styles/pydata-sphinx-theme.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+  <link href="_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
 
   
-  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
   <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=41c72bc4263f8e9482fe863810199f661dcf9fa4" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
@@ -47,9 +47,9 @@
     <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=365ca57ee442770a23c6" />
-<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=365ca57ee442770a23c6" />
-  <script src="_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=365ca57ee442770a23c6"></script>
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
+  <script src="_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
 
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
@@ -58,7 +58,7 @@
     <script src="_static/doctools.js"></script>
     <script src="_static/clipboard.min.js"></script>
     <script src="_static/copybutton.js"></script>
-    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="_static/scripts/sphinx-book-theme.js"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
@@ -150,6 +150,7 @@ const thebe_selector_output = ".output, .cell_output"
   
     <div class="sidebar-primary-items__start sidebar-primary__section">
         <div class="sidebar-primary-item">
+
   
 
 <a class="navbar-brand logo" href="intro.html">
@@ -168,6 +169,17 @@ const thebe_selector_output = ".output, .cell_output"
   
   
 </a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Zoeken" aria-label="Zoeken" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Zoeken</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
         <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
@@ -501,6 +513,7 @@ const thebe_selector_output = ".output, .cell_output"
 </button>
 
 
+
 <script>
 document.write(`
   <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
@@ -510,6 +523,7 @@ document.write(`
   </button>
 `);
 </script>
+
 
 <script>
 document.write(`
@@ -550,7 +564,7 @@ document.write(`
 <figure class="align-default" id="dutysu">
 <img alt="_images/b904ea3bd076db26c51702d039f2be9469b548dc613fe0e6b150c00055977833.png" src="_images/b904ea3bd076db26c51702d039f2be9469b548dc613fe0e6b150c00055977833.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 52 </span><span class="caption-text">(links) Duty-cycle als functie van de input spanning en (rechts) efficientie als functie van de output stroom voor de ontworpen Step-up converter.</span><a class="headerlink" href="#dutysu" title="Permallink naar deze afbeelding">#</a></p>
+<p><span class="caption-number">Fig. 51 </span><span class="caption-text">(links) Duty-cycle als functie van de input spanning en (rechts) efficientie als functie van de output stroom voor de ontworpen Step-up converter.</span><a class="headerlink" href="#dutysu" title="Permallink naar deze afbeelding">#</a></p>
 </figcaption>
 </figure>
 </div>
@@ -572,7 +586,7 @@ document.write(`
 <figure class="align-default" id="dutyinputv">
 <img alt="_images/35afaaebee6fe8f5c7a008af69edf3bc4a037469c6a11b14273b85c0cd0df779.png" src="_images/35afaaebee6fe8f5c7a008af69edf3bc4a037469c6a11b14273b85c0cd0df779.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 53 </span><span class="caption-text">Duty cycle als functie van de input spanning voor de ontworpen Step-up converter.</span><a class="headerlink" href="#dutyinputv" title="Permallink naar deze afbeelding">#</a></p>
+<p><span class="caption-number">Fig. 52 </span><span class="caption-text">Duty cycle als functie van de input spanning voor de ontworpen Step-up converter.</span><a class="headerlink" href="#dutyinputv" title="Permallink naar deze afbeelding">#</a></p>
 </figcaption>
 </figure>
 </div>
@@ -582,7 +596,7 @@ document.write(`
 <figure class="align-default" id="mua">
 <img alt="_images/67e3025af995e0e572a9a99ea56566eed5725466175a47c8753f5a039aac1175.png" src="_images/67e3025af995e0e572a9a99ea56566eed5725466175a47c8753f5a039aac1175.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 54 </span><span class="caption-text">Efficientie als functie van de output stroom voor de ontworpen Step-up converter</span><a class="headerlink" href="#mua" title="Permallink naar deze afbeelding">#</a></p>
+<p><span class="caption-number">Fig. 53 </span><span class="caption-text">Efficientie als functie van de output stroom voor de ontworpen Step-up converter</span><a class="headerlink" href="#mua" title="Permallink naar deze afbeelding">#</a></p>
 </figcaption>
 </figure>
 </div>
@@ -653,7 +667,7 @@ document.write(`
               
               
                 <footer class="prev-next-footer">
-                  <!-- Previous / next buttons -->
+                  
 <div class="prev-next-area">
     <a class="left-prev"
        href="oefeningBoost2.html"
@@ -696,6 +710,7 @@ By Jan Genoe (jan.genoe@kuleuven.be)
   
   <div class="footer-item">
     
+
   </div>
   
   <div class="footer-item">
@@ -715,8 +730,8 @@ By Jan Genoe (jan.genoe@kuleuven.be)
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="_static/scripts/bootstrap.js?digest=365ca57ee442770a23c6"></script>
-<script src="_static/scripts/pydata-sphinx-theme.js?digest=365ca57ee442770a23c6"></script>
+  <script src="_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
 
   <footer class="bd-footer">
   </footer>

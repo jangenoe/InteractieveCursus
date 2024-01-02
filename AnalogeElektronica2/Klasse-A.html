@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 
 
-<html lang="nl" >
+<html lang="nl" data-content_root="" >
 
   <head>
     <meta charset="utf-8" />
@@ -27,18 +27,18 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
-<link href="_static/styles/bootstrap.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
-<link href="_static/styles/pydata-sphinx-theme.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+  <link href="_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
 
   
-  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
   <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=41c72bc4263f8e9482fe863810199f661dcf9fa4" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
@@ -47,9 +47,9 @@
     <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=365ca57ee442770a23c6" />
-<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=365ca57ee442770a23c6" />
-  <script src="_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=365ca57ee442770a23c6"></script>
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
+  <script src="_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
 
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
@@ -58,7 +58,7 @@
     <script src="_static/doctools.js"></script>
     <script src="_static/clipboard.min.js"></script>
     <script src="_static/copybutton.js"></script>
-    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="_static/scripts/sphinx-book-theme.js"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
@@ -152,6 +152,7 @@ const thebe_selector_output = ".output, .cell_output"
   
     <div class="sidebar-primary-items__start sidebar-primary__section">
         <div class="sidebar-primary-item">
+
   
 
 <a class="navbar-brand logo" href="intro.html">
@@ -170,6 +171,17 @@ const thebe_selector_output = ".output, .cell_output"
   
   
 </a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Zoeken" aria-label="Zoeken" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Zoeken</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
         <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
@@ -503,6 +515,7 @@ const thebe_selector_output = ".output, .cell_output"
 </button>
 
 
+
 <script>
 document.write(`
   <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
@@ -512,6 +525,7 @@ document.write(`
   </button>
 `);
 </script>
+
 
 <script>
 document.write(`
@@ -591,7 +605,7 @@ document.write(`
 <div class="cell docutils container">
 <div class="cell_output docutils container">
 <figure class="align-default" id="afig1">
-<img alt="_images/d5ca12d8ef4975034d4dd5582b73f644dc3e6378ee3f41d503ecd9f02df82c86.svg" src="_images/d5ca12d8ef4975034d4dd5582b73f644dc3e6378ee3f41d503ecd9f02df82c86.svg" /><figcaption>
+<img alt="_images/36a573546c1e0472345805c66a90c13dbd43e69c5e6da90cbdb53b3043e90e0b.svg" src="_images/36a573546c1e0472345805c66a90c13dbd43e69c5e6da90cbdb53b3043e90e0b.svg" /><figcaption>
 <p><span class="caption-number">Fig. 1 </span><span class="caption-text">Basisschema van de Klasse A versterker.</span><a class="headerlink" href="#afig1" title="Permallink naar deze afbeelding">#</a></p>
 </figcaption>
 </figure>
@@ -600,7 +614,7 @@ document.write(`
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
 <figure class="align-default" id="afig1-2">
-<img alt="_images/fbfe6d428b9d49886934b65a8545db88410465f426cb779dd587ce5caacfad4d.svg" src="_images/fbfe6d428b9d49886934b65a8545db88410465f426cb779dd587ce5caacfad4d.svg" /><figcaption>
+<img alt="_images/abd996f8775e0ac5714fec0eab53799bea6462a83165b8200274ca0818e1bde0.svg" src="_images/abd996f8775e0ac5714fec0eab53799bea6462a83165b8200274ca0818e1bde0.svg" /><figcaption>
 <p><span class="caption-number">Fig. 2 </span><span class="caption-text">Basisschema van de Klasse A versterker.</span><a class="headerlink" href="#afig1-2" title="Permallink naar deze afbeelding">#</a></p>
 </figcaption>
 </figure>
@@ -629,10 +643,10 @@ document.write(`
 <p>Vergelijk deze Spice list aandachtig met <a class="reference internal" href="#afig1-2"><span class="std std-numref">Fig. 2</span></a>. Voor elk element, met uitzondering van de transformator, vinden we de 2 of 3 knopen terug die ook in het schema staan. De uitgang wordt belast met een weerstand van 8 <span class="math notranslate nohighlight">\(\Omega\)</span>. De weerstand van de primaire wikkeling van de transformator is natuurlijk ongewenst maar we kunnen deze niet zomaar verwaarlozen. We moeten dit correct inbrengen om een realistische simulatie te bekomen. We doen dit door een weerstand van 1 <span class="math notranslate nohighlight">\(\Omega\)</span> te plaatsen tussen knopen 2 en 3. Voor de vermogentransistor (Q5) nemen we in deze simulatie een bipolaire transistor. In het model van deze transistor (de naam van het model is Q2) zien we dat deze transistor een voorwaartse stroomversterking (<span class="math notranslate nohighlight">\(\beta_F\)</span>) heeft van 20.</p>
 <p>De transformator TX1 implementeren we in spice aan de hand van de 2 spoelen L1_TX1 en L2_TX1 die gekoppeld worden door de koppeling K_TX1. De koppelingsfactor is 1. Uit de ratio van de 2 spoelwaardes (<span class="math notranslate nohighlight">\(\frac{25 mH}{1 mH}\)</span> =25) kunnen we ook de wikkelverhouding (N) afleiden: <span class="math notranslate nohighlight">\( 5 = \sqrt{25}\)</span>.</p>
 <p>De bovenstaande netwerkcode simuleren we in Spice. <a class="reference internal" href="#afigstroomvsspanning"><span class="std std-numref">Fig. 3</span></a>  toont zowel de stromen (rechts) als de spanningen (links) als functie van de tijd.</p>
-<div class="cell tag_full-width tag_remove-input docutils container">
+<div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
 <figure class="align-default" id="afigstroomvsspanning">
-<img alt="_images/0db97185551e8e1ff15c0525633e1b74c260ad83e487df2388f09172d4309ade.png" src="_images/0db97185551e8e1ff15c0525633e1b74c260ad83e487df2388f09172d4309ade.png" />
+<img alt="_images/7b35bc5d177864497f37ddb015a83454660290653b9d17162c112c547ccd87ad.png" src="_images/7b35bc5d177864497f37ddb015a83454660290653b9d17162c112c547ccd87ad.png" />
 <figcaption>
 <p><span class="caption-number">Fig. 3 </span><span class="caption-text">Klasse A versterker: stromen en spanningen als functie van de tijd.</span><a class="headerlink" href="#afigstroomvsspanning" title="Permallink naar deze afbeelding">#</a></p>
 </figcaption>
@@ -643,7 +657,7 @@ document.write(`
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
 <figure class="align-default" id="afigstroomvsspanning2">
-<img alt="_images/856cb8847229baf69572cdff0754d9e73e975a6814f042a95fc8ad58f5fbc291.png" src="_images/856cb8847229baf69572cdff0754d9e73e975a6814f042a95fc8ad58f5fbc291.png" />
+<img alt="_images/6b4e32498837e60c7fa15c588f4b74e9f589d732d3dd591a7b5fba4b2c882601.png" src="_images/6b4e32498837e60c7fa15c588f4b74e9f589d732d3dd591a7b5fba4b2c882601.png" />
 <figcaption>
 <p><span class="caption-number">Fig. 4 </span><span class="caption-text">Belastingskarakteristiek van de klasse A versterker.</span><a class="headerlink" href="#afigstroomvsspanning2" title="Permallink naar deze afbeelding">#</a></p>
 </figcaption>
@@ -670,7 +684,7 @@ document.write(`
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
 <figure class="align-default" id="afig3">
-<img alt="_images/249ab7bc342020924a26437e66a3d86b723a128b78e9424731e23d657e3c09e1.png" src="_images/249ab7bc342020924a26437e66a3d86b723a128b78e9424731e23d657e3c09e1.png" />
+<img alt="_images/5e4aa78123a976d391aff40a0dcc37e554f073247904489217e66b8d81d402ef.png" src="_images/5e4aa78123a976d391aff40a0dcc37e554f073247904489217e66b8d81d402ef.png" />
 <figcaption>
 <p><span class="caption-number">Fig. 5 </span><span class="caption-text">Stroom-spanningsrelaties voor de primaire en de secundaire wikkeling in het geval van een grote inductantie van de spoelen.</span><a class="headerlink" href="#afig3" title="Permallink naar deze afbeelding">#</a></p>
 </figcaption>
@@ -697,7 +711,7 @@ document.write(`
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
 <figure class="align-default" id="afighf">
-<img alt="_images/aacd0b6404b0a24041ca5b8b2d10f2b27758ede276c1917eb5c2127a1fd45ef5.png" src="_images/aacd0b6404b0a24041ca5b8b2d10f2b27758ede276c1917eb5c2127a1fd45ef5.png" />
+<img alt="_images/c5b81760a0c079c67b8776f69fd039d6400a4c0fdb1b23ffa53e762852474a3e.png" src="_images/c5b81760a0c079c67b8776f69fd039d6400a4c0fdb1b23ffa53e762852474a3e.png" />
 <figcaption>
 <p><span class="caption-number">Fig. 6 </span><span class="caption-text">Stroom door de transistor versus spanning over de transistor in het geval van aansturing aan 100 kHz.</span><a class="headerlink" href="#afighf" title="Permallink naar deze afbeelding">#</a></p>
 </figcaption>
@@ -707,7 +721,7 @@ document.write(`
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
 <figure class="align-default" id="afigvermogen">
-<img alt="_images/2460dca0ce15c05748f17a91c86548f8b8f93c72978c5630b9d2b9de89c1183d.png" src="_images/2460dca0ce15c05748f17a91c86548f8b8f93c72978c5630b9d2b9de89c1183d.png" />
+<img alt="_images/eeae7d28c7bcc800a526e9683970d53b3e453d8ef4c249cb93f1894711ebe6c5.png" src="_images/eeae7d28c7bcc800a526e9683970d53b3e453d8ef4c249cb93f1894711ebe6c5.png" />
 <figcaption>
 <p><span class="caption-number">Fig. 7 </span><span class="caption-text">Ogenblikkelijk vermogen als functie van de tijd voor de simulatie van <a class="reference internal" href="#afigstroomvsspanning"><span class="std std-numref">Fig. 3</span></a></span><a class="headerlink" href="#afigvermogen" title="Permallink naar deze afbeelding">#</a></p>
 </figcaption>
@@ -760,7 +774,7 @@ De gemiddelde efficentie gedurende de 10 eerste periodes is 37.89 %
               
               
                 <footer class="prev-next-footer">
-                  <!-- Previous / next buttons -->
+                  
 <div class="prev-next-area">
     <a class="left-prev"
        href="intro.html"
@@ -821,6 +835,7 @@ By Jan Genoe (jan.genoe@kuleuven.be)
   
   <div class="footer-item">
     
+
   </div>
   
   <div class="footer-item">
@@ -840,8 +855,8 @@ By Jan Genoe (jan.genoe@kuleuven.be)
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="_static/scripts/bootstrap.js?digest=365ca57ee442770a23c6"></script>
-<script src="_static/scripts/pydata-sphinx-theme.js?digest=365ca57ee442770a23c6"></script>
+  <script src="_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
 
   <footer class="bd-footer">
   </footer>

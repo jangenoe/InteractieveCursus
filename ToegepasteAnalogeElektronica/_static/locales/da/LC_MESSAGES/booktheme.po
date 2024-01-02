@@ -8,68 +8,68 @@ msgstr ""
 "Language: da\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-msgid "Fullscreen mode"
-msgstr "Fuldskærmstilstand"
-
-msgid "Open an issue"
-msgstr "Åbn et problem"
-
-msgid "Theme by the"
-msgstr "Tema af"
-
-msgid "Launch"
-msgstr "Start"
-
-msgid "Source repository"
-msgstr "Kildelager"
-
-msgid "Toggle navigation"
-msgstr "Skift navigation"
-
-msgid "By"
-msgstr "Ved"
-
-msgid "Edit this page"
-msgstr "Rediger denne side"
-
-msgid "Contents"
-msgstr "Indhold"
-
-msgid "Download this page"
-msgstr "Download denne side"
-
-msgid "By the"
-msgstr "Ved"
-
-msgid "Print to PDF"
-msgstr "Udskriv til PDF"
-
-msgid "Sphinx Book Theme"
-msgstr "Sphinx bogtema"
-
-msgid "Copyright"
-msgstr "ophavsret"
-
-msgid "previous page"
-msgstr "forrige side"
-
-msgid "Download notebook file"
-msgstr "Download notesbog-fil"
-
-msgid "next page"
-msgstr "Næste side"
-
-msgid "open issue"
-msgstr "åbent nummer"
-
-msgid "Last updated on"
-msgstr "Sidst opdateret den"
-
-msgid "repository"
-msgstr "lager"
+msgid "Download source file"
+msgstr "Download kildefil"
 
 msgid "suggest edit"
 msgstr "foreslå redigering"
 
-msgid "Download source file"
-msgstr "Download kildefil"
+msgid "Toggle navigation"
+msgstr "Skift navigation"
+
+msgid "open issue"
+msgstr "åbent nummer"
+
+msgid "Download notebook file"
+msgstr "Download notesbog-fil"
+
+msgid "repository"
+msgstr "lager"
+
+msgid "Theme by the"
+msgstr "Tema af"
+
+msgid "Print to PDF"
+msgstr "Udskriv til PDF"
+
+msgid "Download this page"
+msgstr "Download denne side"
+
+msgid "Copyright"
+msgstr "ophavsret"
+
+msgid "Last updated on"
+msgstr "Sidst opdateret den"
+
+msgid "Launch"
+msgstr "Start"
+
+msgid "Open an issue"
+msgstr "Åbn et problem"
+
+msgid "Fullscreen mode"
+msgstr "Fuldskærmstilstand"
+
+msgid "Sphinx Book Theme"
+msgstr "Sphinx bogtema"
+
+msgid "Contents"
+msgstr "Indhold"
+
+msgid "Edit this page"
+msgstr "Rediger denne side"
+
+msgid "next page"
+msgstr "Næste side"
+
+msgid "Source repository"
+msgstr "Kildelager"
+
+msgid "By"
+msgstr "Ved"
+
+msgid "By the"
+msgstr "Ved"
+
+msgid "previous page"
+msgstr "forrige side"
