@@ -12,10 +12,10 @@
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://jangenoe.github.io/jangenoe/InteractieveCursus/AnalogeElektronica2/Klasse-B.html" />
 <meta property="og:site_name" content="Python" />
-<meta property="og:description" content="Indeling vermogenversterkers: In Tabel 2 hernemen we een overzicht van de verschillende versterkers die we bespreken in de leerlijn analoge elektronica. Indeling van de vermogenversterkers:,,,, laa..." />
+<meta property="og:description" content="Indeling vermogenversterkers: In Tabel 2 hernemen we een overzicht van de verschillende versterkers die we bespreken in de leerlijn analoge elektronica. In het vorige hoofdstuk bespraken we de laag..." />
 <meta property="og:image" content="https://jangenoe.github.io/InteractieveCursus/AnalogeElektronica2/_static/logo.svg" />
 <meta property="og:image:alt" content="Python" />
-<meta name="description" content="Indeling vermogenversterkers: In Tabel 2 hernemen we een overzicht van de verschillende versterkers die we bespreken in de leerlijn analoge elektronica. Indeling van de vermogenversterkers:,,,, laa..." />
+<meta name="description" content="Indeling vermogenversterkers: In Tabel 2 hernemen we een overzicht van de verschillende versterkers die we bespreken in de leerlijn analoge elektronica. In het vorige hoofdstuk bespraken we de laag..." />
 
     <title>Klasse B versterkers &#8212; Analoge elektronische schakelingen</title>
   
@@ -560,7 +560,7 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#indeling-vermogenversterkers">Indeling vermogenversterkers</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#basisschema">Basisschema</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#schema-voor-dc-werking">Schema voor DC werking</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#schema-voor-ac-werking">Schema voor AC werking</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#schema-voor-enkel-ac-werking">Schema voor enkel AC werking</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#gebruik-van-de-voorinstelspanning">Gebruik van de voorinstelspanning</a><ul class="nav section-nav flex-column">
@@ -586,7 +586,11 @@ document.write(`
 </div>
 <section id="indeling-vermogenversterkers">
 <h2>Indeling vermogenversterkers<a class="headerlink" href="#indeling-vermogenversterkers" title="Permalink to this heading">#</a></h2>
-<p>In <a class="reference internal" href="#vermogenversterkersb"><span class="std std-numref">Tabel 2</span></a> hernemen we een overzicht van de verschillende versterkers die we bespreken in de leerlijn analoge elektronica.</p>
+<p>In <a class="reference internal" href="#vermogenversterkersb"><span class="std std-numref">Tabel 2</span></a> hernemen we een overzicht van de verschillende versterkers die we bespreken in de leerlijn analoge elektronica.
+In het vorige hoofdstuk bespraken we de laagfrequent versterkers die slechts 1 vermogentransistor gebruiken in de laatste trap (daar waar het meeste vermogen verbruikt wordt).
+In dit hoofdstuk bespreken we de laagfrequent versterkers die 2 of meer vermogentransistor gebruiken in de laatste trap.
+Dit geeft een duurder ontwerp van de versterker, maar zoals we later zullen zien, geeft dit een veel efficientere implementaties.
+Als een gevolg hiervan kan de duurdere aanschafkost gemakkelijk terugewonnen worden door het lager energieverbruik.</p>
 <table class="table" id="vermogenversterkersb">
 <caption><span class="caption-number">Tabel 2 </span><span class="caption-text">Indeling van de vermogenversterkers</span><a class="headerlink" href="#vermogenversterkersb" title="Permalink naar deze tabel">#</a></caption>
 <thead>
@@ -620,27 +624,22 @@ document.write(`
 </figure>
 </div>
 </div>
-<p>Het is belangrijk in dit schema de verschillende bouwblokken te herkennen. <a class="reference internal" href="#bfig1anot"><span class="std std-numref">Fig. 9</span></a> toont deze bouwblokken. We hebben natuurlijk in de eerste plaats de belasting <span class="math notranslate nohighlight">\(R_L\)</span>. Daarnaast zien we (in de groene box) zowel het pull-up netwerk als het pull-down netwerk aangeduid.</p>
+<p>Het is belangrijk in dit schema de verschillende bouwblokken te herkennen. <a class="reference internal" href="#bfig1anot"><span class="std std-numref">Fig. 9</span></a> toont deze bouwblokken. We hebben natuurlijk in de eerste plaats de belasting <span class="math notranslate nohighlight">\(R_L\)</span>. Deze wordt hier symbolish weergegeven als een weerstand, maar kan in de praktijk eender welke actuator zijn die vermogen opneemt in fase met de belasting.</p>
+<p>Daarnaast zien we (in de groene box) zowel het pull-up netwerk als het pull-down netwerk aangeduid.</p>
+<p>In het schema van <a class="reference internal" href="#bfig1"><span class="std std-numref">Fig. 8</span></a> zien we dat er zowel een AC-pad als een DC-pad tussen beide voedingen (<span class="math notranslate nohighlight">\(V_{DD}\)</span> en -<span class="math notranslate nohighlight">\(V_{DD}\)</span>) en de belasting mogelijk is.</p>
 <div class="cell docutils container">
 <div class="cell_output docutils container">
 <figure class="align-default" id="bfig1anot">
-<img alt="_images/f5320bc953cd1376cac7eb34dacb41c3b6087e5ef8239d3fb424e82de5648d50.svg" src="_images/f5320bc953cd1376cac7eb34dacb41c3b6087e5ef8239d3fb424e82de5648d50.svg" /><figcaption>
+<img alt="_images/0cced0e67d1701da4e43a923716d4fd7b96ecd162620329a38f45ed937e0c45d.svg" src="_images/0cced0e67d1701da4e43a923716d4fd7b96ecd162620329a38f45ed937e0c45d.svg" /><figcaption>
 <p><span class="caption-number">Fig. 9 </span><span class="caption-text">Basisschema van de klasse B versterker voor DC werking met aangeduide bouwblokken.</span><a class="headerlink" href="#bfig1anot" title="Permallink naar deze afbeelding">#</a></p>
 </figcaption>
 </figure>
 </div>
 </div>
-</section>
-<section id="schema-voor-ac-werking">
-<h3>Schema voor AC werking<a class="headerlink" href="#schema-voor-ac-werking" title="Permalink to this heading">#</a></h3>
+<p>Om dit schema te kunnen simuleren in spice,</p>
 <div class="cell docutils container">
 <div class="cell_output docutils container">
-<figure class="align-default" id="bfig1ac">
-<img alt="_images/099f217a9fee2c338491a57e5149e9b6fd6875e3c0960cc3c73b5bb43c360158.svg" src="_images/099f217a9fee2c338491a57e5149e9b6fd6875e3c0960cc3c73b5bb43c360158.svg" /><figcaption>
-<p><span class="caption-number">Fig. 10 </span><span class="caption-text">Basisschema van de klasse B versterker voor AC werking.</span><a class="headerlink" href="#bfig1ac" title="Permallink naar deze afbeelding">#</a></p>
-</figcaption>
-</figure>
-</div>
+<img alt="_images/102e3d625635cd8ab91831f431707e4eb75299bcaffd462cf873d31034d195c2.svg" src="_images/102e3d625635cd8ab91831f431707e4eb75299bcaffd462cf873d31034d195c2.svg" /></div>
 </div>
 <div class="literal-block-wrapper docutils container" id="listing1">
 <div class="code-block-caption"><span class="caption-number">Spice Listing 4 </span><span class="caption-text">basis Klasse B circuit</span><a class="headerlink" href="#listing1" title="Permalink naar deze broncode">#</a></div>
@@ -666,13 +665,13 @@ document.write(`
 </pre></div>
 </div>
 </div>
-<p>De simulatie (zie <a class="reference internal" href="#bfig2"><span class="std std-numref">Fig. 11</span></a>) van de spice code<a class="reference internal" href="#listing1"><span class="std std-numref">Spice Listing 4</span></a>  geeft duidelijk de dode zone aan bij de nuldoorgang van de spanning. In <a class="reference internal" href="#bfig2b"><span class="std std-numref">Fig. 12</span></a> bekijken we deze nuldoorgang in meer detail.</p>
+<p>De simulatie (zie <a class="reference internal" href="#bfig2"><span class="std std-numref">Fig. 10</span></a>) van de spice code<a class="reference internal" href="#listing1"><span class="std std-numref">Spice Listing 4</span></a>  geeft duidelijk de dode zone aan bij de nuldoorgang van de spanning. In <a class="reference internal" href="#bfig2b"><span class="std std-numref">Fig. 11</span></a> bekijken we deze nuldoorgang in meer detail.</p>
 <div class="cell docutils container">
 <div class="cell_output docutils container">
 <figure class="align-default" id="bfig2">
 <img alt="_images/c3e32fdd9035feaa5449780d4d32d5ffe63685aba7c8d03062e18492bbb09282.png" src="_images/c3e32fdd9035feaa5449780d4d32d5ffe63685aba7c8d03062e18492bbb09282.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 11 </span><span class="caption-text">De klasse B versterker: stromen en spanningen als functie van de tijd.</span><a class="headerlink" href="#bfig2" title="Permallink naar deze afbeelding">#</a></p>
+<p><span class="caption-number">Fig. 10 </span><span class="caption-text">De klasse B versterker: stromen en spanningen als functie van de tijd.</span><a class="headerlink" href="#bfig2" title="Permallink naar deze afbeelding">#</a></p>
 </figcaption>
 </figure>
 </div>
@@ -682,18 +681,31 @@ document.write(`
 <figure class="align-default" id="bfig2b">
 <img alt="_images/fa95e1f21b8517bd2b7575c4a365cbb889b6684a4d02d96cb2478eeb09bc15d2.png" src="_images/fa95e1f21b8517bd2b7575c4a365cbb889b6684a4d02d96cb2478eeb09bc15d2.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 12 </span><span class="caption-text">De klasse B versterker: detail van de stromen en spanningen als functie van de tijd in de buurt van de nuldoorgang.</span><a class="headerlink" href="#bfig2b" title="Permallink naar deze afbeelding">#</a></p>
+<p><span class="caption-number">Fig. 11 </span><span class="caption-text">De klasse B versterker: detail van de stromen en spanningen als functie van de tijd in de buurt van de nuldoorgang.</span><a class="headerlink" href="#bfig2b" title="Permallink naar deze afbeelding">#</a></p>
 </figcaption>
 </figure>
 </div>
 </div>
-<p><a class="reference internal" href="#bfig2c"><span class="std std-numref">Fig. 13</span></a> toont de stroom door als functie van de spanning over de transistor voor de npn transistor. Voor de pnp transistor bekomen we dezelfde grafiek.</p>
+<p><a class="reference internal" href="#bfig2c"><span class="std std-numref">Fig. 12</span></a> toont de stroom door als functie van de spanning over de transistor voor de npn transistor. Voor de pnp transistor bekomen we dezelfde grafiek.</p>
 <div class="cell docutils container">
 <div class="cell_output docutils container">
 <figure class="align-default" id="bfig2c">
 <img alt="_images/8d56d5ba234147d30b3c365fdb49e006b90c27564f5f84081d4b7248e905eb9f.png" src="_images/8d56d5ba234147d30b3c365fdb49e006b90c27564f5f84081d4b7248e905eb9f.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 13 </span><span class="caption-text">De klasse B versterker: de stroom door een npn transistor als functie van de spanning.</span><a class="headerlink" href="#bfig2c" title="Permallink naar deze afbeelding">#</a></p>
+<p><span class="caption-number">Fig. 12 </span><span class="caption-text">De klasse B versterker: de stroom door een npn transistor als functie van de spanning.</span><a class="headerlink" href="#bfig2c" title="Permallink naar deze afbeelding">#</a></p>
+</figcaption>
+</figure>
+</div>
+</div>
+</section>
+<section id="schema-voor-enkel-ac-werking">
+<h3>Schema voor enkel AC werking<a class="headerlink" href="#schema-voor-enkel-ac-werking" title="Permalink to this heading">#</a></h3>
+<p>In heel wat implementaties is een DC pad naar de belasting niet gewenst. Hierbij denken we bijvoorbeeld aan een luidspreker. Een DC stroom bij een luidspreker geeft een vaste offset van de conus die de lucht aanstuurt. Dit geeft heel wat verliezen en geeft ook een asymmetrische weergave van het geluid. Dit geeft belangrijke vervormingen en ook ook ongewenste hoger tonen.</p>
+<div class="cell docutils container">
+<div class="cell_output docutils container">
+<figure class="align-default" id="bfig1ac">
+<img alt="_images/099f217a9fee2c338491a57e5149e9b6fd6875e3c0960cc3c73b5bb43c360158.svg" src="_images/099f217a9fee2c338491a57e5149e9b6fd6875e3c0960cc3c73b5bb43c360158.svg" /><figcaption>
+<p><span class="caption-number">Fig. 13 </span><span class="caption-text">Basisschema van de klasse B versterker voor AC werking.</span><a class="headerlink" href="#bfig1ac" title="Permallink naar deze afbeelding">#</a></p>
 </figcaption>
 </figure>
 </div>
@@ -706,7 +718,7 @@ document.write(`
 <h3>Weerstand als voorinstelspanning<a class="headerlink" href="#weerstand-als-voorinstelspanning" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_output docutils container">
-<img alt="_images/a9e52aebaa890e09d48d013f17fe7f6a8aea9cfcb5513c7b9098b4b09f555d72.svg" src="_images/a9e52aebaa890e09d48d013f17fe7f6a8aea9cfcb5513c7b9098b4b09f555d72.svg" /></div>
+<img alt="_images/73950da79c92a102ff9be0c1020ca5998f2df600a9a3f47f39aef8366e65ed0a.svg" src="_images/73950da79c92a102ff9be0c1020ca5998f2df600a9a3f47f39aef8366e65ed0a.svg" /></div>
 </div>
 </section>
 <section id="diodes-als-voorinstelspanning">
@@ -725,7 +737,7 @@ document.write(`
 <h3>Transistor als voorinstelspanning<a class="headerlink" href="#transistor-als-voorinstelspanning" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_output docutils container">
-<img alt="_images/2e9843a55b83a777c18f8a5b49cc15d3ba20a5a487a01a9aca74eb3507b24342.svg" src="_images/2e9843a55b83a777c18f8a5b49cc15d3ba20a5a487a01a9aca74eb3507b24342.svg" /></div>
+<img alt="_images/5569a62b4a9699c140bbc6f1d6a0863882d23cfd179c9f5b66904cd4c992a77d.svg" src="_images/5569a62b4a9699c140bbc6f1d6a0863882d23cfd179c9f5b66904cd4c992a77d.svg" /></div>
 </div>
 <p>Hieronder tonen we de spice listing van de klasse B versterker waarbij we een voorinstelspanning voorzien tussen de  basissen van de npn en de pnp transistor. Deze voorinstelspanning is hier uitgevoerd door diodes. in <a class="reference internal" href="#bfig2dio"><span class="std std-numref">Fig. 15</span></a> merken we hierbij op dat dit tot gevolg heeft dat er toch een stroom blijft lopen door de transistor die niet in geleiding is. Dit noemen we de klasse AB werking van deze klasseB versterker.</p>
 <div class="literal-block-wrapper docutils container" id="listing2">
@@ -876,7 +888,11 @@ document.write(`
 </div>
 <div class="cell docutils container">
 <div class="cell_output docutils container">
-<img alt="_images/dd861e8fa06906a559caf1321a13fd3389444a51252afe2d565f6408c7178295.svg" src="_images/dd861e8fa06906a559caf1321a13fd3389444a51252afe2d565f6408c7178295.svg" /></div>
+<img alt="_images/d656b92432e9b846b7098d9586113bf61912d37dacb07af129eadf343a5d1f43.svg" src="_images/d656b92432e9b846b7098d9586113bf61912d37dacb07af129eadf343a5d1f43.svg" /></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_output docutils container">
+<img alt="_images/2d57065892ddef3aa0341e8eb179aa8e037c2ff31de0f7eb4799a23b1d9dd8d2.svg" src="_images/2d57065892ddef3aa0341e8eb179aa8e037c2ff31de0f7eb4799a23b1d9dd8d2.svg" /></div>
 </div>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
@@ -886,6 +902,14 @@ document.write(`
 </figcaption>
 </figure>
 </div>
+</div>
+<div class="cell docutils container">
+<div class="cell_output docutils container">
+<img alt="_images/e6c5b089fa743ef61fef7fd0da966a7fd815e10df16d95901adac280911bb0b9.svg" src="_images/e6c5b089fa743ef61fef7fd0da966a7fd815e10df16d95901adac280911bb0b9.svg" /></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_output docutils container">
+<img alt="_images/7530de6daa21cc43d6b01612a97906fc3452112a929ebe020c895ab3c4b0847a.svg" src="_images/7530de6daa21cc43d6b01612a97906fc3452112a929ebe020c895ab3c4b0847a.svg" /></div>
 </div>
 </section>
 </section>
@@ -959,7 +983,7 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#indeling-vermogenversterkers">Indeling vermogenversterkers</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#basisschema">Basisschema</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#schema-voor-dc-werking">Schema voor DC werking</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#schema-voor-ac-werking">Schema voor AC werking</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#schema-voor-enkel-ac-werking">Schema voor enkel AC werking</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#gebruik-van-de-voorinstelspanning">Gebruik van de voorinstelspanning</a><ul class="nav section-nav flex-column">
