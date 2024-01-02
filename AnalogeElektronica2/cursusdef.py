@@ -7,10 +7,11 @@ from PySpice.Probe.Plot import plot
 from PySpice.Spice.Parser import SpiceParser
 from PySpice.Spice.Netlist import Circuit
 from PySpice.Unit import *
-import schemdraw as schem
-import schemdraw.elements as e
+import schemdraw
+from schemdraw.elements import *
 import skrf as rf
 from ipywidgets import interact,FloatSlider
+
 usewidgets=False;
 from IPython import display
 
