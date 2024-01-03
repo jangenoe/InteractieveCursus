@@ -569,6 +569,13 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#transistor-als-voorinstelspanning">Transistor als voorinstelspanning</a></li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#filtering-aan-de-ingang">Filtering aan de ingang</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hoogdoorlaatfilter-aan-de-ingang">Hoogdoorlaatfilter aan de ingang</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#laagdoorlaatfilter-aan-de-ingang">Laagdoorlaatfilter aan de ingang</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#banddoorlaatfilter-aan-de-ingang">Banddoorlaatfilter aan de ingang</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#zelftest-via-flashcards">Zelftest via Flashcards</a></li>
 </ul>
             </nav>
         </div>
@@ -615,6 +622,11 @@ Als een gevolg hiervan kan de duurdere aanschafkost gemakkelijk terugewonnen wor
 <h2>Basisschema<a class="headerlink" href="#basisschema" title="Permalink to this heading">#</a></h2>
 <section id="schema-voor-dc-werking">
 <h3>Schema voor DC werking<a class="headerlink" href="#schema-voor-dc-werking" title="Permalink to this heading">#</a></h3>
+<p><a class="reference internal" href="#bfig1"><span class="std std-numref">Fig. 8</span></a> toont het basisschema van de Klasse B versterker. We herkennen een bipolaire npn en pnp transistor.
+Beide transistors staan in gemeenschappelijke collector configuratie. % naar ander cursusdeel en wiki
+Op deze manier werkt de vermogentransistor als stroomversterker.
+De spanning aan de basis wordt (op de redelijk constante basis-emitter offset na) doorgegeven naar de collector.
+De stroom aan de collector wordt echter met de factor <span class="math notranslate nohighlight">\(\beta_F\)</span> van de bipolaire transistor versterkt.</p>
 <div class="cell docutils container">
 <div class="cell_output docutils container">
 <figure class="align-default" id="bfig1">
@@ -639,7 +651,12 @@ Als een gevolg hiervan kan de duurdere aanschafkost gemakkelijk terugewonnen wor
 <p>Om dit schema te kunnen simuleren in spice, geven we nummers aan de verschillende knopen, zoals je kan zien in x. Deze nummers kan je dan vervolgens terugvinden in de spice-listing x.</p>
 <div class="cell docutils container">
 <div class="cell_output docutils container">
-<img alt="_images/102e3d625635cd8ab91831f431707e4eb75299bcaffd462cf873d31034d195c2.svg" src="_images/102e3d625635cd8ab91831f431707e4eb75299bcaffd462cf873d31034d195c2.svg" /></div>
+<figure class="align-default" id="bfig1num">
+<img alt="_images/102e3d625635cd8ab91831f431707e4eb75299bcaffd462cf873d31034d195c2.svg" src="_images/102e3d625635cd8ab91831f431707e4eb75299bcaffd462cf873d31034d195c2.svg" /><figcaption>
+<p><span class="caption-number">Fig. 10 </span><span class="caption-text">Basisschema van de klasse B versterker voor DC werking.</span><a class="headerlink" href="#bfig1num" title="Permallink naar deze afbeelding">#</a></p>
+</figcaption>
+</figure>
+</div>
 </div>
 <div class="literal-block-wrapper docutils container" id="listing1">
 <div class="code-block-caption"><span class="caption-number">Spice Listing 4 </span><span class="caption-text">basis Klasse B circuit</span><a class="headerlink" href="#listing1" title="Permalink naar deze broncode">#</a></div>
@@ -665,13 +682,13 @@ Als een gevolg hiervan kan de duurdere aanschafkost gemakkelijk terugewonnen wor
 </pre></div>
 </div>
 </div>
-<p>De simulatie (zie <a class="reference internal" href="#bfig2"><span class="std std-numref">Fig. 10</span></a>) van de spice code<a class="reference internal" href="#listing1"><span class="std std-numref">Spice Listing 4</span></a>  geeft duidelijk de dode zone aan bij de nuldoorgang van de spanning. In <a class="reference internal" href="#bfig2b"><span class="std std-numref">Fig. 11</span></a> bekijken we deze nuldoorgang in meer detail.</p>
+<p>De simulatie (zie <a class="reference internal" href="#bfig2"><span class="std std-numref">Fig. 11</span></a>) van de spice code <a class="reference internal" href="#listing1"><span class="std std-numref">Spice Listing 4</span></a>  geeft duidelijk de dode zone aan bij de nuldoorgang van de spanning. In <a class="reference internal" href="#bfig2b"><span class="std std-numref">Fig. 12</span></a> bekijken we deze nuldoorgang in meer detail.</p>
 <div class="cell docutils container">
 <div class="cell_output docutils container">
 <figure class="align-default" id="bfig2">
 <img alt="_images/c3e32fdd9035feaa5449780d4d32d5ffe63685aba7c8d03062e18492bbb09282.png" src="_images/c3e32fdd9035feaa5449780d4d32d5ffe63685aba7c8d03062e18492bbb09282.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 10 </span><span class="caption-text">De klasse B versterker: stromen en spanningen als functie van de tijd.</span><a class="headerlink" href="#bfig2" title="Permallink naar deze afbeelding">#</a></p>
+<p><span class="caption-number">Fig. 11 </span><span class="caption-text">De klasse B versterker: stromen en spanningen als functie van de tijd.</span><a class="headerlink" href="#bfig2" title="Permallink naar deze afbeelding">#</a></p>
 </figcaption>
 </figure>
 </div>
@@ -681,18 +698,18 @@ Als een gevolg hiervan kan de duurdere aanschafkost gemakkelijk terugewonnen wor
 <figure class="align-default" id="bfig2b">
 <img alt="_images/fa95e1f21b8517bd2b7575c4a365cbb889b6684a4d02d96cb2478eeb09bc15d2.png" src="_images/fa95e1f21b8517bd2b7575c4a365cbb889b6684a4d02d96cb2478eeb09bc15d2.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 11 </span><span class="caption-text">De klasse B versterker: detail van de stromen en spanningen als functie van de tijd in de buurt van de nuldoorgang.</span><a class="headerlink" href="#bfig2b" title="Permallink naar deze afbeelding">#</a></p>
+<p><span class="caption-number">Fig. 12 </span><span class="caption-text">De klasse B versterker: detail van de stromen en spanningen als functie van de tijd in de buurt van de nuldoorgang.</span><a class="headerlink" href="#bfig2b" title="Permallink naar deze afbeelding">#</a></p>
 </figcaption>
 </figure>
 </div>
 </div>
-<p><a class="reference internal" href="#bfig2c"><span class="std std-numref">Fig. 12</span></a> toont de stroom door als functie van de spanning over de transistor voor de npn transistor. Voor de pnp transistor bekomen we dezelfde grafiek.</p>
+<p><a class="reference internal" href="#bfig2c"><span class="std std-numref">Fig. 13</span></a> toont de stroom door als functie van de spanning over de transistor voor de npn transistor. Voor de pnp transistor bekomen we dezelfde grafiek.</p>
 <div class="cell docutils container">
 <div class="cell_output docutils container">
 <figure class="align-default" id="bfig2c">
 <img alt="_images/8d56d5ba234147d30b3c365fdb49e006b90c27564f5f84081d4b7248e905eb9f.png" src="_images/8d56d5ba234147d30b3c365fdb49e006b90c27564f5f84081d4b7248e905eb9f.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 12 </span><span class="caption-text">De klasse B versterker: de stroom door een npn transistor als functie van de spanning.</span><a class="headerlink" href="#bfig2c" title="Permallink naar deze afbeelding">#</a></p>
+<p><span class="caption-number">Fig. 13 </span><span class="caption-text">De klasse B versterker: de stroom door een npn transistor als functie van de spanning.</span><a class="headerlink" href="#bfig2c" title="Permallink naar deze afbeelding">#</a></p>
 </figcaption>
 </figure>
 </div>
@@ -704,8 +721,8 @@ Als een gevolg hiervan kan de duurdere aanschafkost gemakkelijk terugewonnen wor
 <div class="cell docutils container">
 <div class="cell_output docutils container">
 <figure class="align-default" id="bfig1ac">
-<img alt="_images/099f217a9fee2c338491a57e5149e9b6fd6875e3c0960cc3c73b5bb43c360158.svg" src="_images/099f217a9fee2c338491a57e5149e9b6fd6875e3c0960cc3c73b5bb43c360158.svg" /><figcaption>
-<p><span class="caption-number">Fig. 13 </span><span class="caption-text">Basisschema van de klasse B versterker voor AC werking.</span><a class="headerlink" href="#bfig1ac" title="Permallink naar deze afbeelding">#</a></p>
+<img alt="_images/1f2b116b290f061003eca42ca29b9f9c277b8f83203d374d6476e6b2622b345b.svg" src="_images/1f2b116b290f061003eca42ca29b9f9c277b8f83203d374d6476e6b2622b345b.svg" /><figcaption>
+<p><span class="caption-number">Fig. 14 </span><span class="caption-text">Basisschema van de klasse B versterker voor AC werking.</span><a class="headerlink" href="#bfig1ac" title="Permallink naar deze afbeelding">#</a></p>
 </figcaption>
 </figure>
 </div>
@@ -718,7 +735,12 @@ Als een gevolg hiervan kan de duurdere aanschafkost gemakkelijk terugewonnen wor
 <h3>Weerstand als voorinstelspanning<a class="headerlink" href="#weerstand-als-voorinstelspanning" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_output docutils container">
-<img alt="_images/73950da79c92a102ff9be0c1020ca5998f2df600a9a3f47f39aef8366e65ed0a.svg" src="_images/73950da79c92a102ff9be0c1020ca5998f2df600a9a3f47f39aef8366e65ed0a.svg" /></div>
+<figure class="align-default" id="bfig1voorr">
+<img alt="_images/73950da79c92a102ff9be0c1020ca5998f2df600a9a3f47f39aef8366e65ed0a.svg" src="_images/73950da79c92a102ff9be0c1020ca5998f2df600a9a3f47f39aef8366e65ed0a.svg" /><figcaption>
+<p><span class="caption-number">Fig. 15 </span><span class="caption-text">Basisschema van de klasse B versterker met weerstand als voorinstelspanning.</span><a class="headerlink" href="#bfig1voorr" title="Permallink naar deze afbeelding">#</a></p>
+</figcaption>
+</figure>
+</div>
 </div>
 </section>
 <section id="diodes-als-voorinstelspanning">
@@ -727,7 +749,7 @@ Als een gevolg hiervan kan de duurdere aanschafkost gemakkelijk terugewonnen wor
 <div class="cell_output docutils container">
 <figure class="align-default" id="bfig1v2">
 <img alt="_images/68f4ced68fb503654fe271e14ab745d6c6bebaf0b48662f37dd0e33eaf9bbd85.svg" src="_images/68f4ced68fb503654fe271e14ab745d6c6bebaf0b48662f37dd0e33eaf9bbd85.svg" /><figcaption>
-<p><span class="caption-number">Fig. 14 </span><span class="caption-text">Basisschema van de klasse B versterker voor DC werking met diode voorinstelspanning.</span><a class="headerlink" href="#bfig1v2" title="Permallink naar deze afbeelding">#</a></p>
+<p><span class="caption-number">Fig. 16 </span><span class="caption-text">Basisschema van de klasse B versterker voor DC werking met diode voorinstelspanning.</span><a class="headerlink" href="#bfig1v2" title="Permallink naar deze afbeelding">#</a></p>
 </figcaption>
 </figure>
 </div>
@@ -739,7 +761,7 @@ Als een gevolg hiervan kan de duurdere aanschafkost gemakkelijk terugewonnen wor
 <div class="cell_output docutils container">
 <img alt="_images/5569a62b4a9699c140bbc6f1d6a0863882d23cfd179c9f5b66904cd4c992a77d.svg" src="_images/5569a62b4a9699c140bbc6f1d6a0863882d23cfd179c9f5b66904cd4c992a77d.svg" /></div>
 </div>
-<p>Hieronder tonen we de spice listing van de klasse B versterker waarbij we een voorinstelspanning voorzien tussen de  basissen van de npn en de pnp transistor. Deze voorinstelspanning is hier uitgevoerd door diodes. in <a class="reference internal" href="#bfig2dio"><span class="std std-numref">Fig. 15</span></a> merken we hierbij op dat dit tot gevolg heeft dat er toch een stroom blijft lopen door de transistor die niet in geleiding is. Dit noemen we de klasse AB werking van deze klasseB versterker.</p>
+<p>Hieronder tonen we de spice listing van de klasse B versterker waarbij we een voorinstelspanning voorzien tussen de  basissen van de npn en de pnp transistor. Deze voorinstelspanning is hier uitgevoerd door diodes. in <a class="reference internal" href="#bfig2dio"><span class="std std-numref">Fig. 17</span></a> merken we hierbij op dat dit tot gevolg heeft dat er toch een stroom blijft lopen door de transistor die niet in geleiding is. Dit noemen we de klasse AB werking van deze klasseB versterker.</p>
 <div class="literal-block-wrapper docutils container" id="listing2">
 <div class="code-block-caption"><span class="caption-number">Spice Listing 5 </span><span class="caption-text">Klasse B circuit met voorinstelspanning</span><a class="headerlink" href="#listing2" title="Permalink naar deze broncode">#</a></div>
 <div class="highlight-spice notranslate"><div class="highlight"><pre><span></span><span class="nx">Klasse</span><span class="w"> </span><span class="nx">B</span><span class="w"> </span><span class="nx">versterker</span>
@@ -772,23 +794,23 @@ Als een gevolg hiervan kan de duurdere aanschafkost gemakkelijk terugewonnen wor
 <figure class="align-default" id="bfig2dio">
 <img alt="_images/f2851c8db6bb0a746aa7f8ec817d05a526610760845000c0bf31fc3e20b2c65d.png" src="_images/f2851c8db6bb0a746aa7f8ec817d05a526610760845000c0bf31fc3e20b2c65d.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 15 </span><span class="caption-text">De klasse B versterker: stromen en spanningen als functie van de tijd.</span><a class="headerlink" href="#bfig2dio" title="Permallink naar deze afbeelding">#</a></p>
+<p><span class="caption-number">Fig. 17 </span><span class="caption-text">De klasse B versterker: stromen en spanningen als functie van de tijd.</span><a class="headerlink" href="#bfig2dio" title="Permallink naar deze afbeelding">#</a></p>
 </figcaption>
 </figure>
 </div>
 </div>
-<p>In de grafiek (<a class="reference internal" href="#bfig2dioss"><span class="std std-numref">Fig. 16</span></a>) wordt dit nog duidelijker.</p>
+<p>In de grafiek (<a class="reference internal" href="#bfig2dioss"><span class="std std-numref">Fig. 18</span></a>) wordt dit nog duidelijker.</p>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
 <figure class="align-default" id="bfig2dioss">
 <img alt="_images/5ef8a8201db443efeaa8dcaddedf20b8426cdf9fc3aac9d754f5201106d890a0.png" src="_images/5ef8a8201db443efeaa8dcaddedf20b8426cdf9fc3aac9d754f5201106d890a0.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 16 </span><span class="caption-text">De klasse B versterker: de stroom door een npn transistor als functie van de spanning.</span><a class="headerlink" href="#bfig2dioss" title="Permallink naar deze afbeelding">#</a></p>
+<p><span class="caption-number">Fig. 18 </span><span class="caption-text">De klasse B versterker: de stroom door een npn transistor als functie van de spanning.</span><a class="headerlink" href="#bfig2dioss" title="Permallink naar deze afbeelding">#</a></p>
 </figcaption>
 </figure>
 </div>
 </div>
-<p>We kunnen ook proberen de dode zone weg te werken aan de hand van feedback, zoals in het onderstaande schema aan de hand van een opamp. Op het eerste zicht lijkt dat te lukken, als we de simulatie in <a class="reference internal" href="#bopmapsim"><span class="std std-numref">Fig. 17</span></a> bekijken. De <span class="math notranslate nohighlight">\(V_{in}\)</span> en <span class="math notranslate nohighlight">\(V_{out}\)</span> liggen zo goed als volledig op elkaar dat we het verschil niet merken. Enkel als we heel erg inzoemen, zoals in <a class="reference internal" href="#bopmapsimz"><span class="std std-numref">Fig. 18</span></a> lijkt er een klein verschil te zijn langs de nuldoorgang. Laat je hierbij echter niet vangen. Deze simualtie is gedaan met een ideale OpAmp, warvan de stijsnelheid niet realistisch is. Wanneer we diezelfde simulatie hernemen met een realistische OpAmp, zie onder, blijft dit bijna ideale gedrag niet behouden.</p>
+<p>We kunnen ook proberen de dode zone weg te werken aan de hand van feedback, zoals in het onderstaande schema aan de hand van een opamp. Op het eerste zicht lijkt dat te lukken, als we de simulatie in <a class="reference internal" href="#bopmapsim"><span class="std std-numref">Fig. 19</span></a> bekijken. De <span class="math notranslate nohighlight">\(V_{in}\)</span> en <span class="math notranslate nohighlight">\(V_{out}\)</span> liggen zo goed als volledig op elkaar dat we het verschil niet merken. Enkel als we heel erg inzoemen, zoals in <a class="reference internal" href="#bopmapsimz"><span class="std std-numref">Fig. 20</span></a> lijkt er een klein verschil te zijn langs de nuldoorgang. Laat je hierbij echter niet vangen. Deze simualtie is gedaan met een ideale OpAmp, warvan de stijsnelheid niet realistisch is. Wanneer we diezelfde simulatie hernemen met een realistische OpAmp, zie onder, blijft dit bijna ideale gedrag niet behouden.</p>
 <div class="literal-block-wrapper docutils container" id="listing3">
 <div class="code-block-caption"><span class="caption-number">Spice Listing 6 </span><span class="caption-text">SPICE code met OPAMP feedback</span><a class="headerlink" href="#listing3" title="Permalink naar deze broncode">#</a></div>
 <div class="highlight-spice notranslate"><div class="highlight"><pre><span></span><span class="p">.</span><span class="nx">title</span><span class="w"> </span><span class="nx">Klasse</span><span class="w"> </span><span class="nx">B</span><span class="w"> </span><span class="nx">versterker</span><span class="w">  </span><span class="nx">PUSH</span><span class="o">-</span><span class="nx">PULL</span><span class="w"> </span><span class="nx">PLACED</span><span class="w"> </span><span class="nx">IN</span><span class="w"> </span><span class="nx">OPAMP</span><span class="w"> </span><span class="nx">FEEDBACK</span><span class="w"> </span><span class="nx">LOOP</span>
@@ -817,7 +839,7 @@ Als een gevolg hiervan kan de duurdere aanschafkost gemakkelijk terugewonnen wor
 <figure class="align-default" id="bopmapsim">
 <img alt="_images/59387b33b1f002d8a48e5bdb203e308ed3a70bf9706756e4386c1ecb12f527ea.png" src="_images/59387b33b1f002d8a48e5bdb203e308ed3a70bf9706756e4386c1ecb12f527ea.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 17 </span><span class="caption-text">De klasse B versterker teruggekoppeld met een ideale OpAmp: stromen en spanningen als functie van de tijd.</span><a class="headerlink" href="#bopmapsim" title="Permallink naar deze afbeelding">#</a></p>
+<p><span class="caption-number">Fig. 19 </span><span class="caption-text">De klasse B versterker teruggekoppeld met een ideale OpAmp: stromen en spanningen als functie van de tijd.</span><a class="headerlink" href="#bopmapsim" title="Permallink naar deze afbeelding">#</a></p>
 </figcaption>
 </figure>
 </div>
@@ -827,7 +849,7 @@ Als een gevolg hiervan kan de duurdere aanschafkost gemakkelijk terugewonnen wor
 <figure class="align-default" id="bopmapsimz">
 <img alt="_images/b75d851927a413fd219cb5255ceca7331f05ffe886f40375db4dff0dacd58a9b.png" src="_images/b75d851927a413fd219cb5255ceca7331f05ffe886f40375db4dff0dacd58a9b.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 18 </span><span class="caption-text">De klasse B versterker teruggekoppeld met een ideale OpAmp: stromen en spanningen als functie van de tijd in de nabijheid van de nuldoorgang.</span><a class="headerlink" href="#bopmapsimz" title="Permallink naar deze afbeelding">#</a></p>
+<p><span class="caption-number">Fig. 20 </span><span class="caption-text">De klasse B versterker teruggekoppeld met een ideale OpAmp: stromen en spanningen als functie van de tijd in de nabijheid van de nuldoorgang.</span><a class="headerlink" href="#bopmapsimz" title="Permallink naar deze afbeelding">#</a></p>
 </figcaption>
 </figure>
 </div>
@@ -837,7 +859,7 @@ Als een gevolg hiervan kan de duurdere aanschafkost gemakkelijk terugewonnen wor
 <figure class="align-default" id="bopamp-dio">
 <img alt="_images/4ff30a974856b76bc4fdb34325b56a2b2dbd9945a6bd2c5836495ce69aa64819.png" src="_images/4ff30a974856b76bc4fdb34325b56a2b2dbd9945a6bd2c5836495ce69aa64819.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 19 </span><span class="caption-text">De klasse B versterker: de stroom door een npn transistor als functie van de spanning.</span><a class="headerlink" href="#bopamp-dio" title="Permallink naar deze afbeelding">#</a></p>
+<p><span class="caption-number">Fig. 21 </span><span class="caption-text">De klasse B versterker: de stroom door een npn transistor als functie van de spanning.</span><a class="headerlink" href="#bopamp-dio" title="Permallink naar deze afbeelding">#</a></p>
 </figcaption>
 </figure>
 </div>
@@ -870,7 +892,7 @@ Als een gevolg hiervan kan de duurdere aanschafkost gemakkelijk terugewonnen wor
 <figure class="align-default" id="bopmapsiml">
 <img alt="_images/65294cdc51855d47e60338591c52229c88fd17acd1c3529e9cd817d5a6b655ed.png" src="_images/65294cdc51855d47e60338591c52229c88fd17acd1c3529e9cd817d5a6b655ed.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 20 </span><span class="caption-text">De klasse B versterker met lagere voedingsspanning teruggekoppeld met een ideale OpAmp: stromen en spanningen als functie van de tijd.</span><a class="headerlink" href="#bopmapsiml" title="Permallink naar deze afbeelding">#</a></p>
+<p><span class="caption-number">Fig. 22 </span><span class="caption-text">De klasse B versterker met lagere voedingsspanning teruggekoppeld met een ideale OpAmp: stromen en spanningen als functie van de tijd.</span><a class="headerlink" href="#bopmapsiml" title="Permallink naar deze afbeelding">#</a></p>
 </figcaption>
 </figure>
 </div>
@@ -881,37 +903,133 @@ Als een gevolg hiervan kan de duurdere aanschafkost gemakkelijk terugewonnen wor
 <figure class="align-default" id="bopmapsiml2">
 <img alt="_images/2515f4bb8a0983e72f46b9e4e960c2974eef0cc45746f98b7fc315352d49f2c0.png" src="_images/2515f4bb8a0983e72f46b9e4e960c2974eef0cc45746f98b7fc315352d49f2c0.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 21 </span><span class="caption-text">De klasse B versterker met lagere voedinsspanning teruggekoppeld met een realistisch OpAmp model <a class="reference external" href="https://www.ti.com/product/LMV981-N">LMV981-N</a>: stromen en spanningen als functie van de tijd.</span><a class="headerlink" href="#bopmapsiml2" title="Permallink naar deze afbeelding">#</a></p>
+<p><span class="caption-number">Fig. 23 </span><span class="caption-text">De klasse B versterker met lagere voedinsspanning teruggekoppeld met een realistisch OpAmp model <a class="reference external" href="https://www.ti.com/product/LMV981-N">LMV981-N</a>: stromen en spanningen als functie van de tijd.</span><a class="headerlink" href="#bopmapsiml2" title="Permallink naar deze afbeelding">#</a></p>
 </figcaption>
 </figure>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_output docutils container">
-<img alt="_images/d656b92432e9b846b7098d9586113bf61912d37dacb07af129eadf343a5d1f43.svg" src="_images/d656b92432e9b846b7098d9586113bf61912d37dacb07af129eadf343a5d1f43.svg" /></div>
+<figure class="align-default" id="bfig1driver">
+<img alt="_images/d656b92432e9b846b7098d9586113bf61912d37dacb07af129eadf343a5d1f43.svg" src="_images/d656b92432e9b846b7098d9586113bf61912d37dacb07af129eadf343a5d1f43.svg" /><figcaption>
+<p><span class="caption-number">Fig. 24 </span><span class="caption-text">Basisschema van de klasse B versterker met driver stage.</span><a class="headerlink" href="#bfig1driver" title="Permallink naar deze afbeelding">#</a></p>
+</figcaption>
+</figure>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_output docutils container">
-<img alt="_images/2d57065892ddef3aa0341e8eb179aa8e037c2ff31de0f7eb4799a23b1d9dd8d2.svg" src="_images/2d57065892ddef3aa0341e8eb179aa8e037c2ff31de0f7eb4799a23b1d9dd8d2.svg" /></div>
+<figure class="align-default" id="bfigstroombron">
+<img alt="_images/2d57065892ddef3aa0341e8eb179aa8e037c2ff31de0f7eb4799a23b1d9dd8d2.svg" src="_images/2d57065892ddef3aa0341e8eb179aa8e037c2ff31de0f7eb4799a23b1d9dd8d2.svg" /><figcaption>
+<p><span class="caption-number">Fig. 25 </span><span class="caption-text">Basisschema van de klasse B versterker met stroombron.</span><a class="headerlink" href="#bfigstroombron" title="Permallink naar deze afbeelding">#</a></p>
+</figcaption>
+</figure>
+</div>
 </div>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
 <figure class="align-default" id="bdoubledriver">
 <img alt="_images/3898a557f91af3e684800a318e731b4c207f7e0aba907ef88291983c7015fcf7.svg" src="_images/3898a557f91af3e684800a318e731b4c207f7e0aba907ef88291983c7015fcf7.svg" /><figcaption>
-<p><span class="caption-number">Fig. 22 </span><span class="caption-text">De klasse B versterker met 2 opeenvolgende drive transistors.</span><a class="headerlink" href="#bdoubledriver" title="Permallink naar deze afbeelding">#</a></p>
+<p><span class="caption-number">Fig. 26 </span><span class="caption-text">De klasse B versterker met 2 opeenvolgende drive transistors.</span><a class="headerlink" href="#bdoubledriver" title="Permallink naar deze afbeelding">#</a></p>
 </figcaption>
 </figure>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_output docutils container">
-<img alt="_images/e6c5b089fa743ef61fef7fd0da966a7fd815e10df16d95901adac280911bb0b9.svg" src="_images/e6c5b089fa743ef61fef7fd0da966a7fd815e10df16d95901adac280911bb0b9.svg" /></div>
+<figure class="align-default" id="bfig3">
+<img alt="_images/e6c5b089fa743ef61fef7fd0da966a7fd815e10df16d95901adac280911bb0b9.svg" src="_images/e6c5b089fa743ef61fef7fd0da966a7fd815e10df16d95901adac280911bb0b9.svg" /><figcaption>
+<p><span class="caption-number">Fig. 27 </span><span class="caption-text">klasse B versterker.</span><a class="headerlink" href="#bfig3" title="Permallink naar deze afbeelding">#</a></p>
+</figcaption>
+</figure>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_output docutils container">
-<img alt="_images/7530de6daa21cc43d6b01612a97906fc3452112a929ebe020c895ab3c4b0847a.svg" src="_images/7530de6daa21cc43d6b01612a97906fc3452112a929ebe020c895ab3c4b0847a.svg" /></div>
+<figure class="align-default" id="bfig4">
+<img alt="_images/7530de6daa21cc43d6b01612a97906fc3452112a929ebe020c895ab3c4b0847a.svg" src="_images/7530de6daa21cc43d6b01612a97906fc3452112a929ebe020c895ab3c4b0847a.svg" /><figcaption>
+<p><span class="caption-number">Fig. 28 </span><span class="caption-text">Klasse B versterker met overstroombescherming.</span><a class="headerlink" href="#bfig4" title="Permallink naar deze afbeelding">#</a></p>
+</figcaption>
+</figure>
+</div>
 </div>
 </section>
+</section>
+<section id="filtering-aan-de-ingang">
+<h2>Filtering aan de ingang<a class="headerlink" href="#filtering-aan-de-ingang" title="Permalink to this heading">#</a></h2>
+<p>In de meeste gevallen zijn er ook ongewenste signalen aan de ingang en het is niet efficient om deze ook mee te versterken.
+Daarom is het efficient om deze signalen weg te filteren aan de ingang.
+In <a class="reference internal" href="#bfig1ac"><span class="std std-numref">Fig. 14</span></a> wordt dit reeds gedaan voor de DC component in het signaal. Deze is niet nuttig indien we enkel het AC signaal aan de uitgang bekomen. We kunnen echter een heel stuk beter doen.</p>
+<section id="hoogdoorlaatfilter-aan-de-ingang">
+<h3>Hoogdoorlaatfilter aan de ingang<a class="headerlink" href="#hoogdoorlaatfilter-aan-de-ingang" title="Permalink to this heading">#</a></h3>
+<p><a class="reference internal" href="#figbhoog"><span class="std std-numref">Fig. 29</span></a> toont hoe we een hoogdoorlaatfilter aan de ingang van een klasse B versterker kunnen realiseren.</p>
+<div class="cell docutils container">
+<div class="cell_output docutils container">
+<figure class="align-default" id="figbhoog">
+<img alt="_images/8f2177b5cf9a4828261f72a0a8e5fb20ad9bca3147d6da45fd458342e33ad7cc.svg" src="_images/8f2177b5cf9a4828261f72a0a8e5fb20ad9bca3147d6da45fd458342e33ad7cc.svg" /><figcaption>
+<p><span class="caption-number">Fig. 29 </span><span class="caption-text">Klasse B versterker met hoogdoorlaatfilter aan de ingang.</span><a class="headerlink" href="#figbhoog" title="Permallink naar deze afbeelding">#</a></p>
+</figcaption>
+</figure>
+</div>
+</div>
+</section>
+<section id="laagdoorlaatfilter-aan-de-ingang">
+<h3>Laagdoorlaatfilter aan de ingang<a class="headerlink" href="#laagdoorlaatfilter-aan-de-ingang" title="Permalink to this heading">#</a></h3>
+<p><a class="reference internal" href="#figblaag"><span class="std std-numref">Fig. 30</span></a> toont hoe we een laagdoorlaatfilter aan de ingang van een klasse B versterker kunnen realiseren.</p>
+<div class="cell docutils container">
+<div class="cell_output docutils container">
+<figure class="align-default" id="figblaag">
+<img alt="_images/dccf2f2de2b14bf2620d3ed02057bee653b8840a045c1f1e0590d169f748cd55.svg" src="_images/dccf2f2de2b14bf2620d3ed02057bee653b8840a045c1f1e0590d169f748cd55.svg" /><figcaption>
+<p><span class="caption-number">Fig. 30 </span><span class="caption-text">Klasse B versterker met laagdoorlaatfilter aan de ingang.</span><a class="headerlink" href="#figblaag" title="Permallink naar deze afbeelding">#</a></p>
+</figcaption>
+</figure>
+</div>
+</div>
+</section>
+<section id="banddoorlaatfilter-aan-de-ingang">
+<h3>Banddoorlaatfilter aan de ingang<a class="headerlink" href="#banddoorlaatfilter-aan-de-ingang" title="Permalink to this heading">#</a></h3>
+<p>De hoogdoorlaatfilter in <a class="reference internal" href="#figbhoog"><span class="std std-numref">Fig. 29</span></a> en de laagdoorlaatfilter in <a class="reference internal" href="#figblaag"><span class="std std-numref">Fig. 30</span></a> kunnen gecombineerd worden in een banddoorlaatfilter zoals getoond wordt in <a class="reference internal" href="#figbband"><span class="std std-numref">Fig. 31</span></a>. Dit is de meest eenvoudige oplossing om een banddoorlaatfilter te bekomen overeenstemmende met de gewenste karakteristieken van het signaal. Er zijn heel wat mogelijkheden om nog veel betere ingangsfilters te ontwerpen. Dit is echter niet het doel van deze cursus. Hiervoor verwijzen we naar de cursus <span class="xref myst">toegepaste analoge Elektronica</span> <span id="id1">[]</span></p>
+<div class="cell docutils container">
+<div class="cell_output docutils container">
+<figure class="align-default" id="figbband">
+<img alt="_images/2057ca29e83d7fab4fcb5b62c3efa0a9b2b95389b7527b59af3fe8679c527051.svg" src="_images/2057ca29e83d7fab4fcb5b62c3efa0a9b2b95389b7527b59af3fe8679c527051.svg" /><figcaption>
+<p><span class="caption-number">Fig. 31 </span><span class="caption-text">Klasse B versterker met Banddoorlaatfilter aan de ingang.</span><a class="headerlink" href="#figbband" title="Permallink naar deze afbeelding">#</a></p>
+</figcaption>
+</figure>
+</div>
+</div>
+<p><code class="xref std std-numref docutils literal notranslate"><span class="pre">BPfilter</span></code> toont de bandpass filter op zich, in de veronderstelling dat de stroom door <span class="math notranslate nohighlight">\(R_{f2}\)</span> veel groter is dan de ingangsstroom aan de basis van de driver transistor. In dat geval mogen we deze basisstroom verwaarlozen en kunnen we stellen dat de uitgangsspanning van het filter bekomen wordt door de spanningsdeling van de 2 impedanties <span class="math notranslate nohighlight">\(Z_1\)</span> en <span class="math notranslate nohighlight">\(Z_2\)</span> als:</p>
+<div class="math notranslate nohighlight">
+\[ \frac{V_{filter}}{V_{in}} = \frac{Z_2}{Z_1+ Z_2}  = \frac{1}{\frac{Z_1}{Z_2}+ 1} \]</div>
+<p>met</p>
+<div class="math notranslate nohighlight">
+\[ Z_1 = \frac{1}{j \omega C_{f1}} + R_{f1} \]</div>
+<p>en</p>
+<div class="math notranslate nohighlight">
+\[ \frac{1}{Z_2} = j \omega C_{f2} + \frac{1}{R_{f2}} \]</div>
+<p>Hieruit volgt:</p>
+<div class="math notranslate nohighlight">
+\[ \frac{V_{filter}}{V_{in}} =  \frac{1}{(\frac{1}{j \omega C_{f1}} + R_{f1})(j \omega C_{f2} + \frac{1}{R_{f2}})+ 1} \]</div>
+<div class="cell docutils container">
+<div class="cell_output docutils container">
+<img alt="_images/5d96fb4e4483e04e93c3e0dcbb4381ba20bcf0aabf1532b146c64ed4fb9c55bf.svg" src="_images/5d96fb4e4483e04e93c3e0dcbb4381ba20bcf0aabf1532b146c64ed4fb9c55bf.svg" /></div>
+</div>
+<div class="exercise dropdown admonition" id="Klasse-B-exercise-0">
+
+<p class="admonition-title"><span class="caption-number">Opdracht 1 </span> (Berekening laagdoorlaat en hoogdoorlaatkarakteristiek)</p>
+<section id="exercise-content">
+<p>Hierboven hebben we de banddoorlaatfilter uitgerekend die overeenkomt met <a class="reference internal" href="#figbband"><span class="std std-numref">Fig. 31</span></a>.
+Reken ook de filterkarekteristieken uit van de hoogdoorlaatfilter in
+<a class="reference internal" href="#figbhoog"><span class="std std-numref">Fig. 29</span></a> en de laagdoorlaatfilter in <a class="reference internal" href="#figblaag"><span class="std std-numref">Fig. 30</span></a>.</p>
+</section>
+</div>
+</section>
+</section>
+<section id="zelftest-via-flashcards">
+<h2>Zelftest via Flashcards<a class="headerlink" href="#zelftest-via-flashcards" title="Permalink to this heading">#</a></h2>
+<p>Klik op de vraag als je je antwoord wil nakijken. Klik op next om de volgende vraag te bekomen.</p>
+<div class="cell docutils container">
+</div>
 </section>
 <div class="toctree-wrapper compound">
 </div>
@@ -992,6 +1110,13 @@ Als een gevolg hiervan kan de duurdere aanschafkost gemakkelijk terugewonnen wor
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#transistor-als-voorinstelspanning">Transistor als voorinstelspanning</a></li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#filtering-aan-de-ingang">Filtering aan de ingang</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hoogdoorlaatfilter-aan-de-ingang">Hoogdoorlaatfilter aan de ingang</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#laagdoorlaatfilter-aan-de-ingang">Laagdoorlaatfilter aan de ingang</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#banddoorlaatfilter-aan-de-ingang">Banddoorlaatfilter aan de ingang</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#zelftest-via-flashcards">Zelftest via Flashcards</a></li>
 </ul>
   </nav></div>
 

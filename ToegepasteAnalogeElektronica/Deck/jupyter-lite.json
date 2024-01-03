@@ -2,7 +2,7 @@
   "jupyter-config-data": {
     "appName": "KULeuven Cursus",
     "appUrl": "./lab",
-    "appVersion": "0.2.1",
+    "appVersion": "0.2.2",
     "baseUrl": "./",
     "contentsStorageName": "JupyterDeck Storage",
     "defaultKernelName": "python",
@@ -54,7 +54,7 @@
       {
         "extension": "./extension",
         "liteExtension": true,
-        "load": "static/remoteEntry.d32483ece0ef677860da.js",
+        "load": "static/remoteEntry.cbca1265af0d2091476f.js",
         "name": "@jupyterlite/javascript-kernel-extension"
       },
       {
