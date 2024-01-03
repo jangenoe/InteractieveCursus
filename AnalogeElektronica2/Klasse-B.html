@@ -998,7 +998,7 @@ In <a class="reference internal" href="#bfig1ac"><span class="std std-numref">Fi
 </figure>
 </div>
 </div>
-<p><code class="xref std std-numref docutils literal notranslate"><span class="pre">BPfilter</span></code> toont de bandpass filter op zich, in de veronderstelling dat de stroom door <span class="math notranslate nohighlight">\(R_{f2}\)</span> veel groter is dan de ingangsstroom aan de basis van de driver transistor. In dat geval mogen we deze basisstroom verwaarlozen en kunnen we stellen dat de uitgangsspanning van het filter bekomen wordt door de spanningsdeling van de 2 impedanties <span class="math notranslate nohighlight">\(Z_1\)</span> en <span class="math notranslate nohighlight">\(Z_2\)</span> als:</p>
+<p><a class="reference internal" href="#bpfilter"><span class="std std-numref">Fig. 32</span></a> toont de bandpass filter op zich, in de veronderstelling dat de stroom door <span class="math notranslate nohighlight">\(R_{f2}\)</span> veel groter is dan de ingangsstroom aan de basis van de driver transistor. In dat geval mogen we deze basisstroom verwaarlozen en kunnen we stellen dat de uitgangsspanning van het filter bekomen wordt door de spanningsdeling van de 2 impedanties <span class="math notranslate nohighlight">\(Z_1\)</span> en <span class="math notranslate nohighlight">\(Z_2\)</span> als:</p>
 <div class="math notranslate nohighlight">
 \[ \frac{V_{filter}}{V_{in}} = \frac{Z_2}{Z_1+ Z_2}  = \frac{1}{\frac{Z_1}{Z_2}+ 1} \]</div>
 <p>met</p>
@@ -1012,7 +1012,12 @@ In <a class="reference internal" href="#bfig1ac"><span class="std std-numref">Fi
 \[ \frac{V_{filter}}{V_{in}} =  \frac{1}{(\frac{1}{j \omega C_{f1}} + R_{f1})(j \omega C_{f2} + \frac{1}{R_{f2}})+ 1} \]</div>
 <div class="cell docutils container">
 <div class="cell_output docutils container">
-<img alt="_images/5d96fb4e4483e04e93c3e0dcbb4381ba20bcf0aabf1532b146c64ed4fb9c55bf.svg" src="_images/5d96fb4e4483e04e93c3e0dcbb4381ba20bcf0aabf1532b146c64ed4fb9c55bf.svg" /></div>
+<figure class="align-default" id="bpfilter">
+<img alt="_images/5fcc27a681031a0042235f3df2c45e2e5e888c1d9824e73b7cf0f0f754b41648.svg" src="_images/5fcc27a681031a0042235f3df2c45e2e5e888c1d9824e73b7cf0f0f754b41648.svg" /><figcaption>
+<p><span class="caption-number">Fig. 32 </span><span class="caption-text">Banddoorlaatfilter voor aan de ingang.</span><a class="headerlink" href="#bpfilter" title="Permallink naar deze afbeelding">#</a></p>
+</figcaption>
+</figure>
+</div>
 </div>
 <div class="exercise dropdown admonition" id="Klasse-B-exercise-0">
 
