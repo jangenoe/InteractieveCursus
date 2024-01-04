@@ -1,6 +1,9 @@
 format: jb-book
 root: intro2
 parts:
+- caption: Transistor Configuraties
+  chapters:
+  - file: TransistorConfiguraties
 - caption: Versterkers
   chapters:
   - file: Klasse-A
