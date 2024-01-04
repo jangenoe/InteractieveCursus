@@ -12,10 +12,10 @@
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://jangenoe.github.io/jangenoe/InteractieveCursus/AnalogeElektronica2/Klasse-B-vb4.html" />
 <meta property="og:site_name" content="Python" />
-<meta property="og:description" content="In[ 1] wordt de klasse AB werking getoond aan de hand van het schema in Fig. 48. We bestuderen dit schema in meer detail. Eerst bekijken we de voorinsteltak. De 2 weerstanden R, samen met de 2 diod..." />
+<meta property="og:description" content="In[ 1] wordt de klasse AB werking getoond aan de hand van het schema in Fig. 47. We bestuderen dit schema in meer detail. Eerst bekijken we de voorinsteltak. De 2 weerstanden R, samen met de 2 diod..." />
 <meta property="og:image" content="https://jangenoe.github.io/InteractieveCursus/AnalogeElektronica2/_static/logo.svg" />
 <meta property="og:image:alt" content="Python" />
-<meta name="description" content="In[ 1] wordt de klasse AB werking getoond aan de hand van het schema in Fig. 48. We bestuderen dit schema in meer detail. Eerst bekijken we de voorinsteltak. De 2 weerstanden R, samen met de 2 diod..." />
+<meta name="description" content="In[ 1] wordt de klasse AB werking getoond aan de hand van het schema in Fig. 47. We bestuderen dit schema in meer detail. Eerst bekijken we de voorinsteltak. De 2 weerstanden R, samen met de 2 diod..." />
 
     <title>Uitgewerkt voorbeeld van een klasse AB met MOS transistors &#8212; Analoge elektronische schakelingen</title>
   
@@ -27,15 +27,15 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
-<link href="_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
-<link href="_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+  <link href="_static/styles/theme.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
 
   
-  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+  <link href="_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css" />
@@ -47,9 +47,9 @@
     <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
-<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
-  <script src="_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=bd9e20870c6007c4c509" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=bd9e20870c6007c4c509" />
+  <script src="_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=bd9e20870c6007c4c509"></script>
 
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
@@ -89,7 +89,7 @@ const thebe_selector_output = ".output, .cell_output"
 
   
   
-  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
   
   <div id="pst-scroll-pixel-helper"></div>
 
@@ -132,12 +132,20 @@ const thebe_selector_output = ".output, .cell_output"
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
 </form></div>
   </div>
+
+  <header>
   
-    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
-    </nav>
+    <div class="bd-header navbar navbar-expand-lg bd-navbar">
+    </div>
   
+  </header>
+
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
       
       <div class="bd-sidebar-primary bd-sidebar">
         
@@ -557,12 +565,12 @@ document.write(`
               
                 
 <div id="searchbox"></div>
-                <article class="bd-article" role="main">
+                <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="uitgewerkt-voorbeeld-van-een-klasse-ab-met-mos-transistors">
 <h1>Uitgewerkt voorbeeld van een klasse AB met MOS transistors<a class="headerlink" href="#uitgewerkt-voorbeeld-van-een-klasse-ab-met-mos-transistors" title="Permalink to this heading">#</a></h1>
 <p>In <span id="id1">[<a class="reference internal" href="References.html#id2" title="X. Jiang. Fundamentals of Audio Class D Amplifier Design: A Review of Schemes and Architectures. IEEE Solid-State Circuits Magazine, 9(3):14–25, 2017. doi:10.1109/MSSC.2017.2712368.">1</a>]</span>
-wordt de klasse AB werking getoond aan de hand van het schema in <a class="reference internal" href="#figbias"><span class="std std-numref">Fig. 48</span></a>. We bestuderen dit schema in meer detail. Eerst bekijken we de voorinsteltak. De 2 weerstanden R, samen met de 2 diodes zorgen ervoor dat zonder aangelegd signaal de spanning <span class="math notranslate nohighlight">\(V_i\)</span> gelegen is midden de 2 voedingsspanningen. De 2 weerstanden R zijn dan zo gekozen dat de <span class="math notranslate nohighlight">\(I_B\)</span> een DC stroomcomponenten heeft die mooi kan ingesteld worden door R.</p>
+wordt de klasse AB werking getoond aan de hand van het schema in <a class="reference internal" href="#figbias"><span class="std std-numref">Fig. 47</span></a>. We bestuderen dit schema in meer detail. Eerst bekijken we de voorinsteltak. De 2 weerstanden R, samen met de 2 diodes zorgen ervoor dat zonder aangelegd signaal de spanning <span class="math notranslate nohighlight">\(V_i\)</span> gelegen is midden de 2 voedingsspanningen. De 2 weerstanden R zijn dan zo gekozen dat de <span class="math notranslate nohighlight">\(I_B\)</span> een DC stroomcomponenten heeft die mooi kan ingesteld worden door R.</p>
 <p>Wanneer we vervolgens een AC signaal aanleggen, krijgen we de volgende signalen:</p>
 <ul class="simple">
 <li><p><span class="math notranslate nohighlight">\(V_I+V_D\)</span> aan de ingang van de nMOS transistor <span class="math notranslate nohighlight">\(M_N\)</span></p></li>
@@ -578,7 +586,7 @@ wordt de klasse AB werking getoond aan de hand van het schema in <a class="refer
 <figure class="align-default" id="figbias">
 <img alt="_images/ClassB_Bias.png" src="_images/ClassB_Bias.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 48 </span><span class="caption-text">Klasse AB versterker met MOS transistors <cite id='vks4r'><a href='#zotero|11916217/EY2R3695'>[1]</a></cite>.</span><a class="headerlink" href="#figbias" title="Permallink naar deze afbeelding">#</a></p>
+<p><span class="caption-number">Fig. 47 </span><span class="caption-text">Klasse AB versterker met MOS transistors <cite id='vks4r'><a href='#zotero|11916217/EY2R3695'>[1]</a></cite>.</span><a class="headerlink" href="#figbias" title="Permallink naar deze afbeelding">#</a></p>
 </figcaption>
 </figure>
 <p>Wanneer we de spanning aan de gate en de source invullen krijgen we:</p>
@@ -587,15 +595,15 @@ wordt de klasse AB werking getoond aan de hand van het schema in <a class="refer
 <li><p><span class="math notranslate nohighlight">\( I_p=\mu_p C_{ox} \frac{W_p}{2L_p} (V_I-V_D -V_{out}-V_{Tp})^2\)</span>   als <span class="math notranslate nohighlight">\(V_I-V_D -V_{out} &lt;V_{Tp}\)</span></p></li>
 <li><p><span class="math notranslate nohighlight">\( V_{out}= (I_n -I_p)R_L\)</span></p></li>
 </ul>
-<p>In <a class="reference internal" href="#transfer1"><span class="std std-numref">Fig. 49</span></a> berekenen we deze stromen. We veronderstellen hierbij dat:
+<p>In <a class="reference internal" href="#transfer1"><span class="std std-numref">Fig. 48</span></a> berekenen we deze stromen. We veronderstellen hierbij dat:
 <span class="math notranslate nohighlight">\(\mu_n C_{ox} \frac{W_n}{2L_n}=\mu_p C_{ox} \frac{W_p}{2L_p}=0.02 A/V^2\)</span>,<span class="math notranslate nohighlight">\(V_D=0.7V\)</span>, <span class="math notranslate nohighlight">\(V_{Tn}=0.3V\)</span> <span class="math notranslate nohighlight">\(V_{Tp}=-0.3V\)</span> en <span class="math notranslate nohighlight">\(R_L=80 \Omega\)</span>.</p>
-<p>In <a class="reference internal" href="#transfer1b"><span class="std std-numref">Fig. 50</span></a> zoemen we in op een detail rond de oorsprong.</p>
+<p>In <a class="reference internal" href="#transfer1b"><span class="std std-numref">Fig. 49</span></a> zoemen we in op een detail rond de oorsprong.</p>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
 <figure class="align-default" id="transfer1">
 <img alt="_images/fb5d576458519719795826a3c53408815a1560a3f09267e06076b47b30cedc7c.png" src="_images/fb5d576458519719795826a3c53408815a1560a3f09267e06076b47b30cedc7c.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 49 </span><span class="caption-text">Transfer curve en stroom van de beide transistors.</span><a class="headerlink" href="#transfer1" title="Permallink naar deze afbeelding">#</a></p>
+<p><span class="caption-number">Fig. 48 </span><span class="caption-text">Transfer curve en stroom van de beide transistors.</span><a class="headerlink" href="#transfer1" title="Permallink naar deze afbeelding">#</a></p>
 </figcaption>
 </figure>
 </div>
@@ -605,7 +613,7 @@ wordt de klasse AB werking getoond aan de hand van het schema in <a class="refer
 <figure class="align-default" id="transfer1b">
 <img alt="_images/d9cb51f2c6cce7109db04e147759da309525d9504d176325822df7cf60700921.png" src="_images/d9cb51f2c6cce7109db04e147759da309525d9504d176325822df7cf60700921.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 50 </span><span class="caption-text">Detail van de zone rond de oorsprong. We zien dat hier beide transistors in geleiding zijn.</span><a class="headerlink" href="#transfer1b" title="Permallink naar deze afbeelding">#</a></p>
+<p><span class="caption-number">Fig. 49 </span><span class="caption-text">Detail van de zone rond de oorsprong. We zien dat hier beide transistors in geleiding zijn.</span><a class="headerlink" href="#transfer1b" title="Permallink naar deze afbeelding">#</a></p>
 </figcaption>
 </figure>
 </div>
@@ -667,6 +675,8 @@ wordt de klasse AB werking getoond aan de hand van het schema in <a class="refer
             
             
               
+                <div class="bd-sidebar-secondary bd-toc"></div>
+              
             
           </div>
           <footer class="bd-footer-content">
@@ -703,8 +713,8 @@ By Jan Genoe (jan.genoe@kuleuven.be)
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
-<script src="_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
+  <script src="_static/scripts/bootstrap.js?digest=bd9e20870c6007c4c509"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=bd9e20870c6007c4c509"></script>
 
   <footer class="bd-footer">
   </footer>
