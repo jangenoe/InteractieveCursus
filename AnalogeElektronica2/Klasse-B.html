@@ -533,7 +533,11 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#het-darlington-paar">Het Darlington paar</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#beveiliging-van-de-klasse-b-vermogentransistors">Beveiliging van de Klasse B vermogentransistors</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#beveiliging-van-de-klasse-b-vermogentransistors">Beveiliging van de Klasse B vermogentransistors</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#waar-en-hoe-is-beveiliging-nodig">Waar en hoe is beveiliging nodig?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#beveiliging-tegen-overstroom">Beveiliging tegen overstroom</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#filtering-aan-de-ingang">Filtering aan de ingang</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hoogdoorlaatfilter-aan-de-ingang">Hoogdoorlaatfilter aan de ingang</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#laagdoorlaatfilter-aan-de-ingang">Laagdoorlaatfilter aan de ingang</a></li>
@@ -1236,6 +1240,11 @@ De totale stroomversterking die we dan bekomen is dan het product van beide stro
 </figure>
 </div>
 </div>
+<p>Het schema in <a class="reference internal" href="#darlington"><span class="std std-numref">Fig. 26</span></a> heeft echter 2 problemen:</p>
+<ul class="simple">
+<li><p>thermal runaway</p></li>
+<li><p>lage stroomversterking <span class="math notranslate nohighlight">\(\beta_F\)</span> bij heel lage stromen aan de basis</p></li>
+</ul>
 <div class="cell docutils container">
 <div class="cell_output docutils container">
 <figure class="align-default" id="darlington-ed">
@@ -1255,7 +1264,9 @@ De totale stroomversterking die we dan bekomen is dan het product van beide stro
 </figure>
 </div>
 </div>
-<p>Wanneer we een Darlington paar toevoegen in het schema van <a class="reference internal" href="#bfigstroombron"><span class="std std-numref">Fig. 25</span></a> krijgen we het schema in <a class="reference internal" href="#bfig4"><span class="std std-numref">Fig. 29</span></a></p>
+<div class="cell docutils container">
+</div>
+<p>Wanneer we een Darlington paar toevoegen in het schema van <a class="reference internal" href="#bfigstroombron"><span class="std std-numref">Fig. 25</span></a> krijgen we het schema in <code class="xref std std-numref docutils literal notranslate"><span class="pre">Bfig3</span></code></p>
 <div class="exercise dropdown admonition" id="Klasse-B-exercise-0">
 
 <p class="admonition-title"><span class="caption-number">Opdracht 1 </span> (Toevoeging van Darlington transistorparen)</p>
@@ -1267,6 +1278,12 @@ De totale stroomversterking die we dan bekomen is dan het product van beide stro
 </section>
 <section id="beveiliging-van-de-klasse-b-vermogentransistors">
 <h2>Beveiliging van de Klasse B vermogentransistors<a class="headerlink" href="#beveiliging-van-de-klasse-b-vermogentransistors" title="Permalink to this heading">#</a></h2>
+<section id="waar-en-hoe-is-beveiliging-nodig">
+<h3>Waar en hoe is beveiliging nodig?<a class="headerlink" href="#waar-en-hoe-is-beveiliging-nodig" title="Permalink to this heading">#</a></h3>
+</section>
+<section id="beveiliging-tegen-overstroom">
+<h3>Beveiliging tegen overstroom<a class="headerlink" href="#beveiliging-tegen-overstroom" title="Permalink to this heading">#</a></h3>
+<p><a class="reference internal" href="#bfig4"><span class="std std-numref">Fig. 29</span></a> toont een eerste schema dat beveiliging tegen overstroom toevoegt. Het basisprincipe bij elke stroombeveliging is dat er gekeken wordt naar de stroom aan de uitgang van respectievelijk het pull-up en het pull-down netwerk (de groene blokken in <a class="reference internal" href="#bfig4"><span class="std std-numref">Fig. 29</span></a>). Wanneer de stroom hier de hierboven aangegeven maximale stroom overschrijdt, grijpt het blok dat gekleurd is in Cyaan in. Dit gebeurt door de stroom aan de ingang van het groene blok rechtstreeks naar de uitgang te verbinden.</p>
 <div class="cell docutils container">
 <div class="cell_output docutils container">
 <figure class="align-default" id="bfig4">
@@ -1287,6 +1304,7 @@ De totale stroomversterking die we dan bekomen is dan het product van beide stro
 </figure>
 </div>
 </div>
+</section>
 </section>
 <section id="filtering-aan-de-ingang">
 <h2>Filtering aan de ingang<a class="headerlink" href="#filtering-aan-de-ingang" title="Permalink to this heading">#</a></h2>
@@ -2074,7 +2092,11 @@ try_create(); </script></div>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#het-darlington-paar">Het Darlington paar</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#beveiliging-van-de-klasse-b-vermogentransistors">Beveiliging van de Klasse B vermogentransistors</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#beveiliging-van-de-klasse-b-vermogentransistors">Beveiliging van de Klasse B vermogentransistors</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#waar-en-hoe-is-beveiliging-nodig">Waar en hoe is beveiliging nodig?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#beveiliging-tegen-overstroom">Beveiliging tegen overstroom</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#filtering-aan-de-ingang">Filtering aan de ingang</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hoogdoorlaatfilter-aan-de-ingang">Hoogdoorlaatfilter aan de ingang</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#laagdoorlaatfilter-aan-de-ingang">Laagdoorlaatfilter aan de ingang</a></li>
