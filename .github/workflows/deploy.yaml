@@ -19,37 +19,45 @@ jobs:
         sudo add-apt-repository universe
         sudo apt update
         sudo apt-get install texlive-xetex texlive-latex-recommended texlive-fonts-recommended texlive-fonts-extra texlive-latex-extra latexmk imagemagick
-    - name: Build the Jupyterbook website
+    - name: Build the Jupyterbook websites
       run: |
+        python common/prepareBook.py
         jb build CursusIndex/
         jb build ToegepasteAnalogeElektronica/
+        jb build AnalogeElektronica2/
+        jb build AnalogDesignTechniques/ 
+        jb build MicroEnNanoTechnologie/ 
+        python common/recoverBook.py
+    - name: Build the Jupyterbook pdfs
+      run: |
+        python common/preparePDF.py
         mv ToegepasteAnalogeElektronica/_toc.yml ToegepasteAnalogeElektronica/_tochtml.yml
         mv ToegepasteAnalogeElektronica/_tocpdf.yml ToegepasteAnalogeElektronica/_toc.yml
         jb build  ToegepasteAnalogeElektronica/  --builder pdflatex
         mv ToegepasteAnalogeElektronica/_toc.yml ToegepasteAnalogeElektronica/_tocpdf.yml
         mv ToegepasteAnalogeElektronica/_tochtml.yml ToegepasteAnalogeElektronica/_toc.yml        
-        jupyter nbconvert ToegepasteAnalogeElektronica/*.ipynb --to KULeuven  --no-prompt --no-input --output-dir=ToegepasteAnalogeElektronica/_build/html/slides
-        sed -i -- 's:<img src="./images:<img src="../_images:g' ToegepasteAnalogeElektronica/_build/html/slides/*
         mv ToegepasteAnalogeElektronica/_build/latex/python.pdf ToegepasteAnalogeElektronica/_build/html/ToegepasteAnalogeElektronica.pdf
-        jb build AnalogeElektronica2/
         mv AnalogeElektronica2/_toc.yml AnalogeElektronica2/_tochtml.yml
         mv AnalogeElektronica2/_tocpdf.yml AnalogeElektronica2/_toc.yml
         jb build AnalogeElektronica2/  --builder pdflatex
         mv AnalogeElektronica2/_toc.yml AnalogeElektronica2/_tocpdf.yml
         mv AnalogeElektronica2/_tochtml.yml AnalogeElektronica2/_toc.yml        
+        mv AnalogeElektronica2/_build/latex/python.pdf AnalogeElektronica2/_build/html/AnalogeElektronica2.pdf
+        jb build AnalogDesignTechniques/ --builder pdflatex
+        mv AnalogDesignTechniques/_build/latex/python.pdf AnalogDesignTechniques/_build/html/AnalogDesignTechniques.pdf
+        jb build MicroEnNanoTechnologie/ --builder pdflatex
+        mv MicroEnNanoTechnologie/_build/latex/python.pdf MicroEnNanoTechnologie/_build/html/MicroEnNanoTechnologie.pdf
+        python common/recoverPDF.py
+    - name: Build the Reveal slides
+      run: |     
+        jupyter nbconvert ToegepasteAnalogeElektronica/*.ipynb --to KULeuven  --no-prompt --no-input --output-dir=ToegepasteAnalogeElektronica/_build/html/slides
+        sed -i -- 's:<img src="./images:<img src="../_images:g' ToegepasteAnalogeElektronica/_build/html/slides/*        
         jupyter nbconvert AnalogeElektronica2/*.ipynb --to KULeuven  --no-prompt --no-input --output-dir=AnalogeElektronica2/_build/html/slides
         sed -i -- 's:<img src="./images:<img src="../_images:g' AnalogeElektronica2/_build/html/slides/*
-        mv AnalogeElektronica2/_build/latex/python.pdf AnalogeElektronica2/_build/html/AnalogeElektronica2.pdf
-        jb build AnalogDesignTechniques/ 
-        jb build AnalogDesignTechniques/ --builder pdflatex
         jupyter nbconvert AnalogDesignTechniques/*.ipynb --to KULeuven  --no-prompt --no-input --output-dir=AnalogDesignTechniques/_build/html/slides
         sed -i -- 's:<img src="./images:<img src="../_images:g' AnalogDesignTechniques/_build/html/slides/*
-        mv AnalogDesignTechniques/_build/latex/python.pdf AnalogDesignTechniques/_build/html/AnalogDesignTechniques.pdf
-        jb build MicroEnNanoTechnologie/ 
-        jb build MicroEnNanoTechnologie/ --builder pdflatex
         jupyter nbconvert MicroEnNanoTechnologie/*.ipynb --to KULeuven  --no-prompt --no-input --output-dir=MicroEnNanoTechnologie/_build/html/slides
         sed -i -- 's:<img src="./images:<img src="../_images:g' MicroEnNanoTechnologie/_build/html/slides/*
-        mv MicroEnNanoTechnologie/_build/latex/python.pdf MicroEnNanoTechnologie/_build/html/MicroEnNanoTechnologie.pdf
     - name: Install the dependencies for Lite
       run: |
         pip install -r .github/requirements-Lite.txt
