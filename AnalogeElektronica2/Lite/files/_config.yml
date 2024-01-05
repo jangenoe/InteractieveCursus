@@ -1,6 +1,6 @@
 title: Analoge elektronische schakelingen
 author: Jan Genoe (jan.genoe@kuleuven.be)
-logo: images/logo.svg
+logo: images/logo.png
 description: Aanvulling bij de cursus Analoge Elektronica aan de KULeuven
 only_build_toc_files: true
 repository:
@@ -54,7 +54,7 @@ sphinx:
     # navbar_end: ["deck-lite-button.html"]
     # html_static_path : ['_static']
     # html_css_files : ['custom.css']   
-    # latex_logo: images/logo.svg   # logo.png
+    latex_logo: images/logo.png
     latex_elements:
       extraclassoptions: 'openany,oneside'
       papersize: 'a4paper'
