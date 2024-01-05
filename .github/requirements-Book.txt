@@ -5,3 +5,4 @@ jupyter-book>=0.15
 ghp-import
 sphinx-exercise
 sphinxext-opengraph
+matplotlib
