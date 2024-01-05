@@ -32,7 +32,11 @@ jobs:
         sed -i -- 's:<img src="./images:<img src="../_images:g' ToegepasteAnalogeElektronica/_build/html/slides/*
         mv ToegepasteAnalogeElektronica/_build/latex/python.pdf ToegepasteAnalogeElektronica/_build/html/ToegepasteAnalogeElektronica.pdf
         jb build AnalogeElektronica2/
-        jb build AnalogeElektronica2/  --builder pdflatex 
+        mv AnalogeElektronica2/_toc.yml AnalogeElektronica2/_tochtml.yml
+        mv AnalogeElektronica2/_tocpdf.yml AnalogeElektronica2/_toc.yml
+        jb build AnalogeElektronica2/  --builder pdflatex
+        mv AnalogeElektronica2/_toc.yml AnalogeElektronica2/_tocpdf.yml
+        mv AnalogeElektronica2/_tochtml.yml AnalogeElektronica2/_toc.yml        
         jupyter nbconvert AnalogeElektronica2/*.ipynb --to KULeuven  --no-prompt --no-input --output-dir=AnalogeElektronica2/_build/html/slides
         sed -i -- 's:<img src="./images:<img src="../_images:g' AnalogeElektronica2/_build/html/slides/*
         mv AnalogeElektronica2/_build/latex/python.pdf AnalogeElektronica2/_build/html/AnalogeElektronica2.pdf
