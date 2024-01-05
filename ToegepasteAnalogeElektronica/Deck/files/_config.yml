@@ -1,6 +1,6 @@
 title: Toegepaste Analoge Elektronica
 author: Jan Genoe (jan.genoe@kuleuven.be)
-logo: images/logo.svg
+logo: images/logo.png
 description: Aanvulling bij de cursus ToegepasteAnalogeElektronica aan de KULeuven
 only_build_toc_files: true
 repository:
@@ -18,6 +18,10 @@ launch_buttons:
   notebook_interface: "jupyterlab"
   binderhub_url: "https://mybinder.org"
   colab_url: "https://colab.research.google.com"
+  use_lite_button: false
+  use_reveal_button: true
+  use_powerpoint_button: false
+  use_deck_button: false
 parse:
   myst_enable_extensions:
     - amsmath
@@ -38,7 +42,7 @@ sphinx:
     - sphinx_exercise
     - sphinxext.opengraph
   config:
-    html_theme: sphinx_book_theme
+    # html_theme: sphinx_book_theme
     language: nl
     html_show_copyright: false
     nb_remove_code_source: true
