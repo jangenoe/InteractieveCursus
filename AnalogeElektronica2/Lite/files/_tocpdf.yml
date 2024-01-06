@@ -7,7 +7,7 @@ parts:
 - caption: Versterkers
   chapters:
   - file: Klasse-A
-  - file: Klasse-BPDF
+  - file: Klasse-B
     sections:
     - file: KlasseB_vb1
     - file: KlasseB_vb2

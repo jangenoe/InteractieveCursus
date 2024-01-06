@@ -27,3 +27,4 @@ parts:
       - file: SmithKaartOefening6
       - file: SmithKaartOefening7
       - file: SmithKaartOefening8
+  - file: References
