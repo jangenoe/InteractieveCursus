@@ -7,7 +7,7 @@ parts:
 - caption: Versterkers
   chapters:
   - file: Klasse-A
-  #- file: Klasse-B
+  - file: Klasse-BPDF
     sections:
     - file: KlasseB_vb1
     - file: KlasseB_vb2
@@ -24,3 +24,6 @@ parts:
     - file: oefeningBoost3
   - file: Inverter
   - file: Flyback-converter
+- caption: References
+  chapters:
+  - file: References
