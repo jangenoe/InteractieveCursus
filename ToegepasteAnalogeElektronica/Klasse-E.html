@@ -710,7 +710,7 @@ We kunnen de uitgang omwerken naar een impedantie van 50 Ohm door een transforma
 </div>
 </div>
 <div class="literal-block-wrapper docutils container" id="espice1">
-<div class="code-block-caption"><span class="caption-number">Spice Listing 11 </span><span class="caption-text">Klasse E spice file</span><a class="headerlink" href="#espice1" title="Permalink naar deze broncode">#</a></div>
+<div class="code-block-caption"><span class="caption-number">Spice Listing 9 </span><span class="caption-text">Klasse E spice file</span><a class="headerlink" href="#espice1" title="Permalink naar deze broncode">#</a></div>
 <div class="highlight-spice notranslate"><div class="highlight"><pre><span></span><span class="o">*</span><span class="w"> </span><span class="nx">Class</span><span class="w"> </span><span class="nx">E</span><span class="w"> </span><span class="nx">amp</span><span class="w"> </span><span class="mi">1</span>
 <span class="nx">M_M1</span><span class="w">         </span><span class="mi">2</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="nx">FDB33N25</span><span class="w"> </span>
 <span class="nx">L_L1</span><span class="w">         </span><span class="mi">2</span><span class="w"> </span><span class="mi">3</span><span class="w">  </span><span class="mi">1000u</span><span class="nx">H</span><span class="w">  </span>
@@ -814,7 +814,7 @@ We kunnen de uitgang omwerken naar een impedantie van 50 Ohm door een transforma
 </div>
 </div>
 <div class="literal-block-wrapper docutils container" id="espice2">
-<div class="code-block-caption"><span class="caption-number">Spice Listing 12 </span><span class="caption-text">Klasse E spice file</span><a class="headerlink" href="#espice2" title="Permalink naar deze broncode">#</a></div>
+<div class="code-block-caption"><span class="caption-number">Spice Listing 10 </span><span class="caption-text">Klasse E spice file</span><a class="headerlink" href="#espice2" title="Permalink naar deze broncode">#</a></div>
 <div class="highlight-spice notranslate"><div class="highlight"><pre><span></span><span class="o">*</span><span class="w"> </span><span class="nx">Class</span><span class="w"> </span><span class="nx">E</span><span class="w"> </span><span class="nx">amp</span><span class="w"> </span><span class="mi">1</span>
 <span class="nx">M_M1</span><span class="w">         </span><span class="mi">2</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="nx">FDB33N25</span><span class="w"> </span>
 <span class="nx">L_L1</span><span class="w">         </span><span class="mi">2</span><span class="w"> </span><span class="mi">3</span><span class="w">  </span><span class="mi">270u</span><span class="nx">H</span><span class="w">  </span>
@@ -905,9 +905,9 @@ We kunnen de uitgang omwerken naar een impedantie van 50 Ohm door een transforma
 <p><span class="caption-number">Fig. 84 </span><span class="caption-text">Schema van de klasse E versterker met injection locking.</span><a class="headerlink" href="#tsai-schema" title="Permallink naar deze afbeelding">#</a></p>
 </figcaption>
 </figure>
-<p>We kunnen dit schema uitwerken als een spice file (zie <a class="reference internal" href="#espicetsai"><span class="std std-numref">Spice Listing 13</span></a>) en deze spice file simuleren.</p>
+<p>We kunnen dit schema uitwerken als een spice file (zie <a class="reference internal" href="#espicetsai"><span class="std std-numref">Spice Listing 11</span></a>) en deze spice file simuleren.</p>
 <div class="literal-block-wrapper docutils container" id="espicetsai">
-<div class="code-block-caption"><span class="caption-number">Spice Listing 13 </span><span class="caption-text">Klasse E spice file met injection locking</span><a class="headerlink" href="#espicetsai" title="Permalink naar deze broncode">#</a></div>
+<div class="code-block-caption"><span class="caption-number">Spice Listing 11 </span><span class="caption-text">Klasse E spice file met injection locking</span><a class="headerlink" href="#espicetsai" title="Permalink naar deze broncode">#</a></div>
 <div class="highlight-spice notranslate"><div class="highlight"><pre><span></span><span class="o">*</span><span class="w"> </span><span class="nx">Class</span><span class="w"> </span><span class="nx">E</span><span class="w"> </span><span class="nx">Tsai</span>
 <span class="nx">M_SWn</span><span class="w">        </span><span class="mi">0</span><span class="w"> </span><span class="mi">11</span><span class="w"> </span><span class="mi">10</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="nx">nmos</span><span class="w"> </span><span class="nx">W</span><span class="p">=</span><span class="mi">31580u</span><span class="w"> </span><span class="nx">L</span><span class="p">=</span><span class="m m-Double">0.35</span><span class="nx">u</span>
 <span class="nx">M_SWp</span><span class="w">        </span><span class="mi">3</span><span class="w"> </span><span class="mi">11</span><span class="w"> </span><span class="mi">10</span><span class="w"> </span><span class="mi">3</span><span class="w"> </span><span class="nx">pmos</span><span class="w"> </span><span class="nx">W</span><span class="p">=</span><span class="mi">500u</span><span class="w"> </span><span class="nx">L</span><span class="p">=</span><span class="m m-Double">0.35</span><span class="nx">u</span>

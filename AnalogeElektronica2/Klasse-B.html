@@ -530,7 +530,7 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#driver-stage">Driver stage</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#stroombron">Stroombron</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#verhoging-van-het-afgeleverde-vermogen">Verhoging van het afgeleverde vermogen</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#het-darlington-paar">Het Darlington paar</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#het-darlington-transistor-paar">Het Darlington Transistor paar</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#beveiliging-van-de-klasse-b-vermogentransistors">Beveiliging van de Klasse B vermogentransistors</a><ul class="nav section-nav flex-column">
@@ -628,105 +628,7 @@ De stroom aan de collector wordt echter met de factor <span class="math notransl
 </figure>
 </div>
 </div>
-<div class="cell tag_remove-cell4PDF docutils container">
-<div class="cell_output docutils container">
-<div class="output text_html"><style>pre { line-height: 125%; }
-td.linenos .normal { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
-span.linenos { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
-td.linenos .special { color: #000000; background-color: #ffffc0; padding-left: 5px; padding-right: 5px; }
-span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 5px; padding-right: 5px; }
-.output_html .hll { background-color: #ffffcc }
-.output_html { background: #f8f8f8; }
-.output_html .c { color: #3D7B7B; font-style: italic } /* Comment */
-.output_html .err { border: 1px solid #FF0000 } /* Error */
-.output_html .k { color: #008000; font-weight: bold } /* Keyword */
-.output_html .o { color: #666666 } /* Operator */
-.output_html .ch { color: #3D7B7B; font-style: italic } /* Comment.Hashbang */
-.output_html .cm { color: #3D7B7B; font-style: italic } /* Comment.Multiline */
-.output_html .cp { color: #9C6500 } /* Comment.Preproc */
-.output_html .cpf { color: #3D7B7B; font-style: italic } /* Comment.PreprocFile */
-.output_html .c1 { color: #3D7B7B; font-style: italic } /* Comment.Single */
-.output_html .cs { color: #3D7B7B; font-style: italic } /* Comment.Special */
-.output_html .gd { color: #A00000 } /* Generic.Deleted */
-.output_html .ge { font-style: italic } /* Generic.Emph */
-.output_html .ges { font-weight: bold; font-style: italic } /* Generic.EmphStrong */
-.output_html .gr { color: #E40000 } /* Generic.Error */
-.output_html .gh { color: #000080; font-weight: bold } /* Generic.Heading */
-.output_html .gi { color: #008400 } /* Generic.Inserted */
-.output_html .go { color: #717171 } /* Generic.Output */
-.output_html .gp { color: #000080; font-weight: bold } /* Generic.Prompt */
-.output_html .gs { font-weight: bold } /* Generic.Strong */
-.output_html .gu { color: #800080; font-weight: bold } /* Generic.Subheading */
-.output_html .gt { color: #0044DD } /* Generic.Traceback */
-.output_html .kc { color: #008000; font-weight: bold } /* Keyword.Constant */
-.output_html .kd { color: #008000; font-weight: bold } /* Keyword.Declaration */
-.output_html .kn { color: #008000; font-weight: bold } /* Keyword.Namespace */
-.output_html .kp { color: #008000 } /* Keyword.Pseudo */
-.output_html .kr { color: #008000; font-weight: bold } /* Keyword.Reserved */
-.output_html .kt { color: #B00040 } /* Keyword.Type */
-.output_html .m { color: #666666 } /* Literal.Number */
-.output_html .s { color: #BA2121 } /* Literal.String */
-.output_html .na { color: #687822 } /* Name.Attribute */
-.output_html .nb { color: #008000 } /* Name.Builtin */
-.output_html .nc { color: #0000FF; font-weight: bold } /* Name.Class */
-.output_html .no { color: #880000 } /* Name.Constant */
-.output_html .nd { color: #AA22FF } /* Name.Decorator */
-.output_html .ni { color: #717171; font-weight: bold } /* Name.Entity */
-.output_html .ne { color: #CB3F38; font-weight: bold } /* Name.Exception */
-.output_html .nf { color: #0000FF } /* Name.Function */
-.output_html .nl { color: #767600 } /* Name.Label */
-.output_html .nn { color: #0000FF; font-weight: bold } /* Name.Namespace */
-.output_html .nt { color: #008000; font-weight: bold } /* Name.Tag */
-.output_html .nv { color: #19177C } /* Name.Variable */
-.output_html .ow { color: #AA22FF; font-weight: bold } /* Operator.Word */
-.output_html .w { color: #bbbbbb } /* Text.Whitespace */
-.output_html .mb { color: #666666 } /* Literal.Number.Bin */
-.output_html .mf { color: #666666 } /* Literal.Number.Float */
-.output_html .mh { color: #666666 } /* Literal.Number.Hex */
-.output_html .mi { color: #666666 } /* Literal.Number.Integer */
-.output_html .mo { color: #666666 } /* Literal.Number.Oct */
-.output_html .sa { color: #BA2121 } /* Literal.String.Affix */
-.output_html .sb { color: #BA2121 } /* Literal.String.Backtick */
-.output_html .sc { color: #BA2121 } /* Literal.String.Char */
-.output_html .dl { color: #BA2121 } /* Literal.String.Delimiter */
-.output_html .sd { color: #BA2121; font-style: italic } /* Literal.String.Doc */
-.output_html .s2 { color: #BA2121 } /* Literal.String.Double */
-.output_html .se { color: #AA5D1F; font-weight: bold } /* Literal.String.Escape */
-.output_html .sh { color: #BA2121 } /* Literal.String.Heredoc */
-.output_html .si { color: #A45A77; font-weight: bold } /* Literal.String.Interpol */
-.output_html .sx { color: #008000 } /* Literal.String.Other */
-.output_html .sr { color: #A45A77 } /* Literal.String.Regex */
-.output_html .s1 { color: #BA2121 } /* Literal.String.Single */
-.output_html .ss { color: #19177C } /* Literal.String.Symbol */
-.output_html .bp { color: #008000 } /* Name.Builtin.Pseudo */
-.output_html .fm { color: #0000FF } /* Name.Function.Magic */
-.output_html .vc { color: #19177C } /* Name.Variable.Class */
-.output_html .vg { color: #19177C } /* Name.Variable.Global */
-.output_html .vi { color: #19177C } /* Name.Variable.Instance */
-.output_html .vm { color: #19177C } /* Name.Variable.Magic */
-.output_html .il { color: #666666 } /* Literal.Number.Integer.Long */</style><div class="highlight"><pre><span></span><span class="nx">Klasse</span><span class="w"> </span><span class="nx">B</span><span class="w"> </span><span class="nx">versterker</span>
-<span class="o">*</span>
-<span class="o">*</span><span class="w"> </span><span class="nx">SUPPLY</span><span class="w"> </span><span class="nx">VOLTAGES</span>
-<span class="nx">VPOS</span><span class="w"> </span><span class="mi">8</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="nx">DC</span><span class="w">	</span><span class="o">+</span><span class="mi">15</span><span class="nx">V</span>
-<span class="nx">VNEG</span><span class="w"> </span><span class="mi">9</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="nx">DC</span><span class="w">	</span><span class="o">-</span><span class="mi">15</span><span class="nx">V</span>
-<span class="o">*</span>
-<span class="o">*</span><span class="w">  </span><span class="nx">input</span><span class="w"> </span><span class="nx">source</span>
-<span class="nx">VS1</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="mi">0</span><span class="w">	</span><span class="nx">DC</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="nx">SIN</span><span class="p">(</span><span class="mi">0</span><span class="nx">V</span><span class="w"> </span><span class="mi">5</span><span class="nx">VPEAK</span><span class="w"> </span><span class="mi">10</span><span class="nx">KHZ</span><span class="p">)</span>
-<span class="o">*</span>
-<span class="o">*</span><span class="w">  </span><span class="nx">PUSH</span><span class="o">-</span><span class="nx">PULL</span><span class="w"> </span><span class="nx">TRANSISTOR</span><span class="w"> </span><span class="nx">OUTPUT</span><span class="w"> </span><span class="nx">STAGE</span>
-<span class="nx">Q1</span><span class="w"> </span><span class="mi">8</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="nx">QNPN</span>
-<span class="nx">Q2</span><span class="w"> </span><span class="mi">9</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="nx">QPNP</span>
-<span class="o">*</span>
-<span class="o">*</span><span class="w"> </span><span class="nx">Load</span><span class="w"> </span><span class="nx">resistance</span>
-<span class="nx">RL1</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="mi">0</span><span class="w">	</span><span class="mi">100</span>
-<span class="o">*</span>
-<span class="o">*</span><span class="w"> </span><span class="nx">DEVICE</span><span class="w"> </span><span class="nx">MODELS</span>
-<span class="p">.</span><span class="nx">model</span><span class="w"> </span><span class="nx">QNPN</span><span class="w">	</span><span class="nx">NPN</span><span class="p">(</span><span class="nx">BF</span><span class="p">=</span><span class="mi">50</span><span class="p">)</span>
-<span class="p">.</span><span class="nx">model</span><span class="w"> </span><span class="nx">QPNP</span><span class="w">	</span><span class="nx">PNP</span><span class="p">(</span><span class="nx">BF</span><span class="p">=</span><span class="mi">50</span><span class="p">)</span>
-</pre></div>
-</div></div>
-</div>
-<p>De simulatie (zie <a class="reference internal" href="#bfig2"><span class="std std-numref">Fig. 11</span></a>) van de spice code  geeft duidelijk de dode zone aan bij de nuldoorgang van de spanning. In <a class="reference internal" href="#bfig2b"><span class="std std-numref">Fig. 12</span></a> bekijken we deze nuldoorgang in meer detail.</p>
+<p>De simulatie (zie <a class="reference internal" href="#bfig2"><span class="std std-numref">Fig. 11</span></a>) van de spice code <code class="xref std std-numref docutils literal notranslate"><span class="pre">listing1</span></code> geeft duidelijk de dode zone aan bij de nuldoorgang van de spanning. In <a class="reference internal" href="#bfig2b"><span class="std std-numref">Fig. 12</span></a> bekijken we deze nuldoorgang in meer detail.</p>
 <div class="cell docutils container">
 <div class="cell_output docutils container">
 <figure class="align-default" id="bfig2">
@@ -824,107 +726,6 @@ Van de andere kant moet er natuurlijk ook me rekening gehouden worden dat hoe gr
 <img alt="_images/5569a62b4a9699c140bbc6f1d6a0863882d23cfd179c9f5b66904cd4c992a77d.svg" src="_images/5569a62b4a9699c140bbc6f1d6a0863882d23cfd179c9f5b66904cd4c992a77d.svg" /></div>
 </div>
 <p>Hieronder tonen we de spice listing van de klasse B versterker waarbij we een voorinstelspanning voorzien tussen de  basissen van de npn en de pnp transistor. Deze voorinstelspanning is hier uitgevoerd door diodes. in <a class="reference internal" href="#bfig2dio"><span class="std std-numref">Fig. 17</span></a> merken we hierbij op dat dit tot gevolg heeft dat er toch een stroom blijft lopen door de transistor die niet in geleiding is. Dit noemen we de klasse AB werking van deze klasseB versterker.</p>
-<div class="cell tag_remove-cell4PDF docutils container">
-<div class="cell_output docutils container">
-<div class="output text_html"><style>pre { line-height: 125%; }
-td.linenos .normal { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
-span.linenos { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
-td.linenos .special { color: #000000; background-color: #ffffc0; padding-left: 5px; padding-right: 5px; }
-span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 5px; padding-right: 5px; }
-.output_html .hll { background-color: #ffffcc }
-.output_html { background: #f8f8f8; }
-.output_html .c { color: #3D7B7B; font-style: italic } /* Comment */
-.output_html .err { border: 1px solid #FF0000 } /* Error */
-.output_html .k { color: #008000; font-weight: bold } /* Keyword */
-.output_html .o { color: #666666 } /* Operator */
-.output_html .ch { color: #3D7B7B; font-style: italic } /* Comment.Hashbang */
-.output_html .cm { color: #3D7B7B; font-style: italic } /* Comment.Multiline */
-.output_html .cp { color: #9C6500 } /* Comment.Preproc */
-.output_html .cpf { color: #3D7B7B; font-style: italic } /* Comment.PreprocFile */
-.output_html .c1 { color: #3D7B7B; font-style: italic } /* Comment.Single */
-.output_html .cs { color: #3D7B7B; font-style: italic } /* Comment.Special */
-.output_html .gd { color: #A00000 } /* Generic.Deleted */
-.output_html .ge { font-style: italic } /* Generic.Emph */
-.output_html .ges { font-weight: bold; font-style: italic } /* Generic.EmphStrong */
-.output_html .gr { color: #E40000 } /* Generic.Error */
-.output_html .gh { color: #000080; font-weight: bold } /* Generic.Heading */
-.output_html .gi { color: #008400 } /* Generic.Inserted */
-.output_html .go { color: #717171 } /* Generic.Output */
-.output_html .gp { color: #000080; font-weight: bold } /* Generic.Prompt */
-.output_html .gs { font-weight: bold } /* Generic.Strong */
-.output_html .gu { color: #800080; font-weight: bold } /* Generic.Subheading */
-.output_html .gt { color: #0044DD } /* Generic.Traceback */
-.output_html .kc { color: #008000; font-weight: bold } /* Keyword.Constant */
-.output_html .kd { color: #008000; font-weight: bold } /* Keyword.Declaration */
-.output_html .kn { color: #008000; font-weight: bold } /* Keyword.Namespace */
-.output_html .kp { color: #008000 } /* Keyword.Pseudo */
-.output_html .kr { color: #008000; font-weight: bold } /* Keyword.Reserved */
-.output_html .kt { color: #B00040 } /* Keyword.Type */
-.output_html .m { color: #666666 } /* Literal.Number */
-.output_html .s { color: #BA2121 } /* Literal.String */
-.output_html .na { color: #687822 } /* Name.Attribute */
-.output_html .nb { color: #008000 } /* Name.Builtin */
-.output_html .nc { color: #0000FF; font-weight: bold } /* Name.Class */
-.output_html .no { color: #880000 } /* Name.Constant */
-.output_html .nd { color: #AA22FF } /* Name.Decorator */
-.output_html .ni { color: #717171; font-weight: bold } /* Name.Entity */
-.output_html .ne { color: #CB3F38; font-weight: bold } /* Name.Exception */
-.output_html .nf { color: #0000FF } /* Name.Function */
-.output_html .nl { color: #767600 } /* Name.Label */
-.output_html .nn { color: #0000FF; font-weight: bold } /* Name.Namespace */
-.output_html .nt { color: #008000; font-weight: bold } /* Name.Tag */
-.output_html .nv { color: #19177C } /* Name.Variable */
-.output_html .ow { color: #AA22FF; font-weight: bold } /* Operator.Word */
-.output_html .w { color: #bbbbbb } /* Text.Whitespace */
-.output_html .mb { color: #666666 } /* Literal.Number.Bin */
-.output_html .mf { color: #666666 } /* Literal.Number.Float */
-.output_html .mh { color: #666666 } /* Literal.Number.Hex */
-.output_html .mi { color: #666666 } /* Literal.Number.Integer */
-.output_html .mo { color: #666666 } /* Literal.Number.Oct */
-.output_html .sa { color: #BA2121 } /* Literal.String.Affix */
-.output_html .sb { color: #BA2121 } /* Literal.String.Backtick */
-.output_html .sc { color: #BA2121 } /* Literal.String.Char */
-.output_html .dl { color: #BA2121 } /* Literal.String.Delimiter */
-.output_html .sd { color: #BA2121; font-style: italic } /* Literal.String.Doc */
-.output_html .s2 { color: #BA2121 } /* Literal.String.Double */
-.output_html .se { color: #AA5D1F; font-weight: bold } /* Literal.String.Escape */
-.output_html .sh { color: #BA2121 } /* Literal.String.Heredoc */
-.output_html .si { color: #A45A77; font-weight: bold } /* Literal.String.Interpol */
-.output_html .sx { color: #008000 } /* Literal.String.Other */
-.output_html .sr { color: #A45A77 } /* Literal.String.Regex */
-.output_html .s1 { color: #BA2121 } /* Literal.String.Single */
-.output_html .ss { color: #19177C } /* Literal.String.Symbol */
-.output_html .bp { color: #008000 } /* Name.Builtin.Pseudo */
-.output_html .fm { color: #0000FF } /* Name.Function.Magic */
-.output_html .vc { color: #19177C } /* Name.Variable.Class */
-.output_html .vg { color: #19177C } /* Name.Variable.Global */
-.output_html .vi { color: #19177C } /* Name.Variable.Instance */
-.output_html .vm { color: #19177C } /* Name.Variable.Magic */
-.output_html .il { color: #666666 } /* Literal.Number.Integer.Long */</style><div class="highlight"><pre><span></span><span class="nx">Klasse</span><span class="w"> </span><span class="nx">B</span><span class="w"> </span><span class="nx">versterker</span>
-<span class="o">*</span>
-<span class="o">*</span><span class="w"> </span><span class="nx">SUPPLY</span><span class="w"> </span><span class="nx">VOLTAGES</span>
-<span class="nx">VPOS</span><span class="w"> </span><span class="mi">8</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="nx">DC</span><span class="w"> </span><span class="o">+</span><span class="mi">15</span><span class="nx">V</span>
-<span class="nx">VNEG</span><span class="w"> </span><span class="mi">9</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="nx">DC</span><span class="w"> </span><span class="o">-</span><span class="mi">15</span><span class="nx">V</span>
-<span class="o">*</span>
-<span class="nx">VS2</span><span class="w"> </span><span class="mi">10</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="nx">DC</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="nx">SIN</span><span class="p">(</span><span class="mi">0</span><span class="nx">V</span><span class="w"> </span><span class="mi">5</span><span class="nx">VPEAK</span><span class="w"> </span><span class="mi">10</span><span class="nx">KHZ</span><span class="p">)</span>
-<span class="o">*</span>
-<span class="nx">D1</span><span class="w">  </span><span class="mi">13</span><span class="w"> </span><span class="mi">10</span><span class="w">   </span><span class="nx">DNOM</span>
-<span class="nx">RB1</span><span class="w"> </span><span class="mi">13</span><span class="w"> </span><span class="mi">8</span><span class="w">    </span><span class="mi">10</span><span class="nx">K</span>
-<span class="nx">Q11</span><span class="w"> </span><span class="mi">8</span><span class="w"> </span><span class="mi">13</span><span class="w"> </span><span class="mi">12</span><span class="w"> </span><span class="nx">QNPN</span>
-<span class="o">*</span>
-<span class="nx">D2</span><span class="w">  </span><span class="mi">10</span><span class="w"> </span><span class="mi">14</span><span class="w">   </span><span class="nx">DNOM</span>
-<span class="nx">RB2</span><span class="w"> </span><span class="mi">14</span><span class="w"> </span><span class="mi">9</span><span class="w">    </span><span class="mi">10</span><span class="nx">K</span>
-<span class="nx">Q12</span><span class="w"> </span><span class="mi">9</span><span class="w"> </span><span class="mi">14</span><span class="w"> </span><span class="mi">12</span><span class="w"> </span><span class="nx">QPNP</span>
-<span class="o">*</span>
-<span class="nx">RL2</span><span class="w"> </span><span class="mi">12</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="mi">100</span>
-<span class="o">*</span>
-<span class="o">*</span><span class="w"> </span><span class="nx">DEVICE</span><span class="w"> </span><span class="nx">MODELS</span>
-<span class="p">.</span><span class="nx">model</span><span class="w"> </span><span class="nx">QNPN</span><span class="w"> </span><span class="nx">NPN</span><span class="p">(</span><span class="nx">BF</span><span class="p">=</span><span class="mi">50</span><span class="p">)</span>
-<span class="p">.</span><span class="nx">model</span><span class="w"> </span><span class="nx">QPNP</span><span class="w"> </span><span class="nx">PNP</span><span class="p">(</span><span class="nx">BF</span><span class="p">=</span><span class="mi">50</span><span class="p">)</span>
-<span class="p">.</span><span class="nx">model</span><span class="w"> </span><span class="nx">DNOM</span><span class="w"> </span><span class="nx">D</span><span class="p">()</span>
-</pre></div>
-</div></div>
-</div>
 <div class="cell docutils container">
 <div class="cell_output docutils container">
 <figure class="align-default" id="bfig2dio">
@@ -947,103 +748,6 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 </div>
 </div>
 <p>We kunnen ook proberen de dode zone weg te werken aan de hand van feedback, zoals in het onderstaande schema aan de hand van een opamp. Op het eerste zicht lijkt dat te lukken, als we de simulatie in <a class="reference internal" href="#bopmapsim"><span class="std std-numref">Fig. 19</span></a> bekijken. De <span class="math notranslate nohighlight">\(V_{in}\)</span> en <span class="math notranslate nohighlight">\(V_{out}\)</span> liggen zo goed als volledig op elkaar dat we het verschil niet merken. Enkel als we heel erg inzoemen, zoals in <a class="reference internal" href="#bopmapsimz"><span class="std std-numref">Fig. 20</span></a> lijkt er een klein verschil te zijn langs de nuldoorgang. Laat je hierbij echter niet vangen. Deze simulatie is gedaan met een ideale OpAmp, waarvan de stijgsnelheid niet realistisch is. Wanneer we diezelfde simulatie hernemen met een realistische OpAmp, zie onder, blijft dit bijna ideale gedrag niet behouden.</p>
-<div class="cell tag_remove-cell4PDF docutils container">
-<div class="cell_output docutils container">
-<div class="output text_html"><style>pre { line-height: 125%; }
-td.linenos .normal { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
-span.linenos { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
-td.linenos .special { color: #000000; background-color: #ffffc0; padding-left: 5px; padding-right: 5px; }
-span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 5px; padding-right: 5px; }
-.output_html .hll { background-color: #ffffcc }
-.output_html { background: #f8f8f8; }
-.output_html .c { color: #3D7B7B; font-style: italic } /* Comment */
-.output_html .err { border: 1px solid #FF0000 } /* Error */
-.output_html .k { color: #008000; font-weight: bold } /* Keyword */
-.output_html .o { color: #666666 } /* Operator */
-.output_html .ch { color: #3D7B7B; font-style: italic } /* Comment.Hashbang */
-.output_html .cm { color: #3D7B7B; font-style: italic } /* Comment.Multiline */
-.output_html .cp { color: #9C6500 } /* Comment.Preproc */
-.output_html .cpf { color: #3D7B7B; font-style: italic } /* Comment.PreprocFile */
-.output_html .c1 { color: #3D7B7B; font-style: italic } /* Comment.Single */
-.output_html .cs { color: #3D7B7B; font-style: italic } /* Comment.Special */
-.output_html .gd { color: #A00000 } /* Generic.Deleted */
-.output_html .ge { font-style: italic } /* Generic.Emph */
-.output_html .ges { font-weight: bold; font-style: italic } /* Generic.EmphStrong */
-.output_html .gr { color: #E40000 } /* Generic.Error */
-.output_html .gh { color: #000080; font-weight: bold } /* Generic.Heading */
-.output_html .gi { color: #008400 } /* Generic.Inserted */
-.output_html .go { color: #717171 } /* Generic.Output */
-.output_html .gp { color: #000080; font-weight: bold } /* Generic.Prompt */
-.output_html .gs { font-weight: bold } /* Generic.Strong */
-.output_html .gu { color: #800080; font-weight: bold } /* Generic.Subheading */
-.output_html .gt { color: #0044DD } /* Generic.Traceback */
-.output_html .kc { color: #008000; font-weight: bold } /* Keyword.Constant */
-.output_html .kd { color: #008000; font-weight: bold } /* Keyword.Declaration */
-.output_html .kn { color: #008000; font-weight: bold } /* Keyword.Namespace */
-.output_html .kp { color: #008000 } /* Keyword.Pseudo */
-.output_html .kr { color: #008000; font-weight: bold } /* Keyword.Reserved */
-.output_html .kt { color: #B00040 } /* Keyword.Type */
-.output_html .m { color: #666666 } /* Literal.Number */
-.output_html .s { color: #BA2121 } /* Literal.String */
-.output_html .na { color: #687822 } /* Name.Attribute */
-.output_html .nb { color: #008000 } /* Name.Builtin */
-.output_html .nc { color: #0000FF; font-weight: bold } /* Name.Class */
-.output_html .no { color: #880000 } /* Name.Constant */
-.output_html .nd { color: #AA22FF } /* Name.Decorator */
-.output_html .ni { color: #717171; font-weight: bold } /* Name.Entity */
-.output_html .ne { color: #CB3F38; font-weight: bold } /* Name.Exception */
-.output_html .nf { color: #0000FF } /* Name.Function */
-.output_html .nl { color: #767600 } /* Name.Label */
-.output_html .nn { color: #0000FF; font-weight: bold } /* Name.Namespace */
-.output_html .nt { color: #008000; font-weight: bold } /* Name.Tag */
-.output_html .nv { color: #19177C } /* Name.Variable */
-.output_html .ow { color: #AA22FF; font-weight: bold } /* Operator.Word */
-.output_html .w { color: #bbbbbb } /* Text.Whitespace */
-.output_html .mb { color: #666666 } /* Literal.Number.Bin */
-.output_html .mf { color: #666666 } /* Literal.Number.Float */
-.output_html .mh { color: #666666 } /* Literal.Number.Hex */
-.output_html .mi { color: #666666 } /* Literal.Number.Integer */
-.output_html .mo { color: #666666 } /* Literal.Number.Oct */
-.output_html .sa { color: #BA2121 } /* Literal.String.Affix */
-.output_html .sb { color: #BA2121 } /* Literal.String.Backtick */
-.output_html .sc { color: #BA2121 } /* Literal.String.Char */
-.output_html .dl { color: #BA2121 } /* Literal.String.Delimiter */
-.output_html .sd { color: #BA2121; font-style: italic } /* Literal.String.Doc */
-.output_html .s2 { color: #BA2121 } /* Literal.String.Double */
-.output_html .se { color: #AA5D1F; font-weight: bold } /* Literal.String.Escape */
-.output_html .sh { color: #BA2121 } /* Literal.String.Heredoc */
-.output_html .si { color: #A45A77; font-weight: bold } /* Literal.String.Interpol */
-.output_html .sx { color: #008000 } /* Literal.String.Other */
-.output_html .sr { color: #A45A77 } /* Literal.String.Regex */
-.output_html .s1 { color: #BA2121 } /* Literal.String.Single */
-.output_html .ss { color: #19177C } /* Literal.String.Symbol */
-.output_html .bp { color: #008000 } /* Name.Builtin.Pseudo */
-.output_html .fm { color: #0000FF } /* Name.Function.Magic */
-.output_html .vc { color: #19177C } /* Name.Variable.Class */
-.output_html .vg { color: #19177C } /* Name.Variable.Global */
-.output_html .vi { color: #19177C } /* Name.Variable.Instance */
-.output_html .vm { color: #19177C } /* Name.Variable.Magic */
-.output_html .il { color: #666666 } /* Literal.Number.Integer.Long */</style><div class="highlight"><pre><span></span><span class="p">.</span><span class="nx">title</span><span class="w"> </span><span class="nx">Klasse</span><span class="w"> </span><span class="nx">B</span><span class="w"> </span><span class="nx">versterker</span><span class="w">  </span><span class="nx">PUSH</span><span class="o">-</span><span class="nx">PULL</span><span class="w"> </span><span class="nx">PLACED</span><span class="w"> </span><span class="nx">IN</span><span class="w"> </span><span class="nx">OPAMP</span><span class="w"> </span><span class="nx">FEEDBACK</span><span class="w"> </span><span class="nx">LOOP</span>
-<span class="o">*</span>
-<span class="o">*</span><span class="w"> </span><span class="nx">SUPPLY</span><span class="w"> </span><span class="nx">VOLTAGES</span>
-<span class="nx">VPOS</span><span class="w"> </span><span class="mi">8</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="nx">DC</span><span class="w"> </span><span class="o">+</span><span class="mi">15</span><span class="nx">V</span>
-<span class="nx">VNEG</span><span class="w"> </span><span class="mi">9</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="nx">DC</span><span class="w"> </span><span class="o">-</span><span class="mi">15</span><span class="nx">V</span>
-<span class="o">*</span>
-<span class="nx">VS3</span><span class="w"> </span><span class="mi">20</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="nx">DC</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="nx">SIN</span><span class="p">(</span><span class="mi">0</span><span class="nx">V</span><span class="w"> </span><span class="mi">5</span><span class="nx">VPEAK</span><span class="w"> </span><span class="mi">10</span><span class="nx">KHZ</span><span class="p">)</span>
-<span class="o">*</span>
-<span class="nx">Q21</span><span class="w"> </span><span class="mi">8</span><span class="w"> </span><span class="mi">23</span><span class="w"> </span><span class="mi">22</span><span class="w"> </span><span class="nx">QNPN</span>
-<span class="nx">Q22</span><span class="w"> </span><span class="mi">9</span><span class="w"> </span><span class="mi">23</span><span class="w"> </span><span class="mi">22</span><span class="w"> </span><span class="nx">QPNP</span>
-<span class="nx">RL3</span><span class="w"> </span><span class="mi">22</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="mi">100</span>
-<span class="o">*</span>
-<span class="nx">XOpAmp</span><span class="w"> </span><span class="mi">20</span><span class="w"> </span><span class="mi">22</span><span class="w"> </span><span class="mi">8</span><span class="w"> </span><span class="mi">9</span><span class="w"> </span><span class="mi">23</span><span class="w"> </span><span class="mi">8</span><span class="w"> </span><span class="nx">opamp</span>
-<span class="o">*</span>
-<span class="o">*</span><span class="w"> </span><span class="nx">DEVICE</span><span class="w"> </span><span class="nx">MODELS</span>
-<span class="p">.</span><span class="nx">model</span><span class="w"> </span><span class="nx">QNPN</span><span class="w"> </span><span class="nx">NPN</span><span class="p">(</span><span class="nx">BF</span><span class="p">=</span><span class="mi">50</span><span class="p">)</span>
-<span class="p">.</span><span class="nx">model</span><span class="w"> </span><span class="nx">QPNP</span><span class="w"> </span><span class="nx">PNP</span><span class="p">(</span><span class="nx">BF</span><span class="p">=</span><span class="mi">50</span><span class="p">)</span>
-<span class="p">.</span><span class="nx">model</span><span class="w"> </span><span class="nx">DNOM</span><span class="w"> </span><span class="nx">D</span><span class="p">()</span>
-</pre></div>
-</div></div>
-</div>
 <div class="cell docutils container">
 <div class="cell_output docutils container">
 <figure class="align-default" id="bopmapsim">
@@ -1073,103 +777,6 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 </figcaption>
 </figure>
 </div>
-</div>
-<div class="cell tag_remove-cell4PDF docutils container">
-<div class="cell_output docutils container">
-<div class="output text_html"><style>pre { line-height: 125%; }
-td.linenos .normal { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
-span.linenos { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
-td.linenos .special { color: #000000; background-color: #ffffc0; padding-left: 5px; padding-right: 5px; }
-span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 5px; padding-right: 5px; }
-.output_html .hll { background-color: #ffffcc }
-.output_html { background: #f8f8f8; }
-.output_html .c { color: #3D7B7B; font-style: italic } /* Comment */
-.output_html .err { border: 1px solid #FF0000 } /* Error */
-.output_html .k { color: #008000; font-weight: bold } /* Keyword */
-.output_html .o { color: #666666 } /* Operator */
-.output_html .ch { color: #3D7B7B; font-style: italic } /* Comment.Hashbang */
-.output_html .cm { color: #3D7B7B; font-style: italic } /* Comment.Multiline */
-.output_html .cp { color: #9C6500 } /* Comment.Preproc */
-.output_html .cpf { color: #3D7B7B; font-style: italic } /* Comment.PreprocFile */
-.output_html .c1 { color: #3D7B7B; font-style: italic } /* Comment.Single */
-.output_html .cs { color: #3D7B7B; font-style: italic } /* Comment.Special */
-.output_html .gd { color: #A00000 } /* Generic.Deleted */
-.output_html .ge { font-style: italic } /* Generic.Emph */
-.output_html .ges { font-weight: bold; font-style: italic } /* Generic.EmphStrong */
-.output_html .gr { color: #E40000 } /* Generic.Error */
-.output_html .gh { color: #000080; font-weight: bold } /* Generic.Heading */
-.output_html .gi { color: #008400 } /* Generic.Inserted */
-.output_html .go { color: #717171 } /* Generic.Output */
-.output_html .gp { color: #000080; font-weight: bold } /* Generic.Prompt */
-.output_html .gs { font-weight: bold } /* Generic.Strong */
-.output_html .gu { color: #800080; font-weight: bold } /* Generic.Subheading */
-.output_html .gt { color: #0044DD } /* Generic.Traceback */
-.output_html .kc { color: #008000; font-weight: bold } /* Keyword.Constant */
-.output_html .kd { color: #008000; font-weight: bold } /* Keyword.Declaration */
-.output_html .kn { color: #008000; font-weight: bold } /* Keyword.Namespace */
-.output_html .kp { color: #008000 } /* Keyword.Pseudo */
-.output_html .kr { color: #008000; font-weight: bold } /* Keyword.Reserved */
-.output_html .kt { color: #B00040 } /* Keyword.Type */
-.output_html .m { color: #666666 } /* Literal.Number */
-.output_html .s { color: #BA2121 } /* Literal.String */
-.output_html .na { color: #687822 } /* Name.Attribute */
-.output_html .nb { color: #008000 } /* Name.Builtin */
-.output_html .nc { color: #0000FF; font-weight: bold } /* Name.Class */
-.output_html .no { color: #880000 } /* Name.Constant */
-.output_html .nd { color: #AA22FF } /* Name.Decorator */
-.output_html .ni { color: #717171; font-weight: bold } /* Name.Entity */
-.output_html .ne { color: #CB3F38; font-weight: bold } /* Name.Exception */
-.output_html .nf { color: #0000FF } /* Name.Function */
-.output_html .nl { color: #767600 } /* Name.Label */
-.output_html .nn { color: #0000FF; font-weight: bold } /* Name.Namespace */
-.output_html .nt { color: #008000; font-weight: bold } /* Name.Tag */
-.output_html .nv { color: #19177C } /* Name.Variable */
-.output_html .ow { color: #AA22FF; font-weight: bold } /* Operator.Word */
-.output_html .w { color: #bbbbbb } /* Text.Whitespace */
-.output_html .mb { color: #666666 } /* Literal.Number.Bin */
-.output_html .mf { color: #666666 } /* Literal.Number.Float */
-.output_html .mh { color: #666666 } /* Literal.Number.Hex */
-.output_html .mi { color: #666666 } /* Literal.Number.Integer */
-.output_html .mo { color: #666666 } /* Literal.Number.Oct */
-.output_html .sa { color: #BA2121 } /* Literal.String.Affix */
-.output_html .sb { color: #BA2121 } /* Literal.String.Backtick */
-.output_html .sc { color: #BA2121 } /* Literal.String.Char */
-.output_html .dl { color: #BA2121 } /* Literal.String.Delimiter */
-.output_html .sd { color: #BA2121; font-style: italic } /* Literal.String.Doc */
-.output_html .s2 { color: #BA2121 } /* Literal.String.Double */
-.output_html .se { color: #AA5D1F; font-weight: bold } /* Literal.String.Escape */
-.output_html .sh { color: #BA2121 } /* Literal.String.Heredoc */
-.output_html .si { color: #A45A77; font-weight: bold } /* Literal.String.Interpol */
-.output_html .sx { color: #008000 } /* Literal.String.Other */
-.output_html .sr { color: #A45A77 } /* Literal.String.Regex */
-.output_html .s1 { color: #BA2121 } /* Literal.String.Single */
-.output_html .ss { color: #19177C } /* Literal.String.Symbol */
-.output_html .bp { color: #008000 } /* Name.Builtin.Pseudo */
-.output_html .fm { color: #0000FF } /* Name.Function.Magic */
-.output_html .vc { color: #19177C } /* Name.Variable.Class */
-.output_html .vg { color: #19177C } /* Name.Variable.Global */
-.output_html .vi { color: #19177C } /* Name.Variable.Instance */
-.output_html .vm { color: #19177C } /* Name.Variable.Magic */
-.output_html .il { color: #666666 } /* Literal.Number.Integer.Long */</style><div class="highlight"><pre><span></span><span class="p">.</span><span class="nx">title</span><span class="w"> </span><span class="nx">Klasse</span><span class="w"> </span><span class="nx">B</span><span class="w"> </span><span class="nx">versterker</span><span class="w">  </span><span class="nx">PUSH</span><span class="o">-</span><span class="nx">PULL</span><span class="w"> </span><span class="nx">PLACED</span><span class="w"> </span><span class="nx">IN</span><span class="w"> </span><span class="nx">OPAMP</span><span class="w"> </span><span class="nx">FEEDBACK</span><span class="w"> </span><span class="nx">LOOP</span>
-<span class="o">*</span>
-<span class="o">*</span><span class="w"> </span><span class="nx">SUPPLY</span><span class="w"> </span><span class="nx">VOLTAGES</span>
-<span class="nx">VPOS</span><span class="w"> </span><span class="mi">8</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="nx">DC</span><span class="w"> </span><span class="o">+</span><span class="m m-Double">2.5</span><span class="nx">V</span>
-<span class="nx">VNEG</span><span class="w"> </span><span class="mi">9</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="nx">DC</span><span class="w"> </span><span class="m m-Double">-2.5</span><span class="nx">V</span>
-<span class="o">*</span>
-<span class="nx">VS3</span><span class="w"> </span><span class="mi">20</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="nx">DC</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="nx">SIN</span><span class="p">(</span><span class="mi">0</span><span class="nx">V</span><span class="w"> </span><span class="mi">1</span><span class="nx">VPEAK</span><span class="w"> </span><span class="mi">10</span><span class="nx">KHZ</span><span class="p">)</span>
-<span class="o">*</span>
-<span class="nx">Q21</span><span class="w"> </span><span class="mi">8</span><span class="w"> </span><span class="mi">23</span><span class="w"> </span><span class="mi">22</span><span class="w"> </span><span class="nx">QNPN</span>
-<span class="nx">Q22</span><span class="w"> </span><span class="mi">9</span><span class="w"> </span><span class="mi">23</span><span class="w"> </span><span class="mi">22</span><span class="w"> </span><span class="nx">QPNP</span>
-<span class="nx">RL3</span><span class="w"> </span><span class="mi">22</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="mi">100</span>
-<span class="o">*</span>
-<span class="nx">XOpAmp</span><span class="w"> </span><span class="mi">20</span><span class="w"> </span><span class="mi">22</span><span class="w"> </span><span class="mi">8</span><span class="w"> </span><span class="mi">9</span><span class="w"> </span><span class="mi">23</span><span class="w"> </span><span class="mi">8</span><span class="w"> </span><span class="nx">opamp</span>
-<span class="o">*</span>
-<span class="o">*</span><span class="w"> </span><span class="nx">DEVICE</span><span class="w"> </span><span class="nx">MODELS</span>
-<span class="p">.</span><span class="nx">model</span><span class="w"> </span><span class="nx">QNPN</span><span class="w"> </span><span class="nx">NPN</span><span class="p">(</span><span class="nx">BF</span><span class="p">=</span><span class="mi">50</span><span class="p">)</span>
-<span class="p">.</span><span class="nx">model</span><span class="w"> </span><span class="nx">QPNP</span><span class="w"> </span><span class="nx">PNP</span><span class="p">(</span><span class="nx">BF</span><span class="p">=</span><span class="mi">50</span><span class="p">)</span>
-<span class="p">.</span><span class="nx">model</span><span class="w"> </span><span class="nx">DNOM</span><span class="w"> </span><span class="nx">D</span><span class="p">()</span>
-</pre></div>
-</div></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_output docutils container">
@@ -1224,14 +831,26 @@ Een belangrijk voordeel is hier ook dat deze driver stage niet alleen de stroom 
 </section>
 <section id="verhoging-van-het-afgeleverde-vermogen">
 <h2>Verhoging van het afgeleverde vermogen<a class="headerlink" href="#verhoging-van-het-afgeleverde-vermogen" title="Permalink to this heading">#</a></h2>
-<p>De power transistors werken in principe als spanningsvolgers (met een offset) maar zijn in staat veel meer stroom te leveren aan de belasting (<span class="math notranslate nohighlight">\(R_L\)</span>) dan de driver trap. In principe kan elke power transistor de stroom met een factor <span class="math notranslate nohighlight">\(\beta_F\)</span> vergroten.
+<p>De power transistors in een klasse B versterker werken in principe als spanningsvolgers (met een offset) maar zijn in staat veel meer stroom te leveren aan de belasting (<span class="math notranslate nohighlight">\(R_L\)</span>) dan de driver trap. In principe kan elke power transistor de stroom met een factor <span class="math notranslate nohighlight">\(\beta_F\)</span> vergroten.
 In een aantal gevallen is deze stroomversterking nog niet voldoende. In deze sectie bespreken we de mogelijkheden om meer stroomversterking te bekomen.</p>
-<section id="het-darlington-paar">
-<h3>Het <a class="reference external" href="https://en.wikipedia.org/wiki/Darlington_transistor">Darlington</a> paar<a class="headerlink" href="#het-darlington-paar" title="Permalink to this heading">#</a></h3>
-<p>We kunnen dit oplossen door 2 power transistors achter elkaar te schakelen, zoals in <a class="reference internal" href="#darlington"><span class="std std-numref">Fig. 26</span></a>.
+<section id="het-darlington-transistor-paar">
+<h3>Het <a class="reference external" href="https://en.wikipedia.org/wiki/Darlington_transistor">Darlington</a> Transistor paar<a class="headerlink" href="#het-darlington-transistor-paar" title="Permalink to this heading">#</a></h3>
+<p>We kunnen meer driver stroom bekomen door 2 power transistors van hetzelfde type achter elkaar te schakelen, zoals in <a class="reference internal" href="#darlington"><span class="std std-numref">Fig. 26</span></a>.
 De totale stroomversterking die we dan bekomen is dan het product van beide stroomversterkingen <span id="id1">[<a class="reference internal" href="References.html#id4" title="Darlington Sidney. Semiconductor signal translating device. December 1953.">1</a>]</span>.</p>
 <div class="math notranslate nohighlight">
-\[ \beta_+ = \beta_1 \beta_2 \]</div>
+\[ I_C(T_1)= \beta_1 I_B(T_1)\]</div>
+<div class="math notranslate nohighlight">
+\[ I_E(T_1)= (\beta_1 +1) I_B(T_1)\]</div>
+<div class="math notranslate nohighlight">
+\[ I_C(T_2)= \beta_2 I_B(T_2) =  \beta_2 (\beta_1 +1) I_B(T_1)\]</div>
+<div class="math notranslate nohighlight">
+\[ I_E(T_2)= (\beta_2 +1) I_B(T_2) = (\beta_2 +1)(\beta_1 +1) I_B(T_1) \]</div>
+<div class="math notranslate nohighlight">
+\[ I_C(Darlington)= I_C(T_1)+I_C(T_2) = \beta_1 I_B(T_1)+ \beta_2 (\beta_1 +1) I_B(T_1)= (\beta_1 + \beta_2 (\beta_1 +1)) I_B(T_1)\]</div>
+<div class="math notranslate nohighlight">
+\[ I_E(Darlington)=  I_E(T_2) = (\beta_2 +1)(\beta_1 +1) I_B(T_1) \]</div>
+<div class="math notranslate nohighlight">
+\[ \beta_+ = \beta_1 \beta_2 +\beta_1 +\beta_2 \]</div>
 <div class="cell docutils container">
 <div class="cell_output docutils container">
 <figure class="align-default" id="darlington">
@@ -1241,11 +860,14 @@ De totale stroomversterking die we dan bekomen is dan het product van beide stro
 </figure>
 </div>
 </div>
-<p>Het schema in <a class="reference internal" href="#darlington"><span class="std std-numref">Fig. 26</span></a> heeft echter 2 problemen:</p>
+<p>Het schema in <a class="reference internal" href="#darlington"><span class="std std-numref">Fig. 26</span></a> heeft echter 3 problemen:</p>
 <ul class="simple">
 <li><p>thermal runaway</p></li>
 <li><p>lage stroomversterking <span class="math notranslate nohighlight">\(\beta_F\)</span> bij heel lage stromen aan de basis</p></li>
+<li><p>De voorinstelspanning moet verdubbelen.</p></li>
 </ul>
+<p>We kunnen de configuratie van het Darlington paar verbeteren door emitter degeneratie toe te voegen aan de eerste transistor (zie <a class="reference internal" href="#darlington-ed"><span class="std std-numref">Fig. 27</span></a>).</p>
+<p>Op het eerste zicht lijkt het dat het schema in <a class="reference internal" href="#darlington-ed"><span class="std std-numref">Fig. 27</span></a> ook een dubbele voorinstelspanning gaat nodig hebben, maar dat is niet het geval. De voorinstelspanning in enkel belangrijk bij kleine ingangssignalen, dus in de buurt van de nuldoorgang. Bij deze signalen speelt de tweede transistor geen enkele rol, als we de emitterdegeratie doorgevoerd hebben.</p>
 <div class="cell docutils container">
 <div class="cell_output docutils container">
 <figure class="align-default" id="darlington-ed">
@@ -1255,7 +877,7 @@ De totale stroomversterking die we dan bekomen is dan het product van beide stro
 </figure>
 </div>
 </div>
-<p>Het is natuurlijk belangrijk dat we zowel voor de NPN als voor de PNP de stroom vergroten aan de hand van een Darlingtonpaar. Het schema dat er bekomen wordt kan uitgewerkt worden voor elk van de bovenstaande Klasse B versterkerschemas. Wanneer we dit doen voor het schema in <a class="reference internal" href="#bfig1ac"><span class="std std-numref">Fig. 14</span></a> bekomen we het schema in <a class="reference internal" href="#bdoubledriver"><span class="std std-numref">Fig. 28</span></a></p>
+<p>Het is natuurlijk belangrijk dat we zowel voor de NPN als voor de PNP de stroom vergroten aan de hand van een Darlingtonpaar. Het schema dat er bekomen wordt, kan uitgewerkt worden voor elk van de bovenstaande Klasse B versterkerschemas. Wanneer we dit doen voor het schema in <a class="reference internal" href="#bfig1ac"><span class="std std-numref">Fig. 14</span></a> bekomen we het schema in <a class="reference internal" href="#bdoubledriver"><span class="std std-numref">Fig. 28</span></a></p>
 <div class="cell docutils container">
 <div class="cell_output docutils container">
 <figure class="align-default" id="bdoubledriver">
@@ -1265,6 +887,7 @@ De totale stroomversterking die we dan bekomen is dan het product van beide stro
 </figure>
 </div>
 </div>
+<p>Wanneer we een Darlington paar toevoegen in het schema van <a class="reference internal" href="#bfigstroombron"><span class="std std-numref">Fig. 25</span></a> krijgen we het schema in <a class="reference internal" href="#bfig3"><span class="std std-numref">Fig. 29</span></a></p>
 <div class="cell docutils container">
 <div class="cell_output docutils container">
 <figure class="align-default" id="bfig3">
@@ -1274,7 +897,6 @@ De totale stroomversterking die we dan bekomen is dan het product van beide stro
 </figure>
 </div>
 </div>
-<p>Wanneer we een Darlington paar toevoegen in het schema van <a class="reference internal" href="#bfigstroombron"><span class="std std-numref">Fig. 25</span></a> krijgen we het schema in <a class="reference internal" href="#bfig3"><span class="std std-numref">Fig. 29</span></a></p>
 <div class="exercise dropdown admonition" id="Klasse-B-exercise-0">
 
 <p class="admonition-title"><span class="caption-number">Opdracht 1 </span> (Toevoeging van Darlington transistorparen)</p>
@@ -1291,23 +913,33 @@ De totale stroomversterking die we dan bekomen is dan het product van beide stro
 </section>
 <section id="beveiliging-tegen-overstroom">
 <h3>Beveiliging tegen overstroom<a class="headerlink" href="#beveiliging-tegen-overstroom" title="Permalink to this heading">#</a></h3>
-<p><a class="reference internal" href="#bfig4"><span class="std std-numref">Fig. 30</span></a> toont een eerste schema dat beveiliging tegen overstroom toevoegt. Het basisprincipe bij elke stroombeveliging is dat er gekeken wordt naar de stroom aan de uitgang van respectievelijk het pull-up en het pull-down netwerk (de groene blokken in <a class="reference internal" href="#bfig4"><span class="std std-numref">Fig. 30</span></a>). Wanneer de stroom hier de hierboven aangegeven maximale stroom overschrijdt, grijpt het blok dat gekleurd is in Cyaan in. Dit gebeurt door de stroom aan de ingang van het groene blok rechtstreeks naar de uitgang te verbinden.</p>
+<p><code class="xref std std-numref docutils literal notranslate"><span class="pre">Bfig4</span></code> toont een eerste schema dat beveiliging tegen overstroom toevoegt. Het basisprincipe bij elke stroombeveliging is dat er gekeken wordt naar de stroom aan de uitgang van respectievelijk het pull-up en het pull-down netwerk (de groene blokken in <code class="xref std std-numref docutils literal notranslate"><span class="pre">Bfig4</span></code>). Wanneer de stroom hier de hierboven aangegeven maximale stroom overschrijdt, grijpt het blok dat gekleurd is in Cyaan in. Dit gebeurt door de stroom aan de ingang van het groene blok rechtstreeks naar de uitgang te verbinden.</p>
 <div class="cell docutils container">
 <div class="cell_output docutils container">
 <figure class="align-default" id="bfig4">
-<img alt="_images/505567d4f2003e1ff6533c54bd2e29fc241cb6acd6985d3655bdd61af1b20718.svg" src="_images/505567d4f2003e1ff6533c54bd2e29fc241cb6acd6985d3655bdd61af1b20718.svg" /><figcaption>
+<img alt="_images/73687e87ab7560797aacc2a0c5b1e95f40d3b9bdf214736d7677916edb9afb55.svg" src="_images/73687e87ab7560797aacc2a0c5b1e95f40d3b9bdf214736d7677916edb9afb55.svg" /><figcaption>
 <p><span class="caption-number">Fig. 30 </span><span class="caption-text">Klasse B versterker met overstroombescherming.</span><a class="headerlink" href="#bfig4" title="Permallink naar deze afbeelding">#</a></p>
 </figcaption>
 </figure>
 </div>
 </div>
+<p>We merken op dat de overstroombeveiliging moet optreden bij de maximale stroom. In dit geval zal, in het geval van een Darlington paar, ook de tweede transistor actief zijn. Dit heeft dan ook tot gevolg dat we het schema van <code class="xref std std-numref docutils literal notranslate"><span class="pre">Bfig4</span></code> moeten uitbreiden met een extra diode in het geval van een Darlington paar. Dit tonen we in <code class="xref std std-numref docutils literal notranslate"><span class="pre">Bfig4b</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_output docutils container">
+<figure class="align-default" id="id2">
+<img alt="_images/505567d4f2003e1ff6533c54bd2e29fc241cb6acd6985d3655bdd61af1b20718.svg" src="_images/505567d4f2003e1ff6533c54bd2e29fc241cb6acd6985d3655bdd61af1b20718.svg" /><figcaption>
+<p><span class="caption-number">Fig. 31 </span><span class="caption-text">Klasse B versterker met overstroombescherming.</span><a class="headerlink" href="#id2" title="Permallink naar deze afbeelding">#</a></p>
+</figcaption>
+</figure>
+</div>
+</div>
 <p>Een belangrijk nadeel van de schema’s hierboven is dat ze slechts ingrijpen bij overstroom als de spanning over de weerstand <span class="math notranslate nohighlight">\(R_I\)</span> ongeveer 0.7V bedraagt. Dit is normaal geen probleem als er gewerkt wordt met een hoge voedingsspanning <span class="math notranslate nohighlight">\(V_{DD}\)</span>, bv 80V. Indien er echter met een lage voedingsspanning gewerkt wordt, geeft het spanningsverlies over <span class="math notranslate nohighlight">\(R_I\)</span> een belangrijk deel van het vermogenverlies. Een alternatieve oplossing om dat vermogenverlies te voorkomen is het plaatsen van een veel kleinere meetweerstand <span class="math notranslate nohighlight">\(R_I\)</span> tussen de belasting en de grond en de gemeten spanning te versterken in de terugkoppeling of de aanstuur IC.</p>
-<p>De oplossing in <a class="reference internal" href="#bfigiload"><span class="std std-numref">Fig. 31</span></a> is wel een minder robuuste oplossing, aangezien deze afhangt van de terugkoppeling en/of de IC, en dat het daardoor minder zeker is dat de beveiliging in alle omstandigheden zal ingrijpen.</p>
+<p>De oplossing in <a class="reference internal" href="#bfigiload"><span class="std std-numref">Fig. 32</span></a> is wel een minder robuuste oplossing, aangezien deze afhangt van de terugkoppeling en/of de IC, en dat het daardoor minder zeker is dat de beveiliging in alle omstandigheden zal ingrijpen.</p>
 <div class="cell docutils container">
 <div class="cell_output docutils container">
 <figure class="align-default" id="bfigiload">
 <img alt="_images/d29fbbf854696844a78c5749bc6945f0a033093484d6c367022a111cb3c13edb.svg" src="_images/d29fbbf854696844a78c5749bc6945f0a033093484d6c367022a111cb3c13edb.svg" /><figcaption>
-<p><span class="caption-number">Fig. 31 </span><span class="caption-text">Klasse B versterker met overstroombescherming in de load</span><a class="headerlink" href="#bfigiload" title="Permallink naar deze afbeelding">#</a></p>
+<p><span class="caption-number">Fig. 32 </span><span class="caption-text">Klasse B versterker met overstroombescherming in de load</span><a class="headerlink" href="#bfigiload" title="Permallink naar deze afbeelding">#</a></p>
 </figcaption>
 </figure>
 </div>
@@ -1319,8 +951,8 @@ De totale stroomversterking die we dan bekomen is dan het product van beide stro
 <div class="cell docutils container">
 <div class="cell_output docutils container">
 <figure class="align-default" id="bfig5">
-<img alt="_images/505567d4f2003e1ff6533c54bd2e29fc241cb6acd6985d3655bdd61af1b20718.svg" src="_images/505567d4f2003e1ff6533c54bd2e29fc241cb6acd6985d3655bdd61af1b20718.svg" /><figcaption>
-<p><span class="caption-number">Fig. 32 </span><span class="caption-text">Klasse B versterker met overspanningsbescherming.</span><a class="headerlink" href="#bfig5" title="Permallink naar deze afbeelding">#</a></p>
+<img alt="_images/7ec4e926ede997424ccb0639d1c3eb69918b80dbdd160ee8bd8a841e1e05fcee.svg" src="_images/7ec4e926ede997424ccb0639d1c3eb69918b80dbdd160ee8bd8a841e1e05fcee.svg" /><figcaption>
+<p><span class="caption-number">Fig. 33 </span><span class="caption-text">Klasse B versterker met overspanningsbescherming.</span><a class="headerlink" href="#bfig5" title="Permallink naar deze afbeelding">#</a></p>
 </figcaption>
 </figure>
 </div>
@@ -1328,8 +960,8 @@ De totale stroomversterking die we dan bekomen is dan het product van beide stro
 <div class="cell docutils container">
 <div class="cell_output docutils container">
 <figure class="align-default" id="bfig6">
-<img alt="_images/cb3b037ee552849225b6265baa40a6d8f1990d14a9651c60e09a85d1066fb44f.svg" src="_images/cb3b037ee552849225b6265baa40a6d8f1990d14a9651c60e09a85d1066fb44f.svg" /><figcaption>
-<p><span class="caption-number">Fig. 33 </span><span class="caption-text">Klasse B versterker met bescherming tegen overspanning,overstroom en te groot vermogen.</span><a class="headerlink" href="#bfig6" title="Permallink naar deze afbeelding">#</a></p>
+<img alt="_images/cebdac7e621f3543e594048d917632a93b2eebbac14564c17c088bf2b1f40c47.svg" src="_images/cebdac7e621f3543e594048d917632a93b2eebbac14564c17c088bf2b1f40c47.svg" /><figcaption>
+<p><span class="caption-number">Fig. 34 </span><span class="caption-text">Klasse B versterker met bescherming tegen overspanning,overstroom en te groot vermogen.</span><a class="headerlink" href="#bfig6" title="Permallink naar deze afbeelding">#</a></p>
 </figcaption>
 </figure>
 </div>
@@ -1343,12 +975,12 @@ Daarom is het efficient om deze signalen weg te filteren aan de ingang.
 In <a class="reference internal" href="#bfig1ac"><span class="std std-numref">Fig. 14</span></a> wordt dit reeds gedaan voor de DC component in het signaal. Deze is niet nuttig indien we enkel het AC signaal aan de uitgang bekomen. We kunnen echter een heel stuk beter doen.</p>
 <section id="hoogdoorlaatfilter-aan-de-ingang">
 <h3>Hoogdoorlaatfilter aan de ingang<a class="headerlink" href="#hoogdoorlaatfilter-aan-de-ingang" title="Permalink to this heading">#</a></h3>
-<p><a class="reference internal" href="#figbhoog"><span class="std std-numref">Fig. 34</span></a> toont hoe we een hoogdoorlaatfilter aan de ingang van een klasse B versterker kunnen realiseren.</p>
+<p><a class="reference internal" href="#figbhoog"><span class="std std-numref">Fig. 35</span></a> toont hoe we een hoogdoorlaatfilter aan de ingang van een klasse B versterker kunnen realiseren.</p>
 <div class="cell docutils container">
 <div class="cell_output docutils container">
 <figure class="align-default" id="figbhoog">
 <img alt="_images/8f2177b5cf9a4828261f72a0a8e5fb20ad9bca3147d6da45fd458342e33ad7cc.svg" src="_images/8f2177b5cf9a4828261f72a0a8e5fb20ad9bca3147d6da45fd458342e33ad7cc.svg" /><figcaption>
-<p><span class="caption-number">Fig. 34 </span><span class="caption-text">Klasse B versterker met hoogdoorlaatfilter aan de ingang.</span><a class="headerlink" href="#figbhoog" title="Permallink naar deze afbeelding">#</a></p>
+<p><span class="caption-number">Fig. 35 </span><span class="caption-text">Klasse B versterker met hoogdoorlaatfilter aan de ingang.</span><a class="headerlink" href="#figbhoog" title="Permallink naar deze afbeelding">#</a></p>
 </figcaption>
 </figure>
 </div>
@@ -1356,12 +988,12 @@ In <a class="reference internal" href="#bfig1ac"><span class="std std-numref">Fi
 </section>
 <section id="laagdoorlaatfilter-aan-de-ingang">
 <h3>Laagdoorlaatfilter aan de ingang<a class="headerlink" href="#laagdoorlaatfilter-aan-de-ingang" title="Permalink to this heading">#</a></h3>
-<p><a class="reference internal" href="#figblaag"><span class="std std-numref">Fig. 35</span></a> toont hoe we een laagdoorlaatfilter aan de ingang van een klasse B versterker kunnen realiseren.</p>
+<p><a class="reference internal" href="#figblaag"><span class="std std-numref">Fig. 36</span></a> toont hoe we een laagdoorlaatfilter aan de ingang van een klasse B versterker kunnen realiseren.</p>
 <div class="cell docutils container">
 <div class="cell_output docutils container">
 <figure class="align-default" id="figblaag">
 <img alt="_images/dccf2f2de2b14bf2620d3ed02057bee653b8840a045c1f1e0590d169f748cd55.svg" src="_images/dccf2f2de2b14bf2620d3ed02057bee653b8840a045c1f1e0590d169f748cd55.svg" /><figcaption>
-<p><span class="caption-number">Fig. 35 </span><span class="caption-text">Klasse B versterker met laagdoorlaatfilter aan de ingang.</span><a class="headerlink" href="#figblaag" title="Permallink naar deze afbeelding">#</a></p>
+<p><span class="caption-number">Fig. 36 </span><span class="caption-text">Klasse B versterker met laagdoorlaatfilter aan de ingang.</span><a class="headerlink" href="#figblaag" title="Permallink naar deze afbeelding">#</a></p>
 </figcaption>
 </figure>
 </div>
@@ -1369,17 +1001,17 @@ In <a class="reference internal" href="#bfig1ac"><span class="std std-numref">Fi
 </section>
 <section id="banddoorlaatfilter-aan-de-ingang">
 <h3>Banddoorlaatfilter aan de ingang<a class="headerlink" href="#banddoorlaatfilter-aan-de-ingang" title="Permalink to this heading">#</a></h3>
-<p>De hoogdoorlaatfilter in <a class="reference internal" href="#figbhoog"><span class="std std-numref">Fig. 34</span></a> en de laagdoorlaatfilter in <a class="reference internal" href="#figblaag"><span class="std std-numref">Fig. 35</span></a> kunnen gecombineerd worden in een banddoorlaatfilter zoals getoond wordt in <a class="reference internal" href="#figbband"><span class="std std-numref">Fig. 36</span></a>. Dit is de meest eenvoudige oplossing om een banddoorlaatfilter te bekomen overeenstemmende met de gewenste karakteristieken van het signaal. Er zijn heel wat mogelijkheden om nog veel betere ingangsfilters te ontwerpen. Dit is echter niet het doel van deze cursus. Hiervoor verwijzen we naar de cursus <a class="reference external" href="https://jangenoe.github.io/InteractieveCursus/ToegepasteAnalogeElektronica/intro.html">toegepaste analoge Elektronica</a> <span id="id2">[<a class="reference internal" href="References.html#id3" title="Jan Genoe. Cursus Toegepaste Analoge Elektronica. KULeuven, 2024.">2</a>]</span></p>
+<p>De hoogdoorlaatfilter in <a class="reference internal" href="#figbhoog"><span class="std std-numref">Fig. 35</span></a> en de laagdoorlaatfilter in <a class="reference internal" href="#figblaag"><span class="std std-numref">Fig. 36</span></a> kunnen gecombineerd worden in een banddoorlaatfilter zoals getoond wordt in <a class="reference internal" href="#figbband"><span class="std std-numref">Fig. 37</span></a>. Dit is de meest eenvoudige oplossing om een banddoorlaatfilter te bekomen overeenstemmende met de gewenste karakteristieken van het signaal. Er zijn heel wat mogelijkheden om nog veel betere ingangsfilters te ontwerpen. Dit is echter niet het doel van deze cursus. Hiervoor verwijzen we naar de cursus <a class="reference external" href="https://jangenoe.github.io/InteractieveCursus/ToegepasteAnalogeElektronica/intro.html">toegepaste analoge Elektronica</a> <span id="id3">[<a class="reference internal" href="References.html#id3" title="Jan Genoe. Cursus Toegepaste Analoge Elektronica. KULeuven, 2024.">2</a>]</span></p>
 <div class="cell docutils container">
 <div class="cell_output docutils container">
 <figure class="align-default" id="figbband">
 <img alt="_images/2057ca29e83d7fab4fcb5b62c3efa0a9b2b95389b7527b59af3fe8679c527051.svg" src="_images/2057ca29e83d7fab4fcb5b62c3efa0a9b2b95389b7527b59af3fe8679c527051.svg" /><figcaption>
-<p><span class="caption-number">Fig. 36 </span><span class="caption-text">Klasse B versterker met Banddoorlaatfilter aan de ingang.</span><a class="headerlink" href="#figbband" title="Permallink naar deze afbeelding">#</a></p>
+<p><span class="caption-number">Fig. 37 </span><span class="caption-text">Klasse B versterker met Banddoorlaatfilter aan de ingang.</span><a class="headerlink" href="#figbband" title="Permallink naar deze afbeelding">#</a></p>
 </figcaption>
 </figure>
 </div>
 </div>
-<p><a class="reference internal" href="#bpfilter"><span class="std std-numref">Fig. 37</span></a> toont de bandpass filter op zich, in de veronderstelling dat de stroom door <span class="math notranslate nohighlight">\(R_{f2}\)</span> veel groter is dan de ingangsstroom aan de basis van de driver transistor. In dat geval mogen we deze basisstroom verwaarlozen en kunnen we stellen dat de uitgangsspanning van het filter bekomen wordt door de spanningsdeling van de 2 impedanties <span class="math notranslate nohighlight">\(Z_1\)</span> en <span class="math notranslate nohighlight">\(Z_2\)</span> als:</p>
+<p><a class="reference internal" href="#bpfilter"><span class="std std-numref">Fig. 38</span></a> toont de bandpass filter op zich, in de veronderstelling dat de stroom door <span class="math notranslate nohighlight">\(R_{f2}\)</span> veel groter is dan de ingangsstroom aan de basis van de driver transistor. In dat geval mogen we deze basisstroom verwaarlozen en kunnen we stellen dat de uitgangsspanning van het filter bekomen wordt door de spanningsdeling van de 2 impedanties <span class="math notranslate nohighlight">\(Z_1\)</span> en <span class="math notranslate nohighlight">\(Z_2\)</span> als:</p>
 <div class="math notranslate nohighlight">
 \[ \frac{V_{filter}}{V_{in}} = \frac{Z_2}{Z_1+ Z_2}  = \frac{1}{\frac{Z_1}{Z_2}+ 1} \]</div>
 <p>met</p>
@@ -1391,11 +1023,15 @@ In <a class="reference internal" href="#bfig1ac"><span class="std std-numref">Fi
 <p>Hieruit volgt:</p>
 <div class="math notranslate nohighlight">
 \[ \frac{V_{filter}}{V_{in}} =  \frac{1}{(\frac{1}{j \omega C_{f1}} + R_{f1})(j \omega C_{f2} + \frac{1}{R_{f2}})+ 1} \]</div>
+<p>We kunnen dit verder uitwerken tot:</p>
+<div class="math notranslate nohighlight">
+\[ \frac{V_{filter}}{V_{in}} = \frac{1}{R_{f1}C_{f2}} \frac{j \omega}{ (j \omega)^2 +j \omega  (\frac{1}{R_{f1} C_{f1}} + \frac{1}{R_{f2}C_{f2}} + \frac{1}{R_{f1}C_{f2}} )+ \frac{1}{R_{f1} C_{f1}R_{f2}C_{f2} } } \]</div>
+<p>We zien dat we 1 nulpunt en 2 polen hebben voor <span class="math notranslate nohighlight">\(j \omega\)</span>. Deze 2 polen vinden we door de vierkantsvergelijking van de noemer op te lossen naar <span class="math notranslate nohighlight">\(j \omega\)</span>. De doorlaatband is bepaald door de band tussen de pool bij de laagste frequentie en de pool bij de hoogste frequentie.</p>
 <div class="cell docutils container">
 <div class="cell_output docutils container">
 <figure class="align-default" id="bpfilter">
 <img alt="_images/5fcc27a681031a0042235f3df2c45e2e5e888c1d9824e73b7cf0f0f754b41648.svg" src="_images/5fcc27a681031a0042235f3df2c45e2e5e888c1d9824e73b7cf0f0f754b41648.svg" /><figcaption>
-<p><span class="caption-number">Fig. 37 </span><span class="caption-text">Banddoorlaatfilter voor aan de ingang.</span><a class="headerlink" href="#bpfilter" title="Permallink naar deze afbeelding">#</a></p>
+<p><span class="caption-number">Fig. 38 </span><span class="caption-text">Banddoorlaatfilter voor aan de ingang.</span><a class="headerlink" href="#bpfilter" title="Permallink naar deze afbeelding">#</a></p>
 </figcaption>
 </figure>
 </div>
@@ -1404,9 +1040,9 @@ In <a class="reference internal" href="#bfig1ac"><span class="std std-numref">Fi
 
 <p class="admonition-title"><span class="caption-number">Opdracht 2 </span> (Berekening laagdoorlaat en hoogdoorlaatkarakteristiek)</p>
 <section id="exercise-content">
-<p>Hierboven hebben we de banddoorlaatfilter uitgerekend die overeenkomt met <a class="reference internal" href="#figbband"><span class="std std-numref">Fig. 36</span></a>.
+<p>Hierboven hebben we de banddoorlaatfilter uitgerekend die overeenkomt met <a class="reference internal" href="#figbband"><span class="std std-numref">Fig. 37</span></a>.
 Reken ook de filterkarekteristieken uit van de hoogdoorlaatfilter in
-<a class="reference internal" href="#figbhoog"><span class="std std-numref">Fig. 34</span></a> en de laagdoorlaatfilter in <a class="reference internal" href="#figblaag"><span class="std std-numref">Fig. 35</span></a>.</p>
+<a class="reference internal" href="#figbhoog"><span class="std std-numref">Fig. 35</span></a> en de laagdoorlaatfilter in <a class="reference internal" href="#figblaag"><span class="std std-numref">Fig. 36</span></a>.</p>
 </section>
 </div>
 </section>
@@ -2119,7 +1755,7 @@ try_create(); </script></div>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#driver-stage">Driver stage</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#stroombron">Stroombron</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#verhoging-van-het-afgeleverde-vermogen">Verhoging van het afgeleverde vermogen</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#het-darlington-paar">Het Darlington paar</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#het-darlington-transistor-paar">Het Darlington Transistor paar</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#beveiliging-van-de-klasse-b-vermogentransistors">Beveiliging van de Klasse B vermogentransistors</a><ul class="nav section-nav flex-column">
