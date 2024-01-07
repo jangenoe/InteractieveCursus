@@ -2,11 +2,11 @@
   "content": [
     {
       "content": null,
-      "created": "2024-01-07T21:47:58.773784Z",
+      "created": "2024-01-07T22:50:08.410512Z",
       "format": null,
       "hash": null,
       "hash_algorithm": null,
-      "last_modified": "2024-01-07T21:42:13.923395Z",
+      "last_modified": "2024-01-07T22:44:38.991792Z",
       "mimetype": null,
       "name": "1N5822.lib",
       "path": "libraries/diode/schottky/1N5822.lib",
@@ -15,11 +15,11 @@
       "writable": true
     }
   ],
-  "created": "2024-01-07T21:47:58.773784Z",
+  "created": "2024-01-07T22:50:08.410512Z",
   "format": "json",
   "hash": null,
   "hash_algorithm": null,
-  "last_modified": "2024-01-07T21:47:58.773784Z",
+  "last_modified": "2024-01-07T22:50:08.410512Z",
   "mimetype": null,
   "name": "schottky",
   "path": "libraries/diode/schottky",

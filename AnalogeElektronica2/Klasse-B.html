@@ -539,6 +539,7 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#beveiliging-tegen-overspanning">Beveiliging tegen overspanning</a></li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#beveiliging-tegen-te-hoog-vermogen">Beveiliging tegen te hoog vermogen.</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#filtering-aan-de-ingang">Filtering aan de ingang</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hoogdoorlaatfilter-aan-de-ingang">Hoogdoorlaatfilter aan de ingang</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#laagdoorlaatfilter-aan-de-ingang">Laagdoorlaatfilter aan de ingang</a></li>
@@ -957,6 +958,20 @@ De totale stroomversterking die we dan bekomen is dan het product van beide stro
 </figure>
 </div>
 </div>
+</section>
+</section>
+<section id="beveiliging-tegen-te-hoog-vermogen">
+<h2>Beveiliging tegen te hoog vermogen.<a class="headerlink" href="#beveiliging-tegen-te-hoog-vermogen" title="Permalink to this heading">#</a></h2>
+<p>De beveiliging tegen te hoog vermogen voeren we in door een lineaire combinatie van de beveiliging tegen te hoge stroom en de beveiliging tegen te hoge spanning. De spanning aan de basis van <span class="math notranslate nohighlight">\(T_B\)</span> (<span class="math notranslate nohighlight">\(V_b(T_B)\)</span>)is de som van de spanning over <span class="math notranslate nohighlight">\(R_I\)</span> (<span class="math notranslate nohighlight">\(V_{over}(R_I)\)</span>) en de spanning over <span class="math notranslate nohighlight">\(R_{v1}\)</span>. Deze laatste herschrijven we dan weer als een spanningsdeling van de spanning over de vermogentransistors.</p>
+<div class="math notranslate nohighlight">
+\[ V_b(T_B) =  R_I I_{door} + \frac{R_{v1}}{R_{v1} + R_{v2}} V_{over}  \]</div>
+<p>Als we stellen dat de beveiligingstransistor ingrijpt wanneer de basis-emitterspanning 0.7V wordt, is de vergelijking xx  de vergelijking van een rechte in de outputkarakteristiek van de vermogentransistor.
+In de outputkarakteristiek plotten we <span class="math notranslate nohighlight">\(I_{door}\)</span> als functie van <span class="math notranslate nohighlight">\(V_{over}\)</span>, zoals getoond in xx. Door de parameters <span class="math notranslate nohighlight">\(R_{v1}\)</span>, <span class="math notranslate nohighlight">\(R_{v2}\)</span> en <span class="math notranslate nohighlight">\(R_{I}\)</span> juist te kiezen bepalen we de gewenste beveiliging.</p>
+<div class="cell docutils container">
+<div class="cell_output docutils container">
+<img alt="_images/e933c8e12ce761839a9ac0519bc2acc0ec4bd837b51d0e09286ba79e03265eb8.svg" src="_images/e933c8e12ce761839a9ac0519bc2acc0ec4bd837b51d0e09286ba79e03265eb8.svg" /></div>
+</div>
+<p>In <a class="reference internal" href="#bfig6"><span class="std std-numref">Fig. 34</span></a> passen we dit concept toe vertrekkende van het schema van <a class="reference internal" href="#bfig3"><span class="std std-numref">Fig. 29</span></a></p>
 <div class="cell docutils container">
 <div class="cell_output docutils container">
 <figure class="align-default" id="bfig6">
@@ -966,7 +981,6 @@ De totale stroomversterking die we dan bekomen is dan het product van beide stro
 </figure>
 </div>
 </div>
-</section>
 </section>
 <section id="filtering-aan-de-ingang">
 <h2>Filtering aan de ingang<a class="headerlink" href="#filtering-aan-de-ingang" title="Permalink to this heading">#</a></h2>
@@ -1764,6 +1778,7 @@ try_create(); </script></div>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#beveiliging-tegen-overspanning">Beveiliging tegen overspanning</a></li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#beveiliging-tegen-te-hoog-vermogen">Beveiliging tegen te hoog vermogen.</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#filtering-aan-de-ingang">Filtering aan de ingang</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hoogdoorlaatfilter-aan-de-ingang">Hoogdoorlaatfilter aan de ingang</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#laagdoorlaatfilter-aan-de-ingang">Laagdoorlaatfilter aan de ingang</a></li>
