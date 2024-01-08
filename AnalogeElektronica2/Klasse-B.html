@@ -533,6 +533,7 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#het-darlington-transistor-paar">Het Darlington Transistor paar</a></li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#efficientie-van-de-klasse-b-versterker">Efficientie van de Klasse B versterker</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#beveiliging-van-de-klasse-b-vermogentransistors">Beveiliging van de Klasse B vermogentransistors</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#waar-en-hoe-is-beveiliging-nodig">Waar en hoe is beveiliging nodig?</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#beveiliging-tegen-overstroom">Beveiliging tegen overstroom</a></li>
@@ -673,12 +674,13 @@ Van de andere kant moet er natuurlijk ook me rekening gehouden worden dat hoe gr
 <div class="cell docutils container">
 <div class="cell_output docutils container">
 <figure class="align-default" id="bfig1ac">
-<img alt="_images/1f2b116b290f061003eca42ca29b9f9c277b8f83203d374d6476e6b2622b345b.svg" src="_images/1f2b116b290f061003eca42ca29b9f9c277b8f83203d374d6476e6b2622b345b.svg" /><figcaption>
+<img alt="_images/41d9eee8286149297225f2fae4192a1197c00f16e15235bd227e8f085f8ca2ea.svg" src="_images/41d9eee8286149297225f2fae4192a1197c00f16e15235bd227e8f085f8ca2ea.svg" /><figcaption>
 <p><span class="caption-number">Fig. 14 </span><span class="caption-text">Basisschema van de klasse B versterker voor AC werking.</span><a class="headerlink" href="#bfig1ac" title="Permallink naar deze afbeelding">#</a></p>
 </figcaption>
 </figure>
 </div>
 </div>
+<p>Aangezien in de meeste gevallen de nodige voedingsspanning voor de AC aansturing (<span class="math notranslate nohighlight">\(V_{DD2}\)</span>) het dubbele is in vergelijking met de aansturing nodig bij het gebruik van <span class="math notranslate nohighlight">\(+V_{DD}\)</span> en <span class="math notranslate nohighlight">\(-V_{DD}\)</span>, zullen we in het verder verloop van dit hoofdstuk in eerste instantie de formules afleiden voor <span class="math notranslate nohighlight">\(V_{DD}\)</span>. Je kan de in de meeste van deze formules <span class="math notranslate nohighlight">\(V_{DD}\)</span> vervangen door <span class="math notranslate nohighlight">\(\frac{V_{DD}}{2}\)</span> om deze te gebruiken voor AC aansturing.</p>
 </section>
 </section>
 <section id="gebruik-van-de-voorinstelspanning">
@@ -907,6 +909,12 @@ De totale stroomversterking die we dan bekomen is dan het product van beide stro
 </div>
 </section>
 </section>
+<section id="efficientie-van-de-klasse-b-versterker">
+<h2>Efficientie van de Klasse B versterker<a class="headerlink" href="#efficientie-van-de-klasse-b-versterker" title="Permalink to this heading">#</a></h2>
+<p>De theoretische berekening van de efficientie als functie van de uitsturing benaderen we in eerste instantie door enkel de stroom van het pull-up netwerk en het pull down netwerk te bekijken.</p>
+<p>$$<span class="math notranslate nohighlight">\( \mu = \frac{P_{out}}{P_{in}} = \frac{P_{ac}}{P_{DC}}\)</span></p>
+<p>met de uitsturing (<span class="math notranslate nohighlight">\(x\)</span>) gedefinieerd als <span class="math notranslate nohighlight">\(\frac{V_{ac}}{V_{DD}}\)</span>.</p>
+</section>
 <section id="beveiliging-van-de-klasse-b-vermogentransistors">
 <h2>Beveiliging van de Klasse B vermogentransistors<a class="headerlink" href="#beveiliging-van-de-klasse-b-vermogentransistors" title="Permalink to this heading">#</a></h2>
 <section id="waar-en-hoe-is-beveiliging-nodig">
@@ -999,6 +1007,7 @@ In <a class="reference internal" href="#bfig1ac"><span class="std std-numref">Fi
 </figure>
 </div>
 </div>
+<p>Merk op dat in <a class="reference internal" href="#figbhoog"><span class="std std-numref">Fig. 35</span></a> de weerstand <span class="math notranslate nohighlight">\(R_f\)</span> ook dienst doet als bias weerstand van de driver transistor, aangezien <span class="math notranslate nohighlight">\(-V_{DD}\)</span> &lt; 0. De nodige bias stroom van deze transtor bepaalt dus de keuze van <span class="math notranslate nohighlight">\(R_f\)</span>. Dit wil zeggen dat alleen <span class="math notranslate nohighlight">\(C_f\)</span> kan gebruikt worden om de hoogdoorlaatfilter te ontwerpen.</p>
 </section>
 <section id="laagdoorlaatfilter-aan-de-ingang">
 <h3>Laagdoorlaatfilter aan de ingang<a class="headerlink" href="#laagdoorlaatfilter-aan-de-ingang" title="Permalink to this heading">#</a></h3>
@@ -1012,6 +1021,7 @@ In <a class="reference internal" href="#bfig1ac"><span class="std std-numref">Fi
 </figure>
 </div>
 </div>
+<p>We merken op dat in <a class="reference internal" href="#figblaag"><span class="std std-numref">Fig. 36</span></a> de weerstand <span class="math notranslate nohighlight">\(R_f\)</span> de ingang (<span class="math notranslate nohighlight">\(V_{in}\)</span>) belast. We moeten bij het ontwerpen van de driver van <span class="math notranslate nohighlight">\(V_{in}\)</span> ermee rekening houden dat deze de nodige stroom hiervoor moet kunnen leveren.</p>
 </section>
 <section id="banddoorlaatfilter-aan-de-ingang">
 <h3>Banddoorlaatfilter aan de ingang<a class="headerlink" href="#banddoorlaatfilter-aan-de-ingang" title="Permalink to this heading">#</a></h3>
@@ -1772,6 +1782,7 @@ try_create(); </script></div>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#het-darlington-transistor-paar">Het Darlington Transistor paar</a></li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#efficientie-van-de-klasse-b-versterker">Efficientie van de Klasse B versterker</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#beveiliging-van-de-klasse-b-vermogentransistors">Beveiliging van de Klasse B vermogentransistors</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#waar-en-hoe-is-beveiliging-nodig">Waar en hoe is beveiliging nodig?</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#beveiliging-tegen-overstroom">Beveiliging tegen overstroom</a></li>
