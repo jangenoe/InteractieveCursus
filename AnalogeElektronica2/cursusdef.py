@@ -15,7 +15,7 @@ from ipywidgets import interact,FloatSlider
 usewidgets=False;
 from IPython import display
 
-def filteraff(filename):
+def spicelisting(filename,firstline=0,lastline=10000):
     ff=""
     with open(filename) as f:
         for i,line in enumerate(f):
