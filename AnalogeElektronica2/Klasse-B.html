@@ -531,6 +531,8 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#stroombron">Stroombron</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#verhoging-van-het-afgeleverde-vermogen">Verhoging van het afgeleverde vermogen</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#het-darlington-transistor-paar">Het Darlington Transistor paar</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#het-complementaire-darlington-transistor-paar">Het complementaire Darlington Transistor paar</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#npn-vermogentransistors-in-de-eindtrap">NPN vermogentransistors in de eindtrap</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#efficientie-van-de-klasse-b-versterker">Efficientie van de Klasse B versterker</a></li>
@@ -857,10 +859,15 @@ De totale stroomversterking die we dan bekomen is dan het product van beide stro
 <div class="cell docutils container">
 <div class="cell_output docutils container">
 <figure class="align-default" id="darlington">
-<img alt="_images/da008b6bc91516963fde017be03ced1fc436d91b0714fae6b28aa94a0a39f8eb.svg" src="_images/da008b6bc91516963fde017be03ced1fc436d91b0714fae6b28aa94a0a39f8eb.svg" /><figcaption>
+<img alt="_images/e7de3fa06956949dcfe42f5bfa793a5b172aed9191bf94c57919dcacef939c91.svg" src="_images/e7de3fa06956949dcfe42f5bfa793a5b172aed9191bf94c57919dcacef939c91.svg" /><figcaption>
 <p><span class="caption-number">Fig. 26 </span><span class="caption-text">Darlington paar.</span><a class="headerlink" href="#darlington" title="Permallink naar deze afbeelding">#</a></p>
 </figcaption>
 </figure>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_output docutils container">
+<img alt="_images/6895d651fce6bf1049d17ff8124419a1552cccc8f370fc0dde3c39ea354da0a8.png" src="_images/6895d651fce6bf1049d17ff8124419a1552cccc8f370fc0dde3c39ea354da0a8.png" />
 </div>
 </div>
 <p>Het schema in <a class="reference internal" href="#darlington"><span class="std std-numref">Fig. 26</span></a> heeft echter 3 problemen:</p>
@@ -874,17 +881,22 @@ De totale stroomversterking die we dan bekomen is dan het product van beide stro
 <div class="cell docutils container">
 <div class="cell_output docutils container">
 <figure class="align-default" id="darlington-ed">
-<img alt="_images/1722ec4f80d5e5d744e77bba4d280caebbd12047068cc9a2e2ff60119af6e910.svg" src="_images/1722ec4f80d5e5d744e77bba4d280caebbd12047068cc9a2e2ff60119af6e910.svg" /><figcaption>
+<img alt="_images/085796ffe7af0a9aac0dcf35818e78bf12572b98c6bb79638e2c92c6daf9b9aa.svg" src="_images/085796ffe7af0a9aac0dcf35818e78bf12572b98c6bb79638e2c92c6daf9b9aa.svg" /><figcaption>
 <p><span class="caption-number">Fig. 27 </span><span class="caption-text">Darlington paar met emitter degeneratie.</span><a class="headerlink" href="#darlington-ed" title="Permallink naar deze afbeelding">#</a></p>
 </figcaption>
 </figure>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_output docutils container">
+<img alt="_images/47512bcc8bf6305059e388482b75ae22551a3bb56b05dd85f0a30b790017597a.png" src="_images/47512bcc8bf6305059e388482b75ae22551a3bb56b05dd85f0a30b790017597a.png" />
 </div>
 </div>
 <p>Het is natuurlijk belangrijk dat we zowel voor de NPN als voor de PNP de stroom vergroten aan de hand van een Darlingtonpaar. Het schema dat er bekomen wordt, kan uitgewerkt worden voor elk van de bovenstaande Klasse B versterkerschemas. Wanneer we dit doen voor het schema in <a class="reference internal" href="#bfig1ac"><span class="std std-numref">Fig. 14</span></a> bekomen we het schema in <a class="reference internal" href="#bdoubledriver"><span class="std std-numref">Fig. 28</span></a></p>
 <div class="cell docutils container">
 <div class="cell_output docutils container">
 <figure class="align-default" id="bdoubledriver">
-<img alt="_images/64215adc31ebfc4e8455c6a133187bd21e2e8ec6a7b6a207b03688b23fcf44a6.svg" src="_images/64215adc31ebfc4e8455c6a133187bd21e2e8ec6a7b6a207b03688b23fcf44a6.svg" /><figcaption>
+<img alt="_images/64403dd7c4c12029558e95182bd32937dff6e0b523d7fb83913d1e97194e4b7b.svg" src="_images/64403dd7c4c12029558e95182bd32937dff6e0b523d7fb83913d1e97194e4b7b.svg" /><figcaption>
 <p><span class="caption-number">Fig. 28 </span><span class="caption-text">De klasse B versterker met 2 opeenvolgende drive transistors.</span><a class="headerlink" href="#bdoubledriver" title="Permallink naar deze afbeelding">#</a></p>
 </figcaption>
 </figure>
@@ -908,11 +920,38 @@ De totale stroomversterking die we dan bekomen is dan het product van beide stro
 </section>
 </div>
 </section>
+<section id="het-complementaire-darlington-transistor-paar">
+<h3>Het <a class="reference external" href="https://en.wikipedia.org/wiki/Sziklai_pair">complementaire Darlington</a> Transistor paar<a class="headerlink" href="#het-complementaire-darlington-transistor-paar" title="Permalink to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_output docutils container">
+<img alt="_images/385792e0000ce58624c34d8897fed9b6b31c895b68c0a9b56f401993d49e9b44.svg" src="_images/385792e0000ce58624c34d8897fed9b6b31c895b68c0a9b56f401993d49e9b44.svg" /></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_output docutils container">
+<img alt="_images/44d445990b0811538cb1e680a85e35f8e07c0c0810fbea96dbfe144f810fbc87.png" src="_images/44d445990b0811538cb1e680a85e35f8e07c0c0810fbea96dbfe144f810fbc87.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_output docutils container">
+<img alt="_images/9cb3e1cb2e91ae4b485c9651babf955ccf8fee01b5755861d6df28a17b6ba08e.svg" src="_images/9cb3e1cb2e91ae4b485c9651babf955ccf8fee01b5755861d6df28a17b6ba08e.svg" /></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_output docutils container">
+<img alt="_images/7832af7ec00673b1050c997e99c36dfd3ef4067582c4ca40ad4ace1f9a6a83f3.png" src="_images/7832af7ec00673b1050c997e99c36dfd3ef4067582c4ca40ad4ace1f9a6a83f3.png" />
+</div>
+</div>
+</section>
+<section id="npn-vermogentransistors-in-de-eindtrap">
+<h3>NPN vermogentransistors in de eindtrap<a class="headerlink" href="#npn-vermogentransistors-in-de-eindtrap" title="Permalink to this heading">#</a></h3>
+<p>Aangezien de mobiliteit van de elektronen in silicium hoger is dan de mobiliteit van de gaten, zal bij gelijke doperingsprofielen de performantie van de NPN transistor hoger zijn dan deze van de PNP em bovendien zal de NPN minder opwarmen. Daarom kan het voordelig zijn van NPN tranistors te gebruiken voor beide vermogentransistors in de laatste trap.</p>
+<p>Merk op dat we in alle schema’s van de klasse B versterker steeds het pull-up netwerk aanvangen met een NPN en het pull-down netwerk met een PNP. Aan de hand van Darlington paren of complementaire Darlington paren kunnen we het type van de transistor veranderen in de ketting van de verdere stroomversterking, maar de globale labels (Emitter, Collector, basis) van de pull-up en pull-down blokken blijven deze van de eerste stap in dit blok.</p>
+</section>
 </section>
 <section id="efficientie-van-de-klasse-b-versterker">
 <h2>Efficientie van de Klasse B versterker<a class="headerlink" href="#efficientie-van-de-klasse-b-versterker" title="Permalink to this heading">#</a></h2>
 <p>De theoretische berekening van de efficientie als functie van de uitsturing benaderen we in eerste instantie door enkel de stroom van het pull-up netwerk en het pull down netwerk te bekijken.</p>
-<p>$$<span class="math notranslate nohighlight">\( \mu = \frac{P_{out}}{P_{in}} = \frac{P_{ac}}{P_{DC}}\)</span></p>
+<div class="math notranslate nohighlight">
+\[ \mu = \frac{P_{out}}{P_{in}} = \frac{P_{ac}}{P_{DC}}\]</div>
 <p>met de uitsturing (<span class="math notranslate nohighlight">\(x\)</span>) gedefinieerd als <span class="math notranslate nohighlight">\(\frac{V_{ac}}{V_{DD}}\)</span>.</p>
 </section>
 <section id="beveiliging-van-de-klasse-b-vermogentransistors">
@@ -1780,6 +1819,8 @@ try_create(); </script></div>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#stroombron">Stroombron</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#verhoging-van-het-afgeleverde-vermogen">Verhoging van het afgeleverde vermogen</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#het-darlington-transistor-paar">Het Darlington Transistor paar</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#het-complementaire-darlington-transistor-paar">Het complementaire Darlington Transistor paar</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#npn-vermogentransistors-in-de-eindtrap">NPN vermogentransistors in de eindtrap</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#efficientie-van-de-klasse-b-versterker">Efficientie van de Klasse B versterker</a></li>
