@@ -731,6 +731,33 @@ Van de andere kant moet er natuurlijk ook me rekening gehouden worden dat hoe gr
 <img alt="_images/5569a62b4a9699c140bbc6f1d6a0863882d23cfd179c9f5b66904cd4c992a77d.svg" src="_images/5569a62b4a9699c140bbc6f1d6a0863882d23cfd179c9f5b66904cd4c992a77d.svg" /></div>
 </div>
 <p>Hieronder tonen we de spice listing van de klasse B versterker waarbij we een voorinstelspanning voorzien tussen de  basissen van de npn en de pnp transistor. Deze voorinstelspanning is hier uitgevoerd door diodes. in <a class="reference internal" href="#bfig2dio"><span class="std std-numref">Fig. 17</span></a> merken we hierbij op dat dit tot gevolg heeft dat er toch een stroom blijft lopen door de transistor die niet in geleiding is. Dit noemen we de klasse AB werking van deze klasseB versterker.</p>
+<div class="literal-block-wrapper docutils container" id="listing2">
+<div class="code-block-caption"><span class="caption-number">Spice Listing 2 </span><span class="caption-text">Klasse B circuit met voorinstelspanning</span><a class="headerlink" href="#listing2" title="Permalink naar deze broncode">#</a></div>
+<div class="highlight-spice notranslate"><div class="highlight"><pre><span></span><span class="nx">Klasse</span><span class="w"> </span><span class="nx">B</span><span class="w"> </span><span class="nx">versterker</span>
+<span class="o">*</span>
+<span class="o">*</span><span class="w"> </span><span class="nx">SUPPLY</span><span class="w"> </span><span class="nx">VOLTAGES</span>
+<span class="nx">VPOS</span><span class="w"> </span><span class="mi">8</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="nx">DC</span><span class="w"> </span><span class="o">+</span><span class="mi">15</span><span class="nx">V</span>
+<span class="nx">VNEG</span><span class="w"> </span><span class="mi">9</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="nx">DC</span><span class="w"> </span><span class="o">-</span><span class="mi">15</span><span class="nx">V</span>
+<span class="o">*</span>
+<span class="nx">VS2</span><span class="w"> </span><span class="mi">10</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="nx">DC</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="nx">SIN</span><span class="p">(</span><span class="mi">0</span><span class="nx">V</span><span class="w"> </span><span class="mi">5</span><span class="nx">VPEAK</span><span class="w"> </span><span class="mi">10</span><span class="nx">KHZ</span><span class="p">)</span>
+<span class="o">*</span>
+<span class="nx">D1</span><span class="w">  </span><span class="mi">13</span><span class="w"> </span><span class="mi">10</span><span class="w">   </span><span class="nx">DNOM</span>
+<span class="nx">RB1</span><span class="w"> </span><span class="mi">13</span><span class="w"> </span><span class="mi">8</span><span class="w">    </span><span class="mi">10</span><span class="nx">K</span>
+<span class="nx">Q11</span><span class="w"> </span><span class="mi">8</span><span class="w"> </span><span class="mi">13</span><span class="w"> </span><span class="mi">12</span><span class="w"> </span><span class="nx">QNPN</span>
+<span class="o">*</span>
+<span class="nx">D2</span><span class="w">  </span><span class="mi">10</span><span class="w"> </span><span class="mi">14</span><span class="w">   </span><span class="nx">DNOM</span>
+<span class="nx">RB2</span><span class="w"> </span><span class="mi">14</span><span class="w"> </span><span class="mi">9</span><span class="w">    </span><span class="mi">10</span><span class="nx">K</span>
+<span class="nx">Q12</span><span class="w"> </span><span class="mi">9</span><span class="w"> </span><span class="mi">14</span><span class="w"> </span><span class="mi">12</span><span class="w"> </span><span class="nx">QPNP</span>
+<span class="o">*</span>
+<span class="nx">RL2</span><span class="w"> </span><span class="mi">12</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="mi">100</span>
+<span class="o">*</span>
+<span class="o">*</span><span class="w"> </span><span class="nx">DEVICE</span><span class="w"> </span><span class="nx">MODELS</span>
+<span class="p">.</span><span class="nx">model</span><span class="w"> </span><span class="nx">QNPN</span><span class="w"> </span><span class="nx">NPN</span><span class="p">(</span><span class="nx">BF</span><span class="p">=</span><span class="mi">50</span><span class="p">)</span>
+<span class="p">.</span><span class="nx">model</span><span class="w"> </span><span class="nx">QPNP</span><span class="w"> </span><span class="nx">PNP</span><span class="p">(</span><span class="nx">BF</span><span class="p">=</span><span class="mi">50</span><span class="p">)</span>
+<span class="p">.</span><span class="nx">model</span><span class="w"> </span><span class="nx">DNOM</span><span class="w"> </span><span class="nx">D</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
 <div class="cell docutils container">
 <div class="cell_output docutils container">
 <figure class="align-default" id="bfig2dio">
@@ -753,6 +780,29 @@ Van de andere kant moet er natuurlijk ook me rekening gehouden worden dat hoe gr
 </div>
 </div>
 <p>We kunnen ook proberen de dode zone weg te werken aan de hand van feedback, zoals in het onderstaande schema aan de hand van een opamp. Op het eerste zicht lijkt dat te lukken, als we de simulatie in <a class="reference internal" href="#bopmapsim"><span class="std std-numref">Fig. 19</span></a> bekijken. De <span class="math notranslate nohighlight">\(V_{in}\)</span> en <span class="math notranslate nohighlight">\(V_{out}\)</span> liggen zo goed als volledig op elkaar dat we het verschil niet merken. Enkel als we heel erg inzoemen, zoals in <a class="reference internal" href="#bopmapsimz"><span class="std std-numref">Fig. 20</span></a> lijkt er een klein verschil te zijn langs de nuldoorgang. Laat je hierbij echter niet vangen. Deze simulatie is gedaan met een ideale OpAmp, waarvan de stijgsnelheid niet realistisch is. Wanneer we diezelfde simulatie hernemen met een realistische OpAmp, zie onder, blijft dit bijna ideale gedrag niet behouden.</p>
+<div class="literal-block-wrapper docutils container" id="listing3">
+<div class="code-block-caption"><span class="caption-number">Spice Listing 3 </span><span class="caption-text">SPICE code met OPAMP feedback</span><a class="headerlink" href="#listing3" title="Permalink naar deze broncode">#</a></div>
+<div class="highlight-spice notranslate"><div class="highlight"><pre><span></span><span class="p">.</span><span class="nx">title</span><span class="w"> </span><span class="nx">Klasse</span><span class="w"> </span><span class="nx">B</span><span class="w"> </span><span class="nx">versterker</span><span class="w">  </span><span class="nx">PUSH</span><span class="o">-</span><span class="nx">PULL</span><span class="w"> </span><span class="nx">PLACED</span><span class="w"> </span><span class="nx">IN</span><span class="w"> </span><span class="nx">OPAMP</span><span class="w"> </span><span class="nx">FEEDBACK</span><span class="w"> </span><span class="nx">LOOP</span>
+<span class="o">*</span>
+<span class="o">*</span><span class="w"> </span><span class="nx">SUPPLY</span><span class="w"> </span><span class="nx">VOLTAGES</span>
+<span class="nx">VPOS</span><span class="w"> </span><span class="mi">8</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="nx">DC</span><span class="w"> </span><span class="o">+</span><span class="mi">15</span><span class="nx">V</span>
+<span class="nx">VNEG</span><span class="w"> </span><span class="mi">9</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="nx">DC</span><span class="w"> </span><span class="o">-</span><span class="mi">15</span><span class="nx">V</span>
+<span class="o">*</span>
+<span class="nx">VS3</span><span class="w"> </span><span class="mi">20</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="nx">DC</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="nx">SIN</span><span class="p">(</span><span class="mi">0</span><span class="nx">V</span><span class="w"> </span><span class="mi">5</span><span class="nx">VPEAK</span><span class="w"> </span><span class="mi">10</span><span class="nx">KHZ</span><span class="p">)</span>
+<span class="o">*</span>
+<span class="nx">Q21</span><span class="w"> </span><span class="mi">8</span><span class="w"> </span><span class="mi">23</span><span class="w"> </span><span class="mi">22</span><span class="w"> </span><span class="nx">QNPN</span>
+<span class="nx">Q22</span><span class="w"> </span><span class="mi">9</span><span class="w"> </span><span class="mi">23</span><span class="w"> </span><span class="mi">22</span><span class="w"> </span><span class="nx">QPNP</span>
+<span class="nx">RL3</span><span class="w"> </span><span class="mi">22</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="mi">100</span>
+<span class="o">*</span>
+<span class="nx">XOpAmp</span><span class="w"> </span><span class="mi">20</span><span class="w"> </span><span class="mi">22</span><span class="w"> </span><span class="mi">8</span><span class="w"> </span><span class="mi">9</span><span class="w"> </span><span class="mi">23</span><span class="w"> </span><span class="mi">8</span><span class="w"> </span><span class="nx">opamp</span>
+<span class="o">*</span>
+<span class="o">*</span><span class="w"> </span><span class="nx">DEVICE</span><span class="w"> </span><span class="nx">MODELS</span>
+<span class="p">.</span><span class="nx">model</span><span class="w"> </span><span class="nx">QNPN</span><span class="w"> </span><span class="nx">NPN</span><span class="p">(</span><span class="nx">BF</span><span class="p">=</span><span class="mi">50</span><span class="p">)</span>
+<span class="p">.</span><span class="nx">model</span><span class="w"> </span><span class="nx">QPNP</span><span class="w"> </span><span class="nx">PNP</span><span class="p">(</span><span class="nx">BF</span><span class="p">=</span><span class="mi">50</span><span class="p">)</span>
+<span class="p">.</span><span class="nx">model</span><span class="w"> </span><span class="nx">DNOM</span><span class="w"> </span><span class="nx">D</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
 <div class="cell docutils container">
 <div class="cell_output docutils container">
 <figure class="align-default" id="bopmapsim">
@@ -781,6 +831,29 @@ Van de andere kant moet er natuurlijk ook me rekening gehouden worden dat hoe gr
 <p><span class="caption-number">Fig. 21 </span><span class="caption-text">De klasse B versterker: de stroom door een npn transistor als functie van de spanning.</span><a class="headerlink" href="#bopamp-dio" title="Permallink naar deze afbeelding">#</a></p>
 </figcaption>
 </figure>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="listing4">
+<div class="code-block-caption"><span class="caption-number">Spice Listing 4 </span><span class="caption-text">SPICE code met OPAMP feedback</span><a class="headerlink" href="#listing4" title="Permalink naar deze broncode">#</a></div>
+<div class="highlight-spice notranslate"><div class="highlight"><pre><span></span><span class="p">.</span><span class="nx">title</span><span class="w"> </span><span class="nx">Klasse</span><span class="w"> </span><span class="nx">B</span><span class="w"> </span><span class="nx">versterker</span><span class="w">  </span><span class="nx">PUSH</span><span class="o">-</span><span class="nx">PULL</span><span class="w"> </span><span class="nx">PLACED</span><span class="w"> </span><span class="nx">IN</span><span class="w"> </span><span class="nx">OPAMP</span><span class="w"> </span><span class="nx">FEEDBACK</span><span class="w"> </span><span class="nx">LOOP</span>
+<span class="o">*</span>
+<span class="o">*</span><span class="w"> </span><span class="nx">SUPPLY</span><span class="w"> </span><span class="nx">VOLTAGES</span>
+<span class="nx">VPOS</span><span class="w"> </span><span class="mi">8</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="nx">DC</span><span class="w"> </span><span class="o">+</span><span class="m m-Double">2.5</span><span class="nx">V</span>
+<span class="nx">VNEG</span><span class="w"> </span><span class="mi">9</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="nx">DC</span><span class="w"> </span><span class="m m-Double">-2.5</span><span class="nx">V</span>
+<span class="o">*</span>
+<span class="nx">VS3</span><span class="w"> </span><span class="mi">20</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="nx">DC</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="nx">SIN</span><span class="p">(</span><span class="mi">0</span><span class="nx">V</span><span class="w"> </span><span class="mi">1</span><span class="nx">VPEAK</span><span class="w"> </span><span class="mi">10</span><span class="nx">KHZ</span><span class="p">)</span>
+<span class="o">*</span>
+<span class="nx">Q21</span><span class="w"> </span><span class="mi">8</span><span class="w"> </span><span class="mi">23</span><span class="w"> </span><span class="mi">22</span><span class="w"> </span><span class="nx">QNPN</span>
+<span class="nx">Q22</span><span class="w"> </span><span class="mi">9</span><span class="w"> </span><span class="mi">23</span><span class="w"> </span><span class="mi">22</span><span class="w"> </span><span class="nx">QPNP</span>
+<span class="nx">RL3</span><span class="w"> </span><span class="mi">22</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="mi">100</span>
+<span class="o">*</span>
+<span class="nx">XOpAmp</span><span class="w"> </span><span class="mi">20</span><span class="w"> </span><span class="mi">22</span><span class="w"> </span><span class="mi">8</span><span class="w"> </span><span class="mi">9</span><span class="w"> </span><span class="mi">23</span><span class="w"> </span><span class="mi">8</span><span class="w"> </span><span class="nx">opamp</span>
+<span class="o">*</span>
+<span class="o">*</span><span class="w"> </span><span class="nx">DEVICE</span><span class="w"> </span><span class="nx">MODELS</span>
+<span class="p">.</span><span class="nx">model</span><span class="w"> </span><span class="nx">QNPN</span><span class="w"> </span><span class="nx">NPN</span><span class="p">(</span><span class="nx">BF</span><span class="p">=</span><span class="mi">50</span><span class="p">)</span>
+<span class="p">.</span><span class="nx">model</span><span class="w"> </span><span class="nx">QPNP</span><span class="w"> </span><span class="nx">PNP</span><span class="p">(</span><span class="nx">BF</span><span class="p">=</span><span class="mi">50</span><span class="p">)</span>
+<span class="p">.</span><span class="nx">model</span><span class="w"> </span><span class="nx">DNOM</span><span class="w"> </span><span class="nx">D</span><span class="p">()</span>
+</pre></div>
 </div>
 </div>
 <div class="cell docutils container">
@@ -866,7 +939,7 @@ De totale stroomversterking die we dan bekomen is dan het product van beide stro
 </div>
 </div>
 <div class="literal-block-wrapper docutils container" id="listing4darlington">
-<div class="code-block-caption"><span class="caption-number">Spice Listing 2 </span><span class="caption-text">SPICE code van een Darlington paar</span><a class="headerlink" href="#listing4darlington" title="Permalink naar deze broncode">#</a></div>
+<div class="code-block-caption"><span class="caption-number">Spice Listing 5 </span><span class="caption-text">SPICE code van een Darlington paar</span><a class="headerlink" href="#listing4darlington" title="Permalink naar deze broncode">#</a></div>
 <div class="highlight-spice notranslate"><div class="highlight"><pre><span></span><span class="nx">Darlington</span>
 <span class="o">*</span>
 <span class="o">*</span><span class="w">  </span><span class="nx">PUSH</span><span class="o">-</span><span class="nx">PULL</span><span class="w"> </span><span class="nx">TRANSISTOR</span><span class="w"> </span><span class="nx">OUTPUT</span><span class="w"> </span><span class="nx">STAGE</span>
@@ -906,7 +979,7 @@ De totale stroomversterking die we dan bekomen is dan het product van beide stro
 </div>
 </div>
 <div class="literal-block-wrapper docutils container" id="listingdarlington-ed">
-<div class="code-block-caption"><span class="caption-number">Spice Listing 3 </span><span class="caption-text">SPICE code van een Darlington paar met emitter degeneratie</span><a class="headerlink" href="#listingdarlington-ed" title="Permalink naar deze broncode">#</a></div>
+<div class="code-block-caption"><span class="caption-number">Spice Listing 6 </span><span class="caption-text">SPICE code van een Darlington paar met emitter degeneratie</span><a class="headerlink" href="#listingdarlington-ed" title="Permalink naar deze broncode">#</a></div>
 <div class="highlight-spice notranslate"><div class="highlight"><pre><span></span><span class="nx">Darlington</span><span class="w"> </span><span class="nx">met</span><span class="w"> </span><span class="nx">emitter</span><span class="w"> </span><span class="nx">degeneratie</span>
 <span class="o">*</span>
 <span class="o">*</span><span class="w">  </span><span class="nx">PUSH</span><span class="o">-</span><span class="nx">PULL</span><span class="w"> </span><span class="nx">TRANSISTOR</span><span class="w"> </span><span class="nx">OUTPUT</span><span class="w"> </span><span class="nx">STAGE</span>
@@ -939,12 +1012,12 @@ De totale stroomversterking die we dan bekomen is dan het product van beide stro
 </figure>
 </div>
 </div>
-<p>Wanneer we een Darlington paar toevoegen in het schema van <a class="reference internal" href="#bfigstroombron"><span class="std std-numref">Fig. 25</span></a> krijgen we het schema in <a class="reference internal" href="#bfig3"><span class="std std-numref">Fig. 31</span></a></p>
+<p>Wanneer we een Darlington paar toevoegen in het schema van <a class="reference internal" href="#bfigstroombron"><span class="std std-numref">Fig. 25</span></a> krijgen we het schema in <a class="reference internal" href="#bfig3-b"><span class="std std-numref">Fig. 31</span></a></p>
 <div class="cell docutils container">
 <div class="cell_output docutils container">
-<figure class="align-default" id="bfig3">
+<figure class="align-default" id="bfig3-b">
 <img alt="_images/b29c0651ae8282443e46159cce62d216fc2767c2980e3f97d4242cacfb077312.svg" src="_images/b29c0651ae8282443e46159cce62d216fc2767c2980e3f97d4242cacfb077312.svg" /><figcaption>
-<p><span class="caption-number">Fig. 31 </span><span class="caption-text">Klasse B versterker met Darlington paar.</span><a class="headerlink" href="#bfig3" title="Permallink naar deze afbeelding">#</a></p>
+<p><span class="caption-number">Fig. 31 </span><span class="caption-text">Klasse B versterker met Darlington paar.</span><a class="headerlink" href="#bfig3-b" title="Permallink naar deze afbeelding">#</a></p>
 </figcaption>
 </figure>
 </div>
@@ -964,7 +1037,7 @@ De totale stroomversterking die we dan bekomen is dan het product van beide stro
 <img alt="_images/385792e0000ce58624c34d8897fed9b6b31c895b68c0a9b56f401993d49e9b44.svg" src="_images/385792e0000ce58624c34d8897fed9b6b31c895b68c0a9b56f401993d49e9b44.svg" /></div>
 </div>
 <div class="literal-block-wrapper docutils container" id="listing4comp-darlington">
-<div class="code-block-caption"><span class="caption-number">Spice Listing 4 </span><span class="caption-text">SPICE code van het Complemetaire Darlington paar</span><a class="headerlink" href="#listing4comp-darlington" title="Permalink naar deze broncode">#</a></div>
+<div class="code-block-caption"><span class="caption-number">Spice Listing 7 </span><span class="caption-text">SPICE code van het Complemetaire Darlington paar</span><a class="headerlink" href="#listing4comp-darlington" title="Permalink naar deze broncode">#</a></div>
 <div class="highlight-spice notranslate"><div class="highlight"><pre><span></span><span class="nx">Complementaire</span><span class="w"> </span><span class="nx">Darlington</span><span class="w"> </span><span class="nx">met</span><span class="w"> </span><span class="nx">emitter</span><span class="w"> </span><span class="nx">degeneratie</span>
 <span class="o">*</span>
 <span class="o">*</span><span class="w">  </span><span class="nx">PUSH</span><span class="o">-</span><span class="nx">PULL</span><span class="w"> </span><span class="nx">TRANSISTOR</span><span class="w"> </span><span class="nx">OUTPUT</span><span class="w"> </span><span class="nx">STAGE</span>
@@ -992,7 +1065,7 @@ De totale stroomversterking die we dan bekomen is dan het product van beide stro
 <img alt="_images/9cb3e1cb2e91ae4b485c9651babf955ccf8fee01b5755861d6df28a17b6ba08e.svg" src="_images/9cb3e1cb2e91ae4b485c9651babf955ccf8fee01b5755861d6df28a17b6ba08e.svg" /></div>
 </div>
 <div class="literal-block-wrapper docutils container" id="listingcomp-darlington-ed">
-<div class="code-block-caption"><span class="caption-number">Spice Listing 5 </span><span class="caption-text">SPICE code van het complementaire Darlington paar met emitter degeneratie</span><a class="headerlink" href="#listingcomp-darlington-ed" title="Permalink naar deze broncode">#</a></div>
+<div class="code-block-caption"><span class="caption-number">Spice Listing 8 </span><span class="caption-text">SPICE code van het complementaire Darlington paar met emitter degeneratie</span><a class="headerlink" href="#listingcomp-darlington-ed" title="Permalink naar deze broncode">#</a></div>
 <div class="highlight-spice notranslate"><div class="highlight"><pre><span></span><span class="nx">Complementaire</span><span class="w"> </span><span class="nx">Darlington</span><span class="w"> </span><span class="nx">met</span><span class="w"> </span><span class="nx">emitter</span><span class="w"> </span><span class="nx">degeneratie</span>
 <span class="o">*</span>
 <span class="o">*</span><span class="w">  </span><span class="nx">PUSH</span><span class="o">-</span><span class="nx">PULL</span><span class="w"> </span><span class="nx">TRANSISTOR</span><span class="w"> </span><span class="nx">OUTPUT</span><span class="w"> </span><span class="nx">STAGE</span>
@@ -1035,25 +1108,31 @@ De totale stroomversterking die we dan bekomen is dan het product van beide stro
 <h2>Beveiliging van de Klasse B vermogentransistors<a class="headerlink" href="#beveiliging-van-de-klasse-b-vermogentransistors" title="Permalink to this heading">#</a></h2>
 <section id="waar-en-hoe-is-beveiliging-nodig">
 <h3>Waar en hoe is beveiliging nodig?<a class="headerlink" href="#waar-en-hoe-is-beveiliging-nodig" title="Permalink to this heading">#</a></h3>
+<p>Als eerste voorbeeld gebruiken we hier de <a class="reference external" href="https://en.wikipedia.org/wiki/2N2222">2N2222A</a> NPN transistor. Dit is een typische NPN transistor met een <span class="math notranslate nohighlight">\(\beta_F\)</span> van ongeveer 100. De <a class="reference external" href="https://www.onsemi.com/pdf/datasheet/p2n2222a-d.pdf">datasheet</a> geeft de nodige details over de maximale stroom (600 mA), maximale spanning (40V) en maximaal vermogen (1.8W). Zonder extra koeling toe te voegen zien we dat hier de maximale vermogenbegrenzing de bepalende factor gaat zijn. Wanneer we een begrenzing kiezen die lineair verloopt tussen een kortsluitstroom van 240 mA en open-klemmen spanning van 30V kunnen verhinderen dat deze transistor te warm wordt.</p>
+<div class="cell docutils container">
+<div class="cell_output docutils container">
+<img alt="_images/f83408ee7204ece507b758d8e1ed0e85211d720ea995d3f760ec7d9fa6433294.png" src="_images/f83408ee7204ece507b758d8e1ed0e85211d720ea995d3f760ec7d9fa6433294.png" />
+</div>
+</div>
 </section>
 <section id="beveiliging-tegen-overstroom">
 <h3>Beveiliging tegen overstroom<a class="headerlink" href="#beveiliging-tegen-overstroom" title="Permalink to this heading">#</a></h3>
-<p><code class="xref std std-numref docutils literal notranslate"><span class="pre">Bfig4</span></code> toont een eerste schema dat beveiliging tegen overstroom toevoegt. Het basisprincipe bij elke stroombeveliging is dat er gekeken wordt naar de stroom aan de uitgang van respectievelijk het pull-up en het pull-down netwerk (de groene blokken in <code class="xref std std-numref docutils literal notranslate"><span class="pre">Bfig4</span></code>). Wanneer de stroom hier de hierboven aangegeven maximale stroom overschrijdt, grijpt het blok dat gekleurd is in Cyaan in. Dit gebeurt door de stroom aan de ingang van het groene blok rechtstreeks naar de uitgang te verbinden.</p>
+<p><a class="reference internal" href="#bfig3"><span class="std std-numref">Fig. 34</span></a> toont een eerste schema dat beveiliging tegen overstroom toevoegt. Het basisprincipe bij elke stroombeveliging is dat er gekeken wordt naar de stroom aan de uitgang van respectievelijk het pull-up en het pull-down netwerk (de groene blokken in <a class="reference internal" href="#bfig3"><span class="std std-numref">Fig. 34</span></a>). Wanneer de stroom hier de hierboven aangegeven maximale stroom overschrijdt, grijpt het blok dat gekleurd is in Cyaan in. Dit gebeurt door de stroom aan de ingang van het groene blok rechtstreeks naar de uitgang te verbinden.</p>
 <div class="cell docutils container">
 <div class="cell_output docutils container">
-<figure class="align-default" id="bfig4">
+<figure class="align-default" id="bfig3">
 <img alt="_images/73687e87ab7560797aacc2a0c5b1e95f40d3b9bdf214736d7677916edb9afb55.svg" src="_images/73687e87ab7560797aacc2a0c5b1e95f40d3b9bdf214736d7677916edb9afb55.svg" /><figcaption>
-<p><span class="caption-number">Fig. 34 </span><span class="caption-text">Klasse B versterker met overstroombescherming.</span><a class="headerlink" href="#bfig4" title="Permallink naar deze afbeelding">#</a></p>
+<p><span class="caption-number">Fig. 34 </span><span class="caption-text">Klasse B versterker met overstroombescherming.</span><a class="headerlink" href="#bfig3" title="Permallink naar deze afbeelding">#</a></p>
 </figcaption>
 </figure>
 </div>
 </div>
-<p>We merken op dat de overstroombeveiliging moet optreden bij de maximale stroom. In dit geval zal, in het geval van een Darlington paar, ook de tweede transistor actief zijn. Dit heeft dan ook tot gevolg dat we het schema van <code class="xref std std-numref docutils literal notranslate"><span class="pre">Bfig4</span></code> moeten uitbreiden met een extra diode in het geval van een Darlington paar. Dit tonen we in <code class="xref std std-numref docutils literal notranslate"><span class="pre">Bfig4b</span></code>.</p>
+<p>We merken op dat de overstroombeveiliging moet optreden bij de maximale stroom. In dit geval zal, in het geval van een Darlington paar, ook de tweede transistor actief zijn. Dit heeft dan ook tot gevolg dat we het schema van <a class="reference internal" href="#bfig4"><span class="std std-numref">Fig. 35</span></a> moeten uitbreiden met een extra diode in het geval van een Darlington paar. Dit tonen we in <code class="xref std std-numref docutils literal notranslate"><span class="pre">Bfig4b</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_output docutils container">
-<figure class="align-default" id="id2">
+<figure class="align-default" id="bfig4">
 <img alt="_images/505567d4f2003e1ff6533c54bd2e29fc241cb6acd6985d3655bdd61af1b20718.svg" src="_images/505567d4f2003e1ff6533c54bd2e29fc241cb6acd6985d3655bdd61af1b20718.svg" /><figcaption>
-<p><span class="caption-number">Fig. 35 </span><span class="caption-text">Klasse B versterker met overstroombescherming.</span><a class="headerlink" href="#id2" title="Permallink naar deze afbeelding">#</a></p>
+<p><span class="caption-number">Fig. 35 </span><span class="caption-text">Klasse B versterker met overstroombescherming.</span><a class="headerlink" href="#bfig4" title="Permallink naar deze afbeelding">#</a></p>
 </figcaption>
 </figure>
 </div>
@@ -1095,7 +1174,7 @@ In de outputkarakteristiek plotten we <span class="math notranslate nohighlight"
 <div class="cell_output docutils container">
 <img alt="_images/e933c8e12ce761839a9ac0519bc2acc0ec4bd837b51d0e09286ba79e03265eb8.svg" src="_images/e933c8e12ce761839a9ac0519bc2acc0ec4bd837b51d0e09286ba79e03265eb8.svg" /></div>
 </div>
-<p>In <a class="reference internal" href="#bfig6"><span class="std std-numref">Fig. 38</span></a> passen we dit concept toe vertrekkende van het schema van <a class="reference internal" href="#bfig3"><span class="std std-numref">Fig. 31</span></a></p>
+<p>In <a class="reference internal" href="#bfig6"><span class="std std-numref">Fig. 38</span></a> passen we dit concept toe vertrekkende van het schema van <a class="reference internal" href="#bfig3"><span class="std std-numref">Fig. 34</span></a></p>
 <div class="cell docutils container">
 <div class="cell_output docutils container">
 <figure class="align-default" id="bfig6">
@@ -1141,7 +1220,7 @@ In <a class="reference internal" href="#bfig1ac"><span class="std std-numref">Fi
 </section>
 <section id="banddoorlaatfilter-aan-de-ingang">
 <h3>Banddoorlaatfilter aan de ingang<a class="headerlink" href="#banddoorlaatfilter-aan-de-ingang" title="Permalink to this heading">#</a></h3>
-<p>De hoogdoorlaatfilter in <a class="reference internal" href="#figbhoog"><span class="std std-numref">Fig. 39</span></a> en de laagdoorlaatfilter in <a class="reference internal" href="#figblaag"><span class="std std-numref">Fig. 40</span></a> kunnen gecombineerd worden in een banddoorlaatfilter zoals getoond wordt in <a class="reference internal" href="#figbband"><span class="std std-numref">Fig. 41</span></a>. Dit is de meest eenvoudige oplossing om een banddoorlaatfilter te bekomen overeenstemmende met de gewenste karakteristieken van het signaal. Er zijn heel wat mogelijkheden om nog veel betere ingangsfilters te ontwerpen. Dit is echter niet het doel van deze cursus. Hiervoor verwijzen we naar de cursus <a class="reference external" href="https://jangenoe.github.io/InteractieveCursus/ToegepasteAnalogeElektronica/intro.html">toegepaste analoge Elektronica</a> <span id="id3">[<a class="reference internal" href="References.html#id3" title="Jan Genoe. Cursus Toegepaste Analoge Elektronica. KULeuven, 2024.">2</a>]</span></p>
+<p>De hoogdoorlaatfilter in <a class="reference internal" href="#figbhoog"><span class="std std-numref">Fig. 39</span></a> en de laagdoorlaatfilter in <a class="reference internal" href="#figblaag"><span class="std std-numref">Fig. 40</span></a> kunnen gecombineerd worden in een banddoorlaatfilter zoals getoond wordt in <a class="reference internal" href="#figbband"><span class="std std-numref">Fig. 41</span></a>. Dit is de meest eenvoudige oplossing om een banddoorlaatfilter te bekomen overeenstemmende met de gewenste karakteristieken van het signaal. Er zijn heel wat mogelijkheden om nog veel betere ingangsfilters te ontwerpen. Dit is echter niet het doel van deze cursus. Hiervoor verwijzen we naar de cursus <a class="reference external" href="https://jangenoe.github.io/InteractieveCursus/ToegepasteAnalogeElektronica/intro.html">toegepaste analoge Elektronica</a> <span id="id2">[<a class="reference internal" href="References.html#id3" title="Jan Genoe. Cursus Toegepaste Analoge Elektronica. KULeuven, 2024.">2</a>]</span></p>
 <div class="cell docutils container">
 <div class="cell_output docutils container">
 <figure class="align-default" id="figbband">
