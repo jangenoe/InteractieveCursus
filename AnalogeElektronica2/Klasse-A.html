@@ -623,6 +623,22 @@ document.write(`
 </div>
 </div>
 <p>Wanneer we de spoelwaarde van de primaire en de secundaire wikkeling heel erg sterk verhogen (zonder de wikkelverhouding van 5 hierbij aan te passen), valt het faseverschil tussen de stroom en de spanning weg en krijgen we een plot waarbij we een mooi linair verband zien tussen stroom en spanning, zowel over de primaire (blauwe curve) als over de secundaire wikkeling (orange curve) (zie <a class="reference internal" href="#afig3"><span class="std std-numref">Fig. 5</span></a>). De spice code voor deze simulatie met aangepaste wikkelverhouding kan je hieronder terugvinden.</p>
+<div class="literal-block-wrapper docutils container" id="listinga2">
+<div class="code-block-caption"><span class="caption-number">Spice Listing 2 </span><span class="caption-text">basis Klasse A circuit</span><a class="headerlink" href="#listinga2" title="Permalink naar deze broncode">#</a></div>
+<div class="highlight-spice notranslate"><div class="highlight"><pre><span></span><span class="o">*</span><span class="w"> </span><span class="nx">Spice</span><span class="w"> </span><span class="nx">file</span><span class="w"> </span><span class="nx">van</span><span class="w"> </span><span class="nx">een</span><span class="w"> </span><span class="nx">eenvoudige</span><span class="w"> </span><span class="nx">Klasse</span><span class="w"> </span><span class="nx">A</span><span class="w"> </span><span class="nx">versterker</span>
+<span class="nx">R_R6</span><span class="w">         </span><span class="mi">0</span><span class="w"> </span><span class="mi">1</span><span class="w">  </span><span class="mi">8</span><span class="w">  </span>
+<span class="nx">R_R7</span><span class="w">         </span><span class="mi">3</span><span class="w"> </span><span class="mi">2</span><span class="w">  </span><span class="mi">1</span><span class="w">  </span>
+<span class="nx">L1_TX1</span><span class="w">       </span><span class="mi">3</span><span class="w"> </span><span class="mi">4</span><span class="w"> </span><span class="mi">25</span>
+<span class="nx">L2_TX1</span><span class="w">       </span><span class="mi">1</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="mi">1</span>
+<span class="nx">K_TX1</span><span class="w">        </span><span class="nx">L1_TX1</span><span class="w"> </span><span class="nx">L2_TX1</span><span class="w"> </span><span class="mi">1</span><span class="p">.</span>
+<span class="nx">Q_Q5</span><span class="w">         </span><span class="mi">4</span><span class="w"> </span><span class="mi">5</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="nx">Q2</span>
+<span class="nx">I_I4</span><span class="w">         </span><span class="mi">0</span><span class="w"> </span><span class="mi">5</span><span class="w">  </span><span class="nx">SIN</span><span class="p">(</span><span class="mi">17</span><span class="nx">m</span><span class="w"> </span><span class="mi">15</span><span class="nx">m</span><span class="w"> </span><span class="mi">10</span><span class="nx">k</span><span class="p">)</span><span class="w"> </span><span class="nx">DC</span><span class="p">=</span><span class="mi">17</span><span class="nx">m</span>
+<span class="nx">V_VDD</span><span class="w">        </span><span class="mi">2</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="mi">66</span><span class="nx">V</span>
+
+<span class="p">.</span><span class="nx">model</span><span class="w"> </span><span class="nx">Q2</span><span class="w">  </span><span class="nx">NPN</span><span class="p">(</span><span class="nx">Is</span><span class="p">=</span><span class="m m-Double">14.34</span><span class="kd">p</span><span class="w"> </span><span class="nx">BF</span><span class="p">=</span><span class="mi">20</span><span class="w"> </span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
 <div class="cell docutils container">
 <div class="cell_output docutils container">
 <figure class="align-default" id="afig3">
@@ -634,6 +650,22 @@ document.write(`
 </div>
 </div>
 <p>Het verschil in fase tussen de stroom door de transistor en de spanning over de transistor kunnen we ook verkleinen door de frequentie te verhogen. In de onderstaande spice listing is de frequentie van de stroombron I4 aan de basis van de bipolaire transistor verhoogt van 10 kHz naar 100 kHz. Uit de simulatie in <a class="reference internal" href="#afighf"><span class="std std-numref">Fig. 6</span></a> zien we dat ook hier weer een bijna linair verloop tussen stroom en spanning wodt bekomen.</p>
+<div class="literal-block-wrapper docutils container" id="listinga3">
+<div class="code-block-caption"><span class="caption-number">Spice Listing 3 </span><span class="caption-text">basis Klasse A circuit</span><a class="headerlink" href="#listinga3" title="Permalink naar deze broncode">#</a></div>
+<div class="highlight-spice notranslate"><div class="highlight"><pre><span></span><span class="o">*</span><span class="w"> </span><span class="nx">Spice</span><span class="w"> </span><span class="nx">file</span><span class="w"> </span><span class="nx">van</span><span class="w"> </span><span class="nx">een</span><span class="w"> </span><span class="nx">eenvoudige</span><span class="w"> </span><span class="nx">Klasse</span><span class="w"> </span><span class="nx">A</span><span class="w"> </span><span class="nx">versterker</span>
+<span class="nx">R_R6</span><span class="w">         </span><span class="mi">0</span><span class="w"> </span><span class="mi">1</span><span class="w">  </span><span class="mi">8</span><span class="w">  </span>
+<span class="nx">R_R7</span><span class="w">         </span><span class="mi">3</span><span class="w"> </span><span class="mi">2</span><span class="w">  </span><span class="mi">1</span><span class="w">  </span>
+<span class="nx">L1_TX1</span><span class="w">       </span><span class="mi">3</span><span class="w"> </span><span class="mi">4</span><span class="w"> </span><span class="mi">25</span><span class="nx">m</span>
+<span class="nx">L2_TX1</span><span class="w">       </span><span class="mi">1</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="mi">1</span><span class="nx">m</span>
+<span class="nx">K_TX1</span><span class="w">        </span><span class="nx">L1_TX1</span><span class="w"> </span><span class="nx">L2_TX1</span><span class="w"> </span><span class="mi">1</span><span class="p">.</span>
+<span class="nx">Q_Q5</span><span class="w">         </span><span class="mi">4</span><span class="w"> </span><span class="mi">5</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="nx">Q2</span>
+<span class="nx">I_I4</span><span class="w">         </span><span class="mi">0</span><span class="w"> </span><span class="mi">5</span><span class="w">  </span><span class="nx">SIN</span><span class="p">(</span><span class="mi">17</span><span class="nx">m</span><span class="w"> </span><span class="mi">15</span><span class="nx">m</span><span class="w"> </span><span class="mi">100</span><span class="nx">k</span><span class="p">)</span><span class="w"> </span><span class="nx">DC</span><span class="p">=</span><span class="mi">17</span><span class="nx">m</span>
+<span class="nx">V_VDD</span><span class="w">        </span><span class="mi">2</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="mi">66</span><span class="nx">V</span>
+
+<span class="p">.</span><span class="nx">model</span><span class="w"> </span><span class="nx">Q2</span><span class="w">  </span><span class="nx">NPN</span><span class="p">(</span><span class="nx">Is</span><span class="p">=</span><span class="m m-Double">14.34</span><span class="kd">p</span><span class="w"> </span><span class="nx">BF</span><span class="p">=</span><span class="mi">20</span><span class="w"> </span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
 <div class="cell docutils container">
 <div class="cell_output docutils container">
 <figure class="align-default" id="afighf">
