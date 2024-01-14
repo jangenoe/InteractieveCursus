@@ -605,9 +605,9 @@ document.write(`
 </figure>
 </div>
 </div>
-<p>De overeenkomende SPICE code voor dit circuit is kan je zien in <a class="reference internal" href="#listingd1"><span class="std std-numref">Spice Listing 3</span></a>. We werken hier met een voedingsspanning <span class="math notranslate nohighlight">\(V_{dd}\)</span> van 20V en we leggen ook pulsen aan van 20V aan de ingangsknoop 1. De spanning op knoop 2 zal dan typisch 0.6V tot 0.7V verschillen van de ingangsspanning.</p>
+<p>De overeenkomende SPICE code voor dit circuit is kan je zien in <a class="reference internal" href="#listingd1"><span class="std std-numref">Spice Listing 7</span></a>. We werken hier met een voedingsspanning <span class="math notranslate nohighlight">\(V_{dd}\)</span> van 20V en we leggen ook pulsen aan van 20V aan de ingangsknoop 1. De spanning op knoop 2 zal dan typisch 0.6V tot 0.7V verschillen van de ingangsspanning.</p>
 <div class="literal-block-wrapper docutils container" id="listingd1">
-<div class="code-block-caption"><span class="caption-number">Spice Listing 3 </span><span class="caption-text">Basis Klasse D circuit</span><a class="headerlink" href="#listingd1" title="Permalink naar deze broncode">#</a></div>
+<div class="code-block-caption"><span class="caption-number">Spice Listing 7 </span><span class="caption-text">Basis Klasse D circuit</span><a class="headerlink" href="#listingd1" title="Permalink naar deze broncode">#</a></div>
 <div class="highlight-spice notranslate"><div class="highlight"><pre><span></span><span class="o">*</span><span class="w"> </span><span class="nx">Class</span><span class="w"> </span><span class="nx">D</span><span class="w"> </span><span class="nx">amp</span><span class="w"> </span><span class="mi">1</span>
 <span class="nx">Q_Q1</span><span class="w">         </span><span class="mi">3</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="nx">Q2</span>
 <span class="nx">Q_Qp</span><span class="w">         </span><span class="mi">0</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="nx">Qp</span>
@@ -734,7 +734,7 @@ j \omega L_1 =-\frac{1}{j \omega C_1}
 </div>
 </div>
 <div class="literal-block-wrapper docutils container" id="listingd1d">
-<div class="code-block-caption"><span class="caption-number">Spice Listing 4 </span><span class="caption-text">Basis Klasse D circuit met diodes</span><a class="headerlink" href="#listingd1d" title="Permalink naar deze broncode">#</a></div>
+<div class="code-block-caption"><span class="caption-number">Spice Listing 8 </span><span class="caption-text">Basis Klasse D circuit met diodes</span><a class="headerlink" href="#listingd1d" title="Permalink naar deze broncode">#</a></div>
 <div class="highlight-spice notranslate"><div class="highlight"><pre><span></span><span class="o">*</span><span class="w"> </span><span class="nx">Class</span><span class="w"> </span><span class="nx">D</span><span class="w"> </span><span class="nx">amp</span><span class="w"> </span><span class="mi">1</span>
 <span class="nx">Q_Q1</span><span class="w">         </span><span class="mi">3</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="nx">Q2</span>
 <span class="nx">Q_Qp</span><span class="w">         </span><span class="mi">0</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="nx">Qp</span>
@@ -851,7 +851,7 @@ P_{ac}=\frac{V_{ac}^2}{2 R_L}
 
 <p class="admonition-title"><span class="caption-number">Opdracht 4 </span> (Keuze van de wikkelverhouding)</p>
 <section id="exercise-content">
-<p>De implementatie van <a class="reference internal" href="#listingd1"><span class="std std-numref">Spice Listing 3</span></a> heeft een voedingsspanning <span class="math notranslate nohighlight">\(V_{dd}\)</span> van 20V nodig om een vermogen van 11.3 W te bekomen. We willen hetzelfde vermogen bekomen gebruikmakende van <a class="reference internal" href="#dfig3spanning-npns"><span class="std std-numref">Fig. 61</span></a> en een voedingsspanning van <span class="math notranslate nohighlight">\(V_{dd}\)</span>=6V. De frequentie en alle elementen van de trilkring blijven hetzelfde. Wat moet de wikkelverhouding zijn?</p>
+<p>De implementatie van <a class="reference internal" href="#listingd1"><span class="std std-numref">Spice Listing 7</span></a> heeft een voedingsspanning <span class="math notranslate nohighlight">\(V_{dd}\)</span> van 20V nodig om een vermogen van 11.3 W te bekomen. We willen hetzelfde vermogen bekomen gebruikmakende van <a class="reference internal" href="#dfig3spanning-npns"><span class="std std-numref">Fig. 61</span></a> en een voedingsspanning van <span class="math notranslate nohighlight">\(V_{dd}\)</span>=6V. De frequentie en alle elementen van de trilkring blijven hetzelfde. Wat moet de wikkelverhouding zijn?</p>
 </section>
 </div>
 </section>
