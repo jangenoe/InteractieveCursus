@@ -516,7 +516,11 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#opgave-oefening">Opgave Oefening</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#oplossing">Oplossing</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#oplossing">Oplossing</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#aanpassing-van-de-transmissielijn-op-500-mhz">Aanpassing van de transmissielijn op 500 MHz</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#reflectie-op-550-mhz">Reflectie op 550 MHz</a></li>
+</ul>
+</li>
 </ul>
             </nav>
         </div>
@@ -532,18 +536,21 @@ document.write(`
 <h1>Smith Kaart Oefening 7<a class="headerlink" href="#smith-kaart-oefening-7" title="Permalink to this heading">#</a></h1>
 <section id="opgave-oefening">
 <h2>Opgave Oefening<a class="headerlink" href="#opgave-oefening" title="Permalink to this heading">#</a></h2>
-<p>Een baantje op een PCB heeft een karakteristieke impedantie van 64 Ohm. Gebruik je Smith kaart om een belasting bestaande uit een resistief deel van 32 Ohm en een capacitief deel van 5 pF in parallel, aan te passen aan dit baantje voor een frequentie van  500 MHz (<span class="math notranslate nohighlight">\(\lambda_{PCB}\)</span>= 328 mm) door het gebruik van een open stukje transmissielijn van de juiste lengte aangebracht op de juiste positie. Bereken deze lengte en positie.</p>
+<p>Een baantje op een PCB heeft een karakteristieke impedantie van 64 Ohm. Gebruik je Smith kaart om een belasting bestaande uit een resistief deel van 32 Ohm en een capacitief deel van 5 pF in parallel, aan te passen aan dit baantje voor een frequentie van 500 MHz (<span class="math notranslate nohighlight">\(\lambda_{PCB}\)</span>= 328 mm) door het gebruik van een open stukje transmissielijn van de juiste lengte aangebracht op de juiste positie. Bereken deze lengte en positie.</p>
+<p>Wanneer het baantje aangepast is op 500 MHz, zullen we op 550 MHz wel reflectie hebben. Bereken hoegroot de reflectie is (ter hoogte van het stukje open transmissielijn) ten gevolge van een signaal van 550 MHz.</p>
 <div class="cell docutils container">
 </div>
 </section>
 <section id="oplossing">
 <h2>Oplossing<a class="headerlink" href="#oplossing" title="Permalink to this heading">#</a></h2>
+<section id="aanpassing-van-de-transmissielijn-op-500-mhz">
+<h3>Aanpassing van de transmissielijn op 500 MHz<a class="headerlink" href="#aanpassing-van-de-transmissielijn-op-500-mhz" title="Permalink to this heading">#</a></h3>
 <p>We werken de oplossing uit op basis van <span id="id1">[<a class="reference internal" href="References.html#id5" title="Alexander Arsenovic, Julien Hillairet, Jackson Anderson, Henrik Forsten, Vincent Ries, Michael Eller, Noah Sauber, Robert Weikle, William Barnhart, and Franz Forstmayr. Scikit-rf: An Open Source Python Package for Microwave Network Creation, Analysis, and Calibration [Speaker's Corner]. IEEE Microwave Magazine, 23(1):98–105, January 2022. doi:10.1109/MMM.2021.3117139.">8</a>]</span>.
 De antenne die de belasting is van dit circuit modelleren we als in <a class="reference internal" href="#smith7ciran"><span class="std std-numref">Fig. 209</span></a>.</p>
 <div class="cell docutils container">
 <div class="cell_output docutils container">
 <figure class="align-default" id="smith7ciran">
-<img alt="_images/2a82478975b18f0c57b4a1a6faaad1442754352e48e9a299766f58ee7e4d18f3.svg" src="_images/2a82478975b18f0c57b4a1a6faaad1442754352e48e9a299766f58ee7e4d18f3.svg" /><figcaption>
+<img alt="_images/a2517e9994a168587c1647e76f3953309826de1f6b711e817ceadd899c686354.svg" src="_images/a2517e9994a168587c1647e76f3953309826de1f6b711e817ceadd899c686354.svg" /><figcaption>
 <p><span class="caption-number">Fig. 209 </span><span class="caption-text">circuit van de aangepaste antenne.</span><a class="headerlink" href="#smith7ciran" title="Permallink naar deze afbeelding">#</a></p>
 </figcaption>
 </figure>
@@ -562,7 +569,7 @@ De antenne die de belasting is van dit circuit modelleren we als in <a class="re
 <div class="cell docutils container">
 <div class="cell_output docutils container">
 <figure class="align-default" id="smith71">
-<img alt="_images/85499d15013eb7147d28cb5abdd2136d5441febebe5db90da45f9668de846dd0.png" src="_images/85499d15013eb7147d28cb5abdd2136d5441febebe5db90da45f9668de846dd0.png" />
+<img alt="_images/9a39f7c34f237705b222a7d92393dbbaa4234139e279578a1a02f61751d2e001.png" src="_images/9a39f7c34f237705b222a7d92393dbbaa4234139e279578a1a02f61751d2e001.png" />
 <figcaption>
 <p><span class="caption-number">Fig. 210 </span><span class="caption-text">Smith kaart van de admitantie.</span><a class="headerlink" href="#smith71" title="Permallink naar deze afbeelding">#</a></p>
 </figcaption>
@@ -627,6 +634,44 @@ We starten dus de cirkelboog bij y=0 (zie oranje lijn in <a class="reference int
 </figure>
 </div>
 </div>
+</section>
+<section id="reflectie-op-550-mhz">
+<h3>Reflectie op 550 MHz<a class="headerlink" href="#reflectie-op-550-mhz" title="Permalink to this heading">#</a></h3>
+<p>Om de reflectie van het signaal van 550 MHz te berekenen ter hoogte van het stukje open transmissielijn, berekenen we eerst de admittantie (<span class="math notranslate nohighlight">\(Y_L\)</span>) van de belasting:</p>
+<div class="math notranslate nohighlight">
+\[Y_L = \frac{1}{R}+ j \omega C\]</div>
+<div class="math notranslate nohighlight">
+\[Y_L = \frac{1}{32}+ j \hspace{2mm} 2 \pi \cdot (550 \hspace{2mm} 10^6) \cdot (5\hspace{2mm}  10^{-12}) \]</div>
+<div class="math notranslate nohighlight">
+\[Y_L Z_o= 2+ j  \hspace{2mm}  1.1\]</div>
+<p><span class="math notranslate nohighlight">\(Y_L Z_o\)</span> is dan de vertrekwaarde op de Smith kaart.</p>
+<div class="cell docutils container">
+</div>
+<p>Vervolgens moeten we weten hoegroot de golflengte is voor een 550 MHz signaal. Vertrekkende van de gegeven golflengte <span class="math notranslate nohighlight">\(\lambda_{PCB}\)</span> voor het 500 MHz signaal kunnen we de golflengte van het 550 MHz signaal afleiden:</p>
+<div class="math notranslate nohighlight">
+\[\lambda_{PCB,550}  = \frac {500}{550} \lambda_{PCB,500}\]</div>
+<p>We bekomen dus een golflengte van 298 mm. De 2 baantjes van 41 mm zijn dus 13.75 % van de golflengte en we moeten zowel vanuit het punt van de antenne als het punt van de open transmissielijn een hoek van 99 graden draaien op de Smith kaart.</p>
+<div class="cell docutils container">
+</div>
+<div class="cell docutils container">
+<div class="cell_output docutils container">
+<figure class="align-default" id="smith73">
+<img alt="_images/4ea638eed1ac6a611ea7327265433617364326e3b247545aa6e769930396bd50.png" src="_images/4ea638eed1ac6a611ea7327265433617364326e3b247545aa6e769930396bd50.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 213 </span><span class="caption-text">Smith kaart van de admittantie met ook de aangave van de open transmissielijn. De groene dots geven een aangepaste belasting (500 MHz) en de rose dots de belasting aan 550 MHz</span><a class="headerlink" href="#smith73" title="Permallink naar deze afbeelding">#</a></p>
+</figcaption>
+</figure>
+</div>
+</div>
+<div class="cell docutils container">
+</div>
+<p>De Smithkaart in <a class="reference internal" href="#smith73"><span class="std std-numref">Fig. 213</span></a> toont het verschil tussen de admittanties bekomen bekomen aan 500 MHz (groene dots) en de admittanties bekomen bekomen aan 550 MHz (roze dots). Wanneer we de op de Smithkaart afgelezen waardes van de 2 groene dots optellen bekomen we 1, wat overeenkomt met een belasting van 64 Ohm en een aangepaste transmissielijn.  Wanneer we de op de smithkaart afgelezen waardes van de 2 roze dots optellen bekomen we 0.85 +0.2 j, wat overeenkomt met een belasting van 70.9-17.5 j Ohm.</p>
+<div class="cell docutils container">
+</div>
+<p>De reflectiecoeficient die we dan bekomen op 550 MHz is:</p>
+<div class="math notranslate nohighlight">
+\[ \rho= \frac{Z_L-Z_0}{Z_L+Z_0}= 0.07-0.12 j\]</div>
+</section>
 </section>
 </section>
 
@@ -695,7 +740,11 @@ We starten dus de cirkelboog bij y=0 (zie oranje lijn in <a class="reference int
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#opgave-oefening">Opgave Oefening</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#oplossing">Oplossing</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#oplossing">Oplossing</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#aanpassing-van-de-transmissielijn-op-500-mhz">Aanpassing van de transmissielijn op 500 MHz</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#reflectie-op-550-mhz">Reflectie op 550 MHz</a></li>
+</ul>
+</li>
 </ul>
   </nav></div>
 
