@@ -1055,7 +1055,7 @@ De totale stroomversterking die we dan bekomen is dan het product van beide stro
 </section>
 <section id="het-complementaire-darlington-transistor-paar">
 <h3>Het <a class="reference external" href="https://en.wikipedia.org/wiki/Sziklai_pair">complementaire Darlington</a> Transistor paar<a class="headerlink" href="#het-complementaire-darlington-transistor-paar" title="Permalink to this heading">#</a></h3>
-<p><a class="reference internal" href="#darlington-comp"><span class="std std-numref">Fig. 33</span></a> toont het schema van complementaire transistor paar en <code class="xref std std-numref docutils literal notranslate"><span class="pre">spice_Darlington_comp</span></code> toont de spice code om de werking van dit Darlington paar te simuleren aan de hand van 2 ideale transistors met een <span class="math notranslate nohighlight">\(\beta_F\)</span> van 50. Het resultaat (in <a class="reference internal" href="#bfig-darlington-comp"><span class="std std-numref">Fig. 34</span></a>) toont dan ook een stroomversterking van 2500 van zodra de emmitter-collectorspanning groter is dan ongeveer 0.7 V.</p>
+<p><a class="reference internal" href="#darlington-comp"><span class="std std-numref">Fig. 33</span></a> toont het schema van complementaire transistor paar en <a class="reference internal" href="#spice-darlington-comp"><span class="std std-numref">Spice Listing 10</span></a> toont de spice code om de werking van dit Darlington paar te simuleren aan de hand van 2 ideale transistors met een <span class="math notranslate nohighlight">\(\beta_F\)</span> van 50. Het resultaat (in <a class="reference internal" href="#bfig-darlington-comp"><span class="std std-numref">Fig. 34</span></a>) toont dan ook een stroomversterking van 2500 van zodra de emmitter-collectorspanning groter is dan ongeveer 0.7 V.</p>
 <div class="cell docutils container">
 <div class="cell_output docutils container">
 <figure class="align-default" id="darlington-comp">
@@ -1065,8 +1065,8 @@ De totale stroomversterking die we dan bekomen is dan het product van beide stro
 </figure>
 </div>
 </div>
-<div class="literal-block-wrapper docutils container" id="listing4comp-darlington">
-<div class="code-block-caption"><span class="caption-number">Spice Listing 10 </span><span class="caption-text">SPICE code van het Complemetaire Darlington paar</span><a class="headerlink" href="#listing4comp-darlington" title="Permalink naar deze broncode">#</a></div>
+<div class="literal-block-wrapper docutils container" id="spice-darlington-comp">
+<div class="code-block-caption"><span class="caption-number">Spice Listing 10 </span><span class="caption-text">SPICE code van het Complemetaire Darlington paar</span><a class="headerlink" href="#spice-darlington-comp" title="Permalink naar deze broncode">#</a></div>
 <div class="highlight-spice notranslate"><div class="highlight"><pre><span></span><span class="nx">Complementaire</span><span class="w"> </span><span class="nx">Darlington</span><span class="w"> </span><span class="nx">met</span><span class="w"> </span><span class="nx">emitter</span><span class="w"> </span><span class="nx">degeneratie</span>
 <span class="o">*</span>
 <span class="o">*</span><span class="w">  </span><span class="nx">PUSH</span><span class="o">-</span><span class="nx">PULL</span><span class="w"> </span><span class="nx">TRANSISTOR</span><span class="w"> </span><span class="nx">OUTPUT</span><span class="w"> </span><span class="nx">STAGE</span>

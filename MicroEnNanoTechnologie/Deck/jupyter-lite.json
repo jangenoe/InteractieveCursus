@@ -2,7 +2,7 @@
   "jupyter-config-data": {
     "appName": "JupyterLite",
     "appUrl": "./lab",
-    "appVersion": "0.2.2",
+    "appVersion": "0.2.3",
     "baseUrl": "./",
     "defaultKernelName": "python",
     "faviconUrl": "./lab/favicon.ico",
@@ -52,7 +52,7 @@
       {
         "extension": "./extension",
         "liteExtension": true,
-        "load": "static/remoteEntry.cbca1265af0d2091476f.js",
+        "load": "static/remoteEntry.71d01fef2fffac9d2c04.js",
         "name": "@jupyterlite/javascript-kernel-extension"
       },
       {

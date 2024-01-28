@@ -8,41 +8,56 @@ msgstr ""
 "Language: fi\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
+msgid "Print to PDF"
+msgstr "Tulosta PDF-tiedostoon"
+
+msgid "Launch"
+msgstr "Tuoda markkinoille"
+
+msgid "Source repository"
+msgstr "Lähteen arkisto"
+
+msgid "Edit this page"
+msgstr "Muokkaa tätä sivua"
+
+msgid "By the"
+msgstr "Mukaan"
+
+msgid "previous page"
+msgstr "Edellinen sivu"
+
+msgid "Toggle navigation"
+msgstr "Vaihda navigointia"
+
+msgid "Theme by the"
+msgstr "Teeman tekijä"
+
+msgid "repository"
+msgstr "arkisto"
+
+msgid "open issue"
+msgstr "avoin ongelma"
+
+msgid "Download this page"
+msgstr "Lataa tämä sivu"
+
+msgid "Download notebook file"
+msgstr "Lataa muistikirjatiedosto"
+
 msgid "Download source file"
 msgstr "Lataa lähdetiedosto"
 
 msgid "suggest edit"
 msgstr "ehdottaa muokkausta"
 
-msgid "Toggle navigation"
-msgstr "Vaihda navigointia"
+msgid "Sphinx Book Theme"
+msgstr "Sphinx-kirjan teema"
 
-msgid "open issue"
-msgstr "avoin ongelma"
-
-msgid "Download notebook file"
-msgstr "Lataa muistikirjatiedosto"
-
-msgid "repository"
-msgstr "arkisto"
-
-msgid "Theme by the"
-msgstr "Teeman tekijä"
-
-msgid "Print to PDF"
-msgstr "Tulosta PDF-tiedostoon"
-
-msgid "Download this page"
-msgstr "Lataa tämä sivu"
+msgid "next page"
+msgstr "seuraava sivu"
 
 msgid "Copyright"
 msgstr "Tekijänoikeus"
-
-msgid "Last updated on"
-msgstr "Viimeksi päivitetty"
-
-msgid "Launch"
-msgstr "Tuoda markkinoille"
 
 msgid "Open an issue"
 msgstr "Avaa ongelma"
@@ -50,26 +65,11 @@ msgstr "Avaa ongelma"
 msgid "Fullscreen mode"
 msgstr "Koko näytön tila"
 
-msgid "Sphinx Book Theme"
-msgstr "Sphinx-kirjan teema"
-
-msgid "Contents"
-msgstr "Sisällys"
-
-msgid "Edit this page"
-msgstr "Muokkaa tätä sivua"
-
-msgid "next page"
-msgstr "seuraava sivu"
-
-msgid "Source repository"
-msgstr "Lähteen arkisto"
+msgid "Last updated on"
+msgstr "Viimeksi päivitetty"
 
 msgid "By"
 msgstr "Tekijä"
 
-msgid "By the"
-msgstr "Mukaan"
-
-msgid "previous page"
-msgstr "Edellinen sivu"
+msgid "Contents"
+msgstr "Sisällys"
