@@ -44,6 +44,9 @@ sphinx:
   config:
     # html_theme: sphinx_book_theme  # is reeds default
     language: nl
+    html_theme_options :
+      pygment_light_style: "default",
+      pygment_dark_style: "monokai"
     html_show_copyright: false
     nb_remove_code_source: true
     numfig_format : 
