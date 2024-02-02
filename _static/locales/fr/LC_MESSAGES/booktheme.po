@@ -8,17 +8,11 @@ msgstr ""
 "Language: fr\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-msgid "Print to PDF"
-msgstr "Imprimer au format PDF"
+msgid "Copyright"
+msgstr "droits d'auteur"
 
-msgid "Launch"
-msgstr "lancement"
-
-msgid "Source repository"
-msgstr "Dépôt source"
-
-msgid "Edit this page"
-msgstr "Modifier cette page"
+msgid "Fullscreen mode"
+msgstr "Mode plein écran"
 
 msgid "By the"
 msgstr "Par le"
@@ -26,50 +20,56 @@ msgstr "Par le"
 msgid "previous page"
 msgstr "page précédente"
 
-msgid "Toggle navigation"
-msgstr "Basculer la navigation"
-
-msgid "Theme by the"
-msgstr "Thème par le"
-
-msgid "repository"
-msgstr "dépôt"
-
-msgid "open issue"
-msgstr "signaler un problème"
-
-msgid "Download this page"
-msgstr "Téléchargez cette page"
-
-msgid "Download notebook file"
-msgstr "Télécharger le fichier notebook"
-
 msgid "Download source file"
 msgstr "Télécharger le fichier source"
-
-msgid "suggest edit"
-msgstr "suggestion de modification"
-
-msgid "Sphinx Book Theme"
-msgstr "Thème du livre Sphinx"
-
-msgid "next page"
-msgstr "page suivante"
-
-msgid "Copyright"
-msgstr "droits d'auteur"
-
-msgid "Open an issue"
-msgstr "Ouvrez un problème"
-
-msgid "Fullscreen mode"
-msgstr "Mode plein écran"
-
-msgid "Last updated on"
-msgstr "Dernière mise à jour le"
 
 msgid "By"
 msgstr "Par"
 
+msgid "Print to PDF"
+msgstr "Imprimer au format PDF"
+
+msgid "open issue"
+msgstr "signaler un problème"
+
+msgid "Sphinx Book Theme"
+msgstr "Thème du livre Sphinx"
+
+msgid "repository"
+msgstr "dépôt"
+
+msgid "Open an issue"
+msgstr "Ouvrez un problème"
+
+msgid "Theme by the"
+msgstr "Thème par le"
+
+msgid "Launch"
+msgstr "lancement"
+
+msgid "Download notebook file"
+msgstr "Télécharger le fichier notebook"
+
+msgid "Edit this page"
+msgstr "Modifier cette page"
+
+msgid "next page"
+msgstr "page suivante"
+
+msgid "suggest edit"
+msgstr "suggestion de modification"
+
+msgid "Last updated on"
+msgstr "Dernière mise à jour le"
+
 msgid "Contents"
 msgstr "Contenu"
+
+msgid "Download this page"
+msgstr "Téléchargez cette page"
+
+msgid "Source repository"
+msgstr "Dépôt source"
+
+msgid "Toggle navigation"
+msgstr "Basculer la navigation"

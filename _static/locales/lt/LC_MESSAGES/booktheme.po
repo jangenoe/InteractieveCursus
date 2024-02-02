@@ -8,17 +8,11 @@ msgstr ""
 "Language: lt\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-msgid "Print to PDF"
-msgstr "Spausdinti į PDF"
+msgid "Copyright"
+msgstr "Autorių teisės"
 
-msgid "Launch"
-msgstr "Paleiskite"
-
-msgid "Source repository"
-msgstr "Šaltinio saugykla"
-
-msgid "Edit this page"
-msgstr "Redaguoti šį puslapį"
+msgid "Fullscreen mode"
+msgstr "Pilno ekrano režimas"
 
 msgid "By the"
 msgstr "Prie"
@@ -26,50 +20,56 @@ msgstr "Prie"
 msgid "previous page"
 msgstr "Ankstesnis puslapis"
 
-msgid "Toggle navigation"
-msgstr "Perjungti naršymą"
-
-msgid "Theme by the"
-msgstr "Tema"
-
-msgid "repository"
-msgstr "saugykla"
-
-msgid "open issue"
-msgstr "atviras klausimas"
-
-msgid "Download this page"
-msgstr "Atsisiųskite šį puslapį"
-
-msgid "Download notebook file"
-msgstr "Atsisiųsti nešiojamojo kompiuterio failą"
-
 msgid "Download source file"
 msgstr "Atsisiųsti šaltinio failą"
-
-msgid "suggest edit"
-msgstr "pasiūlyti redaguoti"
-
-msgid "Sphinx Book Theme"
-msgstr "Sfinkso knygos tema"
-
-msgid "next page"
-msgstr "Kitas puslapis"
-
-msgid "Copyright"
-msgstr "Autorių teisės"
-
-msgid "Open an issue"
-msgstr "Atidarykite problemą"
-
-msgid "Fullscreen mode"
-msgstr "Pilno ekrano režimas"
-
-msgid "Last updated on"
-msgstr "Paskutinį kartą atnaujinta"
 
 msgid "By"
 msgstr "Iki"
 
+msgid "Print to PDF"
+msgstr "Spausdinti į PDF"
+
+msgid "open issue"
+msgstr "atviras klausimas"
+
+msgid "Sphinx Book Theme"
+msgstr "Sfinkso knygos tema"
+
+msgid "repository"
+msgstr "saugykla"
+
+msgid "Open an issue"
+msgstr "Atidarykite problemą"
+
+msgid "Theme by the"
+msgstr "Tema"
+
+msgid "Launch"
+msgstr "Paleiskite"
+
+msgid "Download notebook file"
+msgstr "Atsisiųsti nešiojamojo kompiuterio failą"
+
+msgid "Edit this page"
+msgstr "Redaguoti šį puslapį"
+
+msgid "next page"
+msgstr "Kitas puslapis"
+
+msgid "suggest edit"
+msgstr "pasiūlyti redaguoti"
+
+msgid "Last updated on"
+msgstr "Paskutinį kartą atnaujinta"
+
 msgid "Contents"
 msgstr "Turinys"
+
+msgid "Download this page"
+msgstr "Atsisiųskite šį puslapį"
+
+msgid "Source repository"
+msgstr "Šaltinio saugykla"
+
+msgid "Toggle navigation"
+msgstr "Perjungti naršymą"

@@ -1,13 +1,12 @@
 
-
 <!DOCTYPE html>
 
 
-<html lang="en" data-content_root="" >
+<html lang="en" data-content_root="./" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta property="og:title" content="Capacitive voltage conversion" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://jangenoe.github.io/jangenoe/InteractieveCursus/AnalogDesignTechniques/Capacitive%20voltage%20conversion.html" />
@@ -37,42 +36,46 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css" />
-    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="_static/exercise.css" />
-    <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
 <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
   <script src="_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
 
-    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-    <script src="_static/jquery.js"></script>
-    <script src="_static/underscore.js"></script>
-    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="_static/doctools.js"></script>
-    <script src="_static/clipboard.min.js"></script>
-    <script src="_static/copybutton.js"></script>
-    <script src="_static/scripts/sphinx-book-theme.js"></script>
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=888ff710"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="_static/togglebutton.js"></script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="_static/design-tabs.js"></script>
+    <script src="_static/design-tabs.js?v=36754332"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
 const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
-    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script async="async" src="_static/sphinx-thebe.js?v=afe5de03"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'Capacitive voltage conversion';</script>
-    <link rel="shortcut icon" href="_static/favicon.ico"/>
+    <link rel="icon" href="_static/favicon.ico"/>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Wilkinson Power Divider" href="Wilkinson%20Power%20Splitter.html" />
@@ -491,7 +494,7 @@ document.write(`
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="capacitive-voltage-conversion">
-<h1>Capacitive voltage conversion<a class="headerlink" href="#capacitive-voltage-conversion" title="Permalink to this heading">#</a></h1>
+<h1>Capacitive voltage conversion<a class="headerlink" href="#capacitive-voltage-conversion" title="Link to this heading">#</a></h1>
 <p>Classical power conversion makes use of inductors and transformers to deliver power at different voltage levels. However, these components typically transform these power converters into bulky and heavy components. However, there are several applications where we only need a voltage and a rather limited current sourced. Moreover, for power converters on silicon chips, efficient inductors are not possible and capacitive power converters are needed. In this chapter we discuss those power converters.</p>
 <div class="cell tag_hide-input docutils container">
 </div>
@@ -500,7 +503,7 @@ document.write(`
 <figure class="align-default" id="cfig1">
 <img alt="_images/b5c11994a9c5f1b77e986f0e634ec577806edb70d326ac16c98c3363f9d6b433.png" src="_images/b5c11994a9c5f1b77e986f0e634ec577806edb70d326ac16c98c3363f9d6b433.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 12 </span><span class="caption-text">Voltage doubler schematic with large C2 without resistive load</span><a class="headerlink" href="#cfig1" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 12 </span><span class="caption-text">Voltage doubler schematic with large C2 without resistive load</span><a class="headerlink" href="#cfig1" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 </div>
@@ -510,7 +513,7 @@ document.write(`
 <figure class="align-default" id="cfig2">
 <img alt="_images/40b414dfc28aec3cb445d998df5fe5ccbbc4956d4a4151d90dae8722d8e5f4fa.png" src="_images/40b414dfc28aec3cb445d998df5fe5ccbbc4956d4a4151d90dae8722d8e5f4fa.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 13 </span><span class="caption-text">Voltage doubler with large C2 node voltages without resistive load</span><a class="headerlink" href="#cfig2" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 13 </span><span class="caption-text">Voltage doubler with large C2 node voltages without resistive load</span><a class="headerlink" href="#cfig2" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 </div>
@@ -520,7 +523,7 @@ document.write(`
 <figure class="align-default" id="cfig3">
 <img alt="_images/ab5e6171238795fb64360c3793b34a9a718c004bf6ec04537be24b7a7e0ffeb7.png" src="_images/ab5e6171238795fb64360c3793b34a9a718c004bf6ec04537be24b7a7e0ffeb7.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 14 </span><span class="caption-text">Voltage doubler with large C2 node voltages with resistive load</span><a class="headerlink" href="#cfig3" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 14 </span><span class="caption-text">Voltage doubler with large C2 node voltages with resistive load</span><a class="headerlink" href="#cfig3" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 </div>
@@ -530,7 +533,7 @@ document.write(`
 <figure class="align-default" id="cfig4">
 <img alt="_images/5ee56322102df012a2bc9e24ffcf9c87059cb7ed56625635168b130c0fcf9eea.png" src="_images/5ee56322102df012a2bc9e24ffcf9c87059cb7ed56625635168b130c0fcf9eea.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 15 </span><span class="caption-text">Voltage doubler with large C2 in the presence of resistive load</span><a class="headerlink" href="#cfig4" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 15 </span><span class="caption-text">Voltage doubler with large C2 in the presence of resistive load</span><a class="headerlink" href="#cfig4" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 </div>
@@ -540,7 +543,7 @@ document.write(`
 <figure class="align-default" id="cfig5">
 <img alt="_images/91f7a8f01aa98f0d1961205c89a1d8a866b0bba6fe1031c11f79c3bdb5e58de9.png" src="_images/91f7a8f01aa98f0d1961205c89a1d8a866b0bba6fe1031c11f79c3bdb5e58de9.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 16 </span><span class="caption-text">Voltage doubler with equal capacitances</span><a class="headerlink" href="#cfig5" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 16 </span><span class="caption-text">Voltage doubler with equal capacitances</span><a class="headerlink" href="#cfig5" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 </div>
@@ -550,7 +553,7 @@ document.write(`
 <figure class="align-default" id="cfig6">
 <img alt="_images/f5d2b75bed8bfb0b86e577f5a70034ff608791032567221aacbc948134893d5c.png" src="_images/f5d2b75bed8bfb0b86e577f5a70034ff608791032567221aacbc948134893d5c.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 17 </span><span class="caption-text">Voltage doubler with equal capacitances node voltages and a resistive load</span><a class="headerlink" href="#cfig6" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 17 </span><span class="caption-text">Voltage doubler with equal capacitances node voltages and a resistive load</span><a class="headerlink" href="#cfig6" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 </div>
@@ -560,7 +563,7 @@ document.write(`
 <figure class="align-default" id="cfig7">
 <img alt="_images/d0d3b5a770801c0a0cbc0d7e7267c74b51b665e1a1f3bde4f8e9489b020fa8cc.png" src="_images/d0d3b5a770801c0a0cbc0d7e7267c74b51b665e1a1f3bde4f8e9489b020fa8cc.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 18 </span><span class="caption-text">Capacitive Voltage upconvertor schematic comprising 7 stages</span><a class="headerlink" href="#cfig7" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 18 </span><span class="caption-text">Capacitive Voltage upconvertor schematic comprising 7 stages</span><a class="headerlink" href="#cfig7" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 </div>
@@ -570,7 +573,7 @@ document.write(`
 <figure class="align-default" id="cfig7b">
 <img alt="_images/30f219568141c8ba490b4c335075ef65e8697f41254f691750f0ad8b5129caac.png" src="_images/30f219568141c8ba490b4c335075ef65e8697f41254f691750f0ad8b5129caac.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 19 </span><span class="caption-text">Node voltages of a capacitive Voltage upconvertor comprising 7 stages</span><a class="headerlink" href="#cfig7b" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 19 </span><span class="caption-text">Node voltages of a capacitive Voltage upconvertor comprising 7 stages</span><a class="headerlink" href="#cfig7b" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 </div>

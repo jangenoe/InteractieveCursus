@@ -8,17 +8,11 @@ msgstr ""
 "Language: pt\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-msgid "Print to PDF"
-msgstr "Imprimir em PDF"
+msgid "Copyright"
+msgstr "direito autoral"
 
-msgid "Launch"
-msgstr "Lançamento"
-
-msgid "Source repository"
-msgstr "Repositório fonte"
-
-msgid "Edit this page"
-msgstr "Edite essa página"
+msgid "Fullscreen mode"
+msgstr "Modo tela cheia"
 
 msgid "By the"
 msgstr "Pelo"
@@ -26,50 +20,56 @@ msgstr "Pelo"
 msgid "previous page"
 msgstr "página anterior"
 
-msgid "Toggle navigation"
-msgstr "Alternar de navegação"
-
-msgid "Theme by the"
-msgstr "Tema por"
-
-msgid "repository"
-msgstr "repositório"
-
-msgid "open issue"
-msgstr "questão aberta"
-
-msgid "Download this page"
-msgstr "Baixe esta página"
-
-msgid "Download notebook file"
-msgstr "Baixar arquivo de notebook"
-
 msgid "Download source file"
 msgstr "Baixar arquivo fonte"
-
-msgid "suggest edit"
-msgstr "sugerir edição"
-
-msgid "Sphinx Book Theme"
-msgstr "Tema do livro Sphinx"
-
-msgid "next page"
-msgstr "próxima página"
-
-msgid "Copyright"
-msgstr "direito autoral"
-
-msgid "Open an issue"
-msgstr "Abra um problema"
-
-msgid "Fullscreen mode"
-msgstr "Modo tela cheia"
-
-msgid "Last updated on"
-msgstr "Última atualização em"
 
 msgid "By"
 msgstr "De"
 
+msgid "Print to PDF"
+msgstr "Imprimir em PDF"
+
+msgid "open issue"
+msgstr "questão aberta"
+
+msgid "Sphinx Book Theme"
+msgstr "Tema do livro Sphinx"
+
+msgid "repository"
+msgstr "repositório"
+
+msgid "Open an issue"
+msgstr "Abra um problema"
+
+msgid "Theme by the"
+msgstr "Tema por"
+
+msgid "Launch"
+msgstr "Lançamento"
+
+msgid "Download notebook file"
+msgstr "Baixar arquivo de notebook"
+
+msgid "Edit this page"
+msgstr "Edite essa página"
+
+msgid "next page"
+msgstr "próxima página"
+
+msgid "suggest edit"
+msgstr "sugerir edição"
+
+msgid "Last updated on"
+msgstr "Última atualização em"
+
 msgid "Contents"
 msgstr "Conteúdo"
+
+msgid "Download this page"
+msgstr "Baixe esta página"
+
+msgid "Source repository"
+msgstr "Repositório fonte"
+
+msgid "Toggle navigation"
+msgstr "Alternar de navegação"

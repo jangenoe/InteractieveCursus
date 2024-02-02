@@ -8,17 +8,11 @@ msgstr ""
 "Language: sr\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-msgid "Print to PDF"
-msgstr "Испис у ПДФ"
+msgid "Copyright"
+msgstr "Ауторско право"
 
-msgid "Launch"
-msgstr "Лансирање"
-
-msgid "Source repository"
-msgstr "Изворно спремиште"
-
-msgid "Edit this page"
-msgstr "Уредите ову страницу"
+msgid "Fullscreen mode"
+msgstr "Режим целог екрана"
 
 msgid "By the"
 msgstr "Од"
@@ -26,50 +20,56 @@ msgstr "Од"
 msgid "previous page"
 msgstr "Претходна страница"
 
-msgid "Toggle navigation"
-msgstr "Укључи / искључи навигацију"
-
-msgid "Theme by the"
-msgstr "Тхеме би"
-
-msgid "repository"
-msgstr "спремиште"
-
-msgid "open issue"
-msgstr "отворено издање"
-
-msgid "Download this page"
-msgstr "Преузмите ову страницу"
-
-msgid "Download notebook file"
-msgstr "Преузмите датотеку бележнице"
-
 msgid "Download source file"
 msgstr "Преузми изворну датотеку"
-
-msgid "suggest edit"
-msgstr "предложи уређивање"
-
-msgid "Sphinx Book Theme"
-msgstr "Тема књиге Спхинк"
-
-msgid "next page"
-msgstr "Следећа страна"
-
-msgid "Copyright"
-msgstr "Ауторско право"
-
-msgid "Open an issue"
-msgstr "Отворите издање"
-
-msgid "Fullscreen mode"
-msgstr "Режим целог екрана"
-
-msgid "Last updated on"
-msgstr "Последње ажурирање"
 
 msgid "By"
 msgstr "Од стране"
 
+msgid "Print to PDF"
+msgstr "Испис у ПДФ"
+
+msgid "open issue"
+msgstr "отворено издање"
+
+msgid "Sphinx Book Theme"
+msgstr "Тема књиге Спхинк"
+
+msgid "repository"
+msgstr "спремиште"
+
+msgid "Open an issue"
+msgstr "Отворите издање"
+
+msgid "Theme by the"
+msgstr "Тхеме би"
+
+msgid "Launch"
+msgstr "Лансирање"
+
+msgid "Download notebook file"
+msgstr "Преузмите датотеку бележнице"
+
+msgid "Edit this page"
+msgstr "Уредите ову страницу"
+
+msgid "next page"
+msgstr "Следећа страна"
+
+msgid "suggest edit"
+msgstr "предложи уређивање"
+
+msgid "Last updated on"
+msgstr "Последње ажурирање"
+
 msgid "Contents"
 msgstr "Садржај"
+
+msgid "Download this page"
+msgstr "Преузмите ову страницу"
+
+msgid "Source repository"
+msgstr "Изворно спремиште"
+
+msgid "Toggle navigation"
+msgstr "Укључи / искључи навигацију"

@@ -8,17 +8,11 @@ msgstr ""
 "Language: sl\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-msgid "Print to PDF"
-msgstr "Natisni v PDF"
+msgid "Copyright"
+msgstr "avtorske pravice"
 
-msgid "Launch"
-msgstr "Kosilo"
-
-msgid "Source repository"
-msgstr "Izvorno skladišče"
-
-msgid "Edit this page"
-msgstr "Uredite to stran"
+msgid "Fullscreen mode"
+msgstr "Celozaslonski način"
 
 msgid "By the"
 msgstr "Avtor"
@@ -26,50 +20,56 @@ msgstr "Avtor"
 msgid "previous page"
 msgstr "Prejšnja stran"
 
-msgid "Toggle navigation"
-msgstr "Preklopi navigacijo"
-
-msgid "Theme by the"
-msgstr "Tema avtorja"
-
-msgid "repository"
-msgstr "odlagališče"
-
-msgid "open issue"
-msgstr "odprto vprašanje"
-
-msgid "Download this page"
-msgstr "Prenesite to stran"
-
-msgid "Download notebook file"
-msgstr "Prenesite datoteko zvezka"
-
 msgid "Download source file"
 msgstr "Prenesite izvorno datoteko"
-
-msgid "suggest edit"
-msgstr "predlagajte urejanje"
-
-msgid "Sphinx Book Theme"
-msgstr "Tema knjige Sphinx"
-
-msgid "next page"
-msgstr "Naslednja stran"
-
-msgid "Copyright"
-msgstr "avtorske pravice"
-
-msgid "Open an issue"
-msgstr "Odprite številko"
-
-msgid "Fullscreen mode"
-msgstr "Celozaslonski način"
-
-msgid "Last updated on"
-msgstr "Nazadnje posodobljeno dne"
 
 msgid "By"
 msgstr "Avtor"
 
+msgid "Print to PDF"
+msgstr "Natisni v PDF"
+
+msgid "open issue"
+msgstr "odprto vprašanje"
+
+msgid "Sphinx Book Theme"
+msgstr "Tema knjige Sphinx"
+
+msgid "repository"
+msgstr "odlagališče"
+
+msgid "Open an issue"
+msgstr "Odprite številko"
+
+msgid "Theme by the"
+msgstr "Tema avtorja"
+
+msgid "Launch"
+msgstr "Kosilo"
+
+msgid "Download notebook file"
+msgstr "Prenesite datoteko zvezka"
+
+msgid "Edit this page"
+msgstr "Uredite to stran"
+
+msgid "next page"
+msgstr "Naslednja stran"
+
+msgid "suggest edit"
+msgstr "predlagajte urejanje"
+
+msgid "Last updated on"
+msgstr "Nazadnje posodobljeno dne"
+
 msgid "Contents"
 msgstr "Vsebina"
+
+msgid "Download this page"
+msgstr "Prenesite to stran"
+
+msgid "Source repository"
+msgstr "Izvorno skladišče"
+
+msgid "Toggle navigation"
+msgstr "Preklopi navigacijo"

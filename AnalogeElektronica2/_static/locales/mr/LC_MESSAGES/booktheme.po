@@ -8,17 +8,8 @@ msgstr ""
 "Language: mr\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-msgid "Print to PDF"
-msgstr "पीडीएफवर मुद्रित करा"
-
-msgid "Launch"
-msgstr "लाँच करा"
-
-msgid "Source repository"
-msgstr "स्त्रोत भांडार"
-
-msgid "Edit this page"
-msgstr "हे पृष्ठ संपादित करा"
+msgid "Copyright"
+msgstr "कॉपीराइट"
 
 msgid "By the"
 msgstr "द्वारा"
@@ -26,41 +17,50 @@ msgstr "द्वारा"
 msgid "previous page"
 msgstr "मागील पान"
 
-msgid "Toggle navigation"
-msgstr "नेव्हिगेशन टॉगल करा"
+msgid "Download source file"
+msgstr "स्त्रोत फाइल डाउनलोड करा"
 
-msgid "Theme by the"
-msgstr "द्वारा थीम"
+msgid "By"
+msgstr "द्वारा"
+
+msgid "Print to PDF"
+msgstr "पीडीएफवर मुद्रित करा"
 
 msgid "open issue"
 msgstr "खुला मुद्दा"
 
-msgid "Download this page"
-msgstr "हे पृष्ठ डाउनलोड करा"
-
-msgid "Download notebook file"
-msgstr "नोटबुक फाईल डाउनलोड करा"
-
-msgid "Download source file"
-msgstr "स्त्रोत फाइल डाउनलोड करा"
-
-msgid "suggest edit"
-msgstr "संपादन सुचवा"
-
 msgid "Sphinx Book Theme"
 msgstr "स्फिंक्स बुक थीम"
-
-msgid "next page"
-msgstr "पुढील पृष्ठ"
-
-msgid "Copyright"
-msgstr "कॉपीराइट"
 
 msgid "Open an issue"
 msgstr "एक मुद्दा उघडा"
 
+msgid "Theme by the"
+msgstr "द्वारा थीम"
+
+msgid "Launch"
+msgstr "लाँच करा"
+
+msgid "Download notebook file"
+msgstr "नोटबुक फाईल डाउनलोड करा"
+
+msgid "Edit this page"
+msgstr "हे पृष्ठ संपादित करा"
+
+msgid "next page"
+msgstr "पुढील पृष्ठ"
+
+msgid "suggest edit"
+msgstr "संपादन सुचवा"
+
 msgid "Last updated on"
 msgstr "अखेरचे अद्यतनित"
 
-msgid "By"
-msgstr "द्वारा"
+msgid "Download this page"
+msgstr "हे पृष्ठ डाउनलोड करा"
+
+msgid "Source repository"
+msgstr "स्त्रोत भांडार"
+
+msgid "Toggle navigation"
+msgstr "नेव्हिगेशन टॉगल करा"

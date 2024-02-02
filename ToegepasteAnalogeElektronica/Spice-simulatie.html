@@ -1,13 +1,12 @@
 
-
 <!DOCTYPE html>
 
 
-<html lang="nl" data-content_root="" >
+<html lang="nl" data-content_root="./" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta property="og:title" content="Spice simulatie" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://jangenoe.github.io/jangenoe/InteractieveCursus/ToegepasteAnalogeElektronica/Spice-simulatie.html" />
@@ -37,45 +36,49 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css" />
-    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="_static/exercise.css" />
-    <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
 <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
   <script src="_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
 
-    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-    <script src="_static/jquery.js"></script>
-    <script src="_static/underscore.js"></script>
-    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="_static/doctools.js"></script>
-    <script src="_static/clipboard.min.js"></script>
-    <script src="_static/copybutton.js"></script>
-    <script src="_static/scripts/sphinx-book-theme.js"></script>
+    <script src="_static/documentation_options.js?v=b028fc25"></script>
+    <script src="_static/doctools.js?v=888ff710"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="_static/togglebutton.js"></script>
-    <script src="_static/translations.js"></script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script src="_static/translations.js?v=83e0b41b"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="_static/design-tabs.js"></script>
+    <script src="_static/design-tabs.js?v=36754332"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
 const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
-    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script async="async" src="_static/sphinx-thebe.js?v=afe5de03"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'Spice-simulatie';</script>
-    <link rel="shortcut icon" href="_static/favicon.ico"/>
+    <link rel="icon" href="_static/favicon.ico"/>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Zoeken" href="search.html" />
     <link rel="next" title="Klasse C Versterkers" href="Klasse-C.html" />
@@ -512,7 +515,7 @@ document.write(`
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="spice-simulatie">
-<h1>Spice simulatie<a class="headerlink" href="#spice-simulatie" title="Permalink to this heading">#</a></h1>
+<h1>Spice simulatie<a class="headerlink" href="#spice-simulatie" title="Link to this heading">#</a></h1>
 <div class="cell docutils container">
 </div>
 <p>In deze cursus bestuderen we elektronische circuits. Hiervoor is het belangrijk dat we deze elektronische circuits ook in detail en correct kunnen simuleren. Hiervoor gebruiken we een implementatie van SPICE. SPICE staat voor <code class="docutils literal notranslate"><span class="pre">Simulation</span> <span class="pre">Program</span> <span class="pre">with</span> <span class="pre">Integrated</span> <span class="pre">Circuit</span> <span class="pre">Emphasis</span></code>. SPICE is in de jaren 1960 ontwikkeld door het <a class="reference external" href="https://eecs.berkeley.edu/">Department of Electrical Engineering and Computer Sciences in UC Berkeley, California, USA</a> en toen reeds vrijgegeven als een eerste soort open source avant la lettre.</p>
@@ -532,7 +535,7 @@ document.write(`
 <div class="cell_output docutils container">
 <figure class="align-default" id="spicefig1">
 <img alt="_images/c88c931a85b3baaee317ba3396c5954687ac8a6186c58bf4213dcc24f982efc5.svg" src="_images/c88c931a85b3baaee317ba3396c5954687ac8a6186c58bf4213dcc24f982efc5.svg" /><figcaption>
-<p><span class="caption-number">Fig. 1 </span><span class="caption-text">Basisschema van de verschilversterker.</span><a class="headerlink" href="#spicefig1" title="Permallink naar deze afbeelding">#</a></p>
+<p><span class="caption-number">Fig. 1 </span><span class="caption-text">Basisschema van de verschilversterker.</span><a class="headerlink" href="#spicefig1" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 </div>
@@ -541,14 +544,14 @@ document.write(`
 <div class="cell_output docutils container">
 <figure class="align-default" id="spicefig1b">
 <img alt="_images/5c48340c9bc2be4b754a8b59862409678253e3d4d2dded2e77748716b2b80e03.svg" src="_images/5c48340c9bc2be4b754a8b59862409678253e3d4d2dded2e77748716b2b80e03.svg" /><figcaption>
-<p><span class="caption-number">Fig. 2 </span><span class="caption-text">Basisschema van de verschilversterker, waarbij de knopen genummerd zijn.</span><a class="headerlink" href="#spicefig1b" title="Permallink naar deze afbeelding">#</a></p>
+<p><span class="caption-number">Fig. 2 </span><span class="caption-text">Basisschema van de verschilversterker, waarbij de knopen genummerd zijn.</span><a class="headerlink" href="#spicefig1b" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 </div>
 </div>
 <p>De overeenkomende SPICE code voor dit circuit zie je in <a class="reference internal" href="#spiceverschilversterker1"><span class="std std-numref">Spice Listing 1</span></a>. Het eerste deel van deel beschrijving beschrijft de externe aangelegde spanningsbronnen. De naam van elke spanningsbron in SPICE begint met een V. We hebben de voedingsspanning (VDD) van 5 Volt tussen knoop 1 en knoop 0, de spanningsbronnen aan de positieve (10) en de negatieve (11) ingangsklem en tenslotte een biasspanning (VB) aan klem 9.</p>
 <div class="literal-block-wrapper docutils container" id="spiceverschilversterker1">
-<div class="code-block-caption"><span class="caption-number">Spice Listing 1 </span><span class="caption-text">basiscircuit van de verschilversterker</span><a class="headerlink" href="#spiceverschilversterker1" title="Permalink naar deze broncode">#</a></div>
+<div class="code-block-caption"><span class="caption-number">Spice Listing 1 </span><span class="caption-text">basiscircuit van de verschilversterker</span><a class="headerlink" href="#spiceverschilversterker1" title="Link to this code">#</a></div>
 <div class="highlight-spice notranslate"><div class="highlight"><pre><span></span><span class="o">*</span><span class="w"> </span><span class="nx">CIRCUIT</span><span class="w"> </span><span class="nx">Spice</span><span class="w"> </span><span class="nx">file</span><span class="w"> </span><span class="nx">van</span><span class="w"> </span><span class="nx">een</span><span class="w"> </span><span class="nx">verschilversterker</span>
 <span class="nx">VDD</span><span class="w">    </span><span class="mi">1</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="nx">DC</span><span class="p">=</span><span class="m m-Double">5.0</span>
 <span class="nx">VPLUS</span><span class="w"> </span><span class="mi">10</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="nx">DC</span><span class="p">=</span><span class="m m-Double">2.5</span>
@@ -590,7 +593,7 @@ Eigenlijk zijn deze condensatorwaardes voor een eerste simulatie van de versterk
 </div>
 <p>Vervolgens hebben we de nMOS transistors van dit circuit. Deze zijn:</p>
 <div class="literal-block-wrapper docutils container" id="spiceverschilversterker2">
-<div class="code-block-caption"><span class="caption-number">Spice Listing 2 </span><span class="caption-text">nMOS transistors van de verschilversterker</span><a class="headerlink" href="#spiceverschilversterker2" title="Permalink naar deze broncode">#</a></div>
+<div class="code-block-caption"><span class="caption-number">Spice Listing 2 </span><span class="caption-text">nMOS transistors van de verschilversterker</span><a class="headerlink" href="#spiceverschilversterker2" title="Link to this code">#</a></div>
 <div class="highlight-spice notranslate"><div class="highlight"><pre><span></span><span class="nx">MN1</span><span class="w"> </span><span class="mi">3</span><span class="w"> </span><span class="mi">5</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="mi">0</span><span class="w">  </span><span class="nx">NMOS</span><span class="w"> </span><span class="nx">w</span><span class="p">=</span><span class="m m-Double">1.50</span><span class="nx">u</span><span class="w"> </span><span class="nx">L</span><span class="p">=</span><span class="m m-Double">0.50</span><span class="nx">u</span><span class="w"> </span>
 <span class="nx">MN2</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="mi">5</span><span class="w"> </span><span class="mi">5</span><span class="w"> </span><span class="mi">0</span><span class="w">  </span><span class="nx">NMOS</span><span class="w"> </span><span class="nx">w</span><span class="p">=</span><span class="m m-Double">1.50</span><span class="nx">u</span><span class="w"> </span><span class="nx">L</span><span class="p">=</span><span class="m m-Double">0.50</span><span class="nx">u</span>
 <span class="nx">MN3</span><span class="w"> </span><span class="mi">8</span><span class="w"> </span><span class="mi">10</span><span class="w"> </span><span class="mi">4</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="nx">NMOS</span><span class="w"> </span><span class="nx">w</span><span class="p">=</span><span class="m m-Double">1.50</span><span class="nx">u</span><span class="w"> </span><span class="nx">L</span><span class="p">=</span><span class="m m-Double">0.50</span><span class="nx">U</span>
@@ -604,14 +607,14 @@ Eigenlijk zijn deze condensatorwaardes voor een eerste simulatie van de versterk
 <div class="cell_output docutils container">
 <figure class="align-default" id="spicefig1c">
 <img alt="_images/bb01e0a1262299a7057604aea77fa4e15a32d5a0ac6da330b10f5ed2701e7a14.svg" src="_images/bb01e0a1262299a7057604aea77fa4e15a32d5a0ac6da330b10f5ed2701e7a14.svg" /><figcaption>
-<p><span class="caption-number">Fig. 3 </span><span class="caption-text">nMOS transistors van de verschilversterker</span><a class="headerlink" href="#spicefig1c" title="Permallink naar deze afbeelding">#</a></p>
+<p><span class="caption-number">Fig. 3 </span><span class="caption-text">nMOS transistors van de verschilversterker</span><a class="headerlink" href="#spicefig1c" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 </div>
 </div>
 <p>Daarna volgen de pMOS transistors van dit circuit. Deze zijn:</p>
 <div class="literal-block-wrapper docutils container" id="spiceverschilversterker3">
-<div class="code-block-caption"><span class="caption-number">Spice Listing 3 </span><span class="caption-text">pMOS transistors van de verschilversterker</span><a class="headerlink" href="#spiceverschilversterker3" title="Permalink naar deze broncode">#</a></div>
+<div class="code-block-caption"><span class="caption-number">Spice Listing 3 </span><span class="caption-text">pMOS transistors van de verschilversterker</span><a class="headerlink" href="#spiceverschilversterker3" title="Link to this code">#</a></div>
 <div class="highlight-spice notranslate"><div class="highlight"><pre><span></span><span class="nx">MP1</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="mi">4</span><span class="w"> </span><span class="mi">3</span><span class="w"> </span><span class="mi">1</span><span class="w">  </span><span class="nx">PMOS</span><span class="w"> </span><span class="nx">w</span><span class="p">=</span><span class="m m-Double">3.50</span><span class="nx">u</span><span class="w"> </span><span class="nx">L</span><span class="p">=</span><span class="m m-Double">0.50</span><span class="nx">U</span>
 <span class="nx">MP2</span><span class="w"> </span><span class="mi">4</span><span class="w"> </span><span class="mi">4</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="mi">1</span><span class="w">  </span><span class="nx">PMOS</span><span class="w"> </span><span class="nx">w</span><span class="p">=</span><span class="m m-Double">3.50</span><span class="nx">u</span><span class="w"> </span><span class="nx">L</span><span class="p">=</span><span class="m m-Double">0.50</span><span class="nx">U</span>
 <span class="nx">MP3</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="mi">6</span><span class="w"> </span><span class="mi">5</span><span class="w"> </span><span class="mi">1</span><span class="w">  </span><span class="nx">PMOS</span><span class="w"> </span><span class="nx">w</span><span class="p">=</span><span class="m m-Double">3.50</span><span class="nx">u</span><span class="w"> </span><span class="nx">L</span><span class="p">=</span><span class="m m-Double">0.50</span><span class="nx">U</span>
@@ -624,14 +627,14 @@ Eigenlijk zijn deze condensatorwaardes voor een eerste simulatie van de versterk
 <div class="cell_output docutils container">
 <figure class="align-default" id="spicefig1d">
 <img alt="_images/669732983c9f45d3df93dce13c914bbcd5c5c1ae22aac793d9cdbeef0df5ec09.svg" src="_images/669732983c9f45d3df93dce13c914bbcd5c5c1ae22aac793d9cdbeef0df5ec09.svg" /><figcaption>
-<p><span class="caption-number">Fig. 4 </span><span class="caption-text">pMOS transistors van de verschilversterker</span><a class="headerlink" href="#spicefig1d" title="Permallink naar deze afbeelding">#</a></p>
+<p><span class="caption-number">Fig. 4 </span><span class="caption-text">pMOS transistors van de verschilversterker</span><a class="headerlink" href="#spicefig1d" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 </div>
 </div>
 <p>Tenslotte hebben we ook de transistormodellen nodig van de <code class="docutils literal notranslate"><span class="pre">NMOS</span></code> en de <code class="docutils literal notranslate"><span class="pre">PMOS</span></code>. deze kan je zien in de model kaarten gegeven in <a class="reference internal" href="#spiceverschilversterker4"><span class="std std-numref">Spice Listing 4</span></a></p>
 <div class="literal-block-wrapper docutils container" id="spiceverschilversterker4">
-<div class="code-block-caption"><span class="caption-number">Spice Listing 4 </span><span class="caption-text">Eenvoudige transistormodellen</span><a class="headerlink" href="#spiceverschilversterker4" title="Permalink naar deze broncode">#</a></div>
+<div class="code-block-caption"><span class="caption-number">Spice Listing 4 </span><span class="caption-text">Eenvoudige transistormodellen</span><a class="headerlink" href="#spiceverschilversterker4" title="Link to this code">#</a></div>
 <div class="highlight-spice notranslate"><div class="highlight"><pre><span></span><span class="p">.</span><span class="nx">MODEL</span><span class="w"> </span><span class="nx">NMOS</span><span class="w"> </span><span class="nx">NMOS</span><span class="p">(</span><span class="nx">LEVEL</span><span class="p">=</span><span class="mi">1</span><span class="w"> </span><span class="nx">VTO</span><span class="p">=</span><span class="m m-Double">0.50</span><span class="w"> </span><span class="nx">KP</span><span class="p">=</span><span class="m m-Double">90.000E-6</span><span class="w"> </span><span class="nx">LAMBDA</span><span class="p">=</span><span class="m m-Double">0.001</span><span class="p">)</span>
 <span class="p">.</span><span class="nx">MODEL</span><span class="w"> </span><span class="nx">PMOS</span><span class="w"> </span><span class="nx">PMOS</span><span class="p">(</span><span class="nx">LEVEL</span><span class="p">=</span><span class="mi">1</span><span class="w"> </span><span class="nx">VTO</span><span class="p">=</span><span class="m m-Double">-0.45</span><span class="w"> </span><span class="nx">KP</span><span class="p">=</span><span class="m m-Double">55.000E-6</span><span class="w"> </span><span class="nx">LAMBDA</span><span class="p">=</span><span class="m m-Double">0.001</span><span class="p">)</span>
 </pre></div>
@@ -643,7 +646,7 @@ Eigenlijk zijn deze condensatorwaardes voor een eerste simulatie van de versterk
 <figure class="align-default" id="spicefig5">
 <img alt="_images/dd55f0ff1653d9bd8fb0c07752d69738f4585c07952c90d2eb2db7cfd306ec87.png" src="_images/dd55f0ff1653d9bd8fb0c07752d69738f4585c07952c90d2eb2db7cfd306ec87.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 5 </span><span class="caption-text">Bekomen spanningen aan de ingang (boven) en de uitgang (onder) van de verschilversterker.</span><a class="headerlink" href="#spicefig5" title="Permallink naar deze afbeelding">#</a></p>
+<p><span class="caption-number">Fig. 5 </span><span class="caption-text">Bekomen spanningen aan de ingang (boven) en de uitgang (onder) van de verschilversterker.</span><a class="headerlink" href="#spicefig5" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 </div>

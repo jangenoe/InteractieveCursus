@@ -6,7 +6,7 @@ parts:
   - file: Spice-simulatie
 - caption: Versterkers
   chapters:
-  - file: Klasse-C
+  #- file: Klasse-C
   - file: Klasse-F
   - file: Klasse-D
   - file: Klasse-E

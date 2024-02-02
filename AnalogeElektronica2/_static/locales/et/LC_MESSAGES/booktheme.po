@@ -8,17 +8,11 @@ msgstr ""
 "Language: et\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-msgid "Print to PDF"
-msgstr "Prindi PDF-i"
+msgid "Copyright"
+msgstr "Autoriõigus"
 
-msgid "Launch"
-msgstr "Käivitage"
-
-msgid "Source repository"
-msgstr "Allikahoidla"
-
-msgid "Edit this page"
-msgstr "Muutke seda lehte"
+msgid "Fullscreen mode"
+msgstr "Täisekraanirežiim"
 
 msgid "By the"
 msgstr "Autor"
@@ -26,50 +20,56 @@ msgstr "Autor"
 msgid "previous page"
 msgstr "eelmine leht"
 
-msgid "Toggle navigation"
-msgstr "Lülita navigeerimine sisse"
-
-msgid "Theme by the"
-msgstr "Teema"
-
-msgid "repository"
-msgstr "hoidla"
-
-msgid "open issue"
-msgstr "avatud küsimus"
-
-msgid "Download this page"
-msgstr "Laadige see leht alla"
-
-msgid "Download notebook file"
-msgstr "Laadige sülearvuti fail alla"
-
 msgid "Download source file"
 msgstr "Laadige alla lähtefail"
-
-msgid "suggest edit"
-msgstr "soovita muuta"
-
-msgid "Sphinx Book Theme"
-msgstr "Sfinksiraamatu teema"
-
-msgid "next page"
-msgstr "järgmine leht"
-
-msgid "Copyright"
-msgstr "Autoriõigus"
-
-msgid "Open an issue"
-msgstr "Avage probleem"
-
-msgid "Fullscreen mode"
-msgstr "Täisekraanirežiim"
-
-msgid "Last updated on"
-msgstr "Viimati uuendatud"
 
 msgid "By"
 msgstr "Kõrval"
 
+msgid "Print to PDF"
+msgstr "Prindi PDF-i"
+
+msgid "open issue"
+msgstr "avatud küsimus"
+
+msgid "Sphinx Book Theme"
+msgstr "Sfinksiraamatu teema"
+
+msgid "repository"
+msgstr "hoidla"
+
+msgid "Open an issue"
+msgstr "Avage probleem"
+
+msgid "Theme by the"
+msgstr "Teema"
+
+msgid "Launch"
+msgstr "Käivitage"
+
+msgid "Download notebook file"
+msgstr "Laadige sülearvuti fail alla"
+
+msgid "Edit this page"
+msgstr "Muutke seda lehte"
+
+msgid "next page"
+msgstr "järgmine leht"
+
+msgid "suggest edit"
+msgstr "soovita muuta"
+
+msgid "Last updated on"
+msgstr "Viimati uuendatud"
+
 msgid "Contents"
 msgstr "Sisu"
+
+msgid "Download this page"
+msgstr "Laadige see leht alla"
+
+msgid "Source repository"
+msgstr "Allikahoidla"
+
+msgid "Toggle navigation"
+msgstr "Lülita navigeerimine sisse"

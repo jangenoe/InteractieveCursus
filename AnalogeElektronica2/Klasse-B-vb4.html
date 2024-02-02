@@ -1,13 +1,12 @@
 
-
 <!DOCTYPE html>
 
 
-<html lang="nl" data-content_root="" >
+<html lang="nl" data-content_root="./" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta property="og:title" content="Uitgewerkt voorbeeld van een klasse AB met MOS transistors" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://jangenoe.github.io/jangenoe/InteractieveCursus/AnalogeElektronica2/Klasse-B-vb4.html" />
@@ -37,45 +36,49 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css" />
-    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="_static/exercise.css" />
-    <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
 <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
   <script src="_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
 
-    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-    <script src="_static/jquery.js"></script>
-    <script src="_static/underscore.js"></script>
-    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="_static/doctools.js"></script>
-    <script src="_static/clipboard.min.js"></script>
-    <script src="_static/copybutton.js"></script>
-    <script src="_static/scripts/sphinx-book-theme.js"></script>
+    <script src="_static/documentation_options.js?v=b028fc25"></script>
+    <script src="_static/doctools.js?v=888ff710"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="_static/togglebutton.js"></script>
-    <script src="_static/translations.js"></script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script src="_static/translations.js?v=83e0b41b"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="_static/design-tabs.js"></script>
+    <script src="_static/design-tabs.js?v=36754332"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
 const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
-    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script async="async" src="_static/sphinx-thebe.js?v=afe5de03"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'Klasse-B-vb4';</script>
-    <link rel="shortcut icon" href="_static/favicon.ico"/>
+    <link rel="icon" href="_static/favicon.ico"/>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Zoeken" href="search.html" />
     <link rel="next" title="Klasse G versterkers" href="Klasse-G.html" />
@@ -512,7 +515,7 @@ document.write(`
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="uitgewerkt-voorbeeld-van-een-klasse-ab-met-mos-transistors">
-<h1>Uitgewerkt voorbeeld van een klasse AB met MOS transistors<a class="headerlink" href="#uitgewerkt-voorbeeld-van-een-klasse-ab-met-mos-transistors" title="Permalink to this heading">#</a></h1>
+<h1>Uitgewerkt voorbeeld van een klasse AB met MOS transistors<a class="headerlink" href="#uitgewerkt-voorbeeld-van-een-klasse-ab-met-mos-transistors" title="Link to this heading">#</a></h1>
 <p>In <span id="id1">[<a class="reference internal" href="References.html#id2" title="X. Jiang. Fundamentals of Audio Class D Amplifier Design: A Review of Schemes and Architectures. IEEE Solid-State Circuits Magazine, 9(3):14–25, 2017. doi:10.1109/MSSC.2017.2712368.">3</a>]</span>
 wordt de klasse AB werking getoond aan de hand van het schema in <a class="reference internal" href="#figbias"><span class="std std-numref">Fig. 63</span></a>. We bestuderen dit schema in meer detail. Eerst bekijken we de voorinsteltak. De 2 weerstanden R, samen met de 2 diodes zorgen ervoor dat zonder aangelegd signaal de spanning <span class="math notranslate nohighlight">\(V_i\)</span> gelegen is midden de 2 voedingsspanningen. De 2 weerstanden R zijn dan zo gekozen dat de <span class="math notranslate nohighlight">\(I_B\)</span> een DC stroomcomponenten heeft die mooi kan ingesteld worden door R.</p>
 <p>Wanneer we vervolgens een AC signaal aanleggen, krijgen we de volgende signalen:</p>
@@ -530,7 +533,7 @@ wordt de klasse AB werking getoond aan de hand van het schema in <a class="refer
 <figure class="align-default" id="figbias">
 <img alt="_images/ClassB_Bias.png" src="_images/ClassB_Bias.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 63 </span><span class="caption-text">Klasse AB versterker met MOS transistors <cite id='vks4r'><a href='#zotero|11916217/EY2R3695'>[1]</a></cite>.</span><a class="headerlink" href="#figbias" title="Permallink naar deze afbeelding">#</a></p>
+<p><span class="caption-number">Fig. 63 </span><span class="caption-text">Klasse AB versterker met MOS transistors <cite id='vks4r'><a href='#zotero|11916217/EY2R3695'>[1]</a></cite>.</span><a class="headerlink" href="#figbias" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <p>Wanneer we de spanning aan de gate en de source invullen krijgen we:</p>
@@ -547,7 +550,7 @@ wordt de klasse AB werking getoond aan de hand van het schema in <a class="refer
 <figure class="align-default" id="transfer1">
 <img alt="_images/fb5d576458519719795826a3c53408815a1560a3f09267e06076b47b30cedc7c.png" src="_images/fb5d576458519719795826a3c53408815a1560a3f09267e06076b47b30cedc7c.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 64 </span><span class="caption-text">Transfer curve en stroom van de beide transistors.</span><a class="headerlink" href="#transfer1" title="Permallink naar deze afbeelding">#</a></p>
+<p><span class="caption-number">Fig. 64 </span><span class="caption-text">Transfer curve en stroom van de beide transistors.</span><a class="headerlink" href="#transfer1" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 </div>
@@ -557,7 +560,7 @@ wordt de klasse AB werking getoond aan de hand van het schema in <a class="refer
 <figure class="align-default" id="transfer1b">
 <img alt="_images/d9cb51f2c6cce7109db04e147759da309525d9504d176325822df7cf60700921.png" src="_images/d9cb51f2c6cce7109db04e147759da309525d9504d176325822df7cf60700921.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 65 </span><span class="caption-text">Detail van de zone rond de oorsprong. We zien dat hier beide transistors in geleiding zijn.</span><a class="headerlink" href="#transfer1b" title="Permallink naar deze afbeelding">#</a></p>
+<p><span class="caption-number">Fig. 65 </span><span class="caption-text">Detail van de zone rond de oorsprong. We zien dat hier beide transistors in geleiding zijn.</span><a class="headerlink" href="#transfer1b" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 </div>
