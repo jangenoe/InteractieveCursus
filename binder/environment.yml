@@ -22,6 +22,6 @@ dependencies:
   - ipywidgets
   - pyspice
   - pip:
-    - schemdraw==0.18
+    - schemdraw<=0.18
     - jupytercards
     - wikitables
