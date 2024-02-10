@@ -592,7 +592,66 @@ document.write(`
 <section id="de-mos-transistor-geschakeld-als-diode">
 <h4>De MOS transistor geschakeld als diode<a class="headerlink" href="#de-mos-transistor-geschakeld-als-diode" title="Link to this heading">#</a></h4>
 <p>Een diode is een twee-terminal component. We leggen er een spanning over aan en krijgen er een stroom door, of omgekeerd. Er is geen derde contact dat een controle van de stroom toelaat. Een transistor daarentegen heeft wel dat derde contact dat toelaat de stroom te controleren. Wanneer nu echter de gate van de transistor met de drain verbonden wordt (en de bulk met de source) hebben we slechts 2 externe contacten meer over. We bekomen hieruit een stroom-spanningskarakteristiek die kwadratisch is (dus niet logaritmisch zoals bij de diode).</p>
-<p>Let wel op: dit is de transistor als diode geschakeld, maar daarom is het nog geen diode.</p>
+<div class="admonition warning">
+<p class="admonition-title">Waarschuwing</p>
+<p>dit is de transistor als diode geschakeld, maar daarom is het nog geen diode.</p>
+</div>
+<div class="cell docutils container">
+<div class="cell_output docutils container">
+<figure class="align-default" id="tdiode">
+<img alt="_images/be079844fefc68c506053e0ade942032afa1f150b83fd0f71c11c28f14b5d924.svg" src="_images/be079844fefc68c506053e0ade942032afa1f150b83fd0f71c11c28f14b5d924.svg" /><figcaption>
+<p><span class="caption-number">Fig. 5 </span><span class="caption-text">nMOS transistor als diode geschakeld.</span><a class="headerlink" href="#tdiode" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_output docutils container">
+<figure class="align-default" id="stroomspiegel">
+<img alt="_images/893802ce55780bb03bdf697aad0e30ee76efba88a4aac03ca4e31544ae86adaa.svg" src="_images/893802ce55780bb03bdf697aad0e30ee76efba88a4aac03ca4e31544ae86adaa.svg" /><figcaption>
+<p><span class="caption-number">Fig. 6 </span><span class="caption-text">Stroomspiegel opgebouwd uit nMOS transistors.</span><a class="headerlink" href="#stroomspiegel" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
+</div>
+<p>We merken op dat in <a class="reference internal" href="#stroomspiegel"><span class="std std-numref">Fig. 6</span></a> enkel de inputtransistor als diode geschakeld is. De uitgangstransistor is actief als een transconductantie.</p>
+<p>Zowel pMOS als nMOS transistors kunnen als diode geschakeld worden (zie <a class="reference internal" href="#tdiodep"><span class="std std-numref">Fig. 7</span></a>. We merken hierbij wel op dat er voor het schema met de pMOS enkel stroom loopt als <span class="math notranslate nohighlight">\(V_{in} -V_s &lt; V_T\)</span> terwijl het voor het schema voor de nMOS transistor juist omgekeerd is.</p>
+<div class="cell docutils container">
+<div class="cell_output docutils container">
+<figure class="align-default" id="tdiodep">
+<img alt="_images/5ac946e026dfa0cf110487f9a848ae7d193661872a60629934837ee3e895cc19.svg" src="_images/5ac946e026dfa0cf110487f9a848ae7d193661872a60629934837ee3e895cc19.svg" /><figcaption>
+<p><span class="caption-number">Fig. 7 </span><span class="caption-text">pMos en nMOS transistor als diode geschakeld.</span><a class="headerlink" href="#tdiodep" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_output docutils container">
+<figure class="align-default" id="npstroomspiegel">
+<img alt="_images/ffd7b5d3ae7cbaaacb471b96f84f19097f0e3e2c44ef2326d74a50d89d4759c1.svg" src="_images/ffd7b5d3ae7cbaaacb471b96f84f19097f0e3e2c44ef2326d74a50d89d4759c1.svg" /><figcaption>
+<p><span class="caption-number">Fig. 8 </span><span class="caption-text">Stroomspiegels zowel met pMos als nMOS transistors.</span><a class="headerlink" href="#npstroomspiegel" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_output docutils container">
+<figure class="align-default" id="actievebelasting">
+<img alt="_images/da661e8c20f325b832ab7570ad765b29efda2051ac9cef62b0931144f73c6cf3.svg" src="_images/da661e8c20f325b832ab7570ad765b29efda2051ac9cef62b0931144f73c6cf3.svg" /><figcaption>
+<p><span class="caption-number">Fig. 9 </span><span class="caption-text">pMOS als actieve belasting.</span><a class="headerlink" href="#actievebelasting" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_output docutils container">
+<figure class="align-default" id="id1">
+<img alt="_images/1364c934ed66637a332a613c3af3f51fb43e288b9ab610c37467743da2d97782.svg" src="_images/1364c934ed66637a332a613c3af3f51fb43e288b9ab610c37467743da2d97782.svg" /><figcaption>
+<p><span class="caption-number">Fig. 10 </span><span class="caption-text">pMOS als actieve belasting.</span><a class="headerlink" href="#id1" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
+</div>
 </section>
 <section id="de-mos-transistor-als-actieve-belasting">
 <h4>De MOS transistor als actieve belasting<a class="headerlink" href="#de-mos-transistor-als-actieve-belasting" title="Link to this heading">#</a></h4>
@@ -630,8 +689,8 @@ document.write(`
 <div class="cell docutils container">
 <div class="cell_output docutils container">
 <figure class="align-default" id="gss">
-<img alt="_images/d88415ff706f6a7244d63ae20c1ad8590f3327086530abce8413349b1fcf94cc.svg" src="_images/d88415ff706f6a7244d63ae20c1ad8590f3327086530abce8413349b1fcf94cc.svg" /><figcaption>
-<p><span class="caption-number">Fig. 5 </span><span class="caption-text">nMOS transistor in de Gemeenschappelijke Source Schakeling</span><a class="headerlink" href="#gss" title="Link to this image">#</a></p>
+<img alt="_images/4f7746adcad2ce1d5e069011b57fbcddec04e7b20e88185317da29896140e03f.svg" src="_images/4f7746adcad2ce1d5e069011b57fbcddec04e7b20e88185317da29896140e03f.svg" /><figcaption>
+<p><span class="caption-number">Fig. 11 </span><span class="caption-text">nMOS transistor in de Gemeenschappelijke Source Schakeling</span><a class="headerlink" href="#gss" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 </div>
@@ -639,8 +698,8 @@ document.write(`
 <div class="cell docutils container">
 <div class="cell_output docutils container">
 <figure class="align-default" id="gssdefa">
-<img alt="_images/b10770e7f217f19418cef5c2afd930255362f44b1d1a07f6adee7fd30b48c413.svg" src="_images/b10770e7f217f19418cef5c2afd930255362f44b1d1a07f6adee7fd30b48c413.svg" /><figcaption>
-<p><span class="caption-number">Fig. 6 </span><span class="caption-text">Definitie van de versterking voor de nMOS transistor in de Gemeenschappelijke Source Schakeling.</span><a class="headerlink" href="#gssdefa" title="Link to this image">#</a></p>
+<img alt="_images/4b8db3f6ece0f9235f8201da9232c30d636aa4be8daa3575a71277176e08cadb.svg" src="_images/4b8db3f6ece0f9235f8201da9232c30d636aa4be8daa3575a71277176e08cadb.svg" /><figcaption>
+<p><span class="caption-number">Fig. 12 </span><span class="caption-text">Definitie van de versterking voor de nMOS transistor in de Gemeenschappelijke Source Schakeling.</span><a class="headerlink" href="#gssdefa" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 </div>
@@ -660,13 +719,13 @@ document.write(`
 <h2>Bipolaire transistor configuraties<a class="headerlink" href="#bipolaire-transistor-configuraties" title="Link to this heading">#</a></h2>
 <section id="gemeenschappelijke-emitter-schakeling-ges">
 <h3>Gemeenschappelijke Emitter Schakeling: GES<a class="headerlink" href="#gemeenschappelijke-emitter-schakeling-ges" title="Link to this heading">#</a></h3>
-<p>Als voor een bipolaire transistor de emitter de gemeenschappelijke klem is, is de ingang steeds de basis van bipolaire transistor en de uitgang steeds de collector van de bipolaire tranistor. De ingang kan in principe zowel in stroom (zie <a class="reference internal" href="#ges"><span class="std std-numref">Fig. 7</span></a>) als in spanning aangestuurd worden (zie <a class="reference internal" href="#ges2"><span class="std std-numref">Fig. 8</span></a>).</p>
-<p>In deze configuratie is het doel van de transistor in eerste instantie om spanningsversterking op te leveren. <a class="reference internal" href="#gesdefa"><span class="std std-numref">Fig. 9</span></a> toont de spanningsversterking die kan bekomen worden.</p>
+<p>Als voor een bipolaire transistor de emitter de gemeenschappelijke klem is, is de ingang steeds de basis van bipolaire transistor en de uitgang steeds de collector van de bipolaire tranistor. De ingang kan in principe zowel in stroom (zie <a class="reference internal" href="#ges"><span class="std std-numref">Fig. 13</span></a>) als in spanning aangestuurd worden (zie <a class="reference internal" href="#ges2"><span class="std std-numref">Fig. 14</span></a>).</p>
+<p>In deze configuratie is het doel van de transistor in eerste instantie om spanningsversterking op te leveren. <a class="reference internal" href="#gesdefa"><span class="std std-numref">Fig. 15</span></a> toont de spanningsversterking die kan bekomen worden.</p>
 <div class="cell docutils container">
 <div class="cell_output docutils container">
 <figure class="align-default" id="ges">
 <img alt="_images/49daa79e95884648f89d7fda7ed2d42c339f0c1c29ceceecc0ee8b04c0410ef8.svg" src="_images/49daa79e95884648f89d7fda7ed2d42c339f0c1c29ceceecc0ee8b04c0410ef8.svg" /><figcaption>
-<p><span class="caption-number">Fig. 7 </span><span class="caption-text">De npn transistor in de Gemeenschappelijke Emitter Schakeling.</span><a class="headerlink" href="#ges" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 13 </span><span class="caption-text">De npn transistor in de Gemeenschappelijke Emitter Schakeling.</span><a class="headerlink" href="#ges" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 </div>
@@ -675,7 +734,7 @@ document.write(`
 <div class="cell_output docutils container">
 <figure class="align-default" id="ges2">
 <img alt="_images/1d3cfa7338f54ed71bf6605684ee9dcf2643a63679b21852e1191c7332dbb482.svg" src="_images/1d3cfa7338f54ed71bf6605684ee9dcf2643a63679b21852e1191c7332dbb482.svg" /><figcaption>
-<p><span class="caption-number">Fig. 8 </span><span class="caption-text">De npn transistor in de Gemeenschappelijke Emitter Schakeling</span><a class="headerlink" href="#ges2" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 14 </span><span class="caption-text">De npn transistor in de Gemeenschappelijke Emitter Schakeling</span><a class="headerlink" href="#ges2" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 </div>
@@ -684,7 +743,7 @@ document.write(`
 <div class="cell_output docutils container">
 <figure class="align-default" id="gesdefa">
 <img alt="_images/9fd323e230e0b2a772644e68ccb476dd0a288646c55e1c89ab77f4a349b873f7.svg" src="_images/9fd323e230e0b2a772644e68ccb476dd0a288646c55e1c89ab77f4a349b873f7.svg" /><figcaption>
-<p><span class="caption-number">Fig. 9 </span><span class="caption-text">Definitie van de versterking voor de npn transistor in de Gemeenschappelijke Emitter Schakeling.</span><a class="headerlink" href="#gesdefa" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 15 </span><span class="caption-text">Definitie van de versterking voor de npn transistor in de Gemeenschappelijke Emitter Schakeling.</span><a class="headerlink" href="#gesdefa" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 </div>
