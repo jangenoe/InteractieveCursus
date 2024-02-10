@@ -506,11 +506,17 @@ document.write(`
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tweepoort">Tweepoort</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mos-transistor-configuraties">MOS transistor configuraties</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#de-mos-transistor-geschakeld-als-2-terminal-component">De MOS transistor geschakeld als 2-terminal component</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#de-mos-transistor-geschakeld-als-3-terminal-component">De MOS transistor geschakeld als 3-terminal component</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gemeenschappelijke-source-schakeling-gss">Gemeenschappelijke Source Schakeling: GSS</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gemeenschappelijke-drain-schakeling-gds">Gemeenschappelijke Drain Schakeling: GDS</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gemeenschappelijke-gate-schakeling-ggs">Gemeenschappelijke Gate Schakeling: GGS</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#de-mos-transistor-geschakeld-als-2-terminal-component">De MOS transistor geschakeld als 2-terminal component</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#de-mos-transistor-geschakeld-als-diode">De MOS transistor geschakeld als diode</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#de-mos-transistor-als-actieve-belasting">De MOS transistor als actieve belasting</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#de-mos-transistor-geschakeld-als-3-terminal-component">De MOS transistor geschakeld als 3-terminal component</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#gemeenschappelijke-source-schakeling-gss">Gemeenschappelijke Source Schakeling: GSS</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#gemeenschappelijke-drain-schakeling-gds">Gemeenschappelijke Drain Schakeling: GDS</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#gemeenschappelijke-gate-schakeling-ggs">Gemeenschappelijke Gate Schakeling: GGS</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bipolaire-transistor-configuraties">Bipolaire transistor configuraties</a><ul class="nav section-nav flex-column">
@@ -577,6 +583,20 @@ document.write(`
 <h2>MOS transistor configuraties<a class="headerlink" href="#mos-transistor-configuraties" title="Link to this heading">#</a></h2>
 <section id="de-mos-transistor-geschakeld-als-2-terminal-component">
 <h3>De MOS transistor geschakeld als 2-terminal component<a class="headerlink" href="#de-mos-transistor-geschakeld-als-2-terminal-component" title="Link to this heading">#</a></h3>
+<p>Ondanks het feit dat een MOS transistor een 3-terminal component is, kunnen we deze in veel schakelingen als een 2-terminal component gebruiken.</p>
+<ul class="simple">
+<li><p>De MOS transistor geschakeld als diode</p></li>
+<li><p>De MOS transistor geschakeld als actieve belasting</p></li>
+</ul>
+<p>We werken hieronder beide configuraties in detail uit.</p>
+<section id="de-mos-transistor-geschakeld-als-diode">
+<h4>De MOS transistor geschakeld als diode<a class="headerlink" href="#de-mos-transistor-geschakeld-als-diode" title="Link to this heading">#</a></h4>
+<p>Een diode is een twee-terminal component. We leggen er een spanning over aan en krijgen er een stroom door, of omgekeerd. Er is geen derde contact dat een controle van de stroom toelaat. Een transistor daarentegen heeft wel dat derde contact dat toelaat de stroom te controleren. Wanneer nu echter de gate van de transistor met de drain verbonden wordt (en de bulk met de source) hebben we slechts 2 externe contacten meer over. We bekomen hieruit een stroom-spanningskarakteristiek die kwadratisch is (dus niet logaritmisch zoals bij de diode).</p>
+<p>Let wel op: dit is de transistor als diode geschakeld, maar daarom is het nog geen diode.</p>
+</section>
+<section id="de-mos-transistor-als-actieve-belasting">
+<h4>De MOS transistor als actieve belasting<a class="headerlink" href="#de-mos-transistor-als-actieve-belasting" title="Link to this heading">#</a></h4>
+</section>
 </section>
 <section id="de-mos-transistor-geschakeld-als-3-terminal-component">
 <h3>De MOS transistor geschakeld als 3-terminal component<a class="headerlink" href="#de-mos-transistor-geschakeld-als-3-terminal-component" title="Link to this heading">#</a></h3>
@@ -605,9 +625,8 @@ document.write(`
 </li>
 </ul>
 <p>Elk van deze 3-terminal configuraties bespreken we hieronder in meer detail</p>
-</section>
 <section id="gemeenschappelijke-source-schakeling-gss">
-<h3>Gemeenschappelijke Source Schakeling: GSS<a class="headerlink" href="#gemeenschappelijke-source-schakeling-gss" title="Link to this heading">#</a></h3>
+<h4>Gemeenschappelijke Source Schakeling: GSS<a class="headerlink" href="#gemeenschappelijke-source-schakeling-gss" title="Link to this heading">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_output docutils container">
 <figure class="align-default" id="gss">
@@ -628,12 +647,13 @@ document.write(`
 </div>
 </section>
 <section id="gemeenschappelijke-drain-schakeling-gds">
-<h3>Gemeenschappelijke Drain Schakeling: GDS<a class="headerlink" href="#gemeenschappelijke-drain-schakeling-gds" title="Link to this heading">#</a></h3>
+<h4>Gemeenschappelijke Drain Schakeling: GDS<a class="headerlink" href="#gemeenschappelijke-drain-schakeling-gds" title="Link to this heading">#</a></h4>
 <p>In deze configuratie is het doel van de transistor in eerste instantie om stroomsversterking op te leveren.</p>
 </section>
 <section id="gemeenschappelijke-gate-schakeling-ggs">
-<h3>Gemeenschappelijke Gate Schakeling: GGS<a class="headerlink" href="#gemeenschappelijke-gate-schakeling-ggs" title="Link to this heading">#</a></h3>
+<h4>Gemeenschappelijke Gate Schakeling: GGS<a class="headerlink" href="#gemeenschappelijke-gate-schakeling-ggs" title="Link to this heading">#</a></h4>
 <p>In deze configuratie is het doel van de transistor in eerste instantie om</p>
+</section>
 </section>
 </section>
 <section id="bipolaire-transistor-configuraties">
@@ -747,11 +767,17 @@ document.write(`
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tweepoort">Tweepoort</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mos-transistor-configuraties">MOS transistor configuraties</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#de-mos-transistor-geschakeld-als-2-terminal-component">De MOS transistor geschakeld als 2-terminal component</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#de-mos-transistor-geschakeld-als-3-terminal-component">De MOS transistor geschakeld als 3-terminal component</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gemeenschappelijke-source-schakeling-gss">Gemeenschappelijke Source Schakeling: GSS</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gemeenschappelijke-drain-schakeling-gds">Gemeenschappelijke Drain Schakeling: GDS</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gemeenschappelijke-gate-schakeling-ggs">Gemeenschappelijke Gate Schakeling: GGS</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#de-mos-transistor-geschakeld-als-2-terminal-component">De MOS transistor geschakeld als 2-terminal component</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#de-mos-transistor-geschakeld-als-diode">De MOS transistor geschakeld als diode</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#de-mos-transistor-als-actieve-belasting">De MOS transistor als actieve belasting</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#de-mos-transistor-geschakeld-als-3-terminal-component">De MOS transistor geschakeld als 3-terminal component</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#gemeenschappelijke-source-schakeling-gss">Gemeenschappelijke Source Schakeling: GSS</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#gemeenschappelijke-drain-schakeling-gds">Gemeenschappelijke Drain Schakeling: GDS</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#gemeenschappelijke-gate-schakeling-ggs">Gemeenschappelijke Gate Schakeling: GGS</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bipolaire-transistor-configuraties">Bipolaire transistor configuraties</a><ul class="nav section-nav flex-column">
