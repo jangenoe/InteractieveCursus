@@ -8,62 +8,26 @@ msgstr ""
 "Language: sv\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-msgid "Copyright"
-msgstr "Upphovsrätt"
-
-msgid "Fullscreen mode"
-msgstr "Fullskärmsläge"
-
-msgid "By the"
-msgstr "Av den"
-
-msgid "previous page"
-msgstr "föregående sida"
-
-msgid "Download source file"
-msgstr "Ladda ner källfil"
-
-msgid "By"
-msgstr "Av"
-
-msgid "Print to PDF"
-msgstr "Skriv ut till PDF"
-
-msgid "open issue"
-msgstr "öppna problemrapport"
-
-msgid "Sphinx Book Theme"
-msgstr "Sphinx Boktema"
+msgid "Download notebook file"
+msgstr "Ladda ner notebook-fil"
 
 msgid "repository"
 msgstr "repositorium"
 
-msgid "Open an issue"
-msgstr "Öppna en problemrapport"
+msgid "Last updated on"
+msgstr "Senast uppdaterad den"
 
-msgid "Theme by the"
-msgstr "Tema av"
+msgid "previous page"
+msgstr "föregående sida"
 
-msgid "Launch"
-msgstr "Öppna"
-
-msgid "Download notebook file"
-msgstr "Ladda ner notebook-fil"
-
-msgid "Edit this page"
-msgstr "Redigera den här sidan"
+msgid "By"
+msgstr "Av"
 
 msgid "next page"
 msgstr "nästa sida"
 
-msgid "suggest edit"
-msgstr "föreslå ändring"
-
-msgid "Last updated on"
-msgstr "Senast uppdaterad den"
-
-msgid "Contents"
-msgstr "Innehåll"
+msgid "Theme by the"
+msgstr "Tema av"
 
 msgid "Download this page"
 msgstr "Ladda ner den här sidan"
@@ -71,5 +35,41 @@ msgstr "Ladda ner den här sidan"
 msgid "Source repository"
 msgstr "Källkodsrepositorium"
 
+msgid "Print to PDF"
+msgstr "Skriv ut till PDF"
+
+msgid "Download source file"
+msgstr "Ladda ner källfil"
+
+msgid "Sphinx Book Theme"
+msgstr "Sphinx Boktema"
+
+msgid "suggest edit"
+msgstr "föreslå ändring"
+
+msgid "Edit this page"
+msgstr "Redigera den här sidan"
+
+msgid "Fullscreen mode"
+msgstr "Fullskärmsläge"
+
+msgid "Copyright"
+msgstr "Upphovsrätt"
+
+msgid "Contents"
+msgstr "Innehåll"
+
 msgid "Toggle navigation"
 msgstr "Växla navigering"
+
+msgid "Launch"
+msgstr "Öppna"
+
+msgid "open issue"
+msgstr "öppna problemrapport"
+
+msgid "By the"
+msgstr "Av den"
+
+msgid "Open an issue"
+msgstr "Öppna en problemrapport"

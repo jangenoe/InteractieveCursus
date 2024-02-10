@@ -8,62 +8,26 @@ msgstr ""
 "Language: et\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-msgid "Copyright"
-msgstr "Autoriõigus"
-
-msgid "Fullscreen mode"
-msgstr "Täisekraanirežiim"
-
-msgid "By the"
-msgstr "Autor"
-
-msgid "previous page"
-msgstr "eelmine leht"
-
-msgid "Download source file"
-msgstr "Laadige alla lähtefail"
-
-msgid "By"
-msgstr "Kõrval"
-
-msgid "Print to PDF"
-msgstr "Prindi PDF-i"
-
-msgid "open issue"
-msgstr "avatud küsimus"
-
-msgid "Sphinx Book Theme"
-msgstr "Sfinksiraamatu teema"
+msgid "Download notebook file"
+msgstr "Laadige sülearvuti fail alla"
 
 msgid "repository"
 msgstr "hoidla"
 
-msgid "Open an issue"
-msgstr "Avage probleem"
+msgid "Last updated on"
+msgstr "Viimati uuendatud"
 
-msgid "Theme by the"
-msgstr "Teema"
+msgid "previous page"
+msgstr "eelmine leht"
 
-msgid "Launch"
-msgstr "Käivitage"
-
-msgid "Download notebook file"
-msgstr "Laadige sülearvuti fail alla"
-
-msgid "Edit this page"
-msgstr "Muutke seda lehte"
+msgid "By"
+msgstr "Kõrval"
 
 msgid "next page"
 msgstr "järgmine leht"
 
-msgid "suggest edit"
-msgstr "soovita muuta"
-
-msgid "Last updated on"
-msgstr "Viimati uuendatud"
-
-msgid "Contents"
-msgstr "Sisu"
+msgid "Theme by the"
+msgstr "Teema"
 
 msgid "Download this page"
 msgstr "Laadige see leht alla"
@@ -71,5 +35,41 @@ msgstr "Laadige see leht alla"
 msgid "Source repository"
 msgstr "Allikahoidla"
 
+msgid "Print to PDF"
+msgstr "Prindi PDF-i"
+
+msgid "Download source file"
+msgstr "Laadige alla lähtefail"
+
+msgid "Sphinx Book Theme"
+msgstr "Sfinksiraamatu teema"
+
+msgid "suggest edit"
+msgstr "soovita muuta"
+
+msgid "Edit this page"
+msgstr "Muutke seda lehte"
+
+msgid "Fullscreen mode"
+msgstr "Täisekraanirežiim"
+
+msgid "Copyright"
+msgstr "Autoriõigus"
+
+msgid "Contents"
+msgstr "Sisu"
+
 msgid "Toggle navigation"
 msgstr "Lülita navigeerimine sisse"
+
+msgid "Launch"
+msgstr "Käivitage"
+
+msgid "open issue"
+msgstr "avatud küsimus"
+
+msgid "By the"
+msgstr "Autor"
+
+msgid "Open an issue"
+msgstr "Avage probleem"

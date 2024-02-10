@@ -8,62 +8,26 @@ msgstr ""
 "Language: sk\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-msgid "Copyright"
-msgstr "Autorské práva"
-
-msgid "Fullscreen mode"
-msgstr "Režim celej obrazovky"
-
-msgid "By the"
-msgstr "Podľa"
-
-msgid "previous page"
-msgstr "predchádzajúca strana"
-
-msgid "Download source file"
-msgstr "Stiahnite si zdrojový súbor"
-
-msgid "By"
-msgstr "Autor:"
-
-msgid "Print to PDF"
-msgstr "Tlač do PDF"
-
-msgid "open issue"
-msgstr "otvorené vydanie"
-
-msgid "Sphinx Book Theme"
-msgstr "Téma knihy Sfinga"
+msgid "Download notebook file"
+msgstr "Stiahnite si zošit"
 
 msgid "repository"
 msgstr "Úložisko"
 
-msgid "Open an issue"
-msgstr "Otvorte problém"
+msgid "Last updated on"
+msgstr "Posledná aktualizácia dňa"
 
-msgid "Theme by the"
-msgstr "Téma od"
+msgid "previous page"
+msgstr "predchádzajúca strana"
 
-msgid "Launch"
-msgstr "Spustiť"
-
-msgid "Download notebook file"
-msgstr "Stiahnite si zošit"
-
-msgid "Edit this page"
-msgstr "Upraviť túto stránku"
+msgid "By"
+msgstr "Autor:"
 
 msgid "next page"
 msgstr "ďalšia strana"
 
-msgid "suggest edit"
-msgstr "navrhnúť úpravu"
-
-msgid "Last updated on"
-msgstr "Posledná aktualizácia dňa"
-
-msgid "Contents"
-msgstr "Obsah"
+msgid "Theme by the"
+msgstr "Téma od"
 
 msgid "Download this page"
 msgstr "Stiahnite si túto stránku"
@@ -71,5 +35,41 @@ msgstr "Stiahnite si túto stránku"
 msgid "Source repository"
 msgstr "Zdrojové úložisko"
 
+msgid "Print to PDF"
+msgstr "Tlač do PDF"
+
+msgid "Download source file"
+msgstr "Stiahnite si zdrojový súbor"
+
+msgid "Sphinx Book Theme"
+msgstr "Téma knihy Sfinga"
+
+msgid "suggest edit"
+msgstr "navrhnúť úpravu"
+
+msgid "Edit this page"
+msgstr "Upraviť túto stránku"
+
+msgid "Fullscreen mode"
+msgstr "Režim celej obrazovky"
+
+msgid "Copyright"
+msgstr "Autorské práva"
+
+msgid "Contents"
+msgstr "Obsah"
+
 msgid "Toggle navigation"
 msgstr "Prepnúť navigáciu"
+
+msgid "Launch"
+msgstr "Spustiť"
+
+msgid "open issue"
+msgstr "otvorené vydanie"
+
+msgid "By the"
+msgstr "Podľa"
+
+msgid "Open an issue"
+msgstr "Otvorte problém"

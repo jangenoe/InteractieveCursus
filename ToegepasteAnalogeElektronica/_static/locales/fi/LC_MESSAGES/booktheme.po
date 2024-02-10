@@ -8,62 +8,26 @@ msgstr ""
 "Language: fi\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-msgid "Copyright"
-msgstr "Tekijänoikeus"
-
-msgid "Fullscreen mode"
-msgstr "Koko näytön tila"
-
-msgid "By the"
-msgstr "Mukaan"
-
-msgid "previous page"
-msgstr "Edellinen sivu"
-
-msgid "Download source file"
-msgstr "Lataa lähdetiedosto"
-
-msgid "By"
-msgstr "Tekijä"
-
-msgid "Print to PDF"
-msgstr "Tulosta PDF-tiedostoon"
-
-msgid "open issue"
-msgstr "avoin ongelma"
-
-msgid "Sphinx Book Theme"
-msgstr "Sphinx-kirjan teema"
+msgid "Download notebook file"
+msgstr "Lataa muistikirjatiedosto"
 
 msgid "repository"
 msgstr "arkisto"
 
-msgid "Open an issue"
-msgstr "Avaa ongelma"
+msgid "Last updated on"
+msgstr "Viimeksi päivitetty"
 
-msgid "Theme by the"
-msgstr "Teeman tekijä"
+msgid "previous page"
+msgstr "Edellinen sivu"
 
-msgid "Launch"
-msgstr "Tuoda markkinoille"
-
-msgid "Download notebook file"
-msgstr "Lataa muistikirjatiedosto"
-
-msgid "Edit this page"
-msgstr "Muokkaa tätä sivua"
+msgid "By"
+msgstr "Tekijä"
 
 msgid "next page"
 msgstr "seuraava sivu"
 
-msgid "suggest edit"
-msgstr "ehdottaa muokkausta"
-
-msgid "Last updated on"
-msgstr "Viimeksi päivitetty"
-
-msgid "Contents"
-msgstr "Sisällys"
+msgid "Theme by the"
+msgstr "Teeman tekijä"
 
 msgid "Download this page"
 msgstr "Lataa tämä sivu"
@@ -71,5 +35,41 @@ msgstr "Lataa tämä sivu"
 msgid "Source repository"
 msgstr "Lähteen arkisto"
 
+msgid "Print to PDF"
+msgstr "Tulosta PDF-tiedostoon"
+
+msgid "Download source file"
+msgstr "Lataa lähdetiedosto"
+
+msgid "Sphinx Book Theme"
+msgstr "Sphinx-kirjan teema"
+
+msgid "suggest edit"
+msgstr "ehdottaa muokkausta"
+
+msgid "Edit this page"
+msgstr "Muokkaa tätä sivua"
+
+msgid "Fullscreen mode"
+msgstr "Koko näytön tila"
+
+msgid "Copyright"
+msgstr "Tekijänoikeus"
+
+msgid "Contents"
+msgstr "Sisällys"
+
 msgid "Toggle navigation"
 msgstr "Vaihda navigointia"
+
+msgid "Launch"
+msgstr "Tuoda markkinoille"
+
+msgid "open issue"
+msgstr "avoin ongelma"
+
+msgid "By the"
+msgstr "Mukaan"
+
+msgid "Open an issue"
+msgstr "Avaa ongelma"

@@ -8,62 +8,26 @@ msgstr ""
 "Language: ro\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-msgid "Copyright"
-msgstr "Drepturi de autor"
-
-msgid "Fullscreen mode"
-msgstr "Modul ecran întreg"
-
-msgid "By the"
-msgstr "Langa"
-
-msgid "previous page"
-msgstr "pagina anterioară"
-
-msgid "Download source file"
-msgstr "Descărcați fișierul sursă"
-
-msgid "By"
-msgstr "De"
-
-msgid "Print to PDF"
-msgstr "Imprimați în PDF"
-
-msgid "open issue"
-msgstr "problema deschisă"
-
-msgid "Sphinx Book Theme"
-msgstr "Tema Sphinx Book"
+msgid "Download notebook file"
+msgstr "Descărcați fișierul notebook"
 
 msgid "repository"
 msgstr "repertoriu"
 
-msgid "Open an issue"
-msgstr "Deschideți o problemă"
+msgid "Last updated on"
+msgstr "Ultima actualizare la"
 
-msgid "Theme by the"
-msgstr "Tema de"
+msgid "previous page"
+msgstr "pagina anterioară"
 
-msgid "Launch"
-msgstr "Lansa"
-
-msgid "Download notebook file"
-msgstr "Descărcați fișierul notebook"
-
-msgid "Edit this page"
-msgstr "Editați această pagină"
+msgid "By"
+msgstr "De"
 
 msgid "next page"
 msgstr "pagina următoare"
 
-msgid "suggest edit"
-msgstr "sugerează editare"
-
-msgid "Last updated on"
-msgstr "Ultima actualizare la"
-
-msgid "Contents"
-msgstr "Cuprins"
+msgid "Theme by the"
+msgstr "Tema de"
 
 msgid "Download this page"
 msgstr "Descarcă această pagină"
@@ -71,5 +35,41 @@ msgstr "Descarcă această pagină"
 msgid "Source repository"
 msgstr "Depozit sursă"
 
+msgid "Print to PDF"
+msgstr "Imprimați în PDF"
+
+msgid "Download source file"
+msgstr "Descărcați fișierul sursă"
+
+msgid "Sphinx Book Theme"
+msgstr "Tema Sphinx Book"
+
+msgid "suggest edit"
+msgstr "sugerează editare"
+
+msgid "Edit this page"
+msgstr "Editați această pagină"
+
+msgid "Fullscreen mode"
+msgstr "Modul ecran întreg"
+
+msgid "Copyright"
+msgstr "Drepturi de autor"
+
+msgid "Contents"
+msgstr "Cuprins"
+
 msgid "Toggle navigation"
 msgstr "Comutare navigare"
+
+msgid "Launch"
+msgstr "Lansa"
+
+msgid "open issue"
+msgstr "problema deschisă"
+
+msgid "By the"
+msgstr "Langa"
+
+msgid "Open an issue"
+msgstr "Deschideți o problemă"

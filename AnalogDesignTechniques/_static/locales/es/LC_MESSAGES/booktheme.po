@@ -8,62 +8,26 @@ msgstr ""
 "Language: es\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-msgid "Copyright"
-msgstr "Derechos de autor"
-
-msgid "Fullscreen mode"
-msgstr "Modo de pantalla completa"
-
-msgid "By the"
-msgstr "Por el"
-
-msgid "previous page"
-msgstr "pagina anterior"
-
-msgid "Download source file"
-msgstr "Descargar archivo fuente"
-
-msgid "By"
-msgstr "Por"
-
-msgid "Print to PDF"
-msgstr "Imprimir en PDF"
-
-msgid "open issue"
-msgstr "Tema abierto"
-
-msgid "Sphinx Book Theme"
-msgstr "Tema del libro de la esfinge"
+msgid "Download notebook file"
+msgstr "Descargar archivo de cuaderno"
 
 msgid "repository"
 msgstr "repositorio"
 
-msgid "Open an issue"
-msgstr "Abrir un problema"
+msgid "Last updated on"
+msgstr "Ultima actualización en"
 
-msgid "Theme by the"
-msgstr "Tema por el"
+msgid "previous page"
+msgstr "pagina anterior"
 
-msgid "Launch"
-msgstr "Lanzamiento"
-
-msgid "Download notebook file"
-msgstr "Descargar archivo de cuaderno"
-
-msgid "Edit this page"
-msgstr "Edita esta página"
+msgid "By"
+msgstr "Por"
 
 msgid "next page"
 msgstr "siguiente página"
 
-msgid "suggest edit"
-msgstr "sugerir editar"
-
-msgid "Last updated on"
-msgstr "Ultima actualización en"
-
-msgid "Contents"
-msgstr "Contenido"
+msgid "Theme by the"
+msgstr "Tema por el"
 
 msgid "Download this page"
 msgstr "Descarga esta pagina"
@@ -71,5 +35,41 @@ msgstr "Descarga esta pagina"
 msgid "Source repository"
 msgstr "Repositorio de origen"
 
+msgid "Print to PDF"
+msgstr "Imprimir en PDF"
+
+msgid "Download source file"
+msgstr "Descargar archivo fuente"
+
+msgid "Sphinx Book Theme"
+msgstr "Tema del libro de la esfinge"
+
+msgid "suggest edit"
+msgstr "sugerir editar"
+
+msgid "Edit this page"
+msgstr "Edita esta página"
+
+msgid "Fullscreen mode"
+msgstr "Modo de pantalla completa"
+
+msgid "Copyright"
+msgstr "Derechos de autor"
+
+msgid "Contents"
+msgstr "Contenido"
+
 msgid "Toggle navigation"
 msgstr "Navegación de palanca"
+
+msgid "Launch"
+msgstr "Lanzamiento"
+
+msgid "open issue"
+msgstr "Tema abierto"
+
+msgid "By the"
+msgstr "Por el"
+
+msgid "Open an issue"
+msgstr "Abrir un problema"

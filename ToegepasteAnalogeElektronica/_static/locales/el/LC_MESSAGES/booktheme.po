@@ -8,62 +8,26 @@ msgstr ""
 "Language: el\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-msgid "Copyright"
-msgstr "Πνευματική ιδιοκτησία"
-
-msgid "Fullscreen mode"
-msgstr "ΛΕΙΤΟΥΡΓΙΑ ΠΛΗΡΟΥΣ ΟΘΟΝΗΣ"
-
-msgid "By the"
-msgstr "Από το"
-
-msgid "previous page"
-msgstr "προηγούμενη σελίδα"
-
-msgid "Download source file"
-msgstr "Λήψη αρχείου προέλευσης"
-
-msgid "By"
-msgstr "Με"
-
-msgid "Print to PDF"
-msgstr "Εκτύπωση σε PDF"
-
-msgid "open issue"
-msgstr "ανοιχτό ζήτημα"
-
-msgid "Sphinx Book Theme"
-msgstr "Θέμα βιβλίου Sphinx"
+msgid "Download notebook file"
+msgstr "Λήψη αρχείου σημειωματάριου"
 
 msgid "repository"
 msgstr "αποθήκη"
 
-msgid "Open an issue"
-msgstr "Ανοίξτε ένα ζήτημα"
+msgid "Last updated on"
+msgstr "Τελευταία ενημέρωση στις"
 
-msgid "Theme by the"
-msgstr "Θέμα από το"
+msgid "previous page"
+msgstr "προηγούμενη σελίδα"
 
-msgid "Launch"
-msgstr "Εκτόξευση"
-
-msgid "Download notebook file"
-msgstr "Λήψη αρχείου σημειωματάριου"
-
-msgid "Edit this page"
-msgstr "Επεξεργαστείτε αυτήν τη σελίδα"
+msgid "By"
+msgstr "Με"
 
 msgid "next page"
 msgstr "επόμενη σελίδα"
 
-msgid "suggest edit"
-msgstr "προτείνω επεξεργασία"
-
-msgid "Last updated on"
-msgstr "Τελευταία ενημέρωση στις"
-
-msgid "Contents"
-msgstr "Περιεχόμενα"
+msgid "Theme by the"
+msgstr "Θέμα από το"
 
 msgid "Download this page"
 msgstr "Λήψη αυτής της σελίδας"
@@ -71,5 +35,41 @@ msgstr "Λήψη αυτής της σελίδας"
 msgid "Source repository"
 msgstr "Αποθήκη πηγής"
 
+msgid "Print to PDF"
+msgstr "Εκτύπωση σε PDF"
+
+msgid "Download source file"
+msgstr "Λήψη αρχείου προέλευσης"
+
+msgid "Sphinx Book Theme"
+msgstr "Θέμα βιβλίου Sphinx"
+
+msgid "suggest edit"
+msgstr "προτείνω επεξεργασία"
+
+msgid "Edit this page"
+msgstr "Επεξεργαστείτε αυτήν τη σελίδα"
+
+msgid "Fullscreen mode"
+msgstr "ΛΕΙΤΟΥΡΓΙΑ ΠΛΗΡΟΥΣ ΟΘΟΝΗΣ"
+
+msgid "Copyright"
+msgstr "Πνευματική ιδιοκτησία"
+
+msgid "Contents"
+msgstr "Περιεχόμενα"
+
 msgid "Toggle navigation"
 msgstr "Εναλλαγή πλοήγησης"
+
+msgid "Launch"
+msgstr "Εκτόξευση"
+
+msgid "open issue"
+msgstr "ανοιχτό ζήτημα"
+
+msgid "By the"
+msgstr "Από το"
+
+msgid "Open an issue"
+msgstr "Ανοίξτε ένα ζήτημα"

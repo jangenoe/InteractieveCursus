@@ -8,62 +8,26 @@ msgstr ""
 "Language: tr\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-msgid "Copyright"
-msgstr "Telif hakkı"
-
-msgid "Fullscreen mode"
-msgstr "Tam ekran modu"
-
-msgid "By the"
-msgstr "Tarafından"
-
-msgid "previous page"
-msgstr "önceki sayfa"
-
-msgid "Download source file"
-msgstr "Kaynak dosyayı indirin"
-
-msgid "By"
-msgstr "Tarafından"
-
-msgid "Print to PDF"
-msgstr "PDF olarak yazdır"
-
-msgid "open issue"
-msgstr "Açık konu"
-
-msgid "Sphinx Book Theme"
-msgstr "Sfenks Kitap Teması"
+msgid "Download notebook file"
+msgstr "Defter dosyasını indirin"
 
 msgid "repository"
 msgstr "depo"
 
-msgid "Open an issue"
-msgstr "Bir sorunu açın"
+msgid "Last updated on"
+msgstr "Son güncelleme tarihi"
 
-msgid "Theme by the"
-msgstr "Tarafından tema"
+msgid "previous page"
+msgstr "önceki sayfa"
 
-msgid "Launch"
-msgstr "Başlatmak"
-
-msgid "Download notebook file"
-msgstr "Defter dosyasını indirin"
-
-msgid "Edit this page"
-msgstr "Bu sayfayı düzenle"
+msgid "By"
+msgstr "Tarafından"
 
 msgid "next page"
 msgstr "sonraki Sayfa"
 
-msgid "suggest edit"
-msgstr "düzenleme öner"
-
-msgid "Last updated on"
-msgstr "Son güncelleme tarihi"
-
-msgid "Contents"
-msgstr "İçindekiler"
+msgid "Theme by the"
+msgstr "Tarafından tema"
 
 msgid "Download this page"
 msgstr "Bu sayfayı indirin"
@@ -71,5 +35,41 @@ msgstr "Bu sayfayı indirin"
 msgid "Source repository"
 msgstr "Kaynak kod deposu"
 
+msgid "Print to PDF"
+msgstr "PDF olarak yazdır"
+
+msgid "Download source file"
+msgstr "Kaynak dosyayı indirin"
+
+msgid "Sphinx Book Theme"
+msgstr "Sfenks Kitap Teması"
+
+msgid "suggest edit"
+msgstr "düzenleme öner"
+
+msgid "Edit this page"
+msgstr "Bu sayfayı düzenle"
+
+msgid "Fullscreen mode"
+msgstr "Tam ekran modu"
+
+msgid "Copyright"
+msgstr "Telif hakkı"
+
+msgid "Contents"
+msgstr "İçindekiler"
+
 msgid "Toggle navigation"
 msgstr "Gezinmeyi değiştir"
+
+msgid "Launch"
+msgstr "Başlatmak"
+
+msgid "open issue"
+msgstr "Açık konu"
+
+msgid "By the"
+msgstr "Tarafından"
+
+msgid "Open an issue"
+msgstr "Bir sorunu açın"

@@ -8,62 +8,26 @@ msgstr ""
 "Language: da\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-msgid "Copyright"
-msgstr "ophavsret"
-
-msgid "Fullscreen mode"
-msgstr "Fuldskærmstilstand"
-
-msgid "By the"
-msgstr "Ved"
-
-msgid "previous page"
-msgstr "forrige side"
-
-msgid "Download source file"
-msgstr "Download kildefil"
-
-msgid "By"
-msgstr "Ved"
-
-msgid "Print to PDF"
-msgstr "Udskriv til PDF"
-
-msgid "open issue"
-msgstr "åbent nummer"
-
-msgid "Sphinx Book Theme"
-msgstr "Sphinx bogtema"
+msgid "Download notebook file"
+msgstr "Download notesbog-fil"
 
 msgid "repository"
 msgstr "lager"
 
-msgid "Open an issue"
-msgstr "Åbn et problem"
+msgid "Last updated on"
+msgstr "Sidst opdateret den"
 
-msgid "Theme by the"
-msgstr "Tema af"
+msgid "previous page"
+msgstr "forrige side"
 
-msgid "Launch"
-msgstr "Start"
-
-msgid "Download notebook file"
-msgstr "Download notesbog-fil"
-
-msgid "Edit this page"
-msgstr "Rediger denne side"
+msgid "By"
+msgstr "Ved"
 
 msgid "next page"
 msgstr "Næste side"
 
-msgid "suggest edit"
-msgstr "foreslå redigering"
-
-msgid "Last updated on"
-msgstr "Sidst opdateret den"
-
-msgid "Contents"
-msgstr "Indhold"
+msgid "Theme by the"
+msgstr "Tema af"
 
 msgid "Download this page"
 msgstr "Download denne side"
@@ -71,5 +35,41 @@ msgstr "Download denne side"
 msgid "Source repository"
 msgstr "Kildelager"
 
+msgid "Print to PDF"
+msgstr "Udskriv til PDF"
+
+msgid "Download source file"
+msgstr "Download kildefil"
+
+msgid "Sphinx Book Theme"
+msgstr "Sphinx bogtema"
+
+msgid "suggest edit"
+msgstr "foreslå redigering"
+
+msgid "Edit this page"
+msgstr "Rediger denne side"
+
+msgid "Fullscreen mode"
+msgstr "Fuldskærmstilstand"
+
+msgid "Copyright"
+msgstr "ophavsret"
+
+msgid "Contents"
+msgstr "Indhold"
+
 msgid "Toggle navigation"
 msgstr "Skift navigation"
+
+msgid "Launch"
+msgstr "Start"
+
+msgid "open issue"
+msgstr "åbent nummer"
+
+msgid "By the"
+msgstr "Ved"
+
+msgid "Open an issue"
+msgstr "Åbn et problem"

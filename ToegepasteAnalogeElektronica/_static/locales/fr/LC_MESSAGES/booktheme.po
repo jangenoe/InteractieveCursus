@@ -8,62 +8,26 @@ msgstr ""
 "Language: fr\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-msgid "Copyright"
-msgstr "droits d'auteur"
-
-msgid "Fullscreen mode"
-msgstr "Mode plein écran"
-
-msgid "By the"
-msgstr "Par le"
-
-msgid "previous page"
-msgstr "page précédente"
-
-msgid "Download source file"
-msgstr "Télécharger le fichier source"
-
-msgid "By"
-msgstr "Par"
-
-msgid "Print to PDF"
-msgstr "Imprimer au format PDF"
-
-msgid "open issue"
-msgstr "signaler un problème"
-
-msgid "Sphinx Book Theme"
-msgstr "Thème du livre Sphinx"
+msgid "Download notebook file"
+msgstr "Télécharger le fichier notebook"
 
 msgid "repository"
 msgstr "dépôt"
 
-msgid "Open an issue"
-msgstr "Ouvrez un problème"
+msgid "Last updated on"
+msgstr "Dernière mise à jour le"
 
-msgid "Theme by the"
-msgstr "Thème par le"
+msgid "previous page"
+msgstr "page précédente"
 
-msgid "Launch"
-msgstr "lancement"
-
-msgid "Download notebook file"
-msgstr "Télécharger le fichier notebook"
-
-msgid "Edit this page"
-msgstr "Modifier cette page"
+msgid "By"
+msgstr "Par"
 
 msgid "next page"
 msgstr "page suivante"
 
-msgid "suggest edit"
-msgstr "suggestion de modification"
-
-msgid "Last updated on"
-msgstr "Dernière mise à jour le"
-
-msgid "Contents"
-msgstr "Contenu"
+msgid "Theme by the"
+msgstr "Thème par le"
 
 msgid "Download this page"
 msgstr "Téléchargez cette page"
@@ -71,5 +35,41 @@ msgstr "Téléchargez cette page"
 msgid "Source repository"
 msgstr "Dépôt source"
 
+msgid "Print to PDF"
+msgstr "Imprimer au format PDF"
+
+msgid "Download source file"
+msgstr "Télécharger le fichier source"
+
+msgid "Sphinx Book Theme"
+msgstr "Thème du livre Sphinx"
+
+msgid "suggest edit"
+msgstr "suggestion de modification"
+
+msgid "Edit this page"
+msgstr "Modifier cette page"
+
+msgid "Fullscreen mode"
+msgstr "Mode plein écran"
+
+msgid "Copyright"
+msgstr "droits d'auteur"
+
+msgid "Contents"
+msgstr "Contenu"
+
 msgid "Toggle navigation"
 msgstr "Basculer la navigation"
+
+msgid "Launch"
+msgstr "lancement"
+
+msgid "open issue"
+msgstr "signaler un problème"
+
+msgid "By the"
+msgstr "Par le"
+
+msgid "Open an issue"
+msgstr "Ouvrez un problème"
