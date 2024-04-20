@@ -1,5 +1,4 @@
 .ipynb_checkpoints/
-GitStatus.md
 *.log
 _build
 .DS_Store
@@ -9,4 +8,4 @@ src/_build/.jupyter_cache
 src/_build/jupyter_execute
 desktop.ini
 __pycache__
-*.mp4
+**/*Zone.Identifier
