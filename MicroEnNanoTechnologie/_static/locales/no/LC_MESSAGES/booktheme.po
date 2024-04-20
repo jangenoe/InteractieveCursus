@@ -8,68 +8,68 @@ msgstr ""
 "Language: no\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
+msgid "By the"
+msgstr "Ved"
+
 msgid "Download notebook file"
 msgstr "Last ned notatbokfilen"
-
-msgid "repository"
-msgstr "oppbevaringssted"
-
-msgid "Last updated on"
-msgstr "Sist oppdatert den"
-
-msgid "previous page"
-msgstr "forrige side"
 
 msgid "By"
 msgstr "Av"
 
-msgid "next page"
-msgstr "neste side"
+msgid "suggest edit"
+msgstr "foreslå redigering"
 
 msgid "Theme by the"
 msgstr "Tema av"
 
-msgid "Download this page"
-msgstr "Last ned denne siden"
-
-msgid "Source repository"
-msgstr "Kildedepot"
-
-msgid "Print to PDF"
-msgstr "Skriv ut til PDF"
-
-msgid "Download source file"
-msgstr "Last ned kildefilen"
-
-msgid "Sphinx Book Theme"
-msgstr "Sphinx boktema"
-
-msgid "suggest edit"
-msgstr "foreslå redigering"
-
-msgid "Edit this page"
-msgstr "Rediger denne siden"
-
-msgid "Fullscreen mode"
-msgstr "Fullskjerm-modus"
+msgid "previous page"
+msgstr "forrige side"
 
 msgid "Copyright"
 msgstr "opphavsrett"
 
-msgid "Contents"
-msgstr "Innhold"
-
 msgid "Toggle navigation"
 msgstr "Bytt navigasjon"
+
+msgid "Last updated on"
+msgstr "Sist oppdatert den"
+
+msgid "Sphinx Book Theme"
+msgstr "Sphinx boktema"
+
+msgid "Contents"
+msgstr "Innhold"
 
 msgid "Launch"
 msgstr "Start"
 
+msgid "Download this page"
+msgstr "Last ned denne siden"
+
 msgid "open issue"
 msgstr "åpent nummer"
 
-msgid "By the"
-msgstr "Ved"
+msgid "Source repository"
+msgstr "Kildedepot"
+
+msgid "next page"
+msgstr "neste side"
 
 msgid "Open an issue"
 msgstr "Åpne et problem"
+
+msgid "repository"
+msgstr "oppbevaringssted"
+
+msgid "Download source file"
+msgstr "Last ned kildefilen"
+
+msgid "Fullscreen mode"
+msgstr "Fullskjerm-modus"
+
+msgid "Print to PDF"
+msgstr "Skriv ut til PDF"
+
+msgid "Edit this page"
+msgstr "Rediger denne siden"

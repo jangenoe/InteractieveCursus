@@ -8,68 +8,68 @@ msgstr ""
 "Language: da\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
+msgid "By the"
+msgstr "Ved"
+
 msgid "Download notebook file"
 msgstr "Download notesbog-fil"
-
-msgid "repository"
-msgstr "lager"
-
-msgid "Last updated on"
-msgstr "Sidst opdateret den"
-
-msgid "previous page"
-msgstr "forrige side"
 
 msgid "By"
 msgstr "Ved"
 
-msgid "next page"
-msgstr "Næste side"
+msgid "suggest edit"
+msgstr "foreslå redigering"
 
 msgid "Theme by the"
 msgstr "Tema af"
 
-msgid "Download this page"
-msgstr "Download denne side"
-
-msgid "Source repository"
-msgstr "Kildelager"
-
-msgid "Print to PDF"
-msgstr "Udskriv til PDF"
-
-msgid "Download source file"
-msgstr "Download kildefil"
-
-msgid "Sphinx Book Theme"
-msgstr "Sphinx bogtema"
-
-msgid "suggest edit"
-msgstr "foreslå redigering"
-
-msgid "Edit this page"
-msgstr "Rediger denne side"
-
-msgid "Fullscreen mode"
-msgstr "Fuldskærmstilstand"
+msgid "previous page"
+msgstr "forrige side"
 
 msgid "Copyright"
 msgstr "ophavsret"
 
-msgid "Contents"
-msgstr "Indhold"
-
 msgid "Toggle navigation"
 msgstr "Skift navigation"
+
+msgid "Last updated on"
+msgstr "Sidst opdateret den"
+
+msgid "Sphinx Book Theme"
+msgstr "Sphinx bogtema"
+
+msgid "Contents"
+msgstr "Indhold"
 
 msgid "Launch"
 msgstr "Start"
 
+msgid "Download this page"
+msgstr "Download denne side"
+
 msgid "open issue"
 msgstr "åbent nummer"
 
-msgid "By the"
-msgstr "Ved"
+msgid "Source repository"
+msgstr "Kildelager"
+
+msgid "next page"
+msgstr "Næste side"
 
 msgid "Open an issue"
 msgstr "Åbn et problem"
+
+msgid "repository"
+msgstr "lager"
+
+msgid "Download source file"
+msgstr "Download kildefil"
+
+msgid "Fullscreen mode"
+msgstr "Fuldskærmstilstand"
+
+msgid "Print to PDF"
+msgstr "Udskriv til PDF"
+
+msgid "Edit this page"
+msgstr "Rediger denne side"

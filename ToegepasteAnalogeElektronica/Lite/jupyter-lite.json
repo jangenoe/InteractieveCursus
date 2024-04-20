@@ -2,7 +2,7 @@
   "jupyter-config-data": {
     "appName": "KULeuven Cursus",
     "appUrl": "./lab",
-    "appVersion": "0.2.3",
+    "appVersion": "0.3.0",
     "baseUrl": "./",
     "defaultKernelName": "python",
     "disabledExtensions": [],
@@ -52,20 +52,14 @@
       },
       {
         "extension": "./extension",
-        "liteExtension": true,
-        "load": "static/remoteEntry.71d01fef2fffac9d2c04.js",
-        "name": "@jupyterlite/javascript-kernel-extension"
-      },
-      {
-        "extension": "./extension",
         "liteExtension": false,
-        "load": "static/remoteEntry.2245c790a510bf1865ea.js",
+        "load": "static/remoteEntry.a0518cb14ef99e994963.js",
         "name": "jupyter-matplotlib"
       },
       {
         "extension": "./extension",
         "liteExtension": false,
-        "load": "static/remoteEntry.c06ae9697719c2a3352e.js",
+        "load": "static/remoteEntry.f1ccb32641d0d3a998a6.js",
         "name": "jupyterlab-myst",
         "style": "./style"
       },

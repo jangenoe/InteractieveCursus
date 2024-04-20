@@ -8,44 +8,23 @@ msgstr ""
 "Language: ca\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
+msgid "By the"
+msgstr "Per la"
+
 msgid "Download notebook file"
 msgstr "Descarregar fitxer de quadern"
-
-msgid "Last updated on"
-msgstr "Darrera actualització el"
-
-msgid "previous page"
-msgstr "Pàgina anterior"
 
 msgid "By"
 msgstr "Per"
 
-msgid "next page"
-msgstr "pàgina següent"
+msgid "suggest edit"
+msgstr "suggerir edició"
 
 msgid "Theme by the"
 msgstr "Tema del"
 
-msgid "Download this page"
-msgstr "Descarregueu aquesta pàgina"
-
-msgid "Source repository"
-msgstr "Dipòsit de fonts"
-
-msgid "Print to PDF"
-msgstr "Imprimeix a PDF"
-
-msgid "Download source file"
-msgstr "Baixeu el fitxer font"
-
-msgid "Sphinx Book Theme"
-msgstr "Tema del llibre Esfinx"
-
-msgid "suggest edit"
-msgstr "suggerir edició"
-
-msgid "Edit this page"
-msgstr "Editeu aquesta pàgina"
+msgid "previous page"
+msgstr "Pàgina anterior"
 
 msgid "Copyright"
 msgstr "Copyright"
@@ -53,14 +32,35 @@ msgstr "Copyright"
 msgid "Toggle navigation"
 msgstr "Commuta la navegació"
 
+msgid "Last updated on"
+msgstr "Darrera actualització el"
+
+msgid "Sphinx Book Theme"
+msgstr "Tema del llibre Esfinx"
+
 msgid "Launch"
 msgstr "Llançament"
+
+msgid "Download this page"
+msgstr "Descarregueu aquesta pàgina"
 
 msgid "open issue"
 msgstr "número obert"
 
-msgid "By the"
-msgstr "Per la"
+msgid "Source repository"
+msgstr "Dipòsit de fonts"
+
+msgid "next page"
+msgstr "pàgina següent"
 
 msgid "Open an issue"
 msgstr "Obriu un número"
+
+msgid "Download source file"
+msgstr "Baixeu el fitxer font"
+
+msgid "Print to PDF"
+msgstr "Imprimeix a PDF"
+
+msgid "Edit this page"
+msgstr "Editeu aquesta pàgina"
