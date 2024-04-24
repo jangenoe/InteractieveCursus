@@ -59,7 +59,7 @@
       {
         "extension": "./extension",
         "liteExtension": false,
-        "load": "static/remoteEntry.f1ccb32641d0d3a998a6.js",
+        "load": "static/remoteEntry.6e5b4293f31361324af2.js",
         "name": "jupyterlab-myst",
         "style": "./style"
       },

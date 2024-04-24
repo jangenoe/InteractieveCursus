@@ -50,25 +50,25 @@
     },
     {
       "name": "@myst-theme/common",
-      "versionInfo": "0.5.22",
+      "versionInfo": "0.9.0",
       "licenseId": "MIT",
       "extractedText": ""
     },
     {
       "name": "@myst-theme/diagrams",
-      "versionInfo": "0.5.22",
+      "versionInfo": "0.9.0",
       "licenseId": "MIT",
       "extractedText": ""
     },
     {
       "name": "@myst-theme/frontmatter",
-      "versionInfo": "0.5.22",
+      "versionInfo": "0.9.0",
       "licenseId": "MIT",
       "extractedText": ""
     },
     {
       "name": "@myst-theme/providers",
-      "versionInfo": "0.5.22",
+      "versionInfo": "0.9.0",
       "licenseId": "MIT",
       "extractedText": ""
     },
@@ -275,6 +275,12 @@
       "versionInfo": "1.4.1",
       "licenseId": "MIT",
       "extractedText": "Copyright (c) 2013 Dulin Marat\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in\nall copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN\nTHE SOFTWARE."
+    },
+    {
+      "name": "csv-parse",
+      "versionInfo": "5.5.5",
+      "licenseId": "MIT",
+      "extractedText": "The MIT License (MIT)\n\nCopyright (c) 2010 Adaltas\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n"
     },
     {
       "name": "cytoscape",
@@ -674,7 +680,7 @@
     },
     {
       "name": "markdown-it-myst",
-      "versionInfo": "1.0.5",
+      "versionInfo": "1.0.7",
       "licenseId": "MIT",
       "extractedText": ""
     },
@@ -746,85 +752,85 @@
     },
     {
       "name": "myst-common",
-      "versionInfo": "1.1.24",
+      "versionInfo": "1.3.0",
       "licenseId": "MIT",
       "extractedText": ""
     },
     {
       "name": "myst-directives",
-      "versionInfo": "1.0.22",
+      "versionInfo": "1.4.2",
       "licenseId": "MIT",
       "extractedText": ""
     },
     {
       "name": "myst-ext-card",
-      "versionInfo": "1.0.5",
+      "versionInfo": "1.0.6",
       "licenseId": "MIT",
       "extractedText": ""
     },
     {
       "name": "myst-ext-exercise",
-      "versionInfo": "1.0.5",
+      "versionInfo": "1.0.6",
       "licenseId": "MIT",
       "extractedText": ""
     },
     {
       "name": "myst-ext-grid",
-      "versionInfo": "1.0.5",
+      "versionInfo": "1.0.6",
       "licenseId": "MIT",
       "extractedText": ""
     },
     {
       "name": "myst-ext-proof",
-      "versionInfo": "1.0.8",
+      "versionInfo": "1.0.9",
       "licenseId": "MIT",
       "extractedText": ""
     },
     {
       "name": "myst-ext-tabs",
-      "versionInfo": "1.0.5",
+      "versionInfo": "1.0.6",
       "licenseId": "MIT",
       "extractedText": ""
     },
     {
       "name": "myst-frontmatter",
-      "versionInfo": "1.1.24",
+      "versionInfo": "1.3.0",
       "licenseId": "MIT",
       "extractedText": ""
     },
     {
       "name": "myst-parser",
-      "versionInfo": "1.0.22",
+      "versionInfo": "1.4.2",
       "licenseId": "MIT",
       "extractedText": ""
     },
     {
       "name": "myst-roles",
-      "versionInfo": "1.0.22",
+      "versionInfo": "1.4.2",
       "licenseId": "MIT",
       "extractedText": ""
     },
     {
       "name": "myst-spec-ext",
-      "versionInfo": "1.1.24",
+      "versionInfo": "1.3.0",
       "licenseId": "MIT",
       "extractedText": ""
     },
     {
       "name": "myst-to-html",
-      "versionInfo": "1.0.22",
+      "versionInfo": "1.4.2",
       "licenseId": "MIT",
       "extractedText": ""
     },
     {
       "name": "myst-to-react",
-      "versionInfo": "0.5.21",
+      "versionInfo": "0.9.0",
       "licenseId": "MIT",
       "extractedText": ""
     },
     {
       "name": "myst-transforms",
-      "versionInfo": "1.2.1",
+      "versionInfo": "1.3.9",
       "licenseId": "MIT",
       "extractedText": ""
     },
