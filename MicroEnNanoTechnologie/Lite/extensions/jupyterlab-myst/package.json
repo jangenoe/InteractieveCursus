@@ -1,6 +1,6 @@
 {
   "name": "jupyterlab-myst",
-  "version": "2.4.0",
+  "version": "2.4.2",
   "description": "Use MyST in JupyterLab",
   "keywords": [
     "jupyter",
@@ -130,7 +130,7 @@
     "extension": true,
     "outputDir": "jupyterlab_myst/labextension",
     "_build": {
-      "load": "static/remoteEntry.6e5b4293f31361324af2.js",
+      "load": "static/remoteEntry.37de765466b6d480035c.js",
       "extension": "./extension",
       "style": "./style"
     }
