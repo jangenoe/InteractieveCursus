@@ -21,16 +21,16 @@ jobs:
         sudo apt-get install texlive-xetex texlive-latex-recommended texlive-fonts-recommended texlive-fonts-extra texlive-latex-extra latexmk imagemagick
     - name: Build the Jupyterbook websites
       run: |
-        python common/prepareBook.py
+        python .github/common/prepareBook.py
         jb build CursusIndex/
         jb build ToegepasteAnalogeElektronica/
         jb build AnalogeElektronica2/
         jb build AnalogDesignTechniques/ 
         jb build MicroEnNanoTechnologie/ 
-        python common/recoverBook.py
+        python .github/common/recoverBook.py
     - name: Build the Jupyterbook pdfs
       run: |
-        python common/preparePDF.py
+        python .github/common/preparePDF.py
         mv ToegepasteAnalogeElektronica/_toc.yml ToegepasteAnalogeElektronica/_tochtml.yml
         mv ToegepasteAnalogeElektronica/_tocpdf.yml ToegepasteAnalogeElektronica/_toc.yml
         jb build  ToegepasteAnalogeElektronica/  --builder pdflatex
@@ -47,7 +47,7 @@ jobs:
         mv AnalogDesignTechniques/_build/latex/python.pdf AnalogDesignTechniques/_build/html/AnalogDesignTechniques.pdf
         jb build MicroEnNanoTechnologie/ --builder pdflatex
         mv MicroEnNanoTechnologie/_build/latex/python.pdf MicroEnNanoTechnologie/_build/html/MicroEnNanoTechnologie.pdf
-        python common/recoverPDF.py
+        python .github/common/recoverPDF.py
     - name: Build the Reveal slides
       run: |     
         jupyter nbconvert ToegepasteAnalogeElektronica/*.ipynb --to KULeuven  --no-prompt --no-input --output-dir=ToegepasteAnalogeElektronica/_build/html/slides
@@ -63,10 +63,10 @@ jobs:
         pip install -r .github/requirements-Lite.txt
     - name: Copy common files
       run: |
-        cp common/cursusdef_ToegepasteAnalogeElektronica_Lite.py ToegepasteAnalogeElektronica/cursusdef.py
-        cp common/cursusdef_AnalogeElektronica2_Lite.py AnalogeElektronica2/cursusdef.py
-        cp common/cursusdef_AnalogDesignTechniques_Lite.py AnalogDesignTechniques/cursusdef.py
-        # cp common/cursusdef_MicroEnNanoTechnologie_Lite.py MicroEnNanoTechnologie/cursusdef.py
+        cp .github/common/cursusdef_ToegepasteAnalogeElektronica_Lite.py ToegepasteAnalogeElektronica/cursusdef.py
+        cp .github/common/cursusdef_AnalogeElektronica2_Lite.py AnalogeElektronica2/cursusdef.py
+        cp .github/common/cursusdef_AnalogDesignTechniques_Lite.py AnalogDesignTechniques/cursusdef.py
+        # cp .github/common/cursusdef_MicroEnNanoTechnologie_Lite.py MicroEnNanoTechnologie/cursusdef.py
     - name: Build the JupyterLite site
       run: |
         jupyter lite build --lite-dir Lite --contents ToegepasteAnalogeElektronica --output-dir ToegepasteAnalogeElektronica/_build/html/Lite/
@@ -74,7 +74,7 @@ jobs:
         jupyter lite build --lite-dir Lite --contents AnalogDesignTechniques --output-dir AnalogDesignTechniques/_build/html/Lite/
         jupyter lite build --lite-dir Lite --contents MicroEnNanoTechnologie --output-dir MicroEnNanoTechnologie/_build/html/Lite/
     - name: convert to deck
-      run: python common/convert-to-deck.py
+      run: python .github/common/convert-to-deck.py
       shell: sh
     - name: Build the JupyterLite deck site
       run: |
