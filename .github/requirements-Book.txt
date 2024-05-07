@@ -1,4 +1,4 @@
-jinja2==3.1.3
+jinja2==3.1.4
 git+https://github.com/jangenoe/sphinx-book-theme#egg=sphinx-book-theme
 jupyter-KULeuven-slides
 jupyter-book>=0.15
