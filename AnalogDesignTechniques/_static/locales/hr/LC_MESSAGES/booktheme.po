@@ -8,68 +8,68 @@ msgstr ""
 "Language: hr\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-msgid "By the"
-msgstr "Od strane"
-
-msgid "Download notebook file"
-msgstr "Preuzmi datoteku bilježnice"
-
 msgid "By"
 msgstr "Po"
 
-msgid "suggest edit"
-msgstr "predloži uređivanje"
-
-msgid "Theme by the"
-msgstr "Tema autora"
-
-msgid "previous page"
-msgstr "Prethodna stranica"
-
-msgid "Copyright"
-msgstr "Autorska prava"
-
-msgid "Toggle navigation"
-msgstr "Uključi / isključi navigaciju"
+msgid "By the"
+msgstr "Od strane"
 
 msgid "Last updated on"
 msgstr "Posljednje ažuriranje:"
 
-msgid "Sphinx Book Theme"
-msgstr "Tema knjige Sphinx"
+msgid "next page"
+msgstr "sljedeća stranica"
+
+msgid "Download notebook file"
+msgstr "Preuzmi datoteku bilježnice"
+
+msgid "previous page"
+msgstr "Prethodna stranica"
+
+msgid "Toggle navigation"
+msgstr "Uključi / isključi navigaciju"
 
 msgid "Contents"
 msgstr "Sadržaj"
 
-msgid "Launch"
-msgstr "Pokrenite"
-
-msgid "Download this page"
-msgstr "Preuzmite ovu stranicu"
-
-msgid "open issue"
-msgstr "otvoreno izdanje"
+msgid "suggest edit"
+msgstr "predloži uređivanje"
 
 msgid "Source repository"
 msgstr "Izvorno spremište"
 
-msgid "next page"
-msgstr "sljedeća stranica"
+msgid "Print to PDF"
+msgstr "Ispis u PDF"
 
-msgid "Open an issue"
-msgstr "Otvorite izdanje"
+msgid "open issue"
+msgstr "otvoreno izdanje"
+
+msgid "Theme by the"
+msgstr "Tema autora"
 
 msgid "repository"
 msgstr "spremište"
 
-msgid "Download source file"
-msgstr "Preuzmi izvornu datoteku"
+msgid "Launch"
+msgstr "Pokrenite"
+
+msgid "Open an issue"
+msgstr "Otvorite izdanje"
+
+msgid "Sphinx Book Theme"
+msgstr "Tema knjige Sphinx"
+
+msgid "Copyright"
+msgstr "Autorska prava"
 
 msgid "Fullscreen mode"
 msgstr "Način preko cijelog zaslona"
 
-msgid "Print to PDF"
-msgstr "Ispis u PDF"
+msgid "Download this page"
+msgstr "Preuzmite ovu stranicu"
 
 msgid "Edit this page"
 msgstr "Uredite ovu stranicu"
+
+msgid "Download source file"
+msgstr "Preuzmi izvornu datoteku"
