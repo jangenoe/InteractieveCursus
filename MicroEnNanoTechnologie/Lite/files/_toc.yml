@@ -4,6 +4,8 @@ parts:
 - caption: Technologie
   chapters:
     - file: Semiconductor industry
+    - file: Technology nodes
+    - file: PCB
 - caption: References
   chapters:
   - file: References

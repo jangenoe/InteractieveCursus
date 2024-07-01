@@ -1,0 +1,29 @@
+{
+  "content": [
+    {
+      "content": null,
+      "created": "2024-07-01T23:00:19.155992Z",
+      "format": null,
+      "hash": null,
+      "hash_algorithm": null,
+      "last_modified": "2024-07-01T22:55:09.964811Z",
+      "mimetype": "text/markdown",
+      "name": "bronnen.md",
+      "path": "videos/bronnen.md",
+      "size": 101,
+      "type": "file",
+      "writable": true
+    }
+  ],
+  "created": "2024-07-01T23:00:19.155992Z",
+  "format": "json",
+  "hash": null,
+  "hash_algorithm": null,
+  "last_modified": "2024-07-01T23:00:19.155992Z",
+  "mimetype": null,
+  "name": "videos",
+  "path": "videos",
+  "size": null,
+  "type": "directory",
+  "writable": true
+}
