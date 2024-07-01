@@ -1,0 +1,1 @@
+https://www.linkedin.com/posts/lisa-wang-380924209_soldering-smd-smt-ugcPost-7211262102416605185-zOjT
