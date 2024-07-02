@@ -515,6 +515,7 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#de-stempel-van-een-weerstand-in-een-mna-matrix">De stempel van een weerstand in een MNA matrix</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#de-stempel-van-een-condensator-in-een-mna-matrix">De stempel van een condensator in een MNA matrix</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#de-stempel-van-een-spoel-in-een-mna-matrix">De stempel van een spoel in een MNA matrix</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#de-stempel-van-een-transconductantie-in-een-mna-matrix">De stempel van een transconductantie in een MNA matrix</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#de-stempel-van-een-transformator-in-een-mna-matrix">De stempel van een transformator in een MNA matrix</a></li>
 </ul>
 </li>
@@ -591,15 +592,49 @@ document.write(`
 \end{bmatrix}  \begin{bmatrix} \vdots\\ V_i\\ \vdots \\ V_j\\ \vdots
 \end{bmatrix} =\begin{bmatrix} \vdots\\  0 \\ \vdots \\ 0  \\ \vdots \end{bmatrix}\)</span></p>
 </section>
+<section id="de-stempel-van-een-transconductantie-in-een-mna-matrix">
+<h3>De stempel van een transconductantie in een MNA matrix<a class="headerlink" href="#de-stempel-van-een-transconductantie-in-een-mna-matrix" title="Link to this heading">#</a></h3>
+<p>Bij een transconductantie wordt de waarde van de stroom van de knoop <span class="math notranslate nohighlight">\(k\)</span> naar de knoop <span class="math notranslate nohighlight">\(l\)</span> bepaalt door de spanning tussen de knoop <span class="math notranslate nohighlight">\(i\)</span> en de knoop <span class="math notranslate nohighlight">\(j\)</span>, aan de hand van de vergelijking</p>
+<p><span class="math notranslate nohighlight">\( I_{kl}= g_m (V_i-V_j) \)</span>,</p>
+<p>waarbij <span class="math notranslate nohighlight">\(g_m\)</span> de waarde van de transconductantie is. In matrix notatie wordt dat:</p>
+<p><span class="math notranslate nohighlight">\(\begin{bmatrix}\vdots &amp;  &amp; \vdots &amp;   &amp; \vdots &amp; &amp; \vdots &amp;   &amp; \vdots \\
+\dots &amp;  &amp; \dots &amp;   &amp; \dots &amp;  &amp; \dots &amp;   &amp; \dots\\
+\vdots &amp;  &amp; \vdots &amp;   &amp; \vdots &amp; &amp; \vdots &amp;   &amp; \vdots\\
+\dots &amp;  &amp; \dots &amp;   &amp; \dots &amp;  &amp; \dots &amp;   &amp; \dots\\
+\vdots &amp;  &amp; \vdots &amp;   &amp; \vdots &amp; &amp; \vdots &amp;   &amp; \vdots\\
+\dots &amp; g_m  &amp; \dots &amp; -g_m &amp; \dots &amp;  &amp; \dots &amp;   &amp; \dots\\
+\vdots &amp;  &amp; \vdots &amp;   &amp; \vdots &amp; &amp; \vdots &amp;   &amp; \vdots\\
+\dots &amp; -g_m &amp; \dots &amp; g_m  &amp; \dots &amp;  &amp; \dots &amp;   &amp; \dots\\ 
+\vdots &amp;  &amp; \vdots &amp;  &amp; \vdots &amp; &amp; \vdots &amp;   &amp; \vdots
+\end{bmatrix}  \begin{bmatrix} \vdots\\ V_i\\ \vdots \\ V_j\\ \vdots\\ V_k\\ \vdots \\ V_l\\ \vdots
+\end{bmatrix} =\begin{bmatrix} \vdots\\  0 \\ \vdots \\ 0  \\ \vdots\\  0 \\ \vdots \\ 0  \\ \vdots \end{bmatrix}\)</span></p>
+<p>We merken hierin op dat deze matrix nu niet langer symmetrisch is.</p>
+<p>In het geval van een MOS transistor zullen we de transcondutantie gebruiken om de <span class="math notranslate nohighlight">\(I_{DS}\)</span> in de simulator in te brengen. In dit geval is de knoop <span class="math notranslate nohighlight">\(j\)</span> en <span class="math notranslate nohighlight">\(l\)</span> dezelfde knoop en komen we tot de vergelijking</p>
+<p><span class="math notranslate nohighlight">\( I_{DS}= g_m (V_G-V_S) \)</span>.</p>
+<p>In matrix notatie wordt dat:</p>
+<p><span class="math notranslate nohighlight">\(\begin{bmatrix}\vdots &amp;  &amp; \vdots &amp;   &amp; \vdots &amp; &amp; \vdots \\
+\dots &amp;  &amp; \dots &amp;   &amp; \dots &amp;  &amp; \dots \\
+\vdots &amp;  &amp; \vdots &amp;   &amp; \vdots &amp; &amp; \vdots \\
+\dots &amp; g_m  &amp; \dots &amp;  &amp; \dots &amp; -g_m &amp; \dots \\
+\vdots &amp;  &amp; \vdots &amp;   &amp; \vdots &amp; &amp; \vdots \\
+\dots &amp; -g_m &amp; \dots &amp;  &amp; \dots &amp; g_m &amp; \dots \\ 
+\vdots &amp;  &amp; \vdots &amp;  &amp; \vdots &amp; &amp; \vdots 
+\end{bmatrix}  \begin{bmatrix} \vdots\\ V_G\\ \vdots \\  V_D\\ \vdots \\ V_S\\ \vdots
+\end{bmatrix} =\begin{bmatrix} \vdots\\  0 \\ \vdots \\   0 \\ \vdots \\ 0  \\ \vdots \end{bmatrix}\)</span></p>
+</section>
 <section id="de-stempel-van-een-transformator-in-een-mna-matrix">
 <h3>De stempel van een transformator in een MNA matrix<a class="headerlink" href="#de-stempel-van-een-transformator-in-een-mna-matrix" title="Link to this heading">#</a></h3>
 <p>Een transformator met</p>
+<div class="cell docutils container">
+<div class="cell_output docutils container">
+<img alt="_images/d4d11c0792580f2aaa4810de7c8b5920342a476380b2d7e4bb0a1022d9c77259.svg" src="_images/d4d11c0792580f2aaa4810de7c8b5920342a476380b2d7e4bb0a1022d9c77259.svg" /></div>
+</div>
 <p>De vergelijkingen die deze transformator beschrijven zijn dan:</p>
 <p><span class="math notranslate nohighlight">\( V_i-V_j - j \omega L_{ij} I_1 - j \omega M I_2 =0 \\
 V_k-V_l - j \omega M I_1 - j \omega L_{kl} I_2  =0 \)</span></p>
 <p>Deze 2 vergelijkingen beschrijven de 2 bijkomende rijen in de  MNA matrix.
 we hebben ook 2 bijkomende onbekenden, namelijk in dit geval de stromen <span class="math notranslate nohighlight">\(I_1\)</span> en <span class="math notranslate nohighlight">\(I_2\)</span> die lopen in de richting van de transformator.
-Dit wil zeggen dat de stroom <span class="math notranslate nohighlight">\(I_1\)</span> van knoop i wegloopt en naar knoop j loopt en dat de stroom <span class="math notranslate nohighlight">\(I_2\)</span> van knoop k wegloopt en naar knoop l loopt. Dit bepaald dan ook de tekens van 1 in de kolommen van respectievelijk <span class="math notranslate nohighlight">\(I_1\)</span> en <span class="math notranslate nohighlight">\(I_2\)</span>.</p>
+Dit wil zeggen dat de stroom <span class="math notranslate nohighlight">\(I_1\)</span> van knoop <span class="math notranslate nohighlight">\(i\)</span> wegloopt en naar knoop <span class="math notranslate nohighlight">\(j\)</span> loopt en dat de stroom <span class="math notranslate nohighlight">\(I_2\)</span> van knoop <span class="math notranslate nohighlight">\(k\)</span> wegloopt en naar knoop <span class="math notranslate nohighlight">\(l\)</span> loopt. Dit bepaald dan ook de tekens van 1 in de kolommen van respectievelijk <span class="math notranslate nohighlight">\(I_1\)</span> en <span class="math notranslate nohighlight">\(I_2\)</span>.</p>
 <p><span class="math notranslate nohighlight">\(\begin{bmatrix}\vdots &amp; &amp; &amp;  &amp; &amp; \vdots &amp; &amp; &amp; \vdots \\
 \dots &amp; &amp; &amp;  &amp; &amp; \dots &amp; 1 &amp; &amp; \dots \\
 \dots &amp; &amp; &amp;  &amp; &amp; \dots &amp; -1 &amp; &amp; \dots \\
@@ -695,6 +730,7 @@ Dit wil zeggen dat de stroom <span class="math notranslate nohighlight">\(I_1\)<
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#de-stempel-van-een-weerstand-in-een-mna-matrix">De stempel van een weerstand in een MNA matrix</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#de-stempel-van-een-condensator-in-een-mna-matrix">De stempel van een condensator in een MNA matrix</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#de-stempel-van-een-spoel-in-een-mna-matrix">De stempel van een spoel in een MNA matrix</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#de-stempel-van-een-transconductantie-in-een-mna-matrix">De stempel van een transconductantie in een MNA matrix</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#de-stempel-van-een-transformator-in-een-mna-matrix">De stempel van een transformator in een MNA matrix</a></li>
 </ul>
 </li>
