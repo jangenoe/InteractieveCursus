@@ -2,11 +2,11 @@
   "content": [
     {
       "content": null,
-      "created": "2024-07-02T20:00:39.776719Z",
+      "created": "2024-07-02T21:08:43.397650Z",
       "format": null,
       "hash": null,
       "hash_algorithm": null,
-      "last_modified": "2024-07-02T19:55:16.443318Z",
+      "last_modified": "2024-07-02T21:03:14.518951Z",
       "mimetype": null,
       "name": "1N4148.lib",
       "path": "libraries/diode/switching/1N4148.lib",
@@ -15,11 +15,11 @@
       "writable": true
     }
   ],
-  "created": "2024-07-02T20:00:39.776719Z",
+  "created": "2024-07-02T21:08:43.397650Z",
   "format": "json",
   "hash": null,
   "hash_algorithm": null,
-  "last_modified": "2024-07-02T20:00:39.776719Z",
+  "last_modified": "2024-07-02T21:08:43.397650Z",
   "mimetype": null,
   "name": "switching",
   "path": "libraries/diode/switching",
