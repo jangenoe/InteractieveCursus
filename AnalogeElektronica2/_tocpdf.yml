@@ -24,6 +24,7 @@ parts:
     - file: oefeningBoost3
   - file: Inverter
   - file: Flyback-converter
+- file: berekening
 - caption: References
   chapters:
   - file: References
