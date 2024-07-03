@@ -11,10 +11,10 @@
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://jangenoe.github.io/jangenoe/InteractieveCursus/AnalogeElektronica2/berekening.html" />
 <meta property="og:site_name" content="Python" />
-<meta property="og:description" content="In dit hoofdstuk bespreken we de wijze waarop complexe circuits uitgerekend worden. De Modified Nodal Analysis: De Modified Nodal Analysis (MNA) methode werd voor het eerst geintroduceerd door[ 4] ..." />
+<meta property="og:description" content="In dit hoofdstuk bespreken we de wijze waarop complexe circuits uitgerekend worden. De Modified Nodal Analysis: De Modified Nodal Analysis (MNA) methode werd voor het eerst geintroduceerd door[ 1] ..." />
 <meta property="og:image" content="https://jangenoe.github.io/InteractieveCursus/AnalogeElektronica2/_static/logo.svg" />
 <meta property="og:image:alt" content="Python" />
-<meta name="description" content="In dit hoofdstuk bespreken we de wijze waarop complexe circuits uitgerekend worden. De Modified Nodal Analysis: De Modified Nodal Analysis (MNA) methode werd voor het eerst geintroduceerd door[ 4] ..." />
+<meta name="description" content="In dit hoofdstuk bespreken we de wijze waarop complexe circuits uitgerekend worden. De Modified Nodal Analysis: De Modified Nodal Analysis (MNA) methode werd voor het eerst geintroduceerd door[ 1] ..." />
 
     <title>Berekening van elektronische circuits &#8212; Analoge elektronische schakelingen</title>
   
@@ -73,8 +73,8 @@
     <link rel="icon" href="_static/favicon.ico"/>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Zoeken" href="search.html" />
-    <link rel="next" title="Referenties" href="References.html" />
-    <link rel="prev" title="Flyback converter" href="Flyback-converter.html" />
+    <link rel="next" title="Klasse A versterkers" href="Klasse-A.html" />
+    <link rel="prev" title="Transistor Configuraties" href="TransistorConfiguraties.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="nl"/>
   </head>
@@ -192,9 +192,10 @@
                 </a>
             </li>
         </ul>
-        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Transistor Configuraties</span></p>
-<ul class="nav bd-sidenav">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Analyse van circuits</span></p>
+<ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="TransistorConfiguraties.html">Transistor Configuraties</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Berekening van elektronische circuits</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Versterkers</span></p>
 <ul class="nav bd-sidenav">
@@ -219,10 +220,6 @@
 </details></li>
 <li class="toctree-l1"><a class="reference internal" href="Inverter.html">Inverter of Buck-Boost Converter</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Flyback-converter.html">Flyback converter</a></li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Berekening van circuits</span></p>
-<ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Berekening van elektronische circuits</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">References</span></p>
 <ul class="nav bd-sidenav">
@@ -535,7 +532,7 @@ document.write(`
 <p>In dit hoofdstuk bespreken we de wijze waarop complexe circuits uitgerekend worden.</p>
 <section id="de-modified-nodal-analysis">
 <h2>De Modified Nodal Analysis<a class="headerlink" href="#de-modified-nodal-analysis" title="Link to this heading">#</a></h2>
-<p>De Modified Nodal Analysis (MNA) methode werd voor het eerst geintroduceerd door <span id="id1">[<a class="reference internal" href="References.html#id5" title="Chung-Wen Ho, A. Ruehli, and P. Brennan. The modified nodal approach to network analysis. IEEE Transactions on Circuits and Systems, 22(6):504–509, June 1975. doi:10.1109/TCS.1975.1084079.">4</a>]</span> in</p>
+<p>De Modified Nodal Analysis (MNA) methode werd voor het eerst geintroduceerd door <span id="id1">[<a class="reference internal" href="References.html#id5" title="Chung-Wen Ho, A. Ruehli, and P. Brennan. The modified nodal approach to network analysis. IEEE Transactions on Circuits and Systems, 22(6):504–509, June 1975. doi:10.1109/TCS.1975.1084079.">1</a>]</span> in</p>
 <div class="cell docutils container">
 </div>
 <section id="de-stempel-van-een-weerstand-in-een-mna-matrix">
@@ -546,17 +543,32 @@ document.write(`
 </div>
 <p>De uitgaande stroom van knoop <span class="math notranslate nohighlight">\(i\)</span> is:</p>
 <p><span class="math notranslate nohighlight">\( g (V_i-V_j) =  g  V_i - g V_j\)</span>,</p>
-<p>waarbij <span class="math notranslate nohighlight">\(g= \frac{1}{R}\)</span> de conductiviteit is van de weerstand R.</p>
+<p>waarbij <span class="math notranslate nohighlight">\(g= \frac{1}{R}\)</span> de conductiviteit is van de weerstand <span class="math notranslate nohighlight">\(R\)</span>.</p>
 <p>Op eenzelfde manier kunnen we opschrijven dat de uitgaande stroom van knoop <span class="math notranslate nohighlight">\(j\)</span> is:</p>
-<p><span class="math notranslate nohighlight">\( g (V_j-V_i) =  -g  V_i + g V_j\)</span></p>
+<div class="math notranslate nohighlight">
+\[ g (V_j-V_i) =  -g  V_i + g V_j\]</div>
 <p>In matrix notatie wordt dat:</p>
-<p><span class="math notranslate nohighlight">\(\begin{bmatrix}\vdots &amp;  &amp; \vdots &amp;   &amp; \vdots \\
-\dots &amp; g  &amp; \dots &amp; -g &amp; \dots\\
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{bmatrix}\vdots &amp;  &amp; \vdots &amp;   &amp; \vdots \\
+\dots &amp; g  &amp; \dots &amp; -g &amp; \dots \\
 \vdots &amp;  &amp; \vdots &amp;   &amp; \vdots \\
 \dots &amp; -g &amp; \dots &amp; g  &amp; \dots \\ 
 \vdots &amp;  &amp; \vdots &amp;  &amp; \vdots
-\end{bmatrix}  \begin{bmatrix} \vdots\\ V_i\\ \vdots \\ V_j\\ \vdots
-\end{bmatrix} =\begin{bmatrix} \vdots\\  0 \\ \vdots \\ 0  \\ \vdots \end{bmatrix}\)</span></p>
+\end{bmatrix}  \begin{bmatrix} \vdots \\ V_i \\ \vdots \\ V_j \\ \vdots
+\end{bmatrix} =\begin{bmatrix} \vdots \\  0 \\ \vdots \\ 0  \\ \vdots \end{bmatrix}\end{split}\]</div>
+<p>Als alternatief voor deze stempel van de weerstand op basis van de conductiviteit <span class="math notranslate nohighlight">\(g\)</span> kunnen we overwegen om een bijkomende onbekende <span class="math notranslate nohighlight">\(I_{ij}\)</span> en een bijkomende vergelijking in te voegen</p>
+<p><span class="math notranslate nohighlight">\( V_i-V_j - R I_{ij} = 0 \)</span>.</p>
+<p>Op de vergelijkingen van knoop i en j voegen we dan telkens ook <span class="math notranslate nohighlight">\(I_{ij}\)</span> of <span class="math notranslate nohighlight">\(-I_{ij}\)</span> toe. De MNA matrix wordt dan:</p>
+<p><span class="math notranslate nohighlight">\(\begin{bmatrix}\vdots &amp;  &amp; \vdots &amp;   &amp; \vdots &amp; &amp; \vdots \\
+\dots &amp;  &amp; \dots &amp;   &amp; \dots &amp; 1 &amp; \dots \\
+\vdots &amp;  &amp; \vdots &amp;   &amp; \vdots &amp; &amp; \vdots \\
+\dots &amp;   &amp; \dots &amp;  &amp; \dots &amp; -1 &amp; \dots \\
+\vdots &amp;  &amp; \vdots &amp;   &amp; \vdots &amp; &amp; \vdots \\
+\dots &amp; 1 &amp; \dots &amp; -1 &amp; \dots &amp; -R &amp; \dots \\
+\vdots &amp;  &amp; \vdots &amp;   &amp; \vdots &amp; &amp; \vdots
+\end{bmatrix}  \begin{bmatrix} \vdots \\ V_i \\ \vdots \\  V_j \\ \vdots \\ I_{ij} \\ \vdots
+\end{bmatrix} =\begin{bmatrix} \vdots \\  0 \\ \vdots \\   0 \\ \vdots \\ 0  \\ \vdots \end{bmatrix}\)</span></p>
+<p>Over het algemeen is het toevoegen van een bijkomende onbekende geen goed idee omdat de grootte van de matrix hierdoor toeneemt en de rekentijd voor matrixinversie kwadratisch toeneemt met de grootte van de matrix. In het geval de weerstand <span class="math notranslate nohighlight">\(R\)</span> heel erg klein wordt, en dus de conductiviteit <span class="math notranslate nohighlight">\(g\)</span> heel erg groot, kan dit wel soms een beter resultaat opleveren.</p>
 </section>
 <section id="de-stempel-van-een-condensator-in-een-mna-matrix">
 <h3>De stempel van een condensator in een MNA matrix<a class="headerlink" href="#de-stempel-van-een-condensator-in-een-mna-matrix" title="Link to this heading">#</a></h3>
@@ -584,13 +596,13 @@ document.write(`
 <p>Wanneer er in een circuit een condensator staat tussen knoop <span class="math notranslate nohighlight">\(i\)</span> en knoop <span class="math notranslate nohighlight">\(j\)</span>, is de stroom die van knoop <span class="math notranslate nohighlight">\(i\)</span> naar knoop <span class="math notranslate nohighlight">\(j\)</span> loopt</p>
 <p><span class="math notranslate nohighlight">\( \frac{1}{j\omega L} (V_i-V_j) =  \frac{1}{j\omega L}  V_i - \frac{1}{j\omega L} V_j\)</span>,</p>
 <p>en de stroom van knoop <span class="math notranslate nohighlight">\(j\)</span> naar knoop <span class="math notranslate nohighlight">\(i\)</span> loopt in de omgekeerde richting. In matrix notatie wordt dat:</p>
-<p><span class="math notranslate nohighlight">\(\begin{bmatrix}\vdots &amp;  &amp; \vdots &amp;   &amp; \vdots \\
-\dots &amp; \frac{1}{j\omega L}  &amp; \dots &amp; -\frac{1}{j\omega L} &amp; \dots\\
-\vdots &amp;  &amp; \vdots &amp;   &amp; \vdots \\
+<p><span class="math notranslate nohighlight">\(\begin{bmatrix}\vdots &amp;  &amp; \vdots &amp;   &amp; \vdots \\ 
+\dots &amp; \frac{1}{j\omega L}  &amp; \dots &amp; -\frac{1}{j\omega L} &amp; \dots\\ 
+\vdots &amp;  &amp; \vdots &amp;   &amp; \vdots \\ 
 \dots &amp; -\frac{1}{j\omega L} &amp; \dots &amp; \frac{1}{j\omega L}  &amp; \dots \\ 
 \vdots &amp;  &amp; \vdots &amp;  &amp; \vdots
-\end{bmatrix}  \begin{bmatrix} \vdots\\ V_i\\ \vdots \\ V_j\\ \vdots
-\end{bmatrix} =\begin{bmatrix} \vdots\\  0 \\ \vdots \\ 0  \\ \vdots \end{bmatrix}\)</span></p>
+\end{bmatrix}  \begin{bmatrix} \vdots \\ V_i \\ \vdots \\ V_j \\ \vdots
+\end{bmatrix} =\begin{bmatrix} \vdots \\  0 \\ \vdots \\ 0  \\ \vdots \end{bmatrix}\)</span></p>
 </section>
 <section id="de-stempel-van-een-transconductantie-in-een-mna-matrix">
 <h3>De stempel van een transconductantie in een MNA matrix<a class="headerlink" href="#de-stempel-van-een-transconductantie-in-een-mna-matrix" title="Link to this heading">#</a></h3>
@@ -630,8 +642,8 @@ document.write(`
 <img alt="_images/d4d11c0792580f2aaa4810de7c8b5920342a476380b2d7e4bb0a1022d9c77259.svg" src="_images/d4d11c0792580f2aaa4810de7c8b5920342a476380b2d7e4bb0a1022d9c77259.svg" /></div>
 </div>
 <p>De vergelijkingen die deze transformator beschrijven zijn dan:</p>
-<p><span class="math notranslate nohighlight">\( V_i-V_j - j \omega L_{ij} I_1 - j \omega M I_2 =0 \\
-V_k-V_l - j \omega M I_1 - j \omega L_{kl} I_2  =0 \)</span></p>
+<p><span class="math notranslate nohighlight">\( V_i-V_j - j \omega L_{ij} I_1 - j \omega M I_2 = 0 \)</span></p>
+<p><span class="math notranslate nohighlight">\( V_k-V_l - j \omega M I_1 - j \omega L_{kl} I_2 = 0 \)</span></p>
 <p>Deze 2 vergelijkingen beschrijven de 2 bijkomende rijen in de  MNA matrix.
 we hebben ook 2 bijkomende onbekenden, namelijk in dit geval de stromen <span class="math notranslate nohighlight">\(I_1\)</span> en <span class="math notranslate nohighlight">\(I_2\)</span> die lopen in de richting van de transformator.
 Dit wil zeggen dat de stroom <span class="math notranslate nohighlight">\(I_1\)</span> van knoop <span class="math notranslate nohighlight">\(i\)</span> wegloopt en naar knoop <span class="math notranslate nohighlight">\(j\)</span> loopt en dat de stroom <span class="math notranslate nohighlight">\(I_2\)</span> van knoop <span class="math notranslate nohighlight">\(k\)</span> wegloopt en naar knoop <span class="math notranslate nohighlight">\(l\)</span> loopt. Dit bepaald dan ook de tekens van 1 in de kolommen van respectievelijk <span class="math notranslate nohighlight">\(I_1\)</span> en <span class="math notranslate nohighlight">\(I_2\)</span>.</p>
@@ -658,6 +670,7 @@ Dit wil zeggen dat de stroom <span class="math notranslate nohighlight">\(I_1\)<
    0\\
    0\\
  \vdots \end{bmatrix}\)</span></p>
+<p>We kunnen ons afvragen of het ook hier niet voordelig is eerst het stelsel (ref toevoegen) op te lossen zodat we <span class="math notranslate nohighlight">\(I_1\)</span> en <span class="math notranslate nohighlight">\(I_2\)</span> bekomen in functie van <span class="math notranslate nohighlight">\(V_i-V_j\)</span> en <span class="math notranslate nohighlight">\(V_k-V_l\)</span>, en dan deze bekomen numerieke waardes invullen in de vergelijkingen met nummer <span class="math notranslate nohighlight">\(i\)</span>,<span class="math notranslate nohighlight">\(j\)</span>,<span class="math notranslate nohighlight">\(k\)</span>,<span class="math notranslate nohighlight">\(l\)</span>. Hierdoor hebben we 2 vergelijkingen en 2 onbekenden minder. Echter in vele gevallen willen we gebruik maken van een goede transformator en gaat <span class="math notranslate nohighlight">\(M \approx \sqrt{L_{ij} L_{kl}}\)</span> waardoor de determinant <span class="math notranslate nohighlight">\(D\)</span> van dit stelsel <span class="math notranslate nohighlight">\(\approx 0\)</span>. Hierdoor wordt het overblijvende stelsel numeriek minder stabiel.</p>
 </section>
 </section>
 </section>
@@ -693,20 +706,20 @@ Dit wil zeggen dat de stroom <span class="math notranslate nohighlight">\(I_1\)<
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="Flyback-converter.html"
+       href="TransistorConfiguraties.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">vorige</p>
-        <p class="prev-next-title">Flyback converter</p>
+        <p class="prev-next-title">Transistor Configuraties</p>
       </div>
     </a>
     <a class="right-next"
-       href="References.html"
+       href="Klasse-A.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">volgende</p>
-        <p class="prev-next-title">Referenties</p>
+        <p class="prev-next-title">Klasse A versterkers</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>

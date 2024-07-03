@@ -1,9 +1,10 @@
 format: jb-book
 root: intro2
 parts:
-- caption: Transistor Configuraties
+- caption: Analyse van circuits
   chapters:
   - file: TransistorConfiguraties
+  - file: berekening
 - caption: Versterkers
   chapters:
   - file: Klasse-A
@@ -24,9 +25,6 @@ parts:
     - file: oefeningBoost3
   - file: Inverter
   - file: Flyback-converter
-- caption: Berekening van circuits
-  chapters:
-  - file: berekening
 - caption: References
   chapters:
   - file: References
