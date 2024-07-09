@@ -8,68 +8,68 @@ msgstr ""
 "Language: es\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-msgid "By"
-msgstr "Por"
-
-msgid "By the"
-msgstr "Por el"
-
-msgid "Last updated on"
-msgstr "Ultima actualización en"
-
-msgid "next page"
-msgstr "siguiente página"
-
-msgid "Download notebook file"
-msgstr "Descargar archivo de cuaderno"
-
-msgid "previous page"
-msgstr "pagina anterior"
-
-msgid "Toggle navigation"
-msgstr "Navegación de palanca"
-
-msgid "Contents"
-msgstr "Contenido"
-
-msgid "suggest edit"
-msgstr "sugerir editar"
-
 msgid "Source repository"
 msgstr "Repositorio de origen"
-
-msgid "Print to PDF"
-msgstr "Imprimir en PDF"
-
-msgid "open issue"
-msgstr "Tema abierto"
-
-msgid "Theme by the"
-msgstr "Tema por el"
-
-msgid "repository"
-msgstr "repositorio"
-
-msgid "Launch"
-msgstr "Lanzamiento"
-
-msgid "Open an issue"
-msgstr "Abrir un problema"
 
 msgid "Sphinx Book Theme"
 msgstr "Tema del libro de la esfinge"
 
-msgid "Copyright"
-msgstr "Derechos de autor"
+msgid "Download source file"
+msgstr "Descargar archivo fuente"
+
+msgid "repository"
+msgstr "repositorio"
+
+msgid "next page"
+msgstr "siguiente página"
+
+msgid "suggest edit"
+msgstr "sugerir editar"
+
+msgid "open issue"
+msgstr "Tema abierto"
+
+msgid "By the"
+msgstr "Por el"
+
+msgid "Launch"
+msgstr "Lanzamiento"
 
 msgid "Fullscreen mode"
 msgstr "Modo de pantalla completa"
 
-msgid "Download this page"
-msgstr "Descarga esta pagina"
+msgid "Contents"
+msgstr "Contenido"
 
 msgid "Edit this page"
 msgstr "Edita esta página"
 
-msgid "Download source file"
-msgstr "Descargar archivo fuente"
+msgid "Toggle navigation"
+msgstr "Navegación de palanca"
+
+msgid "Download this page"
+msgstr "Descarga esta pagina"
+
+msgid "Open an issue"
+msgstr "Abrir un problema"
+
+msgid "Download notebook file"
+msgstr "Descargar archivo de cuaderno"
+
+msgid "Theme by the"
+msgstr "Tema por el"
+
+msgid "previous page"
+msgstr "pagina anterior"
+
+msgid "By"
+msgstr "Por"
+
+msgid "Last updated on"
+msgstr "Ultima actualización en"
+
+msgid "Print to PDF"
+msgstr "Imprimir en PDF"
+
+msgid "Copyright"
+msgstr "Derechos de autor"

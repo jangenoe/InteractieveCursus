@@ -8,68 +8,68 @@ msgstr ""
 "Language: fi\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-msgid "By"
-msgstr "Tekijä"
-
-msgid "By the"
-msgstr "Mukaan"
-
-msgid "Last updated on"
-msgstr "Viimeksi päivitetty"
-
-msgid "next page"
-msgstr "seuraava sivu"
-
-msgid "Download notebook file"
-msgstr "Lataa muistikirjatiedosto"
-
-msgid "previous page"
-msgstr "Edellinen sivu"
-
-msgid "Toggle navigation"
-msgstr "Vaihda navigointia"
-
-msgid "Contents"
-msgstr "Sisällys"
-
-msgid "suggest edit"
-msgstr "ehdottaa muokkausta"
-
 msgid "Source repository"
 msgstr "Lähteen arkisto"
-
-msgid "Print to PDF"
-msgstr "Tulosta PDF-tiedostoon"
-
-msgid "open issue"
-msgstr "avoin ongelma"
-
-msgid "Theme by the"
-msgstr "Teeman tekijä"
-
-msgid "repository"
-msgstr "arkisto"
-
-msgid "Launch"
-msgstr "Tuoda markkinoille"
-
-msgid "Open an issue"
-msgstr "Avaa ongelma"
 
 msgid "Sphinx Book Theme"
 msgstr "Sphinx-kirjan teema"
 
-msgid "Copyright"
-msgstr "Tekijänoikeus"
+msgid "Download source file"
+msgstr "Lataa lähdetiedosto"
+
+msgid "repository"
+msgstr "arkisto"
+
+msgid "next page"
+msgstr "seuraava sivu"
+
+msgid "suggest edit"
+msgstr "ehdottaa muokkausta"
+
+msgid "open issue"
+msgstr "avoin ongelma"
+
+msgid "By the"
+msgstr "Mukaan"
+
+msgid "Launch"
+msgstr "Tuoda markkinoille"
 
 msgid "Fullscreen mode"
 msgstr "Koko näytön tila"
 
-msgid "Download this page"
-msgstr "Lataa tämä sivu"
+msgid "Contents"
+msgstr "Sisällys"
 
 msgid "Edit this page"
 msgstr "Muokkaa tätä sivua"
 
-msgid "Download source file"
-msgstr "Lataa lähdetiedosto"
+msgid "Toggle navigation"
+msgstr "Vaihda navigointia"
+
+msgid "Download this page"
+msgstr "Lataa tämä sivu"
+
+msgid "Open an issue"
+msgstr "Avaa ongelma"
+
+msgid "Download notebook file"
+msgstr "Lataa muistikirjatiedosto"
+
+msgid "Theme by the"
+msgstr "Teeman tekijä"
+
+msgid "previous page"
+msgstr "Edellinen sivu"
+
+msgid "By"
+msgstr "Tekijä"
+
+msgid "Last updated on"
+msgstr "Viimeksi päivitetty"
+
+msgid "Print to PDF"
+msgstr "Tulosta PDF-tiedostoon"
+
+msgid "Copyright"
+msgstr "Tekijänoikeus"

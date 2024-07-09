@@ -8,68 +8,68 @@ msgstr ""
 "Language: sk\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-msgid "By"
-msgstr "Autor:"
-
-msgid "By the"
-msgstr "Podľa"
-
-msgid "Last updated on"
-msgstr "Posledná aktualizácia dňa"
-
-msgid "next page"
-msgstr "ďalšia strana"
-
-msgid "Download notebook file"
-msgstr "Stiahnite si zošit"
-
-msgid "previous page"
-msgstr "predchádzajúca strana"
-
-msgid "Toggle navigation"
-msgstr "Prepnúť navigáciu"
-
-msgid "Contents"
-msgstr "Obsah"
-
-msgid "suggest edit"
-msgstr "navrhnúť úpravu"
-
 msgid "Source repository"
 msgstr "Zdrojové úložisko"
-
-msgid "Print to PDF"
-msgstr "Tlač do PDF"
-
-msgid "open issue"
-msgstr "otvorené vydanie"
-
-msgid "Theme by the"
-msgstr "Téma od"
-
-msgid "repository"
-msgstr "Úložisko"
-
-msgid "Launch"
-msgstr "Spustiť"
-
-msgid "Open an issue"
-msgstr "Otvorte problém"
 
 msgid "Sphinx Book Theme"
 msgstr "Téma knihy Sfinga"
 
-msgid "Copyright"
-msgstr "Autorské práva"
+msgid "Download source file"
+msgstr "Stiahnite si zdrojový súbor"
+
+msgid "repository"
+msgstr "Úložisko"
+
+msgid "next page"
+msgstr "ďalšia strana"
+
+msgid "suggest edit"
+msgstr "navrhnúť úpravu"
+
+msgid "open issue"
+msgstr "otvorené vydanie"
+
+msgid "By the"
+msgstr "Podľa"
+
+msgid "Launch"
+msgstr "Spustiť"
 
 msgid "Fullscreen mode"
 msgstr "Režim celej obrazovky"
 
-msgid "Download this page"
-msgstr "Stiahnite si túto stránku"
+msgid "Contents"
+msgstr "Obsah"
 
 msgid "Edit this page"
 msgstr "Upraviť túto stránku"
 
-msgid "Download source file"
-msgstr "Stiahnite si zdrojový súbor"
+msgid "Toggle navigation"
+msgstr "Prepnúť navigáciu"
+
+msgid "Download this page"
+msgstr "Stiahnite si túto stránku"
+
+msgid "Open an issue"
+msgstr "Otvorte problém"
+
+msgid "Download notebook file"
+msgstr "Stiahnite si zošit"
+
+msgid "Theme by the"
+msgstr "Téma od"
+
+msgid "previous page"
+msgstr "predchádzajúca strana"
+
+msgid "By"
+msgstr "Autor:"
+
+msgid "Last updated on"
+msgstr "Posledná aktualizácia dňa"
+
+msgid "Print to PDF"
+msgstr "Tlač do PDF"
+
+msgid "Copyright"
+msgstr "Autorské práva"

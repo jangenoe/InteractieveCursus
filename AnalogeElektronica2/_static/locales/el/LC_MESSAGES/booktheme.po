@@ -8,68 +8,68 @@ msgstr ""
 "Language: el\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-msgid "By"
-msgstr "Με"
-
-msgid "By the"
-msgstr "Από το"
-
-msgid "Last updated on"
-msgstr "Τελευταία ενημέρωση στις"
-
-msgid "next page"
-msgstr "επόμενη σελίδα"
-
-msgid "Download notebook file"
-msgstr "Λήψη αρχείου σημειωματάριου"
-
-msgid "previous page"
-msgstr "προηγούμενη σελίδα"
-
-msgid "Toggle navigation"
-msgstr "Εναλλαγή πλοήγησης"
-
-msgid "Contents"
-msgstr "Περιεχόμενα"
-
-msgid "suggest edit"
-msgstr "προτείνω επεξεργασία"
-
 msgid "Source repository"
 msgstr "Αποθήκη πηγής"
-
-msgid "Print to PDF"
-msgstr "Εκτύπωση σε PDF"
-
-msgid "open issue"
-msgstr "ανοιχτό ζήτημα"
-
-msgid "Theme by the"
-msgstr "Θέμα από το"
-
-msgid "repository"
-msgstr "αποθήκη"
-
-msgid "Launch"
-msgstr "Εκτόξευση"
-
-msgid "Open an issue"
-msgstr "Ανοίξτε ένα ζήτημα"
 
 msgid "Sphinx Book Theme"
 msgstr "Θέμα βιβλίου Sphinx"
 
-msgid "Copyright"
-msgstr "Πνευματική ιδιοκτησία"
+msgid "Download source file"
+msgstr "Λήψη αρχείου προέλευσης"
+
+msgid "repository"
+msgstr "αποθήκη"
+
+msgid "next page"
+msgstr "επόμενη σελίδα"
+
+msgid "suggest edit"
+msgstr "προτείνω επεξεργασία"
+
+msgid "open issue"
+msgstr "ανοιχτό ζήτημα"
+
+msgid "By the"
+msgstr "Από το"
+
+msgid "Launch"
+msgstr "Εκτόξευση"
 
 msgid "Fullscreen mode"
 msgstr "ΛΕΙΤΟΥΡΓΙΑ ΠΛΗΡΟΥΣ ΟΘΟΝΗΣ"
 
-msgid "Download this page"
-msgstr "Λήψη αυτής της σελίδας"
+msgid "Contents"
+msgstr "Περιεχόμενα"
 
 msgid "Edit this page"
 msgstr "Επεξεργαστείτε αυτήν τη σελίδα"
 
-msgid "Download source file"
-msgstr "Λήψη αρχείου προέλευσης"
+msgid "Toggle navigation"
+msgstr "Εναλλαγή πλοήγησης"
+
+msgid "Download this page"
+msgstr "Λήψη αυτής της σελίδας"
+
+msgid "Open an issue"
+msgstr "Ανοίξτε ένα ζήτημα"
+
+msgid "Download notebook file"
+msgstr "Λήψη αρχείου σημειωματάριου"
+
+msgid "Theme by the"
+msgstr "Θέμα από το"
+
+msgid "previous page"
+msgstr "προηγούμενη σελίδα"
+
+msgid "By"
+msgstr "Με"
+
+msgid "Last updated on"
+msgstr "Τελευταία ενημέρωση στις"
+
+msgid "Print to PDF"
+msgstr "Εκτύπωση σε PDF"
+
+msgid "Copyright"
+msgstr "Πνευματική ιδιοκτησία"

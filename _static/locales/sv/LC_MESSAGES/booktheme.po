@@ -8,68 +8,68 @@ msgstr ""
 "Language: sv\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-msgid "By"
-msgstr "Av"
-
-msgid "By the"
-msgstr "Av den"
-
-msgid "Last updated on"
-msgstr "Senast uppdaterad den"
-
-msgid "next page"
-msgstr "nästa sida"
-
-msgid "Download notebook file"
-msgstr "Ladda ner notebook-fil"
-
-msgid "previous page"
-msgstr "föregående sida"
-
-msgid "Toggle navigation"
-msgstr "Växla navigering"
-
-msgid "Contents"
-msgstr "Innehåll"
-
-msgid "suggest edit"
-msgstr "föreslå ändring"
-
 msgid "Source repository"
 msgstr "Källkodsrepositorium"
-
-msgid "Print to PDF"
-msgstr "Skriv ut till PDF"
-
-msgid "open issue"
-msgstr "öppna problemrapport"
-
-msgid "Theme by the"
-msgstr "Tema av"
-
-msgid "repository"
-msgstr "repositorium"
-
-msgid "Launch"
-msgstr "Öppna"
-
-msgid "Open an issue"
-msgstr "Öppna en problemrapport"
 
 msgid "Sphinx Book Theme"
 msgstr "Sphinx Boktema"
 
-msgid "Copyright"
-msgstr "Upphovsrätt"
+msgid "Download source file"
+msgstr "Ladda ner källfil"
+
+msgid "repository"
+msgstr "repositorium"
+
+msgid "next page"
+msgstr "nästa sida"
+
+msgid "suggest edit"
+msgstr "föreslå ändring"
+
+msgid "open issue"
+msgstr "öppna problemrapport"
+
+msgid "By the"
+msgstr "Av den"
+
+msgid "Launch"
+msgstr "Öppna"
 
 msgid "Fullscreen mode"
 msgstr "Fullskärmsläge"
 
-msgid "Download this page"
-msgstr "Ladda ner den här sidan"
+msgid "Contents"
+msgstr "Innehåll"
 
 msgid "Edit this page"
 msgstr "Redigera den här sidan"
 
-msgid "Download source file"
-msgstr "Ladda ner källfil"
+msgid "Toggle navigation"
+msgstr "Växla navigering"
+
+msgid "Download this page"
+msgstr "Ladda ner den här sidan"
+
+msgid "Open an issue"
+msgstr "Öppna en problemrapport"
+
+msgid "Download notebook file"
+msgstr "Ladda ner notebook-fil"
+
+msgid "Theme by the"
+msgstr "Tema av"
+
+msgid "previous page"
+msgstr "föregående sida"
+
+msgid "By"
+msgstr "Av"
+
+msgid "Last updated on"
+msgstr "Senast uppdaterad den"
+
+msgid "Print to PDF"
+msgstr "Skriv ut till PDF"
+
+msgid "Copyright"
+msgstr "Upphovsrätt"
