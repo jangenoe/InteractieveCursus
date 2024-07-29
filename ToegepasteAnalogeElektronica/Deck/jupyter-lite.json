@@ -2,7 +2,7 @@
   "jupyter-config-data": {
     "appName": "KULeuven Cursus",
     "appUrl": "./lab",
-    "appVersion": "0.3.0",
+    "appVersion": "0.4.0",
     "baseUrl": "./",
     "contentsStorageName": "JupyterDeck Storage",
     "defaultKernelName": "python",

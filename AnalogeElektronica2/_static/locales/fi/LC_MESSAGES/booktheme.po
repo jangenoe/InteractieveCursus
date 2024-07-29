@@ -8,68 +8,68 @@ msgstr ""
 "Language: fi\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-msgid "Source repository"
-msgstr "Lähteen arkisto"
-
-msgid "Sphinx Book Theme"
-msgstr "Sphinx-kirjan teema"
-
-msgid "Download source file"
-msgstr "Lataa lähdetiedosto"
-
-msgid "repository"
-msgstr "arkisto"
-
-msgid "next page"
-msgstr "seuraava sivu"
-
-msgid "suggest edit"
-msgstr "ehdottaa muokkausta"
-
-msgid "open issue"
-msgstr "avoin ongelma"
-
 msgid "By the"
 msgstr "Mukaan"
-
-msgid "Launch"
-msgstr "Tuoda markkinoille"
-
-msgid "Fullscreen mode"
-msgstr "Koko näytön tila"
-
-msgid "Contents"
-msgstr "Sisällys"
-
-msgid "Edit this page"
-msgstr "Muokkaa tätä sivua"
 
 msgid "Toggle navigation"
 msgstr "Vaihda navigointia"
 
-msgid "Download this page"
-msgstr "Lataa tämä sivu"
+msgid "Copyright"
+msgstr "Tekijänoikeus"
 
 msgid "Open an issue"
 msgstr "Avaa ongelma"
 
-msgid "Download notebook file"
-msgstr "Lataa muistikirjatiedosto"
-
-msgid "Theme by the"
-msgstr "Teeman tekijä"
+msgid "Download this page"
+msgstr "Lataa tämä sivu"
 
 msgid "previous page"
 msgstr "Edellinen sivu"
 
-msgid "By"
-msgstr "Tekijä"
-
-msgid "Last updated on"
-msgstr "Viimeksi päivitetty"
+msgid "suggest edit"
+msgstr "ehdottaa muokkausta"
 
 msgid "Print to PDF"
 msgstr "Tulosta PDF-tiedostoon"
 
-msgid "Copyright"
-msgstr "Tekijänoikeus"
+msgid "Download source file"
+msgstr "Lataa lähdetiedosto"
+
+msgid "Contents"
+msgstr "Sisällys"
+
+msgid "By"
+msgstr "Tekijä"
+
+msgid "Fullscreen mode"
+msgstr "Koko näytön tila"
+
+msgid "Source repository"
+msgstr "Lähteen arkisto"
+
+msgid "repository"
+msgstr "arkisto"
+
+msgid "Theme by the"
+msgstr "Teeman tekijä"
+
+msgid "Last updated on"
+msgstr "Viimeksi päivitetty"
+
+msgid "next page"
+msgstr "seuraava sivu"
+
+msgid "Sphinx Book Theme"
+msgstr "Sphinx-kirjan teema"
+
+msgid "Launch"
+msgstr "Tuoda markkinoille"
+
+msgid "Edit this page"
+msgstr "Muokkaa tätä sivua"
+
+msgid "Download notebook file"
+msgstr "Lataa muistikirjatiedosto"
+
+msgid "open issue"
+msgstr "avoin ongelma"

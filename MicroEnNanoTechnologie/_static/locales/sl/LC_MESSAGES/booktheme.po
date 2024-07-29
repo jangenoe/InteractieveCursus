@@ -8,68 +8,68 @@ msgstr ""
 "Language: sl\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-msgid "Source repository"
-msgstr "Izvorno skladišče"
-
-msgid "Sphinx Book Theme"
-msgstr "Tema knjige Sphinx"
-
-msgid "Download source file"
-msgstr "Prenesite izvorno datoteko"
-
-msgid "repository"
-msgstr "odlagališče"
-
-msgid "next page"
-msgstr "Naslednja stran"
-
-msgid "suggest edit"
-msgstr "predlagajte urejanje"
-
-msgid "open issue"
-msgstr "odprto vprašanje"
-
 msgid "By the"
 msgstr "Avtor"
-
-msgid "Launch"
-msgstr "Kosilo"
-
-msgid "Fullscreen mode"
-msgstr "Celozaslonski način"
-
-msgid "Contents"
-msgstr "Vsebina"
-
-msgid "Edit this page"
-msgstr "Uredite to stran"
 
 msgid "Toggle navigation"
 msgstr "Preklopi navigacijo"
 
-msgid "Download this page"
-msgstr "Prenesite to stran"
+msgid "Copyright"
+msgstr "avtorske pravice"
 
 msgid "Open an issue"
 msgstr "Odprite številko"
 
-msgid "Download notebook file"
-msgstr "Prenesite datoteko zvezka"
-
-msgid "Theme by the"
-msgstr "Tema avtorja"
+msgid "Download this page"
+msgstr "Prenesite to stran"
 
 msgid "previous page"
 msgstr "Prejšnja stran"
 
-msgid "By"
-msgstr "Avtor"
-
-msgid "Last updated on"
-msgstr "Nazadnje posodobljeno dne"
+msgid "suggest edit"
+msgstr "predlagajte urejanje"
 
 msgid "Print to PDF"
 msgstr "Natisni v PDF"
 
-msgid "Copyright"
-msgstr "avtorske pravice"
+msgid "Download source file"
+msgstr "Prenesite izvorno datoteko"
+
+msgid "Contents"
+msgstr "Vsebina"
+
+msgid "By"
+msgstr "Avtor"
+
+msgid "Fullscreen mode"
+msgstr "Celozaslonski način"
+
+msgid "Source repository"
+msgstr "Izvorno skladišče"
+
+msgid "repository"
+msgstr "odlagališče"
+
+msgid "Theme by the"
+msgstr "Tema avtorja"
+
+msgid "Last updated on"
+msgstr "Nazadnje posodobljeno dne"
+
+msgid "next page"
+msgstr "Naslednja stran"
+
+msgid "Sphinx Book Theme"
+msgstr "Tema knjige Sphinx"
+
+msgid "Launch"
+msgstr "Kosilo"
+
+msgid "Edit this page"
+msgstr "Uredite to stran"
+
+msgid "Download notebook file"
+msgstr "Prenesite datoteko zvezka"
+
+msgid "open issue"
+msgstr "odprto vprašanje"

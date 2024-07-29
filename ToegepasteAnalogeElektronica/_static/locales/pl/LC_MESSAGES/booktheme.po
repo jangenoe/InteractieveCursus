@@ -8,68 +8,68 @@ msgstr ""
 "Language: pl\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-msgid "Source repository"
-msgstr "Repozytorium źródłowe"
-
-msgid "Sphinx Book Theme"
-msgstr "Motyw książki Sphinx"
-
-msgid "Download source file"
-msgstr "Pobierz plik źródłowy"
-
-msgid "repository"
-msgstr "magazyn"
-
-msgid "next page"
-msgstr "Następna strona"
-
-msgid "suggest edit"
-msgstr "zaproponuj edycję"
-
-msgid "open issue"
-msgstr "otwarty problem"
-
 msgid "By the"
 msgstr "Przez"
-
-msgid "Launch"
-msgstr "Uruchomić"
-
-msgid "Fullscreen mode"
-msgstr "Pełny ekran"
-
-msgid "Contents"
-msgstr "Zawartość"
-
-msgid "Edit this page"
-msgstr "Edytuj tę strone"
 
 msgid "Toggle navigation"
 msgstr "Przełącz nawigację"
 
-msgid "Download this page"
-msgstr "Pobierz tę stronę"
+msgid "Copyright"
+msgstr "prawa autorskie"
 
 msgid "Open an issue"
 msgstr "Otwórz problem"
 
-msgid "Download notebook file"
-msgstr "Pobierz plik notatnika"
-
-msgid "Theme by the"
-msgstr "Motyw autorstwa"
+msgid "Download this page"
+msgstr "Pobierz tę stronę"
 
 msgid "previous page"
 msgstr "Poprzednia strona"
 
-msgid "By"
-msgstr "Przez"
-
-msgid "Last updated on"
-msgstr "Ostatnia aktualizacja"
+msgid "suggest edit"
+msgstr "zaproponuj edycję"
 
 msgid "Print to PDF"
 msgstr "Drukuj do PDF"
 
-msgid "Copyright"
-msgstr "prawa autorskie"
+msgid "Download source file"
+msgstr "Pobierz plik źródłowy"
+
+msgid "Contents"
+msgstr "Zawartość"
+
+msgid "By"
+msgstr "Przez"
+
+msgid "Fullscreen mode"
+msgstr "Pełny ekran"
+
+msgid "Source repository"
+msgstr "Repozytorium źródłowe"
+
+msgid "repository"
+msgstr "magazyn"
+
+msgid "Theme by the"
+msgstr "Motyw autorstwa"
+
+msgid "Last updated on"
+msgstr "Ostatnia aktualizacja"
+
+msgid "next page"
+msgstr "Następna strona"
+
+msgid "Sphinx Book Theme"
+msgstr "Motyw książki Sphinx"
+
+msgid "Launch"
+msgstr "Uruchomić"
+
+msgid "Edit this page"
+msgstr "Edytuj tę strone"
+
+msgid "Download notebook file"
+msgstr "Pobierz plik notatnika"
+
+msgid "open issue"
+msgstr "otwarty problem"

@@ -36,6 +36,9 @@ parse:
     # - smartquotes
     - substitution
     - tasklist
+latex:
+  latex_documents:
+     targetname: python.tex
 bibtex_bibfiles:
   - MicroEnNanoTechnologie.bib
 sphinx:
