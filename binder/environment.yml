@@ -21,6 +21,7 @@ dependencies:
   - networkx
   - ipywidgets
   - pyspice
+  - python-pptx
   - pip:
     - jupyterlab-myst
     - schemdraw>=0.19
