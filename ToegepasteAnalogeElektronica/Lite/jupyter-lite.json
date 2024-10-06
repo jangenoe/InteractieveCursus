@@ -2,7 +2,7 @@
   "jupyter-config-data": {
     "appName": "KULeuven Cursus",
     "appUrl": "./lab",
-    "appVersion": "0.4.0",
+    "appVersion": "0.4.2",
     "baseUrl": "./",
     "defaultKernelName": "python",
     "disabledExtensions": [],
@@ -47,7 +47,7 @@
       {
         "extension": "./extension",
         "liteExtension": false,
-        "load": "static/remoteEntry.5586bbdee77c5d90dd3c.js",
+        "load": "static/remoteEntry.e4ff09401a2f575928c0.js",
         "name": "@jupyter-widgets/jupyterlab-manager"
       },
       {

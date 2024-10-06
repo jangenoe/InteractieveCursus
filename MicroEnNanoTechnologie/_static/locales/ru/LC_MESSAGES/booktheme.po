@@ -8,32 +8,32 @@ msgstr ""
 "Language: ru\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-msgid "By the"
-msgstr "Посредством"
-
-msgid "Toggle navigation"
-msgstr "Переключить навигацию"
-
-msgid "Copyright"
-msgstr "авторское право"
-
-msgid "Open an issue"
-msgstr "Открыть вопрос"
+msgid "repository"
+msgstr "хранилище"
 
 msgid "Download this page"
 msgstr "Загрузите эту страницу"
 
+msgid "Open an issue"
+msgstr "Открыть вопрос"
+
+msgid "Toggle navigation"
+msgstr "Переключить навигацию"
+
+msgid "Fullscreen mode"
+msgstr "Полноэкранный режим"
+
+msgid "Edit this page"
+msgstr "Редактировать эту страницу"
+
 msgid "previous page"
 msgstr "Предыдущая страница"
 
-msgid "suggest edit"
-msgstr "предложить редактировать"
+msgid "Copyright"
+msgstr "авторское право"
 
-msgid "Print to PDF"
-msgstr "Распечатать в PDF"
-
-msgid "Download source file"
-msgstr "Скачать исходный файл"
+msgid "Sphinx Book Theme"
+msgstr "Тема книги Сфинкс"
 
 msgid "Contents"
 msgstr "Содержание"
@@ -41,35 +41,35 @@ msgstr "Содержание"
 msgid "By"
 msgstr "По"
 
-msgid "Fullscreen mode"
-msgstr "Полноэкранный режим"
+msgid "Print to PDF"
+msgstr "Распечатать в PDF"
 
 msgid "Source repository"
 msgstr "Исходный репозиторий"
 
-msgid "repository"
-msgstr "хранилище"
+msgid "By the"
+msgstr "Посредством"
+
+msgid "open issue"
+msgstr "открытый вопрос"
+
+msgid "suggest edit"
+msgstr "предложить редактировать"
 
 msgid "Theme by the"
 msgstr "Тема от"
 
-msgid "Last updated on"
-msgstr "Последнее обновление"
+msgid "Launch"
+msgstr "Запуск"
 
 msgid "next page"
 msgstr "Следующая страница"
 
-msgid "Sphinx Book Theme"
-msgstr "Тема книги Сфинкс"
-
-msgid "Launch"
-msgstr "Запуск"
-
-msgid "Edit this page"
-msgstr "Редактировать эту страницу"
+msgid "Download source file"
+msgstr "Скачать исходный файл"
 
 msgid "Download notebook file"
 msgstr "Скачать файл записной книжки"
 
-msgid "open issue"
-msgstr "открытый вопрос"
+msgid "Last updated on"
+msgstr "Последнее обновление"

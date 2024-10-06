@@ -43,7 +43,7 @@
     <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="_static/exercise.css" />
-    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=87e54e7c" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
@@ -524,8 +524,8 @@ document.write(`
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vb2-een-50w-versterker-of-137-77-khz">VB2: Een 50W versterker of 137.77 kHz</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">detail van de opstartsequentie</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">1 periode van de Steady State</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">detail van de opstartsequentie</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">1 periode van de Steady State</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#w-aan-1mhz">2 W aan 1MHz</a></li>
 </ul>
 </li>
@@ -646,6 +646,8 @@ In <a class="reference internal" href="#vermogenversterkerse"><span class="std s
 </figure>
 </div>
 </div>
+<p>In het schema van <a class="reference internal" href="#efig6b"><span class="std std-numref">Fig. 70</span></a> zien we dat de spanning over de condensator <span class="math notranslate nohighlight">\(C_1\)</span> continu gaat blijven stijgen. Dit is natuurlijk niet gewenst omdat we dan geen periodiek signaal krijgen en omdat dat een veel te hoge voedingsspanning zou vereisen.
+In een volgende stap voegen we een transistor toe om de spanning over de condensator <span class="math notranslate nohighlight">\(C_1\)</span> op  0V te houden gedurende een bepaalde tijd zodat we, als de oscillatie daarna verder loopt we op een gegeven moment in tijd kunnen terugkeren naar de huidige spanning.</p>
 <div class="cell docutils container">
 <div class="cell_output docutils container">
 <figure class="align-default" id="efig7">
@@ -670,7 +672,7 @@ In <a class="reference internal" href="#vermogenversterkerse"><span class="std s
 </section>
 <section id="ontwerpen-van-enkele-voorbeelden">
 <h2>Ontwerpen van enkele voorbeelden<a class="headerlink" href="#ontwerpen-van-enkele-voorbeelden" title="Link to this heading">#</a></h2>
-<p>Voor het ontwerpen van een aantal voorbeelden nemen we de vergelijkingen vanuit <cite id="9qfqr"><a href="#zotero|1031761/G2K7PIUF">[3]</a></cite>. Deze ontwerpvergelijkingen zijn in eerste instantie aangepast aan de lagere frequenties. Voor MHz frequenties moet er in detail geanalyseerd en gesimuleerd worden.</p>
+<p>Voor het ontwerpen van een aantal voorbeelden nemen we de vergelijkingen vanuit <span id="id4">[<a class="reference internal" href="References.html#id7" title="Nathan O Sokal. Class-E RF Power Amplifiers. QEX, pages 9–20, Jan/Feb 2001.">5</a>]</span>. Deze ontwerpvergelijkingen zijn in eerste instantie aangepast aan de lagere frequenties. Voor MHz frequenties moet er in detail geanalyseerd en gesimuleerd worden.</p>
 <div class="math notranslate nohighlight">
 \[R_L= 0.576801 \frac{(V_{DD}-V_{sat})^2}{P} \left(1.0000086-\frac{0.414396}{Q}-\frac{0.577501}{Q^2}+\frac{0.205967}{Q^3}   \right) \]</div>
 <div class="math notranslate nohighlight">
@@ -702,13 +704,13 @@ We kunnen de uitgang omwerken naar een impedantie van 50 Ohm door een transforma
 <figure class="align-default" id="efig10">
 <img alt="_images/cc8940792ca62b7ffc9f447e7b49789130a1256bbaf4e1396ea7f3f10f59453a.svg" src="_images/cc8940792ca62b7ffc9f447e7b49789130a1256bbaf4e1396ea7f3f10f59453a.svg" />
 <figcaption>
-<p><span class="caption-number">Fig. 73 </span><span class="caption-text">.</span><a class="headerlink" href="#efig10" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 73 </span><span class="caption-text">Uitgewerkt schema van het eerste voorbeeld</span><a class="headerlink" href="#efig10" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 </div>
 </div>
 <div class="literal-block-wrapper docutils container" id="espice1">
-<div class="code-block-caption"><span class="caption-number">Spice Listing 9 </span><span class="caption-text">Klasse E spice file</span><a class="headerlink" href="#espice1" title="Link to this code">#</a></div>
+<div class="code-block-caption"><span class="caption-number">Spice Listing 12 </span><span class="caption-text">Klasse E spice file</span><a class="headerlink" href="#espice1" title="Link to this code">#</a></div>
 <div class="highlight-spice notranslate"><div class="highlight"><pre><span></span><span class="o">*</span><span class="w"> </span><span class="nx">Class</span><span class="w"> </span><span class="nx">E</span><span class="w"> </span><span class="nx">amp</span><span class="w"> </span><span class="mi">1</span>
 <span class="nx">M_M1</span><span class="w">         </span><span class="mi">2</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="nx">FDB33N25</span><span class="w"> </span>
 <span class="nx">L_L1</span><span class="w">         </span><span class="mi">2</span><span class="w"> </span><span class="mi">3</span><span class="w">  </span><span class="mi">1000u</span><span class="nx">H</span><span class="w">  </span>
@@ -722,12 +724,105 @@ We kunnen de uitgang omwerken naar een impedantie van 50 Ohm door een transforma
 </pre></div>
 </div>
 </div>
+<div class="cell docutils container">
+<div class="cell_output docutils container">
+<figure class="align-default" id="id9">
+<div class="output text_html"><style>pre { line-height: 125%; }
+td.linenos .normal { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
+span.linenos { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
+td.linenos .special { color: #000000; background-color: #ffffc0; padding-left: 5px; padding-right: 5px; }
+span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 5px; padding-right: 5px; }
+.output_html .hll { background-color: #ffffcc }
+.output_html { background: #f8f8f8; }
+.output_html .c { color: #3D7B7B; font-style: italic } /* Comment */
+.output_html .err { border: 1px solid #FF0000 } /* Error */
+.output_html .k { color: #008000; font-weight: bold } /* Keyword */
+.output_html .o { color: #666666 } /* Operator */
+.output_html .ch { color: #3D7B7B; font-style: italic } /* Comment.Hashbang */
+.output_html .cm { color: #3D7B7B; font-style: italic } /* Comment.Multiline */
+.output_html .cp { color: #9C6500 } /* Comment.Preproc */
+.output_html .cpf { color: #3D7B7B; font-style: italic } /* Comment.PreprocFile */
+.output_html .c1 { color: #3D7B7B; font-style: italic } /* Comment.Single */
+.output_html .cs { color: #3D7B7B; font-style: italic } /* Comment.Special */
+.output_html .gd { color: #A00000 } /* Generic.Deleted */
+.output_html .ge { font-style: italic } /* Generic.Emph */
+.output_html .gr { color: #E40000 } /* Generic.Error */
+.output_html .gh { color: #000080; font-weight: bold } /* Generic.Heading */
+.output_html .gi { color: #008400 } /* Generic.Inserted */
+.output_html .go { color: #717171 } /* Generic.Output */
+.output_html .gp { color: #000080; font-weight: bold } /* Generic.Prompt */
+.output_html .gs { font-weight: bold } /* Generic.Strong */
+.output_html .gu { color: #800080; font-weight: bold } /* Generic.Subheading */
+.output_html .gt { color: #0044DD } /* Generic.Traceback */
+.output_html .kc { color: #008000; font-weight: bold } /* Keyword.Constant */
+.output_html .kd { color: #008000; font-weight: bold } /* Keyword.Declaration */
+.output_html .kn { color: #008000; font-weight: bold } /* Keyword.Namespace */
+.output_html .kp { color: #008000 } /* Keyword.Pseudo */
+.output_html .kr { color: #008000; font-weight: bold } /* Keyword.Reserved */
+.output_html .kt { color: #B00040 } /* Keyword.Type */
+.output_html .m { color: #666666 } /* Literal.Number */
+.output_html .s { color: #BA2121 } /* Literal.String */
+.output_html .na { color: #687822 } /* Name.Attribute */
+.output_html .nb { color: #008000 } /* Name.Builtin */
+.output_html .nc { color: #0000FF; font-weight: bold } /* Name.Class */
+.output_html .no { color: #880000 } /* Name.Constant */
+.output_html .nd { color: #AA22FF } /* Name.Decorator */
+.output_html .ni { color: #717171; font-weight: bold } /* Name.Entity */
+.output_html .ne { color: #CB3F38; font-weight: bold } /* Name.Exception */
+.output_html .nf { color: #0000FF } /* Name.Function */
+.output_html .nl { color: #767600 } /* Name.Label */
+.output_html .nn { color: #0000FF; font-weight: bold } /* Name.Namespace */
+.output_html .nt { color: #008000; font-weight: bold } /* Name.Tag */
+.output_html .nv { color: #19177C } /* Name.Variable */
+.output_html .ow { color: #AA22FF; font-weight: bold } /* Operator.Word */
+.output_html .w { color: #bbbbbb } /* Text.Whitespace */
+.output_html .mb { color: #666666 } /* Literal.Number.Bin */
+.output_html .mf { color: #666666 } /* Literal.Number.Float */
+.output_html .mh { color: #666666 } /* Literal.Number.Hex */
+.output_html .mi { color: #666666 } /* Literal.Number.Integer */
+.output_html .mo { color: #666666 } /* Literal.Number.Oct */
+.output_html .sa { color: #BA2121 } /* Literal.String.Affix */
+.output_html .sb { color: #BA2121 } /* Literal.String.Backtick */
+.output_html .sc { color: #BA2121 } /* Literal.String.Char */
+.output_html .dl { color: #BA2121 } /* Literal.String.Delimiter */
+.output_html .sd { color: #BA2121; font-style: italic } /* Literal.String.Doc */
+.output_html .s2 { color: #BA2121 } /* Literal.String.Double */
+.output_html .se { color: #AA5D1F; font-weight: bold } /* Literal.String.Escape */
+.output_html .sh { color: #BA2121 } /* Literal.String.Heredoc */
+.output_html .si { color: #A45A77; font-weight: bold } /* Literal.String.Interpol */
+.output_html .sx { color: #008000 } /* Literal.String.Other */
+.output_html .sr { color: #A45A77 } /* Literal.String.Regex */
+.output_html .s1 { color: #BA2121 } /* Literal.String.Single */
+.output_html .ss { color: #19177C } /* Literal.String.Symbol */
+.output_html .bp { color: #008000 } /* Name.Builtin.Pseudo */
+.output_html .fm { color: #0000FF } /* Name.Function.Magic */
+.output_html .vc { color: #19177C } /* Name.Variable.Class */
+.output_html .vg { color: #19177C } /* Name.Variable.Global */
+.output_html .vi { color: #19177C } /* Name.Variable.Instance */
+.output_html .vm { color: #19177C } /* Name.Variable.Magic */
+.output_html .il { color: #666666 } /* Literal.Number.Integer.Long */</style><div class="highlight"><pre><span></span><span class="o">*</span><span class="w"> </span><span class="nx">Class</span><span class="w"> </span><span class="nx">E</span><span class="w"> </span><span class="nx">amp</span><span class="w"> </span><span class="mi">1</span><span class="w"></span>
+<span class="nx">M_M1</span><span class="w">         </span><span class="mi">2</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="nx">FDB33N25</span><span class="w"> </span>
+<span class="nx">L_L1</span><span class="w">         </span><span class="mi">2</span><span class="w"> </span><span class="mi">3</span><span class="w">  </span><span class="mi">1000</span><span class="nx">uH</span><span class="w">  </span>
+<span class="nx">C_C1</span><span class="w">         </span><span class="mi">2</span><span class="w"> </span><span class="mi">0</span><span class="w">  </span><span class="m m-Double">4.78</span><span class="nx">nF</span><span class="w">  </span>
+<span class="nx">L_L2</span><span class="w">         </span><span class="mi">4</span><span class="w"> </span><span class="mi">5</span><span class="w">  </span><span class="m m-Double">24.93</span><span class="nx">uH</span><span class="w">  </span>
+<span class="nx">C_C2</span><span class="w">         </span><span class="mi">2</span><span class="w"> </span><span class="mi">4</span><span class="w">  </span><span class="m m-Double">6.04</span><span class="nx">nF</span><span class="w">  </span>
+<span class="nx">R_RL</span><span class="w">         </span><span class="mi">5</span><span class="w"> </span><span class="mi">0</span><span class="w">  </span><span class="m m-Double">14.88</span><span class="w"> </span>
+<span class="nx">V_Vdd</span><span class="w">        </span><span class="mi">3</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="m m-Double">12.5</span><span class="nx">V</span><span class="w"></span>
+<span class="nx">V_Vin</span><span class="w">        </span><span class="mi">1</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="nx">PULSE</span><span class="p">(</span><span class="mi">0</span><span class="w"> </span><span class="mi">9</span><span class="w"> </span><span class="m m-Double">1.05</span><span class="nx">u</span><span class="w"> </span><span class="mi">20</span><span class="nx">n</span><span class="w"> </span><span class="mi">20</span><span class="nx">n</span><span class="w"> </span><span class="m m-Double">1.05</span><span class="nx">u</span><span class="w"> </span><span class="m m-Double">2.10526</span><span class="nx">u</span><span class="p">)</span><span class="w"> </span><span class="nx">DC</span><span class="p">=</span><span class="mi">0</span><span class="w"></span>
+<span class="p">.</span><span class="nx">model</span><span class="w"> </span><span class="nx">FDB33N25</span><span class="w"> </span><span class="nx">VDMOS</span><span class="p">(</span><span class="nx">Rg</span><span class="p">=</span><span class="mi">3</span><span class="w"> </span><span class="nx">Rd</span><span class="p">=</span><span class="mi">40</span><span class="nx">m</span><span class="w"> </span><span class="nx">Rs</span><span class="p">=</span><span class="mi">27</span><span class="nx">m</span><span class="w"> </span><span class="nx">Vto</span><span class="p">=</span><span class="m m-Double">5.35</span><span class="w"> </span><span class="nx">Kp</span><span class="p">=</span><span class="mi">35</span><span class="w"> </span><span class="nx">lambda</span><span class="p">=</span><span class="m m-Double">.05</span><span class="w"> </span><span class="nx">Cgdmax</span><span class="p">=</span><span class="m m-Double">1.1</span><span class="nx">n</span><span class="w"> </span><span class="nx">Cgdmin</span><span class="p">=</span><span class="mi">25</span><span class="kd">p</span><span class="w"> </span><span class="nx">Cgs</span><span class="p">=</span><span class="m m-Double">1.7</span><span class="nx">n</span><span class="w"> </span><span class="nx">Cjo</span><span class="p">=</span><span class="mi">800</span><span class="kd">p</span><span class="w"> </span><span class="nx">Is</span><span class="p">=</span><span class="m m-Double">7.94</span><span class="kd">p</span><span class="w"> </span><span class="nx">Rb</span><span class="p">=</span><span class="mi">7</span><span class="nx">m</span><span class="w"> </span><span class="nx">mfg</span><span class="p">=</span><span class="nx">Fairchild</span><span class="w"> </span><span class="nx">Vds</span><span class="p">=</span><span class="mi">250</span><span class="w"> </span><span class="nx">Ron</span><span class="p">=</span><span class="mi">94</span><span class="nx">m</span><span class="w"> </span><span class="nx">Qg</span><span class="p">=</span><span class="mi">37</span><span class="nx">n</span><span class="p">)</span><span class="w"></span>
+</pre></div>
+</div><figcaption>
+<p><span class="caption-number">Fig. 74 </span><span class="caption-text">Spice file van het eerste voorbeeld</span><a class="headerlink" href="#id9" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
+</div>
 <div class="cell tag_full-width docutils container">
 <div class="cell_output docutils container">
 <figure class="align-default" id="efig11">
 <img alt="_images/31b12633ab548e7f2ff40bd990f0272f43769d50a6cef645b91f925afac88b52.png" src="_images/31b12633ab548e7f2ff40bd990f0272f43769d50a6cef645b91f925afac88b52.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 74 </span><span class="caption-text">Verloop van de spanningen bij het opstarten van de oscillatie.</span><a class="headerlink" href="#efig11" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 75 </span><span class="caption-text">Verloop van de spanningen bij het opstarten van de oscillatie.</span><a class="headerlink" href="#efig11" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 </div>
@@ -740,7 +835,7 @@ We kunnen de uitgang omwerken naar een impedantie van 50 Ohm door een transforma
 <figure class="align-default" id="efig12">
 <img alt="_images/b466a2465fd3bf7f80e6c9eb41410f499fc65053230a24caae60f51b42814b04.png" src="_images/b466a2465fd3bf7f80e6c9eb41410f499fc65053230a24caae60f51b42814b04.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 75 </span><span class="caption-text">Initieel verloop van de spanningen bij het opstarten van de oscillatie.</span><a class="headerlink" href="#efig12" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 76 </span><span class="caption-text">Initieel verloop van de spanningen bij het opstarten van de oscillatie.</span><a class="headerlink" href="#efig12" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 </div>
@@ -748,13 +843,13 @@ We kunnen de uitgang omwerken naar een impedantie van 50 Ohm door een transforma
 </section>
 <section id="periode-van-de-steady-state">
 <h3>1 periode van de Steady State<a class="headerlink" href="#periode-van-de-steady-state" title="Link to this heading">#</a></h3>
-<p>Rechtsonder op <a class="reference internal" href="#efig13"><span class="std std-numref">Fig. 76</span></a> kan je ook het verloop van de stroom door de voeding zien bij de voedingsgspanning. Aangezien beiden nauwelijks veranderen is dit verloop bijna niet zichtbaar.</p>
+<p>Rechtsonder op <a class="reference internal" href="#efig13"><span class="std std-numref">Fig. 77</span></a> kan je ook het verloop van de stroom door de voeding zien bij de voedingsgspanning. Aangezien beiden nauwelijks veranderen is dit verloop bijna niet zichtbaar.</p>
 <div class="cell tag_full-width docutils container">
 <div class="cell_output docutils container">
 <figure class="align-default" id="efig13">
 <img alt="_images/1a35e5537e4be08c9f3f9b5d0ab5de37f673a4481e9e61f734c71853864783a4.png" src="_images/1a35e5537e4be08c9f3f9b5d0ab5de37f673a4481e9e61f734c71853864783a4.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 76 </span><span class="caption-text">(links) Spanningen over (boven) en stromen door (onder) de transistor en de voeding als functie van de tijd voor 1 periode van de oscillatie. (rechts boven) het bekomen vermogen van de voeding en het verloren vermogen in de transistor als functie van de tijd. (rechts onder) Stroom versus spanning.</span><a class="headerlink" href="#efig13" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 77 </span><span class="caption-text">(links) Spanningen over (boven) en stromen door (onder) de transistor en de voeding als functie van de tijd voor 1 periode van de oscillatie. (rechts boven) het bekomen vermogen van de voeding en het verloren vermogen in de transistor als functie van de tijd. (rechts onder) Stroom versus spanning.</span><a class="headerlink" href="#efig13" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 </div>
@@ -768,7 +863,7 @@ We kunnen de uitgang omwerken naar een impedantie van 50 Ohm door een transforma
 <figure class="align-default" id="efig14">
 <img alt="_images/728e2bd79a2da16980f019f41d2cef525e203e43a73e24a389199b52bff44df1.svg" src="_images/728e2bd79a2da16980f019f41d2cef525e203e43a73e24a389199b52bff44df1.svg" />
 <figcaption>
-<p><span class="caption-number">Fig. 77 </span><span class="caption-text">.</span><a class="headerlink" href="#efig14" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 78 </span><span class="caption-text">Aanpassing van het schema van het eerste voorbeeld aan een coax kanel van 50 Ohm</span><a class="headerlink" href="#efig14" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 </div>
@@ -799,7 +894,7 @@ We kunnen de uitgang omwerken naar een impedantie van 50 Ohm door een transforma
 <figure class="align-default" id="efig15">
 <img alt="_images/b6c26ecc3e86a01a3dd3468f68e2600e97f223dc122aa818ef5abdac3717b054.svg" src="_images/b6c26ecc3e86a01a3dd3468f68e2600e97f223dc122aa818ef5abdac3717b054.svg" />
 <figcaption>
-<p><span class="caption-number">Fig. 78 </span><span class="caption-text">.</span><a class="headerlink" href="#efig15" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 79 </span><span class="caption-text">Schema van het tweede voorbeeld met berekende waardes</span><a class="headerlink" href="#efig15" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 </div>
@@ -809,13 +904,13 @@ We kunnen de uitgang omwerken naar een impedantie van 50 Ohm door een transforma
 <figure class="align-default" id="efig16">
 <img alt="_images/4745b02d663e7c7fc8e59634816189b510cdecfe1cdc2f4f617cb30e52f10822.svg" src="_images/4745b02d663e7c7fc8e59634816189b510cdecfe1cdc2f4f617cb30e52f10822.svg" />
 <figcaption>
-<p><span class="caption-number">Fig. 79 </span><span class="caption-text">.</span><a class="headerlink" href="#efig16" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 80 </span><span class="caption-text">Schema van het tweede voorbeeld met berekende waardes en aanpassing aan een 50 Ohm coax</span><a class="headerlink" href="#efig16" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 </div>
 </div>
 <div class="literal-block-wrapper docutils container" id="espice2">
-<div class="code-block-caption"><span class="caption-number">Spice Listing 10 </span><span class="caption-text">Klasse E spice file</span><a class="headerlink" href="#espice2" title="Link to this code">#</a></div>
+<div class="code-block-caption"><span class="caption-number">Spice Listing 13 </span><span class="caption-text">Klasse E spice file</span><a class="headerlink" href="#espice2" title="Link to this code">#</a></div>
 <div class="highlight-spice notranslate"><div class="highlight"><pre><span></span><span class="o">*</span><span class="w"> </span><span class="nx">Class</span><span class="w"> </span><span class="nx">E</span><span class="w"> </span><span class="nx">amp</span><span class="w"> </span><span class="mi">1</span>
 <span class="nx">M_M1</span><span class="w">         </span><span class="mi">2</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="nx">FDB33N25</span><span class="w"> </span>
 <span class="nx">L_L1</span><span class="w">         </span><span class="mi">2</span><span class="w"> </span><span class="mi">3</span><span class="w">  </span><span class="mi">270u</span><span class="nx">H</span><span class="w">  </span>
@@ -834,32 +929,32 @@ We kunnen de uitgang omwerken naar een impedantie van 50 Ohm door een transforma
 <figure class="align-default" id="efig17">
 <img alt="_images/1c8a54ca65827c2c0a2f68a12fe1f37863df2a3e8580c4b544e9a4498afe85a2.png" src="_images/1c8a54ca65827c2c0a2f68a12fe1f37863df2a3e8580c4b544e9a4498afe85a2.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 80 </span><span class="caption-text">.</span><a class="headerlink" href="#efig17" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 81 </span><span class="caption-text">VB2: bekomen oscillatie</span><a class="headerlink" href="#efig17" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 </div>
 </div>
-<section id="id4">
-<h3>detail van de opstartsequentie<a class="headerlink" href="#id4" title="Link to this heading">#</a></h3>
+<section id="id5">
+<h3>detail van de opstartsequentie<a class="headerlink" href="#id5" title="Link to this heading">#</a></h3>
 <div class="cell tag_full-width docutils container">
 <div class="cell_output docutils container">
 <figure class="align-default" id="efig18">
 <img alt="_images/900ec07b3dfa601dff4cab6a3ad9b983ce63637ae1465167bff795cafb8dec40.png" src="_images/900ec07b3dfa601dff4cab6a3ad9b983ce63637ae1465167bff795cafb8dec40.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 81 </span><span class="caption-text">.</span><a class="headerlink" href="#efig18" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 82 </span><span class="caption-text">Detail opstartsequentie van het tweede voorbeeld</span><a class="headerlink" href="#efig18" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 </div>
 </div>
 </section>
-<section id="id5">
-<h3>1 periode van de Steady State<a class="headerlink" href="#id5" title="Link to this heading">#</a></h3>
+<section id="id6">
+<h3>1 periode van de Steady State<a class="headerlink" href="#id6" title="Link to this heading">#</a></h3>
 <div class="cell tag_full-width docutils container">
 <div class="cell_output docutils container">
 <figure class="align-default" id="efig19">
 <img alt="_images/95efab36239eeee16672e5705d9c6de5262db5ecb9810b964cd5b01feb1389e8.png" src="_images/95efab36239eeee16672e5705d9c6de5262db5ecb9810b964cd5b01feb1389e8.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 82 </span><span class="caption-text">.</span><a class="headerlink" href="#efig19" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 83 </span><span class="caption-text">1 periode van de Steady State van het tweede voorbeeld</span><a class="headerlink" href="#efig19" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 </div>
@@ -885,13 +980,13 @@ We kunnen de uitgang omwerken naar een impedantie van 50 Ohm door een transforma
 </section>
 <section id="flat-top">
 <h2>Flat top<a class="headerlink" href="#flat-top" title="Link to this heading">#</a></h2>
-<p>In 2013 werd het originele design uitgebreid door ook de derde harmonische weg te filteren <span id="id6">[<a class="reference internal" href="References.html#id4" title="Arturo Mediano and Nathan O. Sokal. A Class-E RF Power Amplifier With a Flat-Top Transistor-Voltage Waveform. IEEE Transactions on Power Electronics, 28(11):5215–5221, November 2013. doi:10.1109/TPEL.2013.2242097.">6</a>]</span>.</p>
+<p>In 2013 werd het originele design uitgebreid door ook de derde harmonische weg te filteren <span id="id7">[<a class="reference internal" href="References.html#id4" title="Arturo Mediano and Nathan O. Sokal. A Class-E RF Power Amplifier With a Flat-Top Transistor-Voltage Waveform. IEEE Transactions on Power Electronics, 28(11):5215–5221, November 2013. doi:10.1109/TPEL.2013.2242097.">6</a>]</span>.</p>
 <div class="cell docutils container">
 <div class="cell_output docutils container">
 <figure class="align-default" id="efig20">
 <img alt="_images/3cceefaab60db55f67b551702770f7dcfc5889dc0f5235a241c15f2e1adfc548.svg" src="_images/3cceefaab60db55f67b551702770f7dcfc5889dc0f5235a241c15f2e1adfc548.svg" />
 <figcaption>
-<p><span class="caption-number">Fig. 83 </span><span class="caption-text">.</span><a class="headerlink" href="#efig20" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 84 </span><span class="caption-text">Klasse E met derde harmonische filter</span><a class="headerlink" href="#efig20" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 </div>
@@ -899,17 +994,27 @@ We kunnen de uitgang omwerken naar een impedantie van 50 Ohm door een transforma
 </section>
 <section id="on-chip-2ghz-klasse-e-versterker-voor-gsm-toepassingen">
 <h2>On-chip 2GHz Klasse E versterker voor GSM toepassingen<a class="headerlink" href="#on-chip-2ghz-klasse-e-versterker-voor-gsm-toepassingen" title="Link to this heading">#</a></h2>
-<p>In 1999 hebben King-Chun Tsai en Paul Gray een 1.9GHz klasse E versterker voor GSM en DECT telefoon toepassingen ontworpen <span id="id7">[<a class="reference internal" href="References.html#id9" title="King-Chun Tsai and P.R. Gray. A 1.9-GHz, 1-W CMOS class-E power amplifier for wireless communications. IEEE Journal of Solid-State Circuits, 34(7):962–970, July 1999. doi:10.1109/4.772411.">7</a>]</span>. De versterker bestaat uit 2 stages en elke stage is fully-differential uitgewerkt.</p>
-<p>Het uiteindelijke schema zie je in <a class="reference internal" href="#tsai-schema"><span class="std std-numref">schema 84</span></a></p>
+<p>In 1999 hebben King-Chun Tsai en Paul Gray een 1.9GHz klasse E versterker voor GSM en DECT telefoon toepassingen ontworpen <span id="id8">[<a class="reference internal" href="References.html#id9" title="King-Chun Tsai and P.R. Gray. A 1.9-GHz, 1-W CMOS class-E power amplifier for wireless communications. IEEE Journal of Solid-State Circuits, 34(7):962–970, July 1999. doi:10.1109/4.772411.">7</a>]</span>. De versterker bestaat uit 2 stages en elke stage is fully-differential uitgewerkt.</p>
+<p>Het uiteindelijke schema zie je in <a class="reference internal" href="#tsai-schema"><span class="std std-numref">schema 86</span></a></p>
+<div class="cell docutils container">
+<div class="cell_output docutils container">
+<figure class="align-default" id="id10">
+<img alt="_images/05cb4946bfc52c0fa69f47c4c424c2b7e77ad265bed04c72c516b8c8602932f1.png" src="_images/05cb4946bfc52c0fa69f47c4c424c2b7e77ad265bed04c72c516b8c8602932f1.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 85 </span><span class="caption-text">Klasse E met injection locking</span><a class="headerlink" href="#id10" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
+</div>
 <figure class="align-default" id="tsai-schema">
 <img alt="_images/Tsai.png" src="_images/Tsai.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 84 </span><span class="caption-text">Schema van de klasse E versterker met injection locking.</span><a class="headerlink" href="#tsai-schema" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 86 </span><span class="caption-text">Schema van de klasse E versterker met injection locking.</span><a class="headerlink" href="#tsai-schema" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
-<p>We kunnen dit schema uitwerken als een spice file (zie <a class="reference internal" href="#espicetsai"><span class="std std-numref">Spice Listing 11</span></a>) en deze spice file simuleren.</p>
+<p>We kunnen dit schema uitwerken als een spice file (zie <a class="reference internal" href="#espicetsai"><span class="std std-numref">Spice Listing 14</span></a>) en deze spice file simuleren.</p>
 <div class="literal-block-wrapper docutils container" id="espicetsai">
-<div class="code-block-caption"><span class="caption-number">Spice Listing 11 </span><span class="caption-text">Klasse E spice file met injection locking</span><a class="headerlink" href="#espicetsai" title="Link to this code">#</a></div>
+<div class="code-block-caption"><span class="caption-number">Spice Listing 14 </span><span class="caption-text">Klasse E spice file met injection locking</span><a class="headerlink" href="#espicetsai" title="Link to this code">#</a></div>
 <div class="highlight-spice notranslate"><div class="highlight"><pre><span></span><span class="o">*</span><span class="w"> </span><span class="nx">Class</span><span class="w"> </span><span class="nx">E</span><span class="w"> </span><span class="nx">Tsai</span>
 <span class="nx">M_SWn</span><span class="w">        </span><span class="mi">0</span><span class="w"> </span><span class="mi">11</span><span class="w"> </span><span class="mi">10</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="nx">nmos</span><span class="w"> </span><span class="nx">W</span><span class="p">=</span><span class="mi">31580u</span><span class="w"> </span><span class="nx">L</span><span class="p">=</span><span class="m m-Double">0.35</span><span class="nx">u</span>
 <span class="nx">M_SWp</span><span class="w">        </span><span class="mi">3</span><span class="w"> </span><span class="mi">11</span><span class="w"> </span><span class="mi">10</span><span class="w"> </span><span class="mi">3</span><span class="w"> </span><span class="nx">pmos</span><span class="w"> </span><span class="nx">W</span><span class="p">=</span><span class="mi">500u</span><span class="w"> </span><span class="nx">L</span><span class="p">=</span><span class="m m-Double">0.35</span><span class="nx">u</span>
@@ -943,30 +1048,30 @@ We kunnen de uitgang omwerken naar een impedantie van 50 Ohm door een transforma
 <figure class="align-default" id="esimtsai">
 <img alt="_images/bf16a9fb9b9d44f2d89ddac4fc6c0aa12fd67c4f1e0bd785cb4354f4f8bbd9b8.png" src="_images/bf16a9fb9b9d44f2d89ddac4fc6c0aa12fd67c4f1e0bd785cb4354f4f8bbd9b8.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 85 </span><span class="caption-text">(boven) aangelegde spanningen, (midden) spanning op de interne knopen en (onder) bekomen spanningen van het schema van <a class="reference internal" href="#tsai-schema"><span class="std std-numref">Fig. 84</span></a>.</span><a class="headerlink" href="#esimtsai" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 87 </span><span class="caption-text">(boven) aangelegde spanningen, (midden) spanning op de interne knopen en (onder) bekomen spanningen van het schema van <a class="reference internal" href="#tsai-schema"><span class="std std-numref">Fig. 86</span></a>.</span><a class="headerlink" href="#esimtsai" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 </div>
 </div>
-<p><a class="reference internal" href="#esimtsai"><span class="std std-numref">Fig. 85</span></a> toont de eerste 20 periodes uit de simulatie van het circuit. We merken op dat na ongeveer 10 periodes de uitgangssignalen in fase gaan lopen met de ingangssignalen.</p>
+<p><a class="reference internal" href="#esimtsai"><span class="std std-numref">Fig. 87</span></a> toont de eerste 20 periodes uit de simulatie van het circuit. We merken op dat na ongeveer 10 periodes de uitgangssignalen in fase gaan lopen met de ingangssignalen.</p>
 <div class="cell tag_full-width docutils container">
 <div class="cell_output docutils container">
 <figure class="align-default" id="etsaim21">
 <img alt="_images/9dd39f150c8167dbd933d2da8d1460c2da310761ce565b3bafb55a3a4b70172b.png" src="_images/9dd39f150c8167dbd933d2da8d1460c2da310761ce565b3bafb55a3a4b70172b.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 86 </span><span class="caption-text">Spanning over (linksboven), stroom door (linksonder) en vermogendissipatie (rechtsboven) van de input transistor van stage 2 (M21) als funktie van de tijd.(rechtsonder) De stroomdoor als functie van de spanning over M21. De gebieden met hoge spanning zonder stroom zijn in het groen aangegeven. De gebieden met hoge stroom en een beperkte spanning zijn in het rood aangegeven.</span><a class="headerlink" href="#etsaim21" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 88 </span><span class="caption-text">Spanning over (linksboven), stroom door (linksonder) en vermogendissipatie (rechtsboven) van de input transistor van stage 2 (M21) als funktie van de tijd.(rechtsonder) De stroomdoor als functie van de spanning over M21. De gebieden met hoge spanning zonder stroom zijn in het groen aangegeven. De gebieden met hoge stroom en een beperkte spanning zijn in het rood aangegeven.</span><a class="headerlink" href="#etsaim21" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 </div>
 </div>
-<p><a class="reference internal" href="#etsaim21"><span class="std std-numref">Fig. 86</span></a> gaat dieper in op de input transistor (M21) van stage 2. We herkennen de gebieden zonder stroom en met veel spanning over de transistor (groene achtergrond) en de gebieden met veel stroom en een beperkte spanning over de transistor (rode achtergrond). Toch is er ook een gebied waarin we zowel hoge stromen als hoge spanningen bekomen (witte achtergrond), In dit gebied hebben we dus geen perfecte klasse E werking. De tweede input transistor van stage 2 (M24) gedraagt zich op dezelfde wijze.
-<a class="reference internal" href="#etsaim22"><span class="std std-numref">Fig. 87</span></a> toont hetzelfde voor de kruisgekoppelde transistor (M22) van stage 2. Hier kunnen we wel de totale periode opdelen in de 2 gebieden die de Klasse E kenmerken. De tweede kruisgekoppelde transistor van stage 2 (M23) gedraagt zich op dezelfde wijze.</p>
+<p><a class="reference internal" href="#etsaim21"><span class="std std-numref">Fig. 88</span></a> gaat dieper in op de input transistor (M21) van stage 2. We herkennen de gebieden zonder stroom en met veel spanning over de transistor (groene achtergrond) en de gebieden met veel stroom en een beperkte spanning over de transistor (rode achtergrond). Toch is er ook een gebied waarin we zowel hoge stromen als hoge spanningen bekomen (witte achtergrond), In dit gebied hebben we dus geen perfecte klasse E werking. De tweede input transistor van stage 2 (M24) gedraagt zich op dezelfde wijze.
+<a class="reference internal" href="#etsaim22"><span class="std std-numref">Fig. 89</span></a> toont hetzelfde voor de kruisgekoppelde transistor (M22) van stage 2. Hier kunnen we wel de totale periode opdelen in de 2 gebieden die de Klasse E kenmerken. De tweede kruisgekoppelde transistor van stage 2 (M23) gedraagt zich op dezelfde wijze.</p>
 <div class="cell tag_full-width docutils container">
 <div class="cell_output docutils container">
 <figure class="align-default" id="etsaim22">
 <img alt="_images/de4dc7fc999f7e1076bba9e85cce45ee315d05398125c1f8aacf4615c122890f.png" src="_images/de4dc7fc999f7e1076bba9e85cce45ee315d05398125c1f8aacf4615c122890f.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 87 </span><span class="caption-text">Spanning over (linksboven), stroom door (linksonder) en vermogendissipatie (rechtsboven) van de koppeltransistor van stage 2 (M22) als funktie van de tijd.(rechtsonder) De stroom door als functie van de spanning over M22. De gebieden met hoge spanning zonder stroom zijn in het groen aangegeven. De gebieden met hoge stroom en een beperkte spanning zijn in het rood aangegeven.</span><a class="headerlink" href="#etsaim22" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 89 </span><span class="caption-text">Spanning over (linksboven), stroom door (linksonder) en vermogendissipatie (rechtsboven) van de koppeltransistor van stage 2 (M22) als funktie van de tijd.(rechtsonder) De stroom door als functie van de spanning over M22. De gebieden met hoge spanning zonder stroom zijn in het groen aangegeven. De gebieden met hoge stroom en een beperkte spanning zijn in het rood aangegeven.</span><a class="headerlink" href="#etsaim22" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 </div>
@@ -1055,8 +1160,8 @@ We kunnen de uitgang omwerken naar een impedantie van 50 Ohm door een transforma
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vb2-een-50w-versterker-of-137-77-khz">VB2: Een 50W versterker of 137.77 kHz</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">detail van de opstartsequentie</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">1 periode van de Steady State</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">detail van de opstartsequentie</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">1 periode van de Steady State</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#w-aan-1mhz">2 W aan 1MHz</a></li>
 </ul>
 </li>

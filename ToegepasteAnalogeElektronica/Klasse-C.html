@@ -43,7 +43,7 @@
     <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="_static/exercise.css" />
-    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=87e54e7c" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
@@ -711,6 +711,20 @@ De hoeveelheid stroom die we krijgn wordt bepaald door <span class="math notrans
 </div>
 <p>De LRC kring is een parallel LRC kring. Een parallel LRC kring heeft de eigenschap dat hij een aangelegde gepulste stroomsignaal gaat omzetten in een sinusvormige spanning op de resonantiefrequentie. Aangezien de spanning over de belasting (<span class="math notranslate nohighlight">\(R_L\)</span>) dan sinusvormig is, gaat de stroom door de belasting ook sinusvormig zijn.</p>
 <p>De overeenkomende SPICE code voor dit circuit is:</p>
+<div class="literal-block-wrapper docutils container" id="listing1c">
+<div class="code-block-caption"><span class="caption-number">Spice Listing 5 </span><span class="caption-text">basis Klasse C circuit</span><a class="headerlink" href="#listing1c" title="Link to this code">#</a></div>
+<div class="highlight-spice notranslate"><div class="highlight"><pre><span></span><span class="o">*</span><span class="w"> </span><span class="nx">Class</span><span class="w"> </span><span class="nx">C</span><span class="w"> </span><span class="nx">amp</span><span class="w"> </span><span class="mi">1</span>
+<span class="nx">Q_Q1</span><span class="w">         </span><span class="mi">2</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="nx">Q2</span>
+<span class="nx">L_L1</span><span class="w">         </span><span class="mi">2</span><span class="w"> </span><span class="mi">3</span><span class="w">  </span><span class="mi">1u</span><span class="nx">H</span>
+<span class="nx">C_C1</span><span class="w">         </span><span class="mi">2</span><span class="w"> </span><span class="mi">3</span><span class="w">  </span><span class="mi">10</span><span class="nx">nF</span>
+<span class="nx">R_RL</span><span class="w">         </span><span class="mi">2</span><span class="w"> </span><span class="mi">3</span><span class="w">  </span><span class="mi">60</span>
+<span class="nx">V_Vdd</span><span class="w">        </span><span class="mi">3</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="mi">11</span><span class="nx">V</span>
+<span class="nx">R_Rin</span><span class="w">        </span><span class="mi">4</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="mi">100</span>
+<span class="nx">V_Vin</span><span class="w">        </span><span class="mi">4</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="nx">sin</span><span class="p">(</span><span class="m m-Double">-1.5</span><span class="w"> </span><span class="m m-Double">2.7</span><span class="w"> </span><span class="mi">1591500</span><span class="p">)</span><span class="w"> </span><span class="nx">DC</span><span class="p">=</span><span class="m m-Double">-1.5</span>
+<span class="p">.</span><span class="nx">model</span><span class="w"> </span><span class="nx">Q2</span><span class="w">  </span><span class="nx">NPN</span><span class="p">(</span><span class="nx">Is</span><span class="p">=</span><span class="m m-Double">14.34</span><span class="kd">f</span><span class="w"> </span><span class="nx">BF</span><span class="p">=</span><span class="mi">200</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
 <p>In de <code class="docutils literal notranslate"><span class="pre">.model</span></code> kaart zien we dat we voor de bipolaire transistor een model gebruiken dat we Q2 hebben genoemd. Dit zijn biploaire transistors waar we een <span class="math notranslate nohighlight">\(\beta_{Forward}\)</span> hebben gelijk aan 200.</p>
 <p>Het circuit waarbij we de knoopnummers een rood label gegeven hebben wordt dan:</p>
 <div class="cell docutils container">
@@ -937,6 +951,21 @@ Wat kiezen we als de maximale stroom van de transistor 360 mA is?</p>
 </div>
 <p>Het is ook zinvol om een simulatie te doen van de amplitude van het signaal als functie van de frequentie van de aansturing.
 Op het eerste zicht lijkt het <code class="docutils literal notranslate"><span class="pre">.ac</span></code> commando in SPICE hier de aangeweze methode. Dit is echter niet het geval. Het <code class="docutils literal notranslate"><span class="pre">.ac</span></code> commando in SPICE doet een klein signaal simulatie, en hierbij wordt aangenomen dat een volledig sinusvormig signaal zich doorheen het circuit beweegt van de ingang naar de uitgang. Dat is voor een klasse C versterker zeker niet het geval. Eigenlijk is het enige werkingsregime waar we een kleinsignaalsimulatie zouden kunnen uitvoeren het instelpunt waarbij <span class="math notranslate nohighlight">\(\alpha=\pi\)</span>, met andere woorden de klasse-A modus.</p>
+<div class="literal-block-wrapper docutils container" id="listingc-ac">
+<div class="code-block-caption"><span class="caption-number">Spice Listing 6 </span><span class="caption-text">Klasse C circuit AC simulatie</span><a class="headerlink" href="#listingc-ac" title="Link to this code">#</a></div>
+<div class="highlight-spice notranslate"><div class="highlight"><pre><span></span><span class="o">*</span><span class="w"> </span><span class="nx">Class</span><span class="w"> </span><span class="nx">C</span><span class="w"> </span><span class="nx">amp</span><span class="w"> </span><span class="mi">1</span>
+<span class="nx">Q_Q1</span><span class="w">         </span><span class="mi">2</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="nx">Q2</span>
+<span class="nx">L_L1</span><span class="w">         </span><span class="mi">2</span><span class="w"> </span><span class="mi">3</span><span class="w">  </span><span class="mi">1u</span><span class="nx">H</span><span class="w">  </span>
+<span class="nx">C_C1</span><span class="w">         </span><span class="mi">2</span><span class="w"> </span><span class="mi">3</span><span class="w">  </span><span class="mi">10</span><span class="nx">n</span><span class="w">  </span>
+<span class="nx">R_RL</span><span class="w">         </span><span class="mi">2</span><span class="w"> </span><span class="mi">3</span><span class="w">  </span><span class="mi">60</span><span class="w">  </span>
+<span class="nx">V_Vdd</span><span class="w">        </span><span class="mi">3</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="mi">11</span><span class="nx">V</span>
+<span class="nx">R_Rin</span><span class="w">        </span><span class="mi">4</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="mi">100</span>
+<span class="nx">V_Vin</span><span class="w">        </span><span class="mi">4</span><span class="w"> </span><span class="mi">5</span><span class="w">  </span><span class="nx">AC</span><span class="w"> </span><span class="m m-Double">0.5</span><span class="nx">V</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="nx">DC</span><span class="w"> </span><span class="mi">0</span>
+<span class="nx">V_VinDC</span><span class="w">      </span><span class="mi">5</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="m m-Double">0.7</span><span class="nx">V</span>
+<span class="p">.</span><span class="nx">model</span><span class="w"> </span><span class="nx">Q2</span><span class="w">  </span><span class="nx">NPN</span><span class="p">(</span><span class="nx">Is</span><span class="p">=</span><span class="m m-Double">14.34</span><span class="kd">f</span><span class="w"> </span><span class="nx">BF</span><span class="p">=</span><span class="mi">200</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
 <div class="cell docutils container">
 <div class="cell_output docutils container">
 <figure class="align-default" id="cfig15">
@@ -1042,6 +1071,21 @@ Een van de opties om de reference van de voeding naar de grond te brengen, is he
 </div>
 </div>
 <p>Wanneer we het bovenstaand circuit simuleren in spice, krijgen we hetvolgende resultaat.</p>
+<div class="literal-block-wrapper docutils container" id="listingc3">
+<div class="code-block-caption"><span class="caption-number">Spice Listing 7 </span><span class="caption-text">Spice code van de klasse C versterker waarbij de uitgangspanning oscilleert rond de grond</span><a class="headerlink" href="#listingc3" title="Link to this code">#</a></div>
+<div class="highlight-spice notranslate"><div class="highlight"><pre><span></span><span class="o">*</span><span class="w"> </span><span class="nx">klasseC</span><span class="w">   </span><span class="nx">versie2</span>
+<span class="nx">Q_Q1</span><span class="w">         </span><span class="mi">2</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="mi">0</span><span class="w">  </span><span class="nx">Q2</span>
+<span class="nx">L_L1</span><span class="w">         </span><span class="mi">0</span><span class="w"> </span><span class="mi">3</span><span class="w">    </span><span class="mi">1u</span><span class="nx">H</span><span class="w">  </span>
+<span class="nx">C_C1</span><span class="w">         </span><span class="mi">0</span><span class="w"> </span><span class="mi">3</span><span class="w">    </span><span class="mi">10</span><span class="nx">n</span><span class="w">  </span>
+<span class="nx">R_R1</span><span class="w">         </span><span class="mi">0</span><span class="w"> </span><span class="mi">3</span><span class="w">    </span><span class="mi">100</span><span class="w">  </span>
+<span class="nx">V_V3</span><span class="w">         </span><span class="mi">4</span><span class="w"> </span><span class="mi">0</span><span class="w">    </span><span class="mi">11</span><span class="nx">V</span>
+<span class="nx">V_V5</span><span class="w">         </span><span class="mi">1</span><span class="w"> </span><span class="mi">0</span><span class="w">    </span><span class="nx">sin</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="w"> </span><span class="m m-Double">3.09</span><span class="w"> </span><span class="mi">1591500</span><span class="p">)</span><span class="w"> </span><span class="nx">DC</span><span class="p">=</span><span class="o">-</span><span class="mi">2</span>
+<span class="nx">C_C2</span><span class="w">         </span><span class="mi">2</span><span class="w"> </span><span class="mi">3</span><span class="w">    </span><span class="mi">100</span><span class="nx">n</span><span class="w">  </span>
+<span class="nx">L_L2</span><span class="w">         </span><span class="mi">2</span><span class="w"> </span><span class="mi">4</span><span class="w">    </span><span class="mi">20u</span><span class="nx">H</span>
+<span class="p">.</span><span class="nx">model</span><span class="w"> </span><span class="nx">Q2</span><span class="w">  </span><span class="nx">NPN</span><span class="p">(</span><span class="nx">Is</span><span class="p">=</span><span class="m m-Double">14.34</span><span class="kd">f</span><span class="w"> </span><span class="nx">BF</span><span class="p">=</span><span class="m m-Double">255.9</span><span class="w"> </span><span class="nx">Rb</span><span class="p">=</span><span class="mi">100</span><span class="w"> </span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
 <div class="cell docutils container">
 <div class="cell_output docutils container">
 <figure class="align-default" id="cfig21">

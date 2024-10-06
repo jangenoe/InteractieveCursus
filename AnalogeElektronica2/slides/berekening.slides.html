@@ -7799,222 +7799,7 @@ div .csl-right-inline{text-align: left}</style>
 <!-- End of mathjax configuration --></head>
 <body class="jp-Notebook" data-jp-theme-light="true" data-jp-theme-name="JupyterLab Light">
 <div class="reveal">
-<div class="slides"><section data-state="kuleuven_title_slide reveal"><section><div class="title">MNA analyse</div><div class="subtitle">Berekening van elektronische circuits</div><div class="speaker kuleuvenwhite">Jan Genoe</div><div class="date kuleuvenwhite">juni 2024</div></section></section><section data-state="kuleuven_slide"><section><h6>weerstand met labels voor MNA matrix</h6><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noInput" id="cell-id=d1c4c7d3-2b74-41c6-a2f9-0974cd74f532">
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-<div class="jp-OutputArea jp-Cell-outputArea">
-<div class="jp-OutputArea-child">
-<div class="jp-RenderedSVG jp-OutputArea-output" data-mime-type="image/svg+xml" tabindex="0">
-<?xml version="1.0" encoding="utf-8" standalone="no"?>
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
-  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-
-<svg height="78.16pt" version="1.1" viewbox="0 0 132.984 78.16" width="132.984pt" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-<metadata>
-<rdf:rdf xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-<cc:work>
-<dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"></dc:type>
-<dc:date>2024-07-02T21:43:21.471385</dc:date>
-<dc:format>image/svg+xml</dc:format>
-<dc:creator>
-<cc:agent>
-<dc:title>Matplotlib v3.8.4, https://matplotlib.org/</dc:title>
-</cc:agent>
-</dc:creator>
-</cc:work>
-</rdf:rdf>
-</metadata>
-<defs>
-<style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
-</defs>
-<g id="figure_1">
-<g id="patch_1">
-<path d="M 0 78.16 
-L 132.984 78.16 
-L 132.984 0 
-L 0 0 
-z
-" style="fill: #ffffff"></path>
-</g>
-<g id="axes_1">
-<g id="line2d_1">
-<path clip-path="url(#p8931bdda6c)" d="M 12.492 28.48 
-L 48.492 28.48 
-L 51.492 19.48 
-L 57.492 37.48 
-L 63.492 19.48 
-L 69.492 37.48 
-L 75.492 19.48 
-L 81.492 37.48 
-L 84.492 28.48 
-L 120.492 28.48 
-" style="fill: none; stroke: #000000; stroke-width: 2; stroke-linecap: round"></path>
-</g>
-<g id="line2d_2">
-<path clip-path="url(#p8931bdda6c)" d="M 30.492 66.28 
-L 91.692 66.28 
-" style="fill: none; stroke: #ff0000; stroke-width: 2; stroke-linecap: round"></path>
-</g>
-<g id="patch_2">
-<path clip-path="url(#p8931bdda6c)" d="M 91.692 62.68 
-L 102.492 66.28 
-L 91.692 69.88 
-z
-" style="fill: #ff0000"></path>
-</g>
-<g id="text_1">
-<!-- R -->
-<g transform="translate(61.628094 12.968437) scale(0.14 -0.14)">
-<defs>
-<path d="M 2841 2188 
-Q 3044 2119 3236 1894 
-Q 3428 1669 3622 1275 
-L 4263 0 
-L 3584 0 
-L 2988 1197 
-Q 2756 1666 2539 1819 
-Q 2322 1972 1947 1972 
-L 1259 1972 
-L 1259 0 
-L 628 0 
-L 628 4666 
-L 2053 4666 
-Q 2853 4666 3247 4331 
-Q 3641 3997 3641 3322 
-Q 3641 2881 3436 2590 
-Q 3231 2300 2841 2188 
-z
-M 1259 4147 
-L 1259 2491 
-L 2053 2491 
-Q 2509 2491 2742 2702 
-Q 2975 2913 2975 3322 
-Q 2975 3731 2742 3939 
-Q 2509 4147 2053 4147 
-L 1259 4147 
-z
-" id="DejaVuSans-52" transform="scale(0.015625)"></path>
-</defs>
-<use xlink:href="#DejaVuSans-52"></use>
-</g>
-</g>
-<g id="text_2">
-<!-- $I_{ij}$ -->
-<g style="fill: #ff0000" transform="translate(61.452 58.34) scale(0.14 -0.14)">
-<defs>
-<path d="M 1081 4666 
-L 1716 4666 
-L 806 0 
-L 172 0 
-L 1081 4666 
-z
-" id="DejaVuSans-Oblique-49" transform="scale(0.015625)"></path>
-<path d="M 1172 4863 
-L 1747 4863 
-L 1606 4134 
-L 1031 4134 
-L 1172 4863 
-z
-M 909 3500 
-L 1484 3500 
-L 800 0 
-L 225 0 
-L 909 3500 
-z
-" id="DejaVuSans-Oblique-69" transform="scale(0.015625)"></path>
-<path d="M 928 3500 
-L 1503 3500 
-L 813 -63 
-L 809 -78 
-Q 694 -675 544 -897 
-Q 403 -1106 132 -1218 
-Q -138 -1331 -506 -1331 
-L -722 -1331 
-L -628 -844 
-L -481 -844 
-Q -144 -844 -1 -703 
-Q 141 -563 238 -63 
-L 928 3500 
-z
-M 1197 4863 
-L 1772 4863 
-L 1631 4134 
-L 1056 4134 
-L 1197 4863 
-z
-" id="DejaVuSans-Oblique-6a" transform="scale(0.015625)"></path>
-</defs>
-<use transform="translate(0 0.09375)" xlink:href="#DejaVuSans-Oblique-49"></use>
-<use transform="translate(29.492188 -16.3125) scale(0.7)" xlink:href="#DejaVuSans-Oblique-69"></use>
-<use transform="translate(48.94043 -16.3125) scale(0.7)" xlink:href="#DejaVuSans-Oblique-6a"></use>
-</g>
-</g>
-<g id="patch_3">
-<path clip-path="url(#p8931bdda6c)" d="M 12.492 31.18 
-C 13.208048 31.18 13.894866 30.895511 14.401188 30.389188 
-C 14.907511 29.882866 15.192 29.196048 15.192 28.48 
-C 15.192 27.763952 14.907511 27.077134 14.401188 26.570812 
-C 13.894866 26.064489 13.208048 25.78 12.492 25.78 
-C 11.775952 25.78 11.089134 26.064489 10.582812 26.570812 
-C 10.076489 27.077134 9.792 27.763952 9.792 28.48 
-C 9.792 29.196048 10.076489 29.882866 10.582812 30.389188 
-C 11.089134 30.895511 11.775952 31.18 12.492 31.18 
-z
-" style="fill: #ffffff; stroke: #000000; stroke-width: 2; stroke-linejoin: miter"></path>
-</g>
-<g id="text_3">
-<!-- $V_{i}$ -->
-<g transform="translate(6.122 19.268437) scale(0.14 -0.14)">
-<defs>
-<path d="M 1319 0 
-L 500 4666 
-L 1119 4666 
-L 1797 653 
-L 4063 4666 
-L 4750 4666 
-L 2053 0 
-L 1319 0 
-z
-" id="DejaVuSans-Oblique-56" transform="scale(0.015625)"></path>
-</defs>
-<use transform="translate(0 0.09375)" xlink:href="#DejaVuSans-Oblique-56"></use>
-<use transform="translate(68.408203 -16.3125) scale(0.7)" xlink:href="#DejaVuSans-Oblique-69"></use>
-</g>
-</g>
-<g id="patch_4">
-<path clip-path="url(#p8931bdda6c)" d="M 120.492 31.18 
-C 121.208048 31.18 121.894866 30.895511 122.401188 30.389188 
-C 122.907511 29.882866 123.192 29.196048 123.192 28.48 
-C 123.192 27.763952 122.907511 27.077134 122.401188 26.570812 
-C 121.894866 26.064489 121.208048 25.78 120.492 25.78 
-C 119.775952 25.78 119.089134 26.064489 118.582812 26.570812 
-C 118.076489 27.077134 117.792 27.763952 117.792 28.48 
-C 117.792 29.196048 118.076489 29.882866 118.582812 30.389188 
-C 119.089134 30.895511 119.775952 31.18 120.492 31.18 
-z
-" style="fill: #ffffff; stroke: #000000; stroke-width: 2; stroke-linejoin: miter"></path>
-</g>
-<g id="text_4">
-<!-- $V_{j}$ -->
-<g transform="translate(114.122 17.84) scale(0.14 -0.14)">
-<use transform="translate(0 0.09375)" xlink:href="#DejaVuSans-Oblique-56"></use>
-<use transform="translate(68.408203 -16.3125) scale(0.7)" xlink:href="#DejaVuSans-Oblique-6a"></use>
-</g>
-</g>
-</g>
-</g>
-<defs>
-<clippath id="p8931bdda6c">
-<rect height="78.16" width="132.984" x="0" y="-0"></rect>
-</clippath>
-</defs>
-</svg>
-</div>
-</div>
-</div>
-</div>
-</div></section></section><section data-state="kuleuven_slide"><section><h6>Vergelijkingen voor de stroom</h6>
+<div class="slides"><section data-state="kuleuven_title_slide reveal"><section><div class="title">MNA analyse</div><div class="subtitle">Berekening van elektronische circuits</div><div class="speaker kuleuvenwhite">Jan Genoe</div><div class="date kuleuvenwhite">juni 2024</div></section></section><section data-state="kuleuven_slide"><section><h6>Vergelijkingen voor de stroom</h6>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=f2e6bcca-d4d3-4df2-a91c-b2d67c5013b2">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
@@ -8068,7 +7853,7 @@ V_i-V_j - R I_{ij} = 0.
 </div>
 </div>
 </div>
-</div></section></section><section data-state="kuleuven_slide"><section><h6>Alternatieve stempel van de weerstand</h6>
+</div></section></section><section data-state="kuleuven_slide"><section><h6>Alternatieve stempel van de weerstand</h6><div class="BottomSlideReference"></div>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=142f2eed-35e6-48ca-bfe1-16a0532d2c52">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
@@ -8098,7 +7883,7 @@ V_i-V_j - R I_{ij} = 0.
 </div>
 </div>
 </div>
-</div></section></section><section data-state="kuleuven_slide"><section><h6>Condensator schema</h6><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noInput" id="cell-id=facb9357-1256-4bd0-9bbb-db1507918341">
+</div></section></section><section data-state="kuleuven_slide"><section><h6>Condensator schema</h6><div class="BottomSlideReference"></div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noInput" id="cell-id=facb9357-1256-4bd0-9bbb-db1507918341">
 <div class="jp-Cell-outputWrapper">
 <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
 </div>
@@ -8662,7 +8447,7 @@ I_{DS}= g_m (V_G-V_S) .
 </div>
 </div>
 </div>
-</div></section></section><section data-state="kuleuven_slide"><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noInput" id="cell-id=e92feb4b-311e-4525-8cfd-22bc1d5dd288">
+</div></section></section><section data-state="kuleuven_slide"><section><h6></h6><div class="BottomSlideReference"></div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noInput" id="cell-id=e92feb4b-311e-4525-8cfd-22bc1d5dd288">
 <div class="jp-Cell-outputWrapper">
 <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
 </div>

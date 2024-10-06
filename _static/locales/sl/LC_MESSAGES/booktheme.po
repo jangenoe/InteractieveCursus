@@ -8,32 +8,32 @@ msgstr ""
 "Language: sl\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-msgid "By the"
-msgstr "Avtor"
-
-msgid "Toggle navigation"
-msgstr "Preklopi navigacijo"
-
-msgid "Copyright"
-msgstr "avtorske pravice"
-
-msgid "Open an issue"
-msgstr "Odprite številko"
+msgid "repository"
+msgstr "odlagališče"
 
 msgid "Download this page"
 msgstr "Prenesite to stran"
 
+msgid "Open an issue"
+msgstr "Odprite številko"
+
+msgid "Toggle navigation"
+msgstr "Preklopi navigacijo"
+
+msgid "Fullscreen mode"
+msgstr "Celozaslonski način"
+
+msgid "Edit this page"
+msgstr "Uredite to stran"
+
 msgid "previous page"
 msgstr "Prejšnja stran"
 
-msgid "suggest edit"
-msgstr "predlagajte urejanje"
+msgid "Copyright"
+msgstr "avtorske pravice"
 
-msgid "Print to PDF"
-msgstr "Natisni v PDF"
-
-msgid "Download source file"
-msgstr "Prenesite izvorno datoteko"
+msgid "Sphinx Book Theme"
+msgstr "Tema knjige Sphinx"
 
 msgid "Contents"
 msgstr "Vsebina"
@@ -41,35 +41,35 @@ msgstr "Vsebina"
 msgid "By"
 msgstr "Avtor"
 
-msgid "Fullscreen mode"
-msgstr "Celozaslonski način"
+msgid "Print to PDF"
+msgstr "Natisni v PDF"
 
 msgid "Source repository"
 msgstr "Izvorno skladišče"
 
-msgid "repository"
-msgstr "odlagališče"
+msgid "By the"
+msgstr "Avtor"
+
+msgid "open issue"
+msgstr "odprto vprašanje"
+
+msgid "suggest edit"
+msgstr "predlagajte urejanje"
 
 msgid "Theme by the"
 msgstr "Tema avtorja"
 
-msgid "Last updated on"
-msgstr "Nazadnje posodobljeno dne"
+msgid "Launch"
+msgstr "Kosilo"
 
 msgid "next page"
 msgstr "Naslednja stran"
 
-msgid "Sphinx Book Theme"
-msgstr "Tema knjige Sphinx"
-
-msgid "Launch"
-msgstr "Kosilo"
-
-msgid "Edit this page"
-msgstr "Uredite to stran"
+msgid "Download source file"
+msgstr "Prenesite izvorno datoteko"
 
 msgid "Download notebook file"
 msgstr "Prenesite datoteko zvezka"
 
-msgid "open issue"
-msgstr "odprto vprašanje"
+msgid "Last updated on"
+msgstr "Nazadnje posodobljeno dne"
