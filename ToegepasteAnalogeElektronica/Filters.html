@@ -573,24 +573,24 @@ document.write(`
 <p>De transfer functie van een eerste orde blok is:</p>
 <div class="math notranslate nohighlight">
 \[ V_{out}=-\frac{b_1(j \omega) +b_0}{a_1(j \omega) +a_0} V_{in}\]</div>
-<p><a class="reference internal" href="#fig1"><span class="std std-numref">Fig. 90</span></a> toont een algemene bouwblok om een eerste orde filter mee te maken.</p>
+<p><a class="reference internal" href="#fig1"><span class="std std-numref">Fig. 88</span></a> toont een algemene bouwblok om een eerste orde filter mee te maken.</p>
 <div class="cell docutils container">
 <div class="cell_output docutils container">
 <figure class="align-default" id="fig1">
 <img alt="_images/d3571e4a5c72543979ca7e28e234fc51390b382109ab2cb7505aafc42e1cf66c.svg" src="_images/d3571e4a5c72543979ca7e28e234fc51390b382109ab2cb7505aafc42e1cf66c.svg" />
 <figcaption>
-<p><span class="caption-number">Fig. 90 </span><span class="caption-text">Basisblok van een algemeen eerste orde filter.</span><a class="headerlink" href="#fig1" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 88 </span><span class="caption-text">Basisblok van een algemeen eerste orde filter.</span><a class="headerlink" href="#fig1" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 </div>
 </div>
-<p>Om dit basisblok in detail te berekenen schrijven we dit eerst in functie van de 2 impedanties <span class="math notranslate nohighlight">\(Z_1\)</span> en <span class="math notranslate nohighlight">\(Z_2\)</span> (zie <a class="reference internal" href="#fig2"><span class="std std-numref">Fig. 91</span></a>).</p>
+<p>Om dit basisblok in detail te berekenen schrijven we dit eerst in functie van de 2 impedanties <span class="math notranslate nohighlight">\(Z_1\)</span> en <span class="math notranslate nohighlight">\(Z_2\)</span> (zie <a class="reference internal" href="#fig2"><span class="std std-numref">Fig. 89</span></a>).</p>
 <div class="cell docutils container">
 <div class="cell_output docutils container">
 <figure class="align-default" id="fig2">
 <img alt="_images/52b4ff1d0c94511884d898d7e77945332453aef390f15a2c7c7d80fa98e4894e.svg" src="_images/52b4ff1d0c94511884d898d7e77945332453aef390f15a2c7c7d80fa98e4894e.svg" />
 <figcaption>
-<p><span class="caption-number">Fig. 91 </span><span class="caption-text">Basisblok van een algemeen eerste orde filter, beschreven in functie van de impedanties.</span><a class="headerlink" href="#fig2" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 89 </span><span class="caption-text">Basisblok van een algemeen eerste orde filter, beschreven in functie van de impedanties.</span><a class="headerlink" href="#fig2" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 </div>
@@ -608,7 +608,7 @@ document.write(`
 \[ V_{out} \approx -\frac{C_1}{C_2} \frac{j \omega  +\frac{1}{R_1 C_1}}{j \omega  +\frac{1}{R_2 C_2}} V_{in} \]</div>
 <div class="math notranslate nohighlight">
 \[ V_{out} \approx -\frac{C_1}{C_2} \frac{j \omega  -n_1 }{j \omega  -p_1} V_{in} \]</div>
-<p>waarbij <span class="math notranslate nohighlight">\(n_1 = \frac{1}{R_1 C_1} \)</span> en <span class="math notranslate nohighlight">\( p_1= \frac{1}{R_2 C_2} \)</span>. Het bovenstaande bouwblok kunnen we in zijn algemene vorm gebruiken (met dus 2 weerstanden en 2 condensators), waarbij we zowel een pool als een nul bekomen. Voor heel wat toepassingen kunnen we echter een van de 4 elementen weglaten. <a class="reference internal" href="#fig3"><span class="std std-numref">Fig. 92</span></a>  toont het circuit voor een eerste orde laagdoorlaat met transferfunctie:</p>
+<p>waarbij <span class="math notranslate nohighlight">\(n_1 = \frac{1}{R_1 C_1} \)</span> en <span class="math notranslate nohighlight">\( p_1= \frac{1}{R_2 C_2} \)</span>. Het bovenstaande bouwblok kunnen we in zijn algemene vorm gebruiken (met dus 2 weerstanden en 2 condensators), waarbij we zowel een pool als een nul bekomen. Voor heel wat toepassingen kunnen we echter een van de 4 elementen weglaten. <a class="reference internal" href="#fig3"><span class="std std-numref">Fig. 90</span></a>  toont het circuit voor een eerste orde laagdoorlaat met transferfunctie:</p>
 <div class="math notranslate nohighlight">
 \[ V_{out} \approx -\frac{1}{R_1 C_2} \frac{1 }{j \omega  -p_1} V_{in} \]</div>
 <p>wat bij voldoende lage frequentie <span class="math notranslate nohighlight">\( V_{out} \approx -\frac{R_2}{R_1 }  V_{in} \)</span> geeft</p>
@@ -617,12 +617,12 @@ document.write(`
 <figure class="align-default" id="fig3">
 <img alt="_images/455951b496541e1ecfa77d0c571a0e413b8e93000d4957e7e8634a915f6dae79.svg" src="_images/455951b496541e1ecfa77d0c571a0e413b8e93000d4957e7e8634a915f6dae79.svg" />
 <figcaption>
-<p><span class="caption-number">Fig. 92 </span><span class="caption-text">eerste orde laagdoorlaatfilter.</span><a class="headerlink" href="#fig3" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 90 </span><span class="caption-text">eerste orde laagdoorlaatfilter.</span><a class="headerlink" href="#fig3" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 </div>
 </div>
-<p>Op een gelijkaardige wijze kunnen we uitrekenen dat het circuit in <a class="reference internal" href="#fig4"><span class="std std-numref">Fig. 93</span></a>  ons een hoogdoorlaatfilter geeft met responsie:</p>
+<p>Op een gelijkaardige wijze kunnen we uitrekenen dat het circuit in <a class="reference internal" href="#fig4"><span class="std std-numref">Fig. 91</span></a>  ons een hoogdoorlaatfilter geeft met responsie:</p>
 <div class="math notranslate nohighlight">
 \[ V_{out} \approx -\frac{C_1}{ C_2} \frac{j \omega }{j \omega  -p_1} V_{in} \]</div>
 <div class="cell docutils container">
@@ -630,7 +630,7 @@ document.write(`
 <figure class="align-default" id="fig4">
 <img alt="_images/55a39d80d77938043a0c4504bb9051333e2ea79cf9c785d1c3be76bf2c572472.svg" src="_images/55a39d80d77938043a0c4504bb9051333e2ea79cf9c785d1c3be76bf2c572472.svg" />
 <figcaption>
-<p><span class="caption-number">Fig. 93 </span><span class="caption-text">eerste orde hoogdoorlaatfilter.</span><a class="headerlink" href="#fig4" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 91 </span><span class="caption-text">eerste orde hoogdoorlaatfilter.</span><a class="headerlink" href="#fig4" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 </div>
@@ -646,7 +646,7 @@ document.write(`
 <h4>BiQuad filter<a class="headerlink" href="#biquad-filter" title="Link to this heading">#</a></h4>
 <section id="het-gedeelte-van-het-biquad-circuit-dat-de-polen-bepaalt">
 <h5>Het gedeelte van het biquad circuit dat de polen bepaalt<a class="headerlink" href="#het-gedeelte-van-het-biquad-circuit-dat-de-polen-bepaalt" title="Link to this heading">#</a></h5>
-<p>We werken hieronder het circuit uit in 2 stappen. We berekenen hiervoor eerst de spanningen uit op de knopen van het bovenste gedeelte van het BiQuad circuit dat we tonen in <a class="reference internal" href="#fig5"><span class="std std-numref">Fig. 94</span></a> .  Het doel van dit deel van het circuit is dit uit te rekenen als een universeel circuit voor:</p>
+<p>We werken hieronder het circuit uit in 2 stappen. We berekenen hiervoor eerst de spanningen uit op de knopen van het bovenste gedeelte van het BiQuad circuit dat we tonen in <a class="reference internal" href="#fig5"><span class="std std-numref">Fig. 92</span></a> .  Het doel van dit deel van het circuit is dit uit te rekenen als een universeel circuit voor:</p>
 <div class="math notranslate nohighlight">
 \[ V_{out*} = - \frac{1}{a_2 (j \omega)^2  + a_1 (j \omega) +a_0} V_{in} \]</div>
 <div class="cell docutils container">
@@ -654,7 +654,7 @@ document.write(`
 <figure class="align-default" id="fig5">
 <img alt="_images/29e8d0b91e8e1398305df121a9d7861566d91a2053e6ea38d793aa1fd3b1f003.svg" src="_images/29e8d0b91e8e1398305df121a9d7861566d91a2053e6ea38d793aa1fd3b1f003.svg" />
 <figcaption>
-<p><span class="caption-number">Fig. 94 </span><span class="caption-text">Bovenste gedeelte van het BiQuad circuit.</span><a class="headerlink" href="#fig5" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 92 </span><span class="caption-text">Bovenste gedeelte van het BiQuad circuit.</span><a class="headerlink" href="#fig5" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 </div>
@@ -705,13 +705,13 @@ document.write(`
 </section>
 <section id="het-volledige-biquad-circuit">
 <h5>Het volledige BiQuad circuit<a class="headerlink" href="#het-volledige-biquad-circuit" title="Link to this heading">#</a></h5>
-<p>Het hierboven aangegeven circuit kunnen we verder uitbreiden om ook nog 2 (complexen) nullen toe te voegen. Hiervoor combineren we de spanning op 3 knopen van het circuit in <a class="reference internal" href="#fig5"><span class="std std-numref">Fig. 94</span></a> , namelijk <span class="math notranslate nohighlight">\(V_{in}\)</span>,  <span class="math notranslate nohighlight">\(V_{*}\)</span> en<span class="math notranslate nohighlight">\(V_{out*}\)</span>. Dit geeft dan het circuit in <a class="reference internal" href="#fig6"><span class="std std-numref">Fig. 95</span></a> .</p>
+<p>Het hierboven aangegeven circuit kunnen we verder uitbreiden om ook nog 2 (complexen) nullen toe te voegen. Hiervoor combineren we de spanning op 3 knopen van het circuit in <a class="reference internal" href="#fig5"><span class="std std-numref">Fig. 92</span></a> , namelijk <span class="math notranslate nohighlight">\(V_{in}\)</span>,  <span class="math notranslate nohighlight">\(V_{*}\)</span> en<span class="math notranslate nohighlight">\(V_{out*}\)</span>. Dit geeft dan het circuit in <a class="reference internal" href="#fig6"><span class="std std-numref">Fig. 93</span></a> .</p>
 <div class="cell docutils container">
 <div class="cell_output docutils container">
 <figure class="align-default" id="fig6">
 <img alt="_images/9ba1e37c94ab1377c19b7d05d3a01b5b35b6e3c863bd66912468aa2f96a3cc13.svg" src="_images/9ba1e37c94ab1377c19b7d05d3a01b5b35b6e3c863bd66912468aa2f96a3cc13.svg" />
 <figcaption>
-<p><span class="caption-number">Fig. 95 </span><span class="caption-text">Het volledige BiQuad circuit.</span><a class="headerlink" href="#fig6" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 93 </span><span class="caption-text">Het volledige BiQuad circuit.</span><a class="headerlink" href="#fig6" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 </div>
@@ -742,7 +742,7 @@ document.write(`
 <figure class="align-default" id="sallen-en-key">
 <img alt="_images/ff8fb351aa0d1c889058dd6504af9f58d9f32460433c859e34987b45709c21c0.svg" src="_images/ff8fb351aa0d1c889058dd6504af9f58d9f32460433c859e34987b45709c21c0.svg" />
 <figcaption>
-<p><span class="caption-number">Fig. 96 </span><span class="caption-text">Het Sallen en Key laagdoorlaat circuit.</span><a class="headerlink" href="#sallen-en-key" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 94 </span><span class="caption-text">Het Sallen en Key laagdoorlaat circuit.</span><a class="headerlink" href="#sallen-en-key" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 </div>
@@ -909,7 +909,7 @@ a[ 0 ] = 2.4805021344239852e+20
 <figure class="align-default" id="fig8">
 <img alt="_images/cfd9a918ed80a001e8e15c550f928ba43633cf8c605b4e1dd74cd6f513effefd.png" src="_images/cfd9a918ed80a001e8e15c550f928ba43633cf8c605b4e1dd74cd6f513effefd.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 97 </span><span class="caption-text">Amplitude en fase van een derde orde Butterworth laagdoorlaatfilter met afsnijfrequentie 1 MHz.</span><a class="headerlink" href="#fig8" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 95 </span><span class="caption-text">Amplitude en fase van een derde orde Butterworth laagdoorlaatfilter met afsnijfrequentie 1 MHz.</span><a class="headerlink" href="#fig8" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 </div>
@@ -934,7 +934,7 @@ p[ 3 ] = (-3141592.6535897935-5441398.092702653j)
 <figure class="align-default" id="fig9">
 <img alt="_images/3d355c6dd02da88674b425c39e3f760348e4d4d3e2c5fa56aa8c5ba3e5ef8719.png" src="_images/3d355c6dd02da88674b425c39e3f760348e4d4d3e2c5fa56aa8c5ba3e5ef8719.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 98 </span><span class="caption-text">Polen van een derde orde Butterworth laagdoorlaatfilter met afsnijfrequentie 1 MHz.</span><a class="headerlink" href="#fig9" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 96 </span><span class="caption-text">Polen van een derde orde Butterworth laagdoorlaatfilter met afsnijfrequentie 1 MHz.</span><a class="headerlink" href="#fig9" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 </div>
@@ -952,7 +952,7 @@ p[ 3 ] = (-3141592.6535897935-5441398.092702653j)
 <figure class="align-default" id="fig10">
 <img alt="_images/0625734cbbda9c271d8b413647f721da0e6f36e29ee7f85617d976dbdf009888.png" src="_images/0625734cbbda9c271d8b413647f721da0e6f36e29ee7f85617d976dbdf009888.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 99 </span><span class="caption-text">Opsplitsing van een derde orde Butterworth laagdoorlaatfilter met afsnijfrequentie 1 MHz in 2 transferfunkties H1 en H2.</span><a class="headerlink" href="#fig10" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 97 </span><span class="caption-text">Opsplitsing van een derde orde Butterworth laagdoorlaatfilter met afsnijfrequentie 1 MHz in 2 transferfunkties H1 en H2.</span><a class="headerlink" href="#fig10" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 </div>
@@ -963,7 +963,7 @@ p[ 3 ] = (-3141592.6535897935-5441398.092702653j)
 <figure class="align-default" id="fig11">
 <img alt="_images/6c2cc82b8aacacb67fa45ce541b75696ac480eea52d3e37f57c935344a7fbadd.png" src="_images/6c2cc82b8aacacb67fa45ce541b75696ac480eea52d3e37f57c935344a7fbadd.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 100 </span><span class="caption-text">Detail rond de afsnijfrequentie van de opsplitsing van een derde orde Butterworth laagdoorlaatfilter met afsnijfrequentie 1 MHz in 2 transferfunkties H1 en H2.</span><a class="headerlink" href="#fig11" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 98 </span><span class="caption-text">Detail rond de afsnijfrequentie van de opsplitsing van een derde orde Butterworth laagdoorlaatfilter met afsnijfrequentie 1 MHz in 2 transferfunkties H1 en H2.</span><a class="headerlink" href="#fig11" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 </div>
@@ -973,7 +973,7 @@ p[ 3 ] = (-3141592.6535897935-5441398.092702653j)
 <figure class="align-default" id="fig12">
 <img alt="_images/6faf9061fdaa5b97a989fe400ef0304b8cee69fed2adf883420b3c7e41e4b2e4.svg" src="_images/6faf9061fdaa5b97a989fe400ef0304b8cee69fed2adf883420b3c7e41e4b2e4.svg" />
 <figcaption>
-<p><span class="caption-number">Fig. 101 </span><span class="caption-text">Opsplitsing van een derde orde Butterworth laagdoorlaatfilter in de bouwblokken H1 en H2.</span><a class="headerlink" href="#fig12" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 99 </span><span class="caption-text">Opsplitsing van een derde orde Butterworth laagdoorlaatfilter in de bouwblokken H1 en H2.</span><a class="headerlink" href="#fig12" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 </div>
@@ -983,7 +983,7 @@ p[ 3 ] = (-3141592.6535897935-5441398.092702653j)
 <figure class="align-default" id="fig13">
 <img alt="_images/fab5354ee419527f915e2cb330b354b19b62a2d3ef031efd135b9d87b40c882c.svg" src="_images/fab5354ee419527f915e2cb330b354b19b62a2d3ef031efd135b9d87b40c882c.svg" />
 <figcaption>
-<p><span class="caption-number">Fig. 102 </span><span class="caption-text">concrete implementatie van het tweede orde filter H1.</span><a class="headerlink" href="#fig13" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 100 </span><span class="caption-text">concrete implementatie van het tweede orde filter H1.</span><a class="headerlink" href="#fig13" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 </div>
@@ -994,7 +994,7 @@ p[ 3 ] = (-3141592.6535897935-5441398.092702653j)
 <figure class="align-default" id="fig14">
 <img alt="_images/5a632dfe2f0a5aa00400213cc020352138af0424854f92e47a19feb446f8a9bd.svg" src="_images/5a632dfe2f0a5aa00400213cc020352138af0424854f92e47a19feb446f8a9bd.svg" />
 <figcaption>
-<p><span class="caption-number">Fig. 103 </span><span class="caption-text">concrete implementatie van het eerste orde filter H2.</span><a class="headerlink" href="#fig14" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 101 </span><span class="caption-text">concrete implementatie van het eerste orde filter H2.</span><a class="headerlink" href="#fig14" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 </div>
@@ -1045,7 +1045,7 @@ p[ 5 ] = (-1941611.0387254667-5975664.329483111j)
 <figure class="align-default" id="fig16">
 <img alt="_images/2ad6a1c8653c588cbc38201e3f10afd2f4fb6619802c790a6b4bdcbe7f46381d.png" src="_images/2ad6a1c8653c588cbc38201e3f10afd2f4fb6619802c790a6b4bdcbe7f46381d.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 104 </span><span class="caption-text">Polen van een vijfde orde Butterworth laagdoorlaatfilter met afsnijfrequentie 1 MHz.</span><a class="headerlink" href="#fig16" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 102 </span><span class="caption-text">Polen van een vijfde orde Butterworth laagdoorlaatfilter met afsnijfrequentie 1 MHz.</span><a class="headerlink" href="#fig16" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 </div>
@@ -1055,7 +1055,7 @@ p[ 5 ] = (-1941611.0387254667-5975664.329483111j)
 <figure class="align-default" id="fig17">
 <img alt="_images/191edd8ac107ec5d42007359c810cb54296c17c6121563e0cf8d997d60f74242.png" src="_images/191edd8ac107ec5d42007359c810cb54296c17c6121563e0cf8d997d60f74242.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 105 </span><span class="caption-text">Opsplitsing van een vijfde orde Butterworth laagdoorlaatfilter met afsnijfrequentie 1 MHz in 3 transferfunkties.</span><a class="headerlink" href="#fig17" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 103 </span><span class="caption-text">Opsplitsing van een vijfde orde Butterworth laagdoorlaatfilter met afsnijfrequentie 1 MHz in 3 transferfunkties.</span><a class="headerlink" href="#fig17" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 </div>
@@ -1065,7 +1065,7 @@ p[ 5 ] = (-1941611.0387254667-5975664.329483111j)
 <figure class="align-default" id="fig19">
 <img alt="_images/3b17007918c8bacb325e2a1887a837de1ed651b956de35139178fda655100eb7.svg" src="_images/3b17007918c8bacb325e2a1887a837de1ed651b956de35139178fda655100eb7.svg" />
 <figcaption>
-<p><span class="caption-number">Fig. 106 </span><span class="caption-text">Hardware implementatie van een vijfde orde Butterworth laagdoorlaatfilter in 3 building blocks.</span><a class="headerlink" href="#fig19" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 104 </span><span class="caption-text">Hardware implementatie van een vijfde orde Butterworth laagdoorlaatfilter in 3 building blocks.</span><a class="headerlink" href="#fig19" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 </div>
@@ -1078,7 +1078,7 @@ p[ 5 ] = (-1941611.0387254667-5975664.329483111j)
 <figure class="align-default" id="fig20">
 <img alt="_images/a690d3a9272350dcf27a0be4203c038d7586c446e6b6c759e75ec50cf9e5db78.png" src="_images/a690d3a9272350dcf27a0be4203c038d7586c446e6b6c759e75ec50cf9e5db78.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 107 </span><span class="caption-text">Vergelijking van een derde en vijfde orde Butterworth laagdoorlaatfilter met afsnijfrequentie 1 MHz.</span><a class="headerlink" href="#fig20" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 105 </span><span class="caption-text">Vergelijking van een derde en vijfde orde Butterworth laagdoorlaatfilter met afsnijfrequentie 1 MHz.</span><a class="headerlink" href="#fig20" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 </div>
@@ -1158,7 +1158,7 @@ p[ 14 ] = (-46458057.493502825-307739438.435567j)
 <figure class="align-default" id="fig22">
 <img alt="_images/7b01cc311ce7988f3ba15a7e306f5efc99e2bc3dc3e8e6086fd20719c93b960f.png" src="_images/7b01cc311ce7988f3ba15a7e306f5efc99e2bc3dc3e8e6086fd20719c93b960f.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 108 </span><span class="caption-text">polen van een 7de orde Butterworth banddoorlaatfilter.</span><a class="headerlink" href="#fig22" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 106 </span><span class="caption-text">polen van een 7de orde Butterworth banddoorlaatfilter.</span><a class="headerlink" href="#fig22" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 </div>
@@ -1170,7 +1170,7 @@ p[ 14 ] = (-46458057.493502825-307739438.435567j)
 <figure class="align-default" id="fig23">
 <img alt="_images/b0ac6d2b7cbfb61ced4bda29ef23ede64e3e68e9e45baff7148217627463acd6.png" src="_images/b0ac6d2b7cbfb61ced4bda29ef23ede64e3e68e9e45baff7148217627463acd6.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 109 </span><span class="caption-text">Vergelijking tussen 7de orde Butterworth banddoorlaatfilter en een opeenvolging van laagdoorlaatfilter en een hoogdoorlaatfilter.</span><a class="headerlink" href="#fig23" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 107 </span><span class="caption-text">Vergelijking tussen 7de orde Butterworth banddoorlaatfilter en een opeenvolging van laagdoorlaatfilter en een hoogdoorlaatfilter.</span><a class="headerlink" href="#fig23" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 </div>
@@ -1214,7 +1214,7 @@ a[ 0 ] = 8.894760315452719e+118
 <figure class="align-default" id="fig24">
 <img alt="_images/2a11f87d2a7a1e75e9d98b4b5a3d32b0abe9105233f27855ffb3523516c5f5fe.png" src="_images/2a11f87d2a7a1e75e9d98b4b5a3d32b0abe9105233f27855ffb3523516c5f5fe.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 110 </span><span class="caption-text">Transfer functie van een 7de orde Butterworth banddoorlaatfilter met beperkte bandbreedte.</span><a class="headerlink" href="#fig24" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 108 </span><span class="caption-text">Transfer functie van een 7de orde Butterworth banddoorlaatfilter met beperkte bandbreedte.</span><a class="headerlink" href="#fig24" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 </div>
@@ -1254,7 +1254,7 @@ p[ 14 ] = (-4439819.935339821-332480313.6424786j)
 <figure class="align-default" id="fig25">
 <img alt="_images/3c683a6470238d65b63f8677cea13b4eece7a08b7ef2e4b312a02b3df274c27c.png" src="_images/3c683a6470238d65b63f8677cea13b4eece7a08b7ef2e4b312a02b3df274c27c.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 111 </span><span class="caption-text">Polen van een 7de orde Butterworth banddoorlaatfilter met beperkte bandbreedte.</span><a class="headerlink" href="#fig25" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 109 </span><span class="caption-text">Polen van een 7de orde Butterworth banddoorlaatfilter met beperkte bandbreedte.</span><a class="headerlink" href="#fig25" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 </div>
@@ -1265,7 +1265,7 @@ p[ 14 ] = (-4439819.935339821-332480313.6424786j)
 <figure class="align-default" id="fig26">
 <img alt="_images/858ae6fca224ed4248c04af01a9c02443ef9b8789b3d14c81e5f4ed046638b11.png" src="_images/858ae6fca224ed4248c04af01a9c02443ef9b8789b3d14c81e5f4ed046638b11.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 112 </span><span class="caption-text">Vergelijking tussen 7de orde Butterworth banddoorlaatfilter (met beperkte bandbreedte) en een opeenvolging van laagdoorlaatfilter en een hoogdoorlaatfilter.</span><a class="headerlink" href="#fig26" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 110 </span><span class="caption-text">Vergelijking tussen 7de orde Butterworth banddoorlaatfilter (met beperkte bandbreedte) en een opeenvolging van laagdoorlaatfilter en een hoogdoorlaatfilter.</span><a class="headerlink" href="#fig26" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 </div>
@@ -1294,7 +1294,7 @@ a[ 0 ] = 2.2986527907956946e+24
 <figure class="align-default" id="fig27">
 <img alt="_images/deb430fc1c5a491cc8aa339955837ae4da2062d1d87f0765dfb6457ae7aa213f.png" src="_images/deb430fc1c5a491cc8aa339955837ae4da2062d1d87f0765dfb6457ae7aa213f.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 113 </span><span class="caption-text">40 MHz Chebyshev laagdoorlaatfilter van de derde orde met een 6dB passband.</span><a class="headerlink" href="#fig27" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 111 </span><span class="caption-text">40 MHz Chebyshev laagdoorlaatfilter van de derde orde met een 6dB passband.</span><a class="headerlink" href="#fig27" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 </div>
@@ -1305,7 +1305,7 @@ a[ 0 ] = 2.2986527907956946e+24
 <figure class="align-default" id="fig28">
 <img alt="_images/5d8c14f7f8923255fca8d7d0ee6216d0bcec161f9d997c6549707ada7d0340fb.png" src="_images/5d8c14f7f8923255fca8d7d0ee6216d0bcec161f9d997c6549707ada7d0340fb.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 114 </span><span class="caption-text">detail van de 6dB passband van een 40 MHz Chebyshev laagdoorlaatfilter van de derde orde.</span><a class="headerlink" href="#fig28" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 112 </span><span class="caption-text">detail van de 6dB passband van een 40 MHz Chebyshev laagdoorlaatfilter van de derde orde.</span><a class="headerlink" href="#fig28" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 </div>
@@ -1327,7 +1327,7 @@ p[ 3 ] = (-23205546.204611413-221335928.5095666j)
 <figure class="align-default" id="fig29">
 <img alt="_images/348f6487bd881493da8f7ddb028d4cd7ee2b688f9acf96c59d5ab54d90fe7853.png" src="_images/348f6487bd881493da8f7ddb028d4cd7ee2b688f9acf96c59d5ab54d90fe7853.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 115 </span><span class="caption-text">ligging van de polen 40 MHz Chebyshev laagdoorlaatfilter van de derde orde met een 6dB passband.</span><a class="headerlink" href="#fig29" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 113 </span><span class="caption-text">ligging van de polen 40 MHz Chebyshev laagdoorlaatfilter van de derde orde met een 6dB passband.</span><a class="headerlink" href="#fig29" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 </div>
@@ -1358,7 +1358,7 @@ a[ 0 ] = 1.3431999354717115e+69
 <figure class="align-default" id="fig30">
 <img alt="_images/84a9bb8bd12963b6a2ad1b3aa134a39805a7a15bc6cc5d94d3324686abee40b7.png" src="_images/84a9bb8bd12963b6a2ad1b3aa134a39805a7a15bc6cc5d94d3324686abee40b7.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 116 </span><span class="caption-text">120 MHz Chebyshev laagdoorlaatfilter van de 8ste orde met een 2dB passband.</span><a class="headerlink" href="#fig30" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 114 </span><span class="caption-text">120 MHz Chebyshev laagdoorlaatfilter van de 8ste orde met een 2dB passband.</span><a class="headerlink" href="#fig30" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 </div>
@@ -1369,7 +1369,7 @@ a[ 0 ] = 1.3431999354717115e+69
 <figure class="align-default" id="fig31">
 <img alt="_images/03baf4167199c74a303d8d54e342e83fad71a34285357008d5ee4936dbdacf79.png" src="_images/03baf4167199c74a303d8d54e342e83fad71a34285357008d5ee4936dbdacf79.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 117 </span><span class="caption-text">detail van de 2dB passband van de 120 MHz Chebyshev laagdoorlaatfilter van de 8ste orde.</span><a class="headerlink" href="#fig31" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 115 </span><span class="caption-text">detail van de 2dB passband van de 120 MHz Chebyshev laagdoorlaatfilter van de 8ste orde.</span><a class="headerlink" href="#fig31" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 </div>
@@ -1395,7 +1395,7 @@ p[ 8 ] = (-19974783.518686887-746281824.2305412j)
 <figure class="align-default" id="fig32">
 <img alt="_images/b7825af153a7739f7dea142917d9f5a2b8704c125f5ff6ebe762444247aa26fe.png" src="_images/b7825af153a7739f7dea142917d9f5a2b8704c125f5ff6ebe762444247aa26fe.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 118 </span><span class="caption-text">ligging van de polen 120 MHz Chebyshev laagdoorlaatfilter van de 8ste orde met een 2dB passband.</span><a class="headerlink" href="#fig32" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 116 </span><span class="caption-text">ligging van de polen 120 MHz Chebyshev laagdoorlaatfilter van de 8ste orde met een 2dB passband.</span><a class="headerlink" href="#fig32" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 </div>
@@ -1406,7 +1406,7 @@ p[ 8 ] = (-19974783.518686887-746281824.2305412j)
 <figure class="align-default" id="fig33">
 <img alt="_images/d73850cce8dbf4d441f4c357778a190a3cfc439761e68c1763069b4dfd90a16f.png" src="_images/d73850cce8dbf4d441f4c357778a190a3cfc439761e68c1763069b4dfd90a16f.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 119 </span><span class="caption-text">vergelijking Butterworth en Chebyshev laagdoorlaatfilters van de 8ste orde.</span><a class="headerlink" href="#fig33" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 117 </span><span class="caption-text">vergelijking Butterworth en Chebyshev laagdoorlaatfilters van de 8ste orde.</span><a class="headerlink" href="#fig33" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 </div>
@@ -1431,7 +1431,7 @@ a[ 0 ] = 2.5153792295277244e+16
 <figure class="align-default" id="fig34">
 <img alt="_images/70f270b3013c51577ac2f8f487ac881c414e34ec2ea8c2fdd7632e24fbb3c1aa.png" src="_images/70f270b3013c51577ac2f8f487ac881c414e34ec2ea8c2fdd7632e24fbb3c1aa.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 120 </span><span class="caption-text">Transferfunctie van de Chebyshev 30 MHz laagdoorlaatfilter van de 2de orde.</span><a class="headerlink" href="#fig34" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 118 </span><span class="caption-text">Transferfunctie van de Chebyshev 30 MHz laagdoorlaatfilter van de 2de orde.</span><a class="headerlink" href="#fig34" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 </div>
@@ -1451,12 +1451,12 @@ p[ 2 ] = (-60780360.20507117-146490750.93199244j)
 <figure class="align-default" id="fig35">
 <img alt="_images/1221b8ab0e28edb2abf64f7624ef2ddfc6806363f62952d6cdf2fccd063aa771.png" src="_images/1221b8ab0e28edb2abf64f7624ef2ddfc6806363f62952d6cdf2fccd063aa771.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 121 </span><span class="caption-text">Ligging van de polen van de Chebyshev 30 MHz laagdoorlaatfilter van de 2de orde.</span><a class="headerlink" href="#fig35" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 119 </span><span class="caption-text">Ligging van de polen van de Chebyshev 30 MHz laagdoorlaatfilter van de 2de orde.</span><a class="headerlink" href="#fig35" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 </div>
 </div>
-<p>We kunnen deze 2de orde laagdoorlaatfilter ook maken met een Sallen en Key circuit als aangegeven in <a class="reference internal" href="#sallen-en-key"><span class="std std-numref">Fig. 96</span></a>. we merken op dat de frequentie waarop dit circuit gaat afsnijden een stuk lager is dan de frequentie van het overeenkomende Butterworth circuit. De juiste afsnijfrequentie kunnen we uitrekenen op basis van de  polen en deze is:</p>
+<p>We kunnen deze 2de orde laagdoorlaatfilter ook maken met een Sallen en Key circuit als aangegeven in <a class="reference internal" href="#sallen-en-key"><span class="std std-numref">Fig. 94</span></a>. we merken op dat de frequentie waarop dit circuit gaat afsnijden een stuk lager is dan de frequentie van het overeenkomende Butterworth circuit. De juiste afsnijfrequentie kunnen we uitrekenen op basis van de  polen en deze is:</p>
 <div class="cell docutils container">
 <div class="cell_output docutils container">
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>25241889.828472663
@@ -1472,7 +1472,7 @@ p[ 2 ] = (-60780360.20507117-146490750.93199244j)
 </div>
 </div>
 </div>
-<p>Als een gevolg van deze hoek van 67 graden, zullen we als ratio tussen de 2 weerstanden <span class="math notranslate nohighlight">\(R_1\)</span> en <span class="math notranslate nohighlight">\(R_2\)</span> van het Sallen en Key circuit uit <a class="reference internal" href="#sallen-en-key"><span class="std std-numref">Fig. 96</span></a> een k-factor hebben die gelijk is aan:</p>
+<p>Als een gevolg van deze hoek van 67 graden, zullen we als ratio tussen de 2 weerstanden <span class="math notranslate nohighlight">\(R_1\)</span> en <span class="math notranslate nohighlight">\(R_2\)</span> van het Sallen en Key circuit uit <a class="reference internal" href="#sallen-en-key"><span class="std std-numref">Fig. 94</span></a> een k-factor hebben die gelijk is aan:</p>
 <div class="cell docutils container">
 <div class="cell_output docutils container">
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1.23353640830558
@@ -1485,7 +1485,7 @@ p[ 2 ] = (-60780360.20507117-146490750.93199244j)
 <section id="bessel-thomson-filters">
 <h2>Bessel Thomson filters<a class="headerlink" href="#bessel-thomson-filters" title="Link to this heading">#</a></h2>
 <p>In dit vak zullen we de Bessel Thomson filters steeds met de computer uitrekenen. Hieronder vind je de berekening van de coeficienten van de transfer functie een 2de orde Bessel Thomson  hoogdoorlaatfilter met afsnijfrequentie op 1 kHz.</p>
-<p>In <a class="reference internal" href="#besseltomson-fig"><span class="std std-numref">Fig. 122</span></a>  zie je dan vervolgens de plot van de transferkarakteristiek een 2de orde Bessel Thomson  hoogdoorlaatfilter</p>
+<p>In <a class="reference internal" href="#besseltomson-fig"><span class="std std-numref">Fig. 120</span></a>  zie je dan vervolgens de plot van de transferkarakteristiek een 2de orde Bessel Thomson  hoogdoorlaatfilter</p>
 <div class="cell docutils container">
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Veelterm coefficienten teller: M= 2
@@ -1505,7 +1505,7 @@ a[ 0 ] = 39478417.60435742
 <figure class="align-default" id="besseltomson-fig">
 <img alt="_images/c528c6e4e8105e3b917edeb1cb592bd46c34843ecd68f182eaa11df6699f5145.png" src="_images/c528c6e4e8105e3b917edeb1cb592bd46c34843ecd68f182eaa11df6699f5145.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 122 </span><span class="caption-text">Transfer funktie van een Bessel Thomson  hoogdoorlaatfilter met afsnijfrequentie op 1 kHz.</span><a class="headerlink" href="#besseltomson-fig" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 120 </span><span class="caption-text">Transfer funktie van een Bessel Thomson  hoogdoorlaatfilter met afsnijfrequentie op 1 kHz.</span><a class="headerlink" href="#besseltomson-fig" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 </div>
