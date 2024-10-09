@@ -4,7 +4,7 @@ parts:
 - caption: Analyse van circuits
   chapters:
   - file: TransistorConfiguraties
-  # - file: berekening
+  - file: berekening
 - caption: Versterkers
   chapters:
   - file: Klasse-A
