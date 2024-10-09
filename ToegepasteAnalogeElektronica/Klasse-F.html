@@ -67,6 +67,8 @@
     <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'Klasse-F';</script>
     <link rel="icon" href="_static/favicon.ico"/>
     <link rel="index" title="Index" href="genindex.html" />
@@ -510,7 +512,7 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="klasse-f-verstekers">
 <h1>Klasse F Verstekers<a class="headerlink" href="#klasse-f-verstekers" title="Link to this heading">#</a></h1>
-<p>In dit hoofdstuk bestuderen we de klasse F versterker als een uitbreiding van de klasse C versterker. Beide versterkers zijn resonante versterkers die bestaat uit een LRC trilkring (of meerdere LC kringen) die aangestuurd wordt door een enkele transistor. Als een gevolg hiervan werkt deze versterker op een vaste frequentie of binnen een zeer beperkte bandbreedte rond deze centrale frequentie. Deze bandbreedte is typisch maximaal 1%  van de resonantie frequentie.
+<p>In dit hoofdstuk bestuderen we de klasse F versterker als een uitbreiding van de klasse C versterker. Beide versterkers zijn resonante versterkers die bestaat uit een LRC trilkring (of meerdere LC kringen) die aangestuurd wordt door een enkele transistor. Als een gevolg hiervan werkt deze versterker op een vaste frequentie of binnen een zeer beperkte bandbreedte rond deze centrale frequentie. Deze bandbreedte is typisch maximaal 1<span class="math notranslate nohighlight">\(\%\)</span>  van de resonantie frequentie.
 In <a class="reference internal" href="#vermogenversterkers2"><span class="std std-numref">Tabel 2</span></a> geven we een overzicht van deze verschillende versterkers.</p>
 <div class="pst-scrollable-table-container"><table class="table" id="vermogenversterkers2">
 <caption><span class="caption-number">Tabel 2 </span><span class="caption-text">Indeling van de vermogenversterkers</span><a class="headerlink" href="#vermogenversterkers2" title="Link to this table">#</a></caption>
@@ -531,8 +533,6 @@ In <a class="reference internal" href="#vermogenversterkers2"><span class="std s
 </tr>
 </tbody>
 </table>
-</div>
-<div class="cell tag_remove_cell4reveal tag_remove_cell4PDF docutils container">
 </div>
 <p>Wanneer de gelijkaardige stroompulsen aangelegd worden op 2 parallelle LRC kringen in serie, zal dezelfde stroom door de kringen lopen, maar zullen de spanningen over beide kringen opgeteld worden.</p>
 <div class="cell docutils container">
