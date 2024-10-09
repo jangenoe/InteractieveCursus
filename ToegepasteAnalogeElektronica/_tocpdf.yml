@@ -6,10 +6,10 @@ parts:
   - file: Spice-simulatie
 - caption: Versterkers
   chapters:
-  #- file: Klasse-C  Er blijft een probleem met de cite in de caption op het einde
+  #- file: Klasse-C  #Er blijft een probleem met de cite in de caption op het einde
   #- file: Klasse-F
   - file: Klasse-D
-  #- file: Klasse-E
+  - file: Klasse-E
 - caption: Filters
   chapters:  
   - file: Filters
