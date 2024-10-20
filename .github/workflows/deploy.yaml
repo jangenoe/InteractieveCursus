@@ -84,14 +84,15 @@ jobs:
         jupyter lite build --lite-dir .github/LiteDeck --contents AnalogeElektronica2 --output-dir AnalogeElektronica2/_build/html/Deck/
         jupyter lite build --lite-dir .github/LiteDeck --contents AnalogDesignTechniques --output-dir AnalogDesignTechniques/_build/html/Deck/
         jupyter lite build --lite-dir .github/LiteDeck --contents MicroEnNanoTechnologie --output-dir MicroEnNanoTechnologie/_build/html/Deck/
-    # - name: Install the dependencies for PowerPoint building
-    #   run: |
-    #     pip install -r .github/requirements-PowerPoint.txt
-    # - name: Build PowerPoint in /_build/html/PowerPoint/
-    #   run: |
-    #     
-    - name: Move all to CursusIndex
+    - name: Install the dependencies for PowerPoint building
       run: |
+    #     pip install -r .github/requirements-PowerPoint.txt
+        python .github/common/convert-to-pptx.py
+        mv ToegepasteAnalogeElektronica/*.pptx ToegepasteAnalogeElektronica/_build/html/slides/
+        mv AnalogeElektronica2/*.pptx AnalogeElektronica2/_build/html/slides/
+        mv AnalogDesignTechniques/*.pptx AnalogDesignTechniques/_build/html/slides/
+     - name: Move all to CursusIndex
+       run: |
         mv ToegepasteAnalogeElektronica/_build/html/ CursusIndex/_build/html/ToegepasteAnalogeElektronica
         mv AnalogeElektronica2/_build/html/ CursusIndex/_build/html/AnalogeElektronica2/
         mv AnalogDesignTechniques/_build/html/ CursusIndex/_build/html/AnalogDesignTechniques      

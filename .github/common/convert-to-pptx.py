@@ -27,6 +27,7 @@ def find_between( s, first, last ):
 def maketitle(cell,slide):
     st = cell.metadata.KULeuvenSlides["slide_title"]
     slide.shapes.title.text=st.replace("<BR>","\n")
+    #slide.shapes.title.text_frame.fit_text()  #problem font file on linux
     if "<BR>" in st:
         slide.shapes.title.text_frame.paragraphs[0].font.size = Pt(20)
         slide.shapes.title.text_frame.paragraphs[1].font.size = Pt(20)
@@ -37,42 +38,41 @@ def maketitle(cell,slide):
     elif len(st)>50:
        slide.shapes.title.text_frame.paragraphs[0].font.size = Pt(28)
     elif len(st)>40:
-       slide.shapes.title.text_frame.paragraphs[0].font.size = Pt(32)
-                                           
+       slide.shapes.title.text_frame.paragraphs[0].font.size = Pt(32)                                           
 for ipath in notebooks:
     print("file om te zetten: ",ipath)
     ntbk = nbf.read(ipath, nbf.NO_CONVERT)
-    prs = Presentation("./.github/common/KULeuventemplate.pptx")
+#    prs = Presentation("./.github/common/KULeuventemplate.pptx")
+    prs = Presentation("./.github/common/KULeuven_600TEMPLATE.pptx")
     slide = prs.slides.add_slide(prs.slide_layouts[0])
     if "title" in ntbk.metadata.get('KULeuvenSlides', {}):
         title_shape = slide.shapes.title
         title_shape.text = ntbk.metadata.KULeuvenSlides["title"].replace("<BR>","\n")
+        #title_shape.text_frame.fit_text()
         #title_shape.text_frame.paragraphs[0].font.size = Pt(44)
         #title_shape.text_frame.paragraphs[0].font.bold = True
         #title_shape.text_frame.paragraphs[0].font.color.rgb = RGBColor(255, 255, 255)  # White text
         #title_shape.text_frame.paragraphs[0].alignment = PP_ALIGN.CENTER
     if "subtitle" in ntbk.metadata.get('KULeuvenSlides', {}):
-        for shape in slide.placeholders:
-            if shape.placeholder_format.type == PP_PLACEHOLDER.SUBTITLE:
-                subtitle_placeholder = shape
-                break
-        subtitle_placeholder.text = ntbk.metadata.KULeuvenSlides["subtitle"].replace("<BR>","\n")
-        #subtitle_placeholder.text_frame.paragraphs[0].font.size = Pt(24)
-        #subtitle_placeholder.text_frame.paragraphs[0].font.color.rgb = (RGBColor(255, 255, 255))  # White text
-        #subtitle_placeholder.text_frame.paragraphs[0].alignment = (PP_ALIGN.CENTER)
+        subtitle= slide.shapes.add_textbox(Inches(7),Inches(4), Inches(5),Inches(2.0))  #left, top, width, height
+        subtitle.text = ntbk.metadata.KULeuvenSlides["subtitle"].replace("<BR>","\n")
+        #subtitle.text_frame.fit_text()
+        subtitle.text_frame.paragraphs[0].font.size = Pt(24)
+        subtitle.text_frame.paragraphs[0].font.color.rgb = (RGBColor(255, 255, 255))  # White text
+        #subtitle.text_frame.paragraphs[0].alignment = (PP_ALIGN.CENTER)
     if "authors" in ntbk.metadata.get('KULeuvenSlides', {}):
-        txBox = slide.shapes.add_textbox(Inches(5),Inches(4), Inches(2),Inches(0.5))  #left, top, width, height
+        txBox = slide.shapes.add_textbox(Inches(7),Inches(6.1), Inches(2),Inches(0.5))  #left, top, width, height
         tf = txBox.text_frame
         tf.text = ntbk.metadata.KULeuvenSlides["authors"]
         #tf.paragraphs[0].font.size = Pt(24)
-        #tf.paragraphs[0].font.color.rgb = RGBColor(255, 255, 255)
+        tf.paragraphs[0].font.color.rgb = RGBColor(255, 255, 255)
         #tf.paragraphs[0].alignment = PP_ALIGN.CENTER        
     if "date" in ntbk.metadata.get('KULeuvenSlides', {}):
-        txBox = slide.shapes.add_textbox(Inches(5),Inches(5), Inches(2),Inches(0.5))  #left, top, width, height
+        txBox = slide.shapes.add_textbox(Inches(7),Inches(6.3), Inches(2),Inches(0.5))  #left, top, width, height
         tf = txBox.text_frame
         tf.text = ntbk.metadata.KULeuvenSlides["date"]
         #tf.paragraphs[0].font.size = Pt(24)
-        #tf.paragraphs[0].font.color.rgb = RGBColor(255, 255, 255)
+        tf.paragraphs[0].font.color.rgb = RGBColor(255, 255, 255)
         #tf.paragraphs[0].alignment = PP_ALIGN.CENTER
     
     for index,cell in enumerate(ntbk.cells):
@@ -127,6 +127,6 @@ for ipath in notebooks:
                             latexheight+=pictp.height+Inches(0.3)
                         except UnidentifiedImageError:
                             print("   latex error for cell number "+str(index))
-    
+    slide = prs.slides.add_slide(prs.slide_layouts[10])
     slide = prs.slides.add_slide(prs.slide_layouts[9])
-    prs.save(ipath+".pptx")
+    prs.save(ipath[:-6]+".pptx")

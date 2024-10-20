@@ -21,10 +21,10 @@ dependencies:
   - networkx
   - ipywidgets
   - pyspice
-  - python-pptx
   - adjusttext
   - pip:
     - jupyterlab-myst
     - schemdraw>=0.19
     - jupytercards>=3.0.0a3
     - wikitables
+    - python-pptx>=1.0.2
