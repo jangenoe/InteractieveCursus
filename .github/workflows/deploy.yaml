@@ -89,7 +89,7 @@ jobs:
         pip install -r .github/requirements-pptx.txt
     - name: PowerPoint building
       run: |
-         python .github/common/convert-to-pptx.py
+        python .github/common/convert-to-pptx.py
         mv ToegepasteAnalogeElektronica/*.pptx ToegepasteAnalogeElektronica/_build/html/slides/
         mv AnalogeElektronica2/*.pptx AnalogeElektronica2/_build/html/slides/
         mv AnalogDesignTechniques/*.pptx AnalogDesignTechniques/_build/html/slides/
