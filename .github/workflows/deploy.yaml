@@ -90,8 +90,8 @@ jobs:
         mv ToegepasteAnalogeElektronica/*.pptx ToegepasteAnalogeElektronica/_build/html/slides/
         mv AnalogeElektronica2/*.pptx AnalogeElektronica2/_build/html/slides/
         mv AnalogDesignTechniques/*.pptx AnalogDesignTechniques/_build/html/slides/
-     - name: Move all to CursusIndex
-       run: |
+    - name: Move all to CursusIndex
+      run: |
         mv ToegepasteAnalogeElektronica/_build/html/ CursusIndex/_build/html/ToegepasteAnalogeElektronica
         mv AnalogeElektronica2/_build/html/ CursusIndex/_build/html/AnalogeElektronica2/
         mv AnalogDesignTechniques/_build/html/ CursusIndex/_build/html/AnalogDesignTechniques      
