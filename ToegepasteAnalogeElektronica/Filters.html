@@ -11,10 +11,10 @@
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://jangenoe.github.io/jangenoe/InteractieveCursus/ToegepasteAnalogeElektronica/Filters.html" />
 <meta property="og:site_name" content="Project name not set" />
-<meta property="og:description" content="In dit hoofdstuk werk ik een aantal voorbeelden uit van berekening van filters. Dit hoofdstuk is slechts ter illustratie van een aantal voorbeelden. De eigenlijke cursus blijft wat te vinden is op ..." />
+<meta property="og:description" content="title: Filters design subtitle: Ontwerp een circuit met de gewenste frequentiekarakteristiek authors: name: Jan Genoe orcid: 0000-0002-4019-5979 affiliations:- KU Leuven, imec bibliography:., Toege..." />
 <meta property="og:image" content="https://jangenoe.github.io/InteractieveCursus/ToegepasteAnalogeElektronica/_static/logo.svg" />
 <meta property="og:image:alt" content="Project name not set" />
-<meta name="description" content="In dit hoofdstuk werk ik een aantal voorbeelden uit van berekening van filters. Dit hoofdstuk is slechts ter illustratie van een aantal voorbeelden. De eigenlijke cursus blijft wat te vinden is op ..." />
+<meta name="description" content="title: Filters design subtitle: Ontwerp een circuit met de gewenste frequentiekarakteristiek authors: name: Jan Genoe orcid: 0000-0002-4019-5979 affiliations:- KU Leuven, imec bibliography:., Toege..." />
 
     <title>Filter Design &#8212; Toegepaste Analoge Elektronica</title>
   
@@ -510,7 +510,10 @@ document.write(`
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#aanpak-en-algemeen-perspectief">Aanpak en algemeen perspectief</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#specifieke-filter-blokken">Specifieke filter blokken</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#eerste-orde-filter-bouwblokken">Eerste orde filter bouwblokken</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#eerste-orde-filter-bouwblokken">Eerste orde filter bouwblokken</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#basisblok-van-een-algemeen-eerste-orde-filter">Basisblok van een algemeen eerste orde filter</a></li>
+</ul>
+</li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tweede-orde-filter-blokken">Tweede orde filter blokken</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#biquad-filter">BiQuad filter</a><ul class="nav section-nav flex-column">
 <li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#het-gedeelte-van-het-biquad-circuit-dat-de-polen-bepaalt">Het gedeelte van het biquad circuit dat de polen bepaalt</a></li>
@@ -558,7 +561,24 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="filter-design">
+  <hr class="docutils" />
+<p>title: Filters design
+subtitle: Ontwerp een circuit met de gewenste frequentiekarakteristiek
+authors:</p>
+<ul class="simple">
+<li><p>name: Jan Genoe
+orcid: 0000-0002-4019-5979
+affiliations:</p>
+<ul>
+<li><p>KU Leuven</p></li>
+<li><p>imec
+bibliography:</p></li>
+</ul>
+</li>
+<li><p>ToegepasteAnalogeElektronica.bib</p></li>
+</ul>
+<hr class="docutils" />
+<section class="tex2jax_ignore mathjax_ignore" id="filter-design">
 <h1>Filter Design<a class="headerlink" href="#filter-design" title="Link to this heading">#</a></h1>
 <p>In dit hoofdstuk werk ik een aantal voorbeelden uit van berekening van filters. Dit hoofdstuk is slechts ter illustratie van een aantal voorbeelden. De eigenlijke cursus blijft wat te vinden is op Toledo.</p>
 <section id="aanpak-en-algemeen-perspectief">
@@ -573,6 +593,8 @@ document.write(`
 <div class="math notranslate nohighlight">
 \[ V_{out}=-\frac{b_1(j \omega) +b_0}{a_1(j \omega) +a_0} V_{in}\]</div>
 <p><a class="reference internal" href="#fig1"><span class="std std-numref">Fig. 88</span></a> toont een algemene bouwblok om een eerste orde filter mee te maken.</p>
+<section id="basisblok-van-een-algemeen-eerste-orde-filter">
+<h4>Basisblok van een algemeen eerste orde filter<a class="headerlink" href="#basisblok-van-een-algemeen-eerste-orde-filter" title="Link to this heading">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_output docutils container">
 <figure class="align-default" id="fig1">
@@ -634,6 +656,7 @@ document.write(`
 </figure>
 </div>
 </div>
+</section>
 </section>
 <section id="tweede-orde-filter-blokken">
 <h3>Tweede orde filter blokken<a class="headerlink" href="#tweede-orde-filter-blokken" title="Link to this heading">#</a></h3>
@@ -2188,7 +2211,10 @@ var cardsrhszBTqYztnm=[{"front": "Butterworth filter", "back": "Een filter die m
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#aanpak-en-algemeen-perspectief">Aanpak en algemeen perspectief</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#specifieke-filter-blokken">Specifieke filter blokken</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#eerste-orde-filter-bouwblokken">Eerste orde filter bouwblokken</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#eerste-orde-filter-bouwblokken">Eerste orde filter bouwblokken</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#basisblok-van-een-algemeen-eerste-orde-filter">Basisblok van een algemeen eerste orde filter</a></li>
+</ul>
+</li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tweede-orde-filter-blokken">Tweede orde filter blokken</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#biquad-filter">BiQuad filter</a><ul class="nav section-nav flex-column">
 <li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#het-gedeelte-van-het-biquad-circuit-dat-de-polen-bepaalt">Het gedeelte van het biquad circuit dat de polen bepaalt</a></li>

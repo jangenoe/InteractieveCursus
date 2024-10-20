@@ -11,10 +11,10 @@
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://jangenoe.github.io/jangenoe/InteractieveCursus/ToegepasteAnalogeElektronica/transmissielijn.html" />
 <meta property="og:site_name" content="Project name not set" />
-<meta property="og:description" content="Netwerk model van een 50 Ohm transmissielijn., Transmissie lijn model: Kleinsignaal model van een kort stuk, Z_o=\sqrt{\frac{j \omega L+R}{j \omega C+g}} waarbij L de inductantie per eenheid lengte..." />
+<meta property="og:description" content="Netwerk model: Netwerk model van een 50 Ohm transmissielijn., Transmissie lijn model: Kleinsignaal model: Kleinsignaal model van een kort stuk, Kleinsignaal model: Z_o=\sqrt{\frac{j \omega L+R}{j \..." />
 <meta property="og:image" content="https://jangenoe.github.io/InteractieveCursus/ToegepasteAnalogeElektronica/_static/logo.svg" />
 <meta property="og:image:alt" content="Project name not set" />
-<meta name="description" content="Netwerk model van een 50 Ohm transmissielijn., Transmissie lijn model: Kleinsignaal model van een kort stuk, Z_o=\sqrt{\frac{j \omega L+R}{j \omega C+g}} waarbij L de inductantie per eenheid lengte..." />
+<meta name="description" content="Netwerk model: Netwerk model van een 50 Ohm transmissielijn., Transmissie lijn model: Kleinsignaal model: Kleinsignaal model van een kort stuk, Kleinsignaal model: Z_o=\sqrt{\frac{j \omega L+R}{j \..." />
 
     <title>Transmissie lijnen &#8212; Toegepaste Analoge Elektronica</title>
   
@@ -508,13 +508,35 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#transmissie-lijn-model">Transmissie lijn model</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#coax-kabel">Coax kabel</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#twisted-pair-kabel">Twisted pair kabel</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#netwerk-model">Netwerk model</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#transmissie-lijn-model">Transmissie lijn model</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#kleinsignaal-model">Kleinsignaal model</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Kleinsignaal model</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vereenvoudigd-kleinsignaal-model">Vereenvoudigd Kleinsignaal model</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#coax-kabel">Coax kabel</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#doorsnede-coax-kabel">Doorsnede coax kabel</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#berekening-coax-kabel">Berekening coax kabel</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#verloop-van-de-karakteristieke-impedantie-van-een-rg-58-coax-als-functie-van-de-frequentie">Verloop van de karakteristieke impedantie van een RG-58 coax als functie van de frequentie</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#twisted-pair-kabel">Twisted pair kabel</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#doorsnede-twisted-pair-kabel">Doorsnede twisted pair kabel</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#striplijn">striplijn</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#microstriplijn">Microstriplijn</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#microstrip-analyse-plots">Microstrip Analyse Plots</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#microstrip-design-plots">Microstrip Design Plots</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#microstrip-analyse-plots">Microstrip Analyse Plots</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#verloop-van-de-karakteristieke-impedantie-van-een-microstriplijn-als-functie-van-de-dimensies">Verloop van de karakteristieke impedantie van een microstriplijn als functie van de dimensies</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dielectrische-constante-van-een-microstriplijn-als-functie-van-de-dimensies">Dielectrische constante van een microstriplijn als functie van de dimensies</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#microstrip-design-plots">Microstrip Design Plots</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dimensies-om-de-vereiste-karakteristieke-impedantie-van-een-microstriplijn-te-bekomen">dimensies om de vereiste karakteristieke impedantie van een microstriplijn te bekomen</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#de-relatie-tussen-effectieve-dielectrische-constante-en-karakteristieke-impedantie">De relatie tussen effectieve dielectrische constante en karakteristieke impedantie</a></li>
+</ul>
+</li>
 </ul>
             </nav>
         </div>
@@ -528,6 +550,8 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="transmissie-lijnen">
 <h1>Transmissie lijnen<a class="headerlink" href="#transmissie-lijnen" title="Link to this heading">#</a></h1>
+<section id="netwerk-model">
+<h2>Netwerk model<a class="headerlink" href="#netwerk-model" title="Link to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_output docutils container">
 <figure class="align-default" id="t-model">
@@ -538,8 +562,11 @@ document.write(`
 </figure>
 </div>
 </div>
+</section>
 <section id="transmissie-lijn-model">
 <h2>Transmissie lijn model<a class="headerlink" href="#transmissie-lijn-model" title="Link to this heading">#</a></h2>
+<section id="kleinsignaal-model">
+<h3>Kleinsignaal model<a class="headerlink" href="#kleinsignaal-model" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_output docutils container">
 <figure class="align-default" id="t-model-inf">
@@ -550,16 +577,25 @@ document.write(`
 </figure>
 </div>
 </div>
+</section>
+<section id="id1">
+<h3>Kleinsignaal model<a class="headerlink" href="#id1" title="Link to this heading">#</a></h3>
 <div class="math notranslate nohighlight">
 \[ Z_o=\sqrt{\frac{j \omega L+R}{j \omega C+g}}\]</div>
 <p>waarbij L de inductantie per eenheid lengte is, C de capaciteit er eenheid lengte is, R de weerstand van de geleider en g de lekgeleidbaarheid van het dielectricum.</p>
 <p>In het beste geval is de weerstand van de geleider nul (R=0) en de lek ook nul (g=0). <span class="math notranslate nohighlight">\(Z_o\)</span> wordt dan</p>
+</section>
+<section id="vereenvoudigd-kleinsignaal-model">
+<h3>Vereenvoudigd Kleinsignaal model<a class="headerlink" href="#vereenvoudigd-kleinsignaal-model" title="Link to this heading">#</a></h3>
 <div class="math notranslate nohighlight">
 \[ Z_o \approx \sqrt{\frac{L}{C}}\]</div>
+</section>
 </section>
 <section id="coax-kabel">
 <h2>Coax kabel<a class="headerlink" href="#coax-kabel" title="Link to this heading">#</a></h2>
 <p><a class="reference internal" href="#coaxdoorsnede"><span class="std std-numref">Fig. 123</span></a> toont de doorsnede van een coax kabel met daarop de belangrijkste parameters voor het bepalen van de C per eenheid lengte en de L per eenheid lengte.</p>
+<section id="doorsnede-coax-kabel">
+<h3>Doorsnede coax kabel<a class="headerlink" href="#doorsnede-coax-kabel" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_output docutils container">
 <figure class="align-default" id="coaxdoorsnede">
@@ -570,6 +606,9 @@ document.write(`
 </figure>
 </div>
 </div>
+</section>
+<section id="berekening-coax-kabel">
+<h3>Berekening coax kabel<a class="headerlink" href="#berekening-coax-kabel" title="Link to this heading">#</a></h3>
 <p>Voor een typische <a class="reference external" href="https://en.wikipedia.org/wiki/Coaxial_cable">coax-kabel</a> met binnendiameter 1.2 mm en buiten diameter  2.8 mm bekomen we de volgende parameters:</p>
 <div class="cell docutils container">
 <div class="cell_output docutils container">
@@ -583,6 +622,9 @@ Zo= 50.81 Ohm
 </div>
 </div>
 <p>Het verloop van de karakteristieke impedantie ziet er voor deze coax kabel uit als aangegeven in <a class="reference internal" href="#t-z-f"><span class="std std-numref">Fig. 124</span></a></p>
+</section>
+<section id="verloop-van-de-karakteristieke-impedantie-van-een-rg-58-coax-als-functie-van-de-frequentie">
+<h3>Verloop van de karakteristieke impedantie van een RG-58 coax als functie van de frequentie<a class="headerlink" href="#verloop-van-de-karakteristieke-impedantie-van-een-rg-58-coax-als-functie-van-de-frequentie" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_output docutils container">
 <figure class="align-default" id="t-z-f">
@@ -595,9 +637,12 @@ Zo= 50.81 Ohm
 </div>
 <p>Uit <a class="reference internal" href="#t-z-f"><span class="std std-numref">Fig. 124</span></a> merken we dat bij lage frequenties deze karakteristieke impedantie in belangrijke mate verschilt van 50 Ohm. De negatieve fase geeft aan dat bij lage frequenties de lijn zich capacitief gedraagt.</p>
 </section>
+</section>
 <section id="twisted-pair-kabel">
 <h2>Twisted pair kabel<a class="headerlink" href="#twisted-pair-kabel" title="Link to this heading">#</a></h2>
 <p><a class="reference internal" href="#twisted-pairdoorsnede"><span class="std std-numref">Fig. 125</span></a> toont de doorsnede van een twisted pair kabel met daarop de belangrijkste parameters voor het bepalen van de C per eenheid lengte en de L per eenheid lengte.</p>
+<section id="doorsnede-twisted-pair-kabel">
+<h3>Doorsnede twisted pair kabel<a class="headerlink" href="#doorsnede-twisted-pair-kabel" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_output docutils container">
 <figure class="align-default" id="twisted-pairdoorsnede">
@@ -608,6 +653,7 @@ Zo= 50.81 Ohm
 </figure>
 </div>
 </div>
+</section>
 </section>
 <section id="striplijn">
 <h2>striplijn<a class="headerlink" href="#striplijn" title="Link to this heading">#</a></h2>
@@ -662,6 +708,8 @@ Golflengte in het medium (guide): lambda_g = 3.284e+01 cm
 <section id="microstrip-analyse-plots">
 <h2>Microstrip Analyse Plots<a class="headerlink" href="#microstrip-analyse-plots" title="Link to this heading">#</a></h2>
 <p>We vergelijken 3 types: Micro-fiber PTFE, FR4, en Ceramisch-gevulde PTFE voor een aantal waardes van <span class="math notranslate nohighlight">\(w/h\)</span>.</p>
+<section id="verloop-van-de-karakteristieke-impedantie-van-een-microstriplijn-als-functie-van-de-dimensies">
+<h3>Verloop van de karakteristieke impedantie van een microstriplijn als functie van de dimensies<a class="headerlink" href="#verloop-van-de-karakteristieke-impedantie-van-een-microstriplijn-als-functie-van-de-dimensies" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_output docutils container">
 <figure class="align-default" id="microstrip-zvw">
@@ -672,6 +720,9 @@ Golflengte in het medium (guide): lambda_g = 3.284e+01 cm
 </figure>
 </div>
 </div>
+</section>
+<section id="dielectrische-constante-van-een-microstriplijn-als-functie-van-de-dimensies">
+<h3>Dielectrische constante van een microstriplijn als functie van de dimensies<a class="headerlink" href="#dielectrische-constante-van-een-microstriplijn-als-functie-van-de-dimensies" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_output docutils container">
 <figure class="align-default" id="microstrip-evw">
@@ -683,10 +734,13 @@ Golflengte in het medium (guide): lambda_g = 3.284e+01 cm
 </div>
 </div>
 </section>
+</section>
 <section id="microstrip-design-plots">
 <h2>Microstrip Design Plots<a class="headerlink" href="#microstrip-design-plots" title="Link to this heading">#</a></h2>
 <p>Voor het design doen we eigenlijk het omgekeerde van de analyse: we vertrekken van een gevraagde <span class="math notranslate nohighlight">\(Z_o\)</span> en we rekenen uit wat de <span class="math notranslate nohighlight">\(w\)</span> en <span class="math notranslate nohighlight">\(h\)</span> moeten zijn om dit te bekomen.
 We vergelijken 3 types: Micro-fiber PTFE, FR4, en Ceramisch-gevulde PTFE voor een aantal waardes van <span class="math notranslate nohighlight">\(w/h\)</span>.</p>
+<section id="dimensies-om-de-vereiste-karakteristieke-impedantie-van-een-microstriplijn-te-bekomen">
+<h3>dimensies om de vereiste karakteristieke impedantie van een microstriplijn te bekomen<a class="headerlink" href="#dimensies-om-de-vereiste-karakteristieke-impedantie-van-een-microstriplijn-te-bekomen" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_output docutils container">
 <figure class="align-default" id="microstrip-wvz">
@@ -697,6 +751,9 @@ We vergelijken 3 types: Micro-fiber PTFE, FR4, en Ceramisch-gevulde PTFE voor ee
 </figure>
 </div>
 </div>
+</section>
+<section id="de-relatie-tussen-effectieve-dielectrische-constante-en-karakteristieke-impedantie">
+<h3>De relatie tussen effectieve dielectrische constante en karakteristieke impedantie<a class="headerlink" href="#de-relatie-tussen-effectieve-dielectrische-constante-en-karakteristieke-impedantie" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_output docutils container">
 <figure class="align-default" id="microstrip-evz">
@@ -707,6 +764,7 @@ We vergelijken 3 types: Micro-fiber PTFE, FR4, en Ceramisch-gevulde PTFE voor ee
 </figure>
 </div>
 </div>
+</section>
 </section>
 </section>
 
@@ -774,13 +832,35 @@ We vergelijken 3 types: Micro-fiber PTFE, FR4, en Ceramisch-gevulde PTFE voor ee
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#transmissie-lijn-model">Transmissie lijn model</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#coax-kabel">Coax kabel</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#twisted-pair-kabel">Twisted pair kabel</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#netwerk-model">Netwerk model</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#transmissie-lijn-model">Transmissie lijn model</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#kleinsignaal-model">Kleinsignaal model</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Kleinsignaal model</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vereenvoudigd-kleinsignaal-model">Vereenvoudigd Kleinsignaal model</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#coax-kabel">Coax kabel</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#doorsnede-coax-kabel">Doorsnede coax kabel</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#berekening-coax-kabel">Berekening coax kabel</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#verloop-van-de-karakteristieke-impedantie-van-een-rg-58-coax-als-functie-van-de-frequentie">Verloop van de karakteristieke impedantie van een RG-58 coax als functie van de frequentie</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#twisted-pair-kabel">Twisted pair kabel</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#doorsnede-twisted-pair-kabel">Doorsnede twisted pair kabel</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#striplijn">striplijn</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#microstriplijn">Microstriplijn</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#microstrip-analyse-plots">Microstrip Analyse Plots</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#microstrip-design-plots">Microstrip Design Plots</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#microstrip-analyse-plots">Microstrip Analyse Plots</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#verloop-van-de-karakteristieke-impedantie-van-een-microstriplijn-als-functie-van-de-dimensies">Verloop van de karakteristieke impedantie van een microstriplijn als functie van de dimensies</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dielectrische-constante-van-een-microstriplijn-als-functie-van-de-dimensies">Dielectrische constante van een microstriplijn als functie van de dimensies</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#microstrip-design-plots">Microstrip Design Plots</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dimensies-om-de-vereiste-karakteristieke-impedantie-van-een-microstriplijn-te-bekomen">dimensies om de vereiste karakteristieke impedantie van een microstriplijn te bekomen</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#de-relatie-tussen-effectieve-dielectrische-constante-en-karakteristieke-impedantie">De relatie tussen effectieve dielectrische constante en karakteristieke impedantie</a></li>
+</ul>
+</li>
 </ul>
   </nav></div>
 

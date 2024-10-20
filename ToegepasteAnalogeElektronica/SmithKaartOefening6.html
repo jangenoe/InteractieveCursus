@@ -509,7 +509,15 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#opgave-oefening">Opgave Oefening</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#oplossing">Oplossing</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#oplossing">Oplossing</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#smith-kaart-van-de-impedantie">Smith kaart van de impedantie</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#smith-kaart-van-de-admittantie">Smith kaart van de admittantie</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#berekening-admittantie-voor-verschillende-lengtes">Berekening admittantie voor verschillende lengtes</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#admittantie-belasting-open-transmissielijn">admittantie: belasting + open transmissielijn</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Berekening admittantie voor verschillende lengtes</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#circuit-van-de-aangepaste-antenne">circuit van de aangepaste antenne</a></li>
+</ul>
+</li>
 </ul>
             </nav>
         </div>
@@ -532,6 +540,8 @@ document.write(`
 <p>We plaatsen de waarde van <span class="math notranslate nohighlight">\(Z_L/Z_o\)</span> (dit is 0.79 + j 0.19) op de Smith kaart van de impedantie en we draaien tot we de cirkel waarbij het reele deel van admittantie 1 is tegenkomen. Dit ziet er uit als in <a class="reference internal" href="#smith61"><span class="std std-numref">Fig. 206</span></a>. Aangezien de cirkel met admittantie 1 niet aanwezig is op de Smith kaart van de impedantie, kunnen we beter het spiegelbeeld plotten op de Smith kaart van de admittantie. Dit zien we in <a class="reference internal" href="#smith62"><span class="std std-numref">Fig. 207</span></a></p>
 <div class="cell docutils container">
 </div>
+<section id="smith-kaart-van-de-impedantie">
+<h3>Smith kaart van de impedantie<a class="headerlink" href="#smith-kaart-van-de-impedantie" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_output docutils container">
 <figure class="align-default" id="smith61">
@@ -542,6 +552,9 @@ document.write(`
 </figure>
 </div>
 </div>
+</section>
+<section id="smith-kaart-van-de-admittantie">
+<h3>Smith kaart van de admittantie<a class="headerlink" href="#smith-kaart-van-de-admittantie" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_output docutils container">
 <figure class="align-default" id="smith62">
@@ -555,6 +568,9 @@ document.write(`
 <p>We kijken nu welke hoek we moeten draaien om deze cirkel te snijden.
 Aangezien de opgave was om dit zo kort mogelijk bij de belasting te doen, kiezen we voor het eerste snijpunt.
 Op de kaart lezen we af dat dit al ongeveer 30 na graden is. Dat is 1/12 van de volledige omtrek van de cirkel Als een gevolg gaat de lengte van de transmissielijn 1/24 deel van de golflengte zijn. We hebben dus een stukje van 2.8 mm nodig. In de tabel hieronder zien we dit in meer detail uitgewerkt:</p>
+</section>
+<section id="berekening-admittantie-voor-verschillende-lengtes">
+<h3>Berekening admittantie voor verschillende lengtes<a class="headerlink" href="#berekening-admittantie-voor-verschillende-lengtes" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>hoek    admittantie (Siemens)     lengte baantje op PCB (cm)
@@ -570,6 +586,9 @@ Op de kaart lezen we af dat dit al ongeveer 30 na graden is. Dat is 1/12 van de 
 </div>
 <p>Het imaginair gedeelte van de y waarde die we op de kaart aflezen is y=-0.324 j. We moeten dit dus compenseren door een imaginair deel van y=+0.324 j van de open transmissielijn.
 We starten dus de cirkelboog bij y=0 (zie oranje lijn in <a class="reference internal" href="#smith63"><span class="std std-numref">Fig. 208</span></a>) en kijken waar deze de waarde van y=+0.324 j snijdt op de Smith kaart. De lengte van de boog die we hiervoor nodig hebben is 33 graden. Dit komt overeen met een lengte van 3.1 mm.</p>
+</section>
+<section id="admittantie-belasting-open-transmissielijn">
+<h3>admittantie: belasting + open transmissielijn<a class="headerlink" href="#admittantie-belasting-open-transmissielijn" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_output docutils container">
 <figure class="align-default" id="smith63">
@@ -581,6 +600,9 @@ We starten dus de cirkelboog bij y=0 (zie oranje lijn in <a class="reference int
 </div>
 </div>
 <p>We kunnen dit ook in tabelvorm uitwerken. Dit zie je dan hieronder weergegeven.</p>
+</section>
+<section id="id1">
+<h3>Berekening admittantie voor verschillende lengtes<a class="headerlink" href="#id1" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>hoek    admittantie (Siemens)     lengte coax (cm)
@@ -594,6 +616,9 @@ We starten dus de cirkelboog bij y=0 (zie oranje lijn in <a class="reference int
 </div>
 </div>
 <p><a class="reference internal" href="#smith6cir"><span class="std std-numref">Fig. 209</span></a> toont het schema dat we nodig hebben om deze oplossing te realiseren</p>
+</section>
+<section id="circuit-van-de-aangepaste-antenne">
+<h3>circuit van de aangepaste antenne<a class="headerlink" href="#circuit-van-de-aangepaste-antenne" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_output docutils container">
 <figure class="align-default" id="smith6cir">
@@ -604,6 +629,7 @@ We starten dus de cirkelboog bij y=0 (zie oranje lijn in <a class="reference int
 </figure>
 </div>
 </div>
+</section>
 </section>
 </section>
 
@@ -672,7 +698,15 @@ We starten dus de cirkelboog bij y=0 (zie oranje lijn in <a class="reference int
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#opgave-oefening">Opgave Oefening</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#oplossing">Oplossing</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#oplossing">Oplossing</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#smith-kaart-van-de-impedantie">Smith kaart van de impedantie</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#smith-kaart-van-de-admittantie">Smith kaart van de admittantie</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#berekening-admittantie-voor-verschillende-lengtes">Berekening admittantie voor verschillende lengtes</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#admittantie-belasting-open-transmissielijn">admittantie: belasting + open transmissielijn</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Berekening admittantie voor verschillende lengtes</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#circuit-van-de-aangepaste-antenne">circuit van de aangepaste antenne</a></li>
+</ul>
+</li>
 </ul>
   </nav></div>
 
