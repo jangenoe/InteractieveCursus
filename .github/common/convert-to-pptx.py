@@ -57,8 +57,9 @@ for ipath in notebooks:
         subtitle= slide.shapes.add_textbox(Inches(7),Inches(4), Inches(5),Inches(2.0))  #left, top, width, height
         subtitle.text = ntbk.metadata.KULeuvenSlides["subtitle"].replace("<BR>","\n")
         #subtitle.text_frame.fit_text()
-        subtitle.text_frame.paragraphs[0].font.size = Pt(24)
-        subtitle.text_frame.paragraphs[0].font.color.rgb = (RGBColor(255, 255, 255))  # White text
+        for par in subtitle.text_frame.paragraphs:
+            par.font.size = Pt(24)
+            par.font.color.rgb = (RGBColor(255, 255, 255))  # White text
         #subtitle.text_frame.paragraphs[0].alignment = (PP_ALIGN.CENTER)
     if "authors" in ntbk.metadata.get('KULeuvenSlides', {}):
         txBox = slide.shapes.add_textbox(Inches(7),Inches(6.1), Inches(2),Inches(0.5))  #left, top, width, height
