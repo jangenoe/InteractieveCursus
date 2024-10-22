@@ -27,18 +27,8 @@ def find_between( s, first, last ):
 def maketitle(cell,slide):
     st = cell.metadata.KULeuvenSlides["slide_title"]
     slide.shapes.title.text=st.replace("<BR>","\n")
-    slide.shapes.title.text_frame.fit_text(font_file=".github/common/fonts/arialbd.ttf")  #problem font file on linux
-    # if "<BR>" in st:
-        # slide.shapes.title.text_frame.paragraphs[0].font.size = Pt(20)
-        # slide.shapes.title.text_frame.paragraphs[1].font.size = Pt(20)
-    # elif len(st)>70:
-       # slide.shapes.title.text_frame.paragraphs[0].font.size = Pt(20)
-    # elif len(st)>60:
-       # slide.shapes.title.text_frame.paragraphs[0].font.size = Pt(24)
-    # elif len(st)>50:
-       # slide.shapes.title.text_frame.paragraphs[0].font.size = Pt(28)
-    # elif len(st)>40:
-       # slide.shapes.title.text_frame.paragraphs[0].font.size = Pt(32)                                           
+    slide.shapes.title.text_frame.fit_text(font_family="Arial",max_size=32,bold=True, font_file=r".github/common/fonts/arialbd.ttf")         
+    
 for ipath in notebooks:
     print("file om te zetten: ",ipath)
     ntbk = nbf.read(ipath, nbf.NO_CONVERT)
@@ -97,8 +87,15 @@ for ipath in notebooks:
                                         pictp.left=(prs.slide_width-pictp.width)//2
                                 except UnidentifiedImageError:
                                     print("  "+content_type+"  error for cell number "+str(index))
-                            #elif content_type.startswith("image/")::
+                            #elif content_type.startswith("image/"):
                                 #print("  "+content_type+"  error for cell number "+str(index))
+                            elif content_type.startswith("text/html"):
+                                slide = prs.slides.add_slide(prs.slide_layouts[5])
+                                if "KULeuvenSlides" in cell.get('metadata', {}):
+                                    if "slide_title" in cell.metadata.get('KULeuvenSlides', {}):
+                                        maketitle(cell,slide) 
+                                "".join(output.data[content_type])
+                                   
                             #else:
                                 #print("  "+content_type+"  error for cell number "+str(index))
                                 
