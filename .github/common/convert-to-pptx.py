@@ -27,18 +27,18 @@ def find_between( s, first, last ):
 def maketitle(cell,slide):
     st = cell.metadata.KULeuvenSlides["slide_title"]
     slide.shapes.title.text=st.replace("<BR>","\n")
-    #slide.shapes.title.text_frame.fit_text()  #problem font file on linux
-    if "<BR>" in st:
-        slide.shapes.title.text_frame.paragraphs[0].font.size = Pt(20)
-        slide.shapes.title.text_frame.paragraphs[1].font.size = Pt(20)
-    elif len(st)>70:
-       slide.shapes.title.text_frame.paragraphs[0].font.size = Pt(20)
-    elif len(st)>60:
-       slide.shapes.title.text_frame.paragraphs[0].font.size = Pt(24)
-    elif len(st)>50:
-       slide.shapes.title.text_frame.paragraphs[0].font.size = Pt(28)
-    elif len(st)>40:
-       slide.shapes.title.text_frame.paragraphs[0].font.size = Pt(32)                                           
+    slide.shapes.title.text_frame.fit_text(font_file=".github/common/fonts/arialbd.ttf")  #problem font file on linux
+    # if "<BR>" in st:
+        # slide.shapes.title.text_frame.paragraphs[0].font.size = Pt(20)
+        # slide.shapes.title.text_frame.paragraphs[1].font.size = Pt(20)
+    # elif len(st)>70:
+       # slide.shapes.title.text_frame.paragraphs[0].font.size = Pt(20)
+    # elif len(st)>60:
+       # slide.shapes.title.text_frame.paragraphs[0].font.size = Pt(24)
+    # elif len(st)>50:
+       # slide.shapes.title.text_frame.paragraphs[0].font.size = Pt(28)
+    # elif len(st)>40:
+       # slide.shapes.title.text_frame.paragraphs[0].font.size = Pt(32)                                           
 for ipath in notebooks:
     print("file om te zetten: ",ipath)
     ntbk = nbf.read(ipath, nbf.NO_CONVERT)
