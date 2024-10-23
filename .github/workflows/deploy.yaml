@@ -20,7 +20,7 @@ jobs:
         pip install -r .github/requirements-Book.txt
         sudo add-apt-repository universe
         sudo apt update
-        sudo apt-get install texlive-xetex texlive-latex-recommended texlive-fonts-recommended texlive-fonts-extra texlive-latex-extra texlive-lang-european latexmk imagemagick
+        sudo apt-get install texlive-xetex texlive-latex-recommended texlive-fonts-recommended texlive-fonts-extra texlive-latex-extra texlive-lang-european latexmk imagemagick dvipng
     - name: Build the Jupyterbook websites
       run: |
         python .github/common/prepareBook.py

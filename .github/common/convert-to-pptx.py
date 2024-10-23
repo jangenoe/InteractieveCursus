@@ -7,7 +7,7 @@ from pptx.util import Inches, Pt
 from pptx.dml.color import RGBColor
 from pptx.enum.text import PP_ALIGN, MSO_AUTO_SIZE
 from pptx.enum.dml import MSO_THEME_COLOR
-from pptx.enum.shapes import MSO_AUTO_SHAPE_TYPE, PP_PLACEHOLDER
+from pptx.enum.shapes import MSO_AUTO_SHAPE_TYPE, PP_PLACEHOLDER, MSO_SHAPE_TYPE
 from PIL import UnidentifiedImageError
 from IPython.lib.latextools import latex_to_png
 
@@ -15,6 +15,20 @@ from IPython.lib.latextools import latex_to_png
 notebooks = glob("ToegepasteAnalogeElektronica/*.ipynb", recursive=True)
 notebooks+= glob("AnalogeElektronica2/*.ipynb", recursive=True)
 notebooks+= glob("AnalogDesignTechniques/*.ipynb", recursive=True)
+
+#slidetemplate="./.github/common/KULeuventemplate.pptx"
+slidetemplate="./.github/common/KULeuven_600TEMPLATE.pptx"
+
+report_all_shapes_in_template=True
+if report_all_shapes_in_template:
+    prs = Presentation(slidetemplate)
+    for i1,lay in enumerate(prs.slide_layouts):
+        slide = prs.slides.add_slide(lay)
+        for i2,shap in enumerate(slide.shapes):
+            if shap.shape_type==14:
+                print(i1,i2,shap.shape_type,shap.placeholder_format.type)
+            else:
+                print(i1,i2,shap.shape_type) 
 
 def find_between( s, first, last ):
     try:
@@ -25,15 +39,16 @@ def find_between( s, first, last ):
         return ""
 
 def maketitle(cell,slide):
-    st = cell.metadata.KULeuvenSlides["slide_title"]
-    slide.shapes.title.text=st.replace("<BR>","\n")
-    slide.shapes.title.text_frame.fit_text(font_family="Arial",max_size=32,bold=True, font_file=r".github/common/fonts/arialbd.ttf")         
+    if "KULeuvenSlides" in cell.get('metadata', {}):
+        if "slide_title" in cell.metadata.get('KULeuvenSlides', {}):
+            st = cell.metadata.KULeuvenSlides["slide_title"]
+            slide.shapes.title.text=st.replace("<BR>","\n")
+            slide.shapes.title.text_frame.fit_text(font_family="Arial",max_size=32,bold=True, font_file=r".github/common/fonts/arialbd.ttf")         
     
 for ipath in notebooks:
     print("file om te zetten: ",ipath)
     ntbk = nbf.read(ipath, nbf.NO_CONVERT)
-#    prs = Presentation("./.github/common/KULeuventemplate.pptx")
-    prs = Presentation("./.github/common/KULeuven_600TEMPLATE.pptx")
+    prs = Presentation(slidetemplate)
     slide = prs.slides.add_slide(prs.slide_layouts[0])
     if "title" in ntbk.metadata.get('KULeuvenSlides', {}):
         title_shape = slide.shapes.title
@@ -71,43 +86,38 @@ for ipath in notebooks:
             if "slide_type" in cell.metadata.get('slideshow', {}):
                 if  cell.metadata.slideshow.get("slide_type", ())=="slide":
                    for output_idx, output in enumerate(cell.get("outputs", ())):
-                        for content_type, content in output.get("data", {}).items():                           
-                            if content_type.startswith("image/png"):
-                                slide = prs.slides.add_slide(prs.slide_layouts[6])
-                                if "KULeuvenSlides" in cell.get('metadata', {}):
-                                    if "slide_title" in cell.metadata.get('KULeuvenSlides', {}):
-                                        maketitle(cell,slide)                                 
-                                image_stream = io.BytesIO(base64.b64decode(output.data[content_type]))
-                                try:
-                                    pictp=slide.shapes.add_picture(image_stream, Inches(1), Inches(1.29), height=Inches(5.5)) 
-                                    if pictp.width>prs.slide_width:
-                                        pictp.width=prs.slide_width
-                                        pictp.left=Inches(0)
-                                    else:
-                                        pictp.left=(prs.slide_width-pictp.width)//2
-                                except UnidentifiedImageError:
-                                    print("  "+content_type+"  error for cell number "+str(index))
-                            #elif content_type.startswith("image/"):
-                                #print("  "+content_type+"  error for cell number "+str(index))
-                            elif content_type.startswith("text/html"):
-                                slide = prs.slides.add_slide(prs.slide_layouts[5])
-                                if "KULeuvenSlides" in cell.get('metadata', {}):
-                                    if "slide_title" in cell.metadata.get('KULeuvenSlides', {}):
-                                        maketitle(cell,slide) 
-                                "".join(output.data[content_type])
-                                   
-                            #else:
+                        if "image/png" in output.get("data", {}):                           
+                            slide = prs.slides.add_slide(prs.slide_layouts[6])
+                            maketitle(cell,slide)  
+                            image_stream = io.BytesIO(base64.b64decode(output.data["image/png"]))
+                            try:                            
+                                pictp=slide.shapes.add_picture(image_stream, Inches(1), Inches(1.29), height=Inches(5.5)) 
+                                if pictp.width>prs.slide_width:
+                                    pictp.width=prs.slide_width
+                                    pictp.left=Inches(0)
+                                else:
+                                    pictp.left=(prs.slide_width-pictp.width)//2
+                            except UnidentifiedImageError:
+                                print("  image/png  error for cell number "+str(index))
+                        elif "text/plain" in output.get("data", {}):
+                            slide = prs.slides.add_slide(prs.slide_layouts[5])
+                            maketitle(cell,slide) 
+                            slide.shapes[0].text="".join(output.data["text/plain"])
+                            for par in slide.shapes[0].text_frame.paragraphs:
+                                par.line_spacing = Pt(8)
+                                par.font.color.rgb = RGBColor(0, 0, 0)
+                            slide.shapes[0].text_frame.fit_text(font_family="Courier",max_size=18, font_file=r".github/common/fonts/cour.ttf")           
+                        #else:
                                 #print("  "+content_type+"  error for cell number "+str(index))
                                 
         if "markdown" in cell.get('cell_type', {}) and not("remove_cell4pptx" in cell.metadata.get('tags', {})):
             if "slide_type" in cell.metadata.get('slideshow', {}):
                 if  cell.metadata.slideshow.get("slide_type", ())=="slide":
                     slide = prs.slides.add_slide(prs.slide_layouts[6])
-                    latexheight=Inches(1.28)
+                    maketitle(cell,slide)
+                    latexheight=Inches(2.28)
                     if "KULeuvenSlides" in cell.get('metadata', {}):
-                        if "slide_title" in cell.metadata.get('KULeuvenSlides', {}):
-                            maketitle(cell,slide)
-                        if "eq_vertical" in cell.metadata.get('KULeuvenSlides', {}):
+                         if "eq_vertical" in cell.metadata.get('KULeuvenSlides', {}):
                             latexheight+=Inches(cell.metadata.KULeuvenSlides["eq_vertical"])
                 if  cell.metadata.slideshow.get("slide_type", ())=="slide" or cell.metadata.slideshow.get("slide_type", ())=="fragment": 
                     latexpng=find_between( "".join(cell.get('source', {})) , "$$", "$$" )
@@ -117,14 +127,15 @@ for ipath in notebooks:
                     if len(latexpng)>0:
                         try:
                             pictp=slide.shapes.add_picture(io.BytesIO(latex_to_png(latexpng,backend="dvipng",scale=2)), Inches(1),latexheight) 
-                            if pictp.width>prs.slide_width:
-                                pictp.width=prs.slide_width
-                                pictp.left=Inches(0)
-                            else:
-                                pictp.left=(prs.slide_width-pictp.width)//2
-                            latexheight+=pictp.height+Inches(0.3)
                         except UnidentifiedImageError:
                             print("   latex error for cell number "+str(index))
+                        if pictp.width>prs.slide_width:
+                            pictp.width=prs.slide_width
+                            pictp.left=Inches(0)
+                        else:
+                            pictp.left=(prs.slide_width-pictp.width)//2
+                        latexheight+=pictp.height+Inches(0.3)
+
     slide = prs.slides.add_slide(prs.slide_layouts[10])
     slide = prs.slides.add_slide(prs.slide_layouts[9])
     prs.save(ipath[:-6]+".pptx")
