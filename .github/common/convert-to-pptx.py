@@ -99,6 +99,19 @@ for ipath in notebooks:
                                     pictp.left=(prs.slide_width-pictp.width)//2
                             except UnidentifiedImageError:
                                 print("  image/png  error for cell number "+str(index))
+                        elif "image/jpeg" in output.get("data", {}):                           
+                            slide = prs.slides.add_slide(prs.slide_layouts[6])
+                            maketitle(cell,slide)  
+                            image_stream = io.BytesIO(base64.b64decode(output.data["image/jpeg"]))
+                            try:                            
+                                pictp=slide.shapes.add_picture(image_stream, Inches(1), Inches(1.29), height=Inches(5.5)) 
+                                if pictp.width>prs.slide_width:
+                                    pictp.width=prs.slide_width
+                                    pictp.left=Inches(0)
+                                else:
+                                    pictp.left=(prs.slide_width-pictp.width)//2
+                            except UnidentifiedImageError:
+                                print("  image/jpeg  error for cell number "+str(index))
                         elif "text/plain" in output.get("data", {}):
                             slide = prs.slides.add_slide(prs.slide_layouts[5])
                             maketitle(cell,slide) 
@@ -115,10 +128,10 @@ for ipath in notebooks:
                 if  cell.metadata.slideshow.get("slide_type", ())=="slide":
                     slide = prs.slides.add_slide(prs.slide_layouts[6])
                     maketitle(cell,slide)
-                    latexheight=Inches(2.28)
+                    running_height=Inches(2.28)
                     if "KULeuvenSlides" in cell.get('metadata', {}):
                          if "eq_vertical" in cell.metadata.get('KULeuvenSlides', {}):
-                            latexheight+=Inches(cell.metadata.KULeuvenSlides["eq_vertical"])
+                            running_height+=Inches(cell.metadata.KULeuvenSlides["eq_vertical"])
                 if  cell.metadata.slideshow.get("slide_type", ())=="slide" or cell.metadata.slideshow.get("slide_type", ())=="fragment": 
                     latexpng=find_between( "".join(cell.get('source', {})) , "$$", "$$" )
                     latexpng2=find_between( "".join(cell.get('source', {})) , "\begin{equation}", "\end{equation}" )
@@ -126,7 +139,7 @@ for ipath in notebooks:
                         latexpng=latexpng2
                     if len(latexpng)>0:
                         try:
-                            pictp=slide.shapes.add_picture(io.BytesIO(latex_to_png(latexpng,backend="dvipng",scale=2)), Inches(1),latexheight) 
+                            pictp=slide.shapes.add_picture(io.BytesIO(latex_to_png(latexpng,backend="dvipng",scale=2)), Inches(1),running_height) 
                         except UnidentifiedImageError:
                             print("   latex error for cell number "+str(index))
                         if pictp.width>prs.slide_width:
@@ -134,7 +147,19 @@ for ipath in notebooks:
                             pictp.left=Inches(0)
                         else:
                             pictp.left=(prs.slide_width-pictp.width)//2
-                        latexheight+=pictp.height+Inches(0.3)
+                        running_height+=pictp.height+Inches(0.3)
+                    else:
+                        box= slide.shapes.add_textbox(Inches(1),running_height, Inches(10),Inches(2.0))
+                        box.text="".join(cell.get('source', {}))
+                        #for par in box.text_frame.paragraphs:
+                            #par.font.color.rgb = RGBColor(0, 0, 0)
+                        if len(box.text)>0:
+                            try:
+                                box.text_frame.fit_text(font_family="Calibri",max_size=30, font_file=r".github/common/fonts/calibri.ttf")
+                            except:
+                                print("   text_fit error for cell number "+str(index))
+
+                        running_height+=box.height+Inches(0.3)
 
     slide = prs.slides.add_slide(prs.slide_layouts[10])
     slide = prs.slides.add_slide(prs.slide_layouts[9])
