@@ -11,10 +11,10 @@
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://jangenoe.github.io/jangenoe/InteractieveCursus/ToegepasteAnalogeElektronica/reflecties.html" />
 <meta property="og:site_name" content="Project name not set" />
-<meta property="og:description" content="Uitwerken van een ladderdiagram: Verloop van een 1V positieve puls op een 50 Ohm transmissielijn met een terminatieweerstand van 120 Ohm. De bronweerstand is 30 Ohm., We kunnen het theoretisch ladd..." />
+<meta property="og:description" content="Fig. 130 toont bovenaan een PCB met baantjes met een karakteristieke impedantie 50 Ohm. Onderaan vergelijken we de situatie waarbij er aldaniet een stukje met karakteristieke impedantie 32 Ohm in d..." />
 <meta property="og:image" content="https://jangenoe.github.io/InteractieveCursus/ToegepasteAnalogeElektronica/_static/logo.svg" />
 <meta property="og:image:alt" content="Project name not set" />
-<meta name="description" content="Uitwerken van een ladderdiagram: Verloop van een 1V positieve puls op een 50 Ohm transmissielijn met een terminatieweerstand van 120 Ohm. De bronweerstand is 30 Ohm., We kunnen het theoretisch ladd..." />
+<meta name="description" content="Fig. 130 toont bovenaan een PCB met baantjes met een karakteristieke impedantie 50 Ohm. Onderaan vergelijken we de situatie waarbij er aldaniet een stukje met karakteristieke impedantie 32 Ohm in d..." />
 
     <title>Reflecties &#8212; Toegepaste Analoge Elektronica</title>
   
@@ -501,6 +501,21 @@
                   
   <section class="tex2jax_ignore mathjax_ignore" id="reflecties">
 <h1>Reflecties<a class="headerlink" href="#reflecties" title="Link to this heading">#</a></h1>
+<p><a class="reference internal" href="#reflectievideo"><span class="std std-numref">Fig. 130</span></a> toont bovenaan een PCB met baantjes met een karakteristieke impedantie 50 Ohm. Onderaan vergelijken we de situatie waarbij er aldaniet een stukje met karakteristieke impedantie 32 Ohm in de transmissielijn wordt toegevoegd. In beide gevallen vertrekt aan de ingang een puls van 1 V.
+In het geval zonder een baantje met karakteristieke impedantie 32 Ohm meten we aan de uitgang na 80 ps een puls van 953 mV, dus terug bijna 1 V. De maximale reflectie, zoals we die kunnen meten aan de ingang, blijft kleiner dan 9 mV, verwaarloosbaar klein dus.
+In het geval met een baantje met karakteristieke impedantie 32 Ohm meten we aan de uitgang na 80 ps een puls van 813 mV. De maximale reflectie, zoals we die kunnen meten aan de ingang, is 314 mV.</p>
+<div class="cell tag_remove_cell4pptx tag_remove_cell4PDF tag_remove_cell4reveal docutils container">
+<div class="cell_output docutils container">
+<figure class="align-default" id="reflectievideo">
+<div class="output text_html"><video src="video/signalintegrity.mp4" controls  >
+      Your browser does not support the <code>video</code> element.
+    </video></div><figcaption>
+<p><span class="caption-number">Fig. 130 </span><span class="caption-text">(boven) PCB waarbij de impedantie niet constant is (Rechts onder) groen: Bekomen signaal aan het einde van de getoonde transmissielijn. Rood: gereflecteerde signaal aan het begin. Het inkomende signaal is 1V</span><a class="headerlink" href="#reflectievideo" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
+</div>
+<p>De simulatie in <a class="reference internal" href="#reflectievideo"><span class="std std-numref">Fig. 130</span></a> is numeriek uitgevoerd aan de hand van het simulatiepaket <a class="reference external" href="https://www.ansys.com/">Ansys</a>.</p>
 <section id="uitwerken-van-een-ladderdiagram">
 <h2>Uitwerken van een ladderdiagram<a class="headerlink" href="#uitwerken-van-een-ladderdiagram" title="Link to this heading">#</a></h2>
 <div class="cell docutils container">
@@ -508,18 +523,18 @@
 <figure class="align-default" id="ladder1">
 <img alt="_images/1d6bc40e44001777e9c9f8d006fb840eac93377c79e99cce1b6e39b953059df1.png" src="_images/1d6bc40e44001777e9c9f8d006fb840eac93377c79e99cce1b6e39b953059df1.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 130 </span><span class="caption-text">Verloop van een 1V positieve puls op een 50 Ohm transmissielijn met een terminatieweerstand van 120 Ohm. De bronweerstand is 30 Ohm.</span><a class="headerlink" href="#ladder1" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 131 </span><span class="caption-text">Verloop van een 1V positieve puls op een 50 Ohm transmissielijn met een terminatieweerstand van 120 Ohm. De bronweerstand is 30 Ohm.</span><a class="headerlink" href="#ladder1" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 </div>
 </div>
-<p>We kunnen het theoretisch ladderdiagramma ook uitwerken voor een praktische propagatievertraging van 1.5ns en een pulse gestuurd door een IC van met een voedingsspanning op de uitgangsbuffers van 3.3 V. De aan-weerstand van de uitgangsbuffers is 10 Ohm (de aanweerstand van de pMOS) en de terminatieweerstand van de lijn is 25 Ohm. In dat geval verloopt de stijgende puls theoretisch zoals in <a class="reference internal" href="#ladderpmos"><span class="std std-numref">Fig. 131</span></a></p>
+<p>We kunnen het theoretisch ladderdiagramma ook uitwerken voor een praktische propagatievertraging van 1.5ns en een pulse gestuurd door een IC van met een voedingsspanning op de uitgangsbuffers van 3.3 V. De aan-weerstand van de uitgangsbuffers is 10 Ohm (de aanweerstand van de pMOS) en de terminatieweerstand van de lijn is 25 Ohm. In dat geval verloopt de stijgende puls theoretisch zoals in <a class="reference internal" href="#ladderpmos"><span class="std std-numref">Fig. 132</span></a></p>
 <div class="cell docutils container">
 <div class="cell_output docutils container">
 <figure class="align-default" id="ladderpmos">
 <img alt="_images/e5fe8e8fb5dc77939090e84d91fdbb1b5bfaa1792df00b5f3f9e39ba139cc025.png" src="_images/e5fe8e8fb5dc77939090e84d91fdbb1b5bfaa1792df00b5f3f9e39ba139cc025.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 131 </span><span class="caption-text">Verloop van een 3.3V positieve puls op een 50 Ohm transmissielijn met een terminatieweerstand van 25 Ohm. De bronweerstand is 10 Ohm.</span><a class="headerlink" href="#ladderpmos" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 132 </span><span class="caption-text">Verloop van een 3.3V positieve puls op een 50 Ohm transmissielijn met een terminatieweerstand van 25 Ohm. De bronweerstand is 10 Ohm.</span><a class="headerlink" href="#ladderpmos" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 </div>
