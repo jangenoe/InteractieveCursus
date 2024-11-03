@@ -19,11 +19,11 @@ launch_buttons:
   notebook_interface: "jupyterlab"
   binderhub_url: "https://mybinder.org"
   colab_url: "https://colab.research.google.com"
-  #deepnote_url": "https://deepnote.com"
-  #lightning_studio_url: "https://lightning.ai/"
+  deepnote_url": "https://deepnote.com"
+  lightning_studio_url: "https://lightning.ai/"
   use_lite_button: false
   use_reveal_button: true
-  use_powerpoint_button: false
+  use_powerpoint_button: true
   use_deck_button: false
 parse:
   myst_enable_extensions:
@@ -48,7 +48,7 @@ sphinx:
     - sphinx_exercise
     - sphinxext.opengraph
   config:
-    html_extra_path: ['../ToegepasteAnalogeElektronica/video']
+    html_extra_path: ['./extra_path']
     # html_theme: sphinx_book_theme
     language: nl
     html_show_copyright: false

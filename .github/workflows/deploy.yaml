@@ -21,6 +21,11 @@ jobs:
         sudo add-apt-repository universe
         sudo apt update
         sudo apt-get install texlive-xetex texlive-latex-recommended texlive-fonts-recommended texlive-fonts-extra texlive-latex-extra texlive-lang-european latexmk imagemagick dvipng
+    - name: copy extra documents
+      run: |
+        mkdir ToegepasteAnalogeElektronica/extra_path
+        mkdir ToegepasteAnalogeElektronica/extra_path/video
+        cp ToegepasteAnalogeElektronica/video/* ToegepasteAnalogeElektronica/extra_path/video
     - name: Build the Jupyterbook websites
       run: |
         python .github/common/prepareBook.py
@@ -90,9 +95,9 @@ jobs:
     - name: PowerPoint building
       run: |
         python .github/common/convert-to-pptx.py
-        mv ToegepasteAnalogeElektronica/*.pptx ToegepasteAnalogeElektronica/_build/html/slides/
-        mv AnalogeElektronica2/*.pptx AnalogeElektronica2/_build/html/slides/
-        mv AnalogDesignTechniques/*.pptx AnalogDesignTechniques/_build/html/slides/
+        mv ToegepasteAnalogeElektronica/*.pptx ToegepasteAnalogeElektronica/_build/html/PowerPoint/
+        mv AnalogeElektronica2/*.pptx AnalogeElektronica2/_build/html/PowerPoint/
+        mv AnalogDesignTechniques/*.pptx AnalogDesignTechniques/_build/html/PowerPoint/
     - name: Move all to CursusIndex
       run: |
         mv ToegepasteAnalogeElektronica/_build/html/ CursusIndex/_build/html/ToegepasteAnalogeElektronica
