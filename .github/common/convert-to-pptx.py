@@ -113,7 +113,7 @@ for ipath in notebooks:
                             except UnidentifiedImageError:
                                 print("  image/jpeg  error for cell number "+str(index))
                         elif "text/plain" in output.get("data", {}):
-                            if len(output["text"]<20):
+                            if len(output["text/plain"]<20):
                                 slide = prs.slides.add_slide(prs.slide_layouts[5])
                                 maketitle(cell,slide) 
                                 slide.shapes[0].text="".join(output["text/plain"])
