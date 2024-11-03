@@ -113,21 +113,54 @@ for ipath in notebooks:
                             except UnidentifiedImageError:
                                 print("  image/jpeg  error for cell number "+str(index))
                         elif "text/plain" in output.get("data", {}):
-                            slide = prs.slides.add_slide(prs.slide_layouts[5])
-                            maketitle(cell,slide) 
-                            slide.shapes[0].text="".join(output.data["text/plain"])
-                            for par in slide.shapes[0].text_frame.paragraphs:
-                                par.line_spacing = Pt(8)
-                                par.font.color.rgb = RGBColor(0, 0, 0)
-                            slide.shapes[0].text_frame.fit_text(font_family="Courier",max_size=18, font_file=r".github/common/fonts/cour.ttf")           
+                            if len(output["text"]<20):
+                                slide = prs.slides.add_slide(prs.slide_layouts[5])
+                                maketitle(cell,slide) 
+                                slide.shapes[0].text="".join(output["text/plain"])
+                                for par in slide.shapes[0].text_frame.paragraphs:
+                                    par.line_spacing = Pt(8)
+                                    par.font.color.rgb = RGBColor(0, 0, 0)
+                                slide.shapes[0].text_frame.fit_text(font_family="Courier",max_size=30, font_file=r".github/common/fonts/cour.ttf") 
+                            else:
+                                slide = prs.slides.add_slide(prs.slide_layouts[5])
+                                maketitle(cell,slide) 
+                                slide.shapes[0].text="".join(output["text/plain"][:20])
+                                for par in slide.shapes[0].text_frame.paragraphs:
+                                    par.line_spacing = Pt(8)
+                                    par.font.color.rgb = RGBColor(0, 0, 0)
+                                slide.shapes[0].text_frame.fit_text(font_family="Courier",max_size=30, font_file=r".github/common/fonts/cour.ttf")      
+                                slide = prs.slides.add_slide(prs.slide_layouts[5])
+                                maketitle(cell,slide) 
+                                slide.shapes[0].text="".join(output["text/plain"][20:])
+                                for par in slide.shapes[0].text_frame.paragraphs:
+                                    par.line_spacing = Pt(8)
+                                    par.font.color.rgb = RGBColor(0, 0, 0)
+                                slide.shapes[0].text_frame.fit_text(font_family="Courier",max_size=30, font_file=r".github/common/fonts/cour.ttf")
                         elif "text" in output:
-                            slide = prs.slides.add_slide(prs.slide_layouts[5])
-                            maketitle(cell,slide) 
-                            slide.shapes[0].text="".join(output["text"])
-                            for par in slide.shapes[0].text_frame.paragraphs:
-                                par.line_spacing = Pt(8)
-                                par.font.color.rgb = RGBColor(0, 0, 0)
-                            slide.shapes[0].text_frame.fit_text(font_family="Courier",max_size=18, font_file=r".github/common/fonts/cour.ttf")           
+                            if len(output["text"]<20):
+                                slide = prs.slides.add_slide(prs.slide_layouts[5])
+                                maketitle(cell,slide) 
+                                slide.shapes[0].text="".join(output["text"])
+                                for par in slide.shapes[0].text_frame.paragraphs:
+                                    par.line_spacing = Pt(8)
+                                    par.font.color.rgb = RGBColor(0, 0, 0)
+                                slide.shapes[0].text_frame.fit_text(font_family="Courier",max_size=30, font_file=r".github/common/fonts/cour.ttf") 
+                            else:
+                                slide = prs.slides.add_slide(prs.slide_layouts[5])
+                                maketitle(cell,slide) 
+                                slide.shapes[0].text="".join(output["text"][:20])
+                                for par in slide.shapes[0].text_frame.paragraphs:
+                                    par.line_spacing = Pt(8)
+                                    par.font.color.rgb = RGBColor(0, 0, 0)
+                                slide.shapes[0].text_frame.fit_text(font_family="Courier",max_size=30, font_file=r".github/common/fonts/cour.ttf")           
+                                slide = prs.slides.add_slide(prs.slide_layouts[5])
+                                maketitle(cell,slide) 
+                                slide.shapes[0].text="".join(output["text"][20:])
+                                for par in slide.shapes[0].text_frame.paragraphs:
+                                    par.line_spacing = Pt(8)
+                                    par.font.color.rgb = RGBColor(0, 0, 0)
+                                slide.shapes[0].text_frame.fit_text(font_family="Courier",max_size=30, font_file=r".github/common/fonts/cour.ttf")           
+                                
                         #else:
                                 #print("  "+content_type+"  error for cell number "+str(index))
                                 
