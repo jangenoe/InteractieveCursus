@@ -120,6 +120,14 @@ for ipath in notebooks:
                                 par.line_spacing = Pt(8)
                                 par.font.color.rgb = RGBColor(0, 0, 0)
                             slide.shapes[0].text_frame.fit_text(font_family="Courier",max_size=18, font_file=r".github/common/fonts/cour.ttf")           
+                        elif "text" in output.get("data", {}):
+                            slide = prs.slides.add_slide(prs.slide_layouts[5])
+                            maketitle(cell,slide) 
+                            slide.shapes[0].text="".join(output.data["text"])
+                            for par in slide.shapes[0].text_frame.paragraphs:
+                                par.line_spacing = Pt(8)
+                                par.font.color.rgb = RGBColor(0, 0, 0)
+                            slide.shapes[0].text_frame.fit_text(font_family="Courier",max_size=18, font_file=r".github/common/fonts/cour.ttf")           
                         #else:
                                 #print("  "+content_type+"  error for cell number "+str(index))
                                 
