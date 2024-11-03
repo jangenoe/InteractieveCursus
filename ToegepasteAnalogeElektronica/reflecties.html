@@ -70,6 +70,8 @@
     <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'reflecties';</script>
     <link rel="icon" href="_static/favicon.ico"/>
     <link rel="index" title="Index" href="genindex.html" />
@@ -321,6 +323,24 @@
 </a>
 </li>
       
+      
+      
+      
+      <li><a href="./PowerPoint/reflecties.pptx" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Slides bekijken met PowerPoint"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="PowerPoint logo" src="_static/images/PowerPoint.svg">
+  </span>
+<span class="btn__text-container">PowerPoint</span>
+</a>
+</li>
+      
   </ul>
 </div>
 
@@ -525,6 +545,10 @@ In het geval met een baantje met karakteristieke impedantie 32 Ohm meten we aan 
 </section>
 <section id="uitwerken-van-een-ladderdiagram">
 <h2>Uitwerken van een ladderdiagram<a class="headerlink" href="#uitwerken-van-een-ladderdiagram" title="Link to this heading">#</a></h2>
+<p>Bij het uitwerken van een ladderdiagram volgen we hoe een ideale stap in aan de ingang loopt over de transmissielijn. Bij elke overgang waar de karakteristieke impedantie verandert, berekenen we de reflectie en de transmissie van het signaal. De reflectie <span class="math notranslate nohighlight">\(\rho\)</span> bij de overgang van de karakteristieke impedantie <span class="math notranslate nohighlight">\(Z_1\)</span> naar de karakteristieke impedantie <span class="math notranslate nohighlight">\(Z_2\)</span> bedraagt:</p>
+<div class="math notranslate nohighlight">
+\[ \rho = \frac{Z_2-Z_1}{Z_2+Z_1}\]</div>
+<p>en de transmissie bedraagt <span class="math notranslate nohighlight">\(1+\rho\)</span></p>
 <div class="cell docutils container">
 <div class="cell_output docutils container">
 <figure class="align-default" id="ladder1">
