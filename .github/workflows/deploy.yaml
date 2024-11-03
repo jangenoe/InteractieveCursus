@@ -95,6 +95,9 @@ jobs:
     - name: PowerPoint building
       run: |
         python .github/common/convert-to-pptx.py
+        mkdir ToegepasteAnalogeElektronica/_build/html/PowerPoint
+        mkdir AnalogeElektronica2/_build/html/PowerPoint
+        mkdir TAnalogDesignTechniques/_build/html/PowerPoint
         mv ToegepasteAnalogeElektronica/*.pptx ToegepasteAnalogeElektronica/_build/html/PowerPoint/
         mv AnalogeElektronica2/*.pptx AnalogeElektronica2/_build/html/PowerPoint/
         mv AnalogDesignTechniques/*.pptx AnalogDesignTechniques/_build/html/PowerPoint/
