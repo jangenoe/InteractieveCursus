@@ -11,10 +11,10 @@
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://jangenoe.github.io/jangenoe/InteractieveCursus/ToegepasteAnalogeElektronica/reflecties.html" />
 <meta property="og:site_name" content="Project name not set" />
-<meta property="og:description" content="Fig. 130 toont bovenaan een PCB met baantjes met een karakteristieke impedantie 50 Ohm. Onderaan vergelijken we de situatie waarbij er aldaniet een stukje met karakteristieke impedantie 32 Ohm in d..." />
+<meta property="og:description" content="inleiding: In dit hoofdstuk werken we een aantal voorbeelden uit die aangeven wat de invloed is van niet aangepaste transmissielijnen op de signaal integriteit. Om hierin inzicht te krijgen is de m..." />
 <meta property="og:image" content="https://jangenoe.github.io/InteractieveCursus/ToegepasteAnalogeElektronica/_static/logo.svg" />
 <meta property="og:image:alt" content="Project name not set" />
-<meta name="description" content="Fig. 130 toont bovenaan een PCB met baantjes met een karakteristieke impedantie 50 Ohm. Onderaan vergelijken we de situatie waarbij er aldaniet een stukje met karakteristieke impedantie 32 Ohm in d..." />
+<meta name="description" content="inleiding: In dit hoofdstuk werken we een aantal voorbeelden uit die aangeven wat de invloed is van niet aangepaste transmissielijnen op de signaal integriteit. Om hierin inzicht te krijgen is de m..." />
 
     <title>Reflecties &#8212; Toegepaste Analoge Elektronica</title>
   
@@ -487,6 +487,7 @@
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#inleiding">inleiding</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#uitwerken-van-een-ladderdiagram">Uitwerken van een ladderdiagram</a></li>
 </ul>
             </nav>
@@ -501,7 +502,12 @@
                   
   <section class="tex2jax_ignore mathjax_ignore" id="reflecties">
 <h1>Reflecties<a class="headerlink" href="#reflecties" title="Link to this heading">#</a></h1>
-<p><a class="reference internal" href="#reflectievideo"><span class="std std-numref">Fig. 130</span></a> toont bovenaan een PCB met baantjes met een karakteristieke impedantie 50 Ohm. Onderaan vergelijken we de situatie waarbij er aldaniet een stukje met karakteristieke impedantie 32 Ohm in de transmissielijn wordt toegevoegd. In beide gevallen vertrekt aan de ingang een puls van 1 V.
+<section id="inleiding">
+<h2>inleiding<a class="headerlink" href="#inleiding" title="Link to this heading">#</a></h2>
+<p>In dit hoofdstuk werken we een aantal voorbeelden uit die aangeven wat de invloed is van niet aangepaste transmissielijnen op de signaal integriteit.
+Om hierin inzicht te krijgen is de meest eenvoudige aanpak te kijken wat er gebeurt wanneer een ideale digitale puls wordt aangelegd aan de transmissielijn.
+In werkelijkheid moeten we natuurlijk beseffen dat de echte pulsvorm steeds eindige stijg- en daaltijd heeft (<a class="reference external" href="https://en.wikipedia.org/wiki/Slew_rate">slew-rate</a>) en dat bovendien de stroom die geleverd wordt door de output transistors ook niet constant is. Meer specifiek zal deze stroom afnemen wanneer de spanning over de transistor klein wordt.</p>
+<p>Een voorbeeld waarin een meer realistische pulsvorm in detail wordt uitgerekent tonen we hieronder. <a class="reference internal" href="#reflectievideo"><span class="std std-numref">Fig. 130</span></a> toont bovenaan een PCB met baantjes met een karakteristieke impedantie 50 Ohm. Onderaan vergelijken we de situatie waarbij er aldaniet een stukje met karakteristieke impedantie 32 Ohm in de transmissielijn wordt toegevoegd. In beide gevallen vertrekt aan de ingang een puls van 1 V.
 In het geval zonder een baantje met karakteristieke impedantie 32 Ohm meten we aan de uitgang na 80 ps een puls van 953 mV, dus terug bijna 1 V. De maximale reflectie, zoals we die kunnen meten aan de ingang, blijft kleiner dan 9 mV, verwaarloosbaar klein dus.
 In het geval met een baantje met karakteristieke impedantie 32 Ohm meten we aan de uitgang na 80 ps een puls van 813 mV. De maximale reflectie, zoals we die kunnen meten aan de ingang, is 314 mV.</p>
 <div class="cell tag_remove_cell4pptx tag_remove_cell4PDF tag_remove_cell4reveal docutils container">
@@ -516,6 +522,7 @@ In het geval met een baantje met karakteristieke impedantie 32 Ohm meten we aan 
 </div>
 </div>
 <p>De simulatie in <a class="reference internal" href="#reflectievideo"><span class="std std-numref">Fig. 130</span></a> is numeriek uitgevoerd aan de hand van het simulatiepaket <a class="reference external" href="https://www.ansys.com/">Ansys</a>.</p>
+</section>
 <section id="uitwerken-van-een-ladderdiagram">
 <h2>Uitwerken van een ladderdiagram<a class="headerlink" href="#uitwerken-van-een-ladderdiagram" title="Link to this heading">#</a></h2>
 <div class="cell docutils container">
@@ -607,6 +614,7 @@ In het geval met een baantje met karakteristieke impedantie 32 Ohm meten we aan 
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#inleiding">inleiding</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#uitwerken-van-een-ladderdiagram">Uitwerken van een ladderdiagram</a></li>
 </ul>
   </nav></div>
