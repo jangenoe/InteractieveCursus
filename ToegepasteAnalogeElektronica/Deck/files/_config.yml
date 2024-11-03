@@ -48,7 +48,7 @@ sphinx:
     - sphinx_exercise
     - sphinxext.opengraph
   config:
-    html_extra_path: ['./video']
+    html_extra_path: ['../ToegepasteAnalogeElektronica/video']
     # html_theme: sphinx_book_theme
     language: nl
     html_show_copyright: false

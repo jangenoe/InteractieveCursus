@@ -2,11 +2,11 @@
   "content": [
     {
       "content": null,
-      "created": "2024-11-02T23:52:36.564480Z",
+      "created": "2024-11-03T10:13:23.505585Z",
       "format": null,
       "hash": null,
       "hash_algorithm": null,
-      "last_modified": "2024-11-02T23:46:38.417851Z",
+      "last_modified": "2024-11-03T10:05:54.643933Z",
       "mimetype": "video/mp4",
       "name": "signalintegrity.mp4",
       "path": "video/signalintegrity.mp4",
@@ -15,11 +15,11 @@
       "writable": true
     }
   ],
-  "created": "2024-11-02T23:52:36.564480Z",
+  "created": "2024-11-03T10:13:23.501585Z",
   "format": "json",
   "hash": null,
   "hash_algorithm": null,
-  "last_modified": "2024-11-02T23:52:36.564480Z",
+  "last_modified": "2024-11-03T10:13:23.501585Z",
   "mimetype": null,
   "name": "video",
   "path": "video",
