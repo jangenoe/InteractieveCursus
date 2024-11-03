@@ -886,12 +886,12 @@ p22 =  834003.105731553 *(-cos( 68.05859933682078 )+ j sin( 68.05859933682078 ))
 <p>In dit hoofdstuk werken we een aantal concrete voorbeelden uit van Butterworth filters. We vergelijken hierbij de verschillende ordes en kijken hoe deze in praktijk worden geimplementeerd in hardware circuits.</p>
 <section id="butterworth-laagdoorlaatfilter-van-de-3de-orde">
 <h3>Butterworth laagdoorlaatfilter van de 3de orde<a class="headerlink" href="#butterworth-laagdoorlaatfilter-van-de-3de-orde" title="Link to this heading">#</a></h3>
-<p>We ontwerpen een analoge 3de orde laagdoorlaatfilter van het type Butterworth met afsnijfrequentie 1 MHz. De transferfunktie <span class="math notranslate nohighlight">\(H(s)\)</span> of <span class="math notranslate nohighlight">\(H(j\omega)\)</span> die we bekomen is:</p>
+<p>Als eerste voorbeeld ontwerpen we een analoge 3de orde laagdoorlaatfilter van het type Butterworth met afsnijfrequentie 1 MHz. De transferfunktie <span class="math notranslate nohighlight">\(H(s)\)</span> of <span class="math notranslate nohighlight">\(H(j\omega)\)</span> die we bekomen is:</p>
 <div class="math notranslate nohighlight">
 \[ H(s) = \frac{\sum_{n=0}^M b_n s^n}{\sum_{n=0}^N a_n s^n} = \frac{\sum_{n=0}^0 b_n s^n}{\sum_{n=0}^3 a_n s^n}\]</div>
 <p><span class="math notranslate nohighlight">\(a_n\)</span> en <span class="math notranslate nohighlight">\(b_n\)</span> zijn de coeficienten van de veeltermen in de transferfunktie.
 Aangezien we hier een derde orde laagdoorlaatfilter ontwerpen is <span class="math notranslate nohighlight">\(M=0\)</span> en <span class="math notranslate nohighlight">\(N=3\)</span>.
-Voor deze oefening is het resultaat van de berekening van deze coeficienten:</p>
+Voor deze oefening is het resultaat van de berekening van deze coefficienten:</p>
 <div class="cell docutils container">
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Veelterm coefficienten teller: M= 0
@@ -905,12 +905,13 @@ a[ 0 ] = 2.4805021344239852e+20
 </div>
 </div>
 </div>
+<p>Een plot van deze transferfunctie zien we in <a class="reference internal" href="#filter-fig8"><span class="std std-numref">Fig. 95</span></a>. We stellen inderdaad vast dat de versterking (Gain) heel erg vlak is tot 1 MHz en daarna met 60 dB per decade afneemt.</p>
 <div class="cell docutils container">
 <div class="cell_output docutils container">
-<figure class="align-default" id="fig8">
+<figure class="align-default" id="filter-fig8">
 <img alt="_images/cfd9a918ed80a001e8e15c550f928ba43633cf8c605b4e1dd74cd6f513effefd.png" src="_images/cfd9a918ed80a001e8e15c550f928ba43633cf8c605b4e1dd74cd6f513effefd.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 95 </span><span class="caption-text">Amplitude en fase van een derde orde Butterworth laagdoorlaatfilter met afsnijfrequentie 1 MHz.</span><a class="headerlink" href="#fig8" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 95 </span><span class="caption-text">Amplitude en fase van een derde orde Butterworth laagdoorlaatfilter met afsnijfrequentie 1 MHz.</span><a class="headerlink" href="#filter-fig8" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 </div>

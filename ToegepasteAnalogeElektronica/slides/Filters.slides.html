@@ -12657,21 +12657,21 @@ z
 </div>
 </div>
 </div>
-</div></section></section><section data-state="kuleuven_slide"><section><h6>Transfer functie Butterworth laagdoorlaatfilter 3de orde</h6><div class="BottomSlideReference"></div>
+</div></section></section><section data-state="kuleuven_slide"><section><h6>Butterworth 3de orde laagdoorlaatfilter: Transfer functie </h6><div class="BottomSlideReference"></div>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="Butterworth-laagdoorlaatfilter-van-de-3de-orde">Butterworth laagdoorlaatfilter van de 3de orde<a class="anchor-link" href="#Butterworth-laagdoorlaatfilter-van-de-3de-orde">¶</a></h3><p>We ontwerpen een analoge 3de orde laagdoorlaatfilter van het type Butterworth met afsnijfrequentie 1 MHz. De transferfunktie $H(s)$ of $H(j\omega)$ die we bekomen is:</p>
+<h3 id="Butterworth-laagdoorlaatfilter-van-de-3de-orde">Butterworth laagdoorlaatfilter van de 3de orde<a class="anchor-link" href="#Butterworth-laagdoorlaatfilter-van-de-3de-orde">¶</a></h3><p>Als eerste voorbeeld ontwerpen we een analoge 3de orde laagdoorlaatfilter van het type Butterworth met afsnijfrequentie 1 MHz. De transferfunktie $H(s)$ of $H(j\omega)$ die we bekomen is:</p>
 <p>$$ H(s) = \frac{\sum_{n=0}^M b_n s^n}{\sum_{n=0}^N a_n s^n} = \frac{\sum_{n=0}^0 b_n s^n}{\sum_{n=0}^3 a_n s^n}$$</p>
 <p>$a_n$ en $b_n$ zijn de coeficienten van de veeltermen in de transferfunktie.
 Aangezien we hier een derde orde laagdoorlaatfilter ontwerpen is $M=0$ en $N=3$.
-Voor deze oefening is het resultaat van de berekening van deze coeficienten:</p>
+Voor deze oefening is het resultaat van de berekening van deze coefficienten:</p>
 </div>
 </div>
 </div>
-</div></section></section><section data-state="kuleuven_slide"><section><h6>Coeficienten derde orde Butterworth laagdoorlaatfilter(1 MHz)</h6><div class="BottomSlideReference"></div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noInput">
+</div></section></section><section data-state="kuleuven_slide"><section><h6>Coeficienten derde orde Butterworth laagdoorlaatfilter (1 MHz)</h6><div class="BottomSlideReference"></div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noInput">
 <div class="jp-Cell-outputWrapper">
 <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
 </div>
@@ -12690,7 +12690,17 @@ a[ 0 ] = 2.4805021344239852e+20
 </div>
 </div>
 </div>
-</div></section></section><section data-state="kuleuven_slide"><section><h6>Amplitude en fase derde orde Butterworth laagdoorlaatfilter(1 MHz)</h6><div class="BottomSlideReference"></div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noInput">
+</div><h6></h6><div class="BottomSlideReference"></div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>Een plot van deze transferfunctie zien we in {numref}<code>filter_Fig8</code>. We stellen inderdaad vast dat de versterking (Gain) heel erg vlak is tot 1 MHz en daarna met 60 dB per decade afneemt.</p>
+</div>
+</div>
+</div>
+</div></section></section><section data-state="kuleuven_slide"><section><h6>Amplitude en fase derde orde Butterworth laagdoorlaatfilter (1 MHz)</h6><div class="BottomSlideReference"></div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noInput">
 <div class="jp-Cell-outputWrapper">
 <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
 </div>
@@ -14925,7 +14935,7 @@ p[ 14 ] = (-46458057.493502825-307739438.435567j)
 </div>
 </div>
 </div>
-</div></section></section><section data-state="kuleuven_slide"><section><h6>polen van een 7de orde Butterworth banddoorlaatfilter</h6><div class="BottomSlideReference"></div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noInput">
+</div></section></section><section data-state="kuleuven_slide"><section><h6>Polen van een 7de orde Butterworth banddoorlaatfilter</h6><div class="BottomSlideReference"></div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noInput">
 <div class="jp-Cell-outputWrapper">
 <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
 </div>
