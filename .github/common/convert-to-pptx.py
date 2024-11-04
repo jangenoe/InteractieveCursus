@@ -113,7 +113,7 @@ for ipath in notebooks:
                             except UnidentifiedImageError:
                                 print("  image/jpeg  error for cell number "+str(index))
                         elif "text/plain" in output.get("data", {}):
-                            if len(output.data["text/plain"]<20):
+                            if len(output.data["text/plain"])<20:
                                 slide = prs.slides.add_slide(prs.slide_layouts[5])
                                 maketitle(cell,slide) 
                                 slide.shapes[0].text="".join(output.data["text/plain"])
@@ -137,7 +137,7 @@ for ipath in notebooks:
                                     par.font.color.rgb = RGBColor(0, 0, 0)
                                 slide.shapes[0].text_frame.fit_text(font_family="Courier",max_size=30, font_file=r".github/common/fonts/cour.ttf")
                         elif "text" in output:
-                            if len(output["text"]<20):
+                            if len(output["text"])<20:
                                 slide = prs.slides.add_slide(prs.slide_layouts[5])
                                 maketitle(cell,slide) 
                                 slide.shapes[0].text="".join(output["text"])
