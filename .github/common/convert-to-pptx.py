@@ -136,11 +136,11 @@ for ipath in notebooks:
                                     par.line_spacing = Pt(8)
                                     par.font.color.rgb = RGBColor(0, 0, 0)
                                 slide.shapes[0].text_frame.fit_text(font_family="Courier",max_size=30, font_file=r".github/common/fonts/cour.ttf")
-                        elif "text" in output:
-                            if len(output)<20:
+                        elif "text" in cell.outputs:
+                            if len(cell.outputs["text"])<20:
                                 slide = prs.slides.add_slide(prs.slide_layouts[5])
                                 maketitle(cell,slide) 
-                                slide.shapes[0].text="".join(output)
+                                slide.shapes[0].text="".join(cell.outputs["text"])
                                 for par in slide.shapes[0].text_frame.paragraphs:
                                     par.line_spacing = Pt(8)
                                     par.font.color.rgb = RGBColor(0, 0, 0)
@@ -148,14 +148,14 @@ for ipath in notebooks:
                             else:
                                 slide = prs.slides.add_slide(prs.slide_layouts[5])
                                 maketitle(cell,slide) 
-                                slide.shapes[0].text="".join(output[:20])
+                                slide.shapes[0].text="".join(cell.outputs["text"][:20])
                                 for par in slide.shapes[0].text_frame.paragraphs:
                                     par.line_spacing = Pt(8)
                                     par.font.color.rgb = RGBColor(0, 0, 0)
                                 slide.shapes[0].text_frame.fit_text(font_family="Courier",max_size=30, font_file=r".github/common/fonts/cour.ttf")           
                                 slide = prs.slides.add_slide(prs.slide_layouts[5])
                                 maketitle(cell,slide) 
-                                slide.shapes[0].text="".join(output[20:])
+                                slide.shapes[0].text="".join(cell.outputs["text"][20:])
                                 for par in slide.shapes[0].text_frame.paragraphs:
                                     par.line_spacing = Pt(8)
                                     par.font.color.rgb = RGBColor(0, 0, 0)
@@ -201,6 +201,10 @@ for ipath in notebooks:
                                 print("   text_fit error for cell number "+str(index))
 
                         running_height+=box.height+Inches(0.3)
+                elif  cell.metadata.slideshow.get("slide_type", ())=="notes":
+                    notes_slide = slide.notes_slide  # Notes are always added to the former slide. Slide must already exist.
+                    notes_slide.notes_text_frame.text = "".join(cell.get('source', {}))
+                    
 
     slide = prs.slides.add_slide(prs.slide_layouts[10])
     slide = prs.slides.add_slide(prs.slide_layouts[9])
