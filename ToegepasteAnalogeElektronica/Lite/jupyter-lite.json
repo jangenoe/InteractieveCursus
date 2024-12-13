@@ -2,7 +2,7 @@
   "jupyter-config-data": {
     "appName": "KULeuven Cursus",
     "appUrl": "./lab",
-    "appVersion": "0.4.4",
+    "appVersion": "0.4.5",
     "baseUrl": "./",
     "defaultKernelName": "python",
     "disabledExtensions": [],
