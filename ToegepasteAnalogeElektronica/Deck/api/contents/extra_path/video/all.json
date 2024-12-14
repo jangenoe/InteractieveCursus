@@ -2,11 +2,11 @@
   "content": [
     {
       "content": null,
-      "created": "2024-12-14T13:59:30.386419Z",
+      "created": "2024-12-14T17:04:24.273542Z",
       "format": null,
       "hash": null,
       "hash_algorithm": null,
-      "last_modified": "2024-12-14T13:56:16.851822Z",
+      "last_modified": "2024-12-14T17:01:08.372500Z",
       "mimetype": "video/mp4",
       "name": "signalintegrity.mp4",
       "path": "extra_path/video/signalintegrity.mp4",
@@ -16,11 +16,11 @@
     },
     {
       "content": null,
-      "created": "2024-12-14T13:59:30.385419Z",
+      "created": "2024-12-14T17:04:24.271542Z",
       "format": null,
       "hash": null,
       "hash_algorithm": null,
-      "last_modified": "2024-12-14T13:56:16.850822Z",
+      "last_modified": "2024-12-14T17:01:08.371500Z",
       "mimetype": "text/markdown",
       "name": "bronnen.md",
       "path": "extra_path/video/bronnen.md",
@@ -29,11 +29,11 @@
       "writable": true
     }
   ],
-  "created": "2024-12-14T13:59:30.385419Z",
+  "created": "2024-12-14T17:04:24.271542Z",
   "format": "json",
   "hash": null,
   "hash_algorithm": null,
-  "last_modified": "2024-12-14T13:59:30.385419Z",
+  "last_modified": "2024-12-14T17:04:24.271542Z",
   "mimetype": null,
   "name": "video",
   "path": "extra_path/video",
