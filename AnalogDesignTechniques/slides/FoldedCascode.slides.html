@@ -7826,27 +7826,7 @@ div .csl-right-inline{text-align: left}</style>
 <!-- End of mathjax configuration --></head>
 <body class="jp-Notebook" data-jp-theme-light="true" data-jp-theme-name="JupyterLab Light">
 <div class="reveal">
-<div class="slides"><section data-state="kuleuven_title_slide reveal"><section><div class="title">Folded Cascode Stage</div><div class="subtitle">Small Signal models for building blocks</div><div class="speaker kuleuvenwhite">Jan Genoe</div><div class="date kuleuvenwhite">February 2022</div></section></section><section data-state="kuleuven_slide"><section>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=6bbf5bb3">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput celltag_remove_cell celltag_slide_overzicht" data-mime-type="text/markdown">
-<h6 id="Overzicht">Overzicht<a class="anchor-link" href="#Overzicht">¶</a></h6>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=39ab010e-a265-46db-bf05-3f78c600c1cf">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput celltag_remove_cell" data-mime-type="text/markdown">
-<h6 id="Theoretical-folded-cascode-configuration">Theoretical folded cascode configuration<a class="anchor-link" href="#Theoretical-folded-cascode-configuration">¶</a></h6>
-</div>
-</div>
-</div>
-</div></section></section><section data-state="kuleuven_slide"><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noInput" id="cell-id=cordless-relaxation">
+<div class="slides"><section data-state="kuleuven_title_slide reveal"><section><div class="title">Folded Cascode Stage</div><div class="subtitle">Small Signal models for building blocks</div><div class="speaker kuleuvenwhite">Jan Genoe</div><div class="date kuleuvenwhite">February 2022</div></section></section><section data-state="kuleuven_slide"><section><h6>Theoretical folded cascode configuration</h6><div class="BottomSlideReference"></div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noInput" id="cell-id=cordless-relaxation">
 <div class="jp-Cell-outputWrapper">
 <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
 </div>
@@ -8580,36 +8560,7 @@ z
 </div>
 </div>
 </div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=ce6d7f4a-7813-48a4-a1ae-41c0bb4e7899">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>In {numref}<code>Afig1</code> we also add a cascode transistor (in red) between the input transistor and the output node. This corresponds as a consequence to a classical cascode stage. However, there is one major difference: the cascode transistor is of the opposite polarity when compared to the input transistors. In {numref}<code>Afig1</code> the input transistor is a pMOS tranistor and the cascode transistor is an nMOS transitor. Obviously, this also alters the current flow, and in order to maintain the current flow between power ($V_{dd}$) and ground, an addition current source ($I_b$) needs to be added.</p>
-<p>For the practical implementation of this folded cascode, we replace the current source ($I_b$) with the transistor $T_3$, as can be seen in {numref}<code>Afig2</code>.</p>
-<p>The amplication of this simple folded cascode amplifier stage is defined by:</p>
-<ul>
-<li>the $g_m$ of the input transitor $T_1$</li>
-<li>the conductance of the load resistor $g_L$</li>
-<li>the output conductance of the folded cascode stage $g_{casc}$</li>
-<li>the capacitive load $C_L$</li>
-</ul>
-<p>$$ A=\frac{g_{m1}}{g_L+g_{casc}+j \omega C_L}  $$</p>
-</div>
-</div>
-</div>
-</div></section></section><section data-state="kuleuven_slide"><section>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=924393cf-d59e-4793-be4e-9cf63c2134c7">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput celltag_remove_cell" data-mime-type="text/markdown">
-<h6 id="Practical-folded-cascode-amplifier-stage-configuration">Practical folded cascode amplifier stage configuration<a class="anchor-link" href="#Practical-folded-cascode-amplifier-stage-configuration">¶</a></h6>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noInput" id="cell-id=german-smell">
+</div></section></section><section data-state="kuleuven_slide"><section><h6>Practical folded cascode amplifier stage configuration</h6><div class="BottomSlideReference"></div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noInput" id="cell-id=german-smell">
 <div class="jp-Cell-outputWrapper">
 <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
 </div>
@@ -9485,27 +9436,7 @@ z
 </div>
 </div>
 </div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=8309fd1d-6225-4fe4-8d9a-1e074aa92924">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>The important next step is obviously the determination fo $g_{casc}$. We use {numref}<code>Afig3</code> for elaborating this output impedance.</p>
-</div>
-</div>
-</div>
-</div></section></section><section data-state="kuleuven_slide"><section>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=a640eb59-055f-4318-bfe3-8a4cbaf9de9c">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput celltag_remove_cell" data-mime-type="text/markdown">
-<h6 id="Circuit-block-under-consideration-for-measuring-the-folded-cascode-output-impedance">Circuit block under consideration for measuring the folded cascode output impedance<a class="anchor-link" href="#Circuit-block-under-consideration-for-measuring-the-folded-cascode-output-impedance">¶</a></h6>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noInput celltag_hide-input" id="cell-id=light-windows">
+</div></section></section><section data-state="kuleuven_slide"><section><h6>Circuit block under consideration for measuring the folded cascode output impedance</h6><div class="BottomSlideReference"></div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noInput" id="cell-id=light-windows">
 <div class="jp-Cell-outputWrapper">
 <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
 </div>
