@@ -11,10 +11,10 @@
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://jangenoe.github.io/jangenoe/InteractieveCursus/AnalogeElektronica2/TransistorConfiguraties.html" />
 <meta property="og:site_name" content="Project name not set" />
-<meta property="og:description" content="Tweepoort: 3 terminal component in een 2-poort configuratie. De definitie van spanningsversterking is gegeven op basis van de spanning aan de in- en uitgang., 3 terminal component in een 2-poort co..." />
+<meta property="og:description" content="Tweepoort: Wanneer we een ingangsspanning V_{in} aanleggen aan een transistor die gebruikt wordt als tweepoorten en een uitgangsspanning V_{uit} bekomen, hebben deze spanningen deze enkel zin ten o..." />
 <meta property="og:image" content="https://jangenoe.github.io/InteractieveCursus/AnalogeElektronica2/_static/logo.svg" />
 <meta property="og:image:alt" content="Project name not set" />
-<meta name="description" content="Tweepoort: 3 terminal component in een 2-poort configuratie. De definitie van spanningsversterking is gegeven op basis van de spanning aan de in- en uitgang., 3 terminal component in een 2-poort co..." />
+<meta name="description" content="Tweepoort: Wanneer we een ingangsspanning V_{in} aanleggen aan een transistor die gebruikt wordt als tweepoorten en een uitgangsspanning V_{uit} bekomen, hebben deze spanningen deze enkel zin ten o..." />
 
     <title>Transistor Configuraties &#8212; Analoge elektronische schakelingen</title>
   
@@ -503,6 +503,7 @@
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tweepoort">Tweepoort</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#eenpoort">Eenpoort</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mos-transistor-configuraties">MOS transistor configuraties</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#de-mos-transistor-geschakeld-als-2-terminal-component">De MOS transistor geschakeld als 2-terminal component</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#de-mos-transistor-geschakeld-als-diode">De MOS transistor geschakeld als diode</a></li>
@@ -540,6 +541,7 @@
 <h2>Tweepoort<a class="headerlink" href="#tweepoort" title="Link to this heading">#</a></h2>
 <div class="cell docutils container">
 </div>
+<p>Wanneer we een ingangsspanning <span class="math notranslate nohighlight">\(V_{in}\)</span> aanleggen aan een transistor die gebruikt wordt als tweepoorten en een uitgangsspanning <span class="math notranslate nohighlight">\(V_{uit}\)</span> bekomen, hebben deze spanningen deze enkel zin ten opzichte van een referentie. In dit overzicht van de transistor configuraties nemen we deze referentie gemeenschappelijk voor de ingang en de uitgang zoals je kan zien in figuur <a class="reference internal" href="#tdefa"><span class="std std-numref">Fig. 1</span></a>. De kleinsignaalversterking <span class="math notranslate nohighlight">\(A\)</span> definieren we dan vervolgens als de verhouding tussen differentiele uitgangsspanning (<span class="math notranslate nohighlight">\(\partial V_{uit}\)</span>) en de differentiele ingangsspanning (<span class="math notranslate nohighlight">\(\partial V_{in}\)</span>).</p>
 <div class="cell docutils container">
 <div class="cell_output docutils container">
 <figure class="align-default" id="tdefa">
@@ -550,6 +552,7 @@
 </figure>
 </div>
 </div>
+<p>Wanneer we een ingangsstroom <span class="math notranslate nohighlight">\(I_{in}\)</span> aanleggen aan een transistor die gebruikt wordt als tweepoort en een uitgangsstroom <span class="math notranslate nohighlight">\(I_{uit}\)</span> bekomen, moeten deze stroom op een of andere manier ook terugstromen. In dit overzicht van de transistor configuraties nemen we de gemeenschappelijk klem voor de ingang en de uitgang als de klem waarlangs de stroom terugvloeit, zoals je kan zien in figuur <a class="reference internal" href="#tdefb"><span class="std std-numref">Fig. 2</span></a>. De kleinsignaalstroomversterking <span class="math notranslate nohighlight">\(\beta\)</span> definieren we dan vervolgens als de verhouding tussen differentiele uitgangsstroom (<span class="math notranslate nohighlight">\(\partial I_{uit}\)</span>) en de differentiele ingangsstroom (<span class="math notranslate nohighlight">\(\partial I_{in}\)</span>).</p>
 <div class="cell docutils container">
 <div class="cell_output docutils container">
 <figure class="align-default" id="tdefb">
@@ -560,6 +563,7 @@
 </figure>
 </div>
 </div>
+<p>Op een gelijkaardige wijze definieren we de transconductantie <span class="math notranslate nohighlight">\(g_m\)</span> als de verhouding tussen differentiele uitgangsstroom (<span class="math notranslate nohighlight">\(\partial I_{uit}\)</span>) en de differentiele ingangsspanning (<span class="math notranslate nohighlight">\(\partial V_{in}\)</span>).</p>
 <div class="cell docutils container">
 <div class="cell_output docutils container">
 <figure class="align-default" id="tdefgm">
@@ -570,6 +574,11 @@
 </figure>
 </div>
 </div>
+</section>
+<section id="eenpoort">
+<h2>Eenpoort<a class="headerlink" href="#eenpoort" title="Link to this heading">#</a></h2>
+<p>We kunnen een transistor ook als een tweeterminal component gebruiken. Hierdoor bekomen we een eenpoort.
+We leggen een spanning  aan over de component en krijgen er een stroom door, of omgekeerd. Er is extern geen derde contact dat een controle van de stroom toelaat. Dit kan bekomen worden door 2 van de 3 terminals kort te sluiten of er een vaste spanning over aan te brengen.</p>
 <div class="cell docutils container">
 <div class="cell_output docutils container">
 <figure class="align-default" id="tdefgo">
@@ -839,6 +848,7 @@
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tweepoort">Tweepoort</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#eenpoort">Eenpoort</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mos-transistor-configuraties">MOS transistor configuraties</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#de-mos-transistor-geschakeld-als-2-terminal-component">De MOS transistor geschakeld als 2-terminal component</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#de-mos-transistor-geschakeld-als-diode">De MOS transistor geschakeld als diode</a></li>
