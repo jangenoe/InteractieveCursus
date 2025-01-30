@@ -14,5 +14,5 @@ scikit-rf
 networkx
 pyspice
 schemdraw
-jupytercards
+jupytercards>=3.0.0
 nbformat
