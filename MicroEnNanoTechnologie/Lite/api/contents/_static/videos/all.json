@@ -2,11 +2,11 @@
   "content": [
     {
       "content": null,
-      "created": "2025-01-30T21:47:34.591523Z",
+      "created": "2025-01-30T21:59:50.102661Z",
       "format": null,
       "hash": null,
       "hash_algorithm": null,
-      "last_modified": "2025-01-30T21:41:15.358207Z",
+      "last_modified": "2025-01-30T21:53:31.617142Z",
       "mimetype": "video/mp4",
       "name": "soldering_smd.mp4",
       "path": "_static/videos/soldering_smd.mp4",
@@ -16,11 +16,11 @@
     },
     {
       "content": null,
-      "created": "2025-01-30T21:47:34.586524Z",
+      "created": "2025-01-30T21:59:50.097661Z",
       "format": null,
       "hash": null,
       "hash_algorithm": null,
-      "last_modified": "2025-01-30T21:41:15.328207Z",
+      "last_modified": "2025-01-30T21:53:31.585142Z",
       "mimetype": "text/markdown",
       "name": "bronnen.md",
       "path": "_static/videos/bronnen.md",
@@ -29,11 +29,11 @@
       "writable": true
     }
   ],
-  "created": "2025-01-30T21:47:34.587523Z",
+  "created": "2025-01-30T21:59:50.097661Z",
   "format": "json",
   "hash": null,
   "hash_algorithm": null,
-  "last_modified": "2025-01-30T21:47:34.587523Z",
+  "last_modified": "2025-01-30T21:59:50.097661Z",
   "mimetype": null,
   "name": "videos",
   "path": "_static/videos",
