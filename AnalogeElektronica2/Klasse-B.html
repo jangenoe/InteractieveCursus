@@ -24,19 +24,17 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
-  <!--
-    this give us a css class that will be invisible only if js is disabled
-  -->
-  <noscript>
-    <style>
-      .pst-js-only { display: none !important; }
-
-    </style>
-  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
-<link href="_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
     <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=c4e161c5" />
@@ -47,11 +45,10 @@
     <link rel="stylesheet" type="text/css" href="_static/exercise.css" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
   
-  <!-- So that users can add custom icons -->
-  <script src="_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
-<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
     <script src="_static/documentation_options.js?v=b028fc25"></script>
     <script src="_static/doctools.js?v=9a2dae69"></script>
@@ -80,7 +77,6 @@
     <link rel="prev" title="Klasse A versterkers" href="Klasse-A.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="nl"/>
-  <meta name="docsearch:version" content="" />
   </head>
   
   
@@ -96,8 +92,19 @@
     <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
-  <dialog id="pst-search-dialog">
-    
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
 <form class="bd-search d-flex align-items-center"
       action="search.html"
       method="get">
@@ -105,6 +112,7 @@
   <input type="search"
          class="form-control"
          name="q"
+         id="search-input"
          placeholder="Search this book..."
          aria-label="Search this book..."
          autocomplete="off"
@@ -112,8 +120,8 @@
          autocapitalize="off"
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form>
-  </dialog>
+</form></div>
+  </div>
 
   <div class="pst-async-banner-revealer d-none">
   <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
@@ -129,8 +137,7 @@
       
       
       
-      <dialog id="pst-primary-sidebar-modal"></dialog>
-      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+      <div class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -160,17 +167,21 @@
     
     
     <img src="_static/logo.png" class="logo__image only-light" alt="Analoge elektronische schakelingen - Home"/>
-    <img src="_static/logo.png" class="logo__image only-dark pst-js-only" alt="Analoge elektronische schakelingen - Home"/>
+    <script>document.write(`<img src="_static/logo.png" class="logo__image only-dark" alt="Analoge elektronische schakelingen - Home"/>`);</script>
   
   
 </a></div>
         <div class="sidebar-primary-item">
 
-<button class="btn search-button-field search-button__button pst-js-only" title="Zoeken" aria-label="Zoeken" data-bs-placement="bottom" data-bs-toggle="tooltip">
- <i class="fa-solid fa-magnifying-glass"></i>
- <span class="search-button__default-text">Zoeken</span>
- <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-</button></div>
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Zoeken" aria-label="Zoeken" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Zoeken</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
         <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
@@ -226,14 +237,9 @@
   
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
-      <div class="sidebar-primary-item">
-<div id="ethical-ad-placement"
-      class="flat"
-      data-ea-publisher="readthedocs"
-      data-ea-type="readthedocs-sidebar"
-      data-ea-manual="true">
-</div></div>
   </div>
+  
+  <div id="rtd-footer-container"></div>
 
 
       </div>
@@ -469,16 +475,24 @@
 
 
 
-<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
-  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
-  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
-  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
-</button>
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
 
 
-<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Zoeken" aria-label="Zoeken" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Zoeken" aria-label="Zoeken" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-</button>
+  </button>
+`);
+</script>
 <button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
 </button>
@@ -588,7 +602,7 @@ Als een gevolg hiervan kan de duurdere aanschafkost gemakkelijk terugewonnen wor
 Beide transistors staan in gemeenschappelijke collector configuratie.
 Op deze manier werkt de vermogentransistor als stroomversterker.
 De spanning aan de basis wordt (op de redelijk constante basis-emitter offset na) doorgegeven naar de collector.
-De stroom aan de collector wordt echter met de factor <span class="math notranslate nohighlight">\(\beta_F\)</span> van de bipolaire transistor versterkt.</p>
+De stroom aan de collector wordt echter met de factor βF van de bipolaire transistor versterkt.</p>
 <div class="cell docutils container">
 <div class="cell_output docutils container">
 <figure class="align-default" id="bfig1">
@@ -599,9 +613,9 @@ De stroom aan de collector wordt echter met de factor <span class="math notransl
 </figure>
 </div>
 </div>
-<p>Het is belangrijk in dit schema de verschillende bouwblokken te herkennen. <a class="reference internal" href="#bfig1anot"><span class="std std-numref">Fig. 28</span></a> toont deze bouwblokken. We hebben natuurlijk in de eerste plaats de belasting <span class="math notranslate nohighlight">\(R_L\)</span>. Deze wordt hier symbolish weergegeven als een weerstand, maar kan in de praktijk eender welke actuator zijn die vermogen opneemt in fase met de belasting.</p>
+<p>Het is belangrijk in dit schema de verschillende bouwblokken te herkennen. <a class="reference internal" href="#bfig1anot"><span class="std std-numref">Fig. 28</span></a> toont deze bouwblokken. We hebben natuurlijk in de eerste plaats de belasting RL. Deze wordt hier symbolish weergegeven als een weerstand, maar kan in de praktijk eender welke actuator zijn die vermogen opneemt in fase met de belasting.</p>
 <p>Daarnaast zien we (in de groene box) zowel het pull-up netwerk als het pull-down netwerk aangeduid.</p>
-<p>In het schema van <a class="reference internal" href="#bfig1"><span class="std std-numref">Fig. 27</span></a> zien we dat er zowel een AC-pad als een DC-pad tussen beide voedingen (<span class="math notranslate nohighlight">\(V_{DD}\)</span> en -<span class="math notranslate nohighlight">\(V_{DD}\)</span>) en de belasting mogelijk is.</p>
+<p>In het schema van <a class="reference internal" href="#bfig1"><span class="std std-numref">Fig. 27</span></a> zien we dat er zowel een AC-pad als een DC-pad tussen beide voedingen (VDD en -VDD) en de belasting mogelijk is.</p>
 <div class="cell docutils container">
 <div class="cell_output docutils container">
 <figure class="align-default" id="bfig1anot">
@@ -683,9 +697,9 @@ De stroom aan de collector wordt echter met de factor <span class="math notransl
 <section id="schema-voor-enkel-ac-werking">
 <h3>Schema voor enkel AC werking<a class="headerlink" href="#schema-voor-enkel-ac-werking" title="Link to this heading">#</a></h3>
 <p>In heel wat implementaties is een DC pad naar de belasting niet gewenst. Hierbij denken we bijvoorbeeld aan een luidspreker. Een DC stroom bij een luidspreker geeft een vaste offset van de conus die de lucht aanstuurt. Dit geeft heel wat verliezen en geeft ook een asymmetrische weergave van het geluid. Dit geeft belangrijke vervormingen en ook ook ongewenste hoger tonen.
-In <a class="reference internal" href="#bfig1ac"><span class="std std-numref">Fig. 33</span></a> zien we de condensator <span class="math notranslate nohighlight">\(C_{out}\)</span> aan de uitgang. Deze zorgt ervoor dat er geen DC stroom naar de uitgang loopt. Deze condensator wordt na het opstarten opgeladen tot de gemiddelde spanning van de emitters van beide powertransistors. Normaal is deze spanning de helft van <span class="math notranslate nohighlight">\(V_{DD}\)</span> maar indien er een andere gemiddelde spanning op deze knoop zit zal deze condensator deze offset opvangen.</p>
-<p>Om de AC uitgangsignalen zo goed mogelijk door te laten, is het aangewezen <span class="math notranslate nohighlight">\(C_{out}\)</span> zo groot mogelijk te nemen.
-Van de andere kant moet er natuurlijk ook me rekening gehouden worden dat hoe groter <span class="math notranslate nohighlight">\(C_{out}\)</span> is, hoe langere het duurt eer de evenwichtswaarde op de condensator bekomen wordt. Bovendien wordt <span class="math notranslate nohighlight">\(C_{out}\)</span> duurder als hij groter wordt gekozen.</p>
+In <a class="reference internal" href="#bfig1ac"><span class="std std-numref">Fig. 33</span></a> zien we de condensator Cout aan de uitgang. Deze zorgt ervoor dat er geen DC stroom naar de uitgang loopt. Deze condensator wordt na het opstarten opgeladen tot de gemiddelde spanning van de emitters van beide powertransistors. Normaal is deze spanning de helft van VDD maar indien er een andere gemiddelde spanning op deze knoop zit zal deze condensator deze offset opvangen.</p>
+<p>Om de AC uitgangsignalen zo goed mogelijk door te laten, is het aangewezen Cout zo groot mogelijk te nemen.
+Van de andere kant moet er natuurlijk ook me rekening gehouden worden dat hoe groter Cout is, hoe langere het duurt eer de evenwichtswaarde op de condensator bekomen wordt. Bovendien wordt Cout duurder als hij groter wordt gekozen.</p>
 <p>Om de AC ingangsignalen zo goed mogelijk door te laten, is het aangewezen <span class="math notranslate nohighlight">\(C_{in}\)</span> zo groot mogelijk te nemen. Ook hier gelden de aspekten van opstarttijd en kostprijs.</p>
 <p>Een ander substantieel voordeel van het schema voor AC sturing is dat er maar 1 voeding nodig is. Dit is in vele gevallen een belangrijke besparing op de kost van het circuit.</p>
 <div class="cell docutils container">
@@ -698,7 +712,7 @@ Van de andere kant moet er natuurlijk ook me rekening gehouden worden dat hoe gr
 </figure>
 </div>
 </div>
-<p>Aangezien in de meeste gevallen de nodige voedingsspanning voor de AC aansturing (<span class="math notranslate nohighlight">\(V_{DD2}\)</span>) het dubbele is in vergelijking met de aansturing nodig bij het gebruik van <span class="math notranslate nohighlight">\(+V_{DD}\)</span> en <span class="math notranslate nohighlight">\(-V_{DD}\)</span>, zullen we in het verder verloop van dit hoofdstuk in eerste instantie de formules afleiden voor <span class="math notranslate nohighlight">\(V_{DD}\)</span>. Je kan de in de meeste van deze formules <span class="math notranslate nohighlight">\(V_{DD}\)</span> vervangen door <span class="math notranslate nohighlight">\(\frac{V_{DD}}{2}\)</span> om deze te gebruiken voor AC aansturing.</p>
+<p>Aangezien in de meeste gevallen de nodige voedingsspanning voor de AC aansturing (VDD2) het dubbele is in vergelijking met de aansturing nodig bij het gebruik van +VDD en −VDD, zullen we in het verder verloop van dit hoofdstuk in eerste instantie de formules afleiden voor VDD. Je kan de in de meeste van deze formules VDD vervangen door VDD2 om deze te gebruiken voor AC aansturing.</p>
 </section>
 </section>
 <section id="gebruik-van-de-voorinstelspanning">
@@ -709,7 +723,7 @@ Van de andere kant moet er natuurlijk ook me rekening gehouden worden dat hoe gr
 <li><p>Aan de hand van een aantal diodes tussen de pull-up transistors en de pull-down transistors</p></li>
 <li><p>Aan de hand van een circuit met een NPN transistor tussen de pull-up transistors en de pull-down transistors</p></li>
 </ul>
-<p>Naast het circuit dat voor de voorinstelspanning zorgt tussen beide bassissen moeten we natuurlijk ook ervoor zorgen dat de nodige stroom kan vloeien vanuit <span class="math notranslate nohighlight">\(V_{DD}\)</span> naar de basis van de NPN transistor en vanuit de basis van de PNP transistor naar ofwel -<span class="math notranslate nohighlight">\(V_{DD}\)</span> of de grond. Hiervoor kiezen we in eerste instantie de twee weerstanden <span class="math notranslate nohighlight">\(R_1\)</span> en <span class="math notranslate nohighlight">\(R_2\)</span>. In een later stadium zullen we hiervoor ook betere alternatieven voorstellen.</p>
+<p>Naast het circuit dat voor de voorinstelspanning zorgt tussen beide bassissen moeten we natuurlijk ook ervoor zorgen dat de nodige stroom kan vloeien vanuit VDD naar de basis van de NPN transistor en vanuit de basis van de PNP transistor naar ofwel -VDD of de grond. Hiervoor kiezen we in eerste instantie de twee weerstanden R1 en R2. In een later stadium zullen we hiervoor ook betere alternatieven voorstellen.</p>
 <p>Hiermee rekening houdende worden deze 3 mogelijkheden hieronder uitgewerkt.</p>
 <section id="weerstand-als-voorinstelspanning">
 <h3>Weerstand als voorinstelspanning<a class="headerlink" href="#weerstand-als-voorinstelspanning" title="Link to this heading">#</a></h3>
@@ -803,7 +817,7 @@ Van de andere kant moet er natuurlijk ook me rekening gehouden worden dat hoe gr
 </figure>
 </div>
 </div>
-<p>We kunnen ook proberen de dode zone weg te werken aan de hand van feedback, zoals in het onderstaande schema aan de hand van een opamp. Op het eerste zicht lijkt dat te lukken, als we de simulatie in <a class="reference internal" href="#bopmapsim"><span class="std std-numref">Fig. 39</span></a> bekijken. De <span class="math notranslate nohighlight">\(V_{in}\)</span> en <span class="math notranslate nohighlight">\(V_{out}\)</span> liggen zo goed als volledig op elkaar dat we het verschil niet merken. Enkel als we heel erg inzoemen, zoals in <a class="reference internal" href="#bopmapsimz"><span class="std std-numref">Fig. 40</span></a> lijkt er een klein verschil te zijn langs de nuldoorgang. Laat je hierbij echter niet vangen. Deze simulatie is gedaan met een ideale OpAmp, waarvan de stijgsnelheid niet realistisch is. Wanneer we diezelfde simulatie hernemen met een realistische OpAmp, zie onder, blijft dit bijna ideale gedrag niet behouden.</p>
+<p>We kunnen ook proberen de dode zone weg te werken aan de hand van feedback, zoals in het onderstaande schema aan de hand van een opamp. Op het eerste zicht lijkt dat te lukken, als we de simulatie in <a class="reference internal" href="#bopmapsim"><span class="std std-numref">Fig. 39</span></a> bekijken. De Vin en Vout liggen zo goed als volledig op elkaar dat we het verschil niet merken. Enkel als we heel erg inzoemen, zoals in <a class="reference internal" href="#bopmapsimz"><span class="std std-numref">Fig. 40</span></a> lijkt er een klein verschil te zijn langs de nuldoorgang. Laat je hierbij echter niet vangen. Deze simulatie is gedaan met een ideale OpAmp, waarvan de stijgsnelheid niet realistisch is. Wanneer we diezelfde simulatie hernemen met een realistische OpAmp, zie onder, blijft dit bijna ideale gedrag niet behouden.</p>
 <div class="literal-block-wrapper docutils container" id="listing3">
 <div class="code-block-caption"><span class="caption-number">Spice Listing 6 </span><span class="caption-text">SPICE code met OPAMP feedback</span><a class="headerlink" href="#listing3" title="Link to this code">#</a></div>
 <div class="highlight-spice notranslate"><div class="highlight"><pre><span></span><span class="p">.</span><span class="nx">title</span><span class="w"> </span><span class="nx">Klasse</span><span class="w"> </span><span class="nx">B</span><span class="w"> </span><span class="nx">versterker</span><span class="w">  </span><span class="nx">PUSH</span><span class="o">-</span><span class="nx">PULL</span><span class="w"> </span><span class="nx">PLACED</span><span class="w"> </span><span class="nx">IN</span><span class="w"> </span><span class="nx">OPAMP</span><span class="w"> </span><span class="nx">FEEDBACK</span><span class="w"> </span><span class="nx">LOOP</span>
@@ -905,7 +919,7 @@ Van de andere kant moet er natuurlijk ook me rekening gehouden worden dat hoe gr
 </section>
 <section id="driver-stage">
 <h2>Driver stage<a class="headerlink" href="#driver-stage" title="Link to this heading">#</a></h2>
-<p>Om de vermogentransistors van de klasse B versterker goed aan te sturen, zijn er, naast de voorinstelling tussen beide transistors, ook nog de elementen nodig die het pull-up gedeelte stroom vanuit de voeding <span class="math notranslate nohighlight">\(V_{DD}\)</span> levert en die stroom vanuit het pull-down gedeelte afvoert naar -<span class="math notranslate nohighlight">\(V_{DD}\)</span> of naar de grond. In de bovenstaande schema’s wordt dat gedaan door respectievelijk <span class="math notranslate nohighlight">\(R_1\)</span> en <span class="math notranslate nohighlight">\(R_2\)</span>. We kunnen de aansturing nog een stuk efficienter maken door de pull-down afvoer te implementeren met een transistor, zoals je kan zien in <a class="reference internal" href="#bfig1driver"><span class="std std-numref">Fig. 44</span></a>.
+<p>Om de vermogentransistors van de klasse B versterker goed aan te sturen, zijn er, naast de voorinstelling tussen beide transistors, ook nog de elementen nodig die het pull-up gedeelte stroom vanuit de voeding VDD levert en die stroom vanuit het pull-down gedeelte afvoert naar -VDD of naar de grond. In de bovenstaande schema’s wordt dat gedaan door respectievelijk R1 en R2. We kunnen de aansturing nog een stuk efficienter maken door de pull-down afvoer te implementeren met een transistor, zoals je kan zien in <a class="reference internal" href="#bfig1driver"><span class="std std-numref">Fig. 44</span></a>.
 We merken op dat de transistor in de driver stage werkt als een Klasse A versterker met het geheel van de klasse B versterker als belasting. Dat wil zeggen dat deze transistor ook de juiste instelling moet krijgen. Voor de verdere invulling van de transistor in de driver stage verwijzen we naar het hoofdstuk van de Klasse A versterker.
 Een belangrijk voordeel is hier ook dat deze driver stage niet alleen de stroom versterkt maar ook de spanning. Dit wil zeggen dat we niet noodzakelijk een full swing ingangsignaal nodig hebben om een full swing output signaal te kunnen bekomen.</p>
 <div class="cell docutils container">
@@ -921,7 +935,7 @@ Een belangrijk voordeel is hier ook dat deze driver stage niet alleen de stroom 
 </section>
 <section id="stroombron">
 <h2>Stroombron<a class="headerlink" href="#stroombron" title="Link to this heading">#</a></h2>
-<p>In <a class="reference internal" href="#bfig1driver"><span class="std std-numref">Fig. 44</span></a> zien we dat de werking van de weerstand <span class="math notranslate nohighlight">\(R_1\)</span> eigenlijk het omgekeerde is als we zouden willen. Als de uitgang <span class="math notranslate nohighlight">\(V_{out}\)</span> 0V is, staat er veel spanning over <span class="math notranslate nohighlight">\(R_1\)</span> en levert <span class="math notranslate nohighlight">\(R_1\)</span> dus veel stroom, terwijl er weinig stroom nodig is. Omgekeerd, wanneer de uitgang <span class="math notranslate nohighlight">\(V_{out}\)</span> dicht bij <span class="math notranslate nohighlight">\(V_{DD}\)</span> is staat er weinig spanning over <span class="math notranslate nohighlight">\(R_1\)</span> en levert <span class="math notranslate nohighlight">\(R_1\)</span> dus heel weinig stroom. Het is eigenlijk beter <span class="math notranslate nohighlight">\(R_1\)</span> te vervangen door een constante stroombron. We zien een implementatie hiervan in <a class="reference internal" href="#bfigstroombron"><span class="std std-numref">Fig. 45</span></a>.</p>
+<p>In <a class="reference internal" href="#bfig1driver"><span class="std std-numref">Fig. 44</span></a> zien we dat de werking van de weerstand R1 eigenlijk het omgekeerde is als we zouden willen. Als de uitgang Vout 0V is, staat er veel spanning over R1 en levert R1 dus veel stroom, terwijl er weinig stroom nodig is. Omgekeerd, wanneer de uitgang Vout dicht bij VDD is staat er weinig spanning over R1 en levert R1 dus heel weinig stroom. Het is eigenlijk beter R1 te vervangen door een constante stroombron. We zien een implementatie hiervan in <a class="reference internal" href="#bfigstroombron"><span class="std std-numref">Fig. 45</span></a>.</p>
 <div class="cell docutils container">
 <div class="cell_output docutils container">
 <figure class="align-default" id="bfigstroombron">
@@ -935,16 +949,14 @@ Een belangrijk voordeel is hier ook dat deze driver stage niet alleen de stroom 
 </section>
 <section id="verhoging-van-het-afgeleverde-vermogen">
 <h2>Verhoging van het afgeleverde vermogen<a class="headerlink" href="#verhoging-van-het-afgeleverde-vermogen" title="Link to this heading">#</a></h2>
-<p>De power transistors in een klasse B versterker werken in principe als spanningsvolgers (met een offset) maar zijn in staat veel meer stroom te leveren aan de belasting (<span class="math notranslate nohighlight">\(R_L\)</span>) dan de driver trap. In principe kan elke power transistor de stroom met een factor <span class="math notranslate nohighlight">\(\beta_F\)</span> vergroten.
+<p>De power transistors in een klasse B versterker werken in principe als spanningsvolgers (met een offset) maar zijn in staat veel meer stroom te leveren aan de belasting (RL) dan de driver trap. In principe kan elke power transistor de stroom met een factor βF vergroten.
 In een aantal gevallen is deze stroomversterking nog niet voldoende. In deze sectie bespreken we de mogelijkheden om meer stroomversterking te bekomen.</p>
 <section id="het-darlington-transistor-paar">
 <h3>Het <a class="reference external" href="https://en.wikipedia.org/wiki/Darlington_transistor">Darlington</a> Transistor paar<a class="headerlink" href="#het-darlington-transistor-paar" title="Link to this heading">#</a></h3>
 <p>We kunnen meer driver stroom bekomen door 2 power transistors van hetzelfde type achter elkaar te schakelen, zoals in <a class="reference internal" href="#darlington"><span class="std std-numref">Fig. 46</span></a>.
 De totale stroomversterking die we dan bekomen is dan het product van beide stroomversterkingen <span id="id1">[<a class="reference internal" href="References.html#id4" title="Darlington Sidney. Semiconductor signal translating device. December 1953.">2</a>]</span>.</p>
-<div class="math notranslate nohighlight">
-\[ I_C(T_1)= \beta_1 I_B(T_1)\]</div>
-<div class="math notranslate nohighlight">
-\[ I_E(T_1)= (\beta_1 +1) I_B(T_1)\]</div>
+<p>IC(T1)=β1IB(T1)</p>
+<p>IE(T1)=(β1+1)IB(T1)</p>
 <div class="math notranslate nohighlight">
 \[ I_C(T_2)= \beta_2 I_B(T_2) =  \beta_2 (\beta_1 +1) I_B(T_1)\]</div>
 <div class="math notranslate nohighlight">
@@ -991,7 +1003,7 @@ De totale stroomversterking die we dan bekomen is dan het product van beide stro
 <p>Het schema in <a class="reference internal" href="#darlington"><span class="std std-numref">Fig. 46</span></a> heeft echter 3 problemen:</p>
 <ul class="simple">
 <li><p>thermal runaway</p></li>
-<li><p>lage stroomversterking <span class="math notranslate nohighlight">\(\beta_F\)</span> bij heel lage stromen aan de basis</p></li>
+<li><p>lage stroomversterking βF bij heel lage stromen aan de basis</p></li>
 <li><p>De voorinstelspanning moet verdubbelen.</p></li>
 </ul>
 <p>We kunnen de configuratie van het Darlington paar verbeteren door emitter degeneratie toe te voegen aan de eerste transistor (zie <a class="reference internal" href="#darlington-ed"><span class="std std-numref">Fig. 48</span></a>).</p>
@@ -1062,7 +1074,7 @@ De totale stroomversterking die we dan bekomen is dan het product van beide stro
 </section>
 <section id="het-complementaire-darlington-transistor-paar">
 <h3>Het <a class="reference external" href="https://en.wikipedia.org/wiki/Sziklai_pair">complementaire Darlington</a> Transistor paar<a class="headerlink" href="#het-complementaire-darlington-transistor-paar" title="Link to this heading">#</a></h3>
-<p><a class="reference internal" href="#darlington-comp"><span class="std std-numref">Fig. 52</span></a> toont het schema van complementaire transistor paar en <a class="reference internal" href="#spice-darlington-comp"><span class="std std-numref">Spice Listing 10</span></a> toont de spice code om de werking van dit Darlington paar te simuleren aan de hand van 2 ideale transistors met een <span class="math notranslate nohighlight">\(\beta_F\)</span> van 50. Het resultaat (in <a class="reference internal" href="#bfig-darlington-comp"><span class="std std-numref">Fig. 53</span></a>) toont dan ook een stroomversterking van 2500 van zodra de emmitter-collectorspanning groter is dan ongeveer 0.7 V.</p>
+<p><a class="reference internal" href="#darlington-comp"><span class="std std-numref">Fig. 52</span></a> toont het schema van complementaire transistor paar en <a class="reference internal" href="#spice-darlington-comp"><span class="std std-numref">Spice Listing 10</span></a> toont de spice code om de werking van dit Darlington paar te simuleren aan de hand van 2 ideale transistors met een βF van 50. Het resultaat (in <a class="reference internal" href="#bfig-darlington-comp"><span class="std std-numref">Fig. 53</span></a>) toont dan ook een stroomversterking van 2500 van zodra de emmitter-collectorspanning groter is dan ongeveer 0.7 V.</p>
 <div class="cell docutils container">
 <div class="cell_output docutils container">
 <figure class="align-default" id="darlington-comp">
@@ -1097,7 +1109,7 @@ De totale stroomversterking die we dan bekomen is dan het product van beide stro
 </figure>
 </div>
 </div>
-<p>Ook voor dit schema is het relevant om emitter-degeneratie in te voeren. <a class="reference internal" href="#bfig-darlington-comp-ed"><span class="std std-numref">Fig. 54</span></a> toont dit schema met emitter-degeneratie. De spice code is te vinden in <a class="reference internal" href="#listingcomp-darlington-ed"><span class="std std-numref">Spice Listing 11</span></a>. We merken in <a class="reference internal" href="#bfig-dargington-ed-comp"><span class="std std-numref">Fig. 55</span></a> dat we een <span class="math notranslate nohighlight">\(\beta_F\)</span> van ongeveer 50 bekomen zolang de basisstroom beneden de 150 <span class="math notranslate nohighlight">\(\mu A\)</span> is, en daarboven wordt de <span class="math notranslate nohighlight">\(\beta_F\)</span> 2500.</p>
+<p>Ook voor dit schema is het relevant om emitter-degeneratie in te voeren. <a class="reference internal" href="#bfig-darlington-comp-ed"><span class="std std-numref">Fig. 54</span></a> toont dit schema met emitter-degeneratie. De spice code is te vinden in <a class="reference internal" href="#listingcomp-darlington-ed"><span class="std std-numref">Spice Listing 11</span></a>. We merken in <a class="reference internal" href="#bfig-dargington-ed-comp"><span class="std std-numref">Fig. 55</span></a> dat we een βF van ongeveer 50 bekomen zolang de basisstroom beneden de 150 μA is, en daarboven wordt de βF 2500.</p>
 <div class="cell docutils container">
 <div class="cell_output docutils container">
 <figure class="align-default" id="bfig-darlington-comp-ed">
@@ -1144,15 +1156,14 @@ De totale stroomversterking die we dan bekomen is dan het product van beide stro
 <section id="efficientie-van-de-klasse-b-versterker">
 <h2>Efficientie van de Klasse B versterker<a class="headerlink" href="#efficientie-van-de-klasse-b-versterker" title="Link to this heading">#</a></h2>
 <p>De theoretische berekening van de efficientie als functie van de uitsturing benaderen we in eerste instantie door enkel de stroom van het pull-up netwerk en het pull down netwerk te bekijken.</p>
-<div class="math notranslate nohighlight">
-\[ \mu = \frac{P_{out}}{P_{in}} = \frac{P_{ac}}{P_{DC}}\]</div>
-<p>met de uitsturing (<span class="math notranslate nohighlight">\(x\)</span>) gedefinieerd als <span class="math notranslate nohighlight">\(\frac{V_{ac}}{V_{DD}}\)</span>.</p>
+<p>μ=PoutPin=PacPDC</p>
+<p>met de uitsturing (x) gedefinieerd als VacVDD.</p>
 </section>
 <section id="beveiliging-van-de-klasse-b-vermogentransistors">
 <h2>Beveiliging van de Klasse B vermogentransistors<a class="headerlink" href="#beveiliging-van-de-klasse-b-vermogentransistors" title="Link to this heading">#</a></h2>
 <section id="waar-en-hoe-is-beveiliging-nodig">
 <h3>Waar en hoe is beveiliging nodig?<a class="headerlink" href="#waar-en-hoe-is-beveiliging-nodig" title="Link to this heading">#</a></h3>
-<p>Als eerste voorbeeld gebruiken we hier de <a class="reference external" href="https://en.wikipedia.org/wiki/2N2222">2N2222A</a> NPN transistor. Dit is een typische NPN transistor die reeds ontwikkeld werd in 1962 met een <span class="math notranslate nohighlight">\(\beta_F\)</span> van ongeveer 100. De <a class="reference external" href="https://www.onsemi.com/pdf/datasheet/p2n2222a-d.pdf">datasheet</a> geeft de nodige details over de maximale stroom (600 mA), maximale spanning (40V) en maximaal vermogen (1.8W). Zonder extra koeling toe te voegen zien we dat hier de maximale vermogenbegrenzing de bepalende factor gaat zijn. Wanneer we een begrenzing kiezen die lineair verloopt tussen een kortsluitstroom van 240 mA en open-klemmen spanning van 30V kunnen verhinderen dat deze transistor te warm wordt (oranje lijn in <a class="reference internal" href="#b-beveil1"><span class="std std-numref">Fig. 56</span></a>). Het is duidelijk dat voor vele vermogenversterkers deze transistor te beperkt is.</p>
+<p>Als eerste voorbeeld gebruiken we hier de <a class="reference external" href="https://en.wikipedia.org/wiki/2N2222">2N2222A</a> NPN transistor. Dit is een typische NPN transistor die reeds ontwikkeld werd in 1962 met een βF van ongeveer 100. De <a class="reference external" href="https://www.onsemi.com/pdf/datasheet/p2n2222a-d.pdf">datasheet</a> geeft de nodige details over de maximale stroom (600 mA), maximale spanning (40V) en maximaal vermogen (1.8W). Zonder extra koeling toe te voegen zien we dat hier de maximale vermogenbegrenzing de bepalende factor gaat zijn. Wanneer we een begrenzing kiezen die lineair verloopt tussen een kortsluitstroom van 240 mA en open-klemmen spanning van 30V kunnen verhinderen dat deze transistor te warm wordt (oranje lijn in <a class="reference internal" href="#b-beveil1"><span class="std std-numref">Fig. 56</span></a>). Het is duidelijk dat voor vele vermogenversterkers deze transistor te beperkt is.</p>
 <p>De datasheets en spice modellen van heel wat meer recente transistors kunnen we <a class="reference external" href="https://www.diodes.com/products/discrete/bipolar-transistors/transistor-bjt-master-table/">online</a> terugvinden. De <a class="reference external" href="https://www.diodes.com/assets/Datasheets/MJD41C.pdf">MJD41C</a> is geschikt voor maximale stromen tot 6A en spanningen tot 100V.</p>
 <div class="cell docutils container">
 <div class="cell_output docutils container">
@@ -1199,7 +1210,7 @@ De totale stroomversterking die we dan bekomen is dan het product van beide stro
 </figure>
 </div>
 </div>
-<p>Een belangrijk nadeel van de schema’s hierboven is dat ze slechts ingrijpen bij overstroom als de spanning over de weerstand <span class="math notranslate nohighlight">\(R_I\)</span> ongeveer 0.7V bedraagt. Dit is normaal geen probleem als er gewerkt wordt met een hoge voedingsspanning <span class="math notranslate nohighlight">\(V_{DD}\)</span>, bv 80V. Indien er echter met een lage voedingsspanning gewerkt wordt, geeft het spanningsverlies over <span class="math notranslate nohighlight">\(R_I\)</span> een belangrijk deel van het vermogenverlies. Een alternatieve oplossing om dat vermogenverlies te voorkomen is het plaatsen van een veel kleinere meetweerstand <span class="math notranslate nohighlight">\(R_I\)</span> tussen de belasting en de grond en de gemeten spanning te versterken in de terugkoppeling of de aanstuur IC.</p>
+<p>Een belangrijk nadeel van de schema’s hierboven is dat ze slechts ingrijpen bij overstroom als de spanning over de weerstand RI ongeveer 0.7V bedraagt. Dit is normaal geen probleem als er gewerkt wordt met een hoge voedingsspanning VDD, bv 80V. Indien er echter met een lage voedingsspanning gewerkt wordt, geeft het spanningsverlies over RI een belangrijk deel van het vermogenverlies. Een alternatieve oplossing om dat vermogenverlies te voorkomen is het plaatsen van een veel kleinere meetweerstand RI tussen de belasting en de grond en de gemeten spanning te versterken in de terugkoppeling of de aanstuur IC.</p>
 <p>De oplossing in <a class="reference internal" href="#b-beveil5"><span class="std std-numref">Fig. 60</span></a> is wel een minder robuuste oplossing, aangezien deze afhangt van de terugkoppeling en/of de IC, en dat het daardoor minder zeker is dat de beveiliging in alle omstandigheden zal ingrijpen.</p>
 <div class="cell docutils container">
 <div class="cell_output docutils container">
@@ -1238,11 +1249,10 @@ De totale stroomversterking die we dan bekomen is dan het product van beide stro
 </section>
 <section id="beveiliging-tegen-te-hoog-vermogen">
 <h3>Beveiliging tegen te hoog vermogen.<a class="headerlink" href="#beveiliging-tegen-te-hoog-vermogen" title="Link to this heading">#</a></h3>
-<p>De beveiliging tegen te hoog vermogen voeren we in door een lineaire combinatie van de beveiliging tegen te hoge stroom en de beveiliging tegen te hoge spanning. De spanning aan de basis van <span class="math notranslate nohighlight">\(T_B\)</span> (<span class="math notranslate nohighlight">\(V_b(T_B)\)</span>)is de som van de spanning over <span class="math notranslate nohighlight">\(R_I\)</span> (<span class="math notranslate nohighlight">\(V_{over}(R_I)\)</span>) en de spanning over <span class="math notranslate nohighlight">\(R_{v1}\)</span>. Deze laatste herschrijven we dan weer als een spanningsdeling van de spanning over de vermogentransistors.</p>
-<div class="math notranslate nohighlight">
-\[ V_b(T_B) =  R_I I_{door} + \frac{R_{v1}}{R_{v1} + R_{v2}} V_{over}  \]</div>
+<p>De beveiliging tegen te hoog vermogen voeren we in door een lineaire combinatie van de beveiliging tegen te hoge stroom en de beveiliging tegen te hoge spanning. De spanning aan de basis van TB (Vb(TB))is de som van de spanning over RI (Vover(RI)) en de spanning over Rv1. Deze laatste herschrijven we dan weer als een spanningsdeling van de spanning over de vermogentransistors.</p>
+<p>Vb(TB)=RIIdoor+Rv1Rv1+Rv2Vover</p>
 <p>Als we stellen dat de beveiligingstransistor ingrijpt wanneer de basis-emitterspanning 0.7V wordt, is de vergelijking xx  de vergelijking van een rechte in de outputkarakteristiek van de vermogentransistor.
-In de outputkarakteristiek plotten we <span class="math notranslate nohighlight">\(I_{door}\)</span> als functie van <span class="math notranslate nohighlight">\(V_{over}\)</span>, zoals getoond in <a class="reference internal" href="#b-beveil1"><span class="std std-numref">Fig. 56</span></a>. Door de parameters <span class="math notranslate nohighlight">\(R_{v1}\)</span>, <span class="math notranslate nohighlight">\(R_{v2}\)</span> en <span class="math notranslate nohighlight">\(R_{I}\)</span> juist te kiezen bepalen we de gewenste beveiliging.</p>
+In de outputkarakteristiek plotten we Idoor als functie van Vover, zoals getoond in <a class="reference internal" href="#b-beveil1"><span class="std std-numref">Fig. 56</span></a>. Door de parameters Rv1, Rv2 en RI juist te kiezen bepalen we de gewenste beveiliging.</p>
 <div class="cell docutils container">
 <div class="cell_output docutils container">
 <figure class="align-default" id="b-beveil8">
@@ -1284,7 +1294,7 @@ In <a class="reference internal" href="#bfig1ac"><span class="std std-numref">Fi
 </figure>
 </div>
 </div>
-<p>Merk op dat in <a class="reference internal" href="#b-filter-hoog"><span class="std std-numref">Fig. 65</span></a> de weerstand <span class="math notranslate nohighlight">\(R_f\)</span> ook dienst doet als bias weerstand van de driver transistor, aangezien <span class="math notranslate nohighlight">\(-V_{DD}\)</span> &lt; 0. De nodige bias stroom van deze transistor bepaalt dus de keuze van <span class="math notranslate nohighlight">\(R_f\)</span>. Dit wil zeggen dat alleen <span class="math notranslate nohighlight">\(C_f\)</span> kan gebruikt worden om de hoogdoorlaatfilter te ontwerpen.</p>
+<p>Merk op dat in <a class="reference internal" href="#b-filter-hoog"><span class="std std-numref">Fig. 65</span></a> de weerstand Rf ook dienst doet als bias weerstand van de driver transistor, aangezien −VDD &lt; 0. De nodige bias stroom van deze transistor bepaalt dus de keuze van Rf. Dit wil zeggen dat alleen Cf kan gebruikt worden om de hoogdoorlaatfilter te ontwerpen.</p>
 </section>
 <section id="laagdoorlaatfilter-aan-de-ingang">
 <h3>Laagdoorlaatfilter aan de ingang<a class="headerlink" href="#laagdoorlaatfilter-aan-de-ingang" title="Link to this heading">#</a></h3>
@@ -1299,7 +1309,7 @@ In <a class="reference internal" href="#bfig1ac"><span class="std std-numref">Fi
 </figure>
 </div>
 </div>
-<p>We merken op dat in <a class="reference internal" href="#b-filter-laag"><span class="std std-numref">Fig. 66</span></a> de weerstand <span class="math notranslate nohighlight">\(R_f\)</span> de ingang (<span class="math notranslate nohighlight">\(V_{in}\)</span>) belast. We moeten bij het ontwerpen van de driver van <span class="math notranslate nohighlight">\(V_{in}\)</span> ermee rekening houden dat deze de nodige stroom hiervoor moet kunnen leveren.</p>
+<p>We merken op dat in <a class="reference internal" href="#b-filter-laag"><span class="std std-numref">Fig. 66</span></a> de weerstand Rf de ingang (Vin) belast. We moeten bij het ontwerpen van de driver van Vin ermee rekening houden dat deze de nodige stroom hiervoor moet kunnen leveren.</p>
 </section>
 <section id="banddoorlaatfilter-aan-de-ingang">
 <h3>Banddoorlaatfilter aan de ingang<a class="headerlink" href="#banddoorlaatfilter-aan-de-ingang" title="Link to this heading">#</a></h3>
@@ -1314,22 +1324,17 @@ In <a class="reference internal" href="#bfig1ac"><span class="std std-numref">Fi
 </figure>
 </div>
 </div>
-<p><a class="reference internal" href="#b-filter-band2"><span class="std std-numref">Fig. 68</span></a> toont de bandpass filter op zich, in de veronderstelling dat de stroom door <span class="math notranslate nohighlight">\(R_{f2}\)</span> veel groter is dan de ingangsstroom aan de basis van de driver transistor. In dat geval mogen we deze basisstroom verwaarlozen en kunnen we stellen dat de uitgangsspanning van het filter bekomen wordt door de spanningsdeling van de 2 impedanties <span class="math notranslate nohighlight">\(Z_1\)</span> en <span class="math notranslate nohighlight">\(Z_2\)</span> als:</p>
-<div class="math notranslate nohighlight">
-\[ \frac{V_{filter}}{V_{in}} = \frac{Z_2}{Z_1+ Z_2}  = \frac{1}{\frac{Z_1}{Z_2}+ 1} \]</div>
+<p><a class="reference internal" href="#b-filter-band2"><span class="std std-numref">Fig. 68</span></a> toont de bandpass filter op zich, in de veronderstelling dat de stroom door Rf2 veel groter is dan de ingangsstroom aan de basis van de driver transistor. In dat geval mogen we deze basisstroom verwaarlozen en kunnen we stellen dat de uitgangsspanning van het filter bekomen wordt door de spanningsdeling van de 2 impedanties Z1 en Z2 als:</p>
+<p>VfilterVin=Z2Z1+Z2=1Z1Z2+1</p>
 <p>met</p>
-<div class="math notranslate nohighlight">
-\[ Z_1 = \frac{1}{j \omega C_{f1}} + R_{f1} \]</div>
+<p>Z1=1jωCf1+Rf1</p>
 <p>en</p>
-<div class="math notranslate nohighlight">
-\[ \frac{1}{Z_2} = j \omega C_{f2} + \frac{1}{R_{f2}} \]</div>
+<p>1Z2=jωCf2+1Rf2</p>
 <p>Hieruit volgt:</p>
-<div class="math notranslate nohighlight">
-\[ \frac{V_{filter}}{V_{in}} =  \frac{1}{(\frac{1}{j \omega C_{f1}} + R_{f1})(j \omega C_{f2} + \frac{1}{R_{f2}})+ 1} \]</div>
+<p>VfilterVin=1(1jωCf1+Rf1)(jωCf2+1Rf2)+1</p>
 <p>We kunnen dit verder uitwerken tot:</p>
-<div class="math notranslate nohighlight">
-\[ \frac{V_{filter}}{V_{in}} = \frac{1}{R_{f1}C_{f2}} \frac{j \omega}{ (j \omega)^2 +j \omega  (\frac{1}{R_{f1} C_{f1}} + \frac{1}{R_{f2}C_{f2}} + \frac{1}{R_{f1}C_{f2}} )+ \frac{1}{R_{f1} C_{f1}R_{f2}C_{f2} } } \]</div>
-<p>We zien dat we 1 nulpunt en 2 polen hebben voor <span class="math notranslate nohighlight">\(j \omega\)</span>. Deze 2 polen vinden we door de vierkantsvergelijking van de noemer op te lossen naar <span class="math notranslate nohighlight">\(j \omega\)</span>. De doorlaatband is bepaald door de band tussen de pool bij de laagste frequentie en de pool bij de hoogste frequentie.</p>
+<p>VfilterVin=1Rf1Cf2jω(jω)2+jω(1Rf1Cf1+1Rf2Cf2+1Rf1Cf2)+1Rf1Cf1Rf2Cf2</p>
+<p>We zien dat we 1 nulpunt en 2 polen hebben voor jω. Deze 2 polen vinden we door de vierkantsvergelijking van de noemer op te lossen naar jω. De doorlaatband is bepaald door de band tussen de pool bij de laagste frequentie en de pool bij de hoogste frequentie.</p>
 <div class="cell docutils container">
 <div class="cell_output docutils container">
 <figure class="align-default" id="b-filter-band2">
@@ -1353,7 +1358,6 @@ Reken ook de filterkarekteristieken uit van de hoogdoorlaatfilter in
 </section>
 <section id="zelftest-via-flashcards">
 <h2>Zelftest via Flashcards<a class="headerlink" href="#zelftest-via-flashcards" title="Link to this heading">#</a></h2>
-<p><span class="math notranslate nohighlight">\(\,\!\)</span></p>
 <p>Klik op de vraag als je je antwoord wil nakijken. Klik op next om de volgende vraag te bekomen.</p>
 <div class="cell tag_remove_cell4reveal tag_remove-cell4PDF docutils container">
 <div class="cell_output docutils container">
@@ -2169,8 +2173,7 @@ try_create(); </script></div>
             
             
               
-                <dialog id="pst-secondary-sidebar-modal"></dialog>
-                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
 
   <div class="sidebar-secondary-item">
@@ -2255,8 +2258,8 @@ By Jan Genoe (jan.genoe@kuleuven.be)
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script defer src="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
-<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
 
   <footer class="bd-footer">
   </footer>
