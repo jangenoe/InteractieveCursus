@@ -187,12 +187,12 @@ for ipath in notebooks:
                         running_height+=pictp.height+Inches(0.3)
                     elif len(bullets)>0:
                         body_shape = slide.shapes.placeholders[1]
-                            tf = body_shape.text_frame
-                            tf.clear()  # Remove any existing paragraphs
-                            for level, text in bullets:
-                                p = tf.add_paragraph()
-                                p.text = text
-                                p.level = level
+                        tf = body_shape.text_frame
+                        tf.clear()  # Remove any existing paragraphs
+                        for level, text in bullets:
+                            p = tf.add_paragraph()
+                            p.text = text
+                            p.level = level
                     else:
                         box= slide.shapes.add_textbox(Inches(1),running_height, Inches(10),Inches(2.0))
                         box.text=md_text
