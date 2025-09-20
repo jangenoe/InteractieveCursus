@@ -559,24 +559,24 @@ document.write(`
 </div>
 </div>
 <p>De uitgaande stroom van knoop <span class="math notranslate nohighlight">\(i\)</span> is:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-e45088aa-2216-42c6-9bd8-4b588d691a1e">
-<span class="eqno">(1)<a class="headerlink" href="#equation-e45088aa-2216-42c6-9bd8-4b588d691a1e" title="Permalink to this equation">#</a></span>\[\begin{equation}\label{eq:cond}
+<div class="amsmath math notranslate nohighlight" id="equation-e7c3ba1d-307f-4cdf-95b8-deee51f51c53">
+<span class="eqno">(1)<a class="headerlink" href="#equation-e7c3ba1d-307f-4cdf-95b8-deee51f51c53" title="Permalink to this equation">#</a></span>\[\begin{equation}\label{eq:cond}
 I_{ij}=g (V_i-V_j) =  g  V_i - g V_j,
 \end{equation}\]</div>
 <p>waarbij <span class="math notranslate nohighlight">\(g= \frac{1}{R}\)</span> de conductiviteit is van de weerstand <span class="math notranslate nohighlight">\(R\)</span>.</p>
 <p>Op eenzelfde manier kunnen we opschrijven dat de uitgaande stroom van knoop <span class="math notranslate nohighlight">\(j\)</span> is:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-dee38922-0464-4645-a855-927553f095ae">
-<span class="eqno">(2)<a class="headerlink" href="#equation-dee38922-0464-4645-a855-927553f095ae" title="Permalink to this equation">#</a></span>\[\begin{equation}\label{eq:cond2}
+<div class="amsmath math notranslate nohighlight" id="equation-fe0ae2aa-8fd2-480f-8cdd-42441eccbf05">
+<span class="eqno">(2)<a class="headerlink" href="#equation-fe0ae2aa-8fd2-480f-8cdd-42441eccbf05" title="Permalink to this equation">#</a></span>\[\begin{equation}\label{eq:cond2}
 I_{ji}=-I_{ij}=g (V_j-V_i) =  -g  V_i + g V_j
 \end{equation}\]</div>
 <p>De <a class="reference external" href="https://en.wikipedia.org/wiki/Kirchhoff%27s_circuit_laws">stroomwet</a> van <a class="reference external" href="https://en.wikipedia.org/wiki/Gustav_Kirchhoff">Kirchoff</a> geeft aan dat de som van alle stromen uitgaande van knoop <span class="math notranslate nohighlight">\(i\)</span> nul is.</p>
-<div class="amsmath math notranslate nohighlight" id="equation-09c6c52c-b2a4-4897-b3a3-74c42969a339">
-<span class="eqno">(3)<a class="headerlink" href="#equation-09c6c52c-b2a4-4897-b3a3-74c42969a339" title="Permalink to this equation">#</a></span>\[\begin{equation}\label{eq:Kirchoff}
+<div class="amsmath math notranslate nohighlight" id="equation-815823cc-94c6-4553-9374-d3e888f32fce">
+<span class="eqno">(3)<a class="headerlink" href="#equation-815823cc-94c6-4553-9374-d3e888f32fce" title="Permalink to this equation">#</a></span>\[\begin{equation}\label{eq:Kirchoff}
 \sum_{j \neq i}^n I_{ij}=0.
 \end{equation}\]</div>
 <p>Eenzelfde vergelijking kunnen we voor elke van de <span class="math notranslate nohighlight">\(n\)</span> knopen in het circuit opstellen. In matrix notatie wordt dat:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-a3248088-6ac3-4478-be5e-d74d4bf75d13">
-<span class="eqno">(4)<a class="headerlink" href="#equation-a3248088-6ac3-4478-be5e-d74d4bf75d13" title="Permalink to this equation">#</a></span>\[\begin{equation}\label{eq:MatrixR1}
+<div class="amsmath math notranslate nohighlight" id="equation-9b043bac-b6ec-47ec-a23d-1348950139de">
+<span class="eqno">(4)<a class="headerlink" href="#equation-9b043bac-b6ec-47ec-a23d-1348950139de" title="Permalink to this equation">#</a></span>\[\begin{equation}\label{eq:MatrixR1}
 \begin{bmatrix}\vdots &amp;  &amp; \vdots &amp;   &amp; \vdots \\
 \dots &amp; g  &amp; \dots &amp; -g &amp; \dots \\
 \vdots &amp;  &amp; \vdots &amp;   &amp; \vdots \\
@@ -586,13 +586,13 @@ I_{ji}=-I_{ij}=g (V_j-V_i) =  -g  V_i + g V_j
 \end{bmatrix} =\begin{bmatrix} \vdots \\  0 \\ \vdots \\ 0  \\ \vdots \end{bmatrix}
 \end{equation}\]</div>
 <p>Als alternatief voor deze stempel van de weerstand op basis van de conductiviteit <span class="math notranslate nohighlight">\(g\)</span> kunnen we overwegen om een bijkomende onbekende <span class="math notranslate nohighlight">\(I_{ij}\)</span> en een bijkomende vergelijking in te voegen</p>
-<div class="amsmath math notranslate nohighlight" id="equation-38a52b81-3683-41f3-ac7a-1de6587834d5">
-<span class="eqno">(5)<a class="headerlink" href="#equation-38a52b81-3683-41f3-ac7a-1de6587834d5" title="Permalink to this equation">#</a></span>\[\begin{equation}\label{eq:cond3}
+<div class="amsmath math notranslate nohighlight" id="equation-83e1b100-86a7-4569-a37a-647bb5d66c54">
+<span class="eqno">(5)<a class="headerlink" href="#equation-83e1b100-86a7-4569-a37a-647bb5d66c54" title="Permalink to this equation">#</a></span>\[\begin{equation}\label{eq:cond3}
 V_i-V_j - R I_{ij} = 0.
 \end{equation}\]</div>
 <p>Op de vergelijkingen van knoop i en j voegen we dan telkens ook <span class="math notranslate nohighlight">\(I_{ij}\)</span> of <span class="math notranslate nohighlight">\(-I_{ij}\)</span> toe. De MNA matrix wordt dan:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-831a9b60-bcd8-4509-a420-070f8e5f37f9">
-<span class="eqno">(6)<a class="headerlink" href="#equation-831a9b60-bcd8-4509-a420-070f8e5f37f9" title="Permalink to this equation">#</a></span>\[\begin{equation}\label{eq:MatrixR2}
+<div class="amsmath math notranslate nohighlight" id="equation-0dfd4a10-5858-4d32-ac50-347ef877aa3d">
+<span class="eqno">(6)<a class="headerlink" href="#equation-0dfd4a10-5858-4d32-ac50-347ef877aa3d" title="Permalink to this equation">#</a></span>\[\begin{equation}\label{eq:MatrixR2}
 \begin{bmatrix}\vdots &amp;  &amp; \vdots &amp;   &amp; \vdots &amp; &amp; \vdots \\
 \dots &amp;  &amp; \dots &amp;   &amp; \dots &amp; 1 &amp; \dots \\
 \vdots &amp;  &amp; \vdots &amp;   &amp; \vdots &amp; &amp; \vdots \\
@@ -618,13 +618,13 @@ V_i-V_j - R I_{ij} = 0.
 </div>
 </div>
 <p>Wanneer er in een circuit een condensator staat tussen knoop <span class="math notranslate nohighlight">\(i\)</span> en knoop <span class="math notranslate nohighlight">\(j\)</span>, is de stroom die van knoop <span class="math notranslate nohighlight">\(i\)</span> naar knoop <span class="math notranslate nohighlight">\(j\)</span> loopt</p>
-<div class="amsmath math notranslate nohighlight" id="equation-28005eb0-7c32-45bb-86ac-22e54a5818d2">
-<span class="eqno">(7)<a class="headerlink" href="#equation-28005eb0-7c32-45bb-86ac-22e54a5818d2" title="Permalink to this equation">#</a></span>\[\begin{equation}\label{eq:ccc}
+<div class="amsmath math notranslate nohighlight" id="equation-c8ecf925-1009-4780-b6b3-d79a9c0ea540">
+<span class="eqno">(7)<a class="headerlink" href="#equation-c8ecf925-1009-4780-b6b3-d79a9c0ea540" title="Permalink to this equation">#</a></span>\[\begin{equation}\label{eq:ccc}
 j\omega C (V_i-V_j) =  j\omega C  V_i - j\omega C V_j,
 \end{equation}\]</div>
 <p>en de stroom van knoop <span class="math notranslate nohighlight">\(j\)</span> naar knoop <span class="math notranslate nohighlight">\(i\)</span> loopt in de omgekeerde richting. In matrix notatie wordt dat:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-e03984f3-7add-4648-a49c-87729676cac2">
-<span class="eqno">(8)<a class="headerlink" href="#equation-e03984f3-7add-4648-a49c-87729676cac2" title="Permalink to this equation">#</a></span>\[\begin{equation}\label{eq:MatrixC}
+<div class="amsmath math notranslate nohighlight" id="equation-e297814a-fd85-47ec-a082-3d27b441f3e8">
+<span class="eqno">(8)<a class="headerlink" href="#equation-e297814a-fd85-47ec-a082-3d27b441f3e8" title="Permalink to this equation">#</a></span>\[\begin{equation}\label{eq:MatrixC}
 \begin{bmatrix}\vdots &amp;  &amp; \vdots &amp;   &amp; \vdots \\
 \dots &amp; j\omega C  &amp; \dots &amp; -j\omega C &amp; \dots\\
 \vdots &amp;  &amp; \vdots &amp;   &amp; \vdots \\
@@ -644,13 +644,13 @@ j\omega C (V_i-V_j) =  j\omega C  V_i - j\omega C V_j,
 </div>
 </div>
 <p>Wanneer er in een circuit een condensator staat tussen knoop <span class="math notranslate nohighlight">\(i\)</span> en knoop <span class="math notranslate nohighlight">\(j\)</span>, is de stroom die van knoop <span class="math notranslate nohighlight">\(i\)</span> naar knoop <span class="math notranslate nohighlight">\(j\)</span> loopt</p>
-<div class="amsmath math notranslate nohighlight" id="equation-11ddf74b-62cc-49eb-b21b-6ddd4f973d6e">
-<span class="eqno">(9)<a class="headerlink" href="#equation-11ddf74b-62cc-49eb-b21b-6ddd4f973d6e" title="Permalink to this equation">#</a></span>\[\begin{equation}\label{eq:cL}
+<div class="amsmath math notranslate nohighlight" id="equation-ed89bec6-5544-4279-84fe-4d18f90aae49">
+<span class="eqno">(9)<a class="headerlink" href="#equation-ed89bec6-5544-4279-84fe-4d18f90aae49" title="Permalink to this equation">#</a></span>\[\begin{equation}\label{eq:cL}
 \frac{1}{j\omega L} (V_i-V_j) =  \frac{1}{j\omega L}  V_i - \frac{1}{j\omega L} V_j,
 \end{equation}\]</div>
 <p>en de stroom van knoop <span class="math notranslate nohighlight">\(j\)</span> naar knoop <span class="math notranslate nohighlight">\(i\)</span> loopt in de omgekeerde richting. In matrix notatie wordt dat:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-4210481f-0f3f-485c-b521-e2cb30f881b9">
-<span class="eqno">(10)<a class="headerlink" href="#equation-4210481f-0f3f-485c-b521-e2cb30f881b9" title="Permalink to this equation">#</a></span>\[\begin{equation}\label{eq:Matrixspoel}
+<div class="amsmath math notranslate nohighlight" id="equation-a7d6192d-ef78-47c1-b971-01bbbe4414dc">
+<span class="eqno">(10)<a class="headerlink" href="#equation-a7d6192d-ef78-47c1-b971-01bbbe4414dc" title="Permalink to this equation">#</a></span>\[\begin{equation}\label{eq:Matrixspoel}
 \begin{bmatrix}\vdots &amp;  &amp; \vdots &amp;   &amp; \vdots \\ 
 \dots &amp; \frac{1}{j\omega L}  &amp; \dots &amp; -\frac{1}{j\omega L} &amp; \dots\\ 
 \vdots &amp;  &amp; \vdots &amp;   &amp; \vdots \\ 
@@ -663,13 +663,13 @@ j\omega C (V_i-V_j) =  j\omega C  V_i - j\omega C V_j,
 <section id="de-stempel-van-een-transconductantie-in-een-mna-matrix">
 <h3>De stempel van een transconductantie in een MNA matrix<a class="headerlink" href="#de-stempel-van-een-transconductantie-in-een-mna-matrix" title="Link to this heading">#</a></h3>
 <p>Bij een transconductantie wordt de waarde van de stroom van de knoop <span class="math notranslate nohighlight">\(k\)</span> naar de knoop <span class="math notranslate nohighlight">\(l\)</span> bepaalt door de spanning tussen de knoop <span class="math notranslate nohighlight">\(i\)</span> en de knoop <span class="math notranslate nohighlight">\(j\)</span>, aan de hand van de vergelijking</p>
-<div class="amsmath math notranslate nohighlight" id="equation-33062f8e-2003-4471-98bd-b4924f39311a">
-<span class="eqno">(11)<a class="headerlink" href="#equation-33062f8e-2003-4471-98bd-b4924f39311a" title="Permalink to this equation">#</a></span>\[\begin{equation}\label{eq:gm}
+<div class="amsmath math notranslate nohighlight" id="equation-7c695bcf-bc4b-4311-a9f9-4215e36ed017">
+<span class="eqno">(11)<a class="headerlink" href="#equation-7c695bcf-bc4b-4311-a9f9-4215e36ed017" title="Permalink to this equation">#</a></span>\[\begin{equation}\label{eq:gm}
 I_{kl}= g_m (V_i-V_j) ,
 \end{equation}\]</div>
 <p>waarbij <span class="math notranslate nohighlight">\(g_m\)</span> de waarde van de transconductantie is. In matrix notatie wordt dat:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-f0ab3dde-8a14-45ef-aee6-af695975301a">
-<span class="eqno">(12)<a class="headerlink" href="#equation-f0ab3dde-8a14-45ef-aee6-af695975301a" title="Permalink to this equation">#</a></span>\[\begin{equation}\label{eq:Matrixgm}
+<div class="amsmath math notranslate nohighlight" id="equation-ed7867ef-d0ea-4378-bf60-00d32135a6ff">
+<span class="eqno">(12)<a class="headerlink" href="#equation-ed7867ef-d0ea-4378-bf60-00d32135a6ff" title="Permalink to this equation">#</a></span>\[\begin{equation}\label{eq:Matrixgm}
 \begin{bmatrix}\vdots &amp;  &amp; \vdots &amp;   &amp; \vdots &amp; &amp; \vdots &amp;   &amp; \vdots \\
 \dots &amp;  &amp; \dots &amp;   &amp; \dots &amp;  &amp; \dots &amp;   &amp; \dots\\
 \vdots &amp;  &amp; \vdots &amp;   &amp; \vdots &amp; &amp; \vdots &amp;   &amp; \vdots\\
@@ -684,13 +684,13 @@ I_{kl}= g_m (V_i-V_j) ,
 \end{equation}\]</div>
 <p>We merken hierin op dat deze matrix nu niet langer symmetrisch is.</p>
 <p>In het geval van een MOS transistor zullen we de transcondutantie gebruiken om de <span class="math notranslate nohighlight">\(I_{DS}\)</span> in de simulator in te brengen. In dit geval is de knoop <span class="math notranslate nohighlight">\(j\)</span> en <span class="math notranslate nohighlight">\(l\)</span> dezelfde knoop en komen we tot de vergelijking</p>
-<div class="amsmath math notranslate nohighlight" id="equation-88dfaf0b-818f-4412-b141-8826f8c5e687">
-<span class="eqno">(13)<a class="headerlink" href="#equation-88dfaf0b-818f-4412-b141-8826f8c5e687" title="Permalink to this equation">#</a></span>\[\begin{equation}\label{eq:gm2}
+<div class="amsmath math notranslate nohighlight" id="equation-28934cb4-b7ce-45e9-8096-cc515d8cd97c">
+<span class="eqno">(13)<a class="headerlink" href="#equation-28934cb4-b7ce-45e9-8096-cc515d8cd97c" title="Permalink to this equation">#</a></span>\[\begin{equation}\label{eq:gm2}
 I_{DS}= g_m (V_G-V_S) .
 \end{equation}\]</div>
 <p>In matrix notatie wordt dat:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-86d8905f-f3ca-46c1-b07c-dfd0740c75b8">
-<span class="eqno">(14)<a class="headerlink" href="#equation-86d8905f-f3ca-46c1-b07c-dfd0740c75b8" title="Permalink to this equation">#</a></span>\[\begin{equation}\label{eq:MatrixMOS}
+<div class="amsmath math notranslate nohighlight" id="equation-e5024034-e6ce-459b-9b51-d38ef150ba27">
+<span class="eqno">(14)<a class="headerlink" href="#equation-e5024034-e6ce-459b-9b51-d38ef150ba27" title="Permalink to this equation">#</a></span>\[\begin{equation}\label{eq:MatrixMOS}
 \begin{bmatrix}\vdots &amp;  &amp; \vdots &amp;   &amp; \vdots &amp; &amp; \vdots \\
 \dots &amp;  &amp; \dots &amp;   &amp; \dots &amp;  &amp; \dots \\
 \vdots &amp;  &amp; \vdots &amp;   &amp; \vdots &amp; &amp; \vdots \\
@@ -717,18 +717,18 @@ I_{DS}= g_m (V_G-V_S) .
 </div>
 </div>
 <p>Voor de berekening aan de hand van een MNA matrix is het handig om dit Thevenin schema om te werken naar zijn <a class="reference external" href="https://en.wikipedia.org/wiki/Norton%27s_theorem">Norton equivalent</a> zoals aangegeven aan de rechterkant van <a class="reference internal" href="#spanning1"><span class="std std-numref">Fig. 18</span></a>. Hierbij is berekenen we de kortsluitstroom <span class="math notranslate nohighlight">\(I_{sc}\)</span> in functie van de open klemmen spanning <span class="math notranslate nohighlight">\(V_{oc}\)</span> en de outputweerstand <span class="math notranslate nohighlight">\(R_o\)</span> van de bron als</p>
-<div class="amsmath math notranslate nohighlight" id="equation-6257530d-436c-4921-9651-6247ae0b7b5c">
-<span class="eqno">(15)<a class="headerlink" href="#equation-6257530d-436c-4921-9651-6247ae0b7b5c" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-710624f8-580c-499b-9b92-cf6f87a3e5a6">
+<span class="eqno">(15)<a class="headerlink" href="#equation-710624f8-580c-499b-9b92-cf6f87a3e5a6" title="Permalink to this equation">#</a></span>\[\begin{equation}
 I_{sc}=\frac{V_{oc}}{R_o}.
 \end{equation}\]</div>
 <p>In de MNA matrix brengen we de uitgangsconductiviteit <span class="math notranslate nohighlight">\(g_o\)</span> in als</p>
-<div class="amsmath math notranslate nohighlight" id="equation-11fd2794-8d5b-4ce7-b942-523cc8e41d47">
-<span class="eqno">(16)<a class="headerlink" href="#equation-11fd2794-8d5b-4ce7-b942-523cc8e41d47" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-1ac46fda-8b51-457a-bac6-a604ddf6f291">
+<span class="eqno">(16)<a class="headerlink" href="#equation-1ac46fda-8b51-457a-bac6-a604ddf6f291" title="Permalink to this equation">#</a></span>\[\begin{equation}
 g_o=\frac{1}{R_o}.
 \end{equation}\]</div>
 <p>Het  <a class="reference external" href="https://en.wikipedia.org/wiki/Norton%27s_theorem">Norton equivalent</a> kunnen we inbrengen in een MNA matrix zonder dat een bijkomende vergelijking nodig is. Dit wordt dan</p>
-<div class="amsmath math notranslate nohighlight" id="equation-2997ff12-74bf-44b4-8b1a-e0a89cb1b74c">
-<span class="eqno">(17)<a class="headerlink" href="#equation-2997ff12-74bf-44b4-8b1a-e0a89cb1b74c" title="Permalink to this equation">#</a></span>\[\begin{equation}\label{eq:Norton}
+<div class="amsmath math notranslate nohighlight" id="equation-4c356721-82dc-4b63-806f-365c47439e8e">
+<span class="eqno">(17)<a class="headerlink" href="#equation-4c356721-82dc-4b63-806f-365c47439e8e" title="Permalink to this equation">#</a></span>\[\begin{equation}\label{eq:Norton}
 \begin{bmatrix}\vdots &amp;  &amp; \vdots &amp;   &amp; \vdots \\
 \dots &amp; g  &amp; \dots &amp; -g &amp; \dots \\
 \vdots &amp;  &amp; \vdots &amp;   &amp; \vdots \\
@@ -751,13 +751,13 @@ g_o=\frac{1}{R_o}.
 </div>
 </div>
 <p>In het geval van een ideale spanningsbron of een bijna ideale spanningsbron wordt de outputweerstand <span class="math notranslate nohighlight">\(R_o=0\)</span> ofwel zeer klein. Als een gevolg hiervan wordt de uitgangsconductiviteit <span class="math notranslate nohighlight">\(g_o=\infty\)</span> of zeer groot. De oplossing van de MNA matrix is als gevolg hiervan onbepaald of numeriek erg onstabiel. We kunnen dit voorkomen door een bijkomende onbekenden <span class="math notranslate nohighlight">\(I_{sc}\)</span> en een bijkomende vergelijking in te voeren.</p>
-<div class="amsmath math notranslate nohighlight" id="equation-95cc5910-4c6a-4045-b7a1-cf63fd1ee4d4">
-<span class="eqno">(18)<a class="headerlink" href="#equation-95cc5910-4c6a-4045-b7a1-cf63fd1ee4d4" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-d1ecd16c-b4d0-4978-9602-aeaef4ab80c6">
+<span class="eqno">(18)<a class="headerlink" href="#equation-d1ecd16c-b4d0-4978-9602-aeaef4ab80c6" title="Permalink to this equation">#</a></span>\[\begin{equation}
 V_i-V_j=V_{oc}.
 \end{equation}\]</div>
 <p>De nieuwe MNA matrix wordt dan</p>
-<div class="amsmath math notranslate nohighlight" id="equation-08e602bc-0594-4519-a50a-07c73561d151">
-<span class="eqno">(19)<a class="headerlink" href="#equation-08e602bc-0594-4519-a50a-07c73561d151" title="Permalink to this equation">#</a></span>\[\begin{equation}\label{eq:bron}
+<div class="amsmath math notranslate nohighlight" id="equation-a8515b9f-b9f9-4c8a-8337-77f8e486a00e">
+<span class="eqno">(19)<a class="headerlink" href="#equation-a8515b9f-b9f9-4c8a-8337-77f8e486a00e" title="Permalink to this equation">#</a></span>\[\begin{equation}\label{eq:bron}
 \begin{bmatrix}\vdots &amp; &amp; &amp;  &amp; &amp; \vdots &amp; &amp; &amp; \vdots \\
 \dots &amp; &amp; &amp;  &amp; &amp; \dots &amp; 1 &amp; &amp; \dots \\
 \dots &amp; &amp; &amp;  &amp; &amp; \dots &amp; -1 &amp; &amp; \dots \\
