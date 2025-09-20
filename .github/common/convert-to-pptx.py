@@ -30,6 +30,8 @@ KUL_layout_text=6
 KUL_layout_statement=11
 KUL_layout_end=10
 
+lines_per_chunk=15
+
 report_all_shapes_in_template=True
 if report_all_shapes_in_template:
     prs = Presentation(slidetemplate)
@@ -124,7 +126,7 @@ for ipath in notebooks:
                             except UnidentifiedImageError:
                                 print("  image/jpeg  error for cell number "+str(index))
                         elif "text/plain" in output.get("data", {}):
-                            lines="".join(output.data["text/plain"]).splitlines
+                            lines="".join(output.data["text/plain"]).split('\n')
                             for i in range(0,len(lines),lines_per_chunk):
                                 slide = prs.slides.add_slide(prs.slide_layouts[KUL_layout_code])
                                 maketitle(cell,slide) 
@@ -134,7 +136,7 @@ for ipath in notebooks:
                                     par.font.color.rgb = RGBColor(1, 1, 1)
                                 slide.shapes[0].text_frame.fit_text(font_family="Courier",max_size=30, font_file=r".github/common/fonts/cour.ttf")
                         elif "text" in cell.outputs:
-                            lines="".join(cell.outputs["text"]).splitlines
+                            lines="".join(cell.outputs["text"]).split('\n')
                             for i in range(0,len(lines),lines_per_chunk):
                                 slide = prs.slides.add_slide(prs.slide_layouts[KUL_layout_text])
                                 maketitle(cell,slide) 
