@@ -25,8 +25,8 @@ KUL_layout_title=0
 KUL_layout_subtitle=1
 KUL_layout_outline=9
 KUL_layout_fig=4
-KUL_layout_code=2
-KUL_layout_text=5
+KUL_layout_code=3
+KUL_layout_text=6
 KUL_layout_statement=11
 KUL_layout_end=10
 
@@ -143,7 +143,7 @@ for ipath in notebooks:
                                 slide.shapes[0].text="\n".join(lines[i:i+lines_per_chunk])
                                 for par in slide.shapes[0].text_frame.paragraphs:
                                     par.line_spacing = Pt(18)
-                                    par.font.color.rgb = RGBColor(1, 1, 1)
+                                    par.font.color.rgb = RGBColor(255, 255, 255)
                                 slide.shapes[0].text_frame.fit_text(font_family="Courier",max_size=30, font_file=r".github/common/fonts/cour.ttf")
                         elif "text" in cell.outputs:
                             lines="".join(cell.outputs["text"]).split('\n')
