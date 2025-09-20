@@ -13,8 +13,8 @@ from IPython.lib.latextools import latex_to_png
 
 # Collect a list of all notebooks in the content folder
 notebooks = glob("ToegepasteAnalogeElektronica/*.ipynb", recursive=True)
-#notebooks+= glob("AnalogeElektronica2/*.ipynb", recursive=True)
-#notebooks+= glob("AnalogDesignTechniques/*.ipynb", recursive=True)
+notebooks+= glob("AnalogeElektronica2/*.ipynb", recursive=True)
+notebooks+= glob("AnalogDesignTechniques/*.ipynb", recursive=True)
 #notebooks+= glob("MicroEnNanoTechnologie/*.ipynb", recursive=True)
 
 #slidetemplate="./.github/common/KULeuventemplate.pptx"
