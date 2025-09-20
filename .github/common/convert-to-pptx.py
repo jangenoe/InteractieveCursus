@@ -142,9 +142,9 @@ for ipath in notebooks:
                                 maketitle(cell,slide) 
                                 slide.shapes[0].text="\n".join(lines[i:i+lines_per_chunk])
                                 for par in slide.shapes[0].text_frame.paragraphs:
-                                    par.line_spacing = Pt(18)
+                                    par.line_spacing = Pt(24)
                                     par.font.color.rgb = RGBColor(255, 255, 255)
-                                slide.shapes[0].text_frame.fit_text(font_family="Courier",max_size=30, font_file=r".github/common/fonts/cour.ttf")
+                                slide.shapes[0].text_frame.fit_text(font_family="Courier",max_size=24, font_file=r".github/common/fonts/cour.ttf")
                         elif "text" in cell.outputs:
                             lines="".join(cell.outputs["text"]).split('\n')
                             for i in range(0,len(lines),lines_per_chunk):
@@ -152,9 +152,9 @@ for ipath in notebooks:
                                 maketitle(cell,slide) 
                                 slide.shapes[0].text="\n".join(lines[i:i+lines_per_chunk])
                                 for par in slide.shapes[0].text_frame.paragraphs:
-                                    par.line_spacing = Pt(18)
+                                    par.line_spacing = Pt(24)
                                     par.font.color.rgb = RGBColor(0,0,0)
-                                slide.shapes[0].text_frame.fit_text(font_family="Courier",max_size=30, font_file=r".github/common/fonts/cour.ttf")          
+                                slide.shapes[0].text_frame.fit_text(font_family="Courier",max_size=24, font_file=r".github/common/fonts/cour.ttf")          
                         else:
                                 print("  content_type  error for cell number "+str(index))
                                 
