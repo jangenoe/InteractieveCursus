@@ -558,6 +558,7 @@ document.write(`
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#flat-top">Flat top</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#on-chip-2ghz-klasse-e-versterker-voor-gsm-toepassingen">On-chip 2GHz Klasse E versterker voor GSM toepassingen</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#overzicht-van-de-state-of-the-art">Overzicht van de state-of-the-art</a></li>
 </ul>
             </nav>
         </div>
@@ -1002,6 +1003,91 @@ We kunnen de uitgang omwerken naar een impedantie van 50 Ohm door een transforma
 </div>
 </div>
 </section>
+<section id="overzicht-van-de-state-of-the-art">
+<h2>Overzicht van de state-of-the-art<a class="headerlink" href="#overzicht-van-de-state-of-the-art" title="Link to this heading">#</a></h2>
+<p>In <a class="reference internal" href="#esota"><span class="std std-numref">Tabel 5</span></a> tonen we een overzicht van de state-of-the-art voor on chip klasse E versterkers. We merken op dat er vermogens tot 37 W kunnen bekomen worden met de 180 nm nodes. Voor de oudere 500 nm nodes kunnen er vermogens tot 100 W bekomen worden. Dit is vooral omdat er op de oudere technologienodes ook hogere spanningen kunnen gebruikt worden (tot 40V).
+De frequenties voor deze ontwerpen blijven beperkt tot 6 tot 13.56 MHz.</p>
+<div class="pst-scrollable-table-container"><table class="table" id="esota">
+<caption><span class="caption-number">Tabel 5 </span><span class="caption-text">Overzicht van de state-of-the-art</span><a class="headerlink" href="#esota" title="Link to this table">#</a></caption>
+<thead>
+<tr class="row-odd"><th class="head"></th>
+<th class="head"><p>ISSCC’18 <span id="id9">[]</span></p></th>
+<th class="head"><p>ISSCC’19 <span id="id10">[]</span></p></th>
+<th class="head"><p>ISSCC’24 <span id="id11">[]</span></p></th>
+<th class="head"><p>JSSC’24 <span id="id12">[]</span></p></th>
+<th class="head"><p>ISSCC’25 <span id="id13">[]</span></p></th>
+<th class="head"><p>ESSERC’25 [x]</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Process node</p></td>
+<td><p>0.5 um</p></td>
+<td><p>0.5 um</p></td>
+<td><p>0.18 um</p></td>
+<td><p>0.18 um</p></td>
+<td><p>0.18 um</p></td>
+<td><p>0.18 um</p></td>
+</tr>
+<tr class="row-odd"><td><p>Technologie</p></td>
+<td><p>CMOS SOI</p></td>
+<td><p>CMOS SOI</p></td>
+<td><p>BCD</p></td>
+<td><p>BCD SOI</p></td>
+<td><p>SOI</p></td>
+<td><p>BCD</p></td>
+</tr>
+<tr class="row-even"><td><p>Type</p></td>
+<td><p>Klasse E</p></td>
+<td><p>Differentiele klasse E</p></td>
+<td><p>Hybride klasse ED</p></td>
+<td><p>gereguleerde Klasse E</p></td>
+<td><p>Klasse E</p></td>
+<td><p>Klasse E</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(V_{in}\)</span> [V]</p></td>
+<td><p>40</p></td>
+<td><p>40</p></td>
+<td><p>7.4</p></td>
+<td><p>10</p></td>
+<td><p>20-35</p></td>
+<td><p>10-20</p></td>
+</tr>
+<tr class="row-even"><td><p>Frequentie [MHz]</p></td>
+<td><p>6.78</p></td>
+<td><p>13.56</p></td>
+<td><p>6.78</p></td>
+<td><p>6.78</p></td>
+<td><p>6.78</p></td>
+<td><p>6.78</p></td>
+</tr>
+<tr class="row-odd"><td><p>Piek output power [W]</p></td>
+<td><p>70</p></td>
+<td><p>100</p></td>
+<td><p>27</p></td>
+<td><p>27</p></td>
+<td><p>33</p></td>
+<td><p>37.8</p></td>
+</tr>
+<tr class="row-even"><td><p>Piek Tx efficientie [%]</p></td>
+<td><p>90</p></td>
+<td><p>91</p></td>
+<td><p>N.A.</p></td>
+<td><p>N.A.</p></td>
+<td><p>94.2</p></td>
+<td><p>94</p></td>
+</tr>
+<tr class="row-odd"><td><p>Piek E2E Efficientie [%]</p></td>
+<td><p>N.A.</p></td>
+<td><p>N.A.</p></td>
+<td><p>82</p></td>
+<td><p>80</p></td>
+<td><p>74.7</p></td>
+<td><p>86.3</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -1092,6 +1178,7 @@ We kunnen de uitgang omwerken naar een impedantie van 50 Ohm door een transforma
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#flat-top">Flat top</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#on-chip-2ghz-klasse-e-versterker-voor-gsm-toepassingen">On-chip 2GHz Klasse E versterker voor GSM toepassingen</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#overzicht-van-de-state-of-the-art">Overzicht van de state-of-the-art</a></li>
 </ul>
   </nav></div>
 

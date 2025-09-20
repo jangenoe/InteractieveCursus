@@ -7800,7 +7800,7 @@ div .csl-right-inline{text-align: left}</style>
 <!-- End of mathjax configuration --></head>
 <body class="jp-Notebook" data-jp-theme-light="true" data-jp-theme-name="JupyterLab Light">
 <div class="reveal">
-<div class="slides"><section data-state="kuleuven_title_slide reveal"><section><div class="title">Spice simulatie</div><div class="subtitle">Berekening van elektronische circuits</div><div class="speaker kuleuvenwhite">Jan Genoe</div><div class="date kuleuvenwhite">September 2022</div></section></section><section data-state="kuleuven_slide"><section><h6>Basisschema van de verschilversterker</h6><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noInput">
+<div class="slides"><section data-state="kuleuven_title_slide reveal"><section><div class="title">Spice simulatie</div><div class="subtitle">Berekening van elektronische circuits</div><div class="speaker kuleuvenwhite">Jan Genoe</div><div class="date kuleuvenwhite">September 2022</div></section></section><section data-state="kuleuven_slide"><section><h6>Basisschema van de verschilversterker</h6><div class="BottomSlideReference"></div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noInput">
 <div class="jp-Cell-outputWrapper">
 <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
 </div>
@@ -8845,7 +8845,7 @@ z
 </div>
 </div>
 </div>
-</div></section></section><section data-state="kuleuven_slide"><section><h6>Basisschema van de verschilversterker</h6><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noInput">
+</div></section></section><section data-state="kuleuven_slide"><section><h6>Basisschema van de verschilversterker</h6><div class="BottomSlideReference"></div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noInput">
 <div class="jp-Cell-outputWrapper">
 <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
 </div>
@@ -10276,7 +10276,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 </div>
 </div>
 </div>
-</div></section></section><section data-state="kuleuven_slide"><section><h6>nMOS transistors van de verschilversterker</h6><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noInput">
+</div></section></section><section data-state="kuleuven_slide"><section><h6>nMOS transistors van de verschilversterker</h6><div class="BottomSlideReference"></div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noInput">
 <div class="jp-Cell-outputWrapper">
 <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
 </div>
@@ -11062,7 +11062,7 @@ z
 </div>
 </div>
 </div>
-</div></section></section><section data-state="kuleuven_slide"><section><h6>Eenvoudige transistormodellen</h6><div class="BottomSlideReference"></div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noInput celltag_remove-cell4BOOK celltag_remove-cell4PDF">
+</div></section></section><section data-state="kuleuven_slide"><section><h6>pMOS transistors van de verschilversterker</h6><div class="BottomSlideReference"></div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noInput celltag_remove-cell4BOOK celltag_remove-cell4PDF">
 <div class="jp-Cell-outputWrapper">
 <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
 </div>
@@ -11088,6 +11088,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 .output_html .cs { color: #3D7B7B; font-style: italic } /* Comment.Special */
 .output_html .gd { color: #A00000 } /* Generic.Deleted */
 .output_html .ge { font-style: italic } /* Generic.Emph */
+.output_html .ges { font-weight: bold; font-style: italic } /* Generic.EmphStrong */
 .output_html .gr { color: #E40000 } /* Generic.Error */
 .output_html .gh { color: #000080; font-weight: bold } /* Generic.Heading */
 .output_html .gi { color: #008400 } /* Generic.Inserted */
@@ -11142,14 +11143,16 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 .output_html .vg { color: #19177C } /* Name.Variable.Global */
 .output_html .vi { color: #19177C } /* Name.Variable.Instance */
 .output_html .vm { color: #19177C } /* Name.Variable.Magic */
-.output_html .il { color: #666666 } /* Literal.Number.Integer.Long */</style><div class="highlight"><pre><span></span><span class="p">.</span><span class="nx">MODEL</span><span class="w"> </span><span class="nx">NMOS</span><span class="w"> </span><span class="nx">NMOS</span><span class="p">(</span><span class="nx">LEVEL</span><span class="p">=</span><span class="mi">1</span><span class="w"> </span><span class="nx">VTO</span><span class="p">=</span><span class="m m-Double">0.50</span><span class="w"> </span><span class="nx">KP</span><span class="p">=</span><span class="m m-Double">90.000E-6</span><span class="w"> </span><span class="nx">LAMBDA</span><span class="p">=</span><span class="m m-Double">0.001</span><span class="p">)</span><span class="w"></span>
-<span class="p">.</span><span class="nx">MODEL</span><span class="w"> </span><span class="nx">PMOS</span><span class="w"> </span><span class="nx">PMOS</span><span class="p">(</span><span class="nx">LEVEL</span><span class="p">=</span><span class="mi">1</span><span class="w"> </span><span class="nx">VTO</span><span class="p">=</span><span class="o">-</span><span class="m m-Double">0.45</span><span class="w"> </span><span class="nx">KP</span><span class="p">=</span><span class="m m-Double">55.000E-6</span><span class="w"> </span><span class="nx">LAMBDA</span><span class="p">=</span><span class="m m-Double">0.001</span><span class="p">)</span><span class="w"></span>
+.output_html .il { color: #666666 } /* Literal.Number.Integer.Long */</style><div class="highlight"><pre><span></span><span class="nx">MP1</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="mi">4</span><span class="w"> </span><span class="mi">3</span><span class="w"> </span><span class="mi">1</span><span class="w">  </span><span class="nx">PMOS</span><span class="w"> </span><span class="nx">w</span><span class="p">=</span><span class="m m-Double">3.50</span><span class="nx">u</span><span class="w"> </span><span class="nx">L</span><span class="p">=</span><span class="m m-Double">0.50</span><span class="nx">U</span>
+<span class="nx">MP2</span><span class="w"> </span><span class="mi">4</span><span class="w"> </span><span class="mi">4</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="mi">1</span><span class="w">  </span><span class="nx">PMOS</span><span class="w"> </span><span class="nx">w</span><span class="p">=</span><span class="m m-Double">3.50</span><span class="nx">u</span><span class="w"> </span><span class="nx">L</span><span class="p">=</span><span class="m m-Double">0.50</span><span class="nx">U</span>
+<span class="nx">MP3</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="mi">6</span><span class="w"> </span><span class="mi">5</span><span class="w"> </span><span class="mi">1</span><span class="w">  </span><span class="nx">PMOS</span><span class="w"> </span><span class="nx">w</span><span class="p">=</span><span class="m m-Double">3.50</span><span class="nx">u</span><span class="w"> </span><span class="nx">L</span><span class="p">=</span><span class="m m-Double">0.50</span><span class="nx">U</span>
+<span class="nx">MP4</span><span class="w"> </span><span class="mi">6</span><span class="w"> </span><span class="mi">6</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="mi">1</span><span class="w">  </span><span class="nx">PMOS</span><span class="w"> </span><span class="nx">w</span><span class="p">=</span><span class="m m-Double">3.50</span><span class="nx">u</span><span class="w"> </span><span class="nx">L</span><span class="p">=</span><span class="m m-Double">0.50</span><span class="nx">U</span>
 </pre></div>
 </div>
 </div>
 </div>
 </div>
-</div></section></section><section data-state="kuleuven_slide"><section><h6>pMOS transistors van de verschilversterker</h6><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noInput">
+</div></section></section><section data-state="kuleuven_slide"><section><h6>pMOS transistors van de verschilversterker</h6><div class="BottomSlideReference"></div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noInput">
 <div class="jp-Cell-outputWrapper">
 <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
 </div>
@@ -11878,7 +11881,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 </div>
 </div>
 </div>
-</div></section></section><section data-state="kuleuven_slide"><section><h6>Simulatie</h6><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noInput">
+</div></section></section><section data-state="kuleuven_slide"><section><h6>Simulatie</h6><div class="BottomSlideReference"></div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noInput">
 <div class="jp-Cell-outputWrapper">
 <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
 </div>
