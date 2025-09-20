@@ -13,11 +13,22 @@ from IPython.lib.latextools import latex_to_png
 
 # Collect a list of all notebooks in the content folder
 notebooks = glob("ToegepasteAnalogeElektronica/*.ipynb", recursive=True)
-notebooks+= glob("AnalogeElektronica2/*.ipynb", recursive=True)
-notebooks+= glob("AnalogDesignTechniques/*.ipynb", recursive=True)
+#notebooks+= glob("AnalogeElektronica2/*.ipynb", recursive=True)
+#notebooks+= glob("AnalogDesignTechniques/*.ipynb", recursive=True)
+#notebooks+= glob("MicroEnNanoTechnologie/*.ipynb", recursive=True)
 
 #slidetemplate="./.github/common/KULeuventemplate.pptx"
-slidetemplate="./.github/common/KULeuven_600TEMPLATE.pptx"
+#slidetemplate="./.github/common/KULeuven_600TEMPLATE.pptx"
+slidetemplate="./.github/common/PowerPoint_600jaar_template.pptx"
+
+KUL_layout_title=0
+KUL_layout_subtitle=1
+KUL_layout_outline=9
+KUL_layout_fig=4
+KUL_layout_code=2
+KUL_layout_text=6
+KUL_layout_statement=11
+KUL_layout_end=10
 
 report_all_shapes_in_template=True
 if report_all_shapes_in_template:
@@ -49,7 +60,7 @@ for ipath in notebooks:
     print("file om te zetten: ",ipath)
     ntbk = nbf.read(ipath, nbf.NO_CONVERT)
     prs = Presentation(slidetemplate)
-    slide = prs.slides.add_slide(prs.slide_layouts[0])
+    slide = prs.slides.add_slide(prs.slide_layouts[KUL_layout_title])
     if "title" in ntbk.metadata.get('KULeuvenSlides', {}):
         title_shape = slide.shapes.title
         title_shape.text = ntbk.metadata.KULeuvenSlides["title"].replace("<BR>","\n")
@@ -87,7 +98,7 @@ for ipath in notebooks:
                 if  cell.metadata.slideshow.get("slide_type", ())=="slide":
                    for output_idx, output in enumerate(cell.get("outputs", ())):
                         if "image/png" in output.get("data", {}):                           
-                            slide = prs.slides.add_slide(prs.slide_layouts[6])
+                            slide = prs.slides.add_slide(prs.slide_layouts[KUL_layout_fig])
                             maketitle(cell,slide)  
                             image_stream = io.BytesIO(base64.b64decode(output.data["image/png"]))
                             try:                            
@@ -100,7 +111,7 @@ for ipath in notebooks:
                             except UnidentifiedImageError:
                                 print("  image/png  error for cell number "+str(index))
                         elif "image/jpeg" in output.get("data", {}):                           
-                            slide = prs.slides.add_slide(prs.slide_layouts[6])
+                            slide = prs.slides.add_slide(prs.slide_layouts[KUL_layout_fig])
                             maketitle(cell,slide)  
                             image_stream = io.BytesIO(base64.b64decode(output.data["image/jpeg"]))
                             try:                            
@@ -113,61 +124,32 @@ for ipath in notebooks:
                             except UnidentifiedImageError:
                                 print("  image/jpeg  error for cell number "+str(index))
                         elif "text/plain" in output.get("data", {}):
-                            if len(output.data["text/plain"])<20:
-                                slide = prs.slides.add_slide(prs.slide_layouts[5])
+                            lines="".join(output.data["text/plain"]).splitlines
+                            for i in range(0,len(lines),lines_per_chunk):
+                                slide = prs.slides.add_slide(prs.slide_layouts[KUL_layout_code])
                                 maketitle(cell,slide) 
-                                slide.shapes[0].text="".join(output.data["text/plain"])
+                                slide.shapes[0].text="\n".join(lines[i:i+lines_per_chunk])
                                 for par in slide.shapes[0].text_frame.paragraphs:
-                                    par.line_spacing = Pt(8)
-                                    par.font.color.rgb = RGBColor(0, 0, 0)
-                                slide.shapes[0].text_frame.fit_text(font_family="Courier",max_size=30, font_file=r".github/common/fonts/cour.ttf") 
-                            else:
-                                slide = prs.slides.add_slide(prs.slide_layouts[5])
-                                maketitle(cell,slide) 
-                                slide.shapes[0].text="".join(output.data["text/plain"][:20])
-                                for par in slide.shapes[0].text_frame.paragraphs:
-                                    par.line_spacing = Pt(8)
-                                    par.font.color.rgb = RGBColor(0, 0, 0)
-                                slide.shapes[0].text_frame.fit_text(font_family="Courier",max_size=30, font_file=r".github/common/fonts/cour.ttf")      
-                                slide = prs.slides.add_slide(prs.slide_layouts[5])
-                                maketitle(cell,slide) 
-                                slide.shapes[0].text="".join(output.data["text/plain"][20:])
-                                for par in slide.shapes[0].text_frame.paragraphs:
-                                    par.line_spacing = Pt(8)
-                                    par.font.color.rgb = RGBColor(0, 0, 0)
+                                    par.line_spacing = Pt(18)
+                                    par.font.color.rgb = RGBColor(1, 1, 1)
                                 slide.shapes[0].text_frame.fit_text(font_family="Courier",max_size=30, font_file=r".github/common/fonts/cour.ttf")
                         elif "text" in cell.outputs:
-                            if len(cell.outputs["text"])<20:
-                                slide = prs.slides.add_slide(prs.slide_layouts[5])
+                            lines="".join(cell.outputs["text"]).splitlines
+                            for i in range(0,len(lines),lines_per_chunk):
+                                slide = prs.slides.add_slide(prs.slide_layouts[KUL_layout_text])
                                 maketitle(cell,slide) 
-                                slide.shapes[0].text="".join(cell.outputs["text"])
+                                slide.shapes[0].text="\n".join(lines[i:i+lines_per_chunk])
                                 for par in slide.shapes[0].text_frame.paragraphs:
-                                    par.line_spacing = Pt(8)
-                                    par.font.color.rgb = RGBColor(0, 0, 0)
-                                slide.shapes[0].text_frame.fit_text(font_family="Courier",max_size=30, font_file=r".github/common/fonts/cour.ttf") 
-                            else:
-                                slide = prs.slides.add_slide(prs.slide_layouts[5])
-                                maketitle(cell,slide) 
-                                slide.shapes[0].text="".join(cell.outputs["text"][:20])
-                                for par in slide.shapes[0].text_frame.paragraphs:
-                                    par.line_spacing = Pt(8)
-                                    par.font.color.rgb = RGBColor(0, 0, 0)
-                                slide.shapes[0].text_frame.fit_text(font_family="Courier",max_size=30, font_file=r".github/common/fonts/cour.ttf")           
-                                slide = prs.slides.add_slide(prs.slide_layouts[5])
-                                maketitle(cell,slide) 
-                                slide.shapes[0].text="".join(cell.outputs["text"][20:])
-                                for par in slide.shapes[0].text_frame.paragraphs:
-                                    par.line_spacing = Pt(8)
-                                    par.font.color.rgb = RGBColor(0, 0, 0)
-                                slide.shapes[0].text_frame.fit_text(font_family="Courier",max_size=30, font_file=r".github/common/fonts/cour.ttf")           
-                                
-                        #else:
-                                #print("  "+content_type+"  error for cell number "+str(index))
+                                    par.line_spacing = Pt(18)
+                                    par.font.color.rgb = RGBColor(0,0,0)
+                                slide.shapes[0].text_frame.fit_text(font_family="Courier",max_size=30, font_file=r".github/common/fonts/cour.ttf")          
+                        else:
+                                print("  content_type  error for cell number "+str(index))
                                 
         if "markdown" in cell.get('cell_type', {}) and not("remove_cell4pptx" in cell.metadata.get('tags', {})):
             if "slide_type" in cell.metadata.get('slideshow', {}):
                 if  cell.metadata.slideshow.get("slide_type", ())=="slide":
-                    slide = prs.slides.add_slide(prs.slide_layouts[6])
+                    slide = prs.slides.add_slide(prs.slide_layouts[KUL_layout_text])
                     maketitle(cell,slide)
                     running_height=Inches(2.28)
                     if "KULeuvenSlides" in cell.get('metadata', {}):
@@ -206,6 +188,6 @@ for ipath in notebooks:
                     notes_slide.notes_text_frame.text = "".join(cell.get('source', {}))
                     
 
-    slide = prs.slides.add_slide(prs.slide_layouts[10])
-    slide = prs.slides.add_slide(prs.slide_layouts[9])
+    slide = prs.slides.add_slide(prs.slide_layouts[KUL_layout_statement])
+    slide = prs.slides.add_slide(prs.slide_layouts[KUL_layout_end])
     prs.save(ipath[:-6]+".pptx")
