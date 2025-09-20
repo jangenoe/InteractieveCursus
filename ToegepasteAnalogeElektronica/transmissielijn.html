@@ -210,6 +210,8 @@
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Transmissielijnen</span></p>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Transmissie lijnen</a></li>
+
+
 <li class="toctree-l1"><a class="reference internal" href="reflecties.html">Reflecties</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="SmithKaart.html">Smith kaart</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="SmithKaartOefening1.html">Smith Kaart Oefening 1</a></li>
@@ -534,6 +536,7 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Transmissie lijnen</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#transmissie-lijn-model">Transmissie lijn model</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#coax-kabel">Coax kabel</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#twisted-pair-kabel">Twisted pair kabel</a></li>
@@ -542,6 +545,17 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#microstrip-analyse-plots">Microstrip Analyse Plots</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#microstrip-design-plots">Microstrip Design Plots</a></li>
 </ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#andere-transmissie-lijnconfiguraties">Andere transmissie lijnconfiguraties</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#twee-geleiders-in-een-onbeperkt-medium">Twee geleiders in een onbeperkt medium</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#een-geleider-boven-een-grondvlak">Een geleider boven een grondvlak</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#twee-geleiders-boven-een-grondvlak">Twee geleiders boven een grondvlak</a></li>
+</ul>
+</li>
+</ul>
+
             </nav>
         </div>
     </div>
@@ -735,6 +749,143 @@ We vergelijken 3 types: Micro-fiber PTFE, FR4, en Ceramisch-gevulde PTFE voor ee
 </div>
 </section>
 </section>
+<section class="tex2jax_ignore mathjax_ignore" id="andere-transmissie-lijnconfiguraties">
+<h1>Andere transmissie lijnconfiguraties<a class="headerlink" href="#andere-transmissie-lijnconfiguraties" title="Link to this heading">#</a></h1>
+<div class="cell docutils container">
+<div class="cell_output docutils container">
+<img alt="_images/dcc3bcf6fe1bfe43f353258bc4eb12c0fef46ea542b2f1ab9b495197d6d7b424.gif" src="_images/dcc3bcf6fe1bfe43f353258bc4eb12c0fef46ea542b2f1ab9b495197d6d7b424.gif" />
+</div>
+</div>
+<section id="twee-geleiders-in-een-onbeperkt-medium">
+<h2>Twee geleiders in een onbeperkt medium<a class="headerlink" href="#twee-geleiders-in-een-onbeperkt-medium" title="Link to this heading">#</a></h2>
+<p><a class="reference internal" href="#air"><span class="std std-numref">Fig. 131</span></a> toont de doorsnede van 2 gelijke geleiders met diameter <span class="math notranslate nohighlight">\(d\)</span> op een afstand <span class="math notranslate nohighlight">\(D\)</span> van elkaar verwijderd. De karakteristieke impedantie <span class="math notranslate nohighlight">\(Z_0\)</span> van deze topologie is:</p>
+<div class="math notranslate nohighlight">
+\[Z_0= \frac{1}{\pi}\sqrt{\frac{\mu}{\epsilon}}\cosh^{-1}\left(\frac{D}{d}\right) 
+\approx \frac{119.92}{\sqrt{\epsilon}} \ln\left(\frac{2D}{d}\right)
+\approx \frac{276}{\sqrt{\epsilon}} \log_{10}\left(\frac{2D}{d}\right)\]</div>
+<p>Voor de geldigheid van deze formule is het essentieel dat beide geleiders een gelijke en tegengestelde stroom geleiden.</p>
+<div class="cell docutils container">
+<div class="cell_output docutils container">
+<figure class="align-default" id="air">
+<img alt="_images/de6efe102cacb69907b70dca706fc483110917499e9565c83a210e9a075b7c0b.gif" src="_images/de6efe102cacb69907b70dca706fc483110917499e9565c83a210e9a075b7c0b.gif" />
+<figcaption>
+<p><span class="caption-number">Fig. 131 </span><span class="caption-text">Twee geleiders in een onbeperkt medium</span><a class="headerlink" href="#air" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
+</div>
+<p>Het is ook mogelijk dat beide geleiders niet dezelfde diameter hebben. In <a class="reference internal" href="#z-ongelijk"><span class="std std-numref">Fig. 132</span></a> wordt de doorsnede geschetst voor de diameters <span class="math notranslate nohighlight">\(d_1\)</span> en <span class="math notranslate nohighlight">\(d_2\)</span>.</p>
+<p>De karakteristieke impedantie <span class="math notranslate nohighlight">\(Z_0\)</span> van deze topologie is:</p>
+<div class="math notranslate nohighlight">
+\[Z_0= \frac{1}{2\pi}\sqrt{\frac{\mu}{\epsilon}}\cosh^{-1}\left(\frac{1}{2}\left(\frac{4 D^2}{d_1 d_2} -\frac{d_1}{d_2}-\frac{d_2}{d_1}\right)\right) \]</div>
+<div class="cell docutils container">
+<div class="cell_output docutils container">
+<figure class="align-default" id="z-ongelijk">
+<img alt="_images/af0dd10cbace76744b756e1000a8835bcb61d451491364e1b596551fd3be2223.gif" src="_images/af0dd10cbace76744b756e1000a8835bcb61d451491364e1b596551fd3be2223.gif" />
+<figcaption>
+<p><span class="caption-number">Fig. 132 </span><span class="caption-text">Doorsnede van een transmissielijn met 2 geleiders van ongelijke diameters.</span><a class="headerlink" href="#z-ongelijk" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_output docutils container">
+<img alt="_images/e553548ed6f045a5dcd3803359305c442db4400cffe96d3ad3c90a7f943eb100.gif" src="_images/e553548ed6f045a5dcd3803359305c442db4400cffe96d3ad3c90a7f943eb100.gif" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_output docutils container">
+<img alt="_images/3583a2c005c569176a493941092130e25116f0a600798dcc33a49e820bada576.gif" src="_images/3583a2c005c569176a493941092130e25116f0a600798dcc33a49e820bada576.gif" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_output docutils container">
+<img alt="_images/a06f104f6c4f70bdd5df61a32a96a6aeffea23c1782290a93483894daef8c22e.gif" src="_images/a06f104f6c4f70bdd5df61a32a96a6aeffea23c1782290a93483894daef8c22e.gif" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_output docutils container">
+<img alt="_images/b92462d68ea88295b12d5e6713359f1912ff517370cf645876c45eb2e99607a4.gif" src="_images/b92462d68ea88295b12d5e6713359f1912ff517370cf645876c45eb2e99607a4.gif" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_output docutils container">
+<img alt="_images/4bfe5a7a8604739e5550102e1a048dfeee1078c2c36f6c7369970cbb3b19449d.gif" src="_images/4bfe5a7a8604739e5550102e1a048dfeee1078c2c36f6c7369970cbb3b19449d.gif" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_output docutils container">
+<img alt="_images/d13103c7a258e8d97b05eed64043174d55ee0e8194c5b4e77feab16737063939.gif" src="_images/d13103c7a258e8d97b05eed64043174d55ee0e8194c5b4e77feab16737063939.gif" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_output docutils container">
+<img alt="_images/a757a3313c2db512701b86c5d79b262b8695b5e57dee5df7616ed4c5998d6c12.gif" src="_images/a757a3313c2db512701b86c5d79b262b8695b5e57dee5df7616ed4c5998d6c12.gif" />
+</div>
+</div>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="een-geleider-boven-een-grondvlak">
+<h1>Een geleider boven een grondvlak<a class="headerlink" href="#een-geleider-boven-een-grondvlak" title="Link to this heading">#</a></h1>
+<p><a class="reference internal" href="#gel"><span class="std std-numref">Fig. 133</span></a> toont de configuratie van een geleider boven een grondvlak. Hierbij is het vanzelfspreekend dat de terugstroom door het grondvlak loopt. Daarom wordt de waarde van de karakteristieke impedantie <span class="math notranslate nohighlight">\(Z_0\)</span> bekomen tussen deze geleider en het grondvlak.</p>
+<div class="math notranslate nohighlight">
+\[Z_0= \frac{138}{\sqrt{ε}} \log_{10}\left(\frac{4h}{d}\right) \]</div>
+<div class="cell docutils container">
+<div class="cell_output docutils container">
+<figure class="align-default" id="gel">
+<img alt="_images/f8b61a733097d05550e85ba92f1db37df66c1d135f722b0ca78344ec975e4440.gif" src="_images/f8b61a733097d05550e85ba92f1db37df66c1d135f722b0ca78344ec975e4440.gif" />
+<figcaption>
+<p><span class="caption-number">Fig. 133 </span><span class="caption-text">configuratie van een geleider boven een grondvlak</span><a class="headerlink" href="#gel" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
+</div>
+<section id="twee-geleiders-boven-een-grondvlak">
+<h2>Twee geleiders boven een grondvlak<a class="headerlink" href="#twee-geleiders-boven-een-grondvlak" title="Link to this heading">#</a></h2>
+<p>Hierbij is het belangrijk dat we het verschil beschouwen tussen de differentiele karakteristieke impedantie (zie <a class="reference internal" href="#dif2gnd"><span class="std std-numref">Fig. 134</span></a>) en de common mode karakteristieke impedantie (zie <a class="reference internal" href="#com2gnd"><span class="std std-numref">Fig. 135</span></a>).</p>
+<p>Wanneer d &lt;&lt; D en d &lt;&lt; h worden de vergelijkingen:</p>
+<div class="math notranslate nohighlight">
+\[Z_{0_{diff}}= \frac{276}{\sqrt{ε}}  \log_{10}\left(\frac{2D}{d}\frac{1}{\sqrt{1+\left(\frac{D}{2h}\right)^2}}\right) \]</div>
+<div class="math notranslate nohighlight">
+\[Z_{0_{common}}= \frac{69}{\sqrt{ε}} \log_{10}\left(\frac{4h}{d}\frac{1}{\sqrt{1+\left(\frac{2h}{D}\right)^2}}\right) \]</div>
+<p>We zien ook dat als <span class="math notranslate nohighlight">\(D\)</span> zeer groot wordt, de waarde van <span class="math notranslate nohighlight">\(Z_{0_{common}}\)</span> de helft wordt van de waarde van een enkelvoudige geleider boven een grondvlak, met andere woorden: voor grote D kunnen we beide geleiders in parallel beschouwen.</p>
+<div class="cell docutils container">
+<div class="cell_output docutils container">
+<figure class="align-default" id="dif2gnd">
+<img alt="_images/728b3a664531b5b4dbe7dbf565bcecce3cd40984579302332883fbd1965db42b.gif" src="_images/728b3a664531b5b4dbe7dbf565bcecce3cd40984579302332883fbd1965db42b.gif" />
+<figcaption>
+<p><span class="caption-number">Fig. 134 </span><span class="caption-text">differentiele karakteristieke impedantie boven een grondvlak</span><a class="headerlink" href="#dif2gnd" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_output docutils container">
+<figure class="align-default" id="com2gnd">
+<img alt="_images/c4e0e98f9702e9b9164e2b9fc1b9c893e869e7a587e2cae55c30ea60a5872de5.gif" src="_images/c4e0e98f9702e9b9164e2b9fc1b9c893e869e7a587e2cae55c30ea60a5872de5.gif" />
+<figcaption>
+<p><span class="caption-number">Fig. 135 </span><span class="caption-text">common mode karakteristieke impedantie boven een grondvlak</span><a class="headerlink" href="#com2gnd" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_output docutils container">
+<img alt="_images/e6b046c441918c5c493542539994c98f9ae7c3014dd102053e5fffa9fec12a71.gif" src="_images/e6b046c441918c5c493542539994c98f9ae7c3014dd102053e5fffa9fec12a71.gif" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_output docutils container">
+<img alt="_images/480d77f70eaa936daf9d8c58b7a94ed997e0bbca018ca00da07ec0cea5c50ec1.gif" src="_images/480d77f70eaa936daf9d8c58b7a94ed997e0bbca018ca00da07ec0cea5c50ec1.gif" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_output docutils container">
+<img alt="_images/fc1d307c0d964e043d82a9c70190f10560be3d3c3ec5c40181350bd8ba630485.gif" src="_images/fc1d307c0d964e043d82a9c70190f10560be3d3c3ec5c40181350bd8ba630485.gif" />
+</div>
+</div>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -800,6 +951,7 @@ We vergelijken 3 types: Micro-fiber PTFE, FR4, en Ceramisch-gevulde PTFE voor ee
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Transmissie lijnen</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#transmissie-lijn-model">Transmissie lijn model</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#coax-kabel">Coax kabel</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#twisted-pair-kabel">Twisted pair kabel</a></li>
@@ -808,6 +960,17 @@ We vergelijken 3 types: Micro-fiber PTFE, FR4, en Ceramisch-gevulde PTFE voor ee
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#microstrip-analyse-plots">Microstrip Analyse Plots</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#microstrip-design-plots">Microstrip Design Plots</a></li>
 </ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#andere-transmissie-lijnconfiguraties">Andere transmissie lijnconfiguraties</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#twee-geleiders-in-een-onbeperkt-medium">Twee geleiders in een onbeperkt medium</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#een-geleider-boven-een-grondvlak">Een geleider boven een grondvlak</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#twee-geleiders-boven-een-grondvlak">Twee geleiders boven een grondvlak</a></li>
+</ul>
+</li>
+</ul>
+
   </nav></div>
 
 </div></div>
