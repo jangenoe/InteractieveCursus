@@ -26,7 +26,7 @@ KUL_layout_subtitle=1
 KUL_layout_outline=9
 KUL_layout_fig=4
 KUL_layout_code=2
-KUL_layout_text=6
+KUL_layout_text=5
 KUL_layout_statement=11
 KUL_layout_end=10
 
@@ -57,7 +57,17 @@ def maketitle(cell,slide):
             st = cell.metadata.KULeuvenSlides["slide_title"]
             slide.shapes.title.text=st.replace("<BR>","\n")
             slide.shapes.title.text_frame.fit_text(font_family="Arial",max_size=32,bold=True, font_file=r".github/common/fonts/arialbd.ttf")         
-    
+
+def parse_markdown_bullets(md_text):
+    lines = md_text.strip().split('\n')
+    bullets = []
+    for line in lines:
+        stripped = line.lstrip()
+        if stripped.startswith(('-', '*', '+')):
+            level = (len(line) - len(stripped)) // 2  # 2 spaces per indent
+            bullets.append((level, stripped[1:].strip()))
+    return bullets
+
 for ipath in notebooks:
     print("file om te zetten: ",ipath)
     ntbk = nbf.read(ipath, nbf.NO_CONVERT)
@@ -150,6 +160,8 @@ for ipath in notebooks:
                                 
         if "markdown" in cell.get('cell_type', {}) and not("remove_cell4pptx" in cell.metadata.get('tags', {})):
             if "slide_type" in cell.metadata.get('slideshow', {}):
+                md_text="".join(cell.get('source', {}))
+                bullets = parse_markdown_bullets(md_text)
                 if  cell.metadata.slideshow.get("slide_type", ())=="slide":
                     slide = prs.slides.add_slide(prs.slide_layouts[KUL_layout_text])
                     maketitle(cell,slide)
@@ -158,8 +170,8 @@ for ipath in notebooks:
                          if "eq_vertical" in cell.metadata.get('KULeuvenSlides', {}):
                             running_height+=Inches(cell.metadata.KULeuvenSlides["eq_vertical"])
                 if  cell.metadata.slideshow.get("slide_type", ())=="slide" or cell.metadata.slideshow.get("slide_type", ())=="fragment": 
-                    latexpng=find_between( "".join(cell.get('source', {})) , "$$", "$$" )
-                    latexpng2=find_between( "".join(cell.get('source', {})) , "\begin{equation}", "\end{equation}" )
+                    latexpng=find_between(md_text  , "$$", "$$" )
+                    latexpng2=find_between( md_text , "\begin{equation}", "\end{equation}" )
                     if len(latexpng2)>0:
                         latexpng=latexpng2
                     if len(latexpng)>0:
@@ -173,9 +185,17 @@ for ipath in notebooks:
                         else:
                             pictp.left=(prs.slide_width-pictp.width)//2
                         running_height+=pictp.height+Inches(0.3)
+                    elif len(bullets)>0:
+                        body_shape = slide.shapes.placeholders[1]
+                            tf = body_shape.text_frame
+                            tf.clear()  # Remove any existing paragraphs
+                            for level, text in bullets:
+                                p = tf.add_paragraph()
+                                p.text = text
+                                p.level = level
                     else:
                         box= slide.shapes.add_textbox(Inches(1),running_height, Inches(10),Inches(2.0))
-                        box.text="".join(cell.get('source', {}))
+                        box.text=md_text
                         #for par in box.text_frame.paragraphs:
                             #par.font.color.rgb = RGBColor(0, 0, 0)
                         if len(box.text)>0:
@@ -187,7 +207,7 @@ for ipath in notebooks:
                         running_height+=box.height+Inches(0.3)
                 elif  cell.metadata.slideshow.get("slide_type", ())=="notes":
                     notes_slide = slide.notes_slide  # Notes are always added to the former slide. Slide must already exist.
-                    notes_slide.notes_text_frame.text = "".join(cell.get('source', {}))
+                    notes_slide.notes_text_frame.text = md_text
                     
 
     slide = prs.slides.add_slide(prs.slide_layouts[KUL_layout_statement])
