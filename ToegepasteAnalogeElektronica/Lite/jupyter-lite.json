@@ -2,7 +2,7 @@
   "jupyter-config-data": {
     "appName": "KULeuven Cursus",
     "appUrl": "./lab",
-    "appVersion": "0.5.1",
+    "appVersion": "0.6.4",
     "baseUrl": "./",
     "defaultKernelName": "python",
     "disabledExtensions": [],
@@ -10,62 +10,52 @@
     "federated_extensions": [
       {
         "extension": "./extension",
-        "liteExtension": false,
         "load": "static/remoteEntry.009d8686d52fe5d2e0a6.js",
         "name": "@deathbeds/jupyterlab-deck"
       },
       {
         "extension": "./extension",
-        "liteExtension": false,
         "load": "static/remoteEntry.84fb12a2d77d4fba138f.js",
         "name": "@deathbeds/jupyterlab-font-anonymous-pro"
       },
       {
         "extension": "./extension",
-        "liteExtension": false,
         "load": "static/remoteEntry.9d0e0e02cf346a361924.js",
         "name": "@deathbeds/jupyterlab-font-atkinson-hyperlegible"
       },
       {
         "extension": "./extension",
-        "liteExtension": false,
         "load": "static/remoteEntry.fc308494b30447aef557.js",
         "name": "@deathbeds/jupyterlab-font-dejavu-sans-mono"
       },
       {
         "extension": "./extension",
-        "liteExtension": false,
         "load": "static/remoteEntry.6fc3ad6366d192f9df4d.js",
         "name": "@deathbeds/jupyterlab-font-fira-code"
       },
       {
         "extension": "./extension",
-        "liteExtension": false,
         "load": "static/remoteEntry.90fd4745446ff9dd5871.js",
         "name": "@deathbeds/jupyterlab-fonts"
       },
       {
         "extension": "./extension",
-        "liteExtension": false,
-        "load": "static/remoteEntry.e4ff09401a2f575928c0.js",
+        "load": "static/remoteEntry.35b6c65bd99dab37b910.js",
         "name": "@jupyter-widgets/jupyterlab-manager"
       },
       {
         "extension": "./extension",
-        "liteExtension": false,
         "load": "static/remoteEntry.1cd74fa323152bfea195.js",
         "name": "jupyter-matplotlib"
       },
       {
         "extension": "./extension",
-        "liteExtension": false,
         "load": "static/remoteEntry.37de765466b6d480035c.js",
         "name": "jupyterlab-myst",
         "style": "./style"
       },
       {
         "extension": "./extension",
-        "liteExtension": false,
         "load": "static/remoteEntry.5cbb9d2323598fbda535.js",
         "name": "jupyterlab_pygments",
         "style": "./style"
