@@ -88,17 +88,18 @@ def add_parsed_bullet(paragraph, text):
         # Add text before the tag (if any)
         if start > last_end:
             run.text = text[last_end:start]
+            run = paragraph.add_run()
         # Determine which pattern matched
         if match.group("sub"):
             run.text = match.group(2)
-            #run.font.size = Pt(18)
-            run.font.subscript = True
-            #run.font._element.set('baseline', '-25000')
+            run.font.size = Pt(18)
+            #run.font.subscript = True
+            run.font._element.set('baseline', '-25000')
         elif match.group("sup"):
             run.text =  match.group(4)
-            #run.font.size = Pt(18)
-            run.font.superscript = True
-            #run.font._element.set('baseline', '35000')
+            run.font.size = Pt(18)
+            #run.font.superscript = True
+            run.font._element.set('baseline', '35000')
         elif match.group("dollar"):
             run.text =  match.group(6)
         last_end = end
@@ -106,7 +107,7 @@ def add_parsed_bullet(paragraph, text):
     # Add any remaining text after the last tag
     if last_end < len(text):
         run = paragraph.add_run()
-        run.text =   text[last_end:]
+        run.text = text[last_end:]
 
 for ipath in notebooks:
     print("file om te zetten: ",ipath)
@@ -154,7 +155,7 @@ for ipath in notebooks:
                             maketitle(cell,slide)  
                             image_stream = io.BytesIO(base64.b64decode(output.data["image/png"]))
                             try:                            
-                                pictp=slide.shapes.add_picture(image_stream, Inches(1), Inches(1.29), height=Inches(5.5)) 
+                                pictp=slide.shapes.add_picture(image_stream, Inches(1), Inches(0.62), height=Inches(6.1)) 
                                 if pictp.width>prs.slide_width:
                                     pictp.width=prs.slide_width
                                     pictp.left=Inches(0)
@@ -167,7 +168,7 @@ for ipath in notebooks:
                             maketitle(cell,slide)  
                             image_stream = io.BytesIO(base64.b64decode(output.data["image/jpeg"]))
                             try:                            
-                                pictp=slide.shapes.add_picture(image_stream, Inches(1), Inches(1.29), height=Inches(5.5)) 
+                                pictp=slide.shapes.add_picture(image_stream, Inches(1), Inches(0.62), height=Inches(6.1)) 
                                 if pictp.width>prs.slide_width:
                                     pictp.width=prs.slide_width
                                     pictp.left=Inches(0)
