@@ -205,12 +205,12 @@ for ipath in notebooks:
                 if  cell.metadata.slideshow.get("slide_type", ())=="slide":
                     slide = prs.slides.add_slide(prs.slide_layouts[KUL_layout_mdtext])
                     maketitle(cell,slide)
-                    body_shape = slide.shapes.placeholders[0]
+                    body_shape = slide.shapes[0]
                     running_height=body_shape.top
                 if  cell.metadata.slideshow.get("slide_type", ())=="fragment":
                     body_shape = slide.shapes.add_textbox(body_shape.left, running_height, body_shape.width, body_shape.height)
-                    body_shape.text = slide.shapes.placeholders[0].text
-                    for p_old, p_new in zip(slide.shapes.placeholders[0].text_frame.paragraphs, body_shape.text_frame.paragraphs):
+                    body_shape.text = slide.shapes[0].text
+                    for p_old, p_new in zip(slide.shapes[0].text_frame.paragraphs, body_shape.text_frame.paragraphs):
                         for r_old, r_new in zip(p_old.runs, p_new.runs):
                             r_new.font.bold = r_old.font.bold
                             r_new.font.italic = r_old.font.italic
