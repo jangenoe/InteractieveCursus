@@ -93,10 +93,12 @@ def add_parsed_bullet(paragraph, text):
             run.text = match.group(2)
             #run.font.size = Pt(18)
             run.font.subscript = True
+            #run.font._element.set('baseline', '-25000')
         elif match.group("sup"):
             run.text =  match.group(4)
             #run.font.size = Pt(18)
             run.font.superscript = True
+            #run.font._element.set('baseline', '35000')
         elif match.group("dollar"):
             run.text =  match.group(6)
         last_end = end
