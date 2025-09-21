@@ -27,10 +27,11 @@ KUL_layout_outline=9
 KUL_layout_fig=4
 KUL_layout_code=3
 KUL_layout_text=6
+KUL_layout_mdtext=6
 KUL_layout_statement=11
 KUL_layout_end=10
 
-lines_per_chunk=15
+lines_per_chunk=11
 
 report_all_shapes_in_template=True
 if report_all_shapes_in_template:
@@ -65,8 +66,45 @@ def parse_markdown_bullets(md_text):
         stripped = line.lstrip()
         if stripped.startswith(('-', '*', '+')):
             level = (len(line) - len(stripped)) // 2  # 2 spaces per indent
-            bullets.append((level, stripped[1:].strip()))
+            bullets.append((level+1, stripped[1:].strip()))
+        else:
+            bullets.append((0, line))
     return bullets
+
+def add_parsed_bullet(paragraph, text):
+    import re
+    
+    # Combine all patterns into one regex with named groups
+    combined_pattern = (
+        r"(?P<sub><sub>(.*?)</sub>)|"
+        r"(?P<sup><sup>(.*?)</sup>)|"
+        r"(?P<dollar>\$(.*?)\$)"
+    )
+    last_end = 0
+    
+    for match in re.finditer(combined_pattern, text):
+        run = paragraph.add_run()
+        start, end = match.span()
+        # Add text before the tag (if any)
+        if start > last_end:
+            run.text = text[last_end:start]
+        # Determine which pattern matched
+        if match.group("sub"):
+            run.text = match.group(2)
+            #run.font.size = Pt(18)
+            run.font.subscript = True
+        elif match.group("sup"):
+            run.text =  match.group(4)
+            #run.font.size = Pt(18)
+            run.font.superscript = True
+        elif match.group("dollar"):
+            run.text =  match.group(6)
+        last_end = end
+
+    # Add any remaining text after the last tag
+    if last_end < len(text):
+        run = paragraph.add_run()
+        run.text =   text[last_end:]
 
 for ipath in notebooks:
     print("file om te zetten: ",ipath)
@@ -163,13 +201,24 @@ for ipath in notebooks:
                 md_text="".join(cell.get('source', {}))
                 bullets = parse_markdown_bullets(md_text)
                 if  cell.metadata.slideshow.get("slide_type", ())=="slide":
-                    slide = prs.slides.add_slide(prs.slide_layouts[KUL_layout_text])
+                    slide = prs.slides.add_slide(prs.slide_layouts[KUL_layout_mdtext])
                     maketitle(cell,slide)
-                    running_height=Inches(2.28)
+                    body_shape = slide.shapes.placeholders[1]
+                    running_height=body_shape.top
+                if  cell.metadata.slideshow.get("slide_type", ())=="fragment":
+                    body_shape = slide.shapes.add_textbox(body_shape.left, running_height, body_shape.width, body_shape.height)
+                    body_shape.text = slide.shapes.placeholders[1].text
+                    for p_old, p_new in zip(slide.shapes.placeholders[1].text_frame.paragraphs, body_shape.text_frame.paragraphs):
+                        for r_old, r_new in zip(p_old.runs, p_new.runs):
+                            r_new.font.bold = r_old.font.bold
+                            r_new.font.italic = r_old.font.italic
+                            r_new.font.size = r_old.font.size
+                            r_new.font.color.rgb = r_old.font.color.rgb
+                if  cell.metadata.slideshow.get("slide_type", ())=="slide" or cell.metadata.slideshow.get("slide_type", ())=="fragment": 
                     if "KULeuvenSlides" in cell.get('metadata', {}):
                          if "eq_vertical" in cell.metadata.get('KULeuvenSlides', {}):
                             running_height+=Inches(cell.metadata.KULeuvenSlides["eq_vertical"])
-                if  cell.metadata.slideshow.get("slide_type", ())=="slide" or cell.metadata.slideshow.get("slide_type", ())=="fragment": 
+                            body_shape.top=running_height
                     latexpng=find_between(md_text  , "$$", "$$" )
                     latexpng2=find_between( md_text , "\begin{equation}", "\end{equation}" )
                     if len(latexpng2)>0:
@@ -185,26 +234,26 @@ for ipath in notebooks:
                         else:
                             pictp.left=(prs.slide_width-pictp.width)//2
                         running_height+=pictp.height+Inches(0.3)
-                    elif len(bullets)>0:
-                        body_shape = slide.shapes.placeholders[1]
+                    else:      
                         tf = body_shape.text_frame
                         tf.clear()  # Remove any existing paragraphs
                         for level, text in bullets:
                             p = tf.add_paragraph()
-                            p.text = text
                             p.level = level
-                    else:
-                        box= slide.shapes.add_textbox(Inches(1),running_height, Inches(10),Inches(2.0))
-                        box.text=md_text
+                            add_parsed_bullet(p, text)
+
+                        running_height+=body_shape.height+Inches(0.3)
+                    # else:
+                        # box= slide.shapes.add_textbox(Inches(1),running_height, Inches(10),Inches(2.0))
+                        # box.text=md_text
                         #for par in box.text_frame.paragraphs:
                             #par.font.color.rgb = RGBColor(0, 0, 0)
-                        if len(box.text)>0:
-                            try:
-                                box.text_frame.fit_text(font_family="Calibri",max_size=30, font_file=r".github/common/fonts/calibri.ttf")
-                            except:
-                                print("   text_fit error for cell number "+str(index))
-
-                        running_height+=box.height+Inches(0.3)
+                        # if len(box.text)>0:
+                            # try:
+                                # box.text_frame.fit_text(font_family="Calibri",max_size=30, font_file=r".github/common/fonts/calibri.ttf")
+                            # except:
+                                # print("   text_fit error for cell number "+str(index))
+                        
                 elif  cell.metadata.slideshow.get("slide_type", ())=="notes":
                     notes_slide = slide.notes_slide  # Notes are always added to the former slide. Slide must already exist.
                     notes_slide.notes_text_frame.text = md_text
