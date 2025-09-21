@@ -552,6 +552,69 @@ document.write(`
 </pre></div>
 </div>
 <p>Vervolgens kan je aan de hand van het commando <code class="docutils literal notranslate"><span class="pre">jupyter</span> <span class="pre">lab</span></code> de verschillende notebooks openen, aanpassen en simuleren.</p>
+<p>Onafhankelijk van wat de eigenlijke user interface is van de spice implementatie die je gekozen hebt, zal de user-interface normaal het ingebrachte circuit vertalen naar een of meerdere spice text files. Deze files kunnen zowel circuit componenten als spice directives bevatten. Om fouten in een circuit terug te vinden is het meestal handig deze files te analyseren en de verschillende knopen te vergelijken met de knopen op je schema.</p>
+<p>Voor wat betreft de circuit componenten is het zo dat de eerste letter van de naam van de component zijn type aangeeft.
+Hieronder vind je een lijstje van de passieve componenten met telkens de eerste letter die gebruikt wordt om het type aan te geven.</p>
+<ul class="simple">
+<li><p>Weerstand (R)</p></li>
+<li><p>Capaciteit (C)</p></li>
+<li><p>Spoel (L)</p></li>
+<li><p>Gekoppelde spoelen (K)</p></li>
+<li><p>Transmissie lijn</p>
+<ul>
+<li><p>zonder verliezen(T)</p></li>
+<li><p>met verliezen (O,Y,P)</p></li>
+<li><p>RC lijnen (U)</p></li>
+</ul>
+</li>
+<li><p>Schakelaars</p>
+<ul>
+<li><p>gecontrolleerd door spanning (S)</p></li>
+<li><p>gecontrolleerd door stroom (W)</p></li>
+</ul>
+</li>
+</ul>
+<ul class="simple">
+<li><p>Diodes (D)</p></li>
+<li><p>Bipolaire transistors (Q)</p></li>
+<li><p>MOS transistors (M)</p></li>
+<li><p>JFET (J)</p></li>
+<li><p>MESFET (Z)</p></li>
+<li><p>code models (A)</p></li>
+<li><p>subcircuits (X)</p></li>
+</ul>
+<ul class="simple">
+<li><p>Onafhankelijke spanningsbron (V)</p></li>
+<li><p>Onafhankelijke stroombron (I)</p></li>
+<li><p>Spanningsgecontrolleerde spanningsbron (E)</p></li>
+<li><p>Spanningsgecontrolleerde stroombron (G)</p></li>
+<li><p>Stroomgecontrolleerde spanningsbron (H)</p></li>
+<li><p>Stroomgecontrolleerde stroombron (F)</p></li>
+</ul>
+<p>Voor elk van deze bovenstaande passieve en actieve elementen kan er een modelkaart (.model) opgemaakt worden waarin alle parameter variaties uitgewerkt worden. Een modelkaart behoort to de directives en begint daarom met een <code class="docutils literal notranslate"><span class="pre">.</span></code>. Ook voor elk van de verschillende analyses is er een kaart ter beschikking. Hieronder een overzichtje van de verschillende analyses.</p>
+<ul class="simple">
+<li><p>operating point analyse (.op)</p></li>
+<li><p>Niet-lineare DC analyse  (.dc)</p></li>
+<li><p>Niet-lineare transient analyse (.tran)</p></li>
+<li><p>Lineare klein signaal AC Analyse (.ac)</p></li>
+<li><p>pool en zero analyse (.pz)</p></li>
+<li><p>Noise analyse (.noise)</p></li>
+<li><p>Sensitiviteit analyse (.sens)</p></li>
+<li><p>Klein signaal distortie analysis (.disto)</p></li>
+<li><p>Monte-Carlo analyse</p></li>
+</ul>
+<p>De eenheden die in spice gebruikt worden komen overeen met de standaard eenheden en er worden ook de standard prefactors gebruikt zodat er geen nood is aan de wetenschappelijke notatie. Spice maakt wel geen onderscheid tussen hoofd en kleine letters, wat een probleem kan geven om het verschil aan te geven tussen milli en mega. Daarom is er gekozen voor de <code class="docutils literal notranslate"><span class="pre">x</span></code> of de <code class="docutils literal notranslate"><span class="pre">meg</span></code>.</p>
+<ul class="simple">
+<li><p>atto (a)  10<sup>-18</sup></p></li>
+<li><p>femto (f)  10<sup>-15</sup></p></li>
+<li><p>pico (p)  10<sup>-12</sup></p></li>
+<li><p>nano (n)  10<sup>-9</sup></p></li>
+<li><p>micro (u)  10<sup>-6</sup></p></li>
+<li><p>milli (m)  10<sup>-3</sup></p></li>
+<li><p>kilo (k)  10<sup>3</sup></p></li>
+<li><p>mega (x) of (meg)  10<sup>6</sup></p></li>
+<li><p>giga (g)  10<sup>9</sup></p></li>
+</ul>
 <p>Om aan te geven hoe we gebruik maken van spice voor de circuit simulatie, kijken we naar een voorbeeld van een verschilversterker op IC. Het basisschema van deze versterker is aangegeven in <a class="reference internal" href="#spicefig1"><span class="std std-numref">Fig. 1</span></a>. Het eerste wat we moeten doen in dit circuit is de verschillende knopen een nummer (of een naam) te geven. Het resultaat waarbij elke knoop een naam gekregen heeft zien we in <a class="reference internal" href="#spicefig1b"><span class="std std-numref">Fig. 2</span></a>.</p>
 <div class="cell docutils container">
 <div class="cell_output docutils container">
