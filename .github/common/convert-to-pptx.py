@@ -215,9 +215,7 @@ for ipath in notebooks:
                             r_new.font.bold = r_old.font.bold
                             r_new.font.italic = r_old.font.italic
                             r_new.font.size = r_old.font.size
-                            if "color" in r_old.get('font', {}):
-                                if "rgb" in r_old.font.get('color', {}):
-                                    r_new.font.color.rgb = r_old.font.color.rgb
+                            r_new.font.color.rgb = r_old.font.color.rgb
                 if  cell.metadata.slideshow.get("slide_type", ())=="slide" or cell.metadata.slideshow.get("slide_type", ())=="fragment": 
                     if "KULeuvenSlides" in cell.get('metadata', {}):
                          if "eq_vertical" in cell.metadata.get('KULeuvenSlides', {}):
