@@ -181,23 +181,24 @@ for ipath in notebooks:
                                 print("  image/jpeg  error for cell number "+str(index))
                         elif "text/html" in output.get("data", {}):
                             lines="".join(output.data["text/html"]).split('\n')
-                            for i in range(0,len(lines),lines_per_chunk):
+                            for isl in range(0,len(lines),lines_per_chunk):
                                 slide = prs.slides.add_slide(prs.slide_layouts[KUL_layout_code])
-                                maketitle(cell,slide) 
-                                soup = BeautifulSoup("\n".join(lines[i:i+lines_per_chunk]), "html.parser")
-                                p=slide.shapes[0].text_frame.paragraphs[0]
-                                for span in soup.find_all("span"):
-                                    style = span.get("style", "")
-                                    color_match = re.search(r"color:\s*(#[0-9a-fA-F]{6})", style)
-                                    color = RGBColor(0, 0, 0)  # default black
-                                    if color_match:
-                                        hex_color = color_match.group(1)
-                                        color = RGBColor(*(int(hex_color[i:i+2], 16) for i in (1, 3, 5)))
-                                    run = p.add_run()
-                                    run.text = span.text
-                                    run.font.color.rgb = color
-                                    run.font.name = 'Courier New'
-                                    run.font.size = Pt(14)
+                                maketitle(cell,slide)
+                                for isp in range(isl,min(isl+lines_per_chunk,len(lines))):
+                                    soup = BeautifulSoup(lines[isp]), "html.parser")
+                                    p=slide.shapes[0].text_frame.paragraphs[isp-isl] 
+                                    for span in soup.find_all("span"):
+                                        style = span.get("style", "")
+                                        color_match = re.search(r"color:\s*(#[0-9a-fA-F]{6})", style)
+                                        color = RGBColor(255, 255, 255)  # default white
+                                        if color_match:
+                                            hex_color = color_match.group(1)
+                                            color = RGBColor(*(int(hex_color[i:i+2], 16) for i in (1, 3, 5)))
+                                        run = p.add_run()
+                                        run.text = span.text
+                                        run.font.color.rgb = color
+                                        run.font.name = 'Courier New'   #?????????????????????????  moet uit font file
+                                        run.font.size = Pt(14)
                         elif "text/plain" in output.get("data", {}):
                             lines="".join(output.data["text/plain"]).split('\n')
                             for i in range(0,len(lines),lines_per_chunk):
