@@ -1,0 +1,8 @@
+{
+  "PipliteAddon": {
+    "piplite_urls": [
+      "https://www.wheelodex.org/projects/schemdraw/wheels/schemdraw-0.21-py3-none-any.whl/", 
+      "https://www.wheelodex.org/projects/pyspice/wheels/PySpice-1.5-py2.py3-none-any.whl/"
+    ]
+  }
+}

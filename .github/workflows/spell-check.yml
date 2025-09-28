@@ -1,0 +1,61 @@
+name: spelling-full-test
+
+# First we define the Action trigger
+on:
+  # In this case, we define a manual trigger (workflow_dispatch)
+  workflow_dispatch
+
+# Define one or more jobs to run via the action
+jobs:
+
+  # Set a job name
+  spelling-full-demo:
+
+    # Define the base os that will run the action
+    runs-on: ubuntu-latest
+
+    # The job will include one or more steps
+    steps:
+
+    # We need to get some files to work on...
+    # Start by checking out the master branch of the repository
+    - uses: actions/checkout@master
+
+    # The spelling checker requires some particular packages
+    - name: Install spelling packages
+    # Run a set of shell commands to install required packages
+      run: |
+        sudo apt-get update && sudo apt-get install -y aspell aspell-en
+
+        # The following fork of pyspelling supports notebook md and code cell filters
+        python3 -m pip install --upgrade https://github.com/ouseful-PR/pyspelling/archive/th-ipynb.zip
+
+    # Spell check the files
+    - name: spellcheck all files
+      # Note that we can force the use of a particular shell if required
+      run: |
+        touch typos.txt
+        touch .wordlist.txt
+        # The spellchecker typically displays to stdout
+        # which is visible in the action run history view
+        # The ipyspell.yml file defines the target file paths that the
+        # spellchecker is applied to
+        # We can also force spellchecker output into a file
+        pyspelling -c .ipyspell.yml | tee -a typos.txt || continue
+        # Display the file contents
+        cat typos.txt
+      shell: bash
+      # We could let the action fail on errors
+      # If we want that halting behaviour, comment out the following line
+      continue-on-error: true
+
+    # Saving the spellchecker output to a file then displaying it,
+    # rather than just displaying it,  may seem redundant
+    # But we can upload the generated file to the Action report page
+    # and make it available for download...
+    - name: Upload all typos
+      uses: actions/upload-artifact@v2
+      with:
+        name: typos
+        path: |
+         typos.txt

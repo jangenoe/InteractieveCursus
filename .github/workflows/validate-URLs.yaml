@@ -1,0 +1,50 @@
+name: Link Checker
+
+# First we define the Action trigger
+on:
+  # In this case, we define a manual trigger (workflow_dispatch)
+  workflow_dispatch
+  
+jobs:
+  link-check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Run Link Checker
+        uses: mr8lu/link-validator@v1.0.1
+        with:
+          PAT_TOKEN: ${{ secrets.PAT_TOKEN }}  # Optional
+          directory: '.'  # Adjust the directory as needed
+
+
+
+ # NOTE: this isn't a comprehensive spellcheck, just common typos
+    - name: Spellcheck
+      if: always()
+      uses: codespell-project/actions-codespell@master
+      with:
+        check_filenames: true
+        skip: '*.js,*.css,qaqc.yml,*.geojson,conda/*'
+        ignore_words_file: .codespellignore
+        only_warn: 1
+
+    # borrowed from https://github.com/ProjectPythia/pythia-foundations/blob/main/.github/workflows/link-checker.yaml
+    - name: Disable Notebook Execution Before Linkcheck
+      if: always()
+      shell: python
+      run: |
+        import yaml
+        with open('./book/_config.yml') as f:
+          data = yaml.safe_load(f)
+          data['execute']['execute_notebooks'] = 'off'
+        with open('./book/_config.yml', 'w') as f:
+          yaml.dump(data, f)
+
+    - name: Check External Links
+      continue-on-error: true
+      timeout-minutes: 5
+      if: always()
+      run: |
+        jb build book --builder linkcheck
