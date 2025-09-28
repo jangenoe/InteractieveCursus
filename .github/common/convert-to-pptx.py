@@ -228,7 +228,7 @@ for ipath in notebooks:
                 normal_slide= True
                 if "KULeuvenSlides" in cell.get('metadata', {}):
                     if "slide_code" in cell.metadata.get('KULeuvenSlides', {}):
-                        if cell.metadata.slide_code == "title":
+                        if cell.metadata.KULeuvenSlides.slide_code == "title":
                             slide = prs.slides.add_slide(prs.slide_layouts[KUL_layout_subtitle])
                             maketitle(cell,slide)
                             normal_slide= False

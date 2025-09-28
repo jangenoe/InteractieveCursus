@@ -54,7 +54,7 @@ jobs:
     # But we can upload the generated file to the Action report page
     # and make it available for download...
     - name: Upload all typos
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v4
       with:
         name: typos
         path: |
