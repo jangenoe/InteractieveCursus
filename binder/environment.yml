@@ -21,6 +21,8 @@ dependencies:
   - networkx
   - ipywidgets
   - adjusttext
+  - ngspice
+  - ngspice-lib
   - pip:
     - pyspice
     - jupyterlab-myst
