@@ -21,8 +21,9 @@ dependencies:
   - networkx
   - ipywidgets
   - adjusttext
+  - ngspice-lib
   - pip:
-    - pyspice
+    - git+https://github.com/infinitymdm/PySpice.git
     - jupyterlab-myst
     - schemdraw>=0.19
     - jupytercards>=3.0.0
