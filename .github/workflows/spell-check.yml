@@ -18,8 +18,14 @@ jobs:
     steps:
 
     # We need to get some files to work on...
-    # Start by checking out the master branch of the repository
-    - uses: actions/checkout@master
+    # Start by checking out the repository
+    - uses: actions/checkout@v4
+
+    # Set up Python environment
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.12'
 
     # The spelling checker requires some particular packages
     - name: Install Dutch spelling packages
@@ -27,15 +33,17 @@ jobs:
       run: |
         sudo apt-get update && sudo apt-get install -y aspell aspell-nl
 
-        # The following fork of pyspelling supports notebook md and code cell filters
-        python3 -m pip install --upgrade https://github.com/ouseful-PR/pyspelling/archive/th-ipynb.zip
+        # Install the latest official pyspelling version (avoids 'imp' module error)
+        python3 -m pip install --upgrade pip
+        python3 -m pip install pyspelling
 
     # Spell check the files in ToegepasteAnalogeElektronica directory
     - name: spellcheck Dutch files
       # Note that we can force the use of a particular shell if required
       run: |
+        # Create build directory for dictionaries
+        mkdir -p build/dictionary
         touch typos.txt
-        touch .github/wordlist.txt
         # The spellchecker typically displays to stdout
         # which is visible in the action run history view
         # The dutch-ipyspell.yml file defines the target file paths that the

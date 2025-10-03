@@ -32,14 +32,7 @@ matrix:
     - .github/wordlist.txt
     output: build/dictionary/dutch-jupyter.dic
   pipeline:
-  - pyspelling.filters.jupyter:
-      # Check Markdown cells
-      markdown: true
-      # Check code cells (set to false if you only want to check markdown)
-      code: false
-      # Check output cells
-      output: false
-  - pyspelling.filters.markdown:
+  - pyspelling.filters.text:
   - pyspelling.filters.html:
       comments: false
       attributes:
@@ -48,4 +41,6 @@ matrix:
       ignores:
       - code
       - pre
+      - script
+      - style
   - pyspelling.filters.url:
