@@ -55,10 +55,19 @@ def find_between( s, first, last ):
     except ValueError:
         return ""
 
+def process_latex_in_text(text):
+    """Process text and convert LaTeX symbols between $ $ to Unicode."""
+    
+    def replace_latex_match(match):
+        latex_content = match.group(1)
+        return latex_to_unicode(latex_content)
+    
+    return re.sub(r'\$(.*?)\$', replace_latex_match, text)
+
 def maketitle(cell,slide):
     if "KULeuvenSlides" in cell.get('metadata', {}):
         if "slide_title" in cell.metadata.get('KULeuvenSlides', {}):
-            st = cell.metadata.KULeuvenSlides["slide_title"]
+            st = process_latex_in_text(cell.metadata.KULeuvenSlides["slide_title"])
             slide.shapes.title.text=st.replace("<BR>","\n")
             slide.shapes.title.text_frame.fit_text(font_family="Arial",max_size=32,bold=True, font_file=r".github/common/fonts/arialbd.ttf")         
 
@@ -74,8 +83,114 @@ def parse_markdown_bullets(md_text):
             bullets.append((0, line))
     return bullets
 
+def latex_to_unicode(latex_text):
+    """Convert common LaTeX symbols to Unicode equivalents."""
+    # Dictionary mapping LaTeX commands to Unicode symbols
+    latex_unicode_map = {
+        # Greek letters (lowercase)
+        r'\alpha': 'α', r'\beta': 'β', r'\gamma': 'γ', r'\delta': 'δ',
+        r'\epsilon': 'ε', r'\varepsilon': 'ε', r'\zeta': 'ζ', r'\eta': 'η',
+        r'\theta': 'θ', r'\vartheta': 'ϑ', r'\iota': 'ι', r'\kappa': 'κ',
+        r'\lambda': 'λ', r'\mu': 'μ', r'\nu': 'ν', r'\xi': 'ξ',
+        r'\pi': 'π', r'\varpi': 'ϖ', r'\rho': 'ρ', r'\varrho': 'ϱ',
+        r'\sigma': 'σ', r'\varsigma': 'ς', r'\tau': 'τ', r'\upsilon': 'υ',
+        r'\phi': 'φ', r'\varphi': 'φ', r'\chi': 'χ', r'\psi': 'ψ', r'\omega': 'ω',
+        
+        # Greek letters (uppercase)
+        r'\Alpha': 'Α', r'\Beta': 'Β', r'\Gamma': 'Γ', r'\Delta': 'Δ',
+        r'\Epsilon': 'Ε', r'\Zeta': 'Ζ', r'\Eta': 'Η', r'\Theta': 'Θ',
+        r'\Iota': 'Ι', r'\Kappa': 'Κ', r'\Lambda': 'Λ', r'\Mu': 'Μ',
+        r'\Nu': 'Ν', r'\Xi': 'Ξ', r'\Pi': 'Π', r'\Rho': 'Ρ',
+        r'\Sigma': 'Σ', r'\Tau': 'Τ', r'\Upsilon': 'Υ', r'\Phi': 'Φ',
+        r'\Chi': 'Χ', r'\Psi': 'Ψ', r'\Omega': 'Ω',
+        
+        # Mathematical operators
+        r'\pm': '±', r'\mp': '∓', r'\times': '×', r'\div': '÷',
+        r'\cdot': '·', r'\bullet': '•', r'\circ': '∘', r'\ast': '∗',
+        r'\star': '⋆', r'\dagger': '†', r'\ddagger': '‡', r'\cap': '∩',
+        r'\cup': '∪', r'\uplus': '⊎', r'\sqcap': '⊓', r'\sqcup': '⊔',
+        r'\vee': '∨', r'\wedge': '∧', r'\oplus': '⊕', r'\ominus': '⊖',
+        r'\otimes': '⊗', r'\oslash': '⊘', r'\odot': '⊙', r'\bigcirc': '◯',
+        r'\diamond': '⋄', r'\bigtriangleup': '△', r'\bigtriangledown': '▽',
+        r'\triangleleft': '◁', r'\triangleright': '▷', r'\lhd': '⊲', r'\rhd': '⊳',
+        r'\unlhd': '⊴', r'\unrhd': '⊵', r'\amalg': '⨿',
+        
+        # Relations
+        r'\leq': '≤', r'\geq': '≥', r'\equiv': '≡', r'\models': '⊨',
+        r'\prec': '≺', r'\succ': '≻', r'\sim': '∼', r'\perp': '⊥',
+        r'\preceq': '⪯', r'\succeq': '⪰', r'\simeq': '≃', r'\mid': '∣',
+        r'\ll': '≪', r'\gg': '≫', r'\asymp': '≍', r'\parallel': '∥',
+        r'\subset': '⊂', r'\supset': '⊃', r'\approx': '≈', r'\bowtie': '⋈',
+        r'\subseteq': '⊆', r'\supseteq': '⊇', r'\cong': '≅', r'\sqsubset': '⊏',
+        r'\sqsupset': '⊐', r'\neq': '≠', r'\smile': '⌣', r'\sqsubseteq': '⊑',
+        r'\sqsupseteq': '⊒', r'\doteq': '≐', r'\frown': '⌢', r'\in': '∈',
+        r'\ni': '∋', r'\propto': '∝', r'\vdash': '⊢', r'\dashv': '⊣',
+        
+        # Arrows
+        r'\leftarrow': '←', r'\gets': '←', r'\rightarrow': '→', r'\to': '→',
+        r'\leftrightarrow': '↔', r'\uparrow': '↑', r'\downarrow': '↓',
+        r'\updownarrow': '↕', r'\Leftarrow': '⇐', r'\Rightarrow': '⇒',
+        r'\Leftrightarrow': '⇔', r'\Uparrow': '⇑', r'\Downarrow': '⇓',
+        r'\Updownarrow': '⇕', r'\mapsto': '↦', r'\longmapsto': '⟼',
+        r'\hookleftarrow': '↩', r'\hookrightarrow': '↪', r'\leftharpoonup': '↼',
+        r'\leftharpoondown': '↽', r'\rightharpoonup': '⇀', r'\rightharpoondown': '⇁',
+        r'\rightleftharpoons': '⇌', r'\leadsto': '⇝',
+        
+        # Miscellaneous symbols
+        r'\infty': '∞', r'\aleph': 'ℵ', r'\hbar': 'ℏ', r'\imath': 'ı',
+        r'\jmath': 'ȷ', r'\ell': 'ℓ', r'\wp': '℘', r'\Re': 'ℜ', r'\Im': 'ℑ',
+        r'\mho': '℧', r'\prime': '′', r'\emptyset': '∅', r'\nabla': '∇',
+        r'\surd': '√', r'\partial': '∂', r'\top': '⊤', r'\bot': '⊥',
+        r'\vdots': '⋮', r'\ddots': '⋱', r'\heartsuit': '♡', r'\diamondsuit': '♢',
+        r'\clubsuit': '♣', r'\spadesuit': '♠', r'\neg': '¬', r'\flat': '♭',
+        r'\natural': '♮', r'\sharp': '♯',
+        
+        # Mathematical functions
+        r'\sin': 'sin', r'\cos': 'cos', r'\tan': 'tan', r'\cot': 'cot',
+        r'\sec': 'sec', r'\csc': 'csc', r'\arcsin': 'arcsin', r'\arccos': 'arccos',
+        r'\arctan': 'arctan', r'\sinh': 'sinh', r'\cosh': 'cosh', r'\tanh': 'tanh',
+        r'\coth': 'coth', r'\exp': 'exp', r'\log': 'log', r'\ln': 'ln',
+        r'\det': 'det', r'\gcd': 'gcd', r'\lcm': 'lcm', r'\lim': 'lim',
+        r'\liminf': 'lim inf', r'\limsup': 'lim sup', r'\max': 'max', r'\min': 'min',
+        r'\sup': 'sup', r'\inf': 'inf', r'\arg': 'arg', r'\ker': 'ker',
+        r'\dim': 'dim', r'\hom': 'hom', r'\deg': 'deg',
+        
+        # Large operators
+        r'\sum': '∑', r'\prod': '∏', r'\coprod': '∐', r'\int': '∫',
+        r'\oint': '∮', r'\iint': '∬', r'\iiint': '∭', r'\iiiint': '⨌',
+        r'\idotsint': '∫⋯∫', r'\bigcup': '⋃', r'\bigcap': '⋂',
+        r'\biguplus': '⨄', r'\bigsqcup': '⨆', r'\bigvee': '⋁',
+        r'\bigwedge': '⋀', r'\bigodot': '⨀', r'\bigotimes': '⨂',
+        r'\bigoplus': '⨁', r'\bigcirc': '◯',
+        
+        # Delimiters
+        r'\langle': '⟨', r'\rangle': '⟩', r'\lceil': '⌈', r'\rceil': '⌉',
+        r'\lfloor': '⌊', r'\rfloor': '⌋', r'\{': '{', r'\}': '}',
+        
+        # Subscripts and superscripts (common ones)
+        r'_0': '₀', r'_1': '₁', r'_2': '₂', r'_3': '₃', r'_4': '₄',
+        r'_5': '₅', r'_6': '₆', r'_7': '₇', r'_8': '₈', r'_9': '₉',
+        r'^0': '⁰', r'^1': '¹', r'^2': '²', r'^3': '³', r'^4': '⁴',
+        r'^5': '⁵', r'^6': '⁶', r'^7': '⁷', r'^8': '⁸', r'^9': '⁹',
+        r'^+': '⁺', r'^-': '⁻', r'^=': '⁼', r'^(': '⁽', r'^)': '⁾',
+        
+        # Common fractions
+        r'\frac{1}{2}': '½', r'\frac{1}{3}': '⅓', r'\frac{2}{3}': '⅔',
+        r'\frac{1}{4}': '¼', r'\frac{3}{4}': '¾', r'\frac{1}{5}': '⅕',
+        r'\frac{2}{5}': '⅖', r'\frac{3}{5}': '⅗', r'\frac{4}{5}': '⅘',
+        r'\frac{1}{6}': '⅙', r'\frac{5}{6}': '⅚', r'\frac{1}{7}': '⅐',
+        r'\frac{1}{8}': '⅛', r'\frac{3}{8}': '⅜', r'\frac{5}{8}': '⅝',
+        r'\frac{7}{8}': '⅞', r'\frac{1}{9}': '⅑', r'\frac{1}{10}': '⅒',
+    }
+    
+    result = latex_text
+    # Sort by length (longest first) to avoid partial replacements
+    for latex_cmd in sorted(latex_unicode_map.keys(), key=len, reverse=True):
+        result = result.replace(latex_cmd, latex_unicode_map[latex_cmd])
+    
+    return result
+
 def add_parsed_bullet(paragraph, text):
-    import re
     
     # Combine all patterns into one regex with named groups
     combined_pattern = (
@@ -104,7 +219,7 @@ def add_parsed_bullet(paragraph, text):
             #run.font.superscript = True
             run.font._element.set('baseline', '45000')
         elif match.group("dollar"):
-            run.text =  match.group(6)
+            run.text =  latex_to_unicode(match.group(6))
         last_end = end
 
     # Add any remaining text after the last tag

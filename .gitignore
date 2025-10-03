@@ -10,11 +10,13 @@ desktop.ini
 __pycache__
 **/*Zone.Identifier
 *ipynb.pptx
+*.code-workspace
 later toe te voegen2/
 translate/
 ppt/
 common/fonts/
 Untitled.ipynb
+.vscode/settings.json
 
 AnalogeElektronica2/_static/custom.css
 AnalogeElektronica2/_templates
@@ -32,3 +34,4 @@ MicroEnNanoTechnologie/_static/videos/making_of_a_4-layer_pcb_old.mp4
 MicroEnNanoTechnologie/*.pptx
 
 AnalogDesignTechniques/*.pptx
+

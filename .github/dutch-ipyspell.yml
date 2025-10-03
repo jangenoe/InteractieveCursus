@@ -1,0 +1,51 @@
+matrix:
+- name: Dutch markdown
+  sources:
+  - 'ToegepasteAnalogeElektronica/**/*.md'
+  aspell:
+    lang: nl
+    d: nl
+  dictionary:
+    wordlists:
+    - .github/wordlist.txt
+    output: build/dictionary/dutch-markdown.dic
+  pipeline:
+  - pyspelling.filters.markdown:
+  - pyspelling.filters.html:
+      comments: false
+      attributes:
+      - title
+      - alt
+      ignores:
+      - code
+      - pre
+  - pyspelling.filters.url:
+
+- name: Dutch Jupyter notebooks  
+  sources:
+  - 'ToegepasteAnalogeElektronica/**/*.ipynb'
+  aspell:
+    lang: nl
+    d: nl
+  dictionary:
+    wordlists:
+    - .github/wordlist.txt
+    output: build/dictionary/dutch-jupyter.dic
+  pipeline:
+  - pyspelling.filters.jupyter:
+      # Check Markdown cells
+      markdown: true
+      # Check code cells (set to false if you only want to check markdown)
+      code: false
+      # Check output cells
+      output: false
+  - pyspelling.filters.markdown:
+  - pyspelling.filters.html:
+      comments: false
+      attributes:
+      - title
+      - alt
+      ignores:
+      - code
+      - pre
+  - pyspelling.filters.url:

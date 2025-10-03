@@ -1,4 +1,4 @@
-name: spelling-full-test
+name: dutch-spelling-check
 
 # First we define the Action trigger
 on:
@@ -9,7 +9,7 @@ on:
 jobs:
 
   # Set a job name
-  spelling-full-demo:
+  dutch-spelling-demo:
 
     # Define the base os that will run the action
     runs-on: ubuntu-latest
@@ -22,26 +22,26 @@ jobs:
     - uses: actions/checkout@master
 
     # The spelling checker requires some particular packages
-    - name: Install spelling packages
+    - name: Install Dutch spelling packages
     # Run a set of shell commands to install required packages
       run: |
-        sudo apt-get update && sudo apt-get install -y aspell aspell-en
+        sudo apt-get update && sudo apt-get install -y aspell aspell-nl
 
         # The following fork of pyspelling supports notebook md and code cell filters
         python3 -m pip install --upgrade https://github.com/ouseful-PR/pyspelling/archive/th-ipynb.zip
 
-    # Spell check the files
-    - name: spellcheck all files
+    # Spell check the files in ToegepasteAnalogeElektronica directory
+    - name: spellcheck Dutch files
       # Note that we can force the use of a particular shell if required
       run: |
         touch typos.txt
-        touch .wordlist.txt
+        touch .github/wordlist.txt
         # The spellchecker typically displays to stdout
         # which is visible in the action run history view
-        # The ipyspell.yml file defines the target file paths that the
-        # spellchecker is applied to
+        # The dutch-ipyspell.yml file defines the target file paths that the
+        # spellchecker is applied to for Dutch spell checking
         # We can also force spellchecker output into a file
-        pyspelling -c .ipyspell.yml | tee -a typos.txt || continue
+        pyspelling -c .github/dutch-ipyspell.yml | tee -a typos.txt || continue
         # Display the file contents
         cat typos.txt
       shell: bash
