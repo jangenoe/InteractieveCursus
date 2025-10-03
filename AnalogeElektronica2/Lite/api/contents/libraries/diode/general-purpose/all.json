@@ -2,11 +2,11 @@
   "content": [
     {
       "content": null,
-      "created": "2025-10-03T19:11:36.347983Z",
+      "created": "2025-10-03T19:29:57.129033Z",
       "format": null,
       "hash": null,
       "hash_algorithm": null,
-      "last_modified": "2025-10-03T19:02:31.085253Z",
+      "last_modified": "2025-10-03T19:21:07.232484Z",
       "mimetype": null,
       "name": "BAV21.lib",
       "path": "libraries/diode/general-purpose/BAV21.lib",
@@ -15,11 +15,11 @@
       "writable": true
     }
   ],
-  "created": "2025-10-03T19:11:36.347983Z",
+  "created": "2025-10-03T19:29:57.129033Z",
   "format": "json",
   "hash": null,
   "hash_algorithm": null,
-  "last_modified": "2025-10-03T19:11:36.347983Z",
+  "last_modified": "2025-10-03T19:29:57.129033Z",
   "mimetype": null,
   "name": "general-purpose",
   "path": "libraries/diode/general-purpose",

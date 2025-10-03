@@ -1266,9 +1266,6 @@ kunnen afleiden, is het rendement (<span class="math notranslate nohighlight">\(
 <p>Klik op de vraag als je je antwoord wil nakijken. Klik op next om de volgende vraag te bekomen.</p>
 <div class="cell tag_remove_cell4reveal tag_remove-cell4PDF tag_remove_cell4pptx docutils container">
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
-</pre></div>
-</div>
 <figure class="align-default">
 <div class="output text_html"><style>
 :root{
@@ -1412,10 +1409,11 @@ kunnen afleiden, is het rendement (<span class="math notranslate nohighlight">\(
 	  backface-visibility: hidden;
     background: var(--dark-blue-gray);
 	  transform: rotateY(180deg);
+    left: 8px;
 }
 
 .jp-OutputArea-output .back {
-	  transform: rotateY(180deg) translateX(7.5%);
+	  transform: rotateY(180deg) translateZ(20px);
 }
 
 .next {
@@ -1464,7 +1462,7 @@ kunnen afleiden, is het rendement (<span class="math notranslate nohighlight">\(
     text-align: left;
 }
 
-@media only screen and (min-width:1000px) {
+@media only screen and (min-width:700px) {
 
     .flip-container, .front, .back {
 	      height: 300px;
@@ -1511,6 +1509,10 @@ kunnen afleiden, is het rendement (<span class="math notranslate nohighlight">\(
     .flipper {
 	      height: 300px;
     }
+    .back {
+        left: 4px;
+    }
+
 
 }
 
@@ -1522,12 +1524,14 @@ kunnen afleiden, is het rendement (<span class="math notranslate nohighlight">\(
     .next {
         margin-left: 65%;
     }
-
+    .back {
+        left: 4px;
+    }
 }
 
 </style></div></figure>
 <figure class="align-default">
-<div class="output text_html"><div style="height:40px"></div><div class="flip-container" id="oDmpmnMhHIXO" tabindex="0" style="outline:none;"></div><div style="height:40px"></div><div class="next" id="oDmpmnMhHIXO-next" onclick="window.checkFlip('oDmpmnMhHIXO')"> </div> <div style="height:40px"></div></div></figure>
+<div class="output text_html"><div style="height:40px"></div><div class="flip-container" id="oJpxPvvGRsGU" tabindex="0" style="outline:none;"></div><div style="height:40px"></div><div class="next" id="oJpxPvvGRsGU-next" onclick="window.checkFlip('oJpxPvvGRsGU')"> </div> <div style="height:40px"></div></div></figure>
 <figure class="align-default">
 <script type="application/javascript">/*!
  * swiped-events.js - v1.1.4
@@ -1681,10 +1685,20 @@ function cleanup(container, frontcard, backcard, next) {
     container.className="flip-container";
 
     var cardnum=parseInt(container.dataset.cardnum);
+
+    let cardOrder = JSON.parse(container.dataset.cardOrder);
+
     var cards=eval('cards'+container.id);
-    var flipper=createOneCard(container, false, cards, cardnum);
+
+    var flipper=createOneCard(container, false, cards, cardOrder[cardnum], cardnum);
     container.append(flipper);
     cardnum= (cardnum+1) % parseInt(container.dataset.numCards);
+    if ((cardnum == 0) && (container.dataset.shuffleCards == "True")) {
+        cardOrder = randomOrderArray(parseInt(container.dataset.numCards));
+        container.dataset.cardOrder = JSON.stringify(cardOrder);
+        console.log(cardOrder);
+    }
+
     container.dataset.cardnum=cardnum;
     if (cardnum != 1){
         next.innerHTML="Next >";
@@ -1736,7 +1750,7 @@ function cleanup(container, frontcard, backcard, next) {
 }
 
 
-function createOneCard  (mydiv, frontCard, cards, cardnum) {
+function createOneCard  (mydiv, frontCard, cards, cardnum, seq) {
     var colors=eval('frontColors'+mydiv.id);
     var backColors=eval('backColors'+mydiv.id);
     var textColors=eval('textColors'+mydiv.id);
@@ -1756,22 +1770,22 @@ function createOneCard  (mydiv, frontCard, cards, cardnum) {
     var frontSpan= document.createElement('span');
     frontSpan.className='flashcardtext';
     frontSpan.innerHTML=jaxify(cards[cardnum]['front']);
-    frontSpan.style.color=textColors[cardnum % textColors.length];
+    frontSpan.style.color=textColors[seq % textColors.length];
     //frontSpan.textContent=jaxify(cards[cardnum]['front']);
     //front.style.background='var(' + colors[cardnum % colors.length] + ')';
-    front.style.background=colors[cardnum % colors.length];
+    front.style.background=colors[seq % colors.length];
 
     front.append(frontSpan);
     flipper.append(front);
 
     var back = document.createElement('div');
     back.className='back flashcard';
-    back.style.background=backColors[cardnum % backColors.length];
+    back.style.background=backColors[seq % backColors.length];
 
     var backSpan= document.createElement('span');
     backSpan.className='flashcardtext';
     backSpan.innerHTML=jaxify(cards[cardnum]['back']);
-    backSpan.style.color=textColors[cardnum % textColors.length];
+    backSpan.style.color=textColors[seq % textColors.length];
     back.append(backSpan);
 
     flipper.append(back);
@@ -1780,11 +1794,66 @@ function createOneCard  (mydiv, frontCard, cards, cardnum) {
 
 }
 
+function randomOrderArray(N) {
+    // Create an array with numbers from 0 to N-1
+    let arr = Array.from({ length: N }, (_, index) => index);
+
+    // Shuffle the array using Fisher-Yates algorithm
+    for (let i = arr.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [arr[i], arr[j]] = [arr[j], arr[i]];
+    }
+
+    return arr;
+}
+
+function createStructuredData(mydiv, cards, title, subject) {
+    var structuredData = {
+        "@context": "https://schema.org/",
+        "@type": "Quiz",
+        "about": {
+            "@type": "Thing"
+        },
+        "educationalAlignment": [
+            {
+                "@type": "AlignmentObject",
+                "alignmentType": "educationalSubject"
+            }
+        ],
+        "hasPart": []
+    };
+
+    structuredData["about"]["name"] = title;
+    structuredData["educationalAlignment"][0]["targetName"] = subject;
+
+    for (var i=0; i<cards.length; i++) {
+        var newPart = {
+            "@context": "https://schema.org/",
+            "@type": "Question",
+            "eduQuestionType": "Flashcard",
+            "acceptedAnswer": {
+                "@type": "Answer",
+            }
+        };
+
+        newPart["text"] = cards[i]["front"];
+        newPart["acceptedAnswer"]["text"] = cards[i]["back"];
+
+        structuredData["hasPart"].push(newPart);
+    }
+    /*console.log(structuredData);*/
+
+    var el = document.createElement('script');
+    el.type = 'application/ld+json';
+    el.text = JSON.stringify(structuredData);
+
+    mydiv.parentElement.appendChild(el);
+
+}
 
 
 
-
-function createCards(id, keyControl, grabFocus) {
+function createCards(id, keyControl, grabFocus, shuffleCards, title, subject) {
     console.log(id);
 
     var mydiv=document.getElementById(id);
@@ -1806,6 +1875,18 @@ function createCards(id, keyControl, grabFocus) {
     var cards=eval('cards'+id);
     mydiv.dataset.cardnum=0;
     mydiv.dataset.numCards=cards.length;
+
+    mydiv.dataset.shuffleCards = shuffleCards;
+    var cardOrder;
+    if (shuffleCards == "True"){
+        cardOrder = randomOrderArray(cards.length);
+    } else {
+        cardOrder = Array.from({ length: cards.length }, (_, index) => index);
+    }
+    mydiv.dataset.cardOrder = JSON.stringify(cardOrder);
+    console.log(mydiv.dataset.cardOrder);
+
+
     mydiv.addEventListener('swiped-left', function(e) {
         /*
           console.log(e.detail);
@@ -1814,16 +1895,22 @@ function createCards(id, keyControl, grabFocus) {
         checkFlip(id);
     }, {once: true});
 
+    if ((title!="") || (subject != "")){
+        createStructuredData(mydiv, cards, title, subject);
+    }
+
     var cardnum=0;
-    
+
     for (var i=0; i<2; i++) {
-    
+
+
+
         var flipper;
         if (i==0){
-            flipper=createOneCard(mydiv, true, cards, cardnum);
+            flipper=createOneCard(mydiv, true, cards, cardOrder[cardnum], cardnum);
         }
         else {
-            flipper=createOneCard(mydiv, false, cards, cardnum);
+            flipper=createOneCard(mydiv, false, cards, cardOrder[cardnum], cardnum);
         }
 
         mydiv.append(flipper);
@@ -1836,6 +1923,26 @@ function createCards(id, keyControl, grabFocus) {
                     if (version[0] == "2") {
                         MathJax.Hub.Queue(["Typeset", MathJax.Hub]);
                     } else if (version[0] == "3") {
+                        if (MathJax.hasOwnProperty('typeset') ) {
+                            MathJax.typeset([flipper]);
+                        } else {
+                            console.log('WARNING: Trying to force load MathJax 3');
+                            window.MathJax = {
+                                tex: {
+                                    inlineMath: [['$', '$'], ['\\(', '\\)']]
+                                },
+                                svg: {
+                                    fontCache: 'global'
+                                }
+                            };
+
+                            (function () {
+                                var script = document.createElement('script');
+                                script.src = 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js';
+                                script.async = true;
+                                document.head.appendChild(script);
+                            })();
+                        }
                         MathJax.typeset([flipper]);
                     }
                 }, 500);
@@ -1844,7 +1951,31 @@ function createCards(id, keyControl, grabFocus) {
                 if (version[0] == "2") {
                     MathJax.Hub.Queue(["Typeset", MathJax.Hub]);
                 } else if (version[0] == "3") {
-                    MathJax.typeset([flipper]);
+                    if (version[0] == "2") {
+                        MathJax.Hub.Queue(["Typeset", MathJax.Hub]);
+                    } else if (version[0] == "3") {
+                        if (MathJax.hasOwnProperty('typeset') ) {
+                            MathJax.typeset([flipper]);
+                        } else {
+                            console.log('WARNING: Trying to force load MathJax 3');
+                            window.MathJax = {
+                                tex: {
+                                    inlineMath: [['$', '$'], ['\\(', '\\)']]
+                                },
+                                svg: {
+                                    fontCache: 'global'
+                                }
+                            };
+
+                            (function () {
+                                var script = document.createElement('script');
+                                script.src = 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js';
+                                script.async = true;
+                                document.head.appendChild(script);
+                            })();
+                        }
+                        MathJax.typeset([flipper]);
+                    }
                 }
             }
         } else {
@@ -1876,17 +2007,17 @@ function createCards(id, keyControl, grabFocus) {
 
 
         function try_create() {
-          if(document.getElementById("oDmpmnMhHIXO")) {
-            createCards("oDmpmnMhHIXO", "True", "False");
+          if(document.getElementById("oJpxPvvGRsGU")) {
+            createCards("oJpxPvvGRsGU", "True", "False", "False", "", "");
           } else {
              setTimeout(try_create, 200);
           }
         };
     
-var cardsoDmpmnMhHIXO=[{"front": "Wat is: Stroomsturing resonante kring?", "back": "Een parallelkring wordt aangestuurd met pulses van stroom. De resonante kring zorgt voor een sinusvormige spanning. Aangezien de spanning over de kring ook over de belasting staat, heeft de belasting zowel een sinusvorming spanning en stroom."}, {"front": "Wat is plaatmodulatie?", "back": "Een klasse C versterker waarbij de variatie van de voedingsspanning de amplitude modulatie van het uitgangssignaal oplevert."}];
-var frontColorsoDmpmnMhHIXO= ["var(--asparagus)", "var(--terra-cotta)", "var(--cyan-process)" ];
-var backColorsoDmpmnMhHIXO= ["var(--dark-blue-gray)" ];
-var textColorsoDmpmnMhHIXO= ["var(--snow)" ];
+var cardsoJpxPvvGRsGU=[{"front": "Wat is: Stroomsturing resonante kring?", "back": "Een parallelkring wordt aangestuurd met pulses van stroom. De resonante kring zorgt voor een sinusvormige spanning. Aangezien de spanning over de kring ook over de belasting staat, heeft de belasting zowel een sinusvorming spanning en stroom."}, {"front": "Wat is plaatmodulatie?", "back": "Een klasse C versterker waarbij de variatie van de voedingsspanning de amplitude modulatie van het uitgangssignaal oplevert."}];
+var frontColorsoJpxPvvGRsGU= ["var(--asparagus)", "var(--terra-cotta)", "var(--cyan-process)" ];
+var backColorsoJpxPvvGRsGU= ["var(--dark-blue-gray)" ];
+var textColorsoJpxPvvGRsGU= ["var(--snow)" ];
 try_create(); </script></figure>
 </div>
 </div>
