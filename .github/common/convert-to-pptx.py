@@ -1,3 +1,8 @@
+"""
+PowerPoint Converter for Jupyter Notebooks
+Converts Jupyter notebooks to PowerPoint presentations using KULeuven template
+"""
+
 import base64
 import io
 import nbformat as nbf
@@ -10,7 +15,8 @@ from pptx.enum.dml import MSO_THEME_COLOR
 from pptx.enum.shapes import MSO_AUTO_SHAPE_TYPE, PP_PLACEHOLDER, MSO_SHAPE_TYPE
 from PIL import UnidentifiedImageError
 from IPython.lib.latextools import latex_to_png
-
+import copy
+from pptx.shapes.autoshape import Shape
 from bs4 import BeautifulSoup
 import re
 
@@ -36,16 +42,43 @@ KUL_layout_end=10
 
 lines_per_chunk=11
 
+
+prs = Presentation(slidetemplate)
+body_left, body_top, body_width, body_height=Inches(1), Inches(0.62), prs.slide_width-Inches(1.5), Inches(6.2)
+
 report_all_shapes_in_template=True
 if report_all_shapes_in_template:
-    prs = Presentation(slidetemplate)
     for i1,lay in enumerate(prs.slide_layouts):
         slide = prs.slides.add_slide(lay)
+        print(i1, len(slide.shapes))
         for i2,shap in enumerate(slide.shapes):
             if shap.shape_type==14:
-                print(i1,i2,shap.shape_type,shap.placeholder_format.type)
+                print("---",i2,shap.shape_type,shap.placeholder_format.type)
             else:
-                print(i1,i2,shap.shape_type) 
+                print("---",i2,shap.shape_type) 
+        for shape in slide.placeholders:
+            print('.  %d %s' % (shape.placeholder_format.idx, shape.name))
+
+
+
+def clone_shape(shape, left=body_left, top=body_top, width=body_width, height=body_height,idcounter=0):
+    """Add a duplicate of `shape` to the slide on which it appears."""
+    sp = shape._sp
+    spTree = sp.getparent()
+    new_sp = copy.deepcopy(sp)
+    spTree.append(new_sp)
+    new_shape = Shape(new_sp, None)
+    #new_shape.shape_id = shape.shape_id + 1345 +idcounter # Ensure a unique shape ID. AttributeError: property 'shape_id' of 'Shape' object has no setter
+    new_shape.left = left
+    new_shape.top = top
+    new_shape.width = width
+    new_shape.height = height
+    return new_shape
+"""  van een andere bron: mogelijk dit gebruiken als we meer fragments willen kopieren
+    new_el = copy.deepcopy(shape.element)
+    spTree.shapes._spTree.insert_element_before(new_el, "p:extLst") # in de bron was de eerste spTree de besteming-slide
+    new_shape = spTree.shapes[-1]  # in de bron was de eerste spTree de besteming-slide
+"""
 
 def find_between( s, first, last ):
     try:
@@ -230,6 +263,7 @@ def add_parsed_bullet(paragraph, text):
 for ipath in notebooks:
     print("file om te zetten: ",ipath)
     ntbk = nbf.read(ipath, nbf.NO_CONVERT)
+    idcounter=0
     prs = Presentation(slidetemplate)
     slide = prs.slides.add_slide(prs.slide_layouts[KUL_layout_title])
     if "title" in ntbk.metadata.get('KULeuvenSlides', {}):
@@ -274,27 +308,31 @@ for ipath in notebooks:
                             maketitle(cell,slide)  
                             image_stream = io.BytesIO(base64.b64decode(output.data["image/png"]))
                             try:                            
-                                pictp=slide.shapes.add_picture(image_stream, Inches(1), Inches(0.62), height=Inches(6.1)) 
+                                pictp=slide.shapes.add_picture(image_stream, body_left, body_top, height=body_height) 
                                 if pictp.width>prs.slide_width:
                                     pictp.width=prs.slide_width
                                     pictp.left=Inches(0)
                                 else:
                                     pictp.left=(prs.slide_width-pictp.width)//2
+                                running_height=body_top+pictp.height+Inches(0.1)
                             except UnidentifiedImageError:
                                 print("  image/png  error for cell number "+str(index))
+                                running_height=body_top
                         elif "image/jpeg" in output.get("data", {}):                           
                             slide = prs.slides.add_slide(prs.slide_layouts[KUL_layout_fig])
                             maketitle(cell,slide)  
                             image_stream = io.BytesIO(base64.b64decode(output.data["image/jpeg"]))
                             try:                            
-                                pictp=slide.shapes.add_picture(image_stream, Inches(1), Inches(0.62), height=Inches(6.1)) 
+                                pictp=slide.shapes.add_picture(image_stream, body_left, body_top, height=body_height) 
                                 if pictp.width>prs.slide_width:
                                     pictp.width=prs.slide_width
                                     pictp.left=Inches(0)
                                 else:
                                     pictp.left=(prs.slide_width-pictp.width)//2
+                                running_height=body_top+pictp.height+Inches(0.1)
                             except UnidentifiedImageError:
                                 print("  image/jpeg  error for cell number "+str(index))
+                                running_height=body_top
                         # elif "text/html" in output.get("data", {}):
                             # lines="".join(output.data["text/html"]).split('\n')
                             # for isl in range(0,len(lines),lines_per_chunk):
@@ -325,8 +363,9 @@ for ipath in notebooks:
                                     par.line_spacing = Pt(24)
                                     par.font.color.rgb = RGBColor(255, 255, 255)
                                 slide.shapes[0].text_frame.fit_text(font_family="Courier",max_size=24, font_file=r".github/common/fonts/cour.ttf")
-                        elif "text" in cell.outputs:
-                            lines="".join(cell.outputs["text"]).split('\n')
+                                running_height=body_top+slide.shapes[0].height+Inches(0.3)
+                        elif "text" in output:
+                            lines="".join(output["text"]).split('\n')
                             for i in range(0,len(lines),lines_per_chunk):
                                 slide = prs.slides.add_slide(prs.slide_layouts[KUL_layout_text])
                                 maketitle(cell,slide) 
@@ -334,80 +373,74 @@ for ipath in notebooks:
                                 for par in slide.shapes[0].text_frame.paragraphs:
                                     par.line_spacing = Pt(24)
                                     par.font.color.rgb = RGBColor(0,0,0)
-                                slide.shapes[0].text_frame.fit_text(font_family="Courier",max_size=24, font_file=r".github/common/fonts/cour.ttf")          
+                                slide.shapes[0].text_frame.fit_text(font_family="Courier",max_size=24, font_file=r".github/common/fonts/cour.ttf") 
+                                running_height=body_top+slide.shapes[0].height+Inches(0.3)         
                         else:
-                                print("  content_type  error for cell number "+str(index))
-                                
+                            print(f"  content_type error for cell number {index}")
+                            print(f"    Available output data types: {list(output.get('data', {}).keys())}")
+                            print(f"    Available cell.outputs keys: {list(cell.outputs[output_idx].keys()) if hasattr(cell, 'outputs') and output_idx < len(cell.outputs) else 'N/A'}")
+                            print(f"    All cell.outputs structure: {[list(out.keys()) for out in cell.outputs] if hasattr(cell, 'outputs') else 'No outputs'}")
+                            
         if "markdown" in cell.get('cell_type', {}) and not("remove_cell4pptx" in cell.metadata.get('tags', {})):
             if "slide_type" in cell.metadata.get('slideshow', {}):
-                normal_slide= True
-                if "KULeuvenSlides" in cell.get('metadata', {}):
-                    if "slide_code" in cell.metadata.get('KULeuvenSlides', {}):
-                        if cell.metadata.KULeuvenSlides.slide_code == "title":
-                            slide = prs.slides.add_slide(prs.slide_layouts[KUL_layout_subtitle])
-                            maketitle(cell,slide)
-                            normal_slide= False
-                if normal_slide:             
-                    md_text="".join(cell.get('source', {}))
-                    bullets = parse_markdown_bullets(md_text)
-                    if  cell.metadata.slideshow.get("slide_type", ())=="slide":
+                md_text="".join(cell.get('source', {}))
+                bullets = parse_markdown_bullets(md_text)
+                showmd=True
+                if cell.metadata.slideshow.slide_type == "slide":
+                    if ("KULeuvenSlides" in cell.get('metadata', {}) and "slide_code" in cell.metadata.get('KULeuvenSlides', {}) and cell.metadata.KULeuvenSlides.slide_code == "title"):
+                        slide = prs.slides.add_slide(prs.slide_layouts[KUL_layout_subtitle])
+                        maketitle(cell,slide)
+                        showmd=False
+                    else:
                         slide = prs.slides.add_slide(prs.slide_layouts[KUL_layout_mdtext])
                         maketitle(cell,slide)
-                        body_shape = slide.shapes[0]
-                        running_height=body_shape.top
-                    if  cell.metadata.slideshow.get("slide_type", ())=="fragment":
-                        body_shape = slide.shapes.add_textbox(body_shape.left, running_height, body_shape.width, body_shape.height)
-                        body_shape.text = slide.shapes[0].text
-                        for p_old, p_new in zip(slide.shapes[0].text_frame.paragraphs, body_shape.text_frame.paragraphs):
-                            for r_old, r_new in zip(p_old.runs, p_new.runs):
-                                r_new.font.bold = r_old.font.bold
-                                r_new.font.italic = r_old.font.italic
-                                r_new.font.size = r_old.font.size
-                                r_new.font.color.rgb = r_old.font.color.rgb
-                    if  cell.metadata.slideshow.get("slide_type", ())=="slide" or cell.metadata.slideshow.get("slide_type", ())=="fragment": 
-                        if "KULeuvenSlides" in cell.get('metadata', {}):
-                            if "eq_vertical" in cell.metadata.get('KULeuvenSlides', {}):
+                    running_height=body_top
+
+                elif cell.metadata.slideshow.get("slide_type", ())=="notes":
+                    if slide is not None:  # Notes require a previous slide to exist
+                        notes_slide = slide.notes_slide
+                        notes_slide.notes_text_frame.text = md_text
+
+                # Process slide content for slide and fragment types
+                if (slide is not None and cell.metadata.slideshow.get("slide_type", ()) in ["slide", "fragment"]): 
+                    if "KULeuvenSlides" in cell.get('metadata', {}):
+                        if "eq_vertical" in cell.metadata.get('KULeuvenSlides', {}):
+                            if cell.metadata.KULeuvenSlides["eq_vertical"]:
                                 running_height+=Inches(cell.metadata.KULeuvenSlides["eq_vertical"])
-                                body_shape.top=running_height
-                        latexpng=find_between(md_text  , "$$", "$$" )
-                        latexpng2=find_between( md_text , "\begin{equation}", "\end{equation}" )
-                        if len(latexpng2)>0:
-                            latexpng=latexpng2
-                        if len(latexpng)>0:
-                            try:
-                                pictp=slide.shapes.add_picture(io.BytesIO(latex_to_png(latexpng,backend="dvipng",scale=2)), Inches(1),running_height) 
-                            except UnidentifiedImageError:
-                                print("   latex error for cell number "+str(index))
+                                
+                    latexpng=find_between(md_text  , "$$", "$$" )
+                    latexpng2=find_between( md_text , r"\begin{equation}", r"\end{equation}" )
+                    if len(latexpng2)>0:
+                        latexpng=latexpng2
+                    if len(latexpng)>0:
+                        pictp = None
+                        try:
+                            pictp=slide.shapes.add_picture(io.BytesIO(latex_to_png(latexpng,backend="dvipng",scale=2)), Inches(1),running_height) 
+                        except UnidentifiedImageError:
+                            print("   latex error for cell number "+str(index))
+                        except Exception as e:
+                            print(f"   latex error for cell number {index}: {e}")    
+                        if pictp is not None:
                             if pictp.width>prs.slide_width:
                                 pictp.width=prs.slide_width
                                 pictp.left=Inches(0)
                             else:
                                 pictp.left=(prs.slide_width-pictp.width)//2
                             running_height+=pictp.height+Inches(0.3)
-                        else:      
-                            tf = body_shape.text_frame
-                            tf.clear()  # Remove any existing paragraphs
-                            for level, text in bullets:
-                                p = tf.add_paragraph()
-                                p.level = level
-                                add_parsed_bullet(p, text)
-
-                            running_height+=body_shape.height+Inches(0.3)
-                        # else:
-                            # box= slide.shapes.add_textbox(Inches(1),running_height, Inches(10),Inches(2.0))
-                            # box.text=md_text
-                            #for par in box.text_frame.paragraphs:
-                                #par.font.color.rgb = RGBColor(0, 0, 0)
-                            # if len(box.text)>0:
-                                # try:
-                                    # box.text_frame.fit_text(font_family="Calibri",max_size=30, font_file=r".github/common/fonts/calibri.ttf")
-                                # except:
-                                    # print("   text_fit error for cell number "+str(index))
-                            
-                    elif  cell.metadata.slideshow.get("slide_type", ())=="notes":
-                        notes_slide = slide.notes_slide  # Notes are always added to the former slide. Slide must already exist.
-                        notes_slide.notes_text_frame.text = md_text
-                    
+                    elif showmd:
+                        # body_shape = slide.shapes[0]. #backup if the next line does not work
+                        body_shape = clone_shape(slide.shapes[0],  top=running_height, idcounter=idcounter)
+                        idcounter+=1
+                        tf = body_shape.text_frame
+                        #tf.clear()  # Remove any existing paragraphs
+                        #tf.text = ""  # Clear existing text
+                        for level, text in bullets:
+                            p = tf.add_paragraph()
+                            p.level = level
+                            add_parsed_bullet(p, text)
+                        tf.auto_size = MSO_AUTO_SIZE.SHAPE_TO_FIT_TEXT
+                        running_height += body_shape.height + Inches(0.2)
+                                   
 
 # Loop through all slides except the first
     for i, slide in enumerate(prs.slides):
@@ -415,11 +448,44 @@ for ipath in notebooks:
             continue
 
         # Loop through placeholders to find footer and slide number
+        footer_found = False
+        slide_number_found = False
+        
         for shape in slide.placeholders:
-            if shape.placeholder_format.idx == 10:  # Footer placeholder
-                shape.text = footer
-            elif shape.placeholder_format.idx == 11:  # Slide number placeholder
-                shape.text = f"{i + 1}"
+            try:
+                if shape.placeholder_format.idx == 10:  # Footer placeholder
+                    shape.text = footer
+                    footer_found = True
+                elif shape.placeholder_format.idx == 11:  # Slide number placeholder
+                    shape.text = f"{i + 1}"
+                    slide_number_found = True
+            except:
+                # Skip if placeholder doesn't support text or has other issues
+                continue
+        
+        # If standard placeholders weren't found, try alternative approaches
+        if not footer_found or not slide_number_found:
+            for shape in slide.shapes:
+                if hasattr(shape, 'text_frame') and shape.text_frame:
+                    # Check if this might be a footer or slide number area based on position
+                    # Footer typically at bottom, slide number typically at bottom right
+                    slide_height = prs.slide_height
+                    slide_width = prs.slide_width
+                    
+                    # If shape is in bottom 10% of slide
+                    if shape.top > slide_height * 0.9:
+                        if not footer_found and shape.left < slide_width * 0.5:  # Left side = footer
+                            try:
+                                shape.text = footer
+                                footer_found = True
+                            except:
+                                pass
+                        elif not slide_number_found and shape.left > slide_width * 0.7:  # Right side = slide number
+                            try:
+                                shape.text = f"{i + 1}"
+                                slide_number_found = True
+                            except:
+                                pass
 
     slide = prs.slides.add_slide(prs.slide_layouts[KUL_layout_statement])
     slide = prs.slides.add_slide(prs.slide_layouts[KUL_layout_end])
