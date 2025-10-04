@@ -15,9 +15,9 @@ de klasse D resonante versterkers, en tenslotte de
 klasse E versterkers.
 We hebben hierbij specifieke aandacht over hoe we hierbij bouwblokken van schema's kunnen herkennen en vervolgens analyseren.
 
-In het tweede deel van deze cursus bekijken we het omgekeerde van de analyse, namelijk de  synthese. We bekijken hoe we een circuit kunnen ontwerpen met eender welke vooraf gedefinieerde frequentiekarakteristiek. We bekijken hoe we de transferkarakteristiek zo vlak mogelijk kunnen krijgen rond een bepaalde frequentie (Butterworth filters) of over bepaald gebied (Chebyshev filters) en hoe we andere frequentiegebieden scherp kunnen afsnijden. Deze synthese levert vaak niet een uniek circuit op. We hebben meerdere implementatie mogelijkheden en we bekijken de hoe we hierin selecteren.
+In het tweede deel van deze cursus bekijken we het omgekeerde van de analyse, namelijk de  synthese. We bekijken hoe we een circuit kunnen ontwerpen met eender welke vooraf gedefinieerde frequentiekarakteristiek. We bekijken hoe we de transferkarakteristiek zo vlak mogelijk kunnen krijgen rond een bepaalde frequentie (Butterworth filters) of over bepaald gebied (Chebyshev filters) en hoe we andere frequentiegebieden scherp kunnen afsnijden. Deze synthese levert vaak niet een uniek circuit op. We hebben meerdere implementatie mogelijkheden en we bekijken hoe we hierin selecteren.
 
-In het derde deel van deze cursus bekijken we het verloop van de impedantie over transmissielijnen. Voor digitale signalen analyseren we dit aan de hand van de reflecties en voor analoge signalen aan de hand van de Smith kaart. Tenslotte bekijken we ook hoe we de EMC van een elektronisch design substantieel kunnen verbeteren.
+In het derde deel van deze cursus bekijken we het verloop van de impedantie over transmissielijnen. Voor digitale signalen analyseren we dit aan de hand van de reflecties en voor analoge signalen aan de hand van de Smith kaart. Tenslotte bekijken we ook hoe we de elektromagnetische compatibiliteit (EMC) van een elektronisch design substantieel kunnen verbeteren.
 
 
 ## Licenties
