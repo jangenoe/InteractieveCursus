@@ -777,10 +777,6 @@ De hoeveelheid stroom die we krijgen wordt bepaald door <span class="math notran
 <p>Een spice simulatie van het bovenstaande circuit levert hetvolgende op:</p>
 <div class="cell docutils container">
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Warning: can&#39;t find the initialization file spinit.
-Unsupported Ngspice version 45
-</pre></div>
-</div>
 <figure class="align-default" id="cfigx">
 <img alt="_images/5e5173cd4e084cbc277a1595a308f48cbce5b89746e0783b0d2935d87fc3b25d.png" src="_images/5e5173cd4e084cbc277a1595a308f48cbce5b89746e0783b0d2935d87fc3b25d.png" />
 <figcaption>
@@ -1136,6 +1132,14 @@ Een van de opties om de reference van de voeding naar de grond te brengen, is he
 </div>
 </div>
 <div class="cell docutils container">
+<div class="cell_output docutils container">
+<figure class="align-default" id="cfig21">
+<img alt="_images/28f5b8fe13cc28e65aa81018b7935c700f4d9d9b46f23b184fdb56f2fca07ab2.png" src="_images/28f5b8fe13cc28e65aa81018b7935c700f4d9d9b46f23b184fdb56f2fca07ab2.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 30 </span><span class="caption-text">Resultaat van de spice simulatie van het bovenstaande circuit.</span><a class="headerlink" href="#cfig21" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
 </div>
 </section>
 </section>
@@ -1145,49 +1149,105 @@ Een van de opties om de reference van de voeding naar de grond te brengen, is he
 <p>Hieronder bouwen we stap voor stap op van het hierboven besproken schema naar een schema met 3 achtereenvolgende klasse C versterkerstrappen. Dit schema met 3 versterkerstrappen sluit aan bij een schema dat gebruikt wordt voor mobiele communicatie. Als voorbeeld nemen we <span id="id2">[<a class="reference internal" href="References.html#id2" title="B. Schmukler and J. Jorgenson. Design of a 3-Volt HBT power amplifier for DCS. Applied Microwave and wireless, pages 116–125, June 2000.">2</a>]</span>.</p>
 <section id="versterker-met-2-klasse-c-trappen-stap-1">
 <h3>Versterker met 2 Klasse C trappen: stap 1<a class="headerlink" href="#versterker-met-2-klasse-c-trappen-stap-1" title="Link to this heading">#</a></h3>
-<p>We vertrekken van het schema van de klasse C versterker zoals gegeven in <a class="reference internal" href="#cfig1"><span class="std std-numref">Fig. 6</span></a>. We laten in dit schema de belasting <span class="math notranslate nohighlight">\(R_L\)</span> voorlopig eventjes weg. De vergelijking die we hierboven gebruikt hebben om de stroom naar <span class="math notranslate nohighlight">\(C_1\)</span> uit te rekenen is <span class="math notranslate nohighlight">\(I_C= C \frac{d V}{dt}\)</span>. We merken op dat deze stroom <span class="math notranslate nohighlight">\(I_C\)</span> niet verandert als we een extra DC spanning over <span class="math notranslate nohighlight">\(C_1\)</span> zetten. We kunnen het schema in <a class="reference internal" href="#cfig1"><span class="std std-numref">Fig. 6</span></a> dus aanpassen met een extra spanning over de condensator <span class="math notranslate nohighlight">\(C_1\)</span>. Dit levert ons het schema op in <code class="xref std std-numref docutils literal notranslate"><span class="pre">cfig22</span></code>.</p>
+<p>We vertrekken van het schema van de klasse C versterker zoals gegeven in <a class="reference internal" href="#cfig1"><span class="std std-numref">Fig. 6</span></a>. We laten in dit schema de belasting <span class="math notranslate nohighlight">\(R_L\)</span> voorlopig eventjes weg. De vergelijking die we hierboven gebruikt hebben om de stroom naar <span class="math notranslate nohighlight">\(C_1\)</span> uit te rekenen is <span class="math notranslate nohighlight">\(I_C= C \frac{d V}{dt}\)</span>. We merken op dat deze stroom <span class="math notranslate nohighlight">\(I_C\)</span> niet verandert als we een extra DC spanning over <span class="math notranslate nohighlight">\(C_1\)</span> zetten. We kunnen het schema in <a class="reference internal" href="#cfig1"><span class="std std-numref">Fig. 6</span></a> dus aanpassen met een extra spanning over de condensator <span class="math notranslate nohighlight">\(C_1\)</span>. Dit levert ons het schema op in <a class="reference internal" href="#cfig22"><span class="std std-numref">Fig. 31</span></a>.</p>
 <div class="cell docutils container">
+<div class="cell_output docutils container">
+<figure class="align-default" id="cfig22">
+<img alt="_images/c5666d831fe864b150d0b595683557946e188aa2d5c1406ad2c7b382328c594f.svg" src="_images/c5666d831fe864b150d0b595683557946e188aa2d5c1406ad2c7b382328c594f.svg" />
+<figcaption>
+<p><span class="caption-number">Fig. 31 </span><span class="caption-text">Klasse C versterker waarbij de spoel en de condensator aan een verschillende voedingsspanning verbonden zijn.</span><a class="headerlink" href="#cfig22" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
 </div>
 <p>De werking van dit schema blijft intact gelijk. Als we kijken naar de spanning over <span class="math notranslate nohighlight">\(C_1\)</span> merken we wel op dat er naast een AC spanning ook een DC component van de spanning is. Daardoor neemt de piekspanning toe en zal <span class="math notranslate nohighlight">\(C_1\)</span> sneller doorslagen. We moeten bij de selectie van <span class="math notranslate nohighlight">\(C_1\)</span> dus de keuze maken voor een condensator die een iets hogere spanning aankan. Normaal zal dat betekenen een iets dikker dielectricum en dus een iets hogere prijs.</p>
 </section>
 <section id="versterker-met-2-klasse-c-trappen-stap-2">
 <h3>Versterker met 2 Klasse C trappen: stap 2<a class="headerlink" href="#versterker-met-2-klasse-c-trappen-stap-2" title="Link to this heading">#</a></h3>
-<p>Een volgende stap naar een meertraps klasse C versterker is de uitvoering van <span class="math notranslate nohighlight">\(V_{dd2}\)</span> op basis van een spanningsdeling vanuit <span class="math notranslate nohighlight">\(V_{dd}\)</span>. Dit schema kan je zien in <code class="xref std std-numref docutils literal notranslate"><span class="pre">cfig23</span></code>. Hiervoor gebruiken we de 2 weerstanden <span class="math notranslate nohighlight">\(R_L\)</span> en <span class="math notranslate nohighlight">\(R_{L2}\)</span>. Een gevolg hiervan gaat zijn dat de AC-stroom die door de condensator <span class="math notranslate nohighlight">\(C_1\)</span> loopt ook door de weerstanden <span class="math notranslate nohighlight">\(R_L\)</span> of <span class="math notranslate nohighlight">\(R_{L2}\)</span> gaat lopen (i.e. verdeeld proportioneel met de geleidbaarheden van <span class="math notranslate nohighlight">\(R_L\)</span> en <span class="math notranslate nohighlight">\(R_{L2}\)</span>).  Hierdoor voeren we terug de belastingsweerstand in die we in de vorige stap weggelaten hebben.</p>
+<p>Een volgende stap naar een meertraps klasse C versterker is de uitvoering van <span class="math notranslate nohighlight">\(V_{dd2}\)</span> op basis van een spanningsdeling vanuit <span class="math notranslate nohighlight">\(V_{dd}\)</span>. Dit schema kan je zien in <a class="reference internal" href="#cfig23"><span class="std std-numref">Fig. 32</span></a>. Hiervoor gebruiken we de 2 weerstanden <span class="math notranslate nohighlight">\(R_L\)</span> en <span class="math notranslate nohighlight">\(R_{L2}\)</span>. Een gevolg hiervan gaat zijn dat de AC-stroom die door de condensator <span class="math notranslate nohighlight">\(C_1\)</span> loopt ook door de weerstanden <span class="math notranslate nohighlight">\(R_L\)</span> of <span class="math notranslate nohighlight">\(R_{L2}\)</span> gaat lopen (i.e. verdeeld proportioneel met de geleidbaarheden van <span class="math notranslate nohighlight">\(R_L\)</span> en <span class="math notranslate nohighlight">\(R_{L2}\)</span>).  Hierdoor voeren we terug de belastingsweerstand in die we in de vorige stap weggelaten hebben.</p>
 <div class="cell docutils container">
+<div class="cell_output docutils container">
+<figure class="align-default" id="cfig23">
+<img alt="_images/0a9b8ec748a5d0063a74b8d45642688e2403868066b6ad5f508986c933f29459.svg" src="_images/0a9b8ec748a5d0063a74b8d45642688e2403868066b6ad5f508986c933f29459.svg" />
+<figcaption>
+<p><span class="caption-number">Fig. 32 </span><span class="caption-text">Een andere versie van bovenstaand schema waarbij <span class="math notranslate nohighlight">\(V_{dd2}\)</span> opgebouwd is aan de hand van een spanningsdeling.</span><a class="headerlink" href="#cfig23" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
 </div>
 </section>
 <section id="versterker-met-2-klasse-c-trappen-stap-3">
 <h3>Versterker met 2 Klasse C trappen: stap 3<a class="headerlink" href="#versterker-met-2-klasse-c-trappen-stap-3" title="Link to this heading">#</a></h3>
-<p>De belastingsweerstand <span class="math notranslate nohighlight">\(R_{L2}\)</span> kunnen we vervangen door een (voorwaarts gebiaste) diode (<span class="math notranslate nohighlight">\(D_L\)</span>). Dit schema zie je in <code class="xref std std-numref docutils literal notranslate"><span class="pre">cfig24</span></code>. Aangezien een voorwaarts gebiaste diode een lage aanweerstand heeft (of dus een hoge geleidbaarheid), zal de meerderheid van de stroom tijdens het voorwaarts gedeelte van de swing door de diode gaan.</p>
+<p>De belastingsweerstand <span class="math notranslate nohighlight">\(R_{L2}\)</span> kunnen we vervangen door een (voorwaarts gebiaste) diode (<span class="math notranslate nohighlight">\(D_L\)</span>). Dit schema zie je in <a class="reference internal" href="#cfig24"><span class="std std-numref">Fig. 33</span></a>. Aangezien een voorwaarts gebiaste diode een lage aanweerstand heeft (of dus een hoge geleidbaarheid), zal de meerderheid van de stroom tijdens het voorwaarts gedeelte van de swing door de diode gaan.</p>
 <div class="cell docutils container">
+<div class="cell_output docutils container">
+<figure class="align-default" id="cfig24">
+<img alt="_images/a27aebbeae2eb6eb96b6edbba04305ff6e56a0d448a911dd68bb199c25cc4f0a.svg" src="_images/a27aebbeae2eb6eb96b6edbba04305ff6e56a0d448a911dd68bb199c25cc4f0a.svg" />
+<figcaption>
+<p><span class="caption-number">Fig. 33 </span><span class="caption-text">Een andere versie van bovenstaand schema waarbij een diode gebruikt wordt als actieve belasting.</span><a class="headerlink" href="#cfig24" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
 </div>
 </section>
 <section id="versterker-met-2-klasse-c-trappen-stap-4">
 <h3>Versterker met 2 Klasse C trappen: stap 4<a class="headerlink" href="#versterker-met-2-klasse-c-trappen-stap-4" title="Link to this heading">#</a></h3>
-<p>In een volgende stap versterken we de stroom door de last diode <span class="math notranslate nohighlight">\(D_L\)</span> met een factor <span class="math notranslate nohighlight">\(\beta_F\)</span> van een transistor. De werking blijft hetzelfde, maar in <span class="math notranslate nohighlight">\(R_L\)</span> krijgen we een factor <span class="math notranslate nohighlight">\(\beta_F\)</span> meer stroom. Dit schema zie je in <code class="xref std std-numref docutils literal notranslate"><span class="pre">cfig26</span></code>.</p>
+<p>In een volgende stap versterken we de stroom door de last diode <span class="math notranslate nohighlight">\(D_L\)</span> met een factor <span class="math notranslate nohighlight">\(\beta_F\)</span> van een transistor. De werking blijft hetzelfde, maar in <span class="math notranslate nohighlight">\(R_L\)</span> krijgen we een factor <span class="math notranslate nohighlight">\(\beta_F\)</span> meer stroom. Dit schema zie je in <a class="reference internal" href="#cfig26"><span class="std std-numref">Fig. 34</span></a>.</p>
 <div class="cell docutils container">
+<div class="cell_output docutils container">
+<figure class="align-default" id="cfig26">
+<img alt="_images/ecdc0522376cd16867584764774162d349c1067db6ba69b8e94929fc522215fc.svg" src="_images/ecdc0522376cd16867584764774162d349c1067db6ba69b8e94929fc522215fc.svg" />
+<figcaption>
+<p><span class="caption-number">Fig. 34 </span><span class="caption-text">Een andere versie van bovenstaand schema waarbij de diode vervangen is door een transistor.</span><a class="headerlink" href="#cfig26" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
 </div>
 </section>
 <section id="versterker-met-2-klasse-c-trappen-stap-5">
 <h3>Versterker met 2 Klasse C trappen: stap 5<a class="headerlink" href="#versterker-met-2-klasse-c-trappen-stap-5" title="Link to this heading">#</a></h3>
-<p>De belasting <span class="math notranslate nohighlight">\(R_L\)</span> in <code class="xref std std-numref docutils literal notranslate"><span class="pre">cfig26</span></code> kan nu terug resonant gemaakt worden door het invoeren van de 2de trilkring op basis van <span class="math notranslate nohighlight">\(L_2\)</span> en <span class="math notranslate nohighlight">\(C_2\)</span>. We hebben nu een 2-trap klasse C versterker met 2 resonante kringen. Dit schema zie je in in <code class="xref std std-numref docutils literal notranslate"><span class="pre">cfig27</span></code>. Het spreek vanzelf dat we hier</p>
+<p>De belasting <span class="math notranslate nohighlight">\(R_L\)</span> in <a class="reference internal" href="#cfig26"><span class="std std-numref">Fig. 34</span></a> kan nu terug resonant gemaakt worden door het invoeren van de 2de trilkring op basis van <span class="math notranslate nohighlight">\(L_2\)</span> en <span class="math notranslate nohighlight">\(C_2\)</span>. We hebben nu een 2-trap klasse C versterker met 2 resonante kringen. Dit schema zie je in in <a class="reference internal" href="#cfig27"><span class="std std-numref">Fig. 35</span></a>. Het spreek vanzelf dat we hier</p>
 <div class="math notranslate nohighlight">
 \[\frac{1}{L_1 C_1} = \frac{1}{L_2 C_2}\]</div>
 <p>moeten kiezen.</p>
 <div class="cell docutils container">
+<div class="cell_output docutils container">
+<figure class="align-default" id="cfig27">
+<img alt="_images/3ad499a9a193dbad328ac018a89ca520c81fe88a5201959f1721c4d0274c72cd.svg" src="_images/3ad499a9a193dbad328ac018a89ca520c81fe88a5201959f1721c4d0274c72cd.svg" />
+<figcaption>
+<p><span class="caption-number">Fig. 35 </span><span class="caption-text">Een andere versie van bovenstaand schema waarbij de tweede transitor belast wordt door een tweede resonante kring aan dezelfde frequentie.</span><a class="headerlink" href="#cfig27" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
 </div>
 </section>
 <section id="versterker-met-3-klasse-c-trappen">
 <h3>Versterker met 3 Klasse C trappen<a class="headerlink" href="#versterker-met-3-klasse-c-trappen" title="Link to this heading">#</a></h3>
-<p>Volgens de zelfde redenering kunnen we ook een derde klasse C versterkertrap toevoegen. Dit schema zie je in <code class="xref std std-numref docutils literal notranslate"><span class="pre">cfig28</span></code>. Hier geldt:</p>
+<p>Volgens de zelfde redenering kunnen we ook een derde klasse C versterkertrap toevoegen. Dit schema zie je in <a class="reference internal" href="#cfig28"><span class="std std-numref">Fig. 36</span></a>. Hier geldt:</p>
 <div class="math notranslate nohighlight">
 \[\frac{1}{L_1 C_1} = \frac{1}{L_2 C_2}= \frac{1}{L_3 C_3}\]</div>
 <div class="cell docutils container">
+<div class="cell_output docutils container">
+<figure class="align-default" id="cfig28">
+<img alt="_images/30b09ed3c89db7a613622b7acaedcd20b1cee2e9b65befa4ba51b7b51eb0c617.svg" src="_images/30b09ed3c89db7a613622b7acaedcd20b1cee2e9b65befa4ba51b7b51eb0c617.svg" />
+<figcaption>
+<p><span class="caption-number">Fig. 36 </span><span class="caption-text">Een andere versie van bovenstaand schema waarbij een derde trap toegevoegd werd aan de versterker.</span><a class="headerlink" href="#cfig28" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
 </div>
-<p>Het circuit in <code class="xref std std-numref docutils literal notranslate"><span class="pre">cfig28</span></code> wordt ook gebruikt in de GSM transmitter ICs RFMD RF2140 en RF2174. Deze ICs werken tussen 1710 en 1785 MHz, gebruiken een voedingsspanning van 3.2V en bekomen en zendvermogen van 32.7 dBm (ongeveer 2 W) met een efficiëntie van 50.6%.</p>
+</div>
+<p>Het circuit in <a class="reference internal" href="#cfig28"><span class="std std-numref">Fig. 36</span></a> wordt ook gebruikt in de GSM transmitter ICs RFMD RF2140 en RF2174. Deze ICs werken tussen 1710 en 1785 MHz, gebruiken een voedingsspanning van 3.2V en bekomen en zendvermogen van 32.7 dBm (ongeveer 2 W) met een efficiëntie van 50.6%.</p>
 <p>De spoelen (<span class="math notranslate nohighlight">\(L_1\)</span>,<span class="math notranslate nohighlight">\(L_2\)</span> en <span class="math notranslate nohighlight">\(L_3\)</span>) en de condensator <span class="math notranslate nohighlight">\(C_3\)</span> worden wel extern uitgevoerd en zitten dus niet in de IC <span id="id3">[<a class="reference internal" href="References.html#id2" title="B. Schmukler and J. Jorgenson. Design of a 3-Volt HBT power amplifier for DCS. Applied Microwave and wireless, pages 116–125, June 2000.">2</a>]</span>.</p>
 <p>We herkennen <span class="math notranslate nohighlight">\(L_1\)</span> tussen <em>VCC1</em> (Pin 5) en <span class="math notranslate nohighlight">\(V_{dd}\)</span>, <span class="math notranslate nohighlight">\(L_2\)</span> tussen <em>VCC2</em> (Pinnen 14,15,en 16) en <span class="math notranslate nohighlight">\(V_{dd}\)</span> en <span class="math notranslate nohighlight">\(L_3\)</span> tussen <em>RF OUT</em> (Pinnen 10,11 en 12) en <span class="math notranslate nohighlight">\(V_{dd}\)</span>.</p>
 <div class="cell tag_remove-cell4PDF docutils container">
+<div class="cell_output docutils container">
+<figure class="align-default" id="figgsm">
+<img alt="_images/0a89ab10a8352ca87ea82c7dca7cca9917226c81cda3703b766b9cbfb6a92bd5.png" src="_images/0a89ab10a8352ca87ea82c7dca7cca9917226c81cda3703b766b9cbfb6a92bd5.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 37 </span><span class="caption-text">IC schema en fotos van de RFMD RF2140 en RF2174 <span id="id4">[<a class="reference internal" href="References.html#id2" title="B. Schmukler and J. Jorgenson. Design of a 3-Volt HBT power amplifier for DCS. Applied Microwave and wireless, pages 116–125, June 2000.">2</a>]</span></span><a class="headerlink" href="#figgsm" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
 </div>
 </section>
 </section>
@@ -1197,9 +1257,17 @@ Een van de opties om de reference van de voeding naar de grond te brengen, is he
 <p>Echter, zoals we uit de berekeningen van het rendement (<span class="math notranslate nohighlight">\(\eta\)</span>) bij niet-volledige uitsturing en ook uit simulaties zoals bijvoorbeeld aan de hand van widgets kunnen uitgevoerd worden zoals in <a class="reference internal" href="#cfig7"><span class="std std-numref">Fig. 16</span></a>
 kunnen afleiden, is het rendement (<span class="math notranslate nohighlight">\(\eta\)</span>) van een klasse C versterker die niet volledig uitgestuurd wordt tot een amplitude lager dan de voedingsspanning, altijd lager dan wanneer dat wel het geval is. Daarom verkiezen we steeds de klasse C versterker te gebruiken met een amplitude die overeenkomt met de voedingsspanning.</p>
 <p>Hoe kunnen we dan die amplitude aanpassen, wel door een klasse B versterker te gebruiken om de voedingsspanning van een klasse C versterker aan te sturen. Dit concept noemen we plaatmodulatie.</p>
-<p><code class="xref std std-numref docutils literal notranslate"><span class="pre">cfigPlaatmodulatie</span></code> toont schematisch aan hoe zo een plaatmodulatie kan gerealiseerd worden.</p>
+<p><a class="reference internal" href="#cfigplaatmodulatie"><span class="std std-numref">Fig. 38</span></a> toont schematisch aan hoe zo een plaatmodulatie kan gerealiseerd worden.</p>
 <p>In dit geval levert de voeding (<span class="math notranslate nohighlight">\(V_{dd}\)</span>) het DC vermogen en dus ook de DC stroom die naar de voeding van klasse C versterker gaat. De spoel <span class="math notranslate nohighlight">\(L\)</span> moet dan voldoende groot zijn om deze DC stroom nauwkeurig constant te houden. De klasse B versterker moet dan enkel het vermogen leveren om de veranderingen van voedingsspanningen van de klasse C te kunnen bekomen. De condensator <span class="math notranslate nohighlight">\(C\)</span> moet derhalve ook groot genoeg zijn om snel genoeg de AC stroom te kunnen leveren die de aanpassingen van de voeding mogelijk maakt.</p>
 <div class="cell docutils container">
+<div class="cell_output docutils container">
+<figure class="align-default" id="cfigplaatmodulatie">
+<img alt="_images/4ac73a83e5badb39fef882e50fbf635f393598523708085b2428ad6af11042ef.svg" src="_images/4ac73a83e5badb39fef882e50fbf635f393598523708085b2428ad6af11042ef.svg" />
+<figcaption>
+<p><span class="caption-number">Fig. 38 </span><span class="caption-text">Amplitude modulatie bekomen door een klasse B versterker te gebruiken om de voeding van de klasse C versterker aan te sturen.</span><a class="headerlink" href="#cfigplaatmodulatie" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
 </div>
 </section>
 <section id="zelftest-via-flashcards">
@@ -1207,6 +1275,1180 @@ kunnen afleiden, is het rendement (<span class="math notranslate nohighlight">\(
 <p><span class="math notranslate nohighlight">\(\,\!\)</span></p>
 <p>Klik op de vraag als je je antwoord wil nakijken. Klik op next om de volgende vraag te bekomen.</p>
 <div class="cell tag_remove_cell4reveal tag_remove-cell4PDF tag_remove_cell4pptx docutils container">
+<div class="cell_output docutils container">
+<figure class="align-default">
+<div class="output text_html"><style>
+:root{
+  --asparagus: #87a878ff;
+  --terra-cotta: #e26d5aff;
+  --cyan-process: #5bc0ebff;
+  --dark-blue-gray: #666a86ff;
+  --snow: #fffafbff;
+  --rich-black-fogra-39: #090c08ff;
+}
+
+
+/* entire container, keeps perspective */
+.flip-container {
+	perspective: 1000px;
+  touch-action: pinch-zoom pan-y;
+}
+
+
+.flip-container.flip .flipper {
+    box-sizing: content-box;
+	  transform: rotateY(180deg);
+	/* transform: rotateY(180deg)  translateX(-6%);  */
+}
+
+
+.flip-container.slide .flipper.frontcard {
+    filter: brightness(90%);
+    position:absolute;
+    z-index: -20;
+    /* left: 20px; */
+}
+
+.flip-container.prepare .flipper.backcard {
+    opacity:1;
+    transition: display 0s;
+    transform:  translateX(20px); 
+}
+
+
+.flip-container.slide .flipper.backcard {
+    filter: brightness(115%);
+    /* height: 360px; */
+    opacity:1;
+	  transform:  rotateY(3deg)  translateX(700px) translateZ(20px) scale(1, 1.05) rotate(3deg);
+    z-index: 20;
+    /* left: -20px; */
+}
+
+
+
+
+.flip-container.slideback .flipper.backcard {
+    filter: brightness(100%);
+    opacity: 1;
+	  transform: translateX(0px) translateZ(20px) rotateY(0deg);
+    z-index: 10;
+}
+
+.flip-container.slideback .flipper.frontcard {
+    filter: brightness(90%);
+    transform: translateX(0px) translateZ(-20px);
+    z-index: -10;
+}
+
+
+.flip-container, .front, .back {
+	  height: 200px;
+	  width: 95%;
+}
+
+
+
+
+.flipper.frontcard {
+    position:absolute;
+	  transform: translateX(0px) rotateY(0deg) translateZ(20px);
+    z-index: 10;
+}
+
+.flipper.backcard {
+    filter: brightness(90%);
+    opacity:0;
+    position:absolute;
+    transform: translateX(0px) translateZ(-20px);
+    z-index: -10;
+}
+
+
+
+
+/* flip speed goes here */
+.flipper {
+    cursor:pointer;
+	  height: 200px;
+    margin-left:10px;
+	  position: absolute;
+    top: 0;
+	  transform-style: preserve-3d;
+	  transition: 0.6s;
+    /* width: 95%; */
+    width: 100%;
+}
+
+.flashcardtext{
+    color: var(--snow);
+    margin-left:3%;
+    position:absolute;
+    text-align:center;
+    top: 50%;
+    transform: translate(0, -50%);
+    width:90%;
+    font-size: 1.5em;
+}
+
+.flashcardtext.complete{
+    color: var(--rich-black-fogra-39);
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.flashcardtext.storage{
+    color: var(--rich-black-fogra-39);
+    font-size: 1.5em;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.flashcard.buttons{
+    display: flex;
+    justify-content: center;
+}
+
+.flashcard.button{
+    border-style: none;
+    margin: 10px;
+    font-size: 1.2em;
+    background-color: #00000000;
+    color: var(--rich-black-fogra-39);
+}
+
+.back .flashcardtext{
+    font-size: 1.2em;
+}
+
+.flashcardKnown {
+    display: block;
+    position: absolute;
+    right: 64px;
+    bottom: 10px;
+    width: 2em;
+    height: auto;
+}
+
+.flashcardNotKnown {
+    display: block;
+    position: absolute;
+    right: 26px;
+    bottom: 15px;
+    width: 1.3em;
+    height: auto;
+}
+
+.flashcardNotKnown.hide {
+    display: none;
+}
+
+
+
+
+
+/* hide back of pane during swap */
+.front, .back {
+    -webkit-backface-visibility: hidden;
+	  backface-visibility: hidden;
+	  left: 0;
+	  position: absolute;
+	  top: 0;
+}
+
+/* front pane, placed above back */
+.front {
+	  backface-visibility: hidden;
+    background: var(--asparagus);
+    transform: rotateY(0deg);
+	  z-index: 2;
+}
+
+.front.complete{
+	  backface-visibility: hidden;
+    background: var(--snow);
+    border-style: solid;
+    border-radius: 10px;
+    transform: rotateY(0deg);
+    color: 'black';
+	  z-index: 2;
+}
+
+
+/* back, initially hidden pane */
+.back {
+	  backface-visibility: hidden;
+    background: var(--dark-blue-gray);
+	  transform: rotateY(180deg);
+    left: 8px;
+}
+
+.jp-OutputArea-output .back {
+	  transform: rotateY(180deg) translateZ(20px);
+}
+
+.next {
+    color: var(--rich-black-fogra-39);
+    cursor:pointer;
+    font-size: 1.5em;
+    /*left:90%; */
+    margin-left: 70%;
+    width: 55pt;
+    height: 22pt;
+    opacity:0.3;
+    position:relative; 
+    top:-1em;
+}
+
+.next svg {
+    height:16pt;
+    width:16pt;
+    position:relative;
+    top:-2pt;
+}
+
+.jp-OutputArea-output .next svg {
+    top: 1pt;
+}
+
+.next.flipped {
+    opacity:1;
+}
+
+.next.hide {
+    opacity:0;
+}
+
+
+.flashcard{
+    border-radius: 10px;
+    outline: none;
+    color: #fafafa;
+    display:block;
+    padding:10px;
+  
+}
+
+.flashcardtext li{
+    text-align: left;
+}
+
+@media only screen and (min-width:700px) {
+
+    .flip-container, .front, .back {
+	      height: 300px;
+	      width: min(95%, 640px);
+    }
+
+    .flipper {
+        margin-left:20px;
+	      height: 300px;
+    }
+
+    .flashcardtext{
+        font-size: 20pt;
+    }
+
+    .next {
+        font-size: 16pt;
+        left:min(80%, 450pt);
+        margin-left: 0;
+        width: 55pt;
+        height: 22pt;
+        top:-0.5em;
+    }
+
+    .back .flashcardtext{
+        font-size: 1.5em;
+    }
+
+}
+
+@media only screen and (min-width:660px) and (max-width:999px) {
+    .next {
+        left:0;
+        margin-left: 80%;
+    }
+
+}
+
+@media only screen and (max-width:680px) and (min-height:376px) {
+    .flip-container, .front, .back {
+	      height: 300px;
+    }
+
+    .flipper {
+	      height: 300px;
+    }
+    .back {
+        left: 4px;
+    }
+
+}
+
+@media only screen and (max-width:330px) and (max-height:600px) {
+
+    .back .flashcardtext{
+        font-size: 1em;
+    }
+    .next {
+        margin-left: 65%;
+    }
+    .back {
+        left: 4px;
+   }
+}
+
+</style></div></figure>
+<figure class="align-default">
+<div class="output text_html"><svg xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink"
+     style="display:none;">
+  <symbol id="reload-icon" viewBox="0 0 25 26">
+    <path d="M7,6a10,10,0,1,0,9,0" style="fill:none;stroke:black;stroke-width:2px"/>
+    <line x1="17" y1="6.5" x2="17.5" y2="15" style="stroke:black;fill:none;stroke-width:2px"/>
+    <line x1="16.5" y1="6.5" x2="26" y2="8" style="stroke:black;fill:none;stroke-width:2px"/>
+  </symbol>
+  <symbol id="check-mark">
+    <path d="M21 6.285l-11.16 12.733-6.84-6.018 1.319-1.49 5.341 4.686 9.865-11.196 1.475 1.285z" style="fill:currentcolor;stroke:currentcolor;stroke-width:1px"/>
+  </symbol>
+  <symbol id="check-mark-thin">
+    <path d="M24 4.685l-16.327 17.315-7.673-9.054.761-.648 6.95 8.203 15.561-16.501.728.685z"/>
+  </symbol>
+  <symbol id="check-mark-circle-thin">
+    <path d="M12 0c6.623 0 12 5.377 12 12s-5.377 12-12 12-12-5.377-12-12 5.377-12 12-12zm0 1c6.071 0 11 4.929 11 11s-4.929 11-11 11-11-4.929-11-11 4.929-11 11-11zm7 7.457l-9.005 9.565-4.995-5.865.761-.649 4.271 5.016 8.24-8.752.728.685z"/>
+  </symbol>
+  <symbol id="x-mark">
+    <path d="M23.954 21.03l-9.184-9.095 9.092-9.174-2.832-2.807-9.09 9.179-9.176-9.088-2.81 2.81 9.186 9.105-9.095 9.184 2.81 2.81 9.112-9.192 9.18 9.1z" style="fill:currentcolor;stroke:currentcolor;stroke-width:1px"/>
+  </symbol>
+  <symbol id="x-mark-thin">
+    <path d="M12 11.293l10.293-10.293.707.707-10.293 10.293 10.293 10.293-.707.707-10.293-10.293-10.293 10.293-.707-.707 10.293-10.293-10.293-10.293.707-.707 10.293 10.293z"/>
+  </symbol>
+  <symbol id="x-mark-circle-thin">
+    <path d="M12 0c6.623 0 12 5.377 12 12s-5.377 12-12 12-12-5.377-12-12 5.377-12 12-12zm0 1c6.071 0 11 4.929 11 11s-4.929 11-11 11-11-4.929-11-11 4.929-11 11-11zm0 10.293l5.293-5.293.707.707-5.293 5.293 5.293 5.293-.707.707-5.293-5.293-5.293 5.293-.707-.707 5.293-5.293-5.293-5.293.707-.707 5.293 5.293z"/>
+  </symbol>
+</svg>
+</div></figure>
+<figure class="align-default">
+<div class="output text_html"><div style="height:40px"></div><div class="flip-container" id="fyYvzQHaHfdu" data-topics='[]' data-known-widgets='true' data-local-storage='false' tabindex="0" style="outline:none;"></div><div style="height:40px"></div><div class="next" id="fyYvzQHaHfdu-next" onclick="window.checkFlip('fyYvzQHaHfdu')"> </div> <div style="height:40px"></div></div></figure>
+<figure class="align-default">
+<script type="application/javascript">/*!
+ * swiped-events.js - v1.1.4
+ * Pure JavaScript swipe events
+ * https://github.com/john-doherty/swiped-events
+ * @inspiration https://stackoverflow.com/questions/16348031/disable-scrolling-when-touch-moving-certain-element
+ * @author John Doherty <www.johndoherty.info>
+ * @license MIT
+ */
+!function(t,e){"use strict";"function"!=typeof t.CustomEvent&&(t.CustomEvent=function(t,n){n=n||{bubbles:!1,cancelable:!1,detail:void 0};var a=e.createEvent("CustomEvent");return a.initCustomEvent(t,n.bubbles,n.cancelable,n.detail),a},t.CustomEvent.prototype=t.Event.prototype),e.addEventListener("touchstart",function(t){if("true"===t.target.getAttribute("data-swipe-ignore"))return;s=t.target,r=Date.now(),n=t.touches[0].clientX,a=t.touches[0].clientY,u=0,i=0},!1),e.addEventListener("touchmove",function(t){if(!n||!a)return;var e=t.touches[0].clientX,r=t.touches[0].clientY;u=n-e,i=a-r},!1),e.addEventListener("touchend",function(t){if(s!==t.target)return;var e=parseInt(l(s,"data-swipe-threshold","20"),10),o=parseInt(l(s,"data-swipe-timeout","500"),10),c=Date.now()-r,d="",p=t.changedTouches||t.touches||[];Math.abs(u)>Math.abs(i)?Math.abs(u)>e&&c<o&&(d=u>0?"swiped-left":"swiped-right"):Math.abs(i)>e&&c<o&&(d=i>0?"swiped-up":"swiped-down");if(""!==d){var b={dir:d.replace(/swiped-/,""),xStart:parseInt(n,10),xEnd:parseInt((p[0]||{}).clientX||-1,10),yStart:parseInt(a,10),yEnd:parseInt((p[0]||{}).clientY||-1,10)};s.dispatchEvent(new CustomEvent("swiped",{bubbles:!0,cancelable:!0,detail:b})),s.dispatchEvent(new CustomEvent(d,{bubbles:!0,cancelable:!0,detail:b}))}n=null,a=null,r=null},!1);var n=null,a=null,u=null,i=null,r=null,s=null;function l(t,n,a){for(;t&&t!==e.documentElement;){var u=t.getAttribute(n);if(u)return u;t=t.parentNode}return a}}(window,document);
+
+function jaxify(string) {
+    var mystring = string;
+    //console.log(mystring);
+
+    var count = 0;
+    var loc = mystring.search(/([^\\]|^)(\$)/);
+
+    var count2 = 0;
+    var loc2 = mystring.search(/([^\\]|^)(\$\$)/);
+
+    //console.log(loc);
+
+    while ((loc >= 0) || (loc2 >= 0)) {
+
+        /* Have to replace all the double $$ first with current implementation */
+        if (loc2 >= 0) {
+            if (count2 % 2 == 0) {
+                mystring = mystring.replace(/([^\\]|^)(\$\$)/, "$1\\[");
+            } else {
+                mystring = mystring.replace(/([^\\]|^)(\$\$)/, "$1\\]");
+            }
+            count2++;
+        } else {
+            if (count % 2 == 0) {
+                mystring = mystring.replace(/([^\\]|^)(\$)/, "$1\\(");
+            } else {
+                mystring = mystring.replace(/([^\\]|^)(\$)/, "$1\\)");
+            }
+            count++;
+        }
+        loc = mystring.search(/([^\\]|^)(\$)/);
+        loc2 = mystring.search(/([^\\]|^)(\$\$)/);
+        //console.log(mystring,", loc:",loc,", loc2:",loc2);
+    }
+
+    //console.log(mystring);
+    return mystring;
+}
+
+/**
+ * Set active topics on a flashcard container and re-render cards.
+ * @param {string|Element} idOrElem - The container's id or the DOM element.
+ * @param {string|string[]} topics - Topic or array of topics to filter by.
+ */
+window.setTopics = function(idOrElem, topics) {
+    var mydiv = (typeof idOrElem === 'string') ? document.getElementById(idOrElem) : idOrElem;
+    if (!mydiv) return;
+    // Normalize topics to array
+    var topicsArr = Array.isArray(topics) ? topics : (typeof topics === 'string' ? [topics] : []);
+    mydiv.dataset.topics = JSON.stringify(topicsArr);
+    // Re-render cards
+    createCards(mydiv.id);
+};
+
+window.resetDeleteList = function(container) {
+    container.dataset.deleteList = JSON.stringify([]);
+    // Clear persisted deleteList in localStorage if consented
+    (function() {
+        var storageSuffix = container.dataset.localStorageKey;
+        if (!storageSuffix) {
+            try {
+                storageSuffix = JSON.parse(container.dataset.cards)[0]['front'] || 'flashcards';
+            } catch (e) {
+                storageSuffix = 'flashcards';
+            }
+        }
+        var allowKey = 'jc-allow-storage-' + storageSuffix;
+        var deleteKey = 'jc-deleteList-' + storageSuffix;
+        if (window.localStorage && window.localStorage.getItem(allowKey) === 'true') {
+            window.localStorage.removeItem(deleteKey);
+        }
+    })();
+
+}
+
+window.flipCard = function flipCard(ths) {
+
+    var container = ths;
+    //console.log(ths);
+    //console.log(ths.id);
+    if (container.firstChild.firstChild.classList.contains('complete')) {
+        //console.log("Restarting flashcards");
+        window.resetDeleteList(container);
+        container.dataset.cardnum = 0;
+
+        // Render cards
+        container.innerHTML = '';
+        createCards(container.id);
+    } else {
+        ths.classList.toggle("flip"); 
+        ths.focus();
+        var next=document.getElementById(ths.id+'-next');
+        next.style.pointerEvents='none';
+        /* ths.blur(); */
+        next.classList.add('flipped');
+        if (typeof MathJax != 'undefined') {
+            var version = MathJax.version;
+            //console.log('MathJax version', version);
+            if (version[0] == "2") {
+                MathJax.Hub.Queue(["Typeset", MathJax.Hub]);
+            } else if (version[0] == "3") {
+                MathJax.typeset([ths]);
+            }
+        } else {
+            //console.log('MathJax not detected');
+        }
+
+        setTimeout(reenableNext, 600, ths, next);
+    }
+}
+
+window.checkKey = function checkKey(container, event) {
+    event.stopPropagation();
+    /*
+    console.log(container);
+    console.log(event.key);
+    console.log(event.code);
+    */
+    /* JMS:  Working here*/
+    var next=document.getElementById(container.id+'-next');
+    /* Only react if not already sliding */
+    if (! next.classList.contains("hide")) {
+        if ((event.key == "j") || (event.key == "Enter") || (event.key == "ArrowRight")) {
+            window.checkFlip(container.id);
+        }
+        if (event.key == " ") {
+            window.flipCard(container);
+        }
+    }
+    event.preventDefault();
+}
+
+
+function reenableNext(ths, next) {
+    next.style.pointerEvents='auto';
+    /* ths.tabIndex= 0;*/
+    /* ths.focus(); */
+}
+
+
+
+function slide2(containerId, mode) {
+    //console.log("Sliding container:", containerId, "with mode:", mode);
+    var container = document.getElementById(containerId);
+    var next=document.getElementById(containerId+'-next');
+    var frontcard = container.children[0];
+    var backcard = container.children[1];
+    container.style.pointerEvents='none';
+    var deleteList = JSON.parse(container.dataset.deleteList || '[]');
+    if (mode == "known") {
+        deleteList.push(JSON.parse(frontcard.dataset.seqNum));
+        container.dataset.deleteList = JSON.stringify(deleteList);
+        //console.log("deleteList", deleteList);
+        // Persist deleteList in localStorage if consented
+        (function() {
+            var storageSuffix = container.dataset.localStorageKey;
+            if (!storageSuffix) {
+                try {
+                    storageSuffix = JSON.parse(container.dataset.cards)[0]['front'] || 'flashcards';
+                } catch (e) {
+                    storageSuffix = 'flashcards';
+                }
+            }
+            var allowKey = 'jc-allow-storage-' + storageSuffix;
+            var deleteKey = 'jc-deleteList-' + storageSuffix;
+            if (window.localStorage && window.localStorage.getItem(allowKey) === 'true') {
+                window.localStorage.setItem(deleteKey, container.dataset.deleteList);
+            }
+        })();
+    } else if (mode == "notKnown") {
+        // Nothing to do for now
+    }
+
+    var numCards = container.dataset.numCards;
+
+
+    if (deleteList.length < numCards) {
+
+        // Hide the next button until done sliding
+        next.style.pointerEvents='none';
+        next.classList.remove('flipped');
+        next.classList.add('hide');
+
+        //container.classList.add("prepare");
+
+        container.className="flip-container slide";
+
+        backcard.parentElement.removeChild(frontcard);
+        backcard.parentElement.appendChild(frontcard);
+
+        setTimeout(slideback, 600, container, frontcard, backcard, next, mode);
+    } else {
+        frontcard.innerHTML = '';
+        frontcard.classname = 'front complete';
+        var msg = document.createElement('div');
+        //msg.className = 'front flashcard complete';
+        msg.className = 'front complete';
+        var span = document.createElement('span');
+        span.className = 'flashcardtext complete';
+        //span.style.color = 'black';
+        span.textContent = 'You have learned all of the flashcards! Click to start over.';
+        msg.appendChild(span);
+        frontcard.appendChild(msg);
+        container.style.pointerEvents='auto';
+
+    }
+}
+
+
+window.checkFlip = function checkFlip(containerId) {
+    var container = document.getElementById(containerId);
+
+if (container.classList.contains('flip')) {
+        container.classList.remove('flip');
+            setTimeout(slide2, 600, containerId, 'next');
+    } else {
+        slide2(containerId, 'next');
+    }
+}
+
+
+function slideback(container, frontcard, backcard, next, mode) {
+    container.className="flip-container slideback";
+    setTimeout(cleanup, 550, container, frontcard, backcard, next, mode);
+}
+
+function cleanup(container, frontcard, backcard, next, mode) {
+
+    var deleteList = JSON.parse(container.dataset.deleteList || '[]');
+
+    container.removeChild(frontcard);
+    backcard.className="flipper frontcard";
+    container.className="flip-container";
+
+
+    // Track the current index before increment
+    var cardnum=parseInt(container.dataset.cardnum);
+
+    let cardOrder = JSON.parse(container.dataset.cardOrder);
+
+    var cards=JSON.parse(container.dataset.cards);
+    var numCards = container.dataset.numCards;
+    var cardsLeft = parseInt(container.dataset.numCards, 10) - deleteList.length;
+    // check if this card's seqNum is in the deleteList
+    while ( deleteList.includes(cardOrder[cardnum]) ) {
+        cardnum = (cardnum + 1) % parseInt(numCards);
+        //console.log("Skipping card number:", cardnum, "of", numCards);
+    }
+
+    var flipper=createOneCard(container, false, cards, cardOrder[cardnum], cardnum, cardsLeft);
+
+    container.append(flipper);
+    cardnum= (cardnum+1) % parseInt(numCards);
+    //console.log("Next card number:", cardnum, "of", numCards);
+
+    container.dataset.cardnum = cardnum;
+    // Determine button label based on position in cycle
+    if (cardsLeft > 1) {
+        // On last card of cycle, show Reload; otherwise Next
+        //if (currentIdx === cardsLeft - 1) {
+        // JMS: This is currently broken when using known cards
+        if (cardnum == 1 ) {
+            next.innerHTML = 'Reload <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 25 26"><use xlink:href="#reload-icon"/></svg>';
+        } else {
+            next.innerHTML = 'Next >';
+        }
+    }
+    if (typeof MathJax != 'undefined') {
+        var version = MathJax.version;
+        //console.log('MathJax version', version);
+        if (version[0] == "2") {
+            MathJax.Hub.Queue(["Typeset", MathJax.Hub]);
+        } else if (version[0] == "3") {
+            MathJax.typeset();
+        }
+    } else {
+        //console.log('MathJax not detected');
+    }
+
+
+    next.style.pointerEvents='auto';
+    container.style.pointerEvents='auto';
+    /* container.tabIndex= 0; */
+    /* container.focus(); */
+    // Hide Next when only one or no cards remain
+    if (cardsLeft > 1) {
+        next.classList.remove('hide');
+        next.style.pointerEvents = 'auto';
+    } else { // Hide the notKnown button if only one card left
+        var notKnown = backcard.querySelector('.flashcardNotKnown');
+        notKnown.classList.add('hide');
+        notKnown.pointerEvents = 'none';
+        //console.log(notKnown);
+        //console.log(backcard.querySelector('.flashcardNotKnown'));
+    }
+
+    if (parseInt(container.dataset.numCards, 10) <= 1) {
+        next.classList.add('hide');
+        next.style.pointerEvents = 'none';
+    }
+    container.addEventListener('swiped-left', function(e) {
+        /*
+          console.log(e.detail);
+          console.log(id);
+        */
+        checkFlip(container.id);
+    }, {once: true });
+
+}
+
+
+function createOneCard  (mydiv, frontCard, cards, cardnum, seq) {
+
+    var colors = JSON.parse(mydiv.dataset.frontColors);
+    var backColors = JSON.parse(mydiv.dataset.backColors);
+    var textColors = JSON.parse(mydiv.dataset.textColors);
+
+
+    var flipper = document.createElement('div');
+    flipper.dataset.seqNum = cards[cardnum]['seqNum'];
+
+    // JMS: Can this be removed now? Should colors only depend on seqNum, so they are consistent?
+    flipper.dataset.cardnum = cardnum;
+
+    //console.log('Creating card', cardnum, 'with sequence', seq);
+    if (frontCard){
+        flipper.className="flipper frontcard";    
+    }
+    else {
+        flipper.className="flipper backcard";   
+    }
+
+    var front = document.createElement('div');
+    front.className='front flashcard';
+
+
+    var frontSpan= document.createElement('span');
+    frontSpan.className='flashcardtext';
+    frontSpan.innerHTML=jaxify(cards[cardnum]['front']);
+    frontSpan.style.color=textColors[seq % textColors.length];
+    front.style.background=colors[seq % colors.length];
+    front.append(frontSpan);
+
+    // Add check mark symbol for card known
+    var knownSpan= document.createElement('span');
+    knownSpan.className = 'flashcardKnown';
+    knownSpan.innerHTML= '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 25 26"><use xlink:href="#check-mark"/></svg>';
+    front.append(knownSpan);
+
+    // Add x mark symbol for card not known
+    var notKnownSpan= document.createElement('span');
+    notKnownSpan.className = 'flashcardNotKnown';
+    notKnownSpan.innerHTML= '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 25 26"><use xlink:href="#x-mark"/></svg>';
+    front.append(notKnownSpan);
+    // Hide known/not-known icons if disabled via known_widgets flag
+    if (mydiv.dataset.knownWidgets === 'false') {
+        knownSpan.style.display = 'none';
+        knownSpan.style.pointerEvents = 'none';
+        notKnownSpan.style.display = 'none';
+        notKnownSpan.style.pointerEvents = 'none';
+    }
+
+
+
+
+    flipper.append(front);
+
+    var back = document.createElement('div');
+    back.className='back flashcard';
+    back.style.background=backColors[seq % backColors.length];
+
+    var backSpan= document.createElement('span');
+    backSpan.className='flashcardtext';
+    backSpan.innerHTML=jaxify(cards[cardnum]['back']);
+    backSpan.style.color=textColors[seq % textColors.length];
+    back.append(backSpan);
+
+    flipper.append(back);
+
+    // Handle known click: remove card and advance or restart when done
+    knownSpan.addEventListener('click', function(e) {
+        e.stopPropagation();
+        // Starting point -- just slide and then start to port this stuff over
+        slide2(mydiv.id, 'known');
+
+    });
+
+
+    // Handle not-known click: just advance
+    notKnownSpan.addEventListener('click', function(e) {
+        e.stopPropagation();
+        //window.checkFlip(mydiv.id);
+        slide2(mydiv.id, 'notKnown');
+    });
+
+    return flipper;
+}
+
+function randomOrderArray(N) {
+    // Create an array with numbers from 0 to N-1
+    let arr = Array.from({ length: N }, (_, index) => index);
+
+    // Shuffle the array using Fisher-Yates algorithm
+    for (let i = arr.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [arr[i], arr[j]] = [arr[j], arr[i]];
+    }
+
+    return arr;
+}
+
+function createStructuredData(mydiv, cards, title, subject) {
+    var structuredData = {
+        "@context": "https://schema.org/",
+        "@type": "Quiz",
+        "about": {
+            "@type": "Thing"
+        },
+        "educationalAlignment": [
+            {
+                "@type": "AlignmentObject",
+                "alignmentType": "educationalSubject"
+            }
+        ],
+        "hasPart": []
+    };
+
+    structuredData["about"]["name"] = title;
+    structuredData["educationalAlignment"][0]["targetName"] = subject;
+
+    for (var i=0; i<cards.length; i++) {
+        var newPart = {
+            "@context": "https://schema.org/",
+            "@type": "Question",
+            "eduQuestionType": "Flashcard",
+            "acceptedAnswer": {
+                "@type": "Answer",
+            }
+        };
+
+        newPart["text"] = cards[i]["front"];
+        newPart["acceptedAnswer"]["text"] = cards[i]["back"];
+
+        structuredData["hasPart"].push(newPart);
+    }
+    /*console.log(structuredData);*/
+
+    var el = document.createElement('script');
+    el.type = 'application/ld+json';
+    el.text = JSON.stringify(structuredData);
+
+    mydiv.parentElement.appendChild(el);
+
+}
+
+
+
+function createCards(id) {
+    var mydiv = document.getElementById(id);
+    if (!mydiv) return;
+
+    // Initialize cards array from dataset
+    var cards = JSON.parse(mydiv.dataset.cards || '[]');
+
+    // Preserve full set of cards in dataset.fullCards
+    var fullCards;
+    if (mydiv.dataset.fullCards) {
+        fullCards = JSON.parse(mydiv.dataset.fullCards);
+    } else {
+        fullCards = cards;
+        mydiv.dataset.fullCards = JSON.stringify(fullCards);
+    }
+
+
+    // Bootstrap topics: filter cards based on data-topics attribute
+    var topics = [];
+    if (mydiv.dataset.topics) {
+        try {
+            topics = JSON.parse(mydiv.dataset.topics);
+        } catch (e) {
+            topics = [mydiv.dataset.topics];
+        }
+    }
+
+    // Handle localStorage consent prompt
+    var localStorageEnabled = mydiv.dataset.localStorage === 'true';
+    if (localStorageEnabled) {
+        var lsKey = mydiv.dataset.url || ''
+        if (lsKey == '') {
+            lsKey = fullCards[0]['front'] || 'flashcards';
+        }
+
+        if (topics && topics != []) {
+            lsKey +='-' + mydiv.dataset.topics.replace(/[\[\]\"\'\s]/g, '');
+        }
+        console.log('LocalStorage key:', lsKey);
+        mydiv.dataset.localStorageKey = lsKey;
+
+        lsKey = 'jc-allow-storage-' + lsKey;
+        //console.log('LocalStorage key:', lsKey);
+        if (!window.localStorage.getItem(lsKey)) {
+            var flipper = document.createElement('div');
+
+            // JMS: Can this be removed now? Should colors only depend on seqNum, so they are consistent?
+            flipper.dataset.cardnum = cardnum;
+
+            flipper.className="flipper frontcard";    
+
+            var front = document.createElement('div');
+            front.className='front complete';
+
+
+            var frontSpan= document.createElement('span');
+            frontSpan.className='flashcardtext storage';
+            frontSpan.innerHTML= 'Do you want to store information on your progress in learning these flashcards on your local machine?<br><br>' +
+                '<div class="flashcard buttons">' + 
+                '<button id="' + id + '-ls-yes" class="flashcard button">Yes</button> ' +
+                '<button id="' + id + '-ls-no" class="flashcard button">No</button>' +
+                '</div>';
+
+
+            front.append(frontSpan);
+
+            flipper.append(front);
+            mydiv.append(flipper);
+
+            document.getElementById(id + '-ls-yes').onclick = function(event) {
+                window.localStorage.setItem(lsKey, 'true');
+                mydiv.dataset.localStorage = 'false';
+               
+                var frontcard = mydiv.children[0];
+                mydiv.removeChild(frontcard);
+
+                createCards(id);
+                event.preventDefault();
+                event.stopPropagation();
+            };
+            document.getElementById(id + '-ls-no').onclick = function(event) {
+                mydiv.dataset.localStorage = 'false';
+                var frontcard = mydiv.children[0];
+                mydiv.removeChild(frontcard);
+
+                createCards(id);
+                event.preventDefault();
+                event.stopPropagation();
+            };
+
+            return;
+        }
+    }
+
+    // Retrieve parameters from dataset
+    var keyControl = mydiv.dataset.keyControl === 'true';
+    var grabFocus = mydiv.dataset.grabFocus === 'true';
+    var shuffleCards = mydiv.dataset.shuffleCards === 'true';
+    var title = mydiv.dataset.title || '';
+    var subject = mydiv.dataset.subject || '';
+    var frontColors = JSON.parse(mydiv.dataset.frontColors || '[]');
+    var backColors = JSON.parse(mydiv.dataset.backColors || '[]');
+    var textColors = JSON.parse(mydiv.dataset.textColors || '[]');
+
+    //console.log('Active topics:', topics);
+
+    // Filter cards by topics if provided
+    if (topics.length > 0) {
+        cards = fullCards.filter(function(card) {
+            var t = card.topic;
+            if (Array.isArray(t)) {
+                return topics.some(function(topic) { return t.includes(topic); });
+            }
+            return topics.includes(t);
+        });
+    } else {
+        cards = fullCards;
+    }
+    // Need to store the filtered cards in the dataset
+    mydiv.dataset.cards = JSON.stringify(cards);
+
+    // Set up click and keyboard controls
+    mydiv.onclick = function(){ window.flipCard(mydiv); };
+    if (keyControl) {
+        mydiv.onkeydown = function(event){ window.checkKey(mydiv, event); };
+    }
+
+    // Initialize deleteList, possibly from localStorage
+    var deleteList = [];
+    (function() {
+        // Compute storage suffix for keys
+        var storageSuffix = mydiv.dataset.localStorageKey;
+        var allowKey = 'jc-allow-storage-' + storageSuffix;
+        var deleteKey = 'jc-deleteList-' + storageSuffix;
+        if (window.localStorage && window.localStorage.getItem(allowKey) === 'true') {
+            console.log('allowKey', window.localStorage.getItem(allowKey));
+            try {
+                deleteList = JSON.parse(window.localStorage.getItem(deleteKey) || '[]');
+                console.log('Loaded deleteList from localStorage:', deleteList);
+            } catch (e) {
+                deleteList = [];
+            }
+        }
+        mydiv.dataset.deleteList = JSON.stringify(deleteList);
+    })();
+    console.log('deleteList: ', deleteList);
+
+    // Store cards and color data in the container's dataset for later access in cleanup()
+    /*
+    mydiv.dataset.frontColors = JSON.stringify(frontColors);
+    mydiv.dataset.backColors = JSON.stringify(backColors);
+    mydiv.dataset.textColors = JSON.stringify(textColors);
+    */
+
+    mydiv.dataset.cardnum=0;
+    mydiv.dataset.numCards=cards.length;
+
+    mydiv.dataset.shuffleCards = shuffleCards;
+    var cardOrder;
+    if (shuffleCards == true){
+        cardOrder = randomOrderArray(cards.length);
+    } else {
+        cardOrder = Array.from({ length: cards.length }, (_, index) => index);
+    }
+    mydiv.dataset.cardOrder = JSON.stringify(cardOrder);
+    //console.log(mydiv.dataset.cardOrder);
+
+
+    mydiv.addEventListener('swiped-left', function(e) {
+        /*
+          console.log(e.detail);
+          console.log(id);
+        */
+        checkFlip(id);
+    }, {once: true});
+
+    if ((title!="") || (subject != "")){
+        createStructuredData(mydiv, cards, title, subject);
+    }
+
+    var cardnum=0;
+    var numCards = cards.length;
+
+    var cardsLeft = numCards - deleteList.length;
+
+    if (cardsLeft == 0) {
+        window.resetDeleteList(mydiv);
+        deleteList =[];
+        cardsLeft = cards.length;
+    }
+
+
+
+    var flipper;
+    console.log('Creating cards for container:', mydiv.id, 'with', cardsLeft, 'cards left.');
+    for (var i=0; i<Math.min(cardsLeft,2); i++) {
+
+        if (i==0){
+            while ( deleteList.includes(cardOrder[cardnum]) ) {
+                cardnum = (cardnum + 1) % parseInt(numCards);
+                //console.log("Skipping card number:", cardnum, "of", numCards);
+            }
+            flipper=createOneCard(mydiv, true, cards, cardOrder[cardnum], cardnum);
+        }
+        else {
+            while ( deleteList.includes(cardOrder[cardnum]) ) {
+                cardnum = (cardnum + 1) % parseInt(numCards);
+                //console.log("Skipping card number:", cardnum, "of", numCards);
+            }
+            flipper=createOneCard(mydiv, false, cards, cardOrder[cardnum], cardnum);
+        }
+
+        if (cardsLeft == 1) {
+            var notKnown = flipper.querySelector('.flashcardNotKnown');
+            notKnown.classList.add('hide');
+            notKnown.pointerEvents = 'none';
+            //console.log(notKnown);
+            //console.log(backcard.querySelector('.flashcardNotKnown'));
+        }
+
+
+        mydiv.append(flipper);
+        if (typeof MathJax != 'undefined') {
+            var version = MathJax.version;
+            if (typeof version == 'undefined') {
+                setTimeout(function(){
+                    var version = MathJax.version;
+                    console.log('After sleep, MathJax version', version);
+                    if (version[0] == "2") {
+                        MathJax.Hub.Queue(["Typeset", MathJax.Hub]);
+                    } else if (version[0] == "3") {
+                        if (MathJax.hasOwnProperty('typeset') ) {
+                            MathJax.typeset([flipper]);
+                        } else {
+                            console.log('WARNING: Trying to force load MathJax 3');
+                            window.MathJax = {
+                                tex: {
+                                    inlineMath: [['$', '$'], ['\\(', '\\)']]
+                                },
+                                svg: {
+                                    fontCache: 'global'
+                                }
+                            };
+
+                            (function () {
+                                var script = document.createElement('script');
+                                script.src = 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js';
+                                script.async = true;
+                                document.head.appendChild(script);
+                            })();
+                        }
+                        MathJax.typeset([flipper]);
+                    }
+                }, 500);
+            } else{
+                console.log('MathJax version', version);
+                if (version[0] == "2") {
+                    MathJax.Hub.Queue(["Typeset", MathJax.Hub]);
+                } else if (version[0] == "3") {
+                    if (version[0] == "2") {
+                        MathJax.Hub.Queue(["Typeset", MathJax.Hub]);
+                    } else if (version[0] == "3") {
+                        if (MathJax.hasOwnProperty('typeset') ) {
+                            MathJax.typeset([flipper]);
+                        } else {
+                            console.log('WARNING: Trying to force load MathJax 3');
+                            window.MathJax = {
+                                tex: {
+                                    inlineMath: [['$', '$'], ['\\(', '\\)']]
+                                },
+                                svg: {
+                                    fontCache: 'global'
+                                }
+                            };
+
+                            (function () {
+                                var script = document.createElement('script');
+                                script.src = 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js';
+                                script.async = true;
+                                document.head.appendChild(script);
+                            })();
+                        }
+                        MathJax.typeset([flipper]);
+                    }
+                }
+            }
+        } else {
+            console.log('MathJax not detected');
+        }
+
+
+        cardnum = (cardnum + 1) % mydiv.dataset.numCards;
+    }
+    mydiv.dataset.cardnum = cardnum;
+
+    var next=document.getElementById(id+'-next');
+    //console.log('cardsLeft = ', cardsLeft);
+    if (cardsLeft==1) {
+        next.style.pointerEvents='none';
+        next.classList.add('hide');
+        var notKnown = flipper.querySelector('.flashcardNotKnown');
+        notKnown.classList.add('hide');
+        notKnown.pointerEvents = 'none';
+    } else {
+        next.innerHTML="Next >";
+        next.style.pointerEvents='auto';
+        next.classList.remove('hide');
+    }
+
+    if (grabFocus == true )
+        mydiv.focus();
+
+    return flipper;
+}
+
+// Helper to change topics and re-render flashcards dynamically
+window.setTopics = function(idOrElem, topics) {
+    var mydiv = (typeof idOrElem === 'string') ? document.getElementById(idOrElem) : idOrElem;
+    if (!mydiv) return;
+    var topicsArr = Array.isArray(topics) ? topics : (typeof topics === 'string' ? [topics] : []);
+    mydiv.dataset.topics = JSON.stringify(topicsArr);
+    createCards(mydiv.id);
+};
+
+
+
+
+(function() {
+    var observer = new MutationObserver(function(mutations, obs) {
+        var el = document.getElementById("fyYvzQHaHfdu");
+        if (el) {
+            el.dataset.url = "";
+            el.dataset.cards = JSON.stringify([{"front": "Wat is: Stroomsturing van de resonante kring?", "back": "Een parallelkring wordt aangestuurd met pulses van stroom. De resonante kring zorgt voor een sinusvormige spanning. Aangezien de spanning over de kring ook over de belasting staat, heeft de belasting zowel een sinusvorming spanning en stroom.", "seqNum": 0}, {"front": "Wat is plaatmodulatie?", "back": "Een klasse C versterker waarbij de variatie van de voedingsspanning de amplitude modulatie van het uitgangssignaal oplevert.", "seqNum": 1}]);
+            el.dataset.frontColors = JSON.stringify(["var(--asparagus)", "var(--terra-cotta)", "var(--cyan-process)"]);
+            el.dataset.backColors = JSON.stringify(["var(--dark-blue-gray)"]);
+            el.dataset.textColors = JSON.stringify(["var(--snow)"]);
+            el.dataset.keyControl = true;
+            el.dataset.grabFocus = false;
+            el.dataset.shuffleCards = false;
+            el.dataset.title = "";
+            el.dataset.subject = "";
+            createCards("fyYvzQHaHfdu");
+            obs.disconnect();
+        }
+    });
+    observer.observe(document.body, { childList: true, subtree: true });
+})();</script></figure>
+</div>
 </div>
 </section>
 </section>

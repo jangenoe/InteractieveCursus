@@ -572,13 +572,13 @@ In <a class="reference internal" href="#vermogenversterkers2"><span class="std s
 </tbody>
 </table>
 </div>
-<p>Het basisschema van de klasse F versterker tonen we in <a class="reference internal" href="#ffig1"><span class="std std-numref">Fig. 30</span></a>. Dit schema komt sterk overeen met het schema van de klasse C versterker (zie <a class="reference internal" href="Klasse-C.html#cfig2"><span class="std std-numref">Fig. 9</span></a>). Het enige verschil is dat er een filter voor de derde harmonisch is toegevoegd. Dit filter bestaat uit het spoel <span class="math notranslate nohighlight">\(L_3\)</span> en de capaciteit <span class="math notranslate nohighlight">\(C_3\)</span>. Op het schema vinden we deze derde harmonische filter terug tussen knoop 2 en knoop 5.</p>
+<p>Het basisschema van de klasse F versterker tonen we in <a class="reference internal" href="#ffig1"><span class="std std-numref">Fig. 39</span></a>. Dit schema komt sterk overeen met het schema van de klasse C versterker (zie <a class="reference internal" href="Klasse-C.html#cfig2"><span class="std std-numref">Fig. 9</span></a>). Het enige verschil is dat er een filter voor de derde harmonisch is toegevoegd. Dit filter bestaat uit het spoel <span class="math notranslate nohighlight">\(L_3\)</span> en de capaciteit <span class="math notranslate nohighlight">\(C_3\)</span>. Op het schema vinden we deze derde harmonische filter terug tussen knoop 2 en knoop 5.</p>
 <div class="cell docutils container">
 <div class="cell_output docutils container">
 <figure class="align-default" id="ffig1">
 <img alt="_images/af2465776223cee72f696ed08a9e8346b3843aa8efdbafdbe0c751cd873342c4.svg" src="_images/af2465776223cee72f696ed08a9e8346b3843aa8efdbafdbe0c751cd873342c4.svg" />
 <figcaption>
-<p><span class="caption-number">Fig. 30 </span><span class="caption-text">Basisschema van de klasse F versterker.</span><a class="headerlink" href="#ffig1" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 39 </span><span class="caption-text">Basisschema van de klasse F versterker.</span><a class="headerlink" href="#ffig1" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 </div>
@@ -586,7 +586,7 @@ In <a class="reference internal" href="#vermogenversterkers2"><span class="std s
 <p>Wanneer de gelijkaardige stroompulsen aangelegd worden op 2 parallelle LRC kringen in serie, zal dezelfde stroom door de kringen lopen, maar zullen de spanningen over beide kringen opgeteld worden.</p>
 <p>Het grote voordeel van het bovenstaande schema is dat het toelaat meer energie toe te voegen aan de trilling bij eenzelfde geleidingshoek (<span class="math notranslate nohighlight">\(\alpha\)</span>) en bij eenzelfde maximale stroom (<span class="math notranslate nohighlight">\(I_{max}\)</span>)door de transistor. Hierdoor wordt het circuit efficienter en verlaagt dus verbruikerskost.</p>
 <p>Het nadeel is natuurlijk dat de 2 extra componenten een extra investeringskost en extra plaats vragen op de print.</p>
-<p>De spicefile <a class="reference internal" href="#espicef"><span class="std std-numref">Spice Listing 8</span></a> beschrijft het circuit van <a class="reference internal" href="#ffig1"><span class="std std-numref">Fig. 30</span></a>. De spanningen van de transiente simulatie worden getoond in <a class="reference internal" href="#ffig2"><span class="std std-numref">Fig. 31</span></a>. Het is in eerste instantie belangrijk om het verschil tussen knoop 2 en knoop 5 te bestuderen.</p>
+<p>De spicefile <a class="reference internal" href="#espicef"><span class="std std-numref">Spice Listing 8</span></a> beschrijft het circuit van <a class="reference internal" href="#ffig1"><span class="std std-numref">Fig. 39</span></a>. De spanningen van de transiente simulatie worden getoond in <a class="reference internal" href="#ffig2"><span class="std std-numref">Fig. 40</span></a>. Het is in eerste instantie belangrijk om het verschil tussen knoop 2 en knoop 5 te bestuderen.</p>
 <div class="literal-block-wrapper docutils container" id="espicef">
 <div class="code-block-caption"><span class="caption-number">Spice Listing 8 </span><span class="caption-text">basis Klasse F circuit spice file</span><a class="headerlink" href="#espicef" title="Link to this code">#</a></div>
 <div class="highlight-spice notranslate"><div class="highlight"><pre><span></span><span class="o">*</span><span class="w"> </span><span class="nx">klasse</span><span class="w"> </span><span class="nx">F</span><span class="w"> </span><span class="nx">basiscircuit</span>
@@ -607,55 +607,55 @@ In <a class="reference internal" href="#vermogenversterkers2"><span class="std s
 <figure class="align-default" id="ffig2">
 <img alt="_images/88cebc7097ebafc537aa91f0d769be6ff862463073474477bcc3a85275a4feef.png" src="_images/88cebc7097ebafc537aa91f0d769be6ff862463073474477bcc3a85275a4feef.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 31 </span><span class="caption-text">Spanningen op de verschillende knopen van de klasse F versterker.</span><a class="headerlink" href="#ffig2" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 40 </span><span class="caption-text">Spanningen op de verschillende knopen van de klasse F versterker.</span><a class="headerlink" href="#ffig2" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 </div>
 </div>
 <p>Wanneer we op basis van de spanningen bekomen in de bovenstaande figuur de spanningen over de trilkring van de eerste harmonische en de spanningen over de trilkring van de derde harmonische plotten, zien we dat op moment dat de eerste harmonische een minimum bereikt, de derde harmonische piekt. Dit heeft een belangrijk voordeel, namelijk de spanning over het totale circuit wordt kleiner of er kan met dezelfde spanning een veel grotere swing bekomen worden.</p>
-<p><a class="reference internal" href="#ffig3"><span class="std std-numref">Fig. 32</span></a> toont de spanningen over beide trilkringen afzonderlijk. Hierdoor is de tegenfase van de derde harmonische veel duidelijker.</p>
+<p><a class="reference internal" href="#ffig3"><span class="std std-numref">Fig. 41</span></a> toont de spanningen over beide trilkringen afzonderlijk. Hierdoor is de tegenfase van de derde harmonische veel duidelijker.</p>
 <div class="cell docutils container">
 <div class="cell_output docutils container">
 <figure class="align-default" id="ffig3">
 <img alt="_images/8fe0c0e1800e187cf4551530b994d55edaa1bc9daf689b8903c34c2092568673.png" src="_images/8fe0c0e1800e187cf4551530b994d55edaa1bc9daf689b8903c34c2092568673.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 32 </span><span class="caption-text">Verloop van de spanning over de eerste (LC1) en over de derde (LC3) harmonische.</span><a class="headerlink" href="#ffig3" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 41 </span><span class="caption-text">Verloop van de spanning over de eerste (LC1) en over de derde (LC3) harmonische.</span><a class="headerlink" href="#ffig3" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 </div>
 </div>
-<p><a class="reference internal" href="#ffig4"><span class="std std-numref">Fig. 33</span></a> toont het verloop van de collectorstroom van de stuurtransistor. We merken in dit stroomverloop veel meer features terug. Het belangrijke hierin is dat de stroom veel meer een blokgolfpatroon vormt, wat een veel efficietere werking oplevert.</p>
+<p><a class="reference internal" href="#ffig4"><span class="std std-numref">Fig. 42</span></a> toont het verloop van de collectorstroom van de stuurtransistor. We merken in dit stroomverloop veel meer features terug. Het belangrijke hierin is dat de stroom veel meer een blokgolfpatroon vormt, wat een veel efficietere werking oplevert.</p>
 <div class="cell docutils container">
 <div class="cell_output docutils container">
 <figure class="align-default" id="ffig4">
 <img alt="_images/929302cbaf7b23ebb5013a5b53284143132ba374fcc94550ac489481129cc865.png" src="_images/929302cbaf7b23ebb5013a5b53284143132ba374fcc94550ac489481129cc865.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 33 </span><span class="caption-text">Verloop van de collector current.</span><a class="headerlink" href="#ffig4" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 42 </span><span class="caption-text">Verloop van de collector current.</span><a class="headerlink" href="#ffig4" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 </div>
 </div>
-<p><a class="reference internal" href="#ffigy"><span class="std std-numref">Fig. 34</span></a> toont in detail het stroom en spanningsverloop van de tweede en de 16de oscillatie na het opstarten. We zien dat de stroom in belangrijke mate terugvalt telkens de transistor in saturatie komt, maar ook dat er gedurende lange tijd behoorlijk wat stroom kan geleverd worden bij erg lage spanning over de transistor. Dat levert voor de klasse F veel hogere efficienties op.</p>
+<p><a class="reference internal" href="#ffigy"><span class="std std-numref">Fig. 43</span></a> toont in detail het stroom en spanningsverloop van de tweede en de 16de oscillatie na het opstarten. We zien dat de stroom in belangrijke mate terugvalt telkens de transistor in saturatie komt, maar ook dat er gedurende lange tijd behoorlijk wat stroom kan geleverd worden bij erg lage spanning over de transistor. Dat levert voor de klasse F veel hogere efficienties op.</p>
 <p>We zien ook dat V(5) meer dan 2V negatief wordt. De AC zwaai aan de uitgang is hierdoor ook meer dan 2V groter dan de voedingsspanning (11V in dit geval).</p>
 <div class="cell docutils container">
 <div class="cell_output docutils container">
 <figure class="align-default" id="ffigy">
 <img alt="_images/81edbf9665956b57c80a1853629646609e43096bd7aa778527a8cb37f3d0aee9.png" src="_images/81edbf9665956b57c80a1853629646609e43096bd7aa778527a8cb37f3d0aee9.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 34 </span><span class="caption-text">Detail van de spanningen en stromen (spice simulatie) van de klasse F versterker: (links) opstart van de oscillatie (rechts) stuurperiode waarbij de bipolaire transistor gedurende een deel van de stuurperiode in verzadiging komt (in het rood aangegeven).</span><a class="headerlink" href="#ffigy" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 43 </span><span class="caption-text">Detail van de spanningen en stromen (spice simulatie) van de klasse F versterker: (links) opstart van de oscillatie (rechts) stuurperiode waarbij de bipolaire transistor gedurende een deel van de stuurperiode in verzadiging komt (in het rood aangegeven).</span><a class="headerlink" href="#ffigy" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 </div>
 </div>
 <section id="alternatieve-schema-s-van-de-klasse-f-versterker">
 <h2>Alternatieve schema’s van de klasse F versterker.<a class="headerlink" href="#alternatieve-schema-s-van-de-klasse-f-versterker" title="Link to this heading">#</a></h2>
-<p>Zoals bij de klasse C, kunnen we ook bij de klasse F een alternatief schema uitwerken waarbij de oscillatie rond de grond plaatsvindt. <a class="reference internal" href="#ffig5"><span class="std std-numref">Fig. 35</span></a> toont dit schema, de spicefile kunnen we bekijken in <a class="reference internal" href="#listingf2"><span class="std std-numref">Spice Listing 9</span></a> en de resultaten van deze simulatie kunnen we terugvinden in <a class="reference internal" href="#ffig6"><span class="std std-numref">Fig. 36</span></a>.</p>
+<p>Zoals bij de klasse C, kunnen we ook bij de klasse F een alternatief schema uitwerken waarbij de oscillatie rond de grond plaatsvindt. <a class="reference internal" href="#ffig5"><span class="std std-numref">Fig. 44</span></a> toont dit schema, de spicefile kunnen we bekijken in <a class="reference internal" href="#listingf2"><span class="std std-numref">Spice Listing 9</span></a> en de resultaten van deze simulatie kunnen we terugvinden in <a class="reference internal" href="#ffig6"><span class="std std-numref">Fig. 45</span></a>.</p>
 <div class="cell docutils container">
 <div class="cell_output docutils container">
 <figure class="align-default" id="ffig5">
 <img alt="_images/d16b065f2c5a16db2de852a81f7199f7f3bde419eab2092932a656582a916d3e.svg" src="_images/d16b065f2c5a16db2de852a81f7199f7f3bde419eab2092932a656582a916d3e.svg" />
 <figcaption>
-<p><span class="caption-number">Fig. 35 </span><span class="caption-text">Basisschema van de klasse F versterker waarbij de uitgang oscilleert rond de grond.</span><a class="headerlink" href="#ffig5" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 44 </span><span class="caption-text">Basisschema van de klasse F versterker waarbij de uitgang oscilleert rond de grond.</span><a class="headerlink" href="#ffig5" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 </div>
@@ -680,18 +680,18 @@ In <a class="reference internal" href="#vermogenversterkers2"><span class="std s
 <figure class="align-default" id="ffig6">
 <img alt="_images/74f4c6808326e172336caed38596000f583dd92c8bdcc47e2f71d90355a6e0eb.png" src="_images/74f4c6808326e172336caed38596000f583dd92c8bdcc47e2f71d90355a6e0eb.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 36 </span><span class="caption-text">Spice simulatie van de Klasse F waarbij de uitgang oscilleert rond de grond.</span><a class="headerlink" href="#ffig6" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 45 </span><span class="caption-text">Spice simulatie van de Klasse F waarbij de uitgang oscilleert rond de grond.</span><a class="headerlink" href="#ffig6" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 </div>
 </div>
-<p><a class="reference internal" href="#ffig7"><span class="std std-numref">Fig. 37</span></a> toont het resultaat van de spanningen over de individuele trilkringen. Het toevoegen van de spoel <span class="math notranslate nohighlight">\(L_2\)</span> en de capaciteit <span class="math notranslate nohighlight">\(C_2\)</span> geeft aanleiding tot een bijkomen risico op extra oscillaties. In het geval van deze simulaties zijn deze 2 componenten zo extreem groot genomen dat er hier geen zwevingen zichtbaar zijn.</p>
+<p><a class="reference internal" href="#ffig7"><span class="std std-numref">Fig. 46</span></a> toont het resultaat van de spanningen over de individuele trilkringen. Het toevoegen van de spoel <span class="math notranslate nohighlight">\(L_2\)</span> en de capaciteit <span class="math notranslate nohighlight">\(C_2\)</span> geeft aanleiding tot een bijkomen risico op extra oscillaties. In het geval van deze simulaties zijn deze 2 componenten zo extreem groot genomen dat er hier geen zwevingen zichtbaar zijn.</p>
 <div class="cell docutils container">
 <div class="cell_output docutils container">
 <figure class="align-default" id="ffig7">
 <img alt="_images/11bd69780d5c76b8dbcd461b522c8148a16cc26d34d94927eb19565d94d427c8.png" src="_images/11bd69780d5c76b8dbcd461b522c8148a16cc26d34d94927eb19565d94d427c8.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 37 </span><span class="caption-text">Spice simulatie van de Klasse F waarbij de uitgang oscilleert rond de grond. Verloop van de spanning over de eerste (LC1) en over de derde (LC3) harmonische.</span><a class="headerlink" href="#ffig7" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 46 </span><span class="caption-text">Spice simulatie van de Klasse F waarbij de uitgang oscilleert rond de grond. Verloop van de spanning over de eerste (LC1) en over de derde (LC3) harmonische.</span><a class="headerlink" href="#ffig7" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 </div>
