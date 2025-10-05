@@ -1,0 +1,72 @@
+/* Custom figure classes for MyST-Parser */
+
+/* Center-aligned figure with border */
+.figure-center {
+    text-align: center;
+    margin: 2em auto;
+    border: 2px solid #ddd;
+    padding: 1em;
+    border-radius: 8px;
+}
+
+/* Small figure with shadow */
+.figure-small {
+    max-width: 300px;
+    margin: 1em auto;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border-radius: 4px;
+}
+
+/* Side-by-side figures */
+.figure-half {
+    width: 48%;
+    display: inline-block;
+    margin: 0 1%;
+    vertical-align: top;
+}
+
+/* Highlighted figure */
+.figure-highlight {
+    border: 3px solid #4CAF50;
+    background-color: #f9f9f9;
+    padding: 1em;
+    border-radius: 10px;
+}
+
+/* Float left figure */
+.figure-left {
+    float: left;
+    margin: 0 1em 1em 0;
+    max-width: 40%;
+}
+
+/* Float right figure */
+.figure-right {
+    float: right;
+    margin: 0 0 1em 1em;
+    max-width: 40%;
+}
+
+/* Full width figure */
+.figure-full {
+    width: 100%;
+    margin: 2em 0;
+}
+
+/* Circuit diagram specific styling */
+.figure-circuit {
+    background-color: #fafafa;
+    border: 1px solid #ccc;
+    padding: 1em;
+    text-align: center;
+    margin: 1.5em auto;
+}
+
+/* Spice output styling */
+.figure-spice {
+    font-family: 'Courier New', monospace;
+    background-color: #f5f5f5;
+    border-left: 4px solid #333;
+    padding: 1em;
+    margin: 1em 0;
+}
