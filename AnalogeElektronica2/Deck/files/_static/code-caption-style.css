@@ -1,3 +1,48 @@
+/* Custom counters for different figure types */
+body {
+    counter-reset: code-figure figure-normal simulation-figure;
+}
+
+/* Code-style figure counter */
+.figure-code-caption {
+    counter-increment: code-figure;
+}
+
+.figure-code-caption .caption::before {
+    content: "Code Figuur " counter(code-figure) ": ";
+    font-weight: bold;
+}
+
+/* Simulation figure counter */
+.figure-simulation {
+    counter-increment: simulation-figure;
+}
+
+.figure-simulation .caption::before {
+    content: "Simulatie " counter(simulation-figure) ": ";
+    font-weight: bold;
+}
+
+/* Literalinclude style counter */
+.figure-literalinclude {
+    counter-increment: code-figure;
+}
+
+.figure-literalinclude .caption::before {
+    content: "Listing " counter(code-figure) ": ";
+    font-weight: bold;
+}
+
+/* Normal figures keep default numbering */
+.figure-normal {
+    counter-increment: figure-normal;
+}
+
+.figure-normal .caption::before {
+    content: "Figuur " counter(figure-normal) ": ";
+    font-weight: bold;
+}
+
 /* Code-style captions for figures */
 .figure-code-caption .caption {
     font-family: 'SFMono-Regular', 'Monaco', 'Inconsolata', 'Roboto Mono', 'Source Code Pro', monospace;
@@ -55,4 +100,16 @@ html[data-theme="dark"] .figure-literalinclude .caption {
     padding: 0.2em 0.4em;
     border-radius: 3px;
     color: #24292e;
+}
+
+/* Simulation specific styling */
+.figure-simulation .caption {
+    font-family: 'SFMono-Regular', 'Monaco', 'Inconsolata', 'Roboto Mono', 'Source Code Pro', monospace;
+    font-size: 0.875em;
+    background-color: #fff3cd;
+    border: 1px solid #ffeeba;
+    border-radius: 4px;
+    padding: 8px 12px;
+    margin-top: 8px;
+    color: #856404;
 }
