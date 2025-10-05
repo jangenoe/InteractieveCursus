@@ -7827,7 +7827,25 @@ div .csl-right-inline{text-align: left}</style>
 <!-- End of mathjax configuration --></head>
 <body class="jp-Notebook" data-jp-theme-light="true" data-jp-theme-name="JupyterLab Light">
 <div class="reveal">
-<div class="slides"><section data-state="kuleuven_title_slide reveal"><section><div class="title">Klasse D versterkers</div><div class="subtitle">Hoogfrequent versterkers<br/>met 2 vermogentransistors</div><div class="speaker kuleuvenwhite">Jan Genoe</div><div class="date kuleuvenwhite">October 2025</div></section></section><section data-state="kuleuven_slide"><section><h6>Basisschema van de klasse D versterker</h6><div class="BottomSlideReference"></div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noInput">
+<div class="slides"><section data-state="kuleuven_title_slide reveal"><section><div class="title">Klasse D versterkers</div><div class="subtitle">Hoogfrequent versterkers<br/>met 2 vermogentransistors</div><div class="speaker kuleuvenwhite">Jan Genoe</div><div class="date kuleuvenwhite">October 2025</div></section></section><section data-state="kuleuven_slide"><section><h6>Klasse D versterker</h6><div class="BottomSlideReference"></div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput celltag_remove-cell4PDF celltag_remove-cell4BOOK" data-mime-type="text/markdown">
+<ul>
+<li>Combinatie van een balansschakeling (zie klasse B) met een  resonante L-C kring (zie klasse C)</li>
+<li>Kan enkel vermogen leveren op de resonantiefrequentie van de kring</li>
+<li>Sturing gebeurt aan de hand van een blokgolf op de resonantiefrequentie (dit houdt in dat de transistors gebruikt worden als schakelaars)</li>
+<li>Enkel de eerste harmonische komt ongehinderd door naar de belasting<ul>
+<li>Dit kan enkel maar voor een resonante versterker</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div></section></section><section data-state="kuleuven_slide"><section><h6>Basisschema van de klasse D versterker</h6><div class="BottomSlideReference"></div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noInput">
 <div class="jp-Cell-outputWrapper">
 <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
 </div>
@@ -8560,6 +8578,28 @@ z
 </defs>
 </svg>
 </div>
+</div>
+</div>
+</div>
+</div></section></section><section data-state="kuleuven_slide"><section><h6>Stromen en spanningen</h6><div class="BottomSlideReference"></div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput celltag_remove-cell4PDF celltag_remove-cell4BOOK" data-mime-type="text/markdown">
+<ul>
+<li>Er wordt geschakeld als de stroom door de inductantie 0 is</li>
+<li>Spanning over de transistor<ul>
+<li>ongeveer 0 Volt in geval de transistor stroom geleidt</li>
+<li>Voedingsspanning in het geval de transistor geen stroom geleidt</li>
+</ul>
+</li>
+<li>Stroom door de transistor : Afwisselend<ul>
+<li>een halve periode stroom (sinus)</li>
+<li>een halve periode geen stroom</li>
+</ul>
+</li>
+</ul>
 </div>
 </div>
 </div>
@@ -10310,7 +10350,96 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 </div>
 </div>
 </div>
-</div></section></section><section data-state="kuleuven_slide"><section><h6>Harmonische componenten in de spanning</h6><div class="BottomSlideReference"></div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noInput">
+</div></section></section><section data-state="kuleuven_slide"><section><h6>Fourrier reeks van de blokgolf</h6><div class="BottomSlideReference"></div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput celltag_remove-cell4PDF celltag_remove-cell4BOOK" data-mime-type="text/markdown">
+<ul>
+<li>Heeft geen even harmonische componenten</li>
+<li>Oneven hogere harmonische componenten<ul>
+<li>dalen sterk met de frequentie</li>
+<li>zien ook een veel hogere impedentie</li>
+</ul>
+</li>
+</ul>
+<p>Dus, de harmonische bijdrage is klein, maar niet onbestaande (hangt af van de kwaliteit van de kring)</p>
+</div>
+</div>
+</div>
+</div></section></section><section data-state="kuleuven_slide"><section><h6>Nuttig vermogen</h6><div class="BottomSlideReference"></div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput celltag_remove-cell4PDF celltag_remove-cell4BOOK" data-mime-type="text/markdown">
+<ul>
+<li>Bekomen spanning over R<sub>L</sub> is de amplitude van de eerste harmonische van de blokgolf.<ul>
+<li>Dit houdt in dat amplitude modulatie alleen maar kan bekomen worden door plaatmodulatie</li>
+</ul>
+</li>
+<li>Deze amplitude bedraagt:</li>
+</ul>
+</div>
+</div>
+</div>
+</div><div class="fragment"><h6></h6><div class="BottomSlideReference"></div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput celltag_remove-cell4PDF celltag_remove-cell4BOOK" data-mime-type="text/markdown">
+<p>$$ V_{R_L}= \frac{2 V_{DD}}{\pi} $$</p>
+</div>
+</div>
+</div>
+</div></div><div class="fragment"><h6></h6><div class="BottomSlideReference"></div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput celltag_remove-cell4PDF celltag_remove-cell4BOOK" data-mime-type="text/markdown">
+<ul>
+<li>Het nuttig vermogen is dus:</li>
+</ul>
+</div>
+</div>
+</div>
+</div></div><div class="fragment"><h6></h6><div class="BottomSlideReference"></div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput celltag_remove-cell4PDF celltag_remove-cell4BOOK" data-mime-type="text/markdown">
+<p>$$ P_{R_L}= \frac{2 V^2_{DD}}{\pi^2 R_L}  $$</p>
+</div>
+</div>
+</div>
+</div></div></section></section><section data-state="kuleuven_slide"><section><h6>Opgestapelde energie</h6><div class="BottomSlideReference"></div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput celltag_remove-cell4PDF celltag_remove-cell4BOOK" data-mime-type="text/markdown">
+<ul>
+<li>De amplitude over R<sub>L</sub> zegt niets over de amplitude over L<sub>1</sub> (en dus ook tegengesteld over C<sub>1</sub>)</li>
+<li>Deze amplitude wordt bepaald door de kwaliteitsfactor (Q) van de kring, dit is de verhouding tussen de opgestapelde energie en de vrijgegeven energie.</li>
+</ul>
+</div>
+</div>
+</div>
+</div><div class="fragment"><h6></h6><div class="BottomSlideReference"></div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>$$ Q= \frac{\omega L_1}{R_L} = \frac{\text{opgestapelde energie}}{\text{vrijgegeven energie}}$$</p>
+</div>
+</div>
+</div>
+</div></div></section></section><section data-state="kuleuven_slide"><section><h6>Harmonische componenten in de spanning</h6><div class="BottomSlideReference"></div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noInput">
 <div class="jp-Cell-outputWrapper">
 <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
 </div>
@@ -10356,7 +10485,46 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 </div>
 </div>
 </div>
-</div></section></section><section data-state="kuleuven_slide"><section><h6>Basisschema van de klasse D versterker met beschermdiodes</h6><div class="BottomSlideReference"></div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noInput">
+</div></section></section><section data-state="kuleuven_slide"><section><h6>Rendement</h6><div class="BottomSlideReference"></div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput celltag_remove-cell4PDF celltag_remove-cell4BOOK" data-mime-type="text/markdown">
+<ul>
+<li>Theoretisch 100%</li>
+<li>Lager door<ul>
+<li>(Beperkte) stroom in de harmonischen</li>
+<li>Schakelverliezen<ul>
+<li>Bepaald door de ladingsopslag q in het actief element</li>
+<li>Evenredig met q<sup>2</sup></li>
+<li>Evenredig met de schakelfrequentie</li>
+</ul>
+</li>
+<li>Spanningsval<ul>
+<li>bipolaire componenten: vaste spanning</li>
+<li>veldeffect componenten: vaste weerstand</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div><aside class="notes">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>De schakelverliezen kunnen als het volgt ingeschat worden. De interne spanningen van de schakelende transistor (bv V<sub>BE</sub> of V<sub>GS</sub>) moeten om een bepaalde spanning opgeladen zijn om in geleiding of in sper te kunnen zijn. Om over te gaan naar de andere geleidingsvorm moeten die capaciteiten opgeladen of ontladen worden. Hiervoor is energie nodige en dit levert verliezen op.</p>
+<p>Eens een transistor in geleiding kan de spanning over deze transistor niet helemaal nul zijn. Bij een bipolaire transistor zal er steeds de saturatiespanning over de transistor blijven staan en bij een MOS transistor bepaalt de aan-weerstand , samen met de stroom hoeveel spanning er nog over staat. Hetzelfde geldt voor een MESFET of een JFET.</p>
+</div>
+</div>
+</div>
+</div>
+</aside></section></section><section data-state="kuleuven_slide"><section><h6>Basisschema van de klasse D versterker met beschermdiodes</h6><div class="BottomSlideReference"></div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noInput">
 <div class="jp-Cell-outputWrapper">
 <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
 </div>
@@ -11127,7 +11295,19 @@ z
 </div>
 </div>
 </div>
-</div></section></section><section data-state="kuleuven_slide"><section><h6>SPICE file Klasse D circuit met diodes</h6><div class="BottomSlideReference"></div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noInput celltag_remove-cell4PDF celltag_remove-cell4BOOK">
+</div><aside class="notes">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>We merken dat indien de klasse D versterker off-resonance aangestuurd wordt, dat de impedantie dan ook een reactieve (=imaginaire) component heeft. Daardoor zullen stroom en spanning niet meer in fase zijn.
+Als een gevolg hiervan zou de transistor die in geleiding is een omgekeerde stroom moeten leveren, wat niet kan in geval van een bipolaire transistor. Hierdoor zou de stroom plots afgebroken worden en er over de inductantie een zeer grote spanning komen te staan, wat de transistor kan kapotmaken.</p>
+</div>
+</div>
+</div>
+</div>
+</aside></section></section><section data-state="kuleuven_slide"><section><h6>SPICE file Klasse D circuit met diodes</h6><div class="BottomSlideReference"></div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noInput celltag_remove-cell4PDF celltag_remove-cell4BOOK">
 <div class="jp-Cell-outputWrapper">
 <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
 </div>
@@ -12217,7 +12397,18 @@ z
 </div>
 </div>
 </div>
-</div></section></section><section data-state="kuleuven_slide"><section><h6>klasse D versterker met enkel NPN transistors</h6><div class="BottomSlideReference"></div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noInput">
+</div><aside class="notes">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>In de plaats van met 2 complementaire transistors kan deze schakeling ook uitgevoerd worden met 2 NPN transistors. Maar deze 2 transistors moeten dan wel aangestuurd worden met een tegengesteld signaal tussen hun basis en emitter. Hiervoor kan bijvoorbeeld een transformator gebruikt worden, zoals aangegeven in het schema. Het blijft hierbij zo dat het stuursignaal dat opgelegd wordt aan de trilkring een blokgolf spanning is. De kring zorgt er dan voor dat de stroom die erdoor loopt (voornamelijk) de eerste harmonische is van die opgelegde spanning. Deze stroom loopt dan ook door de belasting waardoor we hier zowel een sinusvormige stroom als spanning bekomen.</p>
+</div>
+</div>
+</div>
+</div>
+</aside></section></section><section data-state="kuleuven_slide"><section><h6>klasse D versterker met enkel NPN transistors</h6><div class="BottomSlideReference"></div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noInput">
 <div class="jp-Cell-outputWrapper">
 <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
 </div>
@@ -13263,7 +13454,19 @@ z
 </div>
 </div>
 </div>
-</div></section></section><section data-state="kuleuven_slide"><section><h6>klasse D versterker met spanningssturing</h6><div class="BottomSlideReference"></div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noInput">
+</div><aside class="notes">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>Alle andere schema's kunnen op een gelijkaardige wijze worden uitgerust met overbruggingsdiodes om een negatieve spanning over de transistor te voorkomen.
+Deze overbruggingsdiodes zorgen ervoor dat de klasse D versterker veel geschikter is dan de klasse C versterker voor een werking iets naast de resonantiefrequentie.</p>
+</div>
+</div>
+</div>
+</div>
+</aside></section></section><section data-state="kuleuven_slide"><section><h6>klasse D versterker met spanningssturing</h6><div class="BottomSlideReference"></div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noInput">
 <div class="jp-Cell-outputWrapper">
 <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
 </div>
@@ -14149,7 +14352,20 @@ z
 </div>
 </div>
 </div>
-</div></section></section><section data-state="kuleuven_slide"><section><h6>keuze wikkelverhouding transformator</h6><div class="BottomSlideReference"></div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noInput">
+</div><aside class="notes">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>De trilkring in het bovenstaande schema krijgt ook een blokgolf spanning te verwerken. Deze wordt echter niet rechtstreeks opgelegd, maar wel aan de hand van een transformator. Indien de rechter transistor in geleiding is krijgen we de positieve voedingsspanning over de trilkring. Indien de linker transistor in geleiding is krijgen we de negatieve voedingsspanning over de trilkring. De trilkring bepaald vervolgens de stromen die er vloeien en deze stromen lopen dan ook door de respectievelijke transistors.
+Indien de wikkelverhouding groter dan 1 is, wordt er een grotere blokgolf spanning over de trilkring bekomen en moet er een zelfde factor meer stroom lopen door de transistors dan er door de trilkring loopt. Omgekeerd geldt natuurlijk het omgekeerde.
+Ook dit schema heeft het voordeel dat er gewerkt wordt met npn transistors.</p>
+</div>
+</div>
+</div>
+</div>
+</aside></section></section><section data-state="kuleuven_slide"><section><h6>keuze wikkelverhouding transformator</h6><div class="BottomSlideReference"></div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noInput">
 <div class="jp-Cell-outputWrapper">
 <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
 </div>
@@ -17259,7 +17475,19 @@ z
 </div>
 </div>
 </div>
-</div></section></section><section data-state="kuleuven_slide"><section><h6>met stroomsturing en beveiligingsdiodes</h6><div class="BottomSlideReference"></div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noInput">
+</div><aside class="notes">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>Een klasse D versterker, kan, zoals de klasse C versterker ook aangestuurd worden met stroomsturing. In dit geval moeten we wel werken met een parallel resonantiekring. De stroom die naar de kring gestuurd wordt is in dit geval een blokgolf. Enkel de eerste harmonische uit deze blokgolf zal in staat zijn een spanning op te bouwen over de trilkring op de bouwen en dus vermogen te leveren aan de belasting. Alle hogere harmonischen zien een lage impedantie in de condensator C<sub>1</sub> en laden deze condensator dus op en af. Er wordt geen spanning over R<sub>L</sub> bekomen en dus ook geen vermogen overgedragen.
+Om een stroomsturing te bekomen moeten we ervoor zorgen dat de stroom door elk van de primaire wikkelingen van de transformator steeds een constante is. Hiervoor plaatsen we een grote inductantie L<sub>0</sub> tussen de voedingsspanning V<sub>dd</sub> en de aftakking van de transformator. Deze inductantie zal ervoor zorgen dat elke stroomvariatie wordt tegengewerkt door de spanning aan te passen.</p>
+</div>
+</div>
+</div>
+</div>
+</aside></section></section><section data-state="kuleuven_slide"><section><h6>met stroomsturing en beveiligingsdiodes</h6><div class="BottomSlideReference"></div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noInput">
 <div class="jp-Cell-outputWrapper">
 <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
 </div>

@@ -570,6 +570,7 @@ document.write(`
 <h1>Klasse D resonante Versterkers<a class="headerlink" href="#klasse-d-resonante-versterkers" title="Link to this heading">#</a></h1>
 <p>In dit hoofdstuk bespreken we de klasse D resonante hoogfrequent versterkers. Hierbij gebruiken we 2 vermogentransistors die een resonante kring aan hoge frequentie aanstuurt. Het ontwerp van de kring is dusdanig dat enkel maar de component op resonantie door de resonante kring doorgelaten wordt naar de belasting. In die optiek kunnen we ook de resonante kring beschouwen als een banddoorlaatfilter.</p>
 <p>Het is belangrijk hierin een verschil te maken met de klasse D audio versterkers. Hierin worden beide vermogentransistors ook aan hoge frequenties geschakeld maar dient het LRC filtercircuit dat erachter hangt als een laagdoorlaatfilter, zodat de belasting enkel maar de laagfrequente component van het stuursignaal ziet.</p>
+<p>In tegenstelling met de klasse B versterker, zijn deze 2 transistors schakelende elementen.</p>
 <p>In <a class="reference internal" href="#vermogenversterkersd"><span class="std std-numref">Tabel 3</span></a> situeren we de klasse D versterkers tussen de andere vermogenversterkers.</p>
 <div class="pst-scrollable-table-container"><table class="table" id="vermogenversterkersd">
 <caption><span class="caption-number">Tabel 3 </span><span class="caption-text">Indeling van de vermogenversterkers</span><a class="headerlink" href="#vermogenversterkersd" title="Link to this table">#</a></caption>
@@ -677,6 +678,7 @@ document.write(`
 <p>In praktijk zal de amplitude van de eerste harmonische op knoop 2 (iets) lager zijn dan <span class="math notranslate nohighlight">\(\frac{2 V_{dd}}{\pi}\)</span> omdat we over de vermogentransistors een spanning verliezen. In het geval van het gebruik van de vermogentransistors in de gemeenschappelijke collector schakeling (zoals boven) verliezen we typisch de diode spanning tussen basis en emitter (hier ongeveer 0.7 V). In andere gevallen is het vaak de saturatiespanning van de bipolaire transistor of de spanning over de aan weerstand in het geval van een MOS transistor. We zien in <a class="reference internal" href="#dfft1"><span class="std std-numref">Fig. 52</span></a> dat deze overeenkomt met <span class="math notranslate nohighlight">\(\frac{2 (V_{dd}-1.4V)}{\pi}\)</span> = 11.84V. Dit is ook de spanningpiek die we zien op knoop 6 (<span class="math notranslate nohighlight">\(V_{out}\)</span>) in <a class="reference internal" href="#dfig5"><span class="std std-numref">Fig. 50</span></a> wanneer de steady-state oscillatie bekomen wordt.</p>
 <div class="cell docutils container">
 <div class="cell_output docutils container">
+<figure class="align-default">
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(PeriodValue(3.9650000000000475e-07 s),
  PeriodValue(1.9905000000000066e-06 s),
  UnitValue(0.8640144704168158 V),
@@ -684,10 +686,19 @@ document.write(`
  UnitValue(18.294656166092967 V))
 </pre></div>
 </div>
+</figure>
 </div>
 </div>
 <div class="cell docutils container">
 </div>
+<div class="math notranslate nohighlight">
+\[ Q= \frac{\omega L_1}{R_L} = \frac{\text{opgestapelde energie}}{\text{vrijgegeven energie}}\]</div>
+<p>De eerste en de derde harmonische zien de volgende impedantie:</p>
+<div class="math notranslate nohighlight">
+\[ Z_{\omega_o}= j \omega_o L_1 +\frac{1}{j \omega_o C_1} +R_L = R_L \]</div>
+<div class="math notranslate nohighlight">
+\[ Z_{3\omega_o}= j 3 \omega_o L_1 +\frac{1}{j 3 \omega_o C_1} +R_L = j \frac{8}{3} \omega_o L_1 + R_L = R_L \left( 1+ j\frac{8}{3} Q  \right)\]</div>
+<p>Omdat de derde harmonische slechts 1/3 van de amplitude van de eerste harmonische heeft en een veel grotere impedantie heeft zal de stroom en dus ook het vermogen hierin veel beperkter zijn. Het is de factor Q die dus de kwaliteit van de trilkring bepaalt.</p>
 <div class="cell docutils container">
 <div class="cell_output docutils container">
 <figure class="align-default" id="dfft1">
@@ -741,10 +752,11 @@ j \omega L_1 =-\frac{1}{j \omega C_1}
 </figure>
 </div>
 </div>
+<p>De schakelverliezen kunnen als het volgt ingeschat worden. De interne spanningen van de schakelende transistor (bv V<sub>BE</sub> of V<sub>GS</sub>) moeten om een bepaalde spanning opgeladen zijn om in geleiding of in sper te kunnen zijn. Om over te gaan naar de andere geleidingsvorm moeten die capaciteiten opgeladen of ontladen worden. Hiervoor is energie nodige en dit levert verliezen op.</p>
+<p>Eens een transistor in geleiding kan de spanning over deze transistor niet helemaal nul zijn. Bij een bipolaire transistor zal er steeds de saturatiespanning over de transistor blijven staan en bij een MOS transistor bepaalt de aan-weerstand , samen met de stroom hoeveel spanning er nog over staat. Hetzelfde geldt voor een MESFET of een JFET.</p>
 </section>
 <section id="simulatie-met-aansturing-off-resonantie">
 <h3>Simulatie met aansturing off-resonantie<a class="headerlink" href="#simulatie-met-aansturing-off-resonantie" title="Link to this heading">#</a></h3>
-<p>Wanneer het mogelijk is dat de aansturing van de klasse D versterker niet helemaal exact gelijk met de resonantie frequentie gebeurt,moeten we het schema van <a class="reference internal" href="#dfig1"><span class="std std-numref">Fig. 47</span></a> uitbreiden met diodes om een omgekeerde stroom door de transistors mogelijk te maken. Het nieuwe schema zien we in <a class="reference internal" href="#dfig1diode"><span class="std std-numref">Fig. 55</span></a> .</p>
 <div class="cell docutils container">
 <div class="cell_output docutils container">
 <figure class="align-default" id="dfig1diode">
@@ -755,6 +767,9 @@ j \omega L_1 =-\frac{1}{j \omega C_1}
 </figure>
 </div>
 </div>
+<p>We merken dat indien de klasse D versterker off-resonance aangestuurd wordt, dat de impedantie dan ook een reactieve (=imaginaire) component heeft. Daardoor zullen stroom en spanning niet meer in fase zijn.
+Als een gevolg hiervan zou de transistor die in geleiding is een omgekeerde stroom moeten leveren, wat niet kan in geval van een bipolaire transistor. Hierdoor zou de stroom plots afgebroken worden en er over de inductantie een zeer grote spanning komen te staan, wat de transistor kan kapotmaken.</p>
+<p>Wanneer het mogelijk is dat de aansturing van de klasse D versterker niet helemaal exact gelijk met de resonantie frequentie gebeurt,moeten we het schema van <a class="reference internal" href="#dfig1"><span class="std std-numref">Fig. 47</span></a> uitbreiden met diodes om een omgekeerde stroom door de transistors mogelijk te maken. Het nieuwe schema zien we in <a class="reference internal" href="#dfig1diode"><span class="std std-numref">Fig. 55</span></a>.</p>
 <div class="literal-block-wrapper docutils container" id="listingd1d">
 <div class="code-block-caption"><span class="caption-number">Spice Listing 11 </span><span class="caption-text">Basis Klasse D circuit met diodes</span><a class="headerlink" href="#listingd1d" title="Link to this code">#</a></div>
 <div class="highlight-spice notranslate"><div class="highlight"><pre><span></span><span class="o">*</span><span class="w"> </span><span class="nx">Class</span><span class="w"> </span><span class="nx">D</span><span class="w"> </span><span class="nx">amp</span><span class="w"> </span><span class="mi">1</span>
@@ -822,6 +837,7 @@ j \omega L_1 =-\frac{1}{j \omega C_1}
 </figure>
 </div>
 </div>
+<p>In de plaats van met 2 complementaire transistors kan deze schakeling ook uitgevoerd worden met 2 NPN transistors. Maar deze 2 transistors moeten dan wel aangestuurd worden met een tegengesteld signaal tussen hun basis en emitter. Hiervoor kan bijvoorbeeld een transformator gebruikt worden, zoals aangegeven in het schema. Het blijft hierbij zo dat het stuursignaal dat opgelegd wordt aan de trilkring een blokgolf spanning is. De kring zorgt er dan voor dat de stroom die erdoor loopt (voornamelijk) de eerste harmonische is van die opgelegde spanning. Deze stroom loopt dan ook door de belasting waardoor we hier zowel een sinusvormige stroom als spanning bekomen.</p>
 <section id="aanpassing-voor-de-aansturing-off-resonantie">
 <h3>Aanpassing voor de aansturing off-resonantie<a class="headerlink" href="#aanpassing-voor-de-aansturing-off-resonantie" title="Link to this heading">#</a></h3>
 <p>Het schema in <a class="reference internal" href="#dfig1npn"><span class="std std-numref">Fig. 59</span></a> kan ook verder aangepast worden om aansturing toe te laten op frequenties die een klein beetje verschillen van de resonantiefrequentie. Hiervoor is het nodig dat we diodes toevoegen die stroom toelaten die in de omgekeerde richting loopt dan deze van de vermogentransistors.  <a class="reference internal" href="#dfig1npndiode"><span class="std std-numref">Fig. 60</span></a> toont het aangepaste schema.</p>
@@ -835,6 +851,8 @@ j \omega L_1 =-\frac{1}{j \omega C_1}
 </figure>
 </div>
 </div>
+<p>Alle andere schema’s kunnen op een gelijkaardige wijze worden uitgerust met overbruggingsdiodes om een negatieve spanning over de transistor te voorkomen.
+Deze overbruggingsdiodes zorgen ervoor dat de klasse D versterker veel geschikter is dan de klasse C versterker voor een werking iets naast de resonantiefrequentie.</p>
 </section>
 </section>
 <section id="aansturing-met-transformator-aan-de-kant-van-de-belasting">
@@ -852,6 +870,9 @@ j \omega L_1 =-\frac{1}{j \omega C_1}
 </figure>
 </div>
 </div>
+<p>De trilkring in het bovenstaande schema krijgt ook een blokgolf spanning te verwerken. Deze wordt echter niet rechtstreeks opgelegd, maar wel aan de hand van een transformator. Indien de rechter transistor in geleiding is krijgen we de positieve voedingsspanning over de trilkring. Indien de linker transistor in geleiding is krijgen we de negatieve voedingsspanning over de trilkring. De trilkring bepaald vervolgens de stromen die er vloeien en deze stromen lopen dan ook door de respectievelijke transistors.
+Indien de wikkelverhouding groter dan 1 is, wordt er een grotere blokgolf spanning over de trilkring bekomen en moet er een zelfde factor meer stroom lopen door de transistors dan er door de trilkring loopt. Omgekeerd geldt natuurlijk het omgekeerde.
+Ook dit schema heeft het voordeel dat er gewerkt wordt met npn transistors.</p>
 <section id="keuze-van-de-wikkelverhouding">
 <h3>Keuze van de wikkelverhouding<a class="headerlink" href="#keuze-van-de-wikkelverhouding" title="Link to this heading">#</a></h3>
 <p>Een bijkomend belangrijk voordeel van <a class="reference internal" href="#dfig3spanning"><span class="std std-numref">Fig. 61</span></a>is dat de wikkelverhouding van de transformator kan aangepast worden aan het gewenste vermogen (<span class="math notranslate nohighlight">\(P_{ac}\)</span>) en de beschikbare voedingsspanning.</p>
@@ -909,6 +930,8 @@ P_{ac}=\frac{V_{ac}^2}{2 R_L}
 </figure>
 </div>
 </div>
+<p>Een klasse D versterker, kan, zoals de klasse C versterker ook aangestuurd worden met stroomsturing. In dit geval moeten we wel werken met een parallel resonantiekring. De stroom die naar de kring gestuurd wordt is in dit geval een blokgolf. Enkel de eerste harmonische uit deze blokgolf zal in staat zijn een spanning op te bouwen over de trilkring op de bouwen en dus vermogen te leveren aan de belasting. Alle hogere harmonischen zien een lage impedantie in de condensator C<sub>1</sub> en laden deze condensator dus op en af. Er wordt geen spanning over R<sub>L</sub> bekomen en dus ook geen vermogen overgedragen.
+Om een stroomsturing te bekomen moeten we ervoor zorgen dat de stroom door elk van de primaire wikkelingen van de transformator steeds een constante is. Hiervoor plaatsen we een grote inductantie L<sub>0</sub> tussen de voedingsspanning V<sub>dd</sub> en de aftakking van de transformator. Deze inductantie zal ervoor zorgen dat elke stroomvariatie wordt tegengewerkt door de spanning aan te passen.</p>
 <section id="id2">
 <h3>Aanpassing voor de aansturing off-resonantie<a class="headerlink" href="#id2" title="Link to this heading">#</a></h3>
 <p>Het schema in <a class="reference internal" href="#dfig4stroom"><span class="std std-numref">Fig. 64</span></a> kan ook verder aangepast worden om aansturing toe te laten op frequenties die een klein beetje verschillen van de resonantiefrequentie. Hiervoor is het nodig dat we diodes toevoegen die stroom toelaten die in de omgekeerde richting loopt dan deze van de vermogentransistors.  <a class="reference internal" href="#dfig4stroomdiode"><span class="std std-numref">Fig. 65</span></a> toont het aangepaste schema.</p>

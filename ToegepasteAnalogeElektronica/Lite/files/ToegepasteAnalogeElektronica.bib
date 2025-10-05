@@ -69,6 +69,77 @@
   pages = {9--20}}
 }
 
+
+@article{ma27WirelessPower2024,
+  title = {A 27 {{W Wireless Power Transceiver With Compact Single-Stage Regulated Class-E Architecture}} and {{Adaptive ZVS Control}}},
+  author = {Ma, Xiaofei and Ki, Wing-Hung and Lu, Yan},
+  year = {2024},
+  month = jun,
+  journal = {IEEE Journal of Solid-State Circuits},
+  volume = {59},
+  number = {6},
+  pages = {1782--1793},
+  issn = {1558-173X},
+  doi = {10.1109/JSSC.2023.3333196},
+  abstract = {This work presents a reconfigurable single-stage regulated Class-E (SSRE) wireless power transceiver that delivers 27 W for wireless charging at 6.78 MHz. The power stage of the transmitter merges a buck and a Class-E power amplifier (PA) into one conversion stage, saving one inductor and one capacitor with improved system efficiency. Instead of using a bulky external impedance tuning block to ensure a 50\% duty cycle operating point, the proposed Class-E zero-voltage switching (ZVS) controller allows the Class-E stage to work at an adaptive duty cycle without an off-chip tuning circuit. The high voltage and high current stress of the Class-E stage is handled by a GaN transistor, the driver of which uses an NMOS transistor for the high-side switch that realizes a rising edge of 2.8 ns with no overshoot. For directly sensing high voltage without using a resistor divider, an HV-NMOS shielded push-pull comparator is designed. An adaptive dead time control based on a sample-and-hold (S/H) feedback loop is proposed to reduce reverse conduction and recovery loss of the buck stage. The proposed solution demonstrates good trade-off among power level, efficiency, and power density. The SSRE WPT system delivers a maximum dc output power of 27 W with an end-to-end (E2E) efficiency of 63.0\% if the receiver uses a traditional passive rectifier. The peak E2E efficiency of 80.0\% is achieved at dc output power of 9.5 W; furthermore, in a two-chip differential transmitter configuration, the maximum output power reaches 45 W, and the maximum E2E efficiency is 83.7\%.},
+  keywords = {AC-DC,adaptive dead time,Buck converters,dc-ac,device-to-device (D2D),Gallium nitride,GaN driver,Inductors,power amplifier (PA),Power amplifiers,Power generation,rectifier,Rectifiers,single-stage regulation,Switches,Transmitters,wireless fast charging,wireless power transfer,Wireless power transfer,Zero voltage switching,zero-voltage switching (ZVS)}
+}
+
+@inproceedings{mao271DifferentialHybrid2024,
+  title = {27.1 {{A Differential Hybrid Class-ED Power Amplifier}} with {{27W Maximum Power}} and 82\% {{Peak E2E Efficiency}} for {{Wireless Fast Charging To-Go}}},
+  booktitle = {2024 {{IEEE International Solid-State Circuits Conference}} ({{ISSCC}})},
+  author = {Mao, Fangyu and Martins, Rui and Lu, Yan},
+  year = {2024},
+  month = feb,
+  volume = {67},
+  pages = {444--446},
+  issn = {2376-8606},
+  doi = {10.1109/ISSCC49657.2024.10454369},
+  abstract = {Portable power banks with wireless charging are popular on the market, targeting a wireless charging to-go experience. However, the low input voltage from the battery and the large equivalent series resistance (ESR) of the coupling coils limit the charging power and efficiency of device-to-device (D2D) wireless charging, making it difficult to achieve high power and high efficiency simultaneously [1]. The winding loss of the coupling coils is one major power loss due to the large ESR of hundreds of {\textbackslash}mathrmm{\O}mega [1--4]. Moreover, thicker winding wire or multi-strand Litz wire at 6.78MHz cannot effectively reduce the ESR due to the skin and proximity effects. Therefore, we should limit the AC current through the coupling coils for thermal performance. Consequently, the current wireless charging to-go suffers from thermal issues, slow charging speed, and discounted energy-sharing percentage.},
+  keywords = {Coils,Couplings,Inductive charging,Resistance,Windings,Wireless communication,Wires}
+}
+
+@inproceedings{xie153100W912019,
+  title = {15.3 {{A 100W}} and 91\% {{GaN-Based Class-E Wireless-Power-Transfer Transmitter}} with {{Differential-Impedance-Matching Control}} for {{Charging Multiple Devices}}},
+  booktitle = {2019 {{IEEE International Solid-State Circuits Conference}} - ({{ISSCC}})},
+  author = {Xie, Cheng-Yu and Yang, Shang-Hsien and Lu, Shen-Fu and Lin, Fa-Yi and Lin, Yen-An and {Ou-Yang}, You-Zheng and Chen, Ke-Horng and Liu, Kuo-Chi and Lin, Yin-Hsi},
+  year = {2019},
+  month = feb,
+  pages = {242--244},
+  issn = {2376-8606},
+  doi = {10.1109/ISSCC.2019.8662535},
+  abstract = {Having multiple devices charged by a wireless-power-transfer (WPT) system has become more common as illustrated in Fig. 15.3.1. A wide-power-range (no load 100W), compact, and efficient WPT system needs to include the following features. First, an impedance-matching technique that achieves zero-voltage switching (ZVS) and zero voltage-derivative switching (ZVDS) on a Gallium Nitride (GaN) switch is needed to reduce the efficiency loss caused by hard switching (HS) and reverse conduction (RC). Second, under high-power conditions, it is desirable to reduce the voltage and current stress on each switch and passive components. Third, there is a need to reduce the number of external components for compact size. In [1] and [2], an external capacitor array for impedance matching occupies a large printed circuit board (PCB) area. If the output power is as high as 100W, the controlled switch needs to withstand high voltage stresses of up to 600V. The fractional-capacitance tuning technique in [3] achieves a wide range of equivalent capacitance, but there are still high-voltage-stress problems similar to [1,2]. Although [4] provides a highpower solution, the voltage-controlled-capacitance (VCC) technique needs to tune the internal parasitic capacitance, COSS, from 350 to 3500pF and thus requires more external components and large bias voltage VBIAS.},
+  keywords = {Delays,Gallium nitride,Impedance matching,Switches,Zero voltage switching}
+}
+
+@inproceedings{xiong678MHz942Peak2025,
+  title = {A 6.{{78MHz}} 94.2\% {{Peak Efficiency Class-E Transmitter}} with {{Adaptive Real-Part Impedance Matching}} and {{Imaginary-Part Phase Compensation Achieving}} a {{33W Wireless-Power-Transfer System}}},
+  booktitle = {2025 {{IEEE International Solid-State Circuits Conference}} ({{ISSCC}})},
+  author = {Xiong, Yuhao and Cao, Wenxing and Liu, Xihao and Zhao, Shangzhou and Xue, Zhongming and Guo, Zhuoqi and Geng, Li},
+  year = {2025},
+  month = feb,
+  volume = {68},
+  pages = {190--192},
+  issn = {2376-8606},
+  doi = {10.1109/ISSCC49661.2025.10904755},
+  abstract = {Wireless charging of portable devices has received explosive growth due to its convenience. However, high efficiency is usually achieved at a specific load point in current wireless power transfer (WPT) systems rather than in a wide impedance range. The load varies greatly when charging state changes as shown in Fig. 9.7.1. And this variation will cause both real and imaginary parts of the transmitter's (TX) load impedance to vary over a wider range reflected from the coil coupling. To overcome this drawback, some TX designs [1]--[5] utilize a Class-D architecture due to its ease of control. Nevertheless, Class-E power amplifiers have garnered interest benefit by their reduced switching losses with zero-voltage-switching (ZVS), zero-voltage-derivative-switching (ZVDS) as well as smaller number of switches, which presents a higher potential for efficiency, especially at high frequency operation [6]--[7]. In comparison to Class-D architectures, Class-E systems is more vulnerable to the fluctuations in switching states and exhibits heightened sensitivity to variations in load conditions. To compensate the load imaginary part of the detuning problem, the dual-loop regulation bilateral bias capacitor is designed in [8]--[5]. Nevertheless, using with discrete power MOSFETs as resonant capacitors leads to a large size. Moreover, the inherent nonlinearity of the MOS capacitor constrains dynamic range and accuracy of the control system, thereby posing challenges for the TX in achieving higher efficiency over a wider load range. A compact single-stage regulated Class-E is employed in [10] with adaptive ZVS control to achieve enhanced end-to-end (E2E) efficiency across load and distance. However, the impedance characteristics of TX were not evaluated and only the ZVS switch state was considered. Under high input current conditions, the lack of ZVDS control can lead to a decrease in efficiency.},
+  keywords = {Capacitors,Impedance,Regulation,Sensitivity,Solid state circuits,Switches,Switching loss,Transmitters,Wireless power transfer,Zero voltage switching}
+}
+
+@inproceedings{yeh70W90GaNbased2018,
+  title = {A {{70W}} and 90\% {{GaN-based}} Class-{{E}} Wireless-Power-Transfer System with Automatic-Matching-Point-Search Control for Zero-Voltage Switching and Zero-Voltage-Derivative Switching},
+  booktitle = {2018 {{IEEE International Solid-State Circuits Conference}} - ({{ISSCC}})},
+  author = {Yeh, Che-Hao and Lin, Yen-Ting and Kuo, Chun-Chieh and Huang, Chao-Jen and Xie, Cheng-Yu and Lu, Shen-Fu and Yang, Wen-Hau and Chen, Ke-Horng and Liu, Kuo-Chi and Lin, Ying-Hsi},
+  year = {2018},
+  month = feb,
+  pages = {138--140},
+  issn = {2376-8606},
+  doi = {10.1109/ISSCC.2018.8310222},
+  abstract = {High-power ({$>$}50W) and high-efficiency ({$>$}90\%) wireless-power-transfer (WPT) systems are becoming in demand for portable electronic applications. In Fig. 8.2.1, power efficiency and/or output power specifications in prior-art designs are much below the expected requirements [1-5]. Frequency tuning in [1,2] is simple, but the switching frequency (fSW) deviates from 6.78MHz. Capacitor tuning [3,5] is the most intuitive approach, but the capacitor matrix occupies a large area, and the dynamically tuned compensation capacitor bank is limited by the digital-control resolution and compensation accuracy. In addition, the duty-cycle control in [4] leads to an unregulated output voltage at the RX side. Existing impedance-matching techniques for reducing power loss are not applicable to high-power impedance matching of a GaN-based WPT system in the case of timevariable charging distance, loading, operation voltage, and temperature variations that induce a wide range of inductive or capacitive loading effects. Inductive loading degrades the efficiency by 51\% in a GaN power switch and induces serious coupling effects to the gate of the GaN device due to the hard-switching (HS) power loss. Likewise, capacitive loading results in the efficiency degradation of 14\% due to the body-diode conduction (BDC) power loss. Such large dissipation easily breakdowns a GaN device and even seriously damages the wPt system, especially when transmitting high-power. Therefore, simultaneously achieving both (1) the minimized HS and BDC power loss by efficient impedance matching and (2) highly reliable operation of a GaN device over a wide range of loading effects is in urgent demand for high-power and high-efficiency WPT systems.},
+  keywords = {Gallium nitride,Impedance matching,Loading,Logic gates,Reliability,Switches,Zero voltage switching}
+}
+
+
 @inproceedings{sokalClassHighefficiencyPower1998,
   title = {Class {{E}} High-Efficiency Power Amplifiers, from {{HF}} to Microwave},
   booktitle = {1998 {{IEEE MTT-S International Microwave Symposium Digest}} ({{Cat}}. {{No}}.{{98CH36192}})},
