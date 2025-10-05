@@ -1,0 +1,58 @@
+/* Code-style captions for figures */
+.figure-code-caption .caption {
+    font-family: 'SFMono-Regular', 'Monaco', 'Inconsolata', 'Roboto Mono', 'Source Code Pro', monospace;
+    font-size: 0.875em;
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 4px;
+    padding: 8px 12px;
+    margin-top: 8px;
+    color: #495057;
+    font-weight: normal;
+}
+
+.figure-code-caption .caption-text {
+    font-family: 'SFMono-Regular', 'Monaco', 'Inconsolata', 'Roboto Mono', 'Source Code Pro', monospace;
+}
+
+/* Alternative: Match literalinclude caption style exactly */
+.figure-literalinclude .caption {
+    font-family: var(--pst-font-family-monospace);
+    font-size: var(--pst-font-size-milli);
+    background: var(--pst-color-surface);
+    border: 1px solid var(--pst-color-border);
+    border-radius: var(--pst-border-radius);
+    padding: var(--pst-spacing-1) var(--pst-spacing-2);
+    margin-top: var(--pst-spacing-1);
+    color: var(--pst-color-text-muted);
+}
+
+/* Dark theme support */
+html[data-theme="dark"] .figure-code-caption .caption,
+html[data-theme="dark"] .figure-literalinclude .caption {
+    background-color: #2d3748;
+    border-color: #4a5568;
+    color: #a0aec0;
+}
+
+/* Code block style caption */
+.figure-code-block .caption {
+    font-family: 'SFMono-Regular', 'Monaco', 'Inconsolata', 'Roboto Mono', 'Source Code Pro', monospace;
+    font-size: 0.8em;
+    background-color: #282c34;
+    color: #abb2bf;
+    border-radius: 4px;
+    padding: 6px 10px;
+    margin-top: 4px;
+    border-left: 3px solid #61dafb;
+}
+
+/* Inline code style caption */
+.figure-inline-code .caption {
+    font-family: 'SFMono-Regular', 'Monaco', 'Inconsolata', 'Roboto Mono', 'Source Code Pro', monospace;
+    font-size: 0.875em;
+    background-color: rgba(27, 31, 35, 0.05);
+    padding: 0.2em 0.4em;
+    border-radius: 3px;
+    color: #24292e;
+}
