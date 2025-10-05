@@ -1,0 +1,157 @@
+/* Custom Pygments styling for electronics/engineering code */
+
+/* Electronics theme - professional look for circuit analysis code */
+.highlight.electronics,
+.jp-RenderedText .highlight[data-language="spice"],
+.output_subarea .highlight[data-language="spice"] {
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: 6px;
+    padding: 12px;
+}
+
+.highlight.electronics .c,
+.highlight[data-language="spice"] .c { color: #198754; font-style: italic; } /* Comments - green */
+.highlight.electronics .k,
+.highlight[data-language="spice"] .k { color: #0d6efd; font-weight: bold; } /* Keywords - blue */
+.highlight.electronics .kn,
+.highlight[data-language="spice"] .kn { color: #0d6efd; } /* Keyword.Namespace */
+.highlight.electronics .kp,
+.highlight[data-language="spice"] .kp { color: #0d6efd; } /* Keyword.Pseudo */
+.highlight.electronics .kr,
+.highlight[data-language="spice"] .kr { color: #0d6efd; } /* Keyword.Reserved */
+.highlight.electronics .kt,
+.highlight[data-language="spice"] .kt { color: #dc3545; } /* Keyword.Type - red */
+.highlight.electronics .o,
+.highlight[data-language="spice"] .o { color: #fd7e14; } /* Operators - orange */
+.highlight.electronics .n,
+.highlight[data-language="spice"] .n { color: #2e8b57; } /* Names - dark sea green */
+.highlight.electronics .na,
+.highlight[data-language="spice"] .na { color: #fd7e14; } /* Name.Attribute */
+.highlight.electronics .nb,
+.highlight[data-language="spice"] .nb { color: #0d6efd; } /* Name.Builtin */
+.highlight.electronics .nc,
+.highlight[data-language="spice"] .nc { color: #6f42c1; font-weight: bold; } /* Name.Class - purple */
+.highlight.electronics .nf,
+.highlight[data-language="spice"] .nf { color: #6f42c1; } /* Name.Function */
+.highlight.electronics .nn,
+.highlight[data-language="spice"] .nn { color: #6f42c1; } /* Name.Namespace */
+.highlight.electronics .nt,
+.highlight[data-language="spice"] .nt { color: #0d6efd; font-weight: bold; } /* Name.Tag */
+.highlight.electronics .nv,
+.highlight[data-language="spice"] .nv { color: #2e8b57; } /* Name.Variable */
+.highlight.electronics .m,
+.highlight[data-language="spice"] .m { color: #8b4513; } /* Numbers - saddle brown */
+.highlight.electronics .mi,
+.highlight[data-language="spice"] .mi { color: #8b4513; } /* Number.Integer */
+.highlight.electronics .mf,
+.highlight[data-language="spice"] .mf { color: #8b4513; } /* Number.Float */
+.highlight.electronics .mh,
+.highlight[data-language="spice"] .mh { color: #8b4513; } /* Number.Hex */
+.highlight.electronics .mo,
+.highlight[data-language="spice"] .mo { color: #8b4513; } /* Number.Oct */
+.highlight.electronics .s,
+.highlight[data-language="spice"] .s { color: #198754; } /* Strings - green */
+.highlight.electronics .sb,
+.highlight[data-language="spice"] .sb { color: #198754; } /* String.Backtick */
+.highlight.electronics .sc,
+.highlight[data-language="spice"] .sc { color: #198754; } /* String.Char */
+.highlight.electronics .sd,
+.highlight[data-language="spice"] .sd { color: #198754; font-style: italic; } /* String.Doc */
+.highlight.electronics .s2,
+.highlight[data-language="spice"] .s2 { color: #198754; } /* String.Double */
+.highlight.electronics .se,
+.highlight[data-language="spice"] .se { color: #8b4513; font-weight: bold; } /* String.Escape */
+.highlight.electronics .sh,
+.highlight[data-language="spice"] .sh { color: #198754; } /* String.Heredoc */
+.highlight.electronics .si,
+.highlight[data-language="spice"] .si { color: #198754; } /* String.Interpol */
+.highlight.electronics .sr,
+.highlight[data-language="spice"] .sr { color: #198754; } /* String.Regex */
+.highlight.electronics .s1,
+.highlight[data-language="spice"] .s1 { color: #198754; } /* String.Single */
+
+/* SPICE-specific styling for display.Code() */
+.jp-RenderedText .highlight[data-language="spice"],
+.output_subarea .highlight[data-language="spice"],
+.jp-OutputArea-output .highlight[data-language="spice"] {
+    background-color: #2d3748;
+    color: #e2e8f0;
+    border: 1px solid #4a5568;
+    border-radius: 6px;
+    padding: 12px;
+    font-family: 'SFMono-Regular', 'Monaco', 'Inconsolata', 'Roboto Mono', monospace;
+}
+
+/* SPICE comments and keywords */
+.highlight[data-language="spice"] .c { color: #68d391 !important; font-style: italic; } /* Comments */
+.highlight[data-language="spice"] .k { color: #63b3ed !important; font-weight: bold; } /* Keywords */
+.highlight[data-language="spice"] .o { color: #f6e05e !important; } /* Operators */
+.highlight[data-language="spice"] .n { color: #e2e8f0 !important; } /* Names */
+.highlight[data-language="spice"] .nf { color: #81e6d9 !important; } /* Functions */
+.highlight[data-language="spice"] .m { color: #d6bcfa !important; } /* Numbers */
+.highlight[data-language="spice"] .s { color: #9ae6b4 !important; } /* Strings */
+
+/* Circuit simulation specific */
+.highlight.circuit {
+    background-color: #fff8dc;
+    border: 2px solid #daa520;
+    border-radius: 8px;
+    padding: 12px;
+    font-family: 'Roboto Mono', 'Monaco', 'Courier New', monospace;
+}
+
+.highlight.circuit .c { color: #8b4513; font-style: italic; } /* Comments - saddle brown */
+.highlight.circuit .k { color: #000080; font-weight: bold; } /* Keywords - navy */
+.highlight.circuit .o { color: #ff4500; } /* Operators - orange red */
+.highlight.circuit .n { color: #2f4f4f; } /* Names - dark slate gray */
+.highlight.circuit .nf { color: #4b0082; } /* Functions - indigo */
+.highlight.circuit .m { color: #8b0000; } /* Numbers - dark red */
+.highlight.circuit .s { color: #006400; } /* Strings - dark green */
+
+/* Professional dark theme */
+.highlight.professional {
+    background-color: #1e1e1e;
+    color: #d4d4d4;
+    border: 1px solid #3e3e3e;
+    border-radius: 4px;
+    padding: 10px;
+    font-family: 'SFMono-Regular', 'Monaco', 'Inconsolata', 'Roboto Mono', monospace;
+}
+
+.highlight.professional .c { color: #6a9955; font-style: italic; } /* Comments */
+.highlight.professional .k { color: #569cd6; font-weight: bold; } /* Keywords */
+.highlight.professional .o { color: #d4d4d4; } /* Operators */
+.highlight.professional .n { color: #9cdcfe; } /* Names */
+.highlight.professional .nf { color: #dcdcaa; } /* Functions */
+.highlight.professional .nc { color: #4ec9b0; } /* Classes */
+.highlight.professional .m { color: #b5cea8; } /* Numbers */
+.highlight.professional .s { color: #ce9178; } /* Strings */
+.highlight.professional .sd { color: #6a9955; font-style: italic; } /* Docstrings */
+
+/* Apply to code blocks */
+.highlight pre {
+    margin: 0;
+    padding: 0;
+    background: transparent;
+    border: none;
+}
+
+/* Custom style for inline code */
+code.electronics {
+    background-color: #f1f3f4;
+    color: #2e8b57;
+    padding: 2px 4px;
+    border-radius: 3px;
+    font-family: 'SFMono-Regular', 'Monaco', 'Inconsolata', 'Roboto Mono', monospace;
+}
+
+/* For Jupyter notebook code cells */
+.jp-InputArea .highlight.electronics {
+    background-color: #f8f9fa;
+}
+
+.jp-OutputArea .highlight.electronics {
+    background-color: #fff;
+    border: 1px solid #e9ecef;
+}
