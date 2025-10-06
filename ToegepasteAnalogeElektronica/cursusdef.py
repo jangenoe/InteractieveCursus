@@ -14,6 +14,7 @@ from ipywidgets import interact,FloatSlider
 
 from IPython import display
 import os
+os.environ['NGSPICE_LIBRARY_PATH'] = '/opt/homebrew/Cellar/libngspice/45.2/lib/libngspice.dylib'
 
 def spicelisting(filename,firstline=0,lastline=10000):
     ff=""
@@ -31,7 +32,7 @@ else:
 human_format = lambda num: [f'{num/10**(3*(i-8)):.2f}{k}' for i, k in enumerate('yzafpnµm kMGTPEZY')  if num >= 10**(3*(i-8)) * 0.9995][-1]
 
 def Sallen_and_Key_LP_draw(labels=True, Freq=1e6,angle=60,Cref=16e-12,Rout=1e5,inches_per_unit=0.5, Resistorlength=2,
-                           voutlabel='$V_{out}$',vinlabel='$V_{in}$'):
+                           voutlabel='Vout',vinlabel='Vin'):
     if labels:
         Rlabel='R'
         Clabel='C'
@@ -39,10 +40,10 @@ def Sallen_and_Key_LP_draw(labels=True, Freq=1e6,angle=60,Cref=16e-12,Rout=1e5,i
         R2label='R2'
     else:
         k=2-2*np.cos(angle/180*np.pi)
-        Rlabel=human_format(1/Cref/2/np.pi/Freq)+'$\Omega$'
+        Rlabel=human_format(1/Cref/2/np.pi/Freq)+r'Ω'
         Clabel=human_format(Cref)+'F'
-        R1label=human_format(Rout/(1+k))+'$\Omega$'
-        R2label=human_format(k*Rout/(1+k))+'$\Omega$'
+        R1label=human_format(Rout/(1+k))+r'Ω'
+        R2label=human_format(k*Rout/(1+k))+r'Ω'
     with schemdraw.Drawing(inches_per_unit=inches_per_unit) as d:
      d += (op := Opamp(flip=True))
      d += ( Line( d='left', l=1.75, xy=op.in2))
@@ -70,16 +71,16 @@ def Sallen_and_Key_LP_draw(labels=True, Freq=1e6,angle=60,Cref=16e-12,Rout=1e5,i
     return
     
 def first_Order_LP_draw(labels=True, Freq=1e6,Cref=16e-12,inches_per_unit=0.5, Resistorlength=2, LFgain=1,
-                           voutlabel='$V_{out}$',vinlabel='$V_{in}$'):
+                           voutlabel='Vout',vinlabel='Vin'):
     if labels:
-        Clabel='$C_2$'
-        R1label='$R_1$'
-        R2label='$R_2$'
+        Clabel='C2'
+        R1label='R1'
+        R2label='R2'
     else:
         R2=1/Cref/2/np.pi/Freq
-        R2label=human_format(R2)+'$\Omega$'
+        R2label=human_format(R2)+r'Ω'
         Clabel=human_format(Cref)+'F'
-        R1label=human_format(R2/LFgain)+'$\Omega$'
+        R1label=human_format(R2/LFgain)+r'Ω'
     with schemdraw.Drawing(inches_per_unit=inches_per_unit) as d:
      d += (op := Opamp())
      d += ( Line( d='left', xy=op.in2, l=d.unit/4))
