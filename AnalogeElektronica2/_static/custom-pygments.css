@@ -1,42 +1,81 @@
 /* Custom Pygments styling for electronics/engineering code */
 
-/* Electronics theme - professional look for circuit analysis code */
+/* SPICE-specific styling - matches HtmlFormatter output */
+.highlight.spice,
+.spice .highlight,
 .highlight.electronics,
 .jp-RenderedText .highlight[data-language="spice"],
 .output_subarea .highlight[data-language="spice"] {
+    background-color: #2d3748;
+    color: #e2e8f0;
+    border: 1px solid #4a5568;
+    border-radius: 6px;
+    padding: 12px;
+    font-family: 'SFMono-Regular', 'Monaco', 'Inconsolata', 'Roboto Mono', monospace;
+}
+
+/* Electronics theme - light version */
+.highlight.electronics {
     background-color: #f8f9fa;
+    color: #2e8b57;
     border: 1px solid #dee2e6;
     border-radius: 6px;
     padding: 12px;
 }
 
+.highlight.spice .c,
+.spice .highlight .c,
 .highlight.electronics .c,
-.highlight[data-language="spice"] .c { color: #198754; font-style: italic; } /* Comments - green */
+.highlight[data-language="spice"] .c { color: #68d391; font-style: italic; } /* Comments - green */
+.highlight.spice .k,
+.spice .highlight .k,
 .highlight.electronics .k,
-.highlight[data-language="spice"] .k { color: #0d6efd; font-weight: bold; } /* Keywords - blue */
+.highlight[data-language="spice"] .k { color: #63b3ed; font-weight: bold; } /* Keywords - blue */
+.highlight.spice .kn,
+.spice .highlight .kn,
 .highlight.electronics .kn,
-.highlight[data-language="spice"] .kn { color: #0d6efd; } /* Keyword.Namespace */
+.highlight[data-language="spice"] .kn { color: #63b3ed; } /* Keyword.Namespace */
+.highlight.spice .kp,
+.spice .highlight .kp,
 .highlight.electronics .kp,
-.highlight[data-language="spice"] .kp { color: #0d6efd; } /* Keyword.Pseudo */
+.highlight[data-language="spice"] .kp { color: #63b3ed; } /* Keyword.Pseudo */
+.highlight.spice .kr,
+.spice .highlight .kr,
 .highlight.electronics .kr,
-.highlight[data-language="spice"] .kr { color: #0d6efd; } /* Keyword.Reserved */
+.highlight[data-language="spice"] .kr { color: #63b3ed; } /* Keyword.Reserved */
+.highlight.spice .kt,
+.spice .highlight .kt,
 .highlight.electronics .kt,
-.highlight[data-language="spice"] .kt { color: #dc3545; } /* Keyword.Type - red */
+.highlight[data-language="spice"] .kt { color: #f6e05e; } /* Keyword.Type - yellow */
+.highlight.spice .o,
+.spice .highlight .o,
 .highlight.electronics .o,
-.highlight[data-language="spice"] .o { color: #fd7e14; } /* Operators - orange */
+.highlight[data-language="spice"] .o { color: #f6e05e; } /* Operators - yellow */
+.highlight.spice .n,
+.spice .highlight .n,
 .highlight.electronics .n,
-.highlight[data-language="spice"] .n { color: #2e8b57; } /* Names - dark sea green */
+.highlight[data-language="spice"] .n { color: #e2e8f0; } /* Names - light gray */
+.highlight.spice .na,
+.spice .highlight .na,
 .highlight.electronics .na,
-.highlight[data-language="spice"] .na { color: #fd7e14; } /* Name.Attribute */
+.highlight[data-language="spice"] .na { color: #f6e05e; } /* Name.Attribute */
+.highlight.spice .nb,
+.spice .highlight .nb,
 .highlight.electronics .nb,
-.highlight[data-language="spice"] .nb { color: #0d6efd; } /* Name.Builtin */
+.highlight[data-language="spice"] .nb { color: #63b3ed; } /* Name.Builtin */
+.highlight.spice .nc,
+.spice .highlight .nc,
 .highlight.electronics .nc,
-.highlight[data-language="spice"] .nc { color: #6f42c1; font-weight: bold; } /* Name.Class - purple */
+.highlight[data-language="spice"] .nc { color: #81e6d9; font-weight: bold; } /* Name.Class - cyan */
+.highlight.spice .nf,
+.spice .highlight .nf,
 .highlight.electronics .nf,
-.highlight[data-language="spice"] .nf { color: #6f42c1; } /* Name.Function */
+.highlight[data-language="spice"] .nf { color: #81e6d9; } /* Name.Function */
+.highlight.spice .nn,
+.spice .highlight .nn,
 .highlight.electronics .nn,
-.highlight[data-language="spice"] .nn { color: #6f42c1; } /* Name.Namespace */
-.highlight.electronics .nt,
+.highlight[data-language="spice"] .nn { color: #81e6d9; } /* Name.Namespace */
+.highlight.spice .nt,
 .highlight[data-language="spice"] .nt { color: #0d6efd; font-weight: bold; } /* Name.Tag */
 .highlight.electronics .nv,
 .highlight[data-language="spice"] .nv { color: #2e8b57; } /* Name.Variable */

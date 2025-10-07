@@ -71,7 +71,7 @@ sphinx:
     # html_sidebars : {"**": ["navbar-logo.html","search-field.html","sbt-sidebar-nav.html","kuleuven.html"]}                     #.html mag weg
     # navbar_end: ["deck-lite-button.html"]
     html_static_path : ['_static']
-    html_css_files : ['custom.css', 'code-caption-style.css', 'custom-pygments.css']   
+    html_css_files : ['custom.css', 'code-caption-style.css', 'custom-pygments.css', 'spice-lexer.css']   
     latex_logo: images/logo.png
     latex_elements:
       extraclassoptions: 'openany,oneside'
