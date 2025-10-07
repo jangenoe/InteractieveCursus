@@ -229,6 +229,7 @@ def add_parsed_bullet(paragraph, text):
     combined_pattern = (
         r"(?P<sub><sub>(.*?)</sub>)|"
         r"(?P<sup><sup>(.*?)</sup>)|"
+        r"(?P<bold>\*\*(.*?)\*\*)|"
         r"(?P<dollar>\$(.*?)\$)"
     )
     last_end = 0
@@ -251,8 +252,11 @@ def add_parsed_bullet(paragraph, text):
             run.font.size = Pt(18)
             #run.font.superscript = True
             run.font._element.set('baseline', '45000')
+        elif match.group("bold"):
+            run.text = match.group(6)
+            run.font.bold = True
         elif match.group("dollar"):
-            run.text =  latex_to_unicode(match.group(6))
+            run.text =  latex_to_unicode(match.group(8))
         last_end = end
 
     # Add any remaining text after the last tag
@@ -385,24 +389,32 @@ for ipath in notebooks:
             if "slide_type" in cell.metadata.get('slideshow', {}):
                 md_text="".join(cell.get('source', {}))
                 bullets = parse_markdown_bullets(md_text)
-                showmd=True
                 if cell.metadata.slideshow.slide_type == "slide":
                     if ("KULeuvenSlides" in cell.get('metadata', {}) and "slide_code" in cell.metadata.get('KULeuvenSlides', {}) and cell.metadata.KULeuvenSlides.slide_code == "title"):
                         slide = prs.slides.add_slide(prs.slide_layouts[KUL_layout_subtitle])
                         maketitle(cell,slide)
-                        showmd=False
+                        running_height=body_top
                     else:
                         slide = prs.slides.add_slide(prs.slide_layouts[KUL_layout_mdtext])
                         maketitle(cell,slide)
-                    running_height=body_top
-
+                        body_shape = slide.shapes[0]
+                        tf = body_shape.text_frame
+                        tf.clear()  # Remove any existing paragraphs
+                        tf.text = ""  # Clear existing text
+                        for level, text in bullets:
+                            p = tf.add_paragraph()
+                            p.level = level
+                            add_parsed_bullet(p, text)
+                        tf.auto_size = MSO_AUTO_SIZE.SHAPE_TO_FIT_TEXT
+                        running_height = body_top+body_shape.height + Inches(0.2)
+                    
                 elif cell.metadata.slideshow.get("slide_type", ())=="notes":
                     if slide is not None:  # Notes require a previous slide to exist
                         notes_slide = slide.notes_slide
                         notes_slide.notes_text_frame.text = md_text
 
                 # Process slide content for slide and fragment types
-                if (slide is not None and cell.metadata.slideshow.get("slide_type", ()) in ["slide", "fragment"]): 
+                if slide is not None and cell.metadata.slideshow.get("slide_type", ())=="fragment": 
                     if "KULeuvenSlides" in cell.get('metadata', {}):
                         if "eq_vertical" in cell.metadata.get('KULeuvenSlides', {}):
                             if cell.metadata.KULeuvenSlides["eq_vertical"]:
@@ -427,8 +439,7 @@ for ipath in notebooks:
                             else:
                                 pictp.left=(prs.slide_width-pictp.width)//2
                             running_height+=pictp.height+Inches(0.3)
-                    elif showmd:
-                        # body_shape = slide.shapes[0]. #backup if the next line does not work
+                    else:
                         body_shape = clone_shape(slide.shapes[0],  top=running_height, idcounter=idcounter)
                         idcounter+=1
                         tf = body_shape.text_frame
