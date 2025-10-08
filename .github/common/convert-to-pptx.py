@@ -337,13 +337,43 @@ for ipath in notebooks:
                             except UnidentifiedImageError:
                                 print("  image/jpeg  error for cell number "+str(index))
                                 running_height=body_top
-                        # elif "text/html" in output.get("data", {}):
+                        elif "".join(cell.source).startswith("Video("):
+                            # Extract video path from Video() call
+                            video_path = None
+                            source_line = cell.source.strip()
+                            print(source_line)
+                            # Look for Video("path") pattern
+                            import re
+                            video_match = re.search(r'Video\s*\(\s*["\']([^"\']+)["\']', source_line)
+                            if video_match:
+                                video_path = video_match.group(1)
+                                print(f"  Found Video call with path: {video_path}")
+                                
+                                slide = prs.slides.add_slide(prs.slide_layouts[KUL_layout_fig])
+                                maketitle(cell,slide)  
+                                try:                            
+                                    film=slide.shapes.add_movie(video_path, body_left, body_top, height=body_height)
+                                    if film.width>prs.slide_width:
+                                        film.width=prs.slide_width
+                                        film.left=Inches(0)
+                                    else:
+                                        film.left=(prs.slide_width-film.width)//2
+                                    running_height=body_top+film.height+Inches(0.1)
+                                except UnidentifiedImageError:
+                                    print("  video/mp4  error for cell number "+str(index))
+                                    running_height=body_top
+                                running_height = body_top + Inches(4)
+                            else:
+                                print(f"  Could not extract path from Video call in cell {index}")
+                                running_height = body_top
+                        
+                        # elif "text/html" in output.get("data", {}):  # er zitten veel header lines voor de html
                             # lines="".join(output.data["text/html"]).split('\n')
                             # for isl in range(0,len(lines),lines_per_chunk):
                                 # slide = prs.slides.add_slide(prs.slide_layouts[KUL_layout_code])
                                 # maketitle(cell,slide)
                                 # for isp in range(isl,min(isl+lines_per_chunk,len(lines))):
-                                    # soup = BeautifulSoup(lines[isp]), "html.parser")
+                                    # soup = BeautifulSoup(lines[isp]), "html.parser") ##. dit moet niet per lijn maar op het geheel
                                     # p=slide.shapes[0].text_frame.paragraphs[isp-isl] 
                                     # for span in soup.find_all("span"):
                                         # style = span.get("style", "")
@@ -355,7 +385,7 @@ for ipath in notebooks:
                                         # run = p.add_run()
                                         # run.text = span.text
                                         # run.font.color.rgb = color
-                                        # run.font.name = 'Courier New'   #?????????????????????????  moet uit font file
+                                        # run.font.name = 'Courier New'   
                                         # run.font.size = Pt(14)
                         elif "text/plain" in output.get("data", {}):
                             lines="".join(output.data["text/plain"]).split('\n')
