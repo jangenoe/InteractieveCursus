@@ -664,8 +664,8 @@ Deze spoel zal zorgen voor een zo constant mogelijke stroom bovenop de sinusvorm
 </div>
 </div>
 <p>Natuurlijk moet op basis van de <a class="reference external" href="https://en.wikipedia.org/wiki/Kirchhoff%27s_circuit_laws">stroomwet</a> van <a class="reference external" href="https://en.wikipedia.org/wiki/Gustav_Kirchhoff">Kirchhoff</a> de netto stroom naar elke knoop 0 zijn.</p>
-<div class="amsmath math notranslate nohighlight" id="equation-a30d7bdb-0de9-44b6-95ed-9d9097dd55f3">
-<span class="eqno">(9)<a class="headerlink" href="#equation-a30d7bdb-0de9-44b6-95ed-9d9097dd55f3" title="Permalink to this equation">#</a></span>\[\begin{equation}\label{eq:Kirchoff}
+<div class="amsmath math notranslate nohighlight" id="equation-724b4372-5d96-4946-8770-9117c2c4ce8f">
+<span class="eqno">(9)<a class="headerlink" href="#equation-724b4372-5d96-4946-8770-9117c2c4ce8f" title="Permalink to this equation">#</a></span>\[\begin{equation}\label{eq:Kirchoff}
 \sum_{j \neq i}^n I_{ij}=0.
 \end{equation}\]</div>
 <p>Wanneer dit niet zo zou zijn zou de spanning op deze knoop snel gaan stijgen of dalen tot dat wel het geval wordt. De snelheid waarmee dat gebeurt hangt af van de (parasitaire) capaciteit van de knoop.</p>
@@ -719,7 +719,7 @@ Deze lading wordt bekomen door de integratie van de stroom op de condensator <sp
 </div>
 </div>
 <p>Het resultaat van de simulatie met dit schema zien we in <a class="reference internal" href="#efig9"><span class="std std-numref">Fig. 75</span></a>.</p>
-<div class="cell tag_full-width docutils container">
+<div class="cell docutils container">
 <div class="cell_output docutils container">
 <figure class="align-default" id="efig9">
 <img alt="_images/1e96e07a4aa56348113c8bc2bf5c3a9adf268fc5881b4da65232ba1e7896a386.png" src="_images/1e96e07a4aa56348113c8bc2bf5c3a9adf268fc5881b4da65232ba1e7896a386.png" />
@@ -757,7 +757,7 @@ Deze lading wordt bekomen door de integratie van de stroom op de condensator <sp
 <p>Voor het ontwerpen van een aantal voorbeelden kunnen we de ontwerpvergelijkingen gebruiken vanuit <span id="id5">[<a class="reference internal" href="References.html#id7" title="Nathan O Sokal. Class-E RF Power Amplifiers. QEX, pages 9–20, Jan/Feb 2001.">5</a>]</span>. Deze ontwerpvergelijkingen zijn uitgewerkt voor lagere frequenties. Voor MHz frequenties (en hoger) moet er in detail geanalyseerd en gesimuleerd worden. De onderstaande vergelijkingen (Eq.<a class="reference internal" href="#equation-deq1">(10)</a> tot Eq.<a class="reference internal" href="#equation-deq4">(13)</a>) kunnen daarvoor niet gebruikt worden.</p>
 <p>Voor frequenties beneden 1 MHz:</p>
 <div class="math notranslate nohighlight" id="equation-deq1">
-<span class="eqno">(10)<a class="headerlink" href="#equation-deq1" title="Link to this equation">#</a></span>\[R_L= 0.576801 \frac{(V_{DD}-V_{sat})^2}{P} \left(1.0000086-\frac{0.414396}{Q}-\frac{0.577501}{Q^2}+\frac{0.205967}{Q^3}   \right) \]</div>
+<span class="eqno">(10)<a class="headerlink" href="#equation-deq1" title="Link to this equation">#</a></span>\[R_L= 0.5768 \frac{(V_{DD}-V_{sat})^2}{P} \left(1.00001-\frac{0.4144}{Q}-\frac{0.5775}{Q^2}+\frac{0.206}{Q^3}   \right) \]</div>
 <div class="math notranslate nohighlight" id="equation-deq2">
 <span class="eqno">(11)<a class="headerlink" href="#equation-deq2" title="Link to this equation">#</a></span>\[C_1= \frac{1 }{5.4466 \omega R_L} \left(0.99866+\frac{0.91424}{Q}-\frac{1.03175}{Q^2}\right)+\frac{0.6}{\omega^2 L_1} \]</div>
 <div class="math notranslate nohighlight" id="equation-deq3">
@@ -779,6 +779,9 @@ Ook komt vaak voor dat de kwaliteitsfactor <span class="math notranslate nohighl
 <li><p><strong>Kwaliteitsfactor</strong> : 5</p></li>
 <li><p><strong>Saturatiespanning</strong> 0.5V</p></li>
 </ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
 <div class="cell docutils container">
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>RL = 14.88 Ohm
@@ -858,7 +861,7 @@ Op diezelfde figuur kan je ook het verloop van de stroom door de voeding ten opz
 </figure>
 </div>
 </div>
-<p>In een aantal toepassingen is zowel de voedingsspanning als de impedantie van de belasting een gegeven. Het kan bijvoorbeeld zijn dat het circuit moet werken op een gegeven batterijspanning en dat de impedantie van de belasting vast ligt, bijvoorbeeld een gegeven antenne of een coax kabel. In dat geval zullen we vertrekken vanuit de gegeven voedingsspanning en Eq.<code class="xref std std-numref docutils literal notranslate"><span class="pre">Deq1</span></code> gebruiken om de verwachte impedantie uit te rekenen. Tenslotte passen we dan de verwachte impedantie aan tot de gewenste impedantie aan de hand van een transformator met de juiste wikkelverhouding.
+<p>In een aantal toepassingen is zowel de voedingsspanning als de impedantie van de belasting een gegeven. Het kan bijvoorbeeld zijn dat het circuit moet werken op een gegeven batterijspanning en dat de impedantie van de belasting vast ligt, bijvoorbeeld een gegeven antenne of een coax kabel. In dat geval zullen we vertrekken vanuit de gegeven voedingsspanning en Eq.<a class="reference internal" href="#equation-deq1">(10)</a> gebruiken om de verwachte impedantie uit te rekenen. Tenslotte passen we dan de verwachte impedantie aan tot de gewenste impedantie aan de hand van een transformator met de juiste wikkelverhouding.
 We kunnen het vorig ontwerp aan de hand van een transformator met wikkelverhouding 1.83 ook aanpassen aan een coax lijn van 50 Ohm (zie <a class="reference internal" href="#efig14"><span class="std std-numref">Fig. 81</span></a>).</p>
 <div class="cell docutils container">
 <div class="cell_output docutils container">
@@ -967,6 +970,16 @@ door een transformator met wikkelverhouding: 6.00
 <section id="voorbeeld-3-on-chip-2-ghz-klasse-e-versterker-voor-gsm-toepassingen">
 <h3>Voorbeeld 3: On-chip 2 GHz Klasse E versterker voor GSM toepassingen<a class="headerlink" href="#voorbeeld-3-on-chip-2-ghz-klasse-e-versterker-voor-gsm-toepassingen" title="Link to this heading">#</a></h3>
 <p>In 1999 hebben King-Chun Tsai en Paul Gray een 1.9GHz klasse E versterker voor GSM en DECT telefoon toepassingen ontworpen <span id="id6">[<a class="reference internal" href="References.html#id14" title="King-Chun Tsai and P.R. Gray. A 1.9-GHz, 1-W CMOS class-E power amplifier for wireless communications. IEEE Journal of Solid-State Circuits, 34(7):962–970, July 1999. doi:10.1109/4.772411.">7</a>]</span>. De versterker bestaat uit 2 stages en elke stage is fully-differential uitgewerkt.</p>
+<p>In de 2de stage herkenen we 2 gekruiste klasse E versterkers:</p>
+<ul class="simple">
+<li><p>L3 met de ingangscapaciteit van de complementaire transistor M23 die dan de kring L5 en C1 (5.1 pF) aanstuurt. De belasting is een 50 Ohm transmissielijn.</p></li>
+<li><p>L4 met de ingangscapaciteit van de complementaire transistor M22 die dan de kring L6 en C1 (5.1 pF) aanstuurt. De belasting is ook een 50 Ohm transmissielijn.</p></li>
+</ul>
+<p>Hiervoor staat dan de eerste stage met ook 2 gekruiste klasse E versterkers:</p>
+<ul class="simple">
+<li><p>L1 met de ingangscapaciteit van de complementaire transistor M13 en de gate-source capaciteit van M21. Er is ook een seriekring als belasting, namelijk de gate-drian capaciteit van M21 in serie met onder andere L3. Deze seriekring is echter niet het beangrijkste. Het belangrijkste effect is spanningszwaai op de gate van M21, wat ook bekomen wordt zonder de seriekring.</p></li>
+<li><p>L2 met de ingangscapaciteit van de complementaire transistor M12 en de gate-source capaciteit van M24. Er is ook een seriekring als belasting, namelijk de gate-drian capaciteit van M24 in serie met onder andere L4. Deze seriekring is echter niet het beangrijkste. Het belangrijkste effect is spanningszwaai op de gate van M24, wat ook bekomen wordt zonder de seriekring.</p></li>
+</ul>
 <p>Het uiteindelijke schema zie je in <a class="reference internal" href="#tsai-schema"><span class="std std-numref">schema 87</span></a></p>
 <div class="cell tag_remove-cell4PDF docutils container">
 <div class="cell_output docutils container">
@@ -1022,7 +1035,7 @@ door een transformator met wikkelverhouding: 6.00
 </div>
 </div>
 <p><a class="reference internal" href="#esimtsai"><span class="std std-numref">Fig. 88</span></a> toont de eerste 20 periodes uit de simulatie van het circuit. We merken op dat na ongeveer 10 periodes de uitgangssignalen in fase gaan lopen met de ingangssignalen.</p>
-<div class="cell tag_full-width docutils container">
+<div class="cell docutils container">
 <div class="cell_output docutils container">
 <figure class="align-default" id="etsaim21">
 <img alt="_images/cb849bd999385aede0daae39a2492559e4dbfef6a09051f193e5ab874422d9b6.png" src="_images/cb849bd999385aede0daae39a2492559e4dbfef6a09051f193e5ab874422d9b6.png" />
