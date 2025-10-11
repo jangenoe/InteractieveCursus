@@ -537,7 +537,7 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#aanpak-en-algemeen-perspectief">Aanpak en algemeen perspectief</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#specifieke-filter-blokken">Specifieke filter blokken</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#eerste-en-tweede-orde-filters">Eerste en tweede orde filters</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#eerste-orde-filter-bouwblokken">Eerste orde filter bouwblokken</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tweede-orde-filter-blokken">Tweede orde filter blokken</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#biquad-filter">BiQuad filter</a><ul class="nav section-nav flex-column">
@@ -556,22 +556,25 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#voorbeeld-omrekenen-van-de-polen-van-een-2de-orde-laagdoorlaatfilter-naar-een-2de-orde-banddoorlaatfilter">Voorbeeld: Omrekenen van de polen van een 2de orde laagdoorlaatfilter naar een 2de orde banddoorlaatfilter</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#butterworth-filters">Butterworth filters</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#butterworth-laagdoorlaatfilter-van-de-3de-orde">Butterworth laagdoorlaatfilter van de 3de orde</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#butterworth-laagdoorlaatfilter-van-de-5de-orde">Butterworth laagdoorlaatfilter van de 5de orde</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vergelijking-van-de-3de-en-5de-orde-butterworth-laagdoorlaatfilter">Vergelijking van de 3de en 5de orde Butterworth laagdoorlaatfilter</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#zevende-orde-banddoorlaatfilter-van-10mhz-tot-50mhz">Zevende orde banddoorlaatfilter van 10MHz  tot 50MHz</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#de-orde-banddoorlaatfilter-tussen-47-en-53-mhz">7de orde banddoorlaatfilter tussen 47 en 53 MHz</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#specifieke-filter-blokken">Specifieke filter blokken</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#butterworth-filters">Butterworth filters</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#butterworth-laagdoorlaatfilter-van-de-3de-orde">Butterworth laagdoorlaatfilter van de 3de orde</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#butterworth-laagdoorlaatfilter-van-de-5de-orde">Butterworth laagdoorlaatfilter van de 5de orde</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#vergelijking-van-de-3de-en-5de-orde-butterworth-laagdoorlaatfilter">Vergelijking van de 3de en 5de orde Butterworth laagdoorlaatfilter</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#zevende-orde-banddoorlaatfilter-van-10mhz-tot-50mhz">Zevende orde banddoorlaatfilter van 10MHz  tot 50MHz</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#de-orde-banddoorlaatfilter-tussen-47-en-53-mhz">7de orde banddoorlaatfilter tussen 47 en 53 MHz</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#chebyshev-filters">Chebyshev filters</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#chebyshev-40-mhz-laagdoorlaatfilter-van-de-3de-orde-met-6db-maximale-ripple">Chebyshev 40 MHz laagdoorlaatfilter van de 3de orde met 6dB maximale ripple</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#chebyshev-120-mhz-laagdoorlaatfilter-van-de-8de-orde-met-2db-maximale-ripple">Chebyshev 120 MHz laagdoorlaatfilter van de 8de orde met 2dB maximale ripple</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#chebyshev-30-mhz-laagdoorlaatfilter-van-de-2de-orde-met-6db-maximale-ripple">Chebyshev 30 MHz laagdoorlaatfilter van de 2de orde met 6dB maximale ripple</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#chebyshev-filters">Chebyshev filters</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#chebyshev-40-mhz-laagdoorlaatfilter-van-de-3de-orde-met-6db-maximale-ripple">Chebyshev 40 MHz laagdoorlaatfilter van de 3de orde met 6dB maximale ripple</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#chebyshev-120-mhz-laagdoorlaatfilter-van-de-8de-orde-met-2db-maximale-ripple">Chebyshev 120 MHz laagdoorlaatfilter van de 8de orde met 2dB maximale ripple</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#chebyshev-30-mhz-laagdoorlaatfilter-van-de-2de-orde-met-6db-maximale-ripple">Chebyshev 30 MHz laagdoorlaatfilter van de 2de orde met 6dB maximale ripple</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bessel-thomson-filters">Bessel Thomson filters</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#analyze-van-deze-coefficienten">Analyze van deze coëfficiënten</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bessel-thomson-filters">Bessel Thomson filters</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#analyze-van-deze-coefficienten">Analyze van deze coëfficiënten</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#toleranties">Toleranties</a></li>
@@ -594,8 +597,8 @@ document.write(`
 <h2>Aanpak en algemeen perspectief<a class="headerlink" href="#aanpak-en-algemeen-perspectief" title="Link to this heading">#</a></h2>
 <p>Het ontwerp van een filter is eigenlijk het ontwerp van een zo compact mogelijk elektronisch circuit dat voldoet aan de vooraf opgelegde specificaties. In die zin is een filterontwerp een synthese oefening die het omgekeerde is van een analyse oefening.</p>
 </section>
-<section id="specifieke-filter-blokken">
-<h2>Specifieke filter blokken<a class="headerlink" href="#specifieke-filter-blokken" title="Link to this heading">#</a></h2>
+<section id="eerste-en-tweede-orde-filters">
+<h2>Eerste en tweede orde filters<a class="headerlink" href="#eerste-en-tweede-orde-filters" title="Link to this heading">#</a></h2>
 <section id="eerste-orde-filter-bouwblokken">
 <h3>Eerste orde filter bouwblokken<a class="headerlink" href="#eerste-orde-filter-bouwblokken" title="Link to this heading">#</a></h3>
 <p>De transfer functie van een eerste orde blok is:</p>
@@ -910,11 +913,13 @@ p22 =  834003.105731553 *(-cos( 68.05859933682078 )+ j sin( 68.05859933682078 ))
 </div>
 </section>
 </section>
+<section id="specifieke-filter-blokken">
+<h2>Specifieke filter blokken<a class="headerlink" href="#specifieke-filter-blokken" title="Link to this heading">#</a></h2>
 <section id="butterworth-filters">
-<h2>Butterworth filters<a class="headerlink" href="#butterworth-filters" title="Link to this heading">#</a></h2>
+<h3>Butterworth filters<a class="headerlink" href="#butterworth-filters" title="Link to this heading">#</a></h3>
 <p>In dit hoofdstuk werken we een aantal concrete voorbeelden uit van Butterworth filters. We vergelijken hierbij de verschillende ordes en kijken hoe deze in praktijk worden geimplementeerd in hardware circuits.</p>
 <section id="butterworth-laagdoorlaatfilter-van-de-3de-orde">
-<h3>Butterworth laagdoorlaatfilter van de 3de orde<a class="headerlink" href="#butterworth-laagdoorlaatfilter-van-de-3de-orde" title="Link to this heading">#</a></h3>
+<h4>Butterworth laagdoorlaatfilter van de 3de orde<a class="headerlink" href="#butterworth-laagdoorlaatfilter-van-de-3de-orde" title="Link to this heading">#</a></h4>
 <p>Als eerste voorbeeld ontwerpen we een analoge 3de orde laagdoorlaatfilter van het type Butterworth met afsnijfrequentie 1 MHz. De transferfunktie <span class="math notranslate nohighlight">\(H(s)\)</span> of <span class="math notranslate nohighlight">\(H(j\omega)\)</span> die we bekomen is:</p>
 <div class="math notranslate nohighlight">
 \[ H(s) = \frac{\sum_{n=0}^M b_n s^n}{\sum_{n=0}^N a_n s^n} = \frac{\sum_{n=0}^0 b_n s^n}{\sum_{n=0}^3 a_n s^n}\]</div>
@@ -1037,7 +1042,7 @@ p[ 3 ] = (-3141592.6535897935-5441398.092702653j)
 </div>
 </section>
 <section id="butterworth-laagdoorlaatfilter-van-de-5de-orde">
-<h3>Butterworth laagdoorlaatfilter van de 5de orde<a class="headerlink" href="#butterworth-laagdoorlaatfilter-van-de-5de-orde" title="Link to this heading">#</a></h3>
+<h4>Butterworth laagdoorlaatfilter van de 5de orde<a class="headerlink" href="#butterworth-laagdoorlaatfilter-van-de-5de-orde" title="Link to this heading">#</a></h4>
 <p>Wanneer we de transferfucntie van de Butterworth laagdoorlaatfilter van de 5de orde berekenen, bekomen we de volgende coeficienten:</p>
 <div class="cell docutils container">
 <div class="cell_output docutils container">
@@ -1111,7 +1116,7 @@ p[ 5 ] = (-1941611.0387254667-5975664.329483111j)
 </div>
 </section>
 <section id="vergelijking-van-de-3de-en-5de-orde-butterworth-laagdoorlaatfilter">
-<h3>Vergelijking van de 3de en 5de orde Butterworth laagdoorlaatfilter<a class="headerlink" href="#vergelijking-van-de-3de-en-5de-orde-butterworth-laagdoorlaatfilter" title="Link to this heading">#</a></h3>
+<h4>Vergelijking van de 3de en 5de orde Butterworth laagdoorlaatfilter<a class="headerlink" href="#vergelijking-van-de-3de-en-5de-orde-butterworth-laagdoorlaatfilter" title="Link to this heading">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_output docutils container">
 <figure class="align-default" id="fig20">
@@ -1124,7 +1129,7 @@ p[ 5 ] = (-1941611.0387254667-5975664.329483111j)
 </div>
 </section>
 <section id="zevende-orde-banddoorlaatfilter-van-10mhz-tot-50mhz">
-<h3>Zevende orde banddoorlaatfilter van 10MHz  tot 50MHz<a class="headerlink" href="#zevende-orde-banddoorlaatfilter-van-10mhz-tot-50mhz" title="Link to this heading">#</a></h3>
+<h4>Zevende orde banddoorlaatfilter van 10MHz  tot 50MHz<a class="headerlink" href="#zevende-orde-banddoorlaatfilter-van-10mhz-tot-50mhz" title="Link to this heading">#</a></h4>
 <p>In het eerste voorbeeld van een banddoorlaatfilter bekijken we een redelijk breedbandfilter: De bandbreedte(40 MHz) is in dit geval veel groter dan de laagste doorlaatfrequentie.</p>
 <div class="cell docutils container">
 <div class="cell_output docutils container">
@@ -1216,7 +1221,7 @@ p[ 14 ] = (-46458057.493502825-307739438.435567j)
 </div>
 </section>
 <section id="de-orde-banddoorlaatfilter-tussen-47-en-53-mhz">
-<h3>7de orde banddoorlaatfilter tussen 47 en 53 MHz<a class="headerlink" href="#de-orde-banddoorlaatfilter-tussen-47-en-53-mhz" title="Link to this heading">#</a></h3>
+<h4>7de orde banddoorlaatfilter tussen 47 en 53 MHz<a class="headerlink" href="#de-orde-banddoorlaatfilter-tussen-47-en-53-mhz" title="Link to this heading">#</a></h4>
 <p>In het tweede voorbeeld van een banddoorlaatfilter bekijken we een smalle banddoorlaatfilter: De bandbreedte is in dit geval slechts 6 MHz.</p>
 <div class="cell docutils container">
 <div class="cell_output docutils container">
@@ -1313,10 +1318,10 @@ p[ 14 ] = (-4439819.935339821-332480313.6424786j)
 </section>
 </section>
 <section id="chebyshev-filters">
-<h2>Chebyshev filters<a class="headerlink" href="#chebyshev-filters" title="Link to this heading">#</a></h2>
+<h3>Chebyshev filters<a class="headerlink" href="#chebyshev-filters" title="Link to this heading">#</a></h3>
 <p>Bij het ontwerp van een Chebyshev filter definieren we een maximale rimpel <span class="math notranslate nohighlight">\(\epsilon\)</span>. In de gehele doorlaatband moet de verzwakking van het signaal kleiner zijn dan deze waarde <span class="math notranslate nohighlight">\(\epsilon\)</span>.</p>
 <section id="chebyshev-40-mhz-laagdoorlaatfilter-van-de-3de-orde-met-6db-maximale-ripple">
-<h3>Chebyshev 40 MHz laagdoorlaatfilter van de 3de orde met 6dB maximale ripple<a class="headerlink" href="#chebyshev-40-mhz-laagdoorlaatfilter-van-de-3de-orde-met-6db-maximale-ripple" title="Link to this heading">#</a></h3>
+<h4>Chebyshev 40 MHz laagdoorlaatfilter van de 3de orde met 6dB maximale ripple<a class="headerlink" href="#chebyshev-40-mhz-laagdoorlaatfilter-van-de-3de-orde-met-6db-maximale-ripple" title="Link to this heading">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Veelterm coefficienten teller: M= 0
@@ -1375,7 +1380,7 @@ p[ 3 ] = (-23205546.204611413-221335928.5095666j)
 </div>
 </section>
 <section id="chebyshev-120-mhz-laagdoorlaatfilter-van-de-8de-orde-met-2db-maximale-ripple">
-<h3>Chebyshev 120 MHz laagdoorlaatfilter van de 8de orde met 2dB maximale ripple<a class="headerlink" href="#chebyshev-120-mhz-laagdoorlaatfilter-van-de-8de-orde-met-2db-maximale-ripple" title="Link to this heading">#</a></h3>
+<h4>Chebyshev 120 MHz laagdoorlaatfilter van de 8de orde met 2dB maximale ripple<a class="headerlink" href="#chebyshev-120-mhz-laagdoorlaatfilter-van-de-8de-orde-met-2db-maximale-ripple" title="Link to this heading">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Veelterm coefficienten teller: M= 0
@@ -1454,7 +1459,7 @@ p[ 8 ] = (-19974783.518686887-746281824.2305412j)
 </div>
 </section>
 <section id="chebyshev-30-mhz-laagdoorlaatfilter-van-de-2de-orde-met-6db-maximale-ripple">
-<h3>Chebyshev 30 MHz laagdoorlaatfilter van de 2de orde met 6dB maximale ripple<a class="headerlink" href="#chebyshev-30-mhz-laagdoorlaatfilter-van-de-2de-orde-met-6db-maximale-ripple" title="Link to this heading">#</a></h3>
+<h4>Chebyshev 30 MHz laagdoorlaatfilter van de 2de orde met 6dB maximale ripple<a class="headerlink" href="#chebyshev-30-mhz-laagdoorlaatfilter-van-de-2de-orde-met-6db-maximale-ripple" title="Link to this heading">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Veelterm coefficienten teller: M= 0
@@ -1524,7 +1529,7 @@ p[ 2 ] = (-60780360.20507117-146490750.93199244j)
 </section>
 </section>
 <section id="bessel-thomson-filters">
-<h2>Bessel Thomson filters<a class="headerlink" href="#bessel-thomson-filters" title="Link to this heading">#</a></h2>
+<h3>Bessel Thomson filters<a class="headerlink" href="#bessel-thomson-filters" title="Link to this heading">#</a></h3>
 <p>Het voornaamste doel van een Bessel Thomson filter is een lineair verloop te bekomen van het fase verloop in de buurt van de afsnijfrequentie. Hierdoor wordt de vorm van een puls beter behouden. In dit vak zullen we de Bessel Thomson filters steeds met de computer uitrekenen. Hieronder vind je de berekening van de coeficienten van de transfer functie een 2de orde Bessel Thomson  hoogdoorlaatfilter met afsnijfrequentie op 1 kHz.</p>
 <p>In <a class="reference internal" href="#besseltomson-fig"><span class="std std-numref">Fig. 124</span></a>  zie je dan vervolgens de plot van de transferkarakteristiek een 2de orde Bessel Thomson  hoogdoorlaatfilter</p>
 <div class="cell docutils container">
@@ -1552,10 +1557,11 @@ a[ 0 ] = 39478417.60435742
 </div>
 </div>
 <section id="analyze-van-deze-coefficienten">
-<h3>Analyze van deze coëfficiënten<a class="headerlink" href="#analyze-van-deze-coefficienten" title="Link to this heading">#</a></h3>
+<h4>Analyze van deze coëfficiënten<a class="headerlink" href="#analyze-van-deze-coefficienten" title="Link to this heading">#</a></h4>
 <p><span class="math notranslate nohighlight">\(a_0 = 1\)</span></p>
 <p><span class="math notranslate nohighlight">\(a_1 = \frac{\omega_c}{Q}\)</span>   met <span class="math notranslate nohighlight">\( Q = 0.57735\)</span></p>
 <p><span class="math notranslate nohighlight">\(a_2 = \omega_c^2\)</span></p>
+</section>
 </section>
 </section>
 <section id="toleranties">
@@ -2394,7 +2400,7 @@ try_create(); </script></figure>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#aanpak-en-algemeen-perspectief">Aanpak en algemeen perspectief</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#specifieke-filter-blokken">Specifieke filter blokken</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#eerste-en-tweede-orde-filters">Eerste en tweede orde filters</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#eerste-orde-filter-bouwblokken">Eerste orde filter bouwblokken</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tweede-orde-filter-blokken">Tweede orde filter blokken</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#biquad-filter">BiQuad filter</a><ul class="nav section-nav flex-column">
@@ -2413,22 +2419,25 @@ try_create(); </script></figure>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#voorbeeld-omrekenen-van-de-polen-van-een-2de-orde-laagdoorlaatfilter-naar-een-2de-orde-banddoorlaatfilter">Voorbeeld: Omrekenen van de polen van een 2de orde laagdoorlaatfilter naar een 2de orde banddoorlaatfilter</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#butterworth-filters">Butterworth filters</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#butterworth-laagdoorlaatfilter-van-de-3de-orde">Butterworth laagdoorlaatfilter van de 3de orde</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#butterworth-laagdoorlaatfilter-van-de-5de-orde">Butterworth laagdoorlaatfilter van de 5de orde</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vergelijking-van-de-3de-en-5de-orde-butterworth-laagdoorlaatfilter">Vergelijking van de 3de en 5de orde Butterworth laagdoorlaatfilter</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#zevende-orde-banddoorlaatfilter-van-10mhz-tot-50mhz">Zevende orde banddoorlaatfilter van 10MHz  tot 50MHz</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#de-orde-banddoorlaatfilter-tussen-47-en-53-mhz">7de orde banddoorlaatfilter tussen 47 en 53 MHz</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#specifieke-filter-blokken">Specifieke filter blokken</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#butterworth-filters">Butterworth filters</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#butterworth-laagdoorlaatfilter-van-de-3de-orde">Butterworth laagdoorlaatfilter van de 3de orde</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#butterworth-laagdoorlaatfilter-van-de-5de-orde">Butterworth laagdoorlaatfilter van de 5de orde</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#vergelijking-van-de-3de-en-5de-orde-butterworth-laagdoorlaatfilter">Vergelijking van de 3de en 5de orde Butterworth laagdoorlaatfilter</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#zevende-orde-banddoorlaatfilter-van-10mhz-tot-50mhz">Zevende orde banddoorlaatfilter van 10MHz  tot 50MHz</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#de-orde-banddoorlaatfilter-tussen-47-en-53-mhz">7de orde banddoorlaatfilter tussen 47 en 53 MHz</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#chebyshev-filters">Chebyshev filters</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#chebyshev-40-mhz-laagdoorlaatfilter-van-de-3de-orde-met-6db-maximale-ripple">Chebyshev 40 MHz laagdoorlaatfilter van de 3de orde met 6dB maximale ripple</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#chebyshev-120-mhz-laagdoorlaatfilter-van-de-8de-orde-met-2db-maximale-ripple">Chebyshev 120 MHz laagdoorlaatfilter van de 8de orde met 2dB maximale ripple</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#chebyshev-30-mhz-laagdoorlaatfilter-van-de-2de-orde-met-6db-maximale-ripple">Chebyshev 30 MHz laagdoorlaatfilter van de 2de orde met 6dB maximale ripple</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#chebyshev-filters">Chebyshev filters</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#chebyshev-40-mhz-laagdoorlaatfilter-van-de-3de-orde-met-6db-maximale-ripple">Chebyshev 40 MHz laagdoorlaatfilter van de 3de orde met 6dB maximale ripple</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#chebyshev-120-mhz-laagdoorlaatfilter-van-de-8de-orde-met-2db-maximale-ripple">Chebyshev 120 MHz laagdoorlaatfilter van de 8de orde met 2dB maximale ripple</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#chebyshev-30-mhz-laagdoorlaatfilter-van-de-2de-orde-met-6db-maximale-ripple">Chebyshev 30 MHz laagdoorlaatfilter van de 2de orde met 6dB maximale ripple</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bessel-thomson-filters">Bessel Thomson filters</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#analyze-van-deze-coefficienten">Analyze van deze coëfficiënten</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bessel-thomson-filters">Bessel Thomson filters</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#analyze-van-deze-coefficienten">Analyze van deze coëfficiënten</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#toleranties">Toleranties</a></li>

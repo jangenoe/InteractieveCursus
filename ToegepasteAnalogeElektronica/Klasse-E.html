@@ -664,8 +664,8 @@ Deze spoel zal zorgen voor een zo constant mogelijke stroom bovenop de sinusvorm
 </div>
 </div>
 <p>Natuurlijk moet op basis van de <a class="reference external" href="https://en.wikipedia.org/wiki/Kirchhoff%27s_circuit_laws">stroomwet</a> van <a class="reference external" href="https://en.wikipedia.org/wiki/Gustav_Kirchhoff">Kirchhoff</a> de netto stroom naar elke knoop 0 zijn.</p>
-<div class="amsmath math notranslate nohighlight" id="equation-724b4372-5d96-4946-8770-9117c2c4ce8f">
-<span class="eqno">(9)<a class="headerlink" href="#equation-724b4372-5d96-4946-8770-9117c2c4ce8f" title="Permalink to this equation">#</a></span>\[\begin{equation}\label{eq:Kirchoff}
+<div class="amsmath math notranslate nohighlight" id="equation-ac9431f1-92e1-4347-b53e-e884c356f64d">
+<span class="eqno">(9)<a class="headerlink" href="#equation-ac9431f1-92e1-4347-b53e-e884c356f64d" title="Permalink to this equation">#</a></span>\[\begin{equation}\label{eq:Kirchoff}
 \sum_{j \neq i}^n I_{ij}=0.
 \end{equation}\]</div>
 <p>Wanneer dit niet zo zou zijn zou de spanning op deze knoop snel gaan stijgen of dalen tot dat wel het geval wordt. De snelheid waarmee dat gebeurt hangt af van de (parasitaire) capaciteit van de knoop.</p>
@@ -772,16 +772,6 @@ Ook komt vaak voor dat de kwaliteitsfactor <span class="math notranslate nohighl
 <section id="voorbeeld-1-5w-versterker-bij-475-khz">
 <h3>Voorbeeld 1: 5W versterker bij 475 kHz<a class="headerlink" href="#voorbeeld-1-5w-versterker-bij-475-khz" title="Link to this heading">#</a></h3>
 <p>We ontwerpen een klasse E versterker die een vermogen van 5W moet kunnen leveren bij een frequentie van 475 kHz, bij een voedingsspanning van 12.5V, met een Q factor van 5 en een saturatiespanning van de bipolaire transistor van 0.5 V. Wanneer we de vergelijkingen Eq.<a class="reference internal" href="#equation-deq1">(10)</a> tot Eq.<a class="reference internal" href="#equation-deq4">(13)</a> gebruiken om de elementen van dit circuit uit te rekenen bekomen we de volgende waardes voor de verschillende componenten:</p>
-<ul class="simple">
-<li><p><strong>Verwacht vermogen</strong> : 5W</p></li>
-<li><p><strong>Frequentie</strong> : 475 kHz</p></li>
-<li><p><strong>Voedingsspanning</strong> : 12.5 V</p></li>
-<li><p><strong>Kwaliteitsfactor</strong> : 5</p></li>
-<li><p><strong>Saturatiespanning</strong> 0.5V</p></li>
-</ul>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
-</pre></div>
-</div>
 <div class="cell docutils container">
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>RL = 14.88 Ohm
@@ -878,6 +868,8 @@ We kunnen het vorig ontwerp aan de hand van een transformator met wikkelverhoudi
 <h3>Voorbeeld 2: 50W versterker bij 137.77 kHz<a class="headerlink" href="#voorbeeld-2-50w-versterker-bij-137-77-khz" title="Link to this heading">#</a></h3>
 <p>Dit is een voorbeeld afkomstig van een driver voor <a class="reference external" href="https://people.physics.anu.edu.au/~dxt103/class-e/">amateur korte-golf zender</a>.
 We wensen een klasse E versterker die een vermogen van 50W moet kunnen leveren bij een frequentie van 137.77 kHz, bij een voedingsspanning van 12.5V, met een Q factor van 5 en een saturatiespanning van de bipolaire transistor van 0.9 V. Wanneer we de vergelijkingen Eq.<a class="reference internal" href="#equation-deq1">(10)</a> tot Eq.<a class="reference internal" href="#equation-deq4">(13)</a> gebruiken om de elementen van dit circuit uit te rekenen bekomen we de volgende waardes voor de verschillende componenten:</p>
+<aside class="margin sidebar">
+<p class="sidebar-title">Opgave Voorbeeld 2</p>
 <ul class="simple">
 <li><p><strong>Verwacht vermogen</strong> : 50W</p></li>
 <li><p><strong>Frequentie</strong> : 137.77 kHz</p></li>
@@ -885,6 +877,7 @@ We wensen een klasse E versterker die een vermogen van 50W moet kunnen leveren b
 <li><p><strong>Kwaliteitsfactor</strong> : 5</p></li>
 <li><p><strong>Saturatiespanning</strong> 0.9V</p></li>
 </ul>
+</aside>
 <div class="cell docutils container">
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>RL = 1.39 Ohm
