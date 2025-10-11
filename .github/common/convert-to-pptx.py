@@ -431,8 +431,12 @@ for ipath in notebooks:
                         tf = body_shape.text_frame
                         tf.clear()  # Remove any existing paragraphs
                         tf.text = ""  # Clear existing text
-                        for level, text in bullets:
-                            p = tf.add_paragraph()
+                        for idx, (level, text) in enumerate(bullets):
+                            if idx == 0:
+                                # Reuse the existing paragraph for the first bullet
+                                p = tf.paragraphs[0]
+                            else:
+                                p = tf.add_paragraph()
                             p.level = level
                             add_parsed_bullet(p, text)
                         tf.auto_size = MSO_AUTO_SIZE.SHAPE_TO_FIT_TEXT
@@ -475,8 +479,12 @@ for ipath in notebooks:
                         tf = body_shape.text_frame
                         #tf.clear()  # Remove any existing paragraphs
                         #tf.text = ""  # Clear existing text
-                        for level, text in bullets:
-                            p = tf.add_paragraph()
+                        for idx, (level, text) in enumerate(bullets):
+                            if idx == 0:
+                                # Reuse the existing paragraph for the first bullet
+                                p = tf.paragraphs[0] if tf.paragraphs else tf.add_paragraph()
+                            else:
+                                p = tf.add_paragraph()
                             p.level = level
                             add_parsed_bullet(p, text)
                         tf.auto_size = MSO_AUTO_SIZE.SHAPE_TO_FIT_TEXT
