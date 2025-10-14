@@ -47,6 +47,7 @@ sphinx:
   extra_extensions:
     - sphinx_exercise
     - sphinxext.opengraph
+    - sphinx_spice
   config:
     html_extra_path: ['./extra_path']
     # html_theme: sphinx_book_theme
