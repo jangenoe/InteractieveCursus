@@ -49,7 +49,7 @@ jobs:
         # jb build AnalogeElektronica2/  --builder pdflatex
         mv AnalogeElektronica2/_toc.yml AnalogeElektronica2/_tocpdf.yml
         mv AnalogeElektronica2/_tochtml.yml AnalogeElektronica2/_toc.yml        
-        mv AnalogeElektronica2/_build/latex/python.pdf AnalogeElektronica2/_build/html/AnalogeElektronica2.pdf
+        # mv AnalogeElektronica2/_build/latex/python.pdf AnalogeElektronica2/_build/html/AnalogeElektronica2.pdf
         jb build AnalogDesignTechniques/ --builder pdflatex
         mv AnalogDesignTechniques/_build/latex/python.pdf AnalogDesignTechniques/_build/html/AnalogDesignTechniques.pdf
         jb build MicroEnNanoTechnologie/ --builder pdflatex
