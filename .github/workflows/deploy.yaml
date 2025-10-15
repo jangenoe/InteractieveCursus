@@ -46,7 +46,7 @@ jobs:
         mv ToegepasteAnalogeElektronica/_build/latex/python.pdf ToegepasteAnalogeElektronica/_build/html/ToegepasteAnalogeElektronica.pdf
         mv AnalogeElektronica2/_toc.yml AnalogeElektronica2/_tochtml.yml
         mv AnalogeElektronica2/_tocpdf.yml AnalogeElektronica2/_toc.yml
-        jb build AnalogeElektronica2/  --builder pdflatex
+        # jb build AnalogeElektronica2/  --builder pdflatex
         mv AnalogeElektronica2/_toc.yml AnalogeElektronica2/_tocpdf.yml
         mv AnalogeElektronica2/_tochtml.yml AnalogeElektronica2/_toc.yml        
         mv AnalogeElektronica2/_build/latex/python.pdf AnalogeElektronica2/_build/html/AnalogeElektronica2.pdf
