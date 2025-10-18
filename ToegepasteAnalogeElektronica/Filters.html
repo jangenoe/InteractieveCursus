@@ -779,6 +779,123 @@ document.write(`
 </figure>
 </div>
 </div>
+<p>Online vinden we voorbeelden van de <a class="reference external" href="https://www.ti.com/tool/CIRCUIT060054">low pass filter</a> terug. Er zijn wel echter een aantal kleine aanpassingen te zien.
+In dit voorbeeld, ontworpen voor een 10 kHz cutoff frequency, is <span class="math notranslate nohighlight">\(R_{x2}=0\)</span> en <span class="math notranslate nohighlight">\(R_{x1}=\infty\)</span>. Hierdoor zouden we een versterking verwachten van 1.
+Echter, de condensator <span class="math notranslate nohighlight">\(C_1\)</span> is dubbel zo groot dan de condensator <span class="math notranslate nohighlight">\(C_2\)</span>, waardoor toch een versterking van 2 kan bekomen worden.</p>
+<div class="cell tag_remove-cell4PDF docutils container">
+<div class="cell_output docutils container">
+<figure class="align-default">
+<div class="output text_html"><style>pre { line-height: 125%; }
+td.linenos .normal { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
+span.linenos { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
+td.linenos .special { color: #000000; background-color: #ffffc0; padding-left: 5px; padding-right: 5px; }
+span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 5px; padding-right: 5px; }
+.output_html .hll { background-color: #ffffcc }
+.output_html { background: #f8f8f8; }
+.output_html .c { color: #3D7B7B; font-style: italic } /* Comment */
+.output_html .err { border: 1px solid #FF0000 } /* Error */
+.output_html .k { color: #008000; font-weight: bold } /* Keyword */
+.output_html .o { color: #666666 } /* Operator */
+.output_html .ch { color: #3D7B7B; font-style: italic } /* Comment.Hashbang */
+.output_html .cm { color: #3D7B7B; font-style: italic } /* Comment.Multiline */
+.output_html .cp { color: #9C6500 } /* Comment.Preproc */
+.output_html .cpf { color: #3D7B7B; font-style: italic } /* Comment.PreprocFile */
+.output_html .c1 { color: #3D7B7B; font-style: italic } /* Comment.Single */
+.output_html .cs { color: #3D7B7B; font-style: italic } /* Comment.Special */
+.output_html .gd { color: #A00000 } /* Generic.Deleted */
+.output_html .ge { font-style: italic } /* Generic.Emph */
+.output_html .ges { font-weight: bold; font-style: italic } /* Generic.EmphStrong */
+.output_html .gr { color: #E40000 } /* Generic.Error */
+.output_html .gh { color: #000080; font-weight: bold } /* Generic.Heading */
+.output_html .gi { color: #008400 } /* Generic.Inserted */
+.output_html .go { color: #717171 } /* Generic.Output */
+.output_html .gp { color: #000080; font-weight: bold } /* Generic.Prompt */
+.output_html .gs { font-weight: bold } /* Generic.Strong */
+.output_html .gu { color: #800080; font-weight: bold } /* Generic.Subheading */
+.output_html .gt { color: #0044DD } /* Generic.Traceback */
+.output_html .kc { color: #008000; font-weight: bold } /* Keyword.Constant */
+.output_html .kd { color: #008000; font-weight: bold } /* Keyword.Declaration */
+.output_html .kn { color: #008000; font-weight: bold } /* Keyword.Namespace */
+.output_html .kp { color: #008000 } /* Keyword.Pseudo */
+.output_html .kr { color: #008000; font-weight: bold } /* Keyword.Reserved */
+.output_html .kt { color: #B00040 } /* Keyword.Type */
+.output_html .m { color: #666666 } /* Literal.Number */
+.output_html .s { color: #BA2121 } /* Literal.String */
+.output_html .na { color: #687822 } /* Name.Attribute */
+.output_html .nb { color: #008000 } /* Name.Builtin */
+.output_html .nc { color: #0000FF; font-weight: bold } /* Name.Class */
+.output_html .no { color: #880000 } /* Name.Constant */
+.output_html .nd { color: #AA22FF } /* Name.Decorator */
+.output_html .ni { color: #717171; font-weight: bold } /* Name.Entity */
+.output_html .ne { color: #CB3F38; font-weight: bold } /* Name.Exception */
+.output_html .nf { color: #0000FF } /* Name.Function */
+.output_html .nl { color: #767600 } /* Name.Label */
+.output_html .nn { color: #0000FF; font-weight: bold } /* Name.Namespace */
+.output_html .nt { color: #008000; font-weight: bold } /* Name.Tag */
+.output_html .nv { color: #19177C } /* Name.Variable */
+.output_html .ow { color: #AA22FF; font-weight: bold } /* Operator.Word */
+.output_html .w { color: #bbbbbb } /* Text.Whitespace */
+.output_html .mb { color: #666666 } /* Literal.Number.Bin */
+.output_html .mf { color: #666666 } /* Literal.Number.Float */
+.output_html .mh { color: #666666 } /* Literal.Number.Hex */
+.output_html .mi { color: #666666 } /* Literal.Number.Integer */
+.output_html .mo { color: #666666 } /* Literal.Number.Oct */
+.output_html .sa { color: #BA2121 } /* Literal.String.Affix */
+.output_html .sb { color: #BA2121 } /* Literal.String.Backtick */
+.output_html .sc { color: #BA2121 } /* Literal.String.Char */
+.output_html .dl { color: #BA2121 } /* Literal.String.Delimiter */
+.output_html .sd { color: #BA2121; font-style: italic } /* Literal.String.Doc */
+.output_html .s2 { color: #BA2121 } /* Literal.String.Double */
+.output_html .se { color: #AA5D1F; font-weight: bold } /* Literal.String.Escape */
+.output_html .sh { color: #BA2121 } /* Literal.String.Heredoc */
+.output_html .si { color: #A45A77; font-weight: bold } /* Literal.String.Interpol */
+.output_html .sx { color: #008000 } /* Literal.String.Other */
+.output_html .sr { color: #A45A77 } /* Literal.String.Regex */
+.output_html .s1 { color: #BA2121 } /* Literal.String.Single */
+.output_html .ss { color: #19177C } /* Literal.String.Symbol */
+.output_html .bp { color: #008000 } /* Name.Builtin.Pseudo */
+.output_html .fm { color: #0000FF } /* Name.Function.Magic */
+.output_html .vc { color: #19177C } /* Name.Variable.Class */
+.output_html .vg { color: #19177C } /* Name.Variable.Global */
+.output_html .vi { color: #19177C } /* Name.Variable.Instance */
+.output_html .vm { color: #19177C } /* Name.Variable.Magic */
+.output_html .il { color: #666666 } /* Literal.Number.Integer.Long */</style><div class="highlight"><pre><span></span><span class="o">*</span><span class="w"> </span><span class="nx">Sallen</span><span class="w"> </span><span class="nx">and</span><span class="w"> </span><span class="nx">Key</span><span class="w"> </span><span class="nx">Low</span><span class="w"> </span><span class="nx">pass</span><span class="w"> </span><span class="nx">filter</span>
+<span class="nx">R1</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="mi">10</span><span class="nx">k</span>
+<span class="nx">R2</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="mi">3</span><span class="w"> </span><span class="mi">10</span><span class="nx">k</span>
+<span class="nx">XOpAmp</span><span class="w"> </span><span class="mi">3</span><span class="w"> </span><span class="mi">4</span><span class="w"> </span><span class="mi">8</span><span class="w"> </span><span class="mi">9</span><span class="w"> </span><span class="mi">4</span><span class="w"> </span><span class="mi">8</span><span class="w"> </span><span class="nx">opamp</span>
+<span class="nx">C1</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="mi">4</span><span class="w"> </span><span class="m m-Double">2.2</span><span class="nx">nF</span>
+<span class="nx">C2</span><span class="w"> </span><span class="mi">3</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="m m-Double">1.1</span><span class="nx">nF</span>
+<span class="nx">Vin</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="nx">SIN</span><span class="p">(</span><span class="mi">0</span><span class="nx">V</span><span class="w"> </span><span class="mi">1</span><span class="nx">VPEAK</span><span class="w"> </span><span class="mi">10</span><span class="nx">KHZ</span><span class="p">)</span>
+<span class="o">*</span><span class="w"> </span><span class="nx">SUPPLY</span><span class="w"> </span><span class="nx">VOLTAGES</span>
+<span class="nx">VPOS</span><span class="w"> </span><span class="mi">8</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="nx">DC</span><span class="w"> </span><span class="o">+</span><span class="m m-Double">2.5</span><span class="nx">V</span>
+<span class="nx">VNEG</span><span class="w"> </span><span class="mi">9</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="nx">DC</span><span class="w"> </span><span class="m m-Double">-2.5</span><span class="nx">V</span>
+</pre></div>
+</div></figure>
+</div>
+</div>
+<p>Wanneer we het circuit van listing xxx simuleren op basis van een ideale opamp (GBW=10MHz, versterking van 100K en een POLE bij 100Hz), krijgen we resultaat als in xxx.</p>
+<div class="cell docutils container">
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Should be unit less
+</pre></div>
+</div>
+<figure class="align-default">
+<img alt="_images/e681826eab18f7ca1858ccbcbb0dff38598a3c1914a1c18195c5a1c73ca34bbd.png" src="_images/e681826eab18f7ca1858ccbcbb0dff38598a3c1914a1c18195c5a1c73ca34bbd.png" />
+</figure>
+</div>
+</div>
+<p>We kunnen dit circuit ook simuleren met een meer realistische opamp, bv een LMV981</p>
+<div class="cell docutils container">
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Should be unit less
+</pre></div>
+</div>
+<figure class="align-default">
+<img alt="_images/bfde163dcaca45be804a9c219f667377bbfe3fbfb4ad81d661851705320041b9.png" src="_images/bfde163dcaca45be804a9c219f667377bbfe3fbfb4ad81d661851705320041b9.png" />
+</figure>
+</div>
+</div>
+<p>Op dezelfde manier zijn ook de <a class="reference external" href="https://www.ti.com/tool/CIRCUIT060053">high pass filter</a> en de <a class="reference external" href="https://www.ti.com/tool/CIRCUIT060056">Band pass filter</a> beschreven.</p>
 </section>
 </section>
 </section>
