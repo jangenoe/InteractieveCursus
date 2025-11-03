@@ -59,8 +59,6 @@ if report_all_shapes_in_template:
         for shape in slide.placeholders:
             print('.  %d %s' % (shape.placeholder_format.idx, shape.name))
 
-
-
 def clone_shape(shape, left=body_left, top=body_top, width=body_width, height=body_height,idcounter=0):
     """Add a duplicate of `shape` to the slide on which it appears."""
     sp = shape._sp
@@ -74,11 +72,11 @@ def clone_shape(shape, left=body_left, top=body_top, width=body_width, height=bo
     new_shape.width = width
     new_shape.height = height
     return new_shape
-"""  van een andere bron: mogelijk dit gebruiken als we meer fragments willen kopieren
-    new_el = copy.deepcopy(shape.element)
-    spTree.shapes._spTree.insert_element_before(new_el, "p:extLst") # in de bron was de eerste spTree de besteming-slide
-    new_shape = spTree.shapes[-1]  # in de bron was de eerste spTree de besteming-slide
-"""
+    """  van een andere bron: mogelijk dit gebruiken als we meer fragments willen kopieren
+        new_el = copy.deepcopy(shape.element)
+        spTree.shapes._spTree.insert_element_before(new_el, "p:extLst") # in de bron was de eerste spTree de besteming-slide
+        new_shape = spTree.shapes[-1]  # in de bron was de eerste spTree de besteming-slide
+    """
 
 def find_between( s, first, last ):
     try:
@@ -314,7 +312,9 @@ for ipath in notebooks:
                             try:                            
                                 pictp=slide.shapes.add_picture(image_stream, body_left, body_top, height=body_height) 
                                 if pictp.width>prs.slide_width:
+                                    factorsc=int(body_height*prs.slide_width/pictp.width)
                                     pictp.width=prs.slide_width
+                                    pictp.height= factorsc
                                     pictp.left=Inches(0)
                                 else:
                                     pictp.left=(prs.slide_width-pictp.width)//2
@@ -329,7 +329,9 @@ for ipath in notebooks:
                             try:                            
                                 pictp=slide.shapes.add_picture(image_stream, body_left, body_top, height=body_height) 
                                 if pictp.width>prs.slide_width:
+                                    factorsc=int(body_height*prs.slide_width/pictp.width)
                                     pictp.width=prs.slide_width
+                                    pictp.height= factorsc
                                     pictp.left=Inches(0)
                                 else:
                                     pictp.left=(prs.slide_width-pictp.width)//2
