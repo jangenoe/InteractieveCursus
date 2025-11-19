@@ -424,6 +424,7 @@ document.write(`
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#toleranties">Toleranties</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#switched-capacitor-filters">Switched Capacitor filters</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#zelftest-via-flashcards">Zelftest via Flashcards</a></li>
 </ul>
             </nav>
@@ -453,8 +454,8 @@ document.write(`
 </div>
 </div>
 <p>Het circuit in <a class="reference internal" href="#generic"><span class="std std-numref">Figuur 91</span></a> kunnen we oplossen door de MNA methode. <span class="math notranslate nohighlight">\(V_{in}(s)\)</span> is een spanningsbron en staat dus in het tweede lid van de MNA matrix, terwijl <span class="math notranslate nohighlight">\(V_{in}(s)\)</span> een spanning is op een knoop, en dus in het eerste lid zal staan. De matrix die we daardoor bekomen is:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-9dfbba66-f004-47eb-a141-3bdcd9215837">
-<span class="eqno">(14)<a class="headerlink" href="#equation-9dfbba66-f004-47eb-a141-3bdcd9215837" title="Permalink to this equation">#</a></span>\[\begin{equation}\label{eq:bron}
+<div class="amsmath math notranslate nohighlight" id="equation-f90b2fcd-370a-47f1-b824-ea7443ba10f6">
+<span class="eqno">(14)<a class="headerlink" href="#equation-f90b2fcd-370a-47f1-b824-ea7443ba10f6" title="Permalink to this equation">#</a></span>\[\begin{equation}\label{eq:bron}
 \begin{bmatrix}
   \vdots &amp; &amp; &amp;  &amp; &amp; \vdots &amp; &amp; &amp; \vdots \\
   \dots &amp; &amp; &amp;  &amp; &amp; \dots &amp;   &amp; &amp; \dots \\
@@ -1616,10 +1617,62 @@ a[ 0 ] = 39478417.60435742
 <h2>Toleranties<a class="headerlink" href="#toleranties" title="Link to this heading">#</a></h2>
 <p>Het is heel erg belangrijk rekening te houden met de  <a class="reference external" href="https://ccrma.stanford.edu/~jatin/Bad-Circuit-Modelling/Tolerances.html">toleranties</a> van de componenten die we hebben. De meeste leveranciers van weerstanden voorzien een ruime marge op de weerstandswaarde die geleverd wordt, typisch bv +/-<span class="math notranslate nohighlight">\(5\%\)</span> of +/-<span class="math notranslate nohighlight">\(1\%\)</span>. Een aantal ontwerpen zijn hier zeer gevoelig voor. Bij het maken van een ontwerp moet je dan ook rekening houden met deze variaties.</p>
 </section>
+<section id="switched-capacitor-filters">
+<h2>Switched Capacitor filters<a class="headerlink" href="#switched-capacitor-filters" title="Link to this heading">#</a></h2>
+<p>Voor de integratie van filters op geintegreerde schakelingen worden vaak geschakelde condensatoren (Switched Capacitors) gebruikt omwille van de volgende reden:</p>
+<ul class="simple">
+<li><p>Weerstanden op chip zijn nooit heel erg nauwkeurig</p></li>
+<li><p>We kunnen een weerstand vervangen door een condensator en 2 schakelaars</p></li>
+</ul>
+<p>Om de equivalente weerstand uit te rekenen die staat tussen <span class="math notranslate nohighlight">\(V_{in}\)</span> en <span class="math notranslate nohighlight">\(V_{uit}\)</span>, berekenen we de stroom die loopt tussen <span class="math notranslate nohighlight">\(V_{in}\)</span> en <span class="math notranslate nohighlight">\(V_{uit}\)</span>. De stroom is de lading per tijdseenheid die vloeit om de condensator te op- en ontladen.</p>
+<div class="math notranslate nohighlight">
+\[i=f C_s (V_{in}-V_{out})\]</div>
+<p>Uit deze relatie tussen stroom en spanningsverschil volgt dan de waarde van de equivalente weerstand.</p>
+<div class="math notranslate nohighlight">
+\[R=\frac{1}{f C_s }\]</div>
+<p>We vervangen de weerstand R in deze filter door een SC schakeling. Het nieuwe schema wordt dan:</p>
+<ul class="simple">
+<li><p>Het eenvoudige circuit heeft last van de parasitaire capaciteiten</p></li>
+<li><p>Het verdubbelen van de schakelaars lost dit probleem op</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[R=\frac{1}{f C_s }\]</div>
+<div class="cell docutils container">
+<div class="cell_output docutils container">
+<figure class="align-default" id="sc2">
+<img alt="_images/6c831f3275651fe95d981e266c462e707c30c8a199f76a0dbbf733693f051442.svg" src="_images/6c831f3275651fe95d981e266c462e707c30c8a199f76a0dbbf733693f051442.svg" />
+<figcaption>
+<p><span class="caption-number">Figuur 136 </span><span class="caption-text">Verbeterde Switched Capacitor weerstand</span><a class="headerlink" href="#sc2" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_output docutils container">
+<figure class="align-default" id="fig5copy">
+<img alt="_images/b2617888d10faf143c611d74fdd3866ae6a9df88118364823888789742e3afe0.svg" src="_images/b2617888d10faf143c611d74fdd3866ae6a9df88118364823888789742e3afe0.svg" />
+<figcaption>
+<p><span class="caption-number">Figuur 137 </span><span class="caption-text">Bovenste gedeelte van het BiQuad circuit.</span><a class="headerlink" href="#fig5copy" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_output docutils container">
+<figure class="align-default" id="fig5modified">
+<img alt="_images/67d2029577e0e4300019f6ed2e3cac29b81c83b5e37d6e8514c9da2d6ff7575c.svg" src="_images/67d2029577e0e4300019f6ed2e3cac29b81c83b5e37d6e8514c9da2d6ff7575c.svg" />
+<figcaption>
+<p><span class="caption-number">Figuur 138 </span><span class="caption-text">Bovenste gedeelte van het BiQuad circuit herwerkt naar Switched Capacitor</span><a class="headerlink" href="#fig5modified" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
+</div>
+<p>Merk op dat bij het omschakelen naar de Switched Capacitor implementatie de laatste stage (inverterende opamp) verdwenen  is.
+De truc is dat voor R3 de klokken omgewisseld zijn, waardoor de stomen omgekeerd zijn en het geheel zich dus gedraagt als een negatieve weerstand</p>
+</section>
 <section id="zelftest-via-flashcards">
 <h2>Zelftest via Flashcards<a class="headerlink" href="#zelftest-via-flashcards" title="Link to this heading">#</a></h2>
-<div class="math notranslate nohighlight">
-\[\,\!\]</div>
+<p><span class="math notranslate nohighlight">\(\,\!\)</span></p>
 <p>Klik op de vraag als je je antwoord wil nakijken. Klik op next om de volgende vraag te bekomen.</p>
 <div class="cell tag_remove_cell4reveal tag_remove_cell4pptx tag_remove-cell4PDF docutils container">
 <div class="cell_output docutils container">
@@ -2908,6 +2961,7 @@ window.setTopics = function(idOrElem, topics) {
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#toleranties">Toleranties</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#switched-capacitor-filters">Switched Capacitor filters</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#zelftest-via-flashcards">Zelftest via Flashcards</a></li>
 </ul>
   </nav></div>

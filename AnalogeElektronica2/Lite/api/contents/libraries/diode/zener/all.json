@@ -2,11 +2,11 @@
   "content": [
     {
       "content": null,
-      "created": "2025-11-19T00:05:08.507443Z",
+      "created": "2025-11-19T19:29:32.666182Z",
       "format": null,
       "hash": null,
       "hash_algorithm": null,
-      "last_modified": "2025-11-18T23:53:15.352249Z",
+      "last_modified": "2025-11-19T19:23:05.088540Z",
       "mimetype": null,
       "name": "1N5919B.lib",
       "path": "libraries/diode/zener/1N5919B.lib",
@@ -15,11 +15,11 @@
       "writable": true
     }
   ],
-  "created": "2025-11-19T00:05:08.507443Z",
+  "created": "2025-11-19T19:29:32.666182Z",
   "format": "json",
   "hash": null,
   "hash_algorithm": null,
-  "last_modified": "2025-11-19T00:05:08.507443Z",
+  "last_modified": "2025-11-19T19:29:32.666182Z",
   "mimetype": null,
   "name": "zener",
   "path": "libraries/diode/zener",
