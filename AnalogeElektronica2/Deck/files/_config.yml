@@ -20,7 +20,7 @@ launch_buttons:
   colab_url: "https://colab.research.google.com"
   use_lite_button: false
   use_reveal_button: true
-  use_powerpoint_button: false
+  use_powerpoint_button: true
   use_deck_button: false
 parse:
   myst_enable_extensions:
