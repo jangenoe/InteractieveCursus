@@ -113,7 +113,7 @@ def SCweerstand(xy,clabel='C',linit=1,neg=False):
     indot=Dot()
     t2=NFet(d='right',reverse=True)
     Ground()
-    Dot(open=True,xy=t1.gate,color='green',label=r"$\phi_1$')
+    Dot(open=True,xy=t1.gate,color='green',label=r'$\phi_1$')
     Dot(open=True,xy=t2.gate,color='red',lftlabel=r'$\phi_2$')
     Capacitor(  d='right', xy=indot.start,l=3, label=clabel)
     outdot=Dot()
