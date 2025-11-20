@@ -1,0 +1,49 @@
+# Dutch technical terms and proper nouns that might not be in the standard dictionary
+# Add words here that should be considered correct but aren't in the Dutch dictionary
+
+# Technical terms
+analoog
+elektronisch
+elektronica
+versterker
+transistor
+diode
+capacitor
+condensator
+weerstand
+impedantie
+frequentie
+amplitude
+signaal
+oscilloscope
+multimeter
+breadboard
+prototype
+schakeling
+spanning
+stroom
+vermogen
+filter
+modulator
+demodulator
+amplifier
+
+# Proper nouns and abbreviations
+KU
+Leuven
+KULeuven
+LaTeX
+Jupyter
+GitHub
+Python
+MATLAB
+Simulink
+SPICE
+LTSpice
+
+# Common Dutch words that might be flagged
+bijvoorbeeld
+namelijk
+eigenlijk
+natuurlijk
+waarschijnlijk

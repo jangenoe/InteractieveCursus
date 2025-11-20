@@ -312,7 +312,7 @@ for ipath in notebooks:
                             try:                            
                                 pictp=slide.shapes.add_picture(image_stream, body_left, body_top, height=body_height) 
                                 if pictp.width>prs.slide_width:
-                                    factorsc=int(body_height*prs.slide_width/pictp.width)
+                                    factorsc=(body_height*prs.slide_width)//pictp.width
                                     pictp.width=prs.slide_width
                                     pictp.height= factorsc
                                     pictp.left=Inches(0)
@@ -329,7 +329,7 @@ for ipath in notebooks:
                             try:                            
                                 pictp=slide.shapes.add_picture(image_stream, body_left, body_top, height=body_height) 
                                 if pictp.width>prs.slide_width:
-                                    factorsc=int(body_height*prs.slide_width/pictp.width)
+                                    factorsc=(body_height*prs.slide_width)//pictp.width
                                     pictp.width=prs.slide_width
                                     pictp.height= factorsc
                                     pictp.left=Inches(0)
@@ -338,6 +338,23 @@ for ipath in notebooks:
                                 running_height=body_top+pictp.height+Inches(0.1)
                             except UnidentifiedImageError:
                                 print("  image/jpeg  error for cell number "+str(index))
+                                running_height=body_top
+                        elif "image/gif" in output.get("data", {}):                           
+                            slide = prs.slides.add_slide(prs.slide_layouts[KUL_layout_fig])
+                            maketitle(cell,slide)  
+                            image_stream = io.BytesIO(base64.b64decode(output.data["image/gif"]))
+                            try:                            
+                                pictp=slide.shapes.add_picture(image_stream, body_left, body_top, height=body_height) 
+                                if pictp.width>prs.slide_width:
+                                    factorsc=(body_height*prs.slide_width)//pictp.width
+                                    pictp.width=prs.slide_width
+                                    pictp.height= factorsc
+                                    pictp.left=Inches(0)
+                                else:
+                                    pictp.left=(prs.slide_width-pictp.width)//2
+                                running_height=body_top+pictp.height+Inches(0.1)
+                            except UnidentifiedImageError:
+                                print("  image/gif  error for cell number "+str(index))
                                 running_height=body_top
                         elif "".join(cell.source).startswith("Video("):
                             # Extract video path from Video() call
@@ -470,7 +487,9 @@ for ipath in notebooks:
                             print(f"   latex error for cell number {index}: {e}")    
                         if pictp is not None:
                             if pictp.width>prs.slide_width:
+                                factorsc=(body_height*prs.slide_width)//pictp.width
                                 pictp.width=prs.slide_width
+                                pictp.height= factorsc
                                 pictp.left=Inches(0)
                             else:
                                 pictp.left=(prs.slide_width-pictp.width)//2

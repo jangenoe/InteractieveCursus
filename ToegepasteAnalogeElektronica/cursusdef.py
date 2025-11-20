@@ -106,6 +106,28 @@ def first_Order_LP_draw(labels=True, Freq=1e6,Cref=16e-12,inches_per_unit=0.5, R
     return
     
     
+def SCweerstand(xy,clabel='C',linit=1,neg=False):
+    ''' Switched Capacitor weerstand '''
+    Line(d='right',l=linit,xy=xy)
+    t1=NFet(d='up')
+    indot=Dot()
+    t2=NFet(d='right',reverse=True)
+    Ground()
+    Dot(open=True,xy=t1.gate,color='green',label=r'$\phi_1$')
+    Dot(open=True,xy=t2.gate,color='red',lftlabel=r'$\phi_2$')
+    Capacitor(  d='right', xy=indot.start,l=3, label=clabel)
+    outdot=Dot()
+    t3=NFet(d='right',reverse=True)
+    Ground()
+    t4=NFet(d='up', xy=outdot.start)
+    if neg:
+        Dot(open=True,xy=t4.gate,color='red').label(r'$\phi_2$',color='red')
+        Dot(open=True,xy=t3.gate,color='green').label(r'$\phi_1$',color='green',loc='left')
+    else:
+        Dot(open=True,xy=t4.gate,color='green').label(r'$\phi_1$')
+        Dot(open=True,xy=t3.gate,color='red').label(r'$\phi_2$',loc='left')
+    Line(d='right',l=1,xy=t4.source)
+    
 def freqs_resp(ba_array,Dmin=1,Dmax=5,lowDB=-100, Npts = 1024,fsize=(6,4),legend=[],Printcoef=True,ShowGraf=True):
     """
         b = ndarray of numerator coefficients
