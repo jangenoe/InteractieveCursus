@@ -70,8 +70,6 @@ sphinx:
     # Enable separate numbering for different content types
     numfig : true
     # Custom figure classes will use different counters
-    html_theme_options:
-      # extra_navbar: ""
     # templates_path : ["_templates"]
     # html_sidebars : {"**": ["navbar-logo.html","search-field.html","sbt-sidebar-nav.html","kuleuven.html"]}                     #.html mag weg
     # navbar_end: ["deck-lite-button.html"]

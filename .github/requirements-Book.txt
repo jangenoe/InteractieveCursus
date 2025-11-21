@@ -2,7 +2,7 @@ jinja2>=3.1.6
 git+https://github.com/jangenoe/sphinx-book-theme#egg=sphinx-book-theme
 git+https://github.com/jangenoe/sphinx-spice.git#egg=sphinx-spice
 jupyter-KULeuven-slides
-jupyter-book >= 1.0.4, < 2.0
+jupyter-book==1.0.4
 ghp-import
 sphinx-exercise
 sphinxext-opengraph
