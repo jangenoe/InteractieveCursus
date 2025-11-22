@@ -43,8 +43,11 @@
     <link rel="stylesheet" type="text/css" href="_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="_static/exercise.css" />
-    <link rel="stylesheet" type="text/css" href="_static/spice_file.css" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="_static/code-caption-style.css?v=0ad27fa8" />
+    <link rel="stylesheet" type="text/css" href="_static/custom-pygments.css?v=d7fe8a85" />
+    <link rel="stylesheet" type="text/css" href="_static/spice-lexer.css?v=422ceae6" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
@@ -192,7 +195,7 @@
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Versterkers</span></p>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="Klasse-C.html">Klasse C  Versterkers</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Klasse-F.html">Klasse F Verstekers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Klasse-F.html">Klasse F Versterkers</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Klasse-D.html">Klasse D resonante Versterkers</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Klasse E  Versterkers</a></li>
 </ul>
@@ -433,7 +436,7 @@ In <a class="reference internal" href="#vermogenversterkerse"><span class="std s
 </tbody>
 </table>
 </div>
-<p><a class="reference internal" href="#efig0"><span class="std std-numref">Figuur 66</span></a> toont het basisschema van de klasse E versterker. Hierin herkennen we een serie resonante kring (<span class="math notranslate nohighlight">\(C_2 L_2\)</span>) die de belasting <span class="math notranslate nohighlight">\(R_L\)</span> aanstuurt. Het spoel <span class="math notranslate nohighlight">\(L_1\)</span> voorziet dat de stroom van de voeding <span class="math notranslate nohighlight">\(V_{DD}\)</span> naar de ingang van de seriekring redelijk constant wordt gehouden terwijl de spanning aan deze ingang kan varieren. De condensator <span class="math notranslate nohighlight">\(C_1\)</span> voorziet een AC stroompad naar de grond in het geval dat de transistor niet in geleiding is.</p>
+<p><a class="reference internal" href="#efig0"><span class="std std-numref">Figuur 66</span></a> toont het basisschema van de klasse E versterker. Hierin herkennen we een serie resonante kring (<span class="math notranslate nohighlight">\(C_2 L_2\)</span>) die de belasting <span class="math notranslate nohighlight">\(R_L\)</span> aanstuurt. Het spoel <span class="math notranslate nohighlight">\(L_1\)</span> voorziet dat de stroom van de voeding <span class="math notranslate nohighlight">\(V_{DD}\)</span> naar de ingang van de seriekring redelijk constant wordt gehouden terwijl de spanning aan deze ingang kan variëren. De condensator <span class="math notranslate nohighlight">\(C_1\)</span> voorziet een AC stroompad naar de grond in het geval dat de transistor niet in geleiding is.</p>
 <div class="cell docutils container">
 <div class="cell_output docutils container">
 <figure class="align-default" id="efig0">
@@ -444,7 +447,7 @@ In <a class="reference internal" href="#vermogenversterkerse"><span class="std s
 </figure>
 </div>
 </div>
-<p>Voor de praktisch implementatie mag de volgorde van C<sub>2</sub> en L<sub>2</sub> omwisseld worden. Dit heeft geen enkele invloed op de werking van de seriekring.</p>
+<p>Voor de praktisch implementatie mag de volgorde van C<sub>2</sub> en L<sub>2</sub> omgewisseld worden. Dit heeft geen enkele invloed op de werking van de seriekring.</p>
 <p>De klasse E versterker is een zeer efficiënte hoogfrequent versterker die gebruik maakt van:</p>
 <ul class="simple">
 <li><p><strong>Eén enkele vermogentransistor</strong> als schakelend element</p></li>
@@ -452,11 +455,11 @@ In <a class="reference internal" href="#vermogenversterkerse"><span class="std s
 <li><p><strong>Optimale timing</strong> tussen spanning en stroom voor minimaal vermogenverlies</p></li>
 <li><p><strong>Hoge efficiëntie</strong> (tot 95% theoretisch mogelijk)</p></li>
 </ul>
-<p>De klasse E versterkers zijn initieel uitgewerkt door Sokal and Sokal <span id="id1">[<a class="reference internal" href="References.html#id6" title="Nathan O. Sokal and A. D. Sokal. Class E-A new class of high-efficiency tuned single-ended switching power amplifiers. IEEE Journal of Solid-State Circuits, 10(3):168–176, June 1975. doi:10.1109/JSSC.1975.1050582.">3</a>]</span>, <span id="id2">[<a class="reference internal" href="References.html#id13" title="N. O. Sokal. Class E high-efficiency power amplifiers, from HF to microwave. In 1998 IEEE MTT-S International Microwave Symposium Digest (Cat. No.98CH36192), volume 2, 1109-1112 vol.2. June 1998. doi:10.1109/MWSYM.1998.705187.">4</a>]</span> ,<span id="id3">[<a class="reference internal" href="References.html#id7" title="Nathan O Sokal. Class-E RF Power Amplifiers. QEX, pages 9–20, Jan/Feb 2001.">5</a>]</span> vanuit de basisredenering dat we dat we op elk moment het gedisipeerde vermogen in de transistor zo laag mogelijk moeten houden.
+<p>De klasse E versterkers zijn initieel uitgewerkt door Sokal and Sokal <span id="id1">[<a class="reference internal" href="References.html#id6" title="Nathan O. Sokal and A. D. Sokal. Class E-A new class of high-efficiency tuned single-ended switching power amplifiers. IEEE Journal of Solid-State Circuits, 10(3):168–176, June 1975. doi:10.1109/JSSC.1975.1050582.">4</a>]</span>, <span id="id2">[<a class="reference internal" href="References.html#id13" title="N. O. Sokal. Class E high-efficiency power amplifiers, from HF to microwave. In 1998 IEEE MTT-S International Microwave Symposium Digest (Cat. No.98CH36192), volume 2, 1109-1112 vol.2. June 1998. doi:10.1109/MWSYM.1998.705187.">5</a>]</span> ,<span id="id3">[<a class="reference internal" href="References.html#id7" title="Nathan O Sokal. Class-E RF Power Amplifiers. QEX, pages 9–20, Jan/Feb 2001.">6</a>]</span> vanuit de basisredenering dat we dat we op elk moment het gedisipeerde vermogen in de transistor zo laag mogelijk moeten houden.
 Dit kan door veel stroom door de transistor moeten laten lopen wanneer de spanning minimaal is en dat we geen stroom door de transistor laten lopen als de spanning over de transistor hoog is.
 Deze afwisseling tussen stroom en spanning vereist een hele goede timing:</p>
 <ul class="simple">
-<li><p>Wanneer we op het juiste moment de transistor uit geleiding brengen, gaat de spanning over de transistor variëren terwijl er geen stroom loopt. De spanning over de transitor is op het moment van het uit geleiding brengen 0 en de trilkring zorgt ervoor de spanning over de transistor na een bepaalde tijd terug 0 gaat worden, waarna we de transistor terug in geleiding kunnen brengen.</p></li>
+<li><p>Wanneer we op het juiste moment de transistor uit geleiding brengen, gaat de spanning over de transistor variëren terwijl er geen stroom loopt. De spanning over de transistor is op het moment van het uit geleiding brengen 0 en de trilkring zorgt ervoor de spanning over de transistor na een bepaalde tijd terug 0 gaat worden, waarna we de transistor terug in geleiding kunnen brengen.</p></li>
 <li><p>Wanneer de transistor in geleiding is, kan er veel stroom lopen door de transistor, maar de transistor kan ook de spanning tussen source en drain (of tussen emitter en collector) zeer laag houden.</p></li>
 </ul>
 <p>In beide tijdsintervallen is er dus weinig of geen vermogenverbruik. Om dit te bekomen is een goede timing van het inschakelmoment en het uitschakelmoment cruciaal.</p>
@@ -509,12 +512,12 @@ Deze spoel zal zorgen voor een zo constant mogelijke stroom bovenop de sinusvorm
 </div>
 </div>
 <p>Natuurlijk moet op basis van de <a class="reference external" href="https://en.wikipedia.org/wiki/Kirchhoff%27s_circuit_laws">stroomwet</a> van <a class="reference external" href="https://en.wikipedia.org/wiki/Gustav_Kirchhoff">Kirchhoff</a> de netto stroom naar elke knoop 0 zijn.</p>
-<div class="amsmath math notranslate nohighlight" id="equation-87b6377f-bcd9-4cdd-9edf-c5a8ebe8f304">
-<span class="eqno">(9)<a class="headerlink" href="#equation-87b6377f-bcd9-4cdd-9edf-c5a8ebe8f304" title="Permalink to this equation">#</a></span>\[\begin{equation}\label{eq:Kirchoff}
+<div class="amsmath math notranslate nohighlight" id="equation-842cdbbc-b9b9-4364-a330-5cef16efb8c7">
+<span class="eqno">(9)<a class="headerlink" href="#equation-842cdbbc-b9b9-4364-a330-5cef16efb8c7" title="Permalink to this equation">#</a></span>\[\begin{equation}\label{eq:Kirchoff}
 \sum_{j \neq i}^n I_{ij}=0.
 \end{equation}\]</div>
 <p>Wanneer dit niet zo zou zijn zou de spanning op deze knoop snel gaan stijgen of dalen tot dat wel het geval wordt. De snelheid waarmee dat gebeurt hangt af van de (parasitaire) capaciteit van de knoop.</p>
-<p>In de plaats van te werken met een ongekende parasitaire capaciteit, kunnen we beter een goed gekozen condenstor <span class="math notranslate nohighlight">\(C_1\)</span> plaatsen, zoals aangegeven in <a class="reference internal" href="#efig6"><span class="std std-numref">Figuur 71</span></a>. De nettostroom naar de rode knoop zal dan nu lopen naar deze condenstor waardoor aan de wetten van Kirchhoff voldaan is.</p>
+<p>In de plaats van te werken met een ongekende parasitaire capaciteit, kunnen we beter een goed gekozen condensator <span class="math notranslate nohighlight">\(C_1\)</span> plaatsen, zoals aangegeven in <a class="reference internal" href="#efig6"><span class="std std-numref">Figuur 71</span></a>. De nettostroom naar de rode knoop zal dan nu lopen naar deze condensator waardoor aan de wetten van Kirchhoff voldaan is.</p>
 <p>De spanning op de rode knoop is dan vervolgens bepaald door de lading op de condensator <span class="math notranslate nohighlight">\(C_1\)</span>.
 Deze lading wordt bekomen door de integratie van de stroom op de condensator <span class="math notranslate nohighlight">\(C_1\)</span>:</p>
 <div class="math notranslate nohighlight">
@@ -576,7 +579,7 @@ Deze lading wordt bekomen door de integratie van de stroom op de condensator <sp
 </div>
 <section id="uitbreiding-van-het-schema-met-een-derde-harmonische-filter">
 <h3>Uitbreiding van het schema met een derde harmonische filter<a class="headerlink" href="#uitbreiding-van-het-schema-met-een-derde-harmonische-filter" title="Link to this heading">#</a></h3>
-<p>In 2013 werd het originele design uitgebreid door ook de derde harmonische weg te filteren <span id="id4">[<a class="reference internal" href="References.html#id4" title="Arturo Mediano and Nathan O. Sokal. A Class-E RF Power Amplifier With a Flat-Top Transistor-Voltage Waveform. IEEE Transactions on Power Electronics, 28(11):5215–5221, November 2013. doi:10.1109/TPEL.2013.2242097.">6</a>]</span>. In dit schema (zie ) voegen we een parallelkring voor de derde harmonische frequentie (<span class="math notranslate nohighlight">\(L_3 C_3\)</span>) toe aan de seriekring voor de eerste harmonische (<span class="math notranslate nohighlight">\(L_2 C_2\)</span>). Op deze manier combineren we de voordelen van klasse E en klasse F versterkers.</p>
+<p>In 2013 werd het originele design uitgebreid door ook de derde harmonische weg te filteren <span id="id4">[<a class="reference internal" href="References.html#id4" title="Arturo Mediano and Nathan O. Sokal. A Class-E RF Power Amplifier With a Flat-Top Transistor-Voltage Waveform. IEEE Transactions on Power Electronics, 28(11):5215–5221, November 2013. doi:10.1109/TPEL.2013.2242097.">7</a>]</span>. In dit schema (zie <a class="reference internal" href="#efig20"><span class="std std-numref">Figuur 76</span></a>) voegen we een parallelkring voor de derde harmonische frequentie (<span class="math notranslate nohighlight">\(L_3 C_3\)</span>) toe aan de seriekring voor de eerste harmonische (<span class="math notranslate nohighlight">\(L_2 C_2\)</span>). Op deze manier combineren we de voordelen van klasse E en klasse F versterkers.</p>
 <div class="cell docutils container">
 <div class="cell_output docutils container">
 <figure class="align-default" id="efig20">
@@ -599,7 +602,7 @@ Deze lading wordt bekomen door de integratie van de stroom op de condensator <sp
 </ul>
 <section id="ontwerpvergelijkingen-voor-laagfrequent-klasse-e-versterkers">
 <h3>Ontwerpvergelijkingen voor laagfrequent Klasse E Versterkers<a class="headerlink" href="#ontwerpvergelijkingen-voor-laagfrequent-klasse-e-versterkers" title="Link to this heading">#</a></h3>
-<p>Voor het ontwerpen van een aantal voorbeelden kunnen we de ontwerpvergelijkingen gebruiken vanuit <span id="id5">[<a class="reference internal" href="References.html#id7" title="Nathan O Sokal. Class-E RF Power Amplifiers. QEX, pages 9–20, Jan/Feb 2001.">5</a>]</span>. Deze ontwerpvergelijkingen zijn uitgewerkt voor lagere frequenties. Voor MHz frequenties (en hoger) moet er in detail geanalyseerd en gesimuleerd worden. De onderstaande vergelijkingen (Eq.<a class="reference internal" href="#equation-deq1">(10)</a> tot Eq.<a class="reference internal" href="#equation-deq4">(13)</a>) kunnen daarvoor niet gebruikt worden.</p>
+<p>Voor het ontwerpen van een aantal voorbeelden kunnen we de ontwerpvergelijkingen gebruiken vanuit <span id="id5">[<a class="reference internal" href="References.html#id7" title="Nathan O Sokal. Class-E RF Power Amplifiers. QEX, pages 9–20, Jan/Feb 2001.">6</a>]</span>. Deze ontwerpvergelijkingen zijn uitgewerkt voor lagere frequenties. Voor MHz frequenties (en hoger) moet er in detail geanalyseerd en gesimuleerd worden. De onderstaande vergelijkingen (Eq.<a class="reference internal" href="#equation-deq1">(10)</a> tot Eq.<a class="reference internal" href="#equation-deq4">(13)</a>) kunnen daarvoor niet gebruikt worden.</p>
 <p>Voor frequenties beneden 1 MHz:</p>
 <div class="math notranslate nohighlight" id="equation-deq1">
 <span class="eqno">(10)<a class="headerlink" href="#equation-deq1" title="Link to this equation">#</a></span>\[R_L= 0.5768 \frac{(V_{DD}-V_{sat})^2}{P} \left(1.00001-\frac{0.4144}{Q}-\frac{0.5775}{Q^2}+\frac{0.206}{Q^3}   \right) \]</div>
@@ -609,7 +612,7 @@ Deze lading wordt bekomen door de integratie van de stroom op de condensator <sp
 <span class="eqno">(12)<a class="headerlink" href="#equation-deq3" title="Link to this equation">#</a></span>\[C_2= \frac{1 }{\omega R_L} \left( \frac{1 }{Q-0.104823} \right)\left(1.00121+\frac{1.01468 }{Q-1.7879} \right)-\frac{0.2}{\omega^2 L_1} \]</div>
 <div class="math notranslate nohighlight" id="equation-deq4">
 <span class="eqno">(13)<a class="headerlink" href="#equation-deq4" title="Link to this equation">#</a></span>\[L_2=\frac{Q R_L}{\omega} \]</div>
-<p>met <span class="math notranslate nohighlight">\(\omega=2 \pi f\)</span>, <span class="math notranslate nohighlight">\(f\)</span> de frequentie, <span class="math notranslate nohighlight">\(P\)</span> het gewenste vermogen, <span class="math notranslate nohighlight">\(V_{sat}\)</span> de saturatiespanning van de transistor en <span class="math notranslate nohighlight">\(Q\)</span> de vereiste kwaliteitsfactor van de kring. De namen van de componenten komen overeen met het schema .
+<p>met <span class="math notranslate nohighlight">\(\omega=2 \pi f\)</span>, <span class="math notranslate nohighlight">\(f\)</span> de frequentie, <span class="math notranslate nohighlight">\(P\)</span> het gewenste vermogen, <span class="math notranslate nohighlight">\(V_{sat}\)</span> de saturatiespanning van de transistor en <span class="math notranslate nohighlight">\(Q\)</span> de vereiste kwaliteitsfactor van de kring. De namen van de componenten komen overeen met het schema <a class="reference internal" href="#efig7"><span class="std std-numref">Figuur 74</span></a>.
 De bovenstaande vergelijkingen (Eq.<a class="reference internal" href="#equation-deq1">(10)</a> tot Eq.<a class="reference internal" href="#equation-deq4">(13)</a>) laten ons dus toe om het schema op te stellen op basis van <span class="math notranslate nohighlight">\(P\)</span>, <span class="math notranslate nohighlight">\(V_{DD}\)</span>, <span class="math notranslate nohighlight">\(f\)</span> en <span class="math notranslate nohighlight">\(Q\)</span>. Enkel <span class="math notranslate nohighlight">\(L_1\)</span> kan hierbij vrij gekozen worden. Dit moet wel gedaan worden op een zodanige wijze dat realistische waardes voor alle andere componenten bekomen worden.
 In veel praktische gevallen zal de impedantie van de belasting (<span class="math notranslate nohighlight">\(R_L\)</span>) al vast liggen, bijvoorbeeld wanneer een specifieke antenne moet gebruikt worden. In dat geval moeten we de vergelijking Eq.<a class="reference internal" href="#equation-deq1">(10)</a> omkeren en de voedingsspanning (<span class="math notranslate nohighlight">\(V_{DD}\)</span>) met <span class="math notranslate nohighlight">\(R_L\)</span> als gegeven.
 Ook komt vaak voor dat de kwaliteitsfactor <span class="math notranslate nohighlight">\(Q\)</span> niet gegeven is. In dit geval is het theoretisch te verkiezen om <span class="math notranslate nohighlight">\(Q\)</span> zo hoog mogelijk te kiezen, we zien onmiddellijk uit Eq.<a class="reference internal" href="#equation-deq4">(13)</a> dat dat dan een te hoge waarde voor <span class="math notranslate nohighlight">\(L_2\)</span> zou geven.</p>
@@ -644,7 +647,7 @@ door een transformator met wikkelverhouding: 1.83
 </figure>
 </div>
 </div>
-<p>De overeenkomende spice file vinden we onder <a class="reference internal" href="#espice1"><span class="std std-numref">Spice Listing 12</span></a> en het resulaat van het opstarten van de versterken kunnen we terugvinden onder <a class="reference internal" href="#efig11"><span class="std std-numref">Figuur 78</span></a>.</p>
+<p>De overeenkomende spice file vinden we onder <a class="reference internal" href="#espice1"><span class="std std-numref">Spice Listing 12</span></a> en het resultaat van het opstarten van de versterken kunnen we terugvinden onder <a class="reference internal" href="#efig11"><span class="std std-numref">Figuur 78</span></a>.</p>
 <div class="literal-block-wrapper docutils container" id="espice1">
 <div class="code-block-caption"><span class="caption-number">Spice Listing 12 </span><span class="caption-text">Klasse E spice file</span><a class="headerlink" href="#espice1" title="Link to this code">#</a></div>
 <div class="highlight-spice notranslate"><div class="highlight"><pre><span></span><span class="o">*</span><span class="w"> </span><span class="nx">Class</span><span class="w"> </span><span class="nx">E</span><span class="w"> </span><span class="nx">amp</span><span class="w"> </span><span class="mi">1</span>
@@ -682,10 +685,10 @@ we merken ook dat de spanning over de elementen van de trilkring veel hogere waa
 </figure>
 </div>
 </div>
-<p>De <a class="reference internal" href="#efig12"><span class="std std-numref">Figuur 79</span></a> toont enkel de spanningen. Om een goed zicht op de efficientie te bekomen moeten we zowel naar de spanning over de transistor als de stroom door de transistor kijken. Aan de linkerkant op <a class="reference internal" href="#efig13"><span class="std std-numref">Figuur 80</span></a> zijn beide zichtbaar. We verwachten dat we nooit gelijktijdig stroom door en spanning over de transistor hebben. We zien dat dat toch heel kort het geval is.</p>
-<p>Het product van de stroom door en spanning over de transistor levert ons het momentaan vermogenverbruik (en dus de opwarming) van de transistor. Dit vinden we in de blauwe lijn (<span class="math notranslate nohighlight">\(P(M1)\)</span>) rechtsboven op <a class="reference internal" href="#efig13"><span class="std std-numref">Figuur 80</span></a> terug. We moeten dit vergelijken met het totale vermogen dat door de voeding (<span class="math notranslate nohighlight">\(P(V_{DD})\)</span>) geleverd (orange lijn) wordt. Geintegreerd over de tijd, zien we dat het energieverbruik in de transistor veel lager is dan het totale energieverbruik.
+<p>De <a class="reference internal" href="#efig12"><span class="std std-numref">Figuur 79</span></a> toont enkel de spanningen. Om een goed zicht op de efficiëntie te bekomen moeten we zowel naar de spanning over de transistor als de stroom door de transistor kijken. Aan de linkerkant op <a class="reference internal" href="#efig13"><span class="std std-numref">Figuur 80</span></a> zijn beide zichtbaar. We verwachten dat we nooit gelijktijdig stroom door en spanning over de transistor hebben. We zien dat dat toch heel kort het geval is.</p>
+<p>Het product van de stroom door en spanning over de transistor levert ons het momentaan vermogenverbruik (en dus de opwarming) van de transistor. Dit vinden we in de blauwe lijn (<span class="math notranslate nohighlight">\(P(M1)\)</span>) rechtsboven op <a class="reference internal" href="#efig13"><span class="std std-numref">Figuur 80</span></a> terug. We moeten dit vergelijken met het totale vermogen dat door de voeding (<span class="math notranslate nohighlight">\(P(V_{DD})\)</span>) geleverd (orange lijn) wordt. geïntegreerd over de tijd, zien we dat het energieverbruik in de transistor veel lager is dan het totale energieverbruik.
 Rechtsonder op <a class="reference internal" href="#efig13"><span class="std std-numref">Figuur 80</span></a> tonen we de stroom door de transistor ten opzichte van de spanning over de transistor. Het verloop blijft kort bij de assen van de grafiek, waardoor het vermogenverlies beperkt blijft.
-Op diezelfde figuur kan je ook het verloop van de stroom door de voeding ten opzichte van de voedingsgspanning zien (orange puntje). Aangezien beiden nauwelijks veranderen is dit verloop bijna niet zichtbaar.</p>
+Op diezelfde figuur kan je ook het verloop van de stroom door de voeding ten opzichte van de voedingsspanning zien (orange puntje). Aangezien beiden nauwelijks veranderen is dit verloop bijna niet zichtbaar.</p>
 <div class="cell docutils container">
 <div class="cell_output docutils container">
 <figure class="align-default" id="efig13">
@@ -807,7 +810,7 @@ door een transformator met wikkelverhouding: 6.00
 </section>
 <section id="voorbeeld-3-on-chip-2-ghz-klasse-e-versterker-voor-gsm-toepassingen">
 <h3>Voorbeeld 3: On-chip 2 GHz Klasse E versterker voor GSM toepassingen<a class="headerlink" href="#voorbeeld-3-on-chip-2-ghz-klasse-e-versterker-voor-gsm-toepassingen" title="Link to this heading">#</a></h3>
-<p>In 1999 hebben King-Chun Tsai en Paul Gray een 1.9GHz klasse E versterker voor GSM en DECT telefoon toepassingen ontworpen <span id="id6">[<a class="reference internal" href="References.html#id14" title="King-Chun Tsai and P.R. Gray. A 1.9-GHz, 1-W CMOS class-E power amplifier for wireless communications. IEEE Journal of Solid-State Circuits, 34(7):962–970, July 1999. doi:10.1109/4.772411.">7</a>]</span>. De versterker bestaat uit 2 stages en elke stage is fully-differential uitgewerkt.</p>
+<p>In 1999 hebben King-Chun Tsai en Paul Gray een 1.9GHz klasse E versterker voor GSM en DECT telefoon toepassingen ontworpen <span id="id6">[<a class="reference internal" href="References.html#id14" title="King-Chun Tsai and P.R. Gray. A 1.9-GHz, 1-W CMOS class-E power amplifier for wireless communications. IEEE Journal of Solid-State Circuits, 34(7):962–970, July 1999. doi:10.1109/4.772411.">8</a>]</span>. De versterker bestaat uit 2 stages en elke stage is fully-differential uitgewerkt.</p>
 <p>In de 2de stage herkenen we 2 gekruiste klasse E versterkers:</p>
 <ul class="simple">
 <li><p>L3 met de ingangscapaciteit van de complementaire transistor M23 die dan de kring L5 en C1 (5.1 pF) aanstuurt. De belasting is een 50 Ohm transmissielijn.</p></li>
@@ -815,8 +818,8 @@ door een transformator met wikkelverhouding: 6.00
 </ul>
 <p>Hiervoor staat dan de eerste stage met ook 2 gekruiste klasse E versterkers:</p>
 <ul class="simple">
-<li><p>L1 met de ingangscapaciteit van de complementaire transistor M13 en de gate-source capaciteit van M21. Er is ook een seriekring als belasting, namelijk de gate-drian capaciteit van M21 in serie met onder andere L3. Deze seriekring is echter niet het beangrijkste. Het belangrijkste effect is spanningszwaai op de gate van M21, wat ook bekomen wordt zonder de seriekring.</p></li>
-<li><p>L2 met de ingangscapaciteit van de complementaire transistor M12 en de gate-source capaciteit van M24. Er is ook een seriekring als belasting, namelijk de gate-drian capaciteit van M24 in serie met onder andere L4. Deze seriekring is echter niet het beangrijkste. Het belangrijkste effect is spanningszwaai op de gate van M24, wat ook bekomen wordt zonder de seriekring.</p></li>
+<li><p>L1 met de ingangscapaciteit van de complementaire transistor M13 en de gate-source capaciteit van M21. Er is ook een seriekring als belasting, namelijk de gate-drain capaciteit van M21 in serie met onder andere L3. Deze seriekring is echter niet het belangrijkste. Het belangrijkste effect is spanningszwaai op de gate van M21, wat ook bekomen wordt zonder de seriekring.</p></li>
+<li><p>L2 met de ingangscapaciteit van de complementaire transistor M12 en de gate-source capaciteit van M24. Er is ook een seriekring als belasting, namelijk de gate-drain capaciteit van M24 in serie met onder andere L4. Deze seriekring is echter niet het belangrijkste. Het belangrijkste effect is spanningszwaai op de gate van M24, wat ook bekomen wordt zonder de seriekring.</p></li>
 </ul>
 <p>Het uiteindelijke schema zie je in <a class="reference internal" href="#tsai-schema"><span class="std std-numref">schema 87</span></a></p>
 <div class="cell tag_remove-cell4PDF docutils container">
@@ -905,11 +908,11 @@ De frequenties voor deze ontwerpen blijven beperkt tot 6 tot 13.56 MHz.</p>
 <caption><span class="caption-number">Tabel 5 </span><span class="caption-text">Overzicht van de state-of-the-art</span><a class="headerlink" href="#esota" title="Link to this table">#</a></caption>
 <thead>
 <tr class="row-odd"><th class="head"></th>
-<th class="head"><p>ISSCC’18 <span id="id7">[<a class="reference internal" href="References.html#id12" title="Che-Hao Yeh, Yen-Ting Lin, Chun-Chieh Kuo, Chao-Jen Huang, Cheng-Yu Xie, Shen-Fu Lu, Wen-Hau Yang, Ke-Horng Chen, Kuo-Chi Liu, and Ying-Hsi Lin. A 70W and 90% GaN-based class-E wireless-power-transfer system with automatic-matching-point-search control for zero-voltage switching and zero-voltage-derivative switching. In 2018 IEEE International Solid-State Circuits Conference - (ISSCC), 138–140. February 2018. doi:10.1109/ISSCC.2018.8310222.">8</a>]</span></p></th>
-<th class="head"><p>ISSCC’19 <span id="id8">[<a class="reference internal" href="References.html#id10" title="Cheng-Yu Xie, Shang-Hsien Yang, Shen-Fu Lu, Fa-Yi Lin, Yen-An Lin, You-Zheng Ou-Yang, Ke-Horng Chen, Kuo-Chi Liu, and Yin-Hsi Lin. 15.3 A 100W and 91% GaN-Based Class-E Wireless-Power-Transfer Transmitter with Differential-Impedance-Matching Control for Charging Multiple Devices. In 2019 IEEE International Solid-State Circuits Conference - (ISSCC), 242–244. February 2019. doi:10.1109/ISSCC.2019.8662535.">9</a>]</span></p></th>
-<th class="head"><p>ISSCC’24 <span id="id9">[<a class="reference internal" href="References.html#id9" title="Fangyu Mao, Rui Martins, and Yan Lu. 27.1 A Differential Hybrid Class-ED Power Amplifier with 27W Maximum Power and 82% Peak E2E Efficiency for Wireless Fast Charging To-Go. In 2024 IEEE International Solid-State Circuits Conference (ISSCC), volume 67, 444–446. February 2024. doi:10.1109/ISSCC49657.2024.10454369.">10</a>]</span></p></th>
-<th class="head"><p>JSSC’24 <span id="id10">[<a class="reference internal" href="References.html#id8" title="Xiaofei Ma, Wing-Hung Ki, and Yan Lu. A 27 W Wireless Power Transceiver With Compact Single-Stage Regulated Class-E Architecture and Adaptive ZVS Control. IEEE Journal of Solid-State Circuits, 59(6):1782–1793, June 2024. doi:10.1109/JSSC.2023.3333196.">11</a>]</span></p></th>
-<th class="head"><p>ISSCC’25 <span id="id11">[<a class="reference internal" href="References.html#id11" title="Yuhao Xiong, Wenxing Cao, Xihao Liu, Shangzhou Zhao, Zhongming Xue, Zhuoqi Guo, and Li Geng. A 6.78MHz 94.2% Peak Efficiency Class-E Transmitter with Adaptive Real-Part Impedance Matching and Imaginary-Part Phase Compensation Achieving a 33W Wireless-Power-Transfer System. In 2025 IEEE International Solid-State Circuits Conference (ISSCC), volume 68, 190–192. February 2025. doi:10.1109/ISSCC49661.2025.10904755.">12</a>]</span></p></th>
+<th class="head"><p>ISSCC’18 <span id="id7">[<a class="reference internal" href="References.html#id12" title="Che-Hao Yeh, Yen-Ting Lin, Chun-Chieh Kuo, Chao-Jen Huang, Cheng-Yu Xie, Shen-Fu Lu, Wen-Hau Yang, Ke-Horng Chen, Kuo-Chi Liu, and Ying-Hsi Lin. A 70W and 90% GaN-based class-E wireless-power-transfer system with automatic-matching-point-search control for zero-voltage switching and zero-voltage-derivative switching. In 2018 IEEE International Solid-State Circuits Conference - (ISSCC), 138–140. February 2018. doi:10.1109/ISSCC.2018.8310222.">9</a>]</span></p></th>
+<th class="head"><p>ISSCC’19 <span id="id8">[<a class="reference internal" href="References.html#id10" title="Cheng-Yu Xie, Shang-Hsien Yang, Shen-Fu Lu, Fa-Yi Lin, Yen-An Lin, You-Zheng Ou-Yang, Ke-Horng Chen, Kuo-Chi Liu, and Yin-Hsi Lin. 15.3 A 100W and 91% GaN-Based Class-E Wireless-Power-Transfer Transmitter with Differential-Impedance-Matching Control for Charging Multiple Devices. In 2019 IEEE International Solid-State Circuits Conference - (ISSCC), 242–244. February 2019. doi:10.1109/ISSCC.2019.8662535.">10</a>]</span></p></th>
+<th class="head"><p>ISSCC’24 <span id="id9">[<a class="reference internal" href="References.html#id9" title="Fangyu Mao, Rui Martins, and Yan Lu. 27.1 A Differential Hybrid Class-ED Power Amplifier with 27W Maximum Power and 82% Peak E2E Efficiency for Wireless Fast Charging To-Go. In 2024 IEEE International Solid-State Circuits Conference (ISSCC), volume 67, 444–446. February 2024. doi:10.1109/ISSCC49657.2024.10454369.">11</a>]</span></p></th>
+<th class="head"><p>JSSC’24 <span id="id10">[<a class="reference internal" href="References.html#id8" title="Xiaofei Ma, Wing-Hung Ki, and Yan Lu. A 27 W Wireless Power Transceiver With Compact Single-Stage Regulated Class-E Architecture and Adaptive ZVS Control. IEEE Journal of Solid-State Circuits, 59(6):1782–1793, June 2024. doi:10.1109/JSSC.2023.3333196.">12</a>]</span></p></th>
+<th class="head"><p>ISSCC’25 <span id="id11">[<a class="reference internal" href="References.html#id11" title="Yuhao Xiong, Wenxing Cao, Xihao Liu, Shangzhou Zhao, Zhongming Xue, Zhuoqi Guo, and Li Geng. A 6.78MHz 94.2% Peak Efficiency Class-E Transmitter with Adaptive Real-Part Impedance Matching and Imaginary-Part Phase Compensation Achieving a 33W Wireless-Power-Transfer System. In 2025 IEEE International Solid-State Circuits Conference (ISSCC), volume 68, 190–192. February 2025. doi:10.1109/ISSCC49661.2025.10904755.">13</a>]</span></p></th>
 <th class="head"><p>ESSERC’25 [x]</p></th>
 </tr>
 </thead>
@@ -932,7 +935,7 @@ De frequenties voor deze ontwerpen blijven beperkt tot 6 tot 13.56 MHz.</p>
 </tr>
 <tr class="row-even"><td><p>Type</p></td>
 <td><p>Klasse E</p></td>
-<td><p>Differentiele klasse E</p></td>
+<td><p>differentiële klasse E</p></td>
 <td><p>Hybride klasse ED</p></td>
 <td><p>gereguleerde Klasse E</p></td>
 <td><p>Klasse E</p></td>
@@ -962,7 +965,7 @@ De frequenties voor deze ontwerpen blijven beperkt tot 6 tot 13.56 MHz.</p>
 <td><p>33</p></td>
 <td><p>37.8</p></td>
 </tr>
-<tr class="row-even"><td><p>Piek Tx efficientie [%]</p></td>
+<tr class="row-even"><td><p>Piek Tx efficiëntie [%]</p></td>
 <td><p>90</p></td>
 <td><p>91</p></td>
 <td><p>N.A.</p></td>
@@ -970,7 +973,7 @@ De frequenties voor deze ontwerpen blijven beperkt tot 6 tot 13.56 MHz.</p>
 <td><p>94.2</p></td>
 <td><p>94</p></td>
 </tr>
-<tr class="row-odd"><td><p>Piek E2E Efficientie [%]</p></td>
+<tr class="row-odd"><td><p>Piek E2E efficiëntie [%]</p></td>
 <td><p>N.A.</p></td>
 <td><p>N.A.</p></td>
 <td><p>82</p></td>

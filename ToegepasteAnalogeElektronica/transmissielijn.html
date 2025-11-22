@@ -43,8 +43,11 @@
     <link rel="stylesheet" type="text/css" href="_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="_static/exercise.css" />
-    <link rel="stylesheet" type="text/css" href="_static/spice_file.css" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="_static/code-caption-style.css?v=0ad27fa8" />
+    <link rel="stylesheet" type="text/css" href="_static/custom-pygments.css?v=d7fe8a85" />
+    <link rel="stylesheet" type="text/css" href="_static/spice-lexer.css?v=422ceae6" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
@@ -192,7 +195,7 @@
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Versterkers</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="Klasse-C.html">Klasse C  Versterkers</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Klasse-F.html">Klasse F Verstekers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Klasse-F.html">Klasse F Versterkers</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Klasse-D.html">Klasse D resonante Versterkers</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Klasse-E.html">Klasse E  Versterkers</a></li>
 </ul>
@@ -436,7 +439,7 @@ document.write(`
 </div>
 <div class="math notranslate nohighlight">
 \[ Z_o=\sqrt{\frac{j \omega L+R}{j \omega C+g}}\]</div>
-<p>waarbij L de inductantie per eenheid lengte is, C de capaciteit er eenheid lengte is, R de weerstand van de geleider en g de lekgeleidbaarheid van het dielectricum.</p>
+<p>waarbij L de inductantie per eenheid lengte is, C de capaciteit er eenheid lengte is, R de weerstand van de geleider en g de lekgeleidbaarheid van het diëlectricum.</p>
 <p>In het beste geval is de weerstand van de geleider nul (R=0) en de lek ook nul (g=0). <span class="math notranslate nohighlight">\(Z_o\)</span> wordt dan</p>
 <div class="math notranslate nohighlight">
 \[ Z_o \approx \sqrt{\frac{L}{C}}\]</div>
@@ -498,11 +501,11 @@ Zo= 50.81 Ohm
 </section>
 <section id="microstriplijn">
 <h2>Microstriplijn<a class="headerlink" href="#microstriplijn" title="Link to this heading">#</a></h2>
-<p>De relevante parameters hier zijn de breedte van het baantje (<span class="math notranslate nohighlight">\(w\)</span>) en de  dikte van het dielectricum (<span class="math notranslate nohighlight">\(h\)</span>). Natuurlijk speelt de relatieve permitiviteit van het dielectricum (<span class="math notranslate nohighlight">\(\epsilon_r\)</span>) ook mee.</p>
+<p>De relevante parameters hier zijn de breedte van het baantje (<span class="math notranslate nohighlight">\(w\)</span>) en de  dikte van het diëlectricum (<span class="math notranslate nohighlight">\(h\)</span>). Natuurlijk speelt de relatieve Permittiviteit van het diëlectricum (<span class="math notranslate nohighlight">\(\epsilon_r\)</span>) ook mee.</p>
 <div class="cell docutils container">
 </div>
 <p>Een voorbeeld:</p>
-<p>We willen een 50 Ohm transmissielijn bekomen voor een 2.4 GHz signaal op een PCB waarvan de relatieve permitiviteit van het dielectricum <span class="math notranslate nohighlight">\(\epsilon_r\)</span>=4.6. De dikte van het dielectricum is 1/16 inch</p>
+<p>We willen een 50 Ohm transmissielijn bekomen voor een 2.4 GHz signaal op een PCB waarvan de relatieve Permittiviteit van het diëlectricum <span class="math notranslate nohighlight">\(\epsilon_r\)</span>=4.6. De dikte van het diëlectricum is 1/16 inch</p>
 <div class="cell docutils container">
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Breedte van het baantje w = 2.931e+00 mm, Rel. perm: e_eff = 3.460
@@ -687,7 +690,7 @@ We vergelijken 3 types: Micro-fiber PTFE, FR4, en Ceramisch-gevulde PTFE voor ee
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="een-geleider-boven-een-grondvlak">
 <h1>Een geleider boven een grondvlak<a class="headerlink" href="#een-geleider-boven-een-grondvlak" title="Link to this heading">#</a></h1>
-<p><a class="reference internal" href="#gel"><span class="std std-numref">Figuur 150</span></a> toont de configuratie van een geleider boven een grondvlak. Hierbij is het vanzelfspreekend dat de terugstroom door het grondvlak loopt. Daarom wordt de waarde van de karakteristieke impedantie <span class="math notranslate nohighlight">\(Z_0\)</span> bekomen tussen deze geleider en het grondvlak.</p>
+<p><a class="reference internal" href="#gel"><span class="std std-numref">Figuur 150</span></a> toont de configuratie van een geleider boven een grondvlak. Hierbij is het vanzelfsprekend dat de terugstroom door het grondvlak loopt. Daarom wordt de waarde van de karakteristieke impedantie <span class="math notranslate nohighlight">\(Z_0\)</span> bekomen tussen deze geleider en het grondvlak.</p>
 <div class="math notranslate nohighlight">
 \[Z_0= \frac{138}{\sqrt{ε}} \log_{10}\left(\frac{4h}{d}\right) \]</div>
 <div class="cell docutils container">
@@ -702,7 +705,7 @@ We vergelijken 3 types: Micro-fiber PTFE, FR4, en Ceramisch-gevulde PTFE voor ee
 </div>
 <section id="twee-geleiders-boven-een-grondvlak">
 <h2>Twee geleiders boven een grondvlak<a class="headerlink" href="#twee-geleiders-boven-een-grondvlak" title="Link to this heading">#</a></h2>
-<p>Hierbij is het belangrijk dat we het verschil beschouwen tussen de differentiele karakteristieke impedantie (zie <a class="reference internal" href="#dif2gnd"><span class="std std-numref">Figuur 151</span></a>) en de common mode karakteristieke impedantie (zie <a class="reference internal" href="#com2gnd"><span class="std std-numref">Figuur 152</span></a>).</p>
+<p>Hierbij is het belangrijk dat we het verschil beschouwen tussen de differentiële karakteristieke impedantie (zie <a class="reference internal" href="#dif2gnd"><span class="std std-numref">Figuur 151</span></a>) en de common mode karakteristieke impedantie (zie <a class="reference internal" href="#com2gnd"><span class="std std-numref">Figuur 152</span></a>).</p>
 <p>Wanneer d &lt;&lt; D en d &lt;&lt; h worden de vergelijkingen:</p>
 <div class="math notranslate nohighlight">
 \[Z_{0_{diff}}= \frac{276}{\sqrt{ε}}  \log_{10}\left(\frac{2D}{d}\frac{1}{\sqrt{1+\left(\frac{D}{2h}\right)^2}}\right) \]</div>

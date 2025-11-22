@@ -43,8 +43,11 @@
     <link rel="stylesheet" type="text/css" href="_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="_static/exercise.css" />
-    <link rel="stylesheet" type="text/css" href="_static/spice_file.css" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="_static/code-caption-style.css?v=0ad27fa8" />
+    <link rel="stylesheet" type="text/css" href="_static/custom-pygments.css?v=d7fe8a85" />
+    <link rel="stylesheet" type="text/css" href="_static/spice-lexer.css?v=422ceae6" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
@@ -192,7 +195,7 @@
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Versterkers</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="Klasse-C.html">Klasse C  Versterkers</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Klasse-F.html">Klasse F Verstekers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Klasse-F.html">Klasse F Versterkers</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Klasse-D.html">Klasse D resonante Versterkers</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Klasse-E.html">Klasse E  Versterkers</a></li>
 </ul>
@@ -442,7 +445,7 @@ document.write(`
 <p>In dit hoofdstuk bespreken we het ontwerp van circuits waarbij we een vooraf bepaalde frequentie karakteristiek willen bekomen. In het eerste deel van dit hoofdstuk doen we dit in heel algemene termen, voor een willekeurige frequentie karakteristiek. In het tweede deel van dit hoofdstuk gaan we dan dieper in op het ontwerp van specifieke filters die vaak voorkomen.</p>
 <section id="aanpak-en-algemeen-perspectief">
 <h2>Aanpak en algemeen perspectief<a class="headerlink" href="#aanpak-en-algemeen-perspectief" title="Link to this heading">#</a></h2>
-<p>Het ontwerp van een filter is eigenlijk het ontwerp van een zo compact mogelijk elektronisch circuit dat voldoet aan de vooraf opgelegde specificaties. In die zin is een filterontwerp een synthese oefening die het omgekeerde is van een analyse oefening. Daarom vertrekken we eerst van de analyse van een circuit. <a class="reference internal" href="#generic"><span class="std std-numref">Figuur 91</span></a> toont zo een algemeen circuit waar we een zeker ingangssignaal hebben (<span class="math notranslate nohighlight">\(V_{in}(s)\)</span>) en als gevolg daarvan een zeker uitgangsignaal bekomen (<span class="math notranslate nohighlight">\(V_{out}(s)\)</span>). De parameter <span class="math notranslate nohighlight">\(s\)</span> is hierin de Laplace parameter en komt overeen met <span class="math notranslate nohighlight">\(j \omega\)</span></p>
+<p>Het ontwerp van een filter is eigenlijk het ontwerp van een zo compact mogelijk elektronisch circuit dat voldoet aan de vooraf opgelegde specificaties. In die zin is een filterontwerp een synthese oefening die het omgekeerde is van een analyse oefening. Daarom vertrekken we eerst van de analyse van een circuit. <a class="reference internal" href="#generic"><span class="std std-numref">Figuur 91</span></a> toont zo een algemeen circuit waar we een zeker ingangssignaal hebben (<span class="math notranslate nohighlight">\(V_{in}(s)\)</span>) en als gevolg daarvan een zeker uitgangssignaal bekomen (<span class="math notranslate nohighlight">\(V_{out}(s)\)</span>). De parameter <span class="math notranslate nohighlight">\(s\)</span> is hierin de Laplace parameter en komt overeen met <span class="math notranslate nohighlight">\(j \omega\)</span></p>
 <div class="cell docutils container">
 <div class="cell_output docutils container">
 <figure class="align-default" id="generic">
@@ -454,8 +457,8 @@ document.write(`
 </div>
 </div>
 <p>Het circuit in <a class="reference internal" href="#generic"><span class="std std-numref">Figuur 91</span></a> kunnen we oplossen door de MNA methode. <span class="math notranslate nohighlight">\(V_{in}(s)\)</span> is een spanningsbron en staat dus in het tweede lid van de MNA matrix, terwijl <span class="math notranslate nohighlight">\(V_{in}(s)\)</span> een spanning is op een knoop, en dus in het eerste lid zal staan. De matrix die we daardoor bekomen is:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-f90b2fcd-370a-47f1-b824-ea7443ba10f6">
-<span class="eqno">(14)<a class="headerlink" href="#equation-f90b2fcd-370a-47f1-b824-ea7443ba10f6" title="Permalink to this equation">#</a></span>\[\begin{equation}\label{eq:bron}
+<div class="amsmath math notranslate nohighlight" id="equation-4e73d44e-c466-4008-b67a-16ce8bcf517c">
+<span class="eqno">(14)<a class="headerlink" href="#equation-4e73d44e-c466-4008-b67a-16ce8bcf517c" title="Permalink to this equation">#</a></span>\[\begin{equation}\label{eq:bron}
 \begin{bmatrix}
   \vdots &amp; &amp; &amp;  &amp; &amp; \vdots &amp; &amp; &amp; \vdots \\
   \dots &amp; &amp; &amp;  &amp; &amp; \dots &amp;   &amp; &amp; \dots \\
@@ -479,10 +482,10 @@ document.write(`
 \end{bmatrix}
 \end{equation}\]</div>
 <p>Elk van de elementen is van de vorm: <span class="math notranslate nohighlight">\(  c_1 j \omega + c_2 + c_3 \frac{1}{j \omega}\)</span>.</p>
-<p>Op basis van de methode van de determinanten kunnen we deze matrix oplossen. Als we deze determinant helemaal uitschrijven krijgen we devolgende oplossing:</p>
+<p>Op basis van de methode van de determinanten kunnen we deze matrix oplossen. Als we deze determinant helemaal uitschrijven krijgen we de volgende oplossing:</p>
 <div class="math notranslate nohighlight">
 \[T(j \omega)=\frac{ V_{out}(j \omega)}{ V_{in}(j \omega)}=\frac{\sum\limits_{i=0}^{2n} a_i(j \omega)^i}{\sum\limits_{i=0}^{2n} b_i(j \omega)^i}\]</div>
-<p>met <span class="math notranslate nohighlight">\(n\)</span> het aantal knopen in het circuit. Het feit dat er in de som <span class="math notranslate nohighlight">\(2n\)</span> voorkomt is omdat er in elk van de elementen van de matrix zowel een spoel als een condensator kan voorkomen. Veel circuits hebben echter geen spoelen (omdat deze moeilijk in te bouwen zijn op geintegreerde schakelingen. In dat geval kunnen we de oplossing verder vereenvoudingen tot:</p>
+<p>met <span class="math notranslate nohighlight">\(n\)</span> het aantal knopen in het circuit. Het feit dat er in de som <span class="math notranslate nohighlight">\(2n\)</span> voorkomt is omdat er in elk van de elementen van de matrix zowel een spoel als een condensator kan voorkomen. Veel circuits hebben echter geen spoelen (omdat deze moeilijk in te bouwen zijn op geïntegreerde schakelingen. In dat geval kunnen we de oplossing verder vereenvoudigen tot:</p>
 <div class="math notranslate nohighlight">
 \[T(j \omega)=\frac{ V_{out}(j \omega)}{ V_{in}(j \omega)}=\frac{\sum\limits_{i=0}^{n} a_i(j \omega)^i}{\sum\limits_{i=0}^{n} b_i(j \omega)^i}\]</div>
 <p>Wat ons dus tot de conclusie brengt dat de transferfunctie van een willekeurig blok zonder spoelen kan geschreven worden als de deling van 2 veeltermen van de orde <span class="math notranslate nohighlight">\(n\)</span> met reële coëfficiënten, waarbij <span class="math notranslate nohighlight">\(n\)</span> het aantal knopen is dat aanwezig is in het circuit.
@@ -650,8 +653,8 @@ T_1(j \omega) \times T_2(j \omega) \times T_3(j \omega) \times \dots \times T_n(
 <div class="math notranslate nohighlight">
 \[   V_{*} =-\frac{C_2 R_2 j \omega }{R_{11} R_2 C_2 C_1(j \omega)^2  + \frac{R_{11}R_2 C_2}{R_{12}}(j \omega) +\frac{R_{11}}{R_{13}}} V_{in} \]</div>
 <p>Dit kunnen we vervolgens herschrijven als</p>
-<div class="math notranslate nohighlight" id="equation-biquadout">
-<span class="eqno">(15)<a class="headerlink" href="#equation-biquadout" title="Link to this equation">#</a></span>\[ V_{out*} =-\frac{1}{a_2 (j \omega)^2  + a_1 (j \omega) +a_0} V_{in} \]</div>
+<div class="math notranslate nohighlight" id="equation-biquadout11">
+<span class="eqno">(15)<a class="headerlink" href="#equation-biquadout11" title="Link to this equation">#</a></span>\[ V_{out*} =-\frac{1}{a_2 (j \omega)^2  + a_1 (j \omega) +a_0} V_{in} \]</div>
 <p>en</p>
 <div class="math notranslate nohighlight">
 \[ V_{*} =-\frac{C_2 R_2(j \omega)}{a_2 (j \omega)^2  + a_1(j \omega) +a_0} V_{in} \]</div>
@@ -662,7 +665,7 @@ T_1(j \omega) \times T_2(j \omega) \times T_3(j \omega) \times \dots \times T_n(
 <span class="eqno">(17)<a class="headerlink" href="#equation-biquada1" title="Link to this equation">#</a></span>\[  a_1=  \frac{R_{11} }{R_{12}} R_2 C_2\]</div>
 <div class="math notranslate nohighlight" id="equation-biquada0">
 <span class="eqno">(18)<a class="headerlink" href="#equation-biquada0" title="Link to this equation">#</a></span>\[  a_0= \frac{R_{11}}{R_{13}}\]</div>
-<p>We zien dus inderdaad uit vergelijkingen (<a class="reference internal" href="#equation-biquadout">(15)</a>,<a class="reference internal" href="#equation-biquada2">(16)</a>,<a class="reference internal" href="#equation-biquada1">(17)</a>,<a class="reference internal" href="#equation-biquada0">(18)</a>) dat we dit kunnen uitwerken als de gevraagde universele oplossing op voorwaarde dat de coeficienten <span class="math notranslate nohighlight">\(a_2,a_1\)</span> en <span class="math notranslate nohighlight">\(a_0\)</span> allemaal positieve coeficienten zijn.</p>
+<p>We zien dus inderdaad uit vergelijkingen (<a class="reference internal" href="#equation-biquadout11">(15)</a>,<a class="reference internal" href="#equation-biquada2">(16)</a>,<a class="reference internal" href="#equation-biquada1">(17)</a>,<a class="reference internal" href="#equation-biquada0">(18)</a>) dat we dit kunnen uitwerken als de gevraagde universele oplossing op voorwaarde dat de coëfficiënten <span class="math notranslate nohighlight">\(a_2,a_1\)</span> en <span class="math notranslate nohighlight">\(a_0\)</span> allemaal positieve coëfficiënten zijn.</p>
 </section>
 <section id="het-volledige-biquad-circuit">
 <h5>Het volledige BiQuad circuit<a class="headerlink" href="#het-volledige-biquad-circuit" title="Link to this heading">#</a></h5>
@@ -751,30 +754,30 @@ T_1(j \omega) \times T_2(j \omega) \times T_3(j \omega) \times \dots \times T_n(
 <p>Op dezelfde manier zijn ook de <a class="reference external" href="https://www.ti.com/tool/CIRCUIT060053">high pass filter</a> en de <a class="reference external" href="https://www.ti.com/tool/CIRCUIT060056">Band pass filter</a> beschreven.</p>
 <div class="cell docutils container">
 <div class="cell_output docutils container">
-<figure class="align-default" id="id1">
+<figure class="align-default" id="sallen-en-keyhp">
 <img alt="_images/e09ba4d24f322d497939a9b6a9ea8086322d520928aa7808cf41be5b8382bfde.svg" src="_images/e09ba4d24f322d497939a9b6a9ea8086322d520928aa7808cf41be5b8382bfde.svg" />
 <figcaption>
-<p><span class="caption-number">Figuur 104 </span><span class="caption-text">Het Sallen en Key laagdoorlaat circuit.</span><a class="headerlink" href="#id1" title="Link to this image">#</a></p>
+<p><span class="caption-number">Figuur 104 </span><span class="caption-text">Het Sallen en Key hoogdoorlaat circuit.</span><a class="headerlink" href="#sallen-en-keyhp" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_output docutils container">
-<figure class="align-default" id="id2">
+<figure class="align-default" id="sallen-en-keybp">
 <img alt="_images/bdc2bbca68cdda82fa50f600378faa0303ddf3df2d5e72deea6cb2a0b3fc47fb.svg" src="_images/bdc2bbca68cdda82fa50f600378faa0303ddf3df2d5e72deea6cb2a0b3fc47fb.svg" />
 <figcaption>
-<p><span class="caption-number">Figuur 105 </span><span class="caption-text">Het Sallen en Key laagdoorlaat circuit.</span><a class="headerlink" href="#id2" title="Link to this image">#</a></p>
+<p><span class="caption-number">Figuur 105 </span><span class="caption-text">Het Sallen en Key banddoorlaat circuit.</span><a class="headerlink" href="#sallen-en-keybp" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_output docutils container">
-<figure class="align-default" id="id3">
+<figure class="align-default" id="sallen-en-keybp2">
 <img alt="_images/2830921f0b4fed11d6df7dad0bfeaa8e3cceade242e5b49000c8868411ad81c2.svg" src="_images/2830921f0b4fed11d6df7dad0bfeaa8e3cceade242e5b49000c8868411ad81c2.svg" />
 <figcaption>
-<p><span class="caption-number">Figuur 106 </span><span class="caption-text">Het Sallen en Key laagdoorlaat circuit.</span><a class="headerlink" href="#id3" title="Link to this image">#</a></p>
+<p><span class="caption-number">Figuur 106 </span><span class="caption-text">Het Sallen en Key Banddoorlaat circuit.</span><a class="headerlink" href="#sallen-en-keybp2" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 </div>
@@ -825,7 +828,7 @@ Hierin herkennen we een passband (tussen <span class="math notranslate nohighlig
 </section>
 <section id="frequentietransformaties">
 <h2>Frequentietransformaties<a class="headerlink" href="#frequentietransformaties" title="Link to this heading">#</a></h2>
-<p>In dit deel van het hoofdstuk over filters gaan we dieper in op de manier waarop het ontwerp van een laagdoorlaatfilter kan herschreven worden naar een hoogdoorlaatfilter, een banddoorlaatflter of een bandsper filter.</p>
+<p>In dit deel van het hoofdstuk over filters gaan we dieper in op de manier waarop het ontwerp van een laagdoorlaatfilter kan herschreven worden naar een hoogdoorlaatfilter, een banddoorlaatfilter of een bandsper filter.</p>
 <p>Hiervoor gaan we typisch de transferfunctie herschrijven als functie van de parameter S, die gelijk is aan:</p>
 <div class="math notranslate nohighlight">
 \[S=\frac{i \omega}{\omega_o} \]</div>
@@ -850,7 +853,7 @@ Hierin herkennen we een passband (tussen <span class="math notranslate nohighlig
 <p>In dat geval gaat</p>
 <div class="math notranslate nohighlight">
 \[ \frac{\omega_o^2}{p_i}=\frac{\omega_o^2}{\omega_o ( \cos(\phi)+ i \sin(\phi))} =\omega_o ( \cos(\phi)- i \sin(\phi)) \]</div>
-<p>wat dus de complex toegevoegde is van de originele pool. En aangezien de polen steeds in complex toegevoegde paren moeten voorkomen veranderen de polen van de Butterworth filter niet maar komen er wel nullen bij. Voor de  Chebyshev filters filters veranderen de polen door deze transfromatie wel van plaats.</p>
+<p>wat dus de complex toegevoegde is van de originele pool. En aangezien de polen steeds in complex toegevoegde paren moeten voorkomen veranderen de polen van de Butterworth filter niet maar komen er wel nullen bij. Voor de  Chebyshev filters filters veranderen de polen door deze transformatie wel van plaats.</p>
 <p>Hetzelfde kunnen we dan doen voor de eventuele termen van de vorm <span class="math notranslate nohighlight">\(S - \frac{n_i}{\omega_o}  \)</span></p>
 </section>
 <section id="omrekenen-van-een-laagdoorlaatfilter-naar-een-banddoorlaatfilter">
@@ -888,7 +891,7 @@ De polen van deze Butterworth laagdoorlaatfilter zijn:</p>
 <p>Voor de overeenstemmende banddoorlaatfilter kunnen we stellen:</p>
 <div class="math notranslate nohighlight">
 \[S=\frac{1}{\omega_2-\omega_1}\frac{(i \omega)^2 + \omega_1\omega_2}{i \omega} \]</div>
-<p>Wanneer we dit opnieuw inullen in de beide bovenstaande termen krijgen we:</p>
+<p>Wanneer we dit opnieuw invullen in de beide bovenstaande termen krijgen we:</p>
 <div class="math notranslate nohighlight">
 \[ \omega_o\left( \frac{1}{\omega_2-\omega_1}\frac{(i \omega)^2 + \omega_1\omega_2}{i \omega}+ \frac{\sqrt{2}}{2}(1+ i) \right)\]</div>
 <div class="math notranslate nohighlight">
@@ -903,7 +906,7 @@ De polen van deze Butterworth laagdoorlaatfilter zijn:</p>
 \[ T(i \omega)=\frac{p_1 p_2}
 {\frac{\omega_o}{\omega_2-\omega_1}\left( \frac{(i \omega)^2 + \frac{\sqrt{2}}{2}(1+ i)(\omega_2-\omega_1)(i \omega)+ \omega_1\omega_2}{i \omega} \right)
 \frac{\omega_o}{\omega_2-\omega_1}\left( \frac{(i \omega)^2 + \frac{\sqrt{2}}{2}(1- i)(\omega_2-\omega_1)(i \omega)+ \omega_1\omega_2}{i \omega} \right)} \]</div>
-<p>Dit kunner we verder uitwerken als:</p>
+<p>Dit kunnen we verder uitwerken als:</p>
 <div class="math notranslate nohighlight">
 \[ T(i \omega)=\frac{(\omega_2-\omega_1)^2(i \omega)^2}
 {\left((i \omega)^2 + \frac{\sqrt{2}}{2}(1+ i)(\omega_2-\omega_1)(i \omega)+ \omega_1\omega_2 \right)
@@ -966,15 +969,15 @@ p22 =  834003.105731553 *(-cos( 68.05859933682078 )+ j sin( 68.05859933682078 ))
 </ul>
 <section id="butterworth-filters">
 <h3>Butterworth filters<a class="headerlink" href="#butterworth-filters" title="Link to this heading">#</a></h3>
-<p>In dit hoofdstuk werken we een aantal concrete voorbeelden uit van Butterworth filters. We vergelijken hierbij de verschillende ordes en kijken hoe deze in praktijk worden geimplementeerd in hardware circuits.</p>
+<p>In dit hoofdstuk werken we een aantal concrete voorbeelden uit van Butterworth filters. We vergelijken hierbij de verschillende ordes en kijken hoe deze in praktijk worden geïmplementeerd in hardware circuits.</p>
 <section id="butterworth-laagdoorlaatfilter-van-de-3de-orde">
 <h4>Butterworth laagdoorlaatfilter van de 3de orde<a class="headerlink" href="#butterworth-laagdoorlaatfilter-van-de-3de-orde" title="Link to this heading">#</a></h4>
-<p>Als eerste voorbeeld ontwerpen we een analoge 3de orde laagdoorlaatfilter van het type Butterworth met afsnijfrequentie 1 MHz. De transferfunktie <span class="math notranslate nohighlight">\(H(s)\)</span> of <span class="math notranslate nohighlight">\(H(j\omega)\)</span> die we bekomen is:</p>
+<p>Als eerste voorbeeld ontwerpen we een analoge 3de orde laagdoorlaatfilter van het type Butterworth met afsnijfrequentie 1 MHz. De transferfunctie <span class="math notranslate nohighlight">\(H(s)\)</span> of <span class="math notranslate nohighlight">\(H(j\omega)\)</span> die we bekomen is:</p>
 <div class="math notranslate nohighlight">
 \[ H(s) = \frac{\sum\limits_{n=0}^M b_n s^n}{\sum\limits_{n=0}^N a_n s^n} = \frac{\sum\limits_{n=0}^0 b_n s^n}{\sum\limits_{n=0}^3 a_n s^n}\]</div>
-<p><span class="math notranslate nohighlight">\(a_n\)</span> en <span class="math notranslate nohighlight">\(b_n\)</span> zijn de coeficienten van de veeltermen in de transferfunktie.
+<p><span class="math notranslate nohighlight">\(a_n\)</span> en <span class="math notranslate nohighlight">\(b_n\)</span> zijn de coëfficiënten van de veeltermen in de transferfunctie.
 Aangezien we hier een derde orde laagdoorlaatfilter ontwerpen is <span class="math notranslate nohighlight">\(M=0\)</span> en <span class="math notranslate nohighlight">\(N=3\)</span>.
-Voor deze oefening is het resultaat van de berekening van deze coefficienten:</p>
+Voor deze oefening is het resultaat van de berekening van deze coëfficiënten:</p>
 <div class="cell docutils container">
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Veelterm coefficienten teller: M= 0
@@ -1025,7 +1028,7 @@ p[ 3 ] = (-3141592.6535897935-5441398.092702653j)
 </div>
 </div>
 <p>We merken op dat de drie polen die bekomen werden perfect op een cirkel liggen met straal 2<span class="math notranslate nohighlight">\(\pi\)</span> <span class="math notranslate nohighlight">\(10^6\)</span>.</p>
-<p>We kunnen deze transferfunktie nu verder uitwerken in een product van meerdere transferfucties waarbij we de complex toegevoegde polen samennemen.</p>
+<p>We kunnen deze transferfunctie nu verder uitwerken in een product van meerdere transferfucties waarbij we de complex toegevoegde polen samennemen.</p>
 <div class="math notranslate nohighlight">
 \[ H(s) = H_1(s) H_2(s)= \frac{1}{(s-p_1)(s-p_3)}\frac{1}{(s-p_2)} \]</div>
 <div class="math notranslate nohighlight">
@@ -1092,7 +1095,7 @@ p[ 3 ] = (-3141592.6535897935-5441398.092702653j)
 </section>
 <section id="butterworth-laagdoorlaatfilter-van-de-5de-orde">
 <h4>Butterworth laagdoorlaatfilter van de 5de orde<a class="headerlink" href="#butterworth-laagdoorlaatfilter-van-de-5de-orde" title="Link to this heading">#</a></h4>
-<p>Wanneer we de transferfucntie van de Butterworth laagdoorlaatfilter van de 5de orde berekenen, bekomen we de volgende coeficienten:</p>
+<p>Wanneer we de transferfucntie van de Butterworth laagdoorlaatfilter van de 5de orde berekenen, bekomen we de volgende coëfficiënten:</p>
 <div class="cell docutils container">
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Veelterm coefficienten teller: M= 0
@@ -1368,7 +1371,7 @@ p[ 14 ] = (-4439819.935339821-332480313.6424786j)
 </section>
 <section id="chebyshev-filters">
 <h3>Chebyshev filters<a class="headerlink" href="#chebyshev-filters" title="Link to this heading">#</a></h3>
-<p>Bij het ontwerp van een Chebyshev filter definieren we een maximale rimpel <span class="math notranslate nohighlight">\(\epsilon\)</span>. In de gehele doorlaatband moet de verzwakking van het signaal kleiner zijn dan deze waarde <span class="math notranslate nohighlight">\(\epsilon\)</span>.</p>
+<p>Bij het ontwerp van een Chebyshev filter definiëren we een maximale rimpel <span class="math notranslate nohighlight">\(\epsilon\)</span>. In de gehele doorlaatband moet de verzwakking van het signaal kleiner zijn dan deze waarde <span class="math notranslate nohighlight">\(\epsilon\)</span>.</p>
 <section id="chebyshev-40-mhz-laagdoorlaatfilter-van-de-3de-orde-met-6db-maximale-ripple">
 <h4>Chebyshev 40 MHz laagdoorlaatfilter van de 3de orde met 6dB maximale ripple<a class="headerlink" href="#chebyshev-40-mhz-laagdoorlaatfilter-van-de-3de-orde-met-6db-maximale-ripple" title="Link to this heading">#</a></h4>
 <div class="cell docutils container">
@@ -1458,7 +1461,7 @@ a[ 0 ] = 1.3431999354717115e+69
 </figure>
 </div>
 </div>
-<p>Ook voor de 8ste orde gaan we inzoemen op de doorlaatband. Hier vinden we dan ook een rimpel van 2 dB met 8 extremen terug.</p>
+<p>Ook voor de 8ste orde gaan we inzoomen op de doorlaatband. Hier vinden we dan ook een rimpel van 2 dB met 8 extremen terug.</p>
 <div class="cell docutils container">
 <div class="cell_output docutils container">
 <figure class="align-default" id="fig31">
@@ -1495,7 +1498,7 @@ p[ 8 ] = (-19974783.518686887-746281824.2305412j)
 </figure>
 </div>
 </div>
-<p>Wanneer we de Butterworth met Chebychev vergelijken merken we dat hoe meer passband we toelaten, hoe stijler flank is aan het einde van de doorlaatband. Dit is dan ook het belangrijke ontwerpcompromis.</p>
+<p>Wanneer we de Butterworth met Chebyshev vergelijken merken we dat hoe meer passband we toelaten, hoe stijler flank is aan het einde van de doorlaatband. Dit is dan ook het belangrijke ontwerpcompromis.</p>
 <div class="cell docutils container">
 <div class="cell_output docutils container">
 <figure class="align-default" id="fig33">
@@ -1551,7 +1554,7 @@ p[ 2 ] = (-60780360.20507117-146490750.93199244j)
 </figure>
 </div>
 </div>
-<p>We kunnen deze 2de orde laagdoorlaatfilter ook maken met een Sallen en Key circuit als aangegeven in <code class="xref std std-numref docutils literal notranslate"><span class="pre">Sallen_en_Key</span></code>. we merken op dat de frequentie waarop dit circuit gaat afsnijden een stuk lager is dan de frequentie van het overeenkomende Butterworth circuit. De juiste afsnijfrequentie kunnen we uitrekenen op basis van de  polen en deze is:</p>
+<p>We kunnen deze 2de orde laagdoorlaatfilter ook maken met een Sallen en Key circuit als aangegeven in <a class="reference internal" href="#sallen-en-key"><span class="std std-numref">Figuur 101</span></a>. we merken op dat de frequentie waarop dit circuit gaat afsnijden een stuk lager is dan de frequentie van het overeenkomende Butterworth circuit. De juiste afsnijfrequentie kunnen we uitrekenen op basis van de  polen en deze is:</p>
 <div class="cell docutils container">
 <div class="cell_output docutils container">
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>25241889.828472663
@@ -1567,7 +1570,7 @@ p[ 2 ] = (-60780360.20507117-146490750.93199244j)
 </div>
 </div>
 </div>
-<p>Als een gevolg van deze hoek van 67 graden, zullen we als ratio tussen de 2 weerstanden <span class="math notranslate nohighlight">\(R_1\)</span> en <span class="math notranslate nohighlight">\(R_2\)</span> van het Sallen en Key circuit uit <code class="xref std std-numref docutils literal notranslate"><span class="pre">Sallen_en_Key</span></code> een k-factor hebben die gelijk is aan:</p>
+<p>Als een gevolg van deze hoek van 67 graden, zullen we als ratio tussen de 2 weerstanden <span class="math notranslate nohighlight">\(R_1\)</span> en <span class="math notranslate nohighlight">\(R_2\)</span> van het Sallen en Key circuit uit <a class="reference internal" href="#sallen-en-key"><span class="std std-numref">Figuur 101</span></a> een k-factor hebben die gelijk is aan:</p>
 <div class="cell docutils container">
 <div class="cell_output docutils container">
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1.23353640830558
@@ -1579,7 +1582,7 @@ p[ 2 ] = (-60780360.20507117-146490750.93199244j)
 </section>
 <section id="bessel-thomson-filters">
 <h3>Bessel Thomson filters<a class="headerlink" href="#bessel-thomson-filters" title="Link to this heading">#</a></h3>
-<p>Het voornaamste doel van een Bessel Thomson filter is een lineair verloop te bekomen van het fase verloop in de buurt van de afsnijfrequentie. Hierdoor wordt de vorm van een puls beter behouden. In dit vak zullen we de Bessel Thomson filters steeds met de computer uitrekenen. Hieronder vind je de berekening van de coeficienten van de transfer functie een 2de orde Bessel Thomson  hoogdoorlaatfilter met afsnijfrequentie op 1 kHz.</p>
+<p>Het voornaamste doel van een Bessel Thomson filter is een lineair verloop te bekomen van het fase verloop in de buurt van de afsnijfrequentie. Hierdoor wordt de vorm van een puls beter behouden. In dit vak zullen we de Bessel Thomson filters steeds met de computer uitrekenen. Hieronder vind je de berekening van de coëfficiënten van de transfer functie een 2de orde Bessel Thomson  hoogdoorlaatfilter met afsnijfrequentie op 1 kHz.</p>
 <p>In <a class="reference internal" href="#besseltomson-fig"><span class="std std-numref">Figuur 135</span></a>  zie je dan vervolgens de plot van de transferkarakteristiek een 2de orde Bessel Thomson  hoogdoorlaatfilter</p>
 <div class="cell docutils container">
 <div class="cell_output docutils container">
@@ -1619,7 +1622,7 @@ a[ 0 ] = 39478417.60435742
 </section>
 <section id="switched-capacitor-filters">
 <h2>Switched Capacitor filters<a class="headerlink" href="#switched-capacitor-filters" title="Link to this heading">#</a></h2>
-<p>Voor de integratie van filters op geintegreerde schakelingen worden vaak geschakelde condensatoren (Switched Capacitors) gebruikt omwille van de volgende reden:</p>
+<p>Voor de integratie van filters op geïntegreerde schakelingen worden vaak geschakelde condensatoren (Switched Capacitors) gebruikt omwille van de volgende reden:</p>
 <ul class="simple">
 <li><p>Weerstanden op chip zijn nooit heel erg nauwkeurig</p></li>
 <li><p>We kunnen een weerstand vervangen door een condensator en 2 schakelaars</p></li>

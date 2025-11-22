@@ -7,7 +7,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
-<meta property="og:title" content="Klasse F Verstekers" />
+<meta property="og:title" content="Klasse F Versterkers" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://jangenoe.github.io/jangenoe/InteractieveCursus/ToegepasteAnalogeElektronica/Klasse-F.html" />
 <meta property="og:site_name" content="Project name not set" />
@@ -16,7 +16,7 @@
 <meta property="og:image:alt" content="Project name not set" />
 <meta name="description" content="Inleiding: Wat zijn Klasse F versterkers?: In dit hoofdstuk bestuderen we de klasse F versterker als een uitbreiding van de klasse C versterker. Beide versterkers zijn resonante versterkers die bes..." />
 
-    <title>Klasse F Verstekers &#8212; Toegepaste Analoge Elektronica</title>
+    <title>Klasse F Versterkers &#8212; Toegepaste Analoge Elektronica</title>
   
   
   
@@ -43,8 +43,11 @@
     <link rel="stylesheet" type="text/css" href="_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="_static/exercise.css" />
-    <link rel="stylesheet" type="text/css" href="_static/spice_file.css" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="_static/code-caption-style.css?v=0ad27fa8" />
+    <link rel="stylesheet" type="text/css" href="_static/custom-pygments.css?v=d7fe8a85" />
+    <link rel="stylesheet" type="text/css" href="_static/spice-lexer.css?v=422ceae6" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
@@ -192,7 +195,7 @@
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Versterkers</span></p>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="Klasse-C.html">Klasse C  Versterkers</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Klasse F Verstekers</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Klasse F Versterkers</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Klasse-D.html">Klasse D resonante Versterkers</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Klasse-E.html">Klasse E  Versterkers</a></li>
 </ul>
@@ -370,7 +373,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Klasse F Verstekers</h1>
+    <h1>Klasse F Versterkers</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -431,8 +434,8 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="klasse-f-verstekers">
-<h1>Klasse F Verstekers<a class="headerlink" href="#klasse-f-verstekers" title="Link to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="klasse-f-versterkers">
+<h1>Klasse F Versterkers<a class="headerlink" href="#klasse-f-versterkers" title="Link to this heading">#</a></h1>
 <section id="inleiding-wat-zijn-klasse-f-versterkers">
 <h2>Inleiding: Wat zijn Klasse F versterkers?<a class="headerlink" href="#inleiding-wat-zijn-klasse-f-versterkers" title="Link to this heading">#</a></h2>
 <p>In dit hoofdstuk bestuderen we de klasse F versterker als een uitbreiding van de klasse C versterker. Beide versterkers zijn resonante versterkers die bestaan uit een LRC trilkring (of meerdere LC kringen) die aangestuurd wordt door een enkele transistor. Als een gevolg hiervan werkt deze versterker op een vaste frequentie of binnen een zeer beperkte bandbreedte rond deze centrale frequentie. Deze bandbreedte is typisch maximaal 1<span class="math notranslate nohighlight">\(\%\)</span>  van de resonantie frequentie.
@@ -472,9 +475,9 @@ In <a class="reference internal" href="#vermogenversterkers2"><span class="std s
 <section id="klasse-f-circuit-analyse">
 <h2>Klasse F Circuit Analyse<a class="headerlink" href="#klasse-f-circuit-analyse" title="Link to this heading">#</a></h2>
 <p>Wanneer de gelijkaardige stroompulsen aangelegd worden op 2 parallelle LRC kringen in serie, zal dezelfde stroom door de kringen lopen, maar zullen de spanningen over beide kringen opgeteld worden.</p>
-<p>Het grote voordeel van het bovenstaande schema is dat het toelaat meer energie toe te voegen aan de trilling bij eenzelfde geleidingshoek (<span class="math notranslate nohighlight">\(\alpha\)</span>) en bij eenzelfde maximale stroom (<span class="math notranslate nohighlight">\(I_{max}\)</span>)door de transistor. Hierdoor wordt het circuit efficienter en verlaagt dus verbruikerskost.</p>
+<p>Het grote voordeel van het bovenstaande schema is dat het toelaat meer energie toe te voegen aan de trilling bij eenzelfde geleidingshoek (<span class="math notranslate nohighlight">\(\alpha\)</span>) en bij eenzelfde maximale stroom (<span class="math notranslate nohighlight">\(I_{max}\)</span>)door de transistor. Hierdoor wordt het circuit efficiënter en verlaagt dus de verbruikerskosten.</p>
 <p>Het nadeel is natuurlijk dat de 2 extra componenten een extra investeringskost en extra plaats vragen op de print.</p>
-<p>De spicefile <a class="reference internal" href="#espicef"><span class="std std-numref">Spice Listing 8</span></a> beschrijft het circuit van <a class="reference internal" href="#ffig1"><span class="std std-numref">Figuur 39</span></a>. De spanningen van de transiente simulatie worden getoond in <a class="reference internal" href="#ffig2"><span class="std std-numref">Figuur 40</span></a>. Het is in eerste instantie belangrijk om het verschil tussen knoop 2 en knoop 5 te bestuderen.</p>
+<p>De spicefile <a class="reference internal" href="#espicef"><span class="std std-numref">Spice Listing 8</span></a> beschrijft het circuit van <a class="reference internal" href="#ffig1"><span class="std std-numref">Figuur 39</span></a>. De spanningen van de transiënte simulatie worden getoond in <a class="reference internal" href="#ffig2"><span class="std std-numref">Figuur 40</span></a>. Het is in eerste instantie belangrijk om het verschil tussen knoop 2 en knoop 5 te bestuderen.</p>
 <div class="literal-block-wrapper docutils container" id="espicef">
 <div class="code-block-caption"><span class="caption-number">Spice Listing 8 </span><span class="caption-text">basis Klasse F circuit spice file</span><a class="headerlink" href="#espicef" title="Link to this code">#</a></div>
 <div class="highlight-spice notranslate"><div class="highlight"><pre><span></span><span class="o">*</span><span class="w"> </span><span class="nx">klasse</span><span class="w"> </span><span class="nx">F</span><span class="w"> </span><span class="nx">basiscircuit</span>
@@ -531,7 +534,7 @@ In <a class="reference internal" href="#vermogenversterkers2"><span class="std s
 </figure>
 </div>
 </div>
-<p><a class="reference internal" href="#ffig4"><span class="std std-numref">Figuur 42</span></a> toont het verloop van de collectorstroom van de stuurtransistor. We merken in dit stroomverloop veel meer features terug. Het belangrijke hierin is dat de stroom veel meer een blokgolfpatroon vormt, wat een veel efficietere werking oplevert.</p>
+<p><a class="reference internal" href="#ffig4"><span class="std std-numref">Figuur 42</span></a> toont het verloop van de collectorstroom van de stuurtransistor. We merken in dit stroomverloop veel meer features terug. Het belangrijke hierin is dat de stroom veel meer een blokgolfpatroon vormt, wat een veel efficiëntere werking oplevert.</p>
 <div class="cell docutils container">
 <div class="cell_output docutils container">
 <figure class="align-default" id="ffig4">
@@ -542,7 +545,7 @@ In <a class="reference internal" href="#vermogenversterkers2"><span class="std s
 </figure>
 </div>
 </div>
-<p><a class="reference internal" href="#ffigy"><span class="std std-numref">Figuur 43</span></a> toont in detail het stroom en spanningsverloop van de tweede en de 16de oscillatie na het opstarten. We zien dat de stroom in belangrijke mate terugvalt telkens de transistor in saturatie komt, maar ook dat er gedurende lange tijd behoorlijk wat stroom kan geleverd worden bij erg lage spanning over de transistor. Dat levert voor de klasse F veel hogere efficienties op.</p>
+<p><a class="reference internal" href="#ffigy"><span class="std std-numref">Figuur 43</span></a> toont in detail het stroom en spanningsverloop van de tweede en de 16de oscillatie na het opstarten. We zien dat de stroom in belangrijke mate terugvalt telkens de transistor in saturatie komt, maar ook dat er gedurende lange tijd behoorlijk wat stroom kan geleverd worden bij erg lage spanning over de transistor. Dat levert voor de klasse F veel hogere efficiënties op.</p>
 <p>We zien ook dat V(5) meer dan 2V negatief wordt. De AC zwaai aan de uitgang is hierdoor ook meer dan 2V groter dan de voedingsspanning (11V in dit geval).</p>
 <div class="cell docutils container">
 <div class="cell_output docutils container">
@@ -568,7 +571,7 @@ In <a class="reference internal" href="#vermogenversterkers2"><span class="std s
 <ul>
 <li><p>🟢 <strong>Groen</strong>: Transistor stroom niet gereduceerd door saturatie</p>
 <ul>
-<li><p>Transistor in het voorwaards actief gebied</p></li>
+<li><p>Transistor in het voorwaarts actief gebied</p></li>
 </ul>
 </li>
 <li><p>🔴 <strong>Rood</strong>: Transistor stroom gereduceerd door saturatie</p>
@@ -664,7 +667,7 @@ In <a class="reference internal" href="#vermogenversterkers2"><span class="std s
 <h2>Waarom een alternatief schema?<a class="headerlink" href="#waarom-een-alternatief-schema" title="Link to this heading">#</a></h2>
 <p>Het alternatieve schema biedt:</p>
 <ul class="simple">
-<li><p><strong>Aarding</strong>: Oscillatie rond 0V ipv VCC</p></li>
+<li><p><strong>Aarding</strong>: Oscillatie rond 0V i.p.v. VCC</p></li>
 <li><p><strong>Eenvoud</strong>: Gemakkelijkere metingen</p></li>
 <li><p><strong>Praktisch</strong>: Beter voor sommige toepassingen</p></li>
 </ul>
@@ -708,6 +711,7 @@ In <a class="reference internal" href="#vermogenversterkers2"><span class="std s
 </figure>
 </div>
 </div>
+<p>In <a class="reference internal" href="#ffig5"><span class="std std-numref">Figuur 44</span></a> kunnen we de filter voor de derde harmonische vervangen worden door een transmissielijn van een kwart golflengte bij de resonantiefrequentie <span id="id1">[<a class="reference internal" href="References.html#id15" title="Jeffrey S. Walling, Hasnain Lakdawala, Yorgos Palaskas, Ashoke Ravi, Ofir Degani, Krishnamurthy Soumyanath, and David J. Allstot. A Class-E PA With Pulse-Width and Pulse-Position Modulation in 65 nm CMOS. IEEE Journal of Solid-State Circuits, 44(6):1668–1678, June 2009. doi:10.1109/JSSC.2009.2020205.">3</a>]</span>. Hierbij kiezen we de karakteristieke impedantie <span class="math notranslate nohighlight">\(Z_o\)</span> gelijk aan de <span class="math notranslate nohighlight">\(R_L\)</span> van de belasting. Dit zorgt voor dezelfde belasting at resonance, maar alle hogere harmonischen krijgen een belangrijke inductieve component erbij.</p>
 </section>
 </section>
 <section id="praktische-toepassingen">

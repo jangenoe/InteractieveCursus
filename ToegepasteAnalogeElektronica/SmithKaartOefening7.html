@@ -43,8 +43,11 @@
     <link rel="stylesheet" type="text/css" href="_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="_static/exercise.css" />
-    <link rel="stylesheet" type="text/css" href="_static/spice_file.css" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="_static/code-caption-style.css?v=0ad27fa8" />
+    <link rel="stylesheet" type="text/css" href="_static/custom-pygments.css?v=d7fe8a85" />
+    <link rel="stylesheet" type="text/css" href="_static/spice-lexer.css?v=422ceae6" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
@@ -192,7 +195,7 @@
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Versterkers</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="Klasse-C.html">Klasse C  Versterkers</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Klasse-F.html">Klasse F Verstekers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Klasse-F.html">Klasse F Versterkers</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Klasse-D.html">Klasse D resonante Versterkers</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Klasse-E.html">Klasse E  Versterkers</a></li>
 </ul>
@@ -408,7 +411,7 @@ document.write(`
 <h2>Oplossing<a class="headerlink" href="#oplossing" title="Link to this heading">#</a></h2>
 <section id="aanpassing-van-de-transmissielijn-op-500-mhz">
 <h3>Aanpassing van de transmissielijn op 500 MHz<a class="headerlink" href="#aanpassing-van-de-transmissielijn-op-500-mhz" title="Link to this heading">#</a></h3>
-<p>We werken de oplossing uit op basis van <span id="id1">[<a class="reference internal" href="References.html#id5" title="Alexander Arsenovic, Julien Hillairet, Jackson Anderson, Henrik Forsten, Vincent Ries, Michael Eller, Noah Sauber, Robert Weikle, William Barnhart, and Franz Forstmayr. Scikit-rf: An Open Source Python Package for Microwave Network Creation, Analysis, and Calibration [Speaker's Corner]. IEEE Microwave Magazine, 23(1):98–105, January 2022. doi:10.1109/MMM.2021.3117139.">13</a>]</span>.
+<p>We werken de oplossing uit op basis van <span id="id1">[<a class="reference internal" href="References.html#id5" title="Alexander Arsenovic, Julien Hillairet, Jackson Anderson, Henrik Forsten, Vincent Ries, Michael Eller, Noah Sauber, Robert Weikle, William Barnhart, and Franz Forstmayr. Scikit-rf: An Open Source Python Package for Microwave Network Creation, Analysis, and Calibration [Speaker's Corner]. IEEE Microwave Magazine, 23(1):98–105, January 2022. doi:10.1109/MMM.2021.3117139.">14</a>]</span>.
 De antenne die de belasting is van dit circuit modelleren we als in <a class="reference internal" href="#smith7ciran"><span class="std std-numref">Figuur 234</span></a>.</p>
 <div class="cell docutils container">
 <div class="cell_output docutils container">
@@ -533,7 +536,7 @@ We starten dus de cirkelboog bij y=0 (zie oranje lijn in <a class="reference int
 <p>De Smithkaart in <a class="reference internal" href="#smith73"><span class="std std-numref">Figuur 238</span></a> toont het verschil tussen de admittanties bekomen bekomen aan 500 MHz (groene dots) en de admittanties bekomen bekomen aan 550 MHz (roze dots). Wanneer we de op de Smithkaart afgelezen waardes van de 2 groene dots optellen bekomen we 1, wat overeenkomt met een belasting van 64 Ohm en een aangepaste transmissielijn.  Wanneer we de op de smithkaart afgelezen waardes van de 2 roze dots optellen bekomen we 0.85 +0.2 j, wat overeenkomt met een belasting van 70.9-17.5 j Ohm.</p>
 <div class="cell docutils container">
 </div>
-<p>De reflectiecoeficient die we dan bekomen op 550 MHz is:</p>
+<p>De reflectiecoëfficiënt die we dan bekomen op 550 MHz is:</p>
 <div class="math notranslate nohighlight">
 \[ \rho= \frac{Z_L-Z_0}{Z_L+Z_0}= 0.07-0.12 j\]</div>
 </section>

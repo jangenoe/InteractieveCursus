@@ -43,8 +43,11 @@
     <link rel="stylesheet" type="text/css" href="_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="_static/exercise.css" />
-    <link rel="stylesheet" type="text/css" href="_static/spice_file.css" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="_static/code-caption-style.css?v=0ad27fa8" />
+    <link rel="stylesheet" type="text/css" href="_static/custom-pygments.css?v=d7fe8a85" />
+    <link rel="stylesheet" type="text/css" href="_static/spice-lexer.css?v=422ceae6" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
@@ -192,7 +195,7 @@
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Versterkers</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="Klasse-C.html">Klasse C  Versterkers</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Klasse-F.html">Klasse F Verstekers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Klasse-F.html">Klasse F Versterkers</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Klasse-D.html">Klasse D resonante Versterkers</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Klasse-E.html">Klasse E  Versterkers</a></li>
 </ul>
@@ -421,10 +424,10 @@ document.write(`
 </div>
 </div>
 <p>Als we van de aanpassing (groene dot) naar de belasting gaan (rode dot), draaien we in tegenwijzerzin over een afstand van <span class="math notranslate nohighlight">\(283^o\)</span>. Dit geeft een afstand van <span class="math notranslate nohighlight">\(\frac{283}{360}\frac{\lambda}{2}\)</span>=0.393 <span class="math notranslate nohighlight">\(\lambda\)</span> = 19.65cm.    (<span class="math notranslate nohighlight">\(\lambda\)</span>= 50 cm is gegeven)</p>
-<p>De nieuwe z = 1 + j 0.47. Daaruit volgt dat Z = 50 Ohm + j 23.68 Ohm (zie Table 1). Het complexe deel van deze impedantie kunnen we compenseren door een condensator met impedantie van ongeveer - j 23.68 Ohm  toe te voegen. Als we het helemaal juist willen hebben kunnen we in de array van de lijnimpedantie (zie Table 1) juist gaan kijken waar het reele deel 50 Ohm wordt en wat we dan als complex deel over houden.</p>
+<p>De nieuwe z = 1 + j 0.47. Daaruit volgt dat Z = 50 Ohm + j 23.68 Ohm (zie Table 1). Het complexe deel van deze impedantie kunnen we compenseren door een condensator met impedantie van ongeveer - j 23.68 Ohm  toe te voegen. Als we het helemaal juist willen hebben kunnen we in de array van de lijnimpedantie (zie Table 1) juist gaan kijken waar het reële deel 50 Ohm wordt en wat we dan als complex deel over houden.</p>
 <div class="math notranslate nohighlight">
 \[ \frac{1}{j \omega C}= - j 23.68 \Omega\]</div>
-<p>Als we vervolgens <span class="math notranslate nohighlight">\(\omega\)</span> invullen, wetende dat de freqentie f=300 MHz:</p>
+<p>Als we vervolgens <span class="math notranslate nohighlight">\(\omega\)</span> invullen, wetende dat de frequentie f=300 MHz:</p>
 <div class="math notranslate nohighlight">
 \[ \omega= 2 \pi \cdot  300\times 10^6 \]</div>
 <div class="math notranslate nohighlight">
@@ -445,7 +448,7 @@ document.write(`
 </div>
 </div>
 </div>
-<p class=tabcaption> Overzicht van de bekomen impedantie als funktie van de hoek op de Smith kaart. De laatste kolom geeft de nodige lengte van de coax</p><p class="alert alert-success">
+<p class=tabcaption> Overzicht van de bekomen impedantie als functie van de hoek op de Smith kaart. De laatste kolom geeft de nodige lengte van de coax</p><p class="alert alert-success">
 De optimale condensatorwaarde in serie wordt dus  22.4 pF en de nodige lengte van de coax tussen de antenne en de aanpassing is 19.65 cm
 </p><p>Het schema dat we nodig hebben om deze eerst oplossing te realiseren wordt dus:</p>
 <div class="cell docutils container">
@@ -485,7 +488,7 @@ De optimale condensatorwaarde in serie wordt dus  22.4 pF en de nodige lengte va
 </div>
 </div>
 </div>
-<p class=tabcaption> Overzicht van de bekomen impedantie als funktie van de hoek op de Smith kaart. De laatste kolom geeft de nodige lengte van de coax</p><p>De nieuwe z = 1 - j 0.47. Daaruit volgt dat Z = 50 Ohm - j 23.68 Ohm. Het complexe deel van deze impedantie kunnen we compenseren door een spoel met impedantie van ongeveer  j 23.68 Ohm  toe te voegen. Als we het helemaal juist willen hebben kunnen we in de array van zlijn juist gaan kijken waar het reele deel 50 Ohm wordt en wat we dan als complex deel over houden.</p>
+<p class=tabcaption> Overzicht van de bekomen impedantie als functie van de hoek op de Smith kaart. De laatste kolom geeft de nodige lengte van de coax</p><p>De nieuwe z = 1 - j 0.47. Daaruit volgt dat Z = 50 Ohm - j 23.68 Ohm. Het complexe deel van deze impedantie kunnen we compenseren door een spoel met impedantie van ongeveer  j 23.68 Ohm  toe te voegen. Als we het helemaal juist willen hebben kunnen we in de array van zlijn juist gaan kijken waar het reële deel 50 Ohm wordt en wat we dan als complex deel over houden.</p>
 <div class="math notranslate nohighlight">
 \[ j \omega L=  j 23.68 \Omega\]</div>
 <div class="math notranslate nohighlight">
@@ -521,7 +524,7 @@ De optimale inductantiewaarde in serie wordt dus  12.56 nH en de nodige lengte v
 </figure>
 </div>
 </div>
-<p>Omdat een Smith kaart in admitantie het spiegelbeeld is van een Smith kaart in impedentie, kunnen we ook de kaart spiegelen. We moeten dan wel aan de andere kant van de kaart vertrekken. Dit is weergegeven in figuur 6.</p>
+<p>Omdat een Smith kaart in admittantie het spiegelbeeld is van een Smith kaart in impedantie, kunnen we ook de kaart spiegelen. We moeten dan wel aan de andere kant van de kaart vertrekken. Dit is weergegeven in figuur 6.</p>
 <div class="cell docutils container">
 <div class="cell_output docutils container">
 <figure class="align-default" id="smith2s3a">
@@ -544,7 +547,7 @@ De optimale inductantiewaarde in serie wordt dus  12.56 nH en de nodige lengte v
 </div>
 </div>
 </div>
-<p class=tabcaption> Overzicht van de bekomen admitantie als funktie van de hoek op de Smith kaart. De laatste kolom geeft de nodige lengte van de coax</p><div class="cell docutils container">
+<p class=tabcaption> Overzicht van de bekomen admittantie als functie van de hoek op de Smith kaart. De laatste kolom geeft de nodige lengte van de coax</p><div class="cell docutils container">
 </div>
 <p class="alert alert-success">
 De optimale condensatorwaarde in parallel wordt dus  5 pF en  de nodige lengte van de coax tussen de antenne en de aanpassing is 17.8 cm 
@@ -589,7 +592,7 @@ De optimale condensatorwaarde in parallel wordt dus  5 pF en  de nodige lengte v
 </div>
 </div>
 </div>
-<p class=tabcaption> Overzicht van de bekomen admitantie als funktie van de hoek op de Smith kaart. De laatste kolom geeft de nodige lengte van de coax</p><div class="math notranslate nohighlight">
+<p class=tabcaption> Overzicht van de bekomen admittantie als functie van de hoek op de Smith kaart. De laatste kolom geeft de nodige lengte van de coax</p><div class="math notranslate nohighlight">
 \[ \frac{1}{j \omega L}= - 0.00947 j \]</div>
 <div class="math notranslate nohighlight">
 \[ L =\frac{1}{0.00947\cdot  2 \pi \cdot 300 \times 10^6}= 56 nH \]</div>
@@ -634,7 +637,7 @@ De optimale inductantiewaarde in parallel wordt dus  56 nH  de nodige lengte van
 </div>
 </div>
 </div>
-<p class=tabcaption> Overzicht van de bekomen admitantie als funktie van de hoek op de Smith kaart. De laatste kolom geeft de nodige lengte van de coax</p><div class="cell docutils container">
+<p class=tabcaption> Overzicht van de bekomen admittantie als functie van de hoek op de Smith kaart. De laatste kolom geeft de nodige lengte van de coax</p><div class="cell docutils container">
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>hoek    admitantie (Siemens)     lengte coax (cm)
   50       Y= +9.33j mS     lengte=3.47 cm
@@ -646,7 +649,7 @@ De optimale inductantiewaarde in parallel wordt dus  56 nH  de nodige lengte van
 </div>
 </div>
 </div>
-<p class=tabcaption> Overzicht van de bekomen admitantie van de open transmissielijn als funktie van de hoek op de Smith kaart. De laatste kolom geeft de nodige lengte van de coax</p><p>Hieruit blijkt dat een open transmissielijn met de lengte van <span class="math notranslate nohighlight">\(\frac{51}{360} \frac{\lambda}{2}\)</span> de beste aanpassing geeft.</p>
+<p class=tabcaption> Overzicht van de bekomen admittantie van de open transmissielijn als functie van de hoek op de Smith kaart. De laatste kolom geeft de nodige lengte van de coax</p><p>Hieruit blijkt dat een open transmissielijn met de lengte van <span class="math notranslate nohighlight">\(\frac{51}{360} \frac{\lambda}{2}\)</span> de beste aanpassing geeft.</p>
 <p class="alert alert-success">
 Het stukje open coax dat we moeten voorzien ter vervanging van de condensator is dus: 3.54 cm
 </p><p>Het schema dat we nodig hebben om deze vijfde oplossing te realiseren wordt dus:</p>
@@ -686,7 +689,7 @@ Het stukje open coax dat we moeten voorzien ter vervanging van de condensator is
 </div>
 </div>
 </div>
-<p class=tabcaption> Overzicht van de bekomen admitantie als funktie van de hoek op de Smith kaart. De laatste kolom geeft de nodige lengte van de coax</p><div class="cell docutils container">
+<p class=tabcaption> Overzicht van de bekomen admittantie als functie van de hoek op de Smith kaart. De laatste kolom geeft de nodige lengte van de coax</p><div class="cell docutils container">
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>hoek    admitantie (Siemens)     lengte coax (cm)
  230       Y= +9.33j mS     lengte=15.97 cm
@@ -698,7 +701,7 @@ Het stukje open coax dat we moeten voorzien ter vervanging van de condensator is
 </div>
 </div>
 </div>
-<p class=tabcaption> Overzicht van de bekomen admitantie van de kortgesloten transmissielijn als funktie van de hoek op de Smith kaart. De laatste kolom geeft de nodige lengte van de coax</p><p class="alert alert-success">
+<p class=tabcaption> Overzicht van de bekomen admittantie van de kortgesloten transmissielijn als functie van de hoek op de Smith kaart. De laatste kolom geeft de nodige lengte van de coax</p><p class="alert alert-success">
 Het stukje kortgesloten coax dat we moeten voorzien ter vervanging van de condensator is dus: 16 cm
 </p><p>Het schema dat we nodig hebben om deze zesde oplossing te realiseren wordt dus:</p>
 <div class="cell docutils container">
@@ -737,7 +740,7 @@ Het stukje kortgesloten coax dat we moeten voorzien ter vervanging van de conden
 </div>
 </div>
 </div>
-<p class=tabcaption> Overzicht van de bekomen admitantie als funktie van de hoek op de Smith kaart. De laatste kolom geeft de nodige lengte van de coax</p><div class="cell docutils container">
+<p class=tabcaption> Overzicht van de bekomen admittantie als functie van de hoek op de Smith kaart. De laatste kolom geeft de nodige lengte van de coax</p><div class="cell docutils container">
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>hoek    admitantie (Siemens)     lengte coax (cm)
  305       Y= -10.41j mS     lengte=21.18 cm
@@ -750,7 +753,7 @@ Het stukje kortgesloten coax dat we moeten voorzien ter vervanging van de conden
 </div>
 </div>
 </div>
-<p class=tabcaption> Overzicht van de bekomen admitantie als funktie van de hoek op de Smith kaart. De laatste kolom geeft de nodige lengte van de coax</p><p class="alert alert-success">
+<p class=tabcaption> Overzicht van de bekomen admittantie als functie van de hoek op de Smith kaart. De laatste kolom geeft de nodige lengte van de coax</p><p class="alert alert-success">
 Het stukje open coax dat we moeten voorzien ter vervanging van het spoel is dus: 21.46 cm
 </p><p>Het schema dat we nodig hebben om deze zevende oplossing te realiseren wordt dus:</p>
 <div class="cell docutils container">
@@ -790,7 +793,7 @@ Het stukje open coax dat we moeten voorzien ter vervanging van het spoel is dus:
 </div>
 </div>
 </div>
-<p class=tabcaption> Overzicht van de bekomen admitantie als funktie van de hoek op de Smith kaart. De laatste kolom geeft de nodige lengte van de coax</p><div class="cell docutils container">
+<p class=tabcaption> Overzicht van de bekomen admittantie als functie van de hoek op de Smith kaart. De laatste kolom geeft de nodige lengte van de coax</p><div class="cell docutils container">
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>hoek    admitantie (Siemens)     lengte coax (cm)
  125       Y= -10.41j mS     lengte=8.68 cm
@@ -803,7 +806,7 @@ Het stukje open coax dat we moeten voorzien ter vervanging van het spoel is dus:
 </div>
 </div>
 </div>
-<p class=tabcaption> Overzicht van de bekomen admitantie als funktie van de hoek op de Smith kaart. De laatste kolom geeft de nodige lengte van de coax</p><p class="alert alert-success">
+<p class=tabcaption> Overzicht van de bekomen admittantie als functie van de hoek op de Smith kaart. De laatste kolom geeft de nodige lengte van de coax</p><p class="alert alert-success">
 Het stukje kortgesloten coax dat we moeten voorzien ter vervanging van het spoel is dus: 9 cm
 </p><p>Het schema dat we nodig hebben om deze achtste oplossing te realiseren wordt dus:</p>
 <div class="cell docutils container">

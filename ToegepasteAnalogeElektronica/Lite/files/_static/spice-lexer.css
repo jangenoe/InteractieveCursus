@@ -1,0 +1,163 @@
+/* SPICE Lexer CSS - Force Dark Theme for All Contexts */
+
+/* Main container styling for SPICE code - force dark theme */
+.highlight.spice {
+    background-color: #1a202c !important;
+    color: #e2e8f0 !important;
+    border: 1px solid #4a5568 !important;
+    border-radius: 6px;
+    padding: 12px;
+    font-family: 'SFMono-Regular', 'Monaco', 'Inconsolata', 'Roboto Mono', monospace;
+    margin: 8px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Alternative class structure for different contexts - force dark theme */
+.spice .highlight,
+.output_subarea .highlight.spice,
+.jp-OutputArea-output .highlight.spice {
+    background-color: #1a202c !important;
+    color: #e2e8f0 !important;
+    border: 1px solid #4a5568 !important;
+    border-radius: 6px;
+    padding: 12px;
+    font-family: 'SFMono-Regular', 'Monaco', 'Inconsolata', 'Roboto Mono', monospace;
+}
+
+/* Force transparent background on all child elements to prevent theme conflicts */
+.highlight.spice *,
+.spice .highlight *,
+.highlight.spice pre,
+.highlight.spice code {
+    background-color: transparent !important;
+    color: #e2e8f0 !important;
+}
+
+/* Extra aggressive overrides for light themes */
+html[data-theme="light"] .highlight.spice *,
+html[data-jp-theme-light="true"] .highlight.spice *,
+.jp-mod-light .highlight.spice *,
+.jp-RenderedHTMLCommon .highlight.spice *,
+.output_area .highlight.spice * {
+    color: #e2e8f0 !important;
+    background-color: transparent !important;
+}
+
+/* SPICE syntax highlighting - force dark theme colors */
+.highlight.spice .c,
+.spice .c { color: #68d391 !important; font-style: italic; } /* Comments - green */
+
+.highlight.spice .k,
+.spice .k { color: #63b3ed !important; font-weight: bold; } /* Keywords - blue */
+
+.highlight.spice .o,
+.spice .o { color: #f6e05e !important; } /* Operators - yellow */
+
+.highlight.spice .n,
+.spice .n { color: #e2e8f0 !important; } /* Names - light gray */
+
+.highlight.spice .nf,
+.spice .nf { color: #81e6d9 !important; } /* Functions - cyan */
+
+.highlight.spice .m,
+.spice .m { color: #d6bcfa !important; } /* Numbers - purple */
+
+.highlight.spice .s,
+.spice .s { color: #9ae6b4 !important; } /* Strings - green */
+
+.highlight.spice .nb,
+.spice .nb { color: #63b3ed !important; } /* Name.Builtin */
+
+.highlight.spice .nc,
+.spice .nc { color: #81e6d9 !important; font-weight: bold; } /* Name.Class */
+
+.highlight.spice .nn,
+.spice .nn { color: #81e6d9 !important; } /* Name.Namespace */
+
+.highlight.spice .nt,
+.spice .nt { color: #63b3ed !important; font-weight: bold; } /* Name.Tag */
+
+.highlight.spice .nv,
+.spice .nv { color: #e2e8f0 !important; } /* Name.Variable */
+
+.highlight.spice .mi,
+.spice .mi { color: #d6bcfa !important; } /* Number.Integer */
+
+.highlight.spice .mf,
+.spice .mf { color: #d6bcfa !important; } /* Number.Float */
+
+.highlight.spice .mh,
+.spice .mh { color: #d6bcfa !important; } /* Number.Hex */
+
+.highlight.spice .mo,
+.spice .mo { color: #d6bcfa !important; } /* Number.Oct */
+
+.highlight.spice .sb,
+.spice .sb { color: #9ae6b4 !important; } /* String.Backtick */
+
+.highlight.spice .sc,
+.spice .sc { color: #9ae6b4 !important; } /* String.Char */
+
+.highlight.spice .sd,
+.spice .sd { color: #9ae6b4 !important; font-style: italic; } /* String.Doc */
+
+.highlight.spice .s2,
+.spice .s2 { color: #9ae6b4 !important; } /* String.Double */
+
+.highlight.spice .se,
+.spice .se { color: #d6bcfa !important; font-weight: bold; } /* String.Escape */
+
+.highlight.spice .sh,
+.spice .sh { color: #9ae6b4 !important; } /* String.Heredoc */
+
+.highlight.spice .si,
+.spice .si { color: #9ae6b4 !important; } /* String.Interpol */
+
+.highlight.spice .sr,
+.spice .sr { color: #9ae6b4 !important; } /* String.Regex */
+
+.highlight.spice .s1,
+.spice .s1 { color: #9ae6b4 !important; } /* String.Single */
+
+.highlight.spice .err,
+.spice .err { color: #f56565 !important; } /* Errors - red */
+
+.highlight.spice .x,
+.spice .x { color: #e2e8f0 !important; } /* Other */
+
+/* Override JupyterLab theme variations */
+html[data-theme="light"] .highlight.spice,
+html[data-theme="dark"] .highlight.spice,
+html[data-jp-theme-light="true"] .highlight.spice,
+html[data-jp-theme-dark="true"] .highlight.spice,
+.jp-mod-light .highlight.spice,
+.jp-mod-dark .highlight.spice,
+.jp-RenderedHTMLCommon .highlight.spice,
+.output_area .highlight.spice {
+    background-color: #1a202c !important;
+    border-color: #4a5568 !important;
+    color: #e2e8f0 !important;
+}
+
+/* Aggressive light theme text color overrides */
+html[data-theme="light"] .highlight.spice,
+html[data-jp-theme-light="true"] .highlight.spice,
+.jp-mod-light .highlight.spice {
+    color: #e2e8f0 !important;
+}
+
+/* Code block styling adjustments - force dark styling */
+.highlight.spice pre {
+    margin: 0;
+    padding: 0;
+    background: transparent !important;
+    border: none;
+    color: #e2e8f0 !important;
+}
+
+.highlight.spice code {
+    background: transparent !important;
+    padding: 0;
+    color: #e2e8f0 !important;
+    font-family: inherit;
+}

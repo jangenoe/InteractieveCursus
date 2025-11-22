@@ -43,8 +43,11 @@
     <link rel="stylesheet" type="text/css" href="_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="_static/exercise.css" />
-    <link rel="stylesheet" type="text/css" href="_static/spice_file.css" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="_static/code-caption-style.css?v=0ad27fa8" />
+    <link rel="stylesheet" type="text/css" href="_static/custom-pygments.css?v=d7fe8a85" />
+    <link rel="stylesheet" type="text/css" href="_static/spice-lexer.css?v=422ceae6" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
@@ -192,7 +195,7 @@
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Versterkers</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="Klasse-C.html">Klasse C  Versterkers</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Klasse-F.html">Klasse F Verstekers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Klasse-F.html">Klasse F Versterkers</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Klasse-D.html">Klasse D resonante Versterkers</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Klasse-E.html">Klasse E  Versterkers</a></li>
 </ul>
@@ -413,8 +416,8 @@ Hieronder vind je een lijstje van de passieve componenten met telkens de eerste 
 </li>
 <li><p>Schakelaars</p>
 <ul>
-<li><p>gecontrolleerd door spanning (S)</p></li>
-<li><p>gecontrolleerd door stroom (W)</p></li>
+<li><p>gecontroleerd door spanning (S)</p></li>
+<li><p>gecontroleerd door stroom (W)</p></li>
 </ul>
 </li>
 </ul>
@@ -430,21 +433,21 @@ Hieronder vind je een lijstje van de passieve componenten met telkens de eerste 
 <ul class="simple">
 <li><p>Onafhankelijke spanningsbron (V)</p></li>
 <li><p>Onafhankelijke stroombron (I)</p></li>
-<li><p>Spanningsgecontrolleerde spanningsbron (E)</p></li>
-<li><p>Spanningsgecontrolleerde stroombron (G)</p></li>
-<li><p>Stroomgecontrolleerde spanningsbron (H)</p></li>
-<li><p>Stroomgecontrolleerde stroombron (F)</p></li>
+<li><p>Spanningsgecontroleerde spanningsbron (E)</p></li>
+<li><p>Spanningsgecontroleerde stroombron (G)</p></li>
+<li><p>Stroomgecontroleerde spanningsbron (H)</p></li>
+<li><p>Stroomgecontroleerde stroombron (F)</p></li>
 </ul>
 <p>Voor elk van deze bovenstaande passieve en actieve elementen kan er een modelkaart (<code class="docutils literal notranslate"><span class="pre">.model</span></code>) opgemaakt worden waarin alle parameter variaties uitgewerkt worden. Een modelkaart behoort to de directives en begint daarom met een <code class="docutils literal notranslate"><span class="pre">.</span></code>. Ook voor elk van de verschillende analyses is er een kaart ter beschikking. Hieronder een overzichtje van de verschillende analyses.</p>
 <ul class="simple">
 <li><p>Operating point analyse (.op)</p></li>
-<li><p>Niet-lineare DC analyse  (.dc)</p></li>
-<li><p>Niet-lineare transient analyse (.tran)</p></li>
-<li><p>Lineare klein signaal AC Analyse (.ac)</p></li>
+<li><p>Niet-lineaire DC analyse  (.dc)</p></li>
+<li><p>Niet-lineaire transient analyse (.tran)</p></li>
+<li><p>Lineaire klein signaal AC Analyse (.ac)</p></li>
 <li><p>Pool en zero analyse (.pz)</p></li>
 <li><p>Noise analyse (.noise)</p></li>
 <li><p>Sensitiviteit analyse (.sens)</p></li>
-<li><p>Klein signaal distortie analysis (.disto)</p></li>
+<li><p>Klein signaal distorsie analysis (.disto)</p></li>
 <li><p>Monte-Carlo analyse</p></li>
 </ul>
 <p>De eenheden die in spice gebruikt worden komen overeen met de standaard eenheden en er worden ook de standard prefactors gebruikt zodat er geen nood is aan de wetenschappelijke notatie. Spice maakt wel geen onderscheid tussen hoofd en kleine letters, wat een probleem kan geven om het verschil aan te geven tussen milli en mega. Daarom is er gekozen voor de <code class="docutils literal notranslate"><span class="pre">x</span></code> of de <code class="docutils literal notranslate"><span class="pre">meg</span></code>.</p>
@@ -512,7 +515,7 @@ Hieronder vind je een lijstje van de passieve componenten met telkens de eerste 
 </div>
 </div>
 <p>Vervolgens vinden we in de SPICE listing de capaciteiten (C) van alle knopen ten opzichte van de grondknoop (0) terug.
-De waarde van deze condensatoren is bekomen nadat de volledige lay-out van het chipontwerp is getekend. Daarna is er door een extractfunctie de overlap van de metalisatie van elk van deze knopen met het grondvlak bepaald, en op basis hiervan is de condensatorwaarde bepaald.
+De waarde van deze condensatoren is bekomen nadat de volledige lay-out van het chipontwerp is getekend. Daarna is er door een extractfunctie de overlap van de metallisatie van elk van deze knopen met het grondvlak bepaald, en op basis hiervan is de condensatorwaarde bepaald.
 We vinden ook een parasitaire condensator terug ten opzichte van de voeding, i.e. C25 die staat tussen knoop 5 en de voeding.
 Eigenlijk zijn deze condensatorwaardes voor een eerste simulatie van de versterking niet belangrijk. Deze waardes worden enkel belangrijk als je een exacte waarde wil uitrekenen tijdens een simulatie bij hogere frequenties.</p>
 <div class="exercise dropdown admonition" id="Spice-simulatie-exercise-0">

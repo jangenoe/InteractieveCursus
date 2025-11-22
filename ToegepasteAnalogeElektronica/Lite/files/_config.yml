@@ -47,7 +47,7 @@ sphinx:
   extra_extensions:
     - sphinx_exercise
     - sphinxext.opengraph
-    - sphinx_spice
+    # - sphinx_spice
   config:
     html_extra_path: ['./extra_path']
     # html_theme: sphinx_book_theme
@@ -70,13 +70,11 @@ sphinx:
     # Enable separate numbering for different content types
     numfig : true
     # Custom figure classes will use different counters
-    html_theme_options:
-      extra_navbar: ""
     # templates_path : ["_templates"]
     # html_sidebars : {"**": ["navbar-logo.html","search-field.html","sbt-sidebar-nav.html","kuleuven.html"]}                     #.html mag weg
     # navbar_end: ["deck-lite-button.html"]
     html_static_path : ['_static']
-    #html_css_files : ['custom.css', 'code-caption-style.css', 'custom-pygments.css', 'spice-lexer.css']   
+    html_css_files : ['custom.css', 'code-caption-style.css', 'custom-pygments.css', 'spice-lexer.css']   
     latex_logo: images/logo.png
     latex_elements:
       extraclassoptions: 'openany,oneside'

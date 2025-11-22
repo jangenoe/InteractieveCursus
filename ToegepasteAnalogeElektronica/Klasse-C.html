@@ -43,8 +43,11 @@
     <link rel="stylesheet" type="text/css" href="_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="_static/exercise.css" />
-    <link rel="stylesheet" type="text/css" href="_static/spice_file.css" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="_static/code-caption-style.css?v=0ad27fa8" />
+    <link rel="stylesheet" type="text/css" href="_static/custom-pygments.css?v=d7fe8a85" />
+    <link rel="stylesheet" type="text/css" href="_static/spice-lexer.css?v=422ceae6" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
@@ -74,7 +77,7 @@
     <link rel="icon" href="_static/favicon.ico"/>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Zoeken" href="search.html" />
-    <link rel="next" title="Klasse F Verstekers" href="Klasse-F.html" />
+    <link rel="next" title="Klasse F Versterkers" href="Klasse-F.html" />
     <link rel="prev" title="Spice simulatie" href="Spice-simulatie.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="nl"/>
@@ -192,7 +195,7 @@
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Versterkers</span></p>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Klasse C  Versterkers</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Klasse-F.html">Klasse F Verstekers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Klasse-F.html">Klasse F Versterkers</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Klasse-D.html">Klasse D resonante Versterkers</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Klasse-E.html">Klasse E  Versterkers</a></li>
 </ul>
@@ -446,7 +449,7 @@ In <a class="reference internal" href="#vermogenversterkers"><span class="std st
 </table>
 </div>
 <p>De toepassingen liggen in de eerste plaats in het domain van de telecomunicatie waar de Klasse C versterker gebruikt wordt om signalen door te sturen, gemoduleerd op de draaggolf van de zender. Deze draaggolf heeft typisch een vaste frequentie.
-Daarnaast zijn er nog industriele toepassingen mogelijk, zoals bijvoorbeeld het inductief verwarmen (zoals in smeltovens) of het dielectrisch verwarmen (voor het drogen, bakken en polymeriseren).</p>
+Daarnaast zijn er nog industriële toepassingen mogelijk, zoals bijvoorbeeld het inductief verwarmen (zoals in smeltovens) of het dielectrisch verwarmen (voor het drogen, bakken en polymeriseren).</p>
 <section id="basisprincipe-van-de-werking">
 <h2>basisprincipe van de werking<a class="headerlink" href="#basisprincipe-van-de-werking" title="Link to this heading">#</a></h2>
 <p>Het basisprincipe is steeds als het volgt:
@@ -486,7 +489,7 @@ De vermogentransistor levert het vermogen dat verloren/uitgestraald wordt door d
 </ul>
 </li>
 </ul>
-<p>Om de werking van dit schema te berekenen schrijven we de <a class="reference external" href="https://nl.wikipedia.org/wiki/Elektriciteitswetten_van_Kirchhoff">eerste wet van Kirkhoff</a> op in de gemeenschappelijke knoop en de stroom-spanningsvergelijkingen op voor elk element. Deze vergelijkingen zijn:</p>
+<p>Om de werking van dit schema te berekenen schrijven we de <a class="reference external" href="https://nl.wikipedia.org/wiki/Elektriciteitswetten_van_Kirchhoff">eerste wet van Kirchhoff</a> op in de gemeenschappelijke knoop en de stroom-spanningsvergelijkingen op voor elk element. Deze vergelijkingen zijn:</p>
 <div class="math notranslate nohighlight">
 \[ I_C+ I_R + I_L =0 \]</div>
 <div class="math notranslate nohighlight">
@@ -505,7 +508,7 @@ De vermogentransistor levert het vermogen dat verloren/uitgestraald wordt door d
 \[ I_R R_L = V  \]</div>
 <div class="math notranslate nohighlight">
 \[ L \frac{d I_L}{dt} = V \]</div>
-<p>Aangezien de stroom-spanningsvergelijking van het spoel de afgeleide van de stroom bevat, kunnen we de  <a class="reference external" href="https://nl.wikipedia.org/wiki/Elektriciteitswetten_van_Kirchhoff">eerste wet van Kirkhoff</a> niet onmiddellijk gebruiken, maar we kunnen wel de afgeleide van deze wet gebruiken. De vergelijkingen worden dan:</p>
+<p>Aangezien de stroom-spanningsvergelijking van het spoel de afgeleide van de stroom bevat, kunnen we de  <a class="reference external" href="https://nl.wikipedia.org/wiki/Elektriciteitswetten_van_Kirchhoff">eerste wet van Kirchhoff</a> niet onmiddellijk gebruiken, maar we kunnen wel de afgeleide van deze wet gebruiken. De vergelijkingen worden dan:</p>
 <p>Afgeleide van de stromen:</p>
 <div class="math notranslate nohighlight">
 \[ \frac{d I_C}{dt}+ \frac{d I_R}{dt} + \frac{d I_L}{dt} =0 \]</div>
@@ -766,7 +769,7 @@ voornamelijk bijdragen tot het bepalen van de oscillatiefrequentie, namelijk:</p
 <p>opmerking:</p>
 <ul class="simple">
 <li><p>De grafiek in deze jupyter notebook geeft de maximale oscillatiespanning <span class="math notranslate nohighlight">\(V_{max}\)</span> weer die bekomen wordt in de resonante kring in functie van de geleidingshoek (<span class="math notranslate nohighlight">\(\alpha\)</span>) ten opzichte van het product van de piekstroom <span class="math notranslate nohighlight">\(I_p\)</span> en de weerstand <span class="math notranslate nohighlight">\(R_L\)</span>.  Dus de plot geeft dus de waarde van <span class="math notranslate nohighlight">\(u= \frac{V_{max}}{I_p R_L}\)</span></p></li>
-<li><p>De grafiek in de powerpoint slides van de les geeft het maximale vermogen <span class="math notranslate nohighlight">\(P_{max}\)</span> dat bekomen wordt in functie van de geleidingshoek ten opzichte van het product van de piekstroom Ip en de voedingspanning.  <span class="math notranslate nohighlight">\(P_{max} =\frac{V_{max} I_{max}}{2}\)</span>. Dus de plot is  <span class="math notranslate nohighlight">\(w=\frac{P_{max}}{V_{DD} I_p} = \frac{\frac{V_{max}*I_{max}}{2}}{V_{DD} I_p} = \frac{V_{max} \frac{Vmax}{2 R_L}}{Vdd I_p}\)</span>.   Bovendien weten we dat <span class="math notranslate nohighlight">\(V_{max}&lt; V_{DD}\)</span> en in het beste geval (= verzadiging) <span class="math notranslate nohighlight">\(V_{max}\)</span> gelijk wordt aan <span class="math notranslate nohighlight">\(V_{DD}\)</span>.  Dus bij verzadiging geldt   <span class="math notranslate nohighlight">\(w=\frac{Vmax}{2 R_L I_p}\)</span></p></li>
+<li><p>De grafiek in de powerpoint slides van de les geeft het maximale vermogen <span class="math notranslate nohighlight">\(P_{max}\)</span> dat bekomen wordt in functie van de geleidingshoek ten opzichte van het product van de piekstroom Ip en de voedingsspanning.  <span class="math notranslate nohighlight">\(P_{max} =\frac{V_{max} I_{max}}{2}\)</span>. Dus de plot is  <span class="math notranslate nohighlight">\(w=\frac{P_{max}}{V_{DD} I_p} = \frac{\frac{V_{max}*I_{max}}{2}}{V_{DD} I_p} = \frac{V_{max} \frac{Vmax}{2 R_L}}{Vdd I_p}\)</span>.   Bovendien weten we dat <span class="math notranslate nohighlight">\(V_{max}&lt; V_{DD}\)</span> en in het beste geval (= verzadiging) <span class="math notranslate nohighlight">\(V_{max}\)</span> gelijk wordt aan <span class="math notranslate nohighlight">\(V_{DD}\)</span>.  Dus bij verzadiging geldt   <span class="math notranslate nohighlight">\(w=\frac{Vmax}{2 R_L I_p}\)</span></p></li>
 </ul>
 <p>In de meeste gevallen willen we <span class="math notranslate nohighlight">\(V_{DD}\)</span> als oscillatie amplitude. Daarom zullen we <span class="math notranslate nohighlight">\(I_p\)</span> kiezen als:</p>
 <div class="math notranslate nohighlight">
@@ -922,7 +925,7 @@ Op het eerste zicht lijkt het <code class="docutils literal notranslate"><span c
 <section id="gebruik-makende-van-een-transformator">
 <h3>Gebruik makende van een transformator<a class="headerlink" href="#gebruik-makende-van-een-transformator" title="Link to this heading">#</a></h3>
 <p>Een van de belangrijke issues met betrekking van het basisschema van de klasse C versterkers is dat de reference van het outputsignaal is de voedingsspanning in plaats van de grond.
-Een van de opties om de reference van de voeding naar de grond te brengen, is het vervangen van de het spoel door een transformator, want hierdoor kunnen we de referenctiespanning verleggen naar de grond. De figuur hieronder geeft aan hoe dit kan gerealiseerd worden.</p>
+Een van de opties om de reference van de voeding naar de grond te brengen, is het vervangen van de het spoel door een transformator, want hierdoor kunnen we de referentiespanning verleggen naar de grond. De figuur hieronder geeft aan hoe dit kan gerealiseerd worden.</p>
 <div class="cell docutils container">
 <div class="cell_output docutils container">
 <figure class="align-default" id="cfig18">
@@ -936,7 +939,7 @@ Een van de opties om de reference van de voeding naar de grond te brengen, is he
 </section>
 <section id="gebruik-makende-van-een-lc-kring-aan-de-ingang">
 <h3>Gebruik makende van een LC kring aan de ingang<a class="headerlink" href="#gebruik-makende-van-een-lc-kring-aan-de-ingang" title="Link to this heading">#</a></h3>
-<p>Dit heeft als voordeel dat er geen resitieve verliezen zijn de de <span class="math notranslate nohighlight">\(R_{in}\)</span> weerstand aan de ingang.</p>
+<p>Dit heeft als voordeel dat er geen resistieve verliezen zijn de de <span class="math notranslate nohighlight">\(R_{in}\)</span> weerstand aan de ingang.</p>
 <div class="cell docutils container">
 <div class="cell_output docutils container">
 <figure class="align-default" id="cfig19">
@@ -950,7 +953,7 @@ Een van de opties om de reference van de voeding naar de grond te brengen, is he
 </section>
 <section id="uitgangsspanning-oscillatie-rond-de-grond">
 <h3>Uitgangsspanning oscillatie rond de grond<a class="headerlink" href="#uitgangsspanning-oscillatie-rond-de-grond" title="Link to this heading">#</a></h3>
-<p>Voor een aantal toepassingen is het niet goed dat de AC uitgangspanning een DC offset heeft. We kunnen dit oplossen door het gebuik van de transformator (zie boven) maar ook aan de hand van een extra spoel <span class="math notranslate nohighlight">\(L_2\)</span> en condensator <span class="math notranslate nohighlight">\(C_2\)</span>. Het is belangrijk dat de resonantiefrequentie die bepaald wordt door <span class="math notranslate nohighlight">\(L_2\)</span> en <span class="math notranslate nohighlight">\(C_2\)</span> <em>minstens</em> een factor 10 lager is dan de resonantiefrequentie van de versterker.</p>
+<p>Voor een aantal toepassingen is het niet goed dat de AC uitgangspanning een DC offset heeft. We kunnen dit oplossen door het gebruik van de transformator (zie boven) maar ook aan de hand van een extra spoel <span class="math notranslate nohighlight">\(L_2\)</span> en condensator <span class="math notranslate nohighlight">\(C_2\)</span>. Het is belangrijk dat de resonantiefrequentie die bepaald wordt door <span class="math notranslate nohighlight">\(L_2\)</span> en <span class="math notranslate nohighlight">\(C_2\)</span> <em>minstens</em> een factor 10 lager is dan de resonantiefrequentie van de versterker.</p>
 <div class="cell docutils container">
 <div class="cell_output docutils container">
 <figure class="align-default" id="cfig20">
@@ -992,7 +995,7 @@ Een van de opties om de reference van de voeding naar de grond te brengen, is he
 <section id="meerdere-versterkingstrappen">
 <h2>Meerdere versterkingstrappen<a class="headerlink" href="#meerdere-versterkingstrappen" title="Link to this heading">#</a></h2>
 <p>In praktijk is het vaak zo dat een klasse C versterker gebruikt wordt om een klein ingangssignaal om te zetten naar een uitgangssignaal dat veel vermogen aan de belasting kan leveren. Vaak is echter een versterkertrap niet voldoende om van het klein ingangssignaal naar het groot uitgangssignaal te gaan, zowel in spanning als in stroom. Om dit te bekomen maken we meestal gebruik van meerdere versterkertrappen.</p>
-<p>Hieronder bouwen we stap voor stap op van het hierboven besproken schema naar een schema met 3 achtereenvolgende klasse C versterkerstrappen. Dit schema met 3 versterkerstrappen sluit aan bij een schema dat gebruikt wordt voor mobiele communicatie. Als voorbeeld nemen we <span id="id2">[<a class="reference internal" href="References.html#id2" title="B. Schmukler and J. Jorgenson. Design of a 3-Volt HBT power amplifier for DCS. Applied Microwave and wireless, pages 116–125, June 2000.">2</a>]</span>.</p>
+<p>Hieronder bouwen we stap voor stap op van het hierboven besproken schema naar een schema met 3 achtereenvolgende klasse C versterkertrappen. Dit schema met 3 versterkertrappen sluit aan bij een schema dat gebruikt wordt voor mobiele communicatie. Als voorbeeld nemen we <span id="id2">[<a class="reference internal" href="References.html#id2" title="B. Schmukler and J. Jorgenson. Design of a 3-Volt HBT power amplifier for DCS. Applied Microwave and wireless, pages 116–125, June 2000.">2</a>]</span>.</p>
 <section id="versterker-met-2-klasse-c-trappen-stap-1">
 <h3>Versterker met 2 Klasse C trappen: stap 1<a class="headerlink" href="#versterker-met-2-klasse-c-trappen-stap-1" title="Link to this heading">#</a></h3>
 <p>We vertrekken van het schema van de klasse C versterker zoals gegeven in <a class="reference internal" href="#cfig1"><span class="std std-numref">Figuur 6</span></a>. We laten in dit schema de belasting <span class="math notranslate nohighlight">\(R_L\)</span> voorlopig eventjes weg. De vergelijking die we hierboven gebruikt hebben om de stroom naar <span class="math notranslate nohighlight">\(C_1\)</span> uit te rekenen is <span class="math notranslate nohighlight">\(I_C= C \frac{d V}{dt}\)</span>. We merken op dat deze stroom <span class="math notranslate nohighlight">\(I_C\)</span> niet verandert als we een extra DC spanning over <span class="math notranslate nohighlight">\(C_1\)</span> zetten. We kunnen het schema in <a class="reference internal" href="#cfig1"><span class="std std-numref">Figuur 6</span></a> dus aanpassen met een extra spanning over de condensator <span class="math notranslate nohighlight">\(C_1\)</span>. Dit levert ons het schema op in <a class="reference internal" href="#cfig22"><span class="std std-numref">Figuur 31</span></a>.</p>
@@ -1006,7 +1009,7 @@ Een van de opties om de reference van de voeding naar de grond te brengen, is he
 </figure>
 </div>
 </div>
-<p>De werking van dit schema blijft intact gelijk. Als we kijken naar de spanning over <span class="math notranslate nohighlight">\(C_1\)</span> merken we wel op dat er naast een AC spanning ook een DC component van de spanning is. Daardoor neemt de piekspanning toe en zal <span class="math notranslate nohighlight">\(C_1\)</span> sneller doorslagen. We moeten bij de selectie van <span class="math notranslate nohighlight">\(C_1\)</span> dus de keuze maken voor een condensator die een iets hogere spanning aankan. Normaal zal dat betekenen een iets dikker dielectricum en dus een iets hogere prijs.</p>
+<p>De werking van dit schema blijft intact gelijk. Als we kijken naar de spanning over <span class="math notranslate nohighlight">\(C_1\)</span> merken we wel op dat er naast een AC spanning ook een DC component van de spanning is. Daardoor neemt de piekspanning toe en zal <span class="math notranslate nohighlight">\(C_1\)</span> sneller doorslagen. We moeten bij de selectie van <span class="math notranslate nohighlight">\(C_1\)</span> dus de keuze maken voor een condensator die een iets hogere spanning aankan. Normaal zal dat betekenen een iets dikker diëlectricum en dus een iets hogere prijs.</p>
 </section>
 <section id="versterker-met-2-klasse-c-trappen-stap-2">
 <h3>Versterker met 2 Klasse C trappen: stap 2<a class="headerlink" href="#versterker-met-2-klasse-c-trappen-stap-2" title="Link to this heading">#</a></h3>
@@ -2343,7 +2346,7 @@ window.setTopics = function(idOrElem, topics) {
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">volgende</p>
-        <p class="prev-next-title">Klasse F Verstekers</p>
+        <p class="prev-next-title">Klasse F Versterkers</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
