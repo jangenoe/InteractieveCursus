@@ -467,11 +467,15 @@ for ipath in notebooks:
                         notes_slide.notes_text_frame.text = md_text
 
                 # Process slide content for slide and fragment types
+                horizontal_shift=Inches(0)
                 if slide is not None and cell.metadata.slideshow.get("slide_type", ())=="fragment": 
                     if "KULeuvenSlides" in cell.get('metadata', {}):
                         if "eq_vertical" in cell.metadata.get('KULeuvenSlides', {}):
                             if cell.metadata.KULeuvenSlides["eq_vertical"]:
                                 running_height+=Inches(cell.metadata.KULeuvenSlides["eq_vertical"])
+                        if "eq_horizontal" in cell.metadata.get('KULeuvenSlides', {}):
+                            if cell.metadata.KULeuvenSlides["eq_horizontal"]:
+                                horizontal_shift=Inches(cell.metadata.KULeuvenSlides["eq_horizontal"])
                                 
                     latexpng=find_between(md_text  , "$$", "$$" )
                     latexpng2=find_between( md_text , r"\begin{equation}", r"\end{equation}" )
@@ -490,9 +494,9 @@ for ipath in notebooks:
                                 factorsc=(body_height*prs.slide_width)//pictp.width
                                 pictp.width=prs.slide_width
                                 pictp.height= factorsc
-                                pictp.left=Inches(0)
+                                pictp.left=horizontal_shift
                             else:
-                                pictp.left=(prs.slide_width-pictp.width)//2
+                                pictp.left=horizontal_shift+(prs.slide_width-pictp.width)//2
                             running_height+=pictp.height+Inches(0.3)
                     else:
                         body_shape = clone_shape(slide.shapes[0],  top=running_height, idcounter=idcounter)
