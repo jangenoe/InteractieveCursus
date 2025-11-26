@@ -569,9 +569,6 @@ document.write(`
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#vergelijking-van-de-3de-en-5de-orde-butterworth-laagdoorlaatfilter">Vergelijking van de 3de en 5de orde Butterworth laagdoorlaatfilter</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#zevende-orde-banddoorlaatfilter-van-10mhz-tot-50mhz">Zevende orde banddoorlaatfilter van 10MHz  tot 50MHz</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#de-orde-banddoorlaatfilter-tussen-47-en-53-mhz">7de orde banddoorlaatfilter tussen 47 en 53 MHz</a></li>
-</ul>
-</li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#chebyshev-filters">Chebyshev filters</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#chebyshev-40-mhz-laagdoorlaatfilter-van-de-3de-orde-met-6db-maximale-ripple">Chebyshev 40 MHz laagdoorlaatfilter van de 3de orde met 6dB maximale ripple</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#chebyshev-120-mhz-laagdoorlaatfilter-van-de-8de-orde-met-2db-maximale-ripple">Chebyshev 120 MHz laagdoorlaatfilter van de 8de orde met 2dB maximale ripple</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#chebyshev-30-mhz-laagdoorlaatfilter-van-de-2de-orde-met-6db-maximale-ripple">Chebyshev 30 MHz laagdoorlaatfilter van de 2de orde met 6dB maximale ripple</a></li>
@@ -614,30 +611,30 @@ document.write(`
 </div>
 </div>
 <p>Het circuit in <a class="reference internal" href="#generic"><span class="std std-numref">Figuur 91</span></a> kunnen we oplossen door de MNA methode. <span class="math notranslate nohighlight">\(V_{in}(s)\)</span> is een spanningsbron en staat dus in het tweede lid van de MNA matrix, terwijl <span class="math notranslate nohighlight">\(V_{in}(s)\)</span> een spanning is op een knoop, en dus in het eerste lid zal staan. De matrix die we daardoor bekomen is:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-71a2cbf8-c00c-4327-9f67-a742399d222e">
-<span class="eqno">(14)<a class="headerlink" href="#equation-71a2cbf8-c00c-4327-9f67-a742399d222e" title="Permalink to this equation">#</a></span>\[\begin{equation}\label{eq:bron}
+<div class="math notranslate nohighlight">
+\[\begin{split}
 \begin{bmatrix}
   \vdots &amp; &amp; &amp;  &amp; &amp; \vdots &amp; &amp; &amp; \vdots \\
   \dots &amp; &amp; &amp;  &amp; &amp; \dots &amp;   &amp; &amp; \dots \\
   \vdots &amp; &amp; &amp;  &amp; &amp; \vdots &amp; &amp; &amp; \vdots \\
-  \dots &amp;   &amp;  &amp; &amp; &amp; \dots &amp; \dots &amp;   &amp; \dots\\
+  \dots &amp;   &amp;  &amp; &amp; &amp; \dots &amp; \dots &amp;   &amp; \dots \\
   \vdots &amp; &amp; &amp;  &amp; &amp; \vdots &amp; &amp; &amp; \vdots
 \end{bmatrix} 
 \begin{bmatrix}  
-  \vdots\\ 
-  V_{out}(s)\\
+  \vdots \\
+  V_{out}(s) \\
   \vdots\\
   \\
   \vdots
 \end{bmatrix} =
 \begin{bmatrix} 
-  \vdots\\
+  \vdots \\
   \\
   \vdots \\
   V_{in}(s)\\
   \vdots 
 \end{bmatrix}
-\end{equation}\]</div>
+\end{split}\]</div>
 <p>Elk van de elementen is van de vorm: <span class="math notranslate nohighlight">\(  c_1 j \omega + c_2 + c_3 \frac{1}{j \omega}\)</span>.</p>
 <p>Op basis van de methode van de determinanten kunnen we deze matrix oplossen. Als we deze determinant helemaal uitschrijven krijgen we de volgende oplossing:</p>
 <div class="math notranslate nohighlight">
@@ -811,18 +808,18 @@ T_1(j \omega) \times T_2(j \omega) \times T_3(j \omega) \times \dots \times T_n(
 \[   V_{*} =-\frac{C_2 R_2 j \omega }{R_{11} R_2 C_2 C_1(j \omega)^2  + \frac{R_{11}R_2 C_2}{R_{12}}(j \omega) +\frac{R_{11}}{R_{13}}} V_{in} \]</div>
 <p>Dit kunnen we vervolgens herschrijven als</p>
 <div class="math notranslate nohighlight" id="equation-biquadout11">
-<span class="eqno">(15)<a class="headerlink" href="#equation-biquadout11" title="Link to this equation">#</a></span>\[ V_{out*} =-\frac{1}{a_2 (j \omega)^2  + a_1 (j \omega) +a_0} V_{in} \]</div>
+<span class="eqno">(14)<a class="headerlink" href="#equation-biquadout11" title="Link to this equation">#</a></span>\[ V_{out*} =-\frac{1}{a_2 (j \omega)^2  + a_1 (j \omega) +a_0} V_{in} \]</div>
 <p>en</p>
 <div class="math notranslate nohighlight">
 \[ V_{*} =-\frac{C_2 R_2(j \omega)}{a_2 (j \omega)^2  + a_1(j \omega) +a_0} V_{in} \]</div>
 <p>met</p>
 <div class="math notranslate nohighlight" id="equation-biquada2">
-<span class="eqno">(16)<a class="headerlink" href="#equation-biquada2" title="Link to this equation">#</a></span>\[  a_2= R_{11} C_1 R_2 C_2 \]</div>
+<span class="eqno">(15)<a class="headerlink" href="#equation-biquada2" title="Link to this equation">#</a></span>\[  a_2= R_{11} C_1 R_2 C_2 \]</div>
 <div class="math notranslate nohighlight" id="equation-biquada1">
-<span class="eqno">(17)<a class="headerlink" href="#equation-biquada1" title="Link to this equation">#</a></span>\[  a_1=  \frac{R_{11} }{R_{12}} R_2 C_2\]</div>
+<span class="eqno">(16)<a class="headerlink" href="#equation-biquada1" title="Link to this equation">#</a></span>\[  a_1=  \frac{R_{11} }{R_{12}} R_2 C_2\]</div>
 <div class="math notranslate nohighlight" id="equation-biquada0">
-<span class="eqno">(18)<a class="headerlink" href="#equation-biquada0" title="Link to this equation">#</a></span>\[  a_0= \frac{R_{11}}{R_{13}}\]</div>
-<p>We zien dus inderdaad uit vergelijkingen (<a class="reference internal" href="#equation-biquadout11">(15)</a>,<a class="reference internal" href="#equation-biquada2">(16)</a>,<a class="reference internal" href="#equation-biquada1">(17)</a>,<a class="reference internal" href="#equation-biquada0">(18)</a>) dat we dit kunnen uitwerken als de gevraagde universele oplossing op voorwaarde dat de coëfficiënten <span class="math notranslate nohighlight">\(a_2,a_1\)</span> en <span class="math notranslate nohighlight">\(a_0\)</span> allemaal positieve coëfficiënten zijn.</p>
+<span class="eqno">(17)<a class="headerlink" href="#equation-biquada0" title="Link to this equation">#</a></span>\[  a_0= \frac{R_{11}}{R_{13}}\]</div>
+<p>We zien dus inderdaad uit vergelijkingen (<a class="reference internal" href="#equation-biquadout11">(14)</a>,<a class="reference internal" href="#equation-biquada2">(15)</a>,<a class="reference internal" href="#equation-biquada1">(16)</a>,<a class="reference internal" href="#equation-biquada0">(17)</a>) dat we dit kunnen uitwerken als de gevraagde universele oplossing op voorwaarde dat de coëfficiënten <span class="math notranslate nohighlight">\(a_2,a_1\)</span> en <span class="math notranslate nohighlight">\(a_0\)</span> allemaal positieve coëfficiënten zijn.</p>
 </section>
 <section id="het-volledige-biquad-circuit">
 <h5>Het volledige BiQuad circuit<a class="headerlink" href="#het-volledige-biquad-circuit" title="Link to this heading">#</a></h5>
@@ -1524,11 +1521,28 @@ p[ 14 ] = (-4439819.935339821-332480313.6424786j)
 </figure>
 </div>
 </div>
+<p>De transferfunctie is:</p>
+<ul class="simple">
+<li><p>n rimpels in de doorlaatband</p></li>
+</ul>
+<p>met:</p>
+<p>met S voor een laagdoorlaatfilter:</p>
+<p>De amplitude voor <span class="math notranslate nohighlight">\(\omega=\omega o\)</span> is:</p>
+<ul class="simple">
+<li><p>dit is ook de amplitude van de rimpel</p></li>
+</ul>
+<p>Boven deze frequentie daalt deze functie als:</p>
+<div class="math notranslate nohighlight">
+\[ G^2_n(\omega)=\frac{1}{1+\epsilon^2 T_n^2(S)}\]</div>
+<div class="math notranslate nohighlight">
+\[ T_n(x)=\cos(n \arccos(x) )\]</div>
+<div class="math notranslate nohighlight">
+\[ S=\frac{j \omega}{\omega_o}\]</div>
+<div class="math notranslate nohighlight">
+\[ |G_n(\omega=\omega_o)|=\frac{1}{\sqrt{1+\epsilon^2}}\]</div>
+<div class="math notranslate nohighlight">
+\[ |G_n(S)| \approx \frac{1}{\epsilon^2  2^{n-1}  | S|^n }\]</div>
 </section>
-</section>
-<section id="chebyshev-filters">
-<h3>Chebyshev filters<a class="headerlink" href="#chebyshev-filters" title="Link to this heading">#</a></h3>
-<p>Bij het ontwerp van een Chebyshev filter definiëren we een maximale rimpel <span class="math notranslate nohighlight">\(\epsilon\)</span>. In de gehele doorlaatband moet de verzwakking van het signaal kleiner zijn dan deze waarde <span class="math notranslate nohighlight">\(\epsilon\)</span>.</p>
 <section id="chebyshev-40-mhz-laagdoorlaatfilter-van-de-3de-orde-met-6db-maximale-ripple">
 <h4>Chebyshev 40 MHz laagdoorlaatfilter van de 3de orde met 6dB maximale ripple<a class="headerlink" href="#chebyshev-40-mhz-laagdoorlaatfilter-van-de-3de-orde-met-6db-maximale-ripple" title="Link to this heading">#</a></h4>
 <div class="cell docutils container">
@@ -3106,9 +3120,6 @@ window.setTopics = function(idOrElem, topics) {
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#vergelijking-van-de-3de-en-5de-orde-butterworth-laagdoorlaatfilter">Vergelijking van de 3de en 5de orde Butterworth laagdoorlaatfilter</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#zevende-orde-banddoorlaatfilter-van-10mhz-tot-50mhz">Zevende orde banddoorlaatfilter van 10MHz  tot 50MHz</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#de-orde-banddoorlaatfilter-tussen-47-en-53-mhz">7de orde banddoorlaatfilter tussen 47 en 53 MHz</a></li>
-</ul>
-</li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#chebyshev-filters">Chebyshev filters</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#chebyshev-40-mhz-laagdoorlaatfilter-van-de-3de-orde-met-6db-maximale-ripple">Chebyshev 40 MHz laagdoorlaatfilter van de 3de orde met 6dB maximale ripple</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#chebyshev-120-mhz-laagdoorlaatfilter-van-de-8de-orde-met-2db-maximale-ripple">Chebyshev 120 MHz laagdoorlaatfilter van de 8de orde met 2dB maximale ripple</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#chebyshev-30-mhz-laagdoorlaatfilter-van-de-2de-orde-met-6db-maximale-ripple">Chebyshev 30 MHz laagdoorlaatfilter van de 2de orde met 6dB maximale ripple</a></li>
