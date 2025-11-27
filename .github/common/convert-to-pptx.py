@@ -468,6 +468,7 @@ for ipath in notebooks:
 
                 # Process slide content for slide and fragment types
                 horizontal_shift=Inches(0)
+                scaling_factor=1.0
                 if slide is not None and cell.metadata.slideshow.get("slide_type", ())=="fragment": 
                     if "KULeuvenSlides" in cell.get('metadata', {}):
                         if "eq_vertical" in cell.metadata.get('KULeuvenSlides', {}):
@@ -476,6 +477,9 @@ for ipath in notebooks:
                         if "eq_horizontal" in cell.metadata.get('KULeuvenSlides', {}):
                             if cell.metadata.KULeuvenSlides["eq_horizontal"]:
                                 horizontal_shift=Inches(cell.metadata.KULeuvenSlides["eq_horizontal"])
+                        if "eq_scale" in cell.metadata.get('KULeuvenSlides', {}):
+                            if cell.metadata.KULeuvenSlides["eq_scale"]:
+                                scaling_factor=cell.metadata.KULeuvenSlides["eq_scale"]
                                 
                     latexpng=find_between(md_text  , "$$", "$$" )
                     latexpng2=find_between( md_text , r"\begin{equation}", r"\end{equation}" )
@@ -484,7 +488,7 @@ for ipath in notebooks:
                     if len(latexpng)>0:
                         pictp = None
                         try:
-                            pictp=slide.shapes.add_picture(io.BytesIO(latex_to_png(latexpng,backend="dvipng",scale=2)), Inches(1),running_height) 
+                            pictp=slide.shapes.add_picture(io.BytesIO(latex_to_png(latexpng,backend="dvipng",scale=2*scaling_factor)), Inches(1),running_height) 
                         except UnidentifiedImageError:
                             print("   latex error for cell number "+str(index))
                         except Exception as e:
