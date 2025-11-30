@@ -356,22 +356,23 @@ for ipath in notebooks:
                             except UnidentifiedImageError:
                                 print("  image/gif  error for cell number "+str(index))
                                 running_height=body_top
-                        elif "".join(cell.source).startswith("Video("):
+                        elif "".join(cell.source).startswith("display.Video("):
                             # Extract video path from Video() call
                             video_path = None
                             source_line = cell.source.strip()
                             print(source_line)
                             # Look for Video("path") pattern
                             import re
-                            video_match = re.search(r'Video\s*\(\s*["\']([^"\']+)["\']', source_line)
+                            video_match = re.search(r'display.Video\s*\(\s*["\']([^"\']+)["\']', source_line)
                             if video_match:
-                                video_path = video_match.group(1)
+                                video_path = ipath.split('/')[0] + '/' + video_match.group(1)[2:]
                                 print(f"  Found Video call with path: {video_path}")
                                 
                                 slide = prs.slides.add_slide(prs.slide_layouts[KUL_layout_fig])
                                 maketitle(cell,slide)  
                                 try:                            
-                                    film=slide.shapes.add_movie(video_path, body_left, body_top, height=body_height)
+                                    film=slide.shapes.add_movie(video_path, body_left, body_top,
+                                                                 height=body_height,width=body_width,poster_frame_image=video_path+'.jpeg', mime_type='video/mp4')
                                     if film.width>prs.slide_width:
                                         film.width=prs.slide_width
                                         film.left=Inches(0)
