@@ -630,12 +630,6 @@ Het eerste voorbeeld <code class="xref std std-numref docutils literal notransla
 </div>
 </div>
 <p>Het eerste dat we hierbij uitrekenen zijn de reflectiecoëfficiënten. We rekenen ook uit wat de initiële puls is die op de lijn vertrekt (<span class="math notranslate nohighlight">\(V_{puls start}\)</span>) en we kunnen uitrekenen wat de spanning op de lijn zal zijn na een oneindig aantal iteraties (<span class="math notranslate nohighlight">\(V_{eind}\)</span>).</p>
-<ul class="simple">
-<li><p>Reflectiecoëfficiënt eind:</p></li>
-<li><p>Reflectiecoëfficiënt begin:</p></li>
-<li><p>Initiële puls:</p></li>
-<li><p>Finale waarde spanning lijn:</p></li>
-</ul>
 <div class="math notranslate nohighlight">
 \[ \rho_{eind} = \frac{Z_L-Z_o}{Z_L+Z_o}= \frac{120-50}{120+50}=0.41\]</div>
 <div class="math notranslate nohighlight">
@@ -656,115 +650,120 @@ Het resultaat van deze simulatie zien we in <a class="reference internal" href="
 </figure>
 </div>
 </div>
-<div class="cell tag_remove-cell4PDF docutils container">
-<div class="cell_output docutils container">
-<figure class="align-default">
-<div class="output text_html"><style>pre { line-height: 125%; }
-td.linenos .normal { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
-span.linenos { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
-td.linenos .special { color: #000000; background-color: #ffffc0; padding-left: 5px; padding-right: 5px; }
-span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 5px; padding-right: 5px; }
-.output_html .hll { background-color: #ffffcc }
-.output_html { background: #f8f8f8; }
-.output_html .c { color: #3D7B7B; font-style: italic } /* Comment */
-.output_html .err { border: 1px solid #F00 } /* Error */
-.output_html .k { color: #008000; font-weight: bold } /* Keyword */
-.output_html .o { color: #666 } /* Operator */
-.output_html .ch { color: #3D7B7B; font-style: italic } /* Comment.Hashbang */
-.output_html .cm { color: #3D7B7B; font-style: italic } /* Comment.Multiline */
-.output_html .cp { color: #9C6500 } /* Comment.Preproc */
-.output_html .cpf { color: #3D7B7B; font-style: italic } /* Comment.PreprocFile */
-.output_html .c1 { color: #3D7B7B; font-style: italic } /* Comment.Single */
-.output_html .cs { color: #3D7B7B; font-style: italic } /* Comment.Special */
-.output_html .gd { color: #A00000 } /* Generic.Deleted */
-.output_html .ge { font-style: italic } /* Generic.Emph */
-.output_html .ges { font-weight: bold; font-style: italic } /* Generic.EmphStrong */
-.output_html .gr { color: #E40000 } /* Generic.Error */
-.output_html .gh { color: #000080; font-weight: bold } /* Generic.Heading */
-.output_html .gi { color: #008400 } /* Generic.Inserted */
-.output_html .go { color: #717171 } /* Generic.Output */
-.output_html .gp { color: #000080; font-weight: bold } /* Generic.Prompt */
-.output_html .gs { font-weight: bold } /* Generic.Strong */
-.output_html .gu { color: #800080; font-weight: bold } /* Generic.Subheading */
-.output_html .gt { color: #04D } /* Generic.Traceback */
-.output_html .kc { color: #008000; font-weight: bold } /* Keyword.Constant */
-.output_html .kd { color: #008000; font-weight: bold } /* Keyword.Declaration */
-.output_html .kn { color: #008000; font-weight: bold } /* Keyword.Namespace */
-.output_html .kp { color: #008000 } /* Keyword.Pseudo */
-.output_html .kr { color: #008000; font-weight: bold } /* Keyword.Reserved */
-.output_html .kt { color: #B00040 } /* Keyword.Type */
-.output_html .m { color: #666 } /* Literal.Number */
-.output_html .s { color: #BA2121 } /* Literal.String */
-.output_html .na { color: #687822 } /* Name.Attribute */
-.output_html .nb { color: #008000 } /* Name.Builtin */
-.output_html .nc { color: #00F; font-weight: bold } /* Name.Class */
-.output_html .no { color: #800 } /* Name.Constant */
-.output_html .nd { color: #A2F } /* Name.Decorator */
-.output_html .ni { color: #717171; font-weight: bold } /* Name.Entity */
-.output_html .ne { color: #CB3F38; font-weight: bold } /* Name.Exception */
-.output_html .nf { color: #00F } /* Name.Function */
-.output_html .nl { color: #767600 } /* Name.Label */
-.output_html .nn { color: #00F; font-weight: bold } /* Name.Namespace */
-.output_html .nt { color: #008000; font-weight: bold } /* Name.Tag */
-.output_html .nv { color: #19177C } /* Name.Variable */
-.output_html .ow { color: #A2F; font-weight: bold } /* Operator.Word */
-.output_html .w { color: #BBB } /* Text.Whitespace */
-.output_html .mb { color: #666 } /* Literal.Number.Bin */
-.output_html .mf { color: #666 } /* Literal.Number.Float */
-.output_html .mh { color: #666 } /* Literal.Number.Hex */
-.output_html .mi { color: #666 } /* Literal.Number.Integer */
-.output_html .mo { color: #666 } /* Literal.Number.Oct */
-.output_html .sa { color: #BA2121 } /* Literal.String.Affix */
-.output_html .sb { color: #BA2121 } /* Literal.String.Backtick */
-.output_html .sc { color: #BA2121 } /* Literal.String.Char */
-.output_html .dl { color: #BA2121 } /* Literal.String.Delimiter */
-.output_html .sd { color: #BA2121; font-style: italic } /* Literal.String.Doc */
-.output_html .s2 { color: #BA2121 } /* Literal.String.Double */
-.output_html .se { color: #AA5D1F; font-weight: bold } /* Literal.String.Escape */
-.output_html .sh { color: #BA2121 } /* Literal.String.Heredoc */
-.output_html .si { color: #A45A77; font-weight: bold } /* Literal.String.Interpol */
-.output_html .sx { color: #008000 } /* Literal.String.Other */
-.output_html .sr { color: #A45A77 } /* Literal.String.Regex */
-.output_html .s1 { color: #BA2121 } /* Literal.String.Single */
-.output_html .ss { color: #19177C } /* Literal.String.Symbol */
-.output_html .bp { color: #008000 } /* Name.Builtin.Pseudo */
-.output_html .fm { color: #00F } /* Name.Function.Magic */
-.output_html .vc { color: #19177C } /* Name.Variable.Class */
-.output_html .vg { color: #19177C } /* Name.Variable.Global */
-.output_html .vi { color: #19177C } /* Name.Variable.Instance */
-.output_html .vm { color: #19177C } /* Name.Variable.Magic */
-.output_html .il { color: #666 } /* Literal.Number.Integer.Long */</style><div class="highlight"><pre><span></span><span class="p">.</span><span class="nx">TITLE</span><span class="w"> </span><span class="nx">Ideal</span><span class="w"> </span><span class="nx">Transmission</span><span class="w"> </span><span class="nx">Line</span><span class="w"> </span><span class="nx">Example</span>
-<span class="nx">V1</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="nx">PULSE</span><span class="p">(</span><span class="mi">0</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="m m-Double">0.1</span><span class="nx">n</span><span class="w"> </span><span class="m m-Double">0.1</span><span class="nx">n</span><span class="w"> </span><span class="m m-Double">0.1</span><span class="nx">n</span><span class="w"> </span><span class="mi">100</span><span class="nx">n</span><span class="w"> </span><span class="mi">200</span><span class="nx">n</span><span class="p">)</span>
+<p>We simuleren dit schema ook aan de hand van spice (zie <a class="reference internal" href="#transmissie1"><span class="std std-numref">Spice Listing 16</span></a>) en dit aan de hand van 3 gevallen:</p>
+<ul class="simple">
+<li><p>De stijgtijd van de bron (<span class="math notranslate nohighlight">\(\tau_r\)</span> = 0.1 ns) is veel korter dan de propagatietijd van de transmissielijn (<span class="math notranslate nohighlight">\(\tau_d\)</span> = 1 ns). Het resultaat zien we in <a class="reference internal" href="#t120tr01s"><span class="std std-numref">Figuur 159</span></a>.</p></li>
+<li><p>De stijgtijd van de bron (<span class="math notranslate nohighlight">\(\tau_r\)</span> = 1 ns) is gelijk aan de propagatietijd van de transmissielijn (<span class="math notranslate nohighlight">\(\tau_d\)</span> = 1 ns). Het resultaat zien we in <a class="reference internal" href="#t120tr1s"><span class="std std-numref">Figuur 160</span></a>.</p></li>
+<li><p>De stijgtijd van de bron (<span class="math notranslate nohighlight">\(\tau_r\)</span> = 6 ns) is veel langer dan de propagatietijd van de transmissielijn (<span class="math notranslate nohighlight">\(\tau_d\)</span> = 1 ns). Het resultaat zien we in <a class="reference internal" href="#t120tr6s"><span class="std std-numref">Figuur 161</span></a>.</p></li>
+</ul>
+<div class="literal-block-wrapper docutils container" id="transmissie1">
+<div class="code-block-caption"><span class="caption-number">Spice Listing 16 </span><span class="caption-text">Transmissielijn met 30 Ohm aan de bron en 120 Ohm als belasting</span><a class="headerlink" href="#transmissie1" title="Link to this code">#</a></div>
+<div class="highlight-spice notranslate"><div class="highlight"><pre><span></span><span class="p">.</span><span class="nx">TITLE</span><span class="w"> </span><span class="nx">Transmission</span><span class="w"> </span><span class="nx">Line</span><span class="w"> </span><span class="nx">Example</span>
 <span class="nx">Rs</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="mi">30</span>
 <span class="nx">O1</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="mi">3</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="nx">LOSSYMOD</span><span class="w"> </span><span class="nx">TD</span><span class="p">=</span><span class="mi">2</span><span class="nx">n</span>
 <span class="nx">RL</span><span class="w"> </span><span class="mi">3</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="mi">120</span>
-<span class="p">.</span><span class="nx">model</span><span class="w"> </span><span class="nx">LOSSYMOD</span><span class="w"> </span><span class="nx">ltra</span><span class="w"> </span><span class="nx">r</span><span class="p">=</span><span class="m m-Double">0.0514</span><span class="w"> </span><span class="nx">g</span><span class="p">=</span><span class="mi">0</span><span class="w"> </span><span class="nx">l</span><span class="p">=</span><span class="mi">615</span><span class="nx">E</span><span class="o">-</span><span class="mi">9</span><span class="w"> </span><span class="nx">c</span><span class="p">=</span><span class="mi">246</span><span class="nx">e</span><span class="o">-</span><span class="mi">12</span><span class="w"> </span><span class="nx">len</span><span class="p">=</span><span class="m m-Double">0.0812</span>
+<span class="p">.</span><span class="nx">model</span><span class="w"> </span><span class="nx">LOSSYMOD</span><span class="w"> </span><span class="nx">ltra</span><span class="w"> </span><span class="nx">r</span><span class="p">=</span><span class="m m-Double">5.14</span><span class="w"> </span><span class="nx">g</span><span class="p">=</span><span class="mi">0</span><span class="w"> </span><span class="nx">l</span><span class="p">=</span><span class="mi">615</span><span class="nx">E</span><span class="o">-</span><span class="mi">9</span><span class="w"> </span><span class="nx">c</span><span class="p">=</span><span class="mi">246</span><span class="nx">e</span><span class="o">-</span><span class="mi">12</span><span class="w"> </span><span class="nx">len</span><span class="p">=</span><span class="m m-Double">0.0812</span>
 </pre></div>
-</div></figure>
 </div>
 </div>
+<div class="math notranslate nohighlight">
+\[ Z_o=\sqrt{\frac{j \omega L+R}{j \omega C+g}}\]</div>
 <div class="cell docutils container">
 <div class="cell_output docutils container">
-<figure class="align-default">
-<img alt="_images/5a6e4ba2d9e30a4de86b0b9713a5d8586200a5b4b93854f1b9477cb7f67e96e3.png" src="_images/5a6e4ba2d9e30a4de86b0b9713a5d8586200a5b4b93854f1b9477cb7f67e96e3.png" />
+<figure class="align-default" id="t120tr01s">
+<img alt="_images/d5bed70e4030254c198a396b072249c0367b587a4591d958c7b4002c4dd7d1da.png" src="_images/d5bed70e4030254c198a396b072249c0367b587a4591d958c7b4002c4dd7d1da.png" />
+<figcaption>
+<p><span class="caption-number">Figuur 159 </span><span class="caption-text">Spice simulatie van een transmissielijn bij een stijgtijd 6 ns. De belasting is 120 Ohm load</span><a class="headerlink" href="#t120tr01s" title="Link to this image">#</a></p>
+</figcaption>
 </figure>
 </div>
 </div>
-<p>We kunnen het theoretisch ladderdiagramma ook uitwerken voor een praktische propagatievertraging van 1.5ns en een pulse gestuurd door een IC van met een voedingsspanning op de uitgangsbuffers van 3.3 V. De aan-weerstand van de uitgangsbuffers is 10 Ohm (de aanweerstand van de pMOS) en de terminatieweerstand van de lijn is 25 Ohm (zie <code class="xref std std-numref docutils literal notranslate"><span class="pre">ladder2</span></code>). In dat geval verloopt de stijgende puls theoretisch zoals in <a class="reference internal" href="#ladderpmos"><span class="std std-numref">Figuur 159</span></a></p>
 <div class="cell docutils container">
 <div class="cell_output docutils container">
-<figure class="align-default" id="ladder2">
+<figure class="align-default" id="t120tr1s">
+<img alt="_images/f0119fa1a6001fa7a98c1918cae507b387263e8808345cffe24fdfd4266de015.png" src="_images/f0119fa1a6001fa7a98c1918cae507b387263e8808345cffe24fdfd4266de015.png" />
+<figcaption>
+<p><span class="caption-number">Figuur 160 </span><span class="caption-text">Spice simulatie van een transmissielijn bij een stijgtijd 1 ns. De belasting is 120 Ohm load</span><a class="headerlink" href="#t120tr1s" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_output docutils container">
+<figure class="align-default" id="t120tr6s">
+<img alt="_images/47cc087bb369614e70f4d0e782e9a8292cbb23b32232d3afb4d90be15e11135d.png" src="_images/47cc087bb369614e70f4d0e782e9a8292cbb23b32232d3afb4d90be15e11135d.png" />
+<figcaption>
+<p><span class="caption-number">Figuur 161 </span><span class="caption-text">Spice simulatie van een transmissielijn bij een stijgtijd 6 ns. De belasting is 120 Ohm load</span><a class="headerlink" href="#t120tr6s" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_output docutils container">
+<figure class="align-default" id="ladder1schemfet">
+<img alt="_images/a43ef47928211915e4389d7dd1551d7d0a6679e424357711bc87c85567251dec.svg" src="_images/a43ef47928211915e4389d7dd1551d7d0a6679e424357711bc87c85567251dec.svg" />
+</figure>
+</div>
+</div>
+<p>We simuleren dit schema ook aan de hand van spice (zie <a class="reference internal" href="#transmissie1d"><span class="std std-numref">Spice Listing 17</span></a>) en dit aan de hand van 3 gevallen:</p>
+<ul class="simple">
+<li><p>De stijgtijd van de bron (<span class="math notranslate nohighlight">\(\tau_r\)</span> = 0.1 ns) is veel korter dan de propagatietijd van de transmissielijn (<span class="math notranslate nohighlight">\(\tau_d\)</span> = 1 ns). Het resultaat zien we in <a class="reference internal" href="#t120tr01"><span class="std std-numref">Figuur 162</span></a>.</p></li>
+<li><p>De stijgtijd van de bron (<span class="math notranslate nohighlight">\(\tau_r\)</span> = 1 ns) is gelijk aan de propagatietijd van de transmissielijn (<span class="math notranslate nohighlight">\(\tau_d\)</span> = 1 ns). Het resultaat zien we in <a class="reference internal" href="#t120tr1"><span class="std std-numref">Figuur 163</span></a>.</p></li>
+<li><p>De stijgtijd van de bron (<span class="math notranslate nohighlight">\(\tau_r\)</span> = 6 ns) is veel langer dan de propagatietijd van de transmissielijn (<span class="math notranslate nohighlight">\(\tau_d\)</span> = 1 ns). Het resultaat zien we in <a class="reference internal" href="#t120tr6"><span class="std std-numref">Figuur 164</span></a>.</p></li>
+</ul>
+<div class="literal-block-wrapper docutils container" id="transmissie1d">
+<div class="code-block-caption"><span class="caption-number">Spice Listing 17 </span><span class="caption-text">Transmissielijn met 120 Ohm als belasting en CMOS driver</span><a class="headerlink" href="#transmissie1d" title="Link to this code">#</a></div>
+<div class="highlight-spice notranslate"><div class="highlight"><pre><span></span><span class="p">.</span><span class="nx">TITLE</span><span class="w"> </span><span class="nx">Transmission</span><span class="w"> </span><span class="nx">Line</span><span class="w"> </span><span class="nx">with</span><span class="w"> </span><span class="nx">driver</span>
+<span class="nx">MN1</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="mi">0</span><span class="w">  </span><span class="nx">NMOS</span><span class="w"> </span><span class="nx">w</span><span class="p">=</span><span class="mi">150u</span><span class="w"> </span><span class="nx">L</span><span class="p">=</span><span class="m m-Double">0.50</span><span class="nx">u</span>
+<span class="nx">MP1</span><span class="w"> </span><span class="mi">4</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="mi">4</span><span class="w">  </span><span class="nx">PMOS</span><span class="w"> </span><span class="nx">w</span><span class="p">=</span><span class="mi">350u</span><span class="w"> </span><span class="nx">L</span><span class="p">=</span><span class="m m-Double">0.50</span><span class="nx">U</span>
+<span class="nx">VDD</span><span class="w"> </span><span class="mi">4</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="mi">1</span>
+<span class="nx">O1</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="mi">3</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="nx">LOSSYMOD</span><span class="w"> </span><span class="nx">TD</span><span class="p">=</span><span class="mi">2</span><span class="nx">n</span>
+<span class="nx">RL</span><span class="w"> </span><span class="mi">3</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="mi">120</span>
+<span class="p">.</span><span class="nx">model</span><span class="w"> </span><span class="nx">LOSSYMOD</span><span class="w"> </span><span class="nx">ltra</span><span class="w"> </span><span class="nx">r</span><span class="p">=</span><span class="m m-Double">5.14</span><span class="w"> </span><span class="nx">g</span><span class="p">=</span><span class="mi">0</span><span class="w"> </span><span class="nx">l</span><span class="p">=</span><span class="mi">615</span><span class="nx">E</span><span class="o">-</span><span class="mi">9</span><span class="w"> </span><span class="nx">c</span><span class="p">=</span><span class="mi">246</span><span class="nx">e</span><span class="o">-</span><span class="mi">12</span><span class="w"> </span><span class="nx">len</span><span class="p">=</span><span class="m m-Double">0.0812</span>
+<span class="p">.</span><span class="nx">MODEL</span><span class="w"> </span><span class="nx">NMOS</span><span class="w"> </span><span class="nx">NMOS</span><span class="p">(</span><span class="nx">LEVEL</span><span class="p">=</span><span class="mi">1</span><span class="w"> </span><span class="nx">VTO</span><span class="p">=</span><span class="m m-Double">0.05</span><span class="w"> </span><span class="nx">KP</span><span class="p">=</span><span class="m m-Double">90.000E-6</span><span class="w"> </span><span class="nx">LAMBDA</span><span class="p">=</span><span class="m m-Double">0.001</span><span class="p">)</span>
+<span class="p">.</span><span class="nx">MODEL</span><span class="w"> </span><span class="nx">PMOS</span><span class="w"> </span><span class="nx">PMOS</span><span class="p">(</span><span class="nx">LEVEL</span><span class="p">=</span><span class="mi">1</span><span class="w"> </span><span class="nx">VTO</span><span class="p">=</span><span class="m m-Double">-0.05</span><span class="w"> </span><span class="nx">KP</span><span class="p">=</span><span class="m m-Double">55.000E-6</span><span class="w"> </span><span class="nx">LAMBDA</span><span class="p">=</span><span class="m m-Double">0.001</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_output docutils container">
+<figure class="align-default" id="t120tr01">
+<img alt="_images/167f38295647ad17daeb1acb2495812784ee0a744e81e98a43492255bcb38448.png" src="_images/167f38295647ad17daeb1acb2495812784ee0a744e81e98a43492255bcb38448.png" />
+<figcaption>
+<p><span class="caption-number">Figuur 162 </span><span class="caption-text">Spice simulatie van een transmissielijn met driver bij een stijgtijd 100ps. De belasting is 120 Ohm load</span><a class="headerlink" href="#t120tr01" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_output docutils container">
+<figure class="align-default" id="t120tr1">
+<img alt="_images/dd3d15eeb9668910d35a3cbe7e3f5a18ff054434955a8fffbf175ce5c09eaa97.png" src="_images/dd3d15eeb9668910d35a3cbe7e3f5a18ff054434955a8fffbf175ce5c09eaa97.png" />
+<figcaption>
+<p><span class="caption-number">Figuur 163 </span><span class="caption-text">Spice simulatie van een transmissielijn met driver bij een stijgtijd 1 ns. De belasting is 120 Ohm load</span><a class="headerlink" href="#t120tr1" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_output docutils container">
+<figure class="align-default" id="t120tr6">
+<img alt="_images/7d86950837140231aa655c94375fabe93aa6278b0f0ff74931d4eb43d22f3e89.png" src="_images/7d86950837140231aa655c94375fabe93aa6278b0f0ff74931d4eb43d22f3e89.png" />
+<figcaption>
+<p><span class="caption-number">Figuur 164 </span><span class="caption-text">Spice simulatie van een transmissielijn met driver bij een stijgtijd 6 ns. De belasting is 120 Ohm load</span><a class="headerlink" href="#t120tr6" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
+</div>
+<p>We kunnen het theoretisch ladderdiagramma ook uitwerken voor een praktische propagatievertraging van 1.5ns en een pulse gestuurd door een IC van met een voedingsspanning op de uitgangsbuffers van 3.3 V. De aan-weerstand van de uitgangsbuffers is 10 Ohm (de aanweerstand van de pMOS) en de terminatieweerstand van de lijn is 25 Ohm (zie <code class="xref std std-numref docutils literal notranslate"><span class="pre">ladder2schem</span></code>). In dat geval verloopt de stijgende puls theoretisch zoals in <a class="reference internal" href="#ladderpmos"><span class="std std-numref">Figuur 165</span></a></p>
+<div class="cell docutils container">
+<div class="cell_output docutils container">
+<figure class="align-default" id="ladder2schem">
 <img alt="_images/81db08ab4c9369b07aeaf6346ff48fecbfa05329e2732d5365cc3db46c1091e0.svg" src="_images/81db08ab4c9369b07aeaf6346ff48fecbfa05329e2732d5365cc3db46c1091e0.svg" />
 </figure>
 </div>
 </div>
 <p>Ook hier rekenen we de reflectiecoëfficiënten uit.</p>
-<ul class="simple">
-<li><p>Reflectiecoëfficiënt eind:</p></li>
-<li><p>Reflectiecoëfficiënt begin:</p></li>
-<li><p>Initiële puls:</p></li>
-<li><p>Finale waarde spanning lijn:</p></li>
-</ul>
 <div class="math notranslate nohighlight">
 \[ \rho_{eind} = \frac{Z_L-Z_o}{Z_L+Z_o}= \frac{25-50}{25+50}=-0.33\]</div>
 <div class="math notranslate nohighlight">
@@ -778,104 +777,113 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 <figure class="align-default" id="ladderpmos">
 <img alt="_images/4b750327481453451d23978cf81c1fb08aac0654006355c2d5fc465ae9596f9e.png" src="_images/4b750327481453451d23978cf81c1fb08aac0654006355c2d5fc465ae9596f9e.png" />
 <figcaption>
-<p><span class="caption-number">Figuur 159 </span><span class="caption-text">Verloop van een 3.3V positieve puls op een 50 Ohm transmissielijn met een terminatieweerstand van 25 Ohm. De bronweerstand is 10 Ohm.</span><a class="headerlink" href="#ladderpmos" title="Link to this image">#</a></p>
+<p><span class="caption-number">Figuur 165 </span><span class="caption-text">Verloop van een 3.3V positieve puls op een 50 Ohm transmissielijn met een terminatieweerstand van 25 Ohm. De bronweerstand is 10 Ohm.</span><a class="headerlink" href="#ladderpmos" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 </div>
 </div>
 <div class="cell docutils container">
 </div>
-<div class="cell tag_remove-cell4PDF docutils container">
-<div class="cell_output docutils container">
-<figure class="align-default">
-<div class="output text_html"><style>pre { line-height: 125%; }
-td.linenos .normal { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
-span.linenos { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
-td.linenos .special { color: #000000; background-color: #ffffc0; padding-left: 5px; padding-right: 5px; }
-span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 5px; padding-right: 5px; }
-.output_html .hll { background-color: #ffffcc }
-.output_html { background: #f8f8f8; }
-.output_html .c { color: #3D7B7B; font-style: italic } /* Comment */
-.output_html .err { border: 1px solid #F00 } /* Error */
-.output_html .k { color: #008000; font-weight: bold } /* Keyword */
-.output_html .o { color: #666 } /* Operator */
-.output_html .ch { color: #3D7B7B; font-style: italic } /* Comment.Hashbang */
-.output_html .cm { color: #3D7B7B; font-style: italic } /* Comment.Multiline */
-.output_html .cp { color: #9C6500 } /* Comment.Preproc */
-.output_html .cpf { color: #3D7B7B; font-style: italic } /* Comment.PreprocFile */
-.output_html .c1 { color: #3D7B7B; font-style: italic } /* Comment.Single */
-.output_html .cs { color: #3D7B7B; font-style: italic } /* Comment.Special */
-.output_html .gd { color: #A00000 } /* Generic.Deleted */
-.output_html .ge { font-style: italic } /* Generic.Emph */
-.output_html .ges { font-weight: bold; font-style: italic } /* Generic.EmphStrong */
-.output_html .gr { color: #E40000 } /* Generic.Error */
-.output_html .gh { color: #000080; font-weight: bold } /* Generic.Heading */
-.output_html .gi { color: #008400 } /* Generic.Inserted */
-.output_html .go { color: #717171 } /* Generic.Output */
-.output_html .gp { color: #000080; font-weight: bold } /* Generic.Prompt */
-.output_html .gs { font-weight: bold } /* Generic.Strong */
-.output_html .gu { color: #800080; font-weight: bold } /* Generic.Subheading */
-.output_html .gt { color: #04D } /* Generic.Traceback */
-.output_html .kc { color: #008000; font-weight: bold } /* Keyword.Constant */
-.output_html .kd { color: #008000; font-weight: bold } /* Keyword.Declaration */
-.output_html .kn { color: #008000; font-weight: bold } /* Keyword.Namespace */
-.output_html .kp { color: #008000 } /* Keyword.Pseudo */
-.output_html .kr { color: #008000; font-weight: bold } /* Keyword.Reserved */
-.output_html .kt { color: #B00040 } /* Keyword.Type */
-.output_html .m { color: #666 } /* Literal.Number */
-.output_html .s { color: #BA2121 } /* Literal.String */
-.output_html .na { color: #687822 } /* Name.Attribute */
-.output_html .nb { color: #008000 } /* Name.Builtin */
-.output_html .nc { color: #00F; font-weight: bold } /* Name.Class */
-.output_html .no { color: #800 } /* Name.Constant */
-.output_html .nd { color: #A2F } /* Name.Decorator */
-.output_html .ni { color: #717171; font-weight: bold } /* Name.Entity */
-.output_html .ne { color: #CB3F38; font-weight: bold } /* Name.Exception */
-.output_html .nf { color: #00F } /* Name.Function */
-.output_html .nl { color: #767600 } /* Name.Label */
-.output_html .nn { color: #00F; font-weight: bold } /* Name.Namespace */
-.output_html .nt { color: #008000; font-weight: bold } /* Name.Tag */
-.output_html .nv { color: #19177C } /* Name.Variable */
-.output_html .ow { color: #A2F; font-weight: bold } /* Operator.Word */
-.output_html .w { color: #BBB } /* Text.Whitespace */
-.output_html .mb { color: #666 } /* Literal.Number.Bin */
-.output_html .mf { color: #666 } /* Literal.Number.Float */
-.output_html .mh { color: #666 } /* Literal.Number.Hex */
-.output_html .mi { color: #666 } /* Literal.Number.Integer */
-.output_html .mo { color: #666 } /* Literal.Number.Oct */
-.output_html .sa { color: #BA2121 } /* Literal.String.Affix */
-.output_html .sb { color: #BA2121 } /* Literal.String.Backtick */
-.output_html .sc { color: #BA2121 } /* Literal.String.Char */
-.output_html .dl { color: #BA2121 } /* Literal.String.Delimiter */
-.output_html .sd { color: #BA2121; font-style: italic } /* Literal.String.Doc */
-.output_html .s2 { color: #BA2121 } /* Literal.String.Double */
-.output_html .se { color: #AA5D1F; font-weight: bold } /* Literal.String.Escape */
-.output_html .sh { color: #BA2121 } /* Literal.String.Heredoc */
-.output_html .si { color: #A45A77; font-weight: bold } /* Literal.String.Interpol */
-.output_html .sx { color: #008000 } /* Literal.String.Other */
-.output_html .sr { color: #A45A77 } /* Literal.String.Regex */
-.output_html .s1 { color: #BA2121 } /* Literal.String.Single */
-.output_html .ss { color: #19177C } /* Literal.String.Symbol */
-.output_html .bp { color: #008000 } /* Name.Builtin.Pseudo */
-.output_html .fm { color: #00F } /* Name.Function.Magic */
-.output_html .vc { color: #19177C } /* Name.Variable.Class */
-.output_html .vg { color: #19177C } /* Name.Variable.Global */
-.output_html .vi { color: #19177C } /* Name.Variable.Instance */
-.output_html .vm { color: #19177C } /* Name.Variable.Magic */
-.output_html .il { color: #666 } /* Literal.Number.Integer.Long */</style><div class="highlight"><pre><span></span><span class="p">.</span><span class="nx">TITLE</span><span class="w"> </span><span class="nx">Ideal</span><span class="w"> </span><span class="nx">Transmission</span><span class="w"> </span><span class="nx">Line</span><span class="w"> </span><span class="nx">Example</span>
-<span class="nx">V1</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="nx">PULSE</span><span class="p">(</span><span class="mi">0</span><span class="w"> </span><span class="m m-Double">3.3</span><span class="w"> </span><span class="m m-Double">0.1</span><span class="nx">n</span><span class="w"> </span><span class="m m-Double">0.1</span><span class="nx">n</span><span class="w"> </span><span class="m m-Double">0.1</span><span class="nx">n</span><span class="w"> </span><span class="mi">100</span><span class="nx">n</span><span class="w"> </span><span class="mi">200</span><span class="nx">n</span><span class="p">)</span>
+<p>We simuleren dit schema ook aan de hand van spice (zie <a class="reference internal" href="#transmissie2"><span class="std std-numref">Spice Listing 18</span></a>) en dit aan de hand van 3 gevallen:</p>
+<ul class="simple">
+<li><p>De stijgtijd van de bron (<span class="math notranslate nohighlight">\(\tau_r\)</span> = 0.1 ns) is veel korter dan de propagatietijd van de transmissielijn (<span class="math notranslate nohighlight">\(\tau_d\)</span> = 1.5 ns). Het resultaat zien we in <a class="reference internal" href="#t25tr01s"><span class="std std-numref">Figuur 166</span></a>.</p></li>
+<li><p>De stijgtijd van de bron (<span class="math notranslate nohighlight">\(\tau_r\)</span> = 1 ns) is gelijk aan de propagatietijd van de transmissielijn (<span class="math notranslate nohighlight">\(\tau_d\)</span> = 1.5 ns). Het resultaat zien we in <a class="reference internal" href="#t25tr15s"><span class="std std-numref">Figuur 167</span></a>.</p></li>
+<li><p>De stijgtijd van de bron (<span class="math notranslate nohighlight">\(\tau_r\)</span> = 9 ns) is veel langer dan de propagatietijd van de transmissielijn (<span class="math notranslate nohighlight">\(\tau_d\)</span> = 1.5 ns). Het resultaat zien we in <a class="reference internal" href="#t25tr9s"><span class="std std-numref">Figuur 168</span></a>.</p></li>
+</ul>
+<div class="literal-block-wrapper docutils container" id="transmissie2">
+<div class="code-block-caption"><span class="caption-number">Spice Listing 18 </span><span class="caption-text">Transmissielijn met 10 Ohm aan de bron en 25 Ohm als belasting</span><a class="headerlink" href="#transmissie2" title="Link to this code">#</a></div>
+<div class="highlight-spice notranslate"><div class="highlight"><pre><span></span><span class="p">.</span><span class="nx">TITLE</span><span class="w"> </span><span class="nx">Transmission</span><span class="w"> </span><span class="nx">Line</span><span class="w"> </span><span class="nx">Example</span>
 <span class="nx">Rs</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="mi">10</span>
 <span class="nx">O1</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="mi">3</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="nx">LOSSYMOD</span><span class="w"> </span><span class="nx">TD</span><span class="p">=</span><span class="mi">2</span><span class="nx">n</span>
 <span class="nx">RL</span><span class="w"> </span><span class="mi">3</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="mi">25</span>
-<span class="p">.</span><span class="nx">model</span><span class="w"> </span><span class="nx">LOSSYMOD</span><span class="w"> </span><span class="nx">ltra</span><span class="w"> </span><span class="nx">r</span><span class="p">=</span><span class="m m-Double">0.0514</span><span class="w"> </span><span class="nx">g</span><span class="p">=</span><span class="mi">0</span><span class="w"> </span><span class="nx">l</span><span class="p">=</span><span class="mi">615</span><span class="nx">E</span><span class="o">-</span><span class="mi">9</span><span class="w"> </span><span class="nx">c</span><span class="p">=</span><span class="mi">246</span><span class="nx">e</span><span class="o">-</span><span class="mi">12</span><span class="w"> </span><span class="nx">len</span><span class="p">=</span><span class="m m-Double">0.1219</span>
+<span class="p">.</span><span class="nx">model</span><span class="w"> </span><span class="nx">LOSSYMOD</span><span class="w"> </span><span class="nx">ltra</span><span class="w"> </span><span class="nx">r</span><span class="p">=</span><span class="m m-Double">5.14</span><span class="w"> </span><span class="nx">g</span><span class="p">=</span><span class="mi">0</span><span class="w"> </span><span class="nx">l</span><span class="p">=</span><span class="mi">615</span><span class="nx">E</span><span class="o">-</span><span class="mi">9</span><span class="w"> </span><span class="nx">c</span><span class="p">=</span><span class="mi">246</span><span class="nx">e</span><span class="o">-</span><span class="mi">12</span><span class="w"> </span><span class="nx">len</span><span class="p">=</span><span class="m m-Double">0.1219</span>
 </pre></div>
-</div></figure>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_output docutils container">
-<figure class="align-default">
-<img alt="_images/b0db1adf398566cd83a28ae740ec204705654c411ca54294248ec9f0d1c88238.png" src="_images/b0db1adf398566cd83a28ae740ec204705654c411ca54294248ec9f0d1c88238.png" />
+<figure class="align-default" id="t25tr01s">
+<img alt="_images/550522a7e9b38bef42b9a986aa3b74770ad950edc59798032c0e4f31a87a23e4.png" src="_images/550522a7e9b38bef42b9a986aa3b74770ad950edc59798032c0e4f31a87a23e4.png" />
+<figcaption>
+<p><span class="caption-number">Figuur 166 </span><span class="caption-text">Spice simulatie van een transmissielijn bij een stijgtijd 01ns. De belasting is 25 Ohm load</span><a class="headerlink" href="#t25tr01s" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_output docutils container">
+<figure class="align-default" id="t25tr15s">
+<img alt="_images/739191c754e0d110d5c5707fc439b76ae6e803d520b95485f85672b72a04e843.png" src="_images/739191c754e0d110d5c5707fc439b76ae6e803d520b95485f85672b72a04e843.png" />
+<figcaption>
+<p><span class="caption-number">Figuur 167 </span><span class="caption-text">Spice simulatie van een transmissielijn bij een stijgtijd 1.5ns. De belasting is 25 Ohm load</span><a class="headerlink" href="#t25tr15s" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_output docutils container">
+<figure class="align-default" id="t25tr9s">
+<img alt="_images/b6585d53f458bedb1279a713b574c92e94ee59d213dec2681f087e43003b6a72.png" src="_images/b6585d53f458bedb1279a713b574c92e94ee59d213dec2681f087e43003b6a72.png" />
+<figcaption>
+<p><span class="caption-number">Figuur 168 </span><span class="caption-text">Spice simulatie van een transmissielijn bij een stijgtijd 9ns. De belasting is 25 Ohm load</span><a class="headerlink" href="#t25tr9s" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_output docutils container">
+<figure class="align-default" id="ladder2schemfet">
+<img alt="_images/48463f16d7d2e2a95668ca6c5e11ab047ea60cf020cf28b086ea7a8ac99abc35.svg" src="_images/48463f16d7d2e2a95668ca6c5e11ab047ea60cf020cf28b086ea7a8ac99abc35.svg" />
+</figure>
+</div>
+</div>
+<p>We simuleren dit schema ook aan de hand van spice (zie <a class="reference internal" href="#transmissie2d"><span class="std std-numref">Spice Listing 19</span></a>) en dit aan de hand van 3 gevallen:</p>
+<ul class="simple">
+<li><p>De stijgtijd van de bron (<span class="math notranslate nohighlight">\(\tau_r\)</span> = 0.1 ns) is veel korter dan de propagatietijd van de transmissielijn (<span class="math notranslate nohighlight">\(\tau_d\)</span> = 1.5 ns). Het resultaat zien we in <a class="reference internal" href="#t25tr01"><span class="std std-numref">Figuur 169</span></a>.</p></li>
+<li><p>De stijgtijd van de bron (<span class="math notranslate nohighlight">\(\tau_r\)</span> = 1 ns) is gelijk aan de propagatietijd van de transmissielijn (<span class="math notranslate nohighlight">\(\tau_d\)</span> = 1.5 ns). Het resultaat zien we in <a class="reference internal" href="#t25tr15"><span class="std std-numref">Figuur 170</span></a>.</p></li>
+<li><p>De stijgtijd van de bron (<span class="math notranslate nohighlight">\(\tau_r\)</span> = 9 ns) is veel langer dan de propagatietijd van de transmissielijn (<span class="math notranslate nohighlight">\(\tau_d\)</span> = 1.5 ns). Het resultaat zien we in <a class="reference internal" href="#t25tr9"><span class="std std-numref">Figuur 171</span></a>.</p></li>
+</ul>
+<div class="literal-block-wrapper docutils container" id="transmissie2d">
+<div class="code-block-caption"><span class="caption-number">Spice Listing 19 </span><span class="caption-text">Transmissielijn met 25 Ohm als belasting en een CMOS driver</span><a class="headerlink" href="#transmissie2d" title="Link to this code">#</a></div>
+<div class="highlight-spice notranslate"><div class="highlight"><pre><span></span><span class="p">.</span><span class="nx">TITLE</span><span class="w"> </span><span class="nx">Transmission</span><span class="w"> </span><span class="nx">Line</span><span class="w"> </span><span class="nx">with</span><span class="w"> </span><span class="nx">driver</span>
+<span class="nx">MN1</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="mi">0</span><span class="w">  </span><span class="nx">NMOS</span><span class="w"> </span><span class="nx">w</span><span class="p">=</span><span class="mi">150u</span><span class="w"> </span><span class="nx">L</span><span class="p">=</span><span class="m m-Double">0.50</span><span class="nx">u</span>
+<span class="nx">MP1</span><span class="w"> </span><span class="mi">4</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="mi">4</span><span class="w">  </span><span class="nx">PMOS</span><span class="w"> </span><span class="nx">w</span><span class="p">=</span><span class="mi">350u</span><span class="w"> </span><span class="nx">L</span><span class="p">=</span><span class="m m-Double">0.50</span><span class="nx">U</span>
+<span class="nx">VDD</span><span class="w"> </span><span class="mi">4</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="m m-Double">3.3</span>
+<span class="nx">O1</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="mi">3</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="nx">LOSSYMOD</span><span class="w"> </span><span class="nx">TD</span><span class="p">=</span><span class="mi">2</span><span class="nx">n</span>
+<span class="nx">RL</span><span class="w"> </span><span class="mi">3</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="mi">25</span>
+<span class="p">.</span><span class="nx">model</span><span class="w"> </span><span class="nx">LOSSYMOD</span><span class="w"> </span><span class="nx">ltra</span><span class="w"> </span><span class="nx">r</span><span class="p">=</span><span class="m m-Double">5.14</span><span class="w"> </span><span class="nx">g</span><span class="p">=</span><span class="mi">0</span><span class="w"> </span><span class="nx">l</span><span class="p">=</span><span class="mi">615</span><span class="nx">E</span><span class="o">-</span><span class="mi">9</span><span class="w"> </span><span class="nx">c</span><span class="p">=</span><span class="mi">246</span><span class="nx">e</span><span class="o">-</span><span class="mi">12</span><span class="w"> </span><span class="nx">len</span><span class="p">=</span><span class="m m-Double">0.1219</span>
+<span class="p">.</span><span class="nx">MODEL</span><span class="w"> </span><span class="nx">NMOS</span><span class="w"> </span><span class="nx">NMOS</span><span class="p">(</span><span class="nx">LEVEL</span><span class="p">=</span><span class="mi">1</span><span class="w"> </span><span class="nx">VTO</span><span class="p">=</span><span class="m m-Double">0.50</span><span class="w"> </span><span class="nx">KP</span><span class="p">=</span><span class="m m-Double">90.000E-6</span><span class="w"> </span><span class="nx">LAMBDA</span><span class="p">=</span><span class="m m-Double">0.001</span><span class="p">)</span>
+<span class="p">.</span><span class="nx">MODEL</span><span class="w"> </span><span class="nx">PMOS</span><span class="w"> </span><span class="nx">PMOS</span><span class="p">(</span><span class="nx">LEVEL</span><span class="p">=</span><span class="mi">1</span><span class="w"> </span><span class="nx">VTO</span><span class="p">=</span><span class="m m-Double">-0.45</span><span class="w"> </span><span class="nx">KP</span><span class="p">=</span><span class="m m-Double">55.000E-6</span><span class="w"> </span><span class="nx">LAMBDA</span><span class="p">=</span><span class="m m-Double">0.001</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_output docutils container">
+<figure class="align-default" id="t25tr01">
+<img alt="_images/79fdf43db75d1f7e1e66d11d4e0923328099ee1918c7c995ddb2c46cf38b11a3.png" src="_images/79fdf43db75d1f7e1e66d11d4e0923328099ee1918c7c995ddb2c46cf38b11a3.png" />
+<figcaption>
+<p><span class="caption-number">Figuur 169 </span><span class="caption-text">Spice simulatie van een transmissielijn met driver bij een stijgtijd 100ps. De belasting is 25 Ohm load</span><a class="headerlink" href="#t25tr01" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_output docutils container">
+<figure class="align-default" id="t25tr15">
+<img alt="_images/cf274af03a7282c3cc0c85e78d9a590c41203731ccb503630ed212cee4f5e357.png" src="_images/cf274af03a7282c3cc0c85e78d9a590c41203731ccb503630ed212cee4f5e357.png" />
+<figcaption>
+<p><span class="caption-number">Figuur 170 </span><span class="caption-text">Spice simulatie van een transmissielijn met driver bij een stijgtijd 1.5ns. De belasting is 25 Ohm load</span><a class="headerlink" href="#t25tr15" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_output docutils container">
+<figure class="align-default" id="t25tr9">
+<img alt="_images/95bb5d1f7b327f227e8cf98d1e6f95a367d6e6f2245f86a0494e4c3483102f58.png" src="_images/95bb5d1f7b327f227e8cf98d1e6f95a367d6e6f2245f86a0494e4c3483102f58.png" />
+<figcaption>
+<p><span class="caption-number">Figuur 171 </span><span class="caption-text">Spice simulatie van een transmissielijn met driver bij een stijgtijd 9ns. De belasting is 25 Ohm load</span><a class="headerlink" href="#t25tr9" title="Link to this image">#</a></p>
+</figcaption>
 </figure>
 </div>
 </div>
