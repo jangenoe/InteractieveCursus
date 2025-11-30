@@ -11,10 +11,10 @@
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://jangenoe.github.io/jangenoe/InteractieveCursus/ToegepasteAnalogeElektronica/reflecties.html" />
 <meta property="og:site_name" content="Project name not set" />
-<meta property="og:description" content="inleiding: In dit hoofdstuk werken we een aantal voorbeelden uit die aangeven wat de invloed is van niet aangepaste transmissielijnen op de signaalintegriteit. Om hierin inzicht te krijgen is de me..." />
+<meta property="og:description" content="Inleiding: In dit hoofdstuk werken we een aantal voorbeelden uit die aangeven wat de invloed is van niet-aangepaste transmissielijnen op de signaalintegriteit. Om hierin inzicht te krijgen is de me..." />
 <meta property="og:image" content="https://jangenoe.github.io/InteractieveCursus/ToegepasteAnalogeElektronica/_static/logo.svg" />
 <meta property="og:image:alt" content="Project name not set" />
-<meta name="description" content="inleiding: In dit hoofdstuk werken we een aantal voorbeelden uit die aangeven wat de invloed is van niet aangepaste transmissielijnen op de signaalintegriteit. Om hierin inzicht te krijgen is de me..." />
+<meta name="description" content="Inleiding: In dit hoofdstuk werken we een aantal voorbeelden uit die aangeven wat de invloed is van niet-aangepaste transmissielijnen op de signaalintegriteit. Om hierin inzicht te krijgen is de me..." />
 
     <title>Reflecties &#8212; Toegepaste Analoge Elektronica</title>
   
@@ -540,8 +540,9 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#inleiding">inleiding</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#inleiding">Inleiding</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#uitwerken-van-een-ladderdiagram">Uitwerken van een ladderdiagram</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#uitgewerkte-voorbeelden">Uitgewerkte voorbeelden</a></li>
 </ul>
             </nav>
         </div>
@@ -556,50 +557,325 @@ document.write(`
   <section class="tex2jax_ignore mathjax_ignore" id="reflecties">
 <h1>Reflecties<a class="headerlink" href="#reflecties" title="Link to this heading">#</a></h1>
 <section id="inleiding">
-<h2>inleiding<a class="headerlink" href="#inleiding" title="Link to this heading">#</a></h2>
-<p>In dit hoofdstuk werken we een aantal voorbeelden uit die aangeven wat de invloed is van niet aangepaste transmissielijnen op de signaalintegriteit.
+<h2>Inleiding<a class="headerlink" href="#inleiding" title="Link to this heading">#</a></h2>
+<p>In dit hoofdstuk werken we een aantal voorbeelden uit die aangeven wat de invloed is van niet-aangepaste transmissielijnen op de signaalintegriteit.
 Om hierin inzicht te krijgen is de meest eenvoudige aanpak te kijken wat er gebeurt wanneer een ideale digitale puls wordt aangelegd aan de transmissielijn.
-In werkelijkheid moeten we natuurlijk beseffen dat de echte pulsvorm steeds eindige stijg- en daaltijd heeft (<a class="reference external" href="https://en.wikipedia.org/wiki/Slew_rate">slew-rate</a>) en dat bovendien de stroom die geleverd wordt door de output transistors ook niet constant is. Meer specifiek zal deze stroom afnemen wanneer de spanning over de transistor klein wordt.</p>
-<p>Een voorbeeld waarin een meer realistische pulsvorm in detail wordt uitgerekent tonen we hieronder. <a class="reference internal" href="#reflectievideo"><span class="std std-numref">Figuur 153</span></a> toont bovenaan een PCB met baantjes met een karakteristieke impedantie 50 Ohm. Onderaan vergelijken we de situatie waarbij er al dan niet een stukje met karakteristieke impedantie 32 Ohm in de transmissielijn wordt toegevoegd. In beide gevallen vertrekt aan de ingang een puls van 1 V.
+In werkelijkheid moeten we natuurlijk beseffen dat de echte pulsvorm steeds eindige stijg- en daaltijd heeft (<a class="reference external" href="https://en.wikipedia.org/wiki/Slew_rate">slew-rate</a>) en dat bovendien de stroom die geleverd wordt door de output transistors ook niet constant is. Meer specifiek zal deze stroom afnemen wanneer de spanning over de transistor te klein wordt.</p>
+<p>Een voorbeeld waarin een meer realistische pulsvorm in detail wordt uitgerekent tonen we hieronder. De video in <a class="reference internal" href="#reflectievideo"><span class="std std-numref">Figuur 155</span></a> toont bovenaan een PCB met baantjes met een karakteristieke impedantie 50 Ohm. Onderaan vergelijken we de situatie waarbij er al dan niet een stukje met karakteristieke impedantie 32 Ohm in de transmissielijn wordt toegevoegd. In beide gevallen vertrekt aan de ingang een puls van 1 V.
 In het geval zonder een baantje met karakteristieke impedantie 32 Ohm meten we aan de uitgang na 80 ps een puls van 953 mV, dus terug bijna 1 V. De maximale reflectie, zoals we die kunnen meten aan de ingang, blijft kleiner dan 9 mV, verwaarloosbaar klein dus.
 In het geval met een baantje met karakteristieke impedantie 32 Ohm meten we aan de uitgang na 80 ps een puls van 813 mV. De maximale reflectie, zoals we die kunnen meten aan de ingang, is 314 mV.</p>
-<div class="cell tag_remove_cell4pptx tag_remove_cell4reveal tag_remove-cell4PDF docutils container">
+<div class="cell tag_remove_cell4reveal tag_remove-cell4PDF docutils container">
 <div class="cell_output docutils container">
 <figure class="align-default" id="reflectievideo">
 <div class="output text_html"><video src="./video/signalintegrity.mp4" controls  >
       Your browser does not support the <code>video</code> element.
     </video></div><figcaption>
-<p><span class="caption-number">Figuur 153 </span><span class="caption-text">(boven) PCB waarbij de impedantie niet constant is (Rechts onder) groen: Bekomen signaal aan het einde van de getoonde transmissielijn. Rood: gereflecteerde signaal aan het begin. Het inkomende signaal is 1V</span><a class="headerlink" href="#reflectievideo" title="Link to this image">#</a></p>
+<p><span class="caption-number">Figuur 155 </span><span class="caption-text">(boven) PCB waarbij de impedantie niet constant is (Rechts onder) groen: Bekomen signaal aan het einde van de getoonde transmissielijn. Rood: gereflecteerde signaal aan het begin. Het inkomende signaal is 1V</span><a class="headerlink" href="#reflectievideo" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 </div>
 </div>
-<p>De simulatie in <a class="reference internal" href="#reflectievideo"><span class="std std-numref">Figuur 153</span></a> is numeriek uitgevoerd aan de hand van het simulatiepaket <a class="reference external" href="https://www.ansys.com/">Ansys</a>.</p>
+<p>De simulatie in <a class="reference internal" href="#reflectievideo"><span class="std std-numref">Figuur 155</span></a> is numeriek uitgevoerd aan de hand van het simulatiepaket <a class="reference external" href="https://www.ansys.com/">Ansys</a>.</p>
+<p>karakteristieke impedantie <span class="math notranslate nohighlight">\(Z_1\)</span>  gevolgd door een transmissielijn met karakteristieke impedantie <span class="math notranslate nohighlight">\(Z_2\)</span> (zie <code class="xref std std-numref docutils literal notranslate"><span class="pre">transmissie</span></code>) en het schematisch overzicht van een transmissielijn met karakteristieke impedantie <span class="math notranslate nohighlight">\(Z_1\)</span>  afgesloten met een terminatieimpedantie <span class="math notranslate nohighlight">\(Z_L\)</span>, zie  <a class="reference internal" href="#terminatie"><span class="std std-numref">Figuur 157</span></a>.</p>
+<div class="cell docutils container">
+<div class="cell_output docutils container">
+<figure class="align-default" id="tweetransmissie">
+<img alt="_images/f38eeb1af03aa2a0688a6d968b2c1398bb0b61830ae8c100be42c2e2b879ae47.svg" src="_images/f38eeb1af03aa2a0688a6d968b2c1398bb0b61830ae8c100be42c2e2b879ae47.svg" />
+<figcaption>
+<p><span class="caption-number">Figuur 156 </span><span class="caption-text">Schematische voorstelling van een transmissielijn met karakteristieke impedantie <span class="math notranslate nohighlight">\(Z_1\)</span>  gevolgd door een transmissielijn met impedantie <span class="math notranslate nohighlight">\(Z_2\)</span></span><a class="headerlink" href="#tweetransmissie" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_output docutils container">
+<figure class="align-default" id="terminatie">
+<img alt="_images/7a345b5874977ddab7dceffd9c9ba9edac691bc6892a1540785843e4d5485508.svg" src="_images/7a345b5874977ddab7dceffd9c9ba9edac691bc6892a1540785843e4d5485508.svg" />
+<figcaption>
+<p><span class="caption-number">Figuur 157 </span><span class="caption-text">Schematische voorstelling van een transmissielijn met karakteristieke impedantie <span class="math notranslate nohighlight">\(Z_1\)</span>  afgesloten met een terminatieimpedantie <span class="math notranslate nohighlight">\(Z_L\)</span></span><a class="headerlink" href="#terminatie" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
+</div>
 </section>
 <section id="uitwerken-van-een-ladderdiagram">
 <h2>Uitwerken van een ladderdiagram<a class="headerlink" href="#uitwerken-van-een-ladderdiagram" title="Link to this heading">#</a></h2>
 <p>Bij het uitwerken van een ladderdiagram volgen we hoe een ideale stap in aan de ingang loopt over de transmissielijn. Bij elke overgang waar de karakteristieke impedantie verandert, berekenen we de reflectie en de transmissie van het signaal. De reflectie <span class="math notranslate nohighlight">\(\rho\)</span> bij de overgang van de karakteristieke impedantie <span class="math notranslate nohighlight">\(Z_1\)</span> naar de karakteristieke impedantie <span class="math notranslate nohighlight">\(Z_2\)</span> bedraagt:</p>
 <div class="math notranslate nohighlight">
-\[ \rho = \frac{Z_2-Z_1}{Z_2+Z_1}\]</div>
+\[ \frac{V_{reflected}}{V_{incident}}=\rho = \frac{Z_2-Z_1}{Z_2+Z_1}\]</div>
 <p>en de transmissie bedraagt <span class="math notranslate nohighlight">\(1+\rho\)</span></p>
+<p>Voor de gereflecteerde golf hebben we dan de vergelijkingen:</p>
+<div class="math notranslate nohighlight">
+\[ \frac{V_{1\leftarrow}}{V_{1\rightarrow}}=\rho = \frac{Z_2-Z_1}{Z_2+Z_1}\]</div>
+<div class="math notranslate nohighlight">
+\[ I_{1\rightarrow}=\frac{V_{1\rightarrow}}{Z_1}\]</div>
+<div class="math notranslate nohighlight">
+\[ I_{1\leftarrow}=\frac{V_{1\leftarrow}}{Z_1}\]</div>
+<p>Voor de doorgaande golf hebben we dan de vergelijkingen:</p>
+<div class="math notranslate nohighlight">
+\[ \frac{V_{2\rightarrow}}{V_{1\rightarrow}}=1+ \rho \]</div>
+<div class="math notranslate nohighlight">
+\[ I_{2\rightarrow}=\frac{V_{2\rightarrow}}{Z_2}\]</div>
+<p>Deze vergelijkingen voor de reflectie en de transmissie gelden zowel voor het geval dat de puls van transmissielijn 1 (met karakteristieke impedantie <span class="math notranslate nohighlight">\(Z_1\)</span>) overgaat naar een puls op transmissielijn 2 (met karakteristieke impedantie <span class="math notranslate nohighlight">\(Z_2\)</span>), zie <a class="reference internal" href="#tweetransmissie"><span class="std std-numref">Figuur 156</span></a>, als voor het geval dat de puls van de transmissielijn afgesloten wordt door een belastingsimpedantie, zie <a class="reference internal" href="#terminatie"><span class="std std-numref">Figuur 157</span></a>.</p>
+</section>
+<section id="uitgewerkte-voorbeelden">
+<h2>Uitgewerkte voorbeelden<a class="headerlink" href="#uitgewerkte-voorbeelden" title="Link to this heading">#</a></h2>
+<p>We werken dit uit aan de hand van een aantal voorbeelden.
+Het eerste voorbeeld <code class="xref std std-numref docutils literal notranslate"><span class="pre">ladder1schem</span></code> bestudeert een transmissielijn van 50<span class="math notranslate nohighlight">\(\Omega\)</span> die afgesloten is met een terminatieweerstand van 120<span class="math notranslate nohighlight">\(\Omega\)</span> en die een bronweerstand heeft in de driver chip van 30<span class="math notranslate nohighlight">\(\Omega\)</span>.</p>
+<div class="cell docutils container">
+<div class="cell_output docutils container">
+<figure class="align-default" id="ladder1schem">
+<img alt="_images/b21b57fdb4ce633fe9bf4b8bce21e15d3e87d0401a7ab7065a1a1af949dd8ce8.svg" src="_images/b21b57fdb4ce633fe9bf4b8bce21e15d3e87d0401a7ab7065a1a1af949dd8ce8.svg" />
+</figure>
+</div>
+</div>
+<p>Het eerste dat we hierbij uitrekenen zijn de reflectiecoëfficiënten. We rekenen ook uit wat de initiële puls is die op de lijn vertrekt (<span class="math notranslate nohighlight">\(V_{puls start}\)</span>) en we kunnen uitrekenen wat de spanning op de lijn zal zijn na een oneindig aantal iteraties (<span class="math notranslate nohighlight">\(V_{eind}\)</span>).</p>
+<ul class="simple">
+<li><p>Reflectiecoëfficiënt eind:</p></li>
+<li><p>Reflectiecoëfficiënt begin:</p></li>
+<li><p>Initiële puls:</p></li>
+<li><p>Finale waarde spanning lijn:</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[ \rho_{eind} = \frac{Z_L-Z_o}{Z_L+Z_o}= \frac{120-50}{120+50}=0.41\]</div>
+<div class="math notranslate nohighlight">
+\[ \rho_{begin} = \frac{Z_s-Z_o}{Z_s+Z_o}= \frac{30-50}{30+50}=-0.25\]</div>
+<div class="math notranslate nohighlight">
+\[ V_{puls start} = \frac{Z_o}{Z_s+Z_o} V_{bron}= \frac{50}{30+50} V_{bron}=0.625 V_{bron}\]</div>
+<div class="math notranslate nohighlight">
+\[ V_{eind} = \frac{Z_L}{Z_s+Z_L} V_{bron}= \frac{120}{30+120}V_{bron}=0.8 V_{bron}\]</div>
+<p>Nu berekenen we het verloop van de puls over de lijn. Na elke reflectie wordt de puls kleiner (<span class="math notranslate nohighlight">\(|\rho| &lt; 1\)</span>) en we tellen voor elk punt op de lijn de waarde van de spanning van de puls op telkens de puls is gepasseerd. Merk op dat aan het startpunt en aan het eindpunt er geen tijdsverschil is tussen de invallende en de gereflecteerde golf zodat we op deze punten beiden gelijktijdig moeten optellen.
+Het resultaat van deze simulatie zien we in <a class="reference internal" href="#ladder1"><span class="std std-numref">Figuur 158</span></a></p>
 <div class="cell docutils container">
 <div class="cell_output docutils container">
 <figure class="align-default" id="ladder1">
-<img alt="_images/1d6bc40e44001777e9c9f8d006fb840eac93377c79e99cce1b6e39b953059df1.png" src="_images/1d6bc40e44001777e9c9f8d006fb840eac93377c79e99cce1b6e39b953059df1.png" />
+<img alt="_images/36a8e76c28395141649e2a93a60db5b7c0d461c4dcf6ea5717b9de5548f36142.png" src="_images/36a8e76c28395141649e2a93a60db5b7c0d461c4dcf6ea5717b9de5548f36142.png" />
 <figcaption>
-<p><span class="caption-number">Figuur 154 </span><span class="caption-text">Verloop van een 1V positieve puls op een 50 Ohm transmissielijn met een terminatieweerstand van 120 Ohm. De bronweerstand is 30 Ohm.</span><a class="headerlink" href="#ladder1" title="Link to this image">#</a></p>
+<p><span class="caption-number">Figuur 158 </span><span class="caption-text">Verloop van een 1V positieve puls op een 50 Ohm transmissielijn met een terminatieweerstand van 120 Ohm. De bronweerstand is 30 Ohm.</span><a class="headerlink" href="#ladder1" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 </div>
 </div>
-<p>We kunnen het theoretisch ladderdiagramma ook uitwerken voor een praktische propagatievertraging van 1.5ns en een pulse gestuurd door een IC van met een voedingsspanning op de uitgangsbuffers van 3.3 V. De aan-weerstand van de uitgangsbuffers is 10 Ohm (de aanweerstand van de pMOS) en de terminatieweerstand van de lijn is 25 Ohm. In dat geval verloopt de stijgende puls theoretisch zoals in <a class="reference internal" href="#ladderpmos"><span class="std std-numref">Figuur 155</span></a></p>
+<div class="cell tag_remove-cell4PDF docutils container">
+<div class="cell_output docutils container">
+<figure class="align-default">
+<div class="output text_html"><style>pre { line-height: 125%; }
+td.linenos .normal { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
+span.linenos { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
+td.linenos .special { color: #000000; background-color: #ffffc0; padding-left: 5px; padding-right: 5px; }
+span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 5px; padding-right: 5px; }
+.output_html .hll { background-color: #ffffcc }
+.output_html { background: #f8f8f8; }
+.output_html .c { color: #3D7B7B; font-style: italic } /* Comment */
+.output_html .err { border: 1px solid #F00 } /* Error */
+.output_html .k { color: #008000; font-weight: bold } /* Keyword */
+.output_html .o { color: #666 } /* Operator */
+.output_html .ch { color: #3D7B7B; font-style: italic } /* Comment.Hashbang */
+.output_html .cm { color: #3D7B7B; font-style: italic } /* Comment.Multiline */
+.output_html .cp { color: #9C6500 } /* Comment.Preproc */
+.output_html .cpf { color: #3D7B7B; font-style: italic } /* Comment.PreprocFile */
+.output_html .c1 { color: #3D7B7B; font-style: italic } /* Comment.Single */
+.output_html .cs { color: #3D7B7B; font-style: italic } /* Comment.Special */
+.output_html .gd { color: #A00000 } /* Generic.Deleted */
+.output_html .ge { font-style: italic } /* Generic.Emph */
+.output_html .ges { font-weight: bold; font-style: italic } /* Generic.EmphStrong */
+.output_html .gr { color: #E40000 } /* Generic.Error */
+.output_html .gh { color: #000080; font-weight: bold } /* Generic.Heading */
+.output_html .gi { color: #008400 } /* Generic.Inserted */
+.output_html .go { color: #717171 } /* Generic.Output */
+.output_html .gp { color: #000080; font-weight: bold } /* Generic.Prompt */
+.output_html .gs { font-weight: bold } /* Generic.Strong */
+.output_html .gu { color: #800080; font-weight: bold } /* Generic.Subheading */
+.output_html .gt { color: #04D } /* Generic.Traceback */
+.output_html .kc { color: #008000; font-weight: bold } /* Keyword.Constant */
+.output_html .kd { color: #008000; font-weight: bold } /* Keyword.Declaration */
+.output_html .kn { color: #008000; font-weight: bold } /* Keyword.Namespace */
+.output_html .kp { color: #008000 } /* Keyword.Pseudo */
+.output_html .kr { color: #008000; font-weight: bold } /* Keyword.Reserved */
+.output_html .kt { color: #B00040 } /* Keyword.Type */
+.output_html .m { color: #666 } /* Literal.Number */
+.output_html .s { color: #BA2121 } /* Literal.String */
+.output_html .na { color: #687822 } /* Name.Attribute */
+.output_html .nb { color: #008000 } /* Name.Builtin */
+.output_html .nc { color: #00F; font-weight: bold } /* Name.Class */
+.output_html .no { color: #800 } /* Name.Constant */
+.output_html .nd { color: #A2F } /* Name.Decorator */
+.output_html .ni { color: #717171; font-weight: bold } /* Name.Entity */
+.output_html .ne { color: #CB3F38; font-weight: bold } /* Name.Exception */
+.output_html .nf { color: #00F } /* Name.Function */
+.output_html .nl { color: #767600 } /* Name.Label */
+.output_html .nn { color: #00F; font-weight: bold } /* Name.Namespace */
+.output_html .nt { color: #008000; font-weight: bold } /* Name.Tag */
+.output_html .nv { color: #19177C } /* Name.Variable */
+.output_html .ow { color: #A2F; font-weight: bold } /* Operator.Word */
+.output_html .w { color: #BBB } /* Text.Whitespace */
+.output_html .mb { color: #666 } /* Literal.Number.Bin */
+.output_html .mf { color: #666 } /* Literal.Number.Float */
+.output_html .mh { color: #666 } /* Literal.Number.Hex */
+.output_html .mi { color: #666 } /* Literal.Number.Integer */
+.output_html .mo { color: #666 } /* Literal.Number.Oct */
+.output_html .sa { color: #BA2121 } /* Literal.String.Affix */
+.output_html .sb { color: #BA2121 } /* Literal.String.Backtick */
+.output_html .sc { color: #BA2121 } /* Literal.String.Char */
+.output_html .dl { color: #BA2121 } /* Literal.String.Delimiter */
+.output_html .sd { color: #BA2121; font-style: italic } /* Literal.String.Doc */
+.output_html .s2 { color: #BA2121 } /* Literal.String.Double */
+.output_html .se { color: #AA5D1F; font-weight: bold } /* Literal.String.Escape */
+.output_html .sh { color: #BA2121 } /* Literal.String.Heredoc */
+.output_html .si { color: #A45A77; font-weight: bold } /* Literal.String.Interpol */
+.output_html .sx { color: #008000 } /* Literal.String.Other */
+.output_html .sr { color: #A45A77 } /* Literal.String.Regex */
+.output_html .s1 { color: #BA2121 } /* Literal.String.Single */
+.output_html .ss { color: #19177C } /* Literal.String.Symbol */
+.output_html .bp { color: #008000 } /* Name.Builtin.Pseudo */
+.output_html .fm { color: #00F } /* Name.Function.Magic */
+.output_html .vc { color: #19177C } /* Name.Variable.Class */
+.output_html .vg { color: #19177C } /* Name.Variable.Global */
+.output_html .vi { color: #19177C } /* Name.Variable.Instance */
+.output_html .vm { color: #19177C } /* Name.Variable.Magic */
+.output_html .il { color: #666 } /* Literal.Number.Integer.Long */</style><div class="highlight"><pre><span></span><span class="p">.</span><span class="nx">TITLE</span><span class="w"> </span><span class="nx">Ideal</span><span class="w"> </span><span class="nx">Transmission</span><span class="w"> </span><span class="nx">Line</span><span class="w"> </span><span class="nx">Example</span>
+<span class="nx">V1</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="nx">PULSE</span><span class="p">(</span><span class="mi">0</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="m m-Double">0.1</span><span class="nx">n</span><span class="w"> </span><span class="m m-Double">0.1</span><span class="nx">n</span><span class="w"> </span><span class="m m-Double">0.1</span><span class="nx">n</span><span class="w"> </span><span class="mi">100</span><span class="nx">n</span><span class="w"> </span><span class="mi">200</span><span class="nx">n</span><span class="p">)</span>
+<span class="nx">Rs</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="mi">30</span>
+<span class="nx">O1</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="mi">3</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="nx">LOSSYMOD</span><span class="w"> </span><span class="nx">TD</span><span class="p">=</span><span class="mi">2</span><span class="nx">n</span>
+<span class="nx">RL</span><span class="w"> </span><span class="mi">3</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="mi">120</span>
+<span class="p">.</span><span class="nx">model</span><span class="w"> </span><span class="nx">LOSSYMOD</span><span class="w"> </span><span class="nx">ltra</span><span class="w"> </span><span class="nx">r</span><span class="p">=</span><span class="m m-Double">0.0514</span><span class="w"> </span><span class="nx">g</span><span class="p">=</span><span class="mi">0</span><span class="w"> </span><span class="nx">l</span><span class="p">=</span><span class="mi">615</span><span class="nx">E</span><span class="o">-</span><span class="mi">9</span><span class="w"> </span><span class="nx">c</span><span class="p">=</span><span class="mi">246</span><span class="nx">e</span><span class="o">-</span><span class="mi">12</span><span class="w"> </span><span class="nx">len</span><span class="p">=</span><span class="m m-Double">0.0812</span>
+</pre></div>
+</div></figure>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_output docutils container">
+<figure class="align-default">
+<img alt="_images/5a6e4ba2d9e30a4de86b0b9713a5d8586200a5b4b93854f1b9477cb7f67e96e3.png" src="_images/5a6e4ba2d9e30a4de86b0b9713a5d8586200a5b4b93854f1b9477cb7f67e96e3.png" />
+</figure>
+</div>
+</div>
+<p>We kunnen het theoretisch ladderdiagramma ook uitwerken voor een praktische propagatievertraging van 1.5ns en een pulse gestuurd door een IC van met een voedingsspanning op de uitgangsbuffers van 3.3 V. De aan-weerstand van de uitgangsbuffers is 10 Ohm (de aanweerstand van de pMOS) en de terminatieweerstand van de lijn is 25 Ohm (zie <code class="xref std std-numref docutils literal notranslate"><span class="pre">ladder2</span></code>). In dat geval verloopt de stijgende puls theoretisch zoals in <a class="reference internal" href="#ladderpmos"><span class="std std-numref">Figuur 159</span></a></p>
+<div class="cell docutils container">
+<div class="cell_output docutils container">
+<figure class="align-default" id="ladder2">
+<img alt="_images/81db08ab4c9369b07aeaf6346ff48fecbfa05329e2732d5365cc3db46c1091e0.svg" src="_images/81db08ab4c9369b07aeaf6346ff48fecbfa05329e2732d5365cc3db46c1091e0.svg" />
+</figure>
+</div>
+</div>
+<p>Ook hier rekenen we de reflectiecoëfficiënten uit.</p>
+<ul class="simple">
+<li><p>Reflectiecoëfficiënt eind:</p></li>
+<li><p>Reflectiecoëfficiënt begin:</p></li>
+<li><p>Initiële puls:</p></li>
+<li><p>Finale waarde spanning lijn:</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[ \rho_{eind} = \frac{Z_L-Z_o}{Z_L+Z_o}= \frac{25-50}{25+50}=-0.33\]</div>
+<div class="math notranslate nohighlight">
+\[ \rho_{begin} = \frac{Z_s-Z_o}{Z_s+Z_o}= \frac{10-50}{10+50}=-0.66\]</div>
+<div class="math notranslate nohighlight">
+\[ V_{puls start} = \frac{Z_o}{Z_s+Z_o} V_{bron}= \frac{50}{10+50} 3.3V=2.75 V\]</div>
+<div class="math notranslate nohighlight">
+\[ V_{eind} = \frac{Z_L}{Z_s+Z_L} V_{bron}= \frac{25}{10+25}3.3 V=2.36 V\]</div>
 <div class="cell docutils container">
 <div class="cell_output docutils container">
 <figure class="align-default" id="ladderpmos">
-<img alt="_images/e5fe8e8fb5dc77939090e84d91fdbb1b5bfaa1792df00b5f3f9e39ba139cc025.png" src="_images/e5fe8e8fb5dc77939090e84d91fdbb1b5bfaa1792df00b5f3f9e39ba139cc025.png" />
+<img alt="_images/4b750327481453451d23978cf81c1fb08aac0654006355c2d5fc465ae9596f9e.png" src="_images/4b750327481453451d23978cf81c1fb08aac0654006355c2d5fc465ae9596f9e.png" />
 <figcaption>
-<p><span class="caption-number">Figuur 155 </span><span class="caption-text">Verloop van een 3.3V positieve puls op een 50 Ohm transmissielijn met een terminatieweerstand van 25 Ohm. De bronweerstand is 10 Ohm.</span><a class="headerlink" href="#ladderpmos" title="Link to this image">#</a></p>
+<p><span class="caption-number">Figuur 159 </span><span class="caption-text">Verloop van een 3.3V positieve puls op een 50 Ohm transmissielijn met een terminatieweerstand van 25 Ohm. De bronweerstand is 10 Ohm.</span><a class="headerlink" href="#ladderpmos" title="Link to this image">#</a></p>
 </figcaption>
+</figure>
+</div>
+</div>
+<div class="cell docutils container">
+</div>
+<div class="cell tag_remove-cell4PDF docutils container">
+<div class="cell_output docutils container">
+<figure class="align-default">
+<div class="output text_html"><style>pre { line-height: 125%; }
+td.linenos .normal { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
+span.linenos { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
+td.linenos .special { color: #000000; background-color: #ffffc0; padding-left: 5px; padding-right: 5px; }
+span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 5px; padding-right: 5px; }
+.output_html .hll { background-color: #ffffcc }
+.output_html { background: #f8f8f8; }
+.output_html .c { color: #3D7B7B; font-style: italic } /* Comment */
+.output_html .err { border: 1px solid #F00 } /* Error */
+.output_html .k { color: #008000; font-weight: bold } /* Keyword */
+.output_html .o { color: #666 } /* Operator */
+.output_html .ch { color: #3D7B7B; font-style: italic } /* Comment.Hashbang */
+.output_html .cm { color: #3D7B7B; font-style: italic } /* Comment.Multiline */
+.output_html .cp { color: #9C6500 } /* Comment.Preproc */
+.output_html .cpf { color: #3D7B7B; font-style: italic } /* Comment.PreprocFile */
+.output_html .c1 { color: #3D7B7B; font-style: italic } /* Comment.Single */
+.output_html .cs { color: #3D7B7B; font-style: italic } /* Comment.Special */
+.output_html .gd { color: #A00000 } /* Generic.Deleted */
+.output_html .ge { font-style: italic } /* Generic.Emph */
+.output_html .ges { font-weight: bold; font-style: italic } /* Generic.EmphStrong */
+.output_html .gr { color: #E40000 } /* Generic.Error */
+.output_html .gh { color: #000080; font-weight: bold } /* Generic.Heading */
+.output_html .gi { color: #008400 } /* Generic.Inserted */
+.output_html .go { color: #717171 } /* Generic.Output */
+.output_html .gp { color: #000080; font-weight: bold } /* Generic.Prompt */
+.output_html .gs { font-weight: bold } /* Generic.Strong */
+.output_html .gu { color: #800080; font-weight: bold } /* Generic.Subheading */
+.output_html .gt { color: #04D } /* Generic.Traceback */
+.output_html .kc { color: #008000; font-weight: bold } /* Keyword.Constant */
+.output_html .kd { color: #008000; font-weight: bold } /* Keyword.Declaration */
+.output_html .kn { color: #008000; font-weight: bold } /* Keyword.Namespace */
+.output_html .kp { color: #008000 } /* Keyword.Pseudo */
+.output_html .kr { color: #008000; font-weight: bold } /* Keyword.Reserved */
+.output_html .kt { color: #B00040 } /* Keyword.Type */
+.output_html .m { color: #666 } /* Literal.Number */
+.output_html .s { color: #BA2121 } /* Literal.String */
+.output_html .na { color: #687822 } /* Name.Attribute */
+.output_html .nb { color: #008000 } /* Name.Builtin */
+.output_html .nc { color: #00F; font-weight: bold } /* Name.Class */
+.output_html .no { color: #800 } /* Name.Constant */
+.output_html .nd { color: #A2F } /* Name.Decorator */
+.output_html .ni { color: #717171; font-weight: bold } /* Name.Entity */
+.output_html .ne { color: #CB3F38; font-weight: bold } /* Name.Exception */
+.output_html .nf { color: #00F } /* Name.Function */
+.output_html .nl { color: #767600 } /* Name.Label */
+.output_html .nn { color: #00F; font-weight: bold } /* Name.Namespace */
+.output_html .nt { color: #008000; font-weight: bold } /* Name.Tag */
+.output_html .nv { color: #19177C } /* Name.Variable */
+.output_html .ow { color: #A2F; font-weight: bold } /* Operator.Word */
+.output_html .w { color: #BBB } /* Text.Whitespace */
+.output_html .mb { color: #666 } /* Literal.Number.Bin */
+.output_html .mf { color: #666 } /* Literal.Number.Float */
+.output_html .mh { color: #666 } /* Literal.Number.Hex */
+.output_html .mi { color: #666 } /* Literal.Number.Integer */
+.output_html .mo { color: #666 } /* Literal.Number.Oct */
+.output_html .sa { color: #BA2121 } /* Literal.String.Affix */
+.output_html .sb { color: #BA2121 } /* Literal.String.Backtick */
+.output_html .sc { color: #BA2121 } /* Literal.String.Char */
+.output_html .dl { color: #BA2121 } /* Literal.String.Delimiter */
+.output_html .sd { color: #BA2121; font-style: italic } /* Literal.String.Doc */
+.output_html .s2 { color: #BA2121 } /* Literal.String.Double */
+.output_html .se { color: #AA5D1F; font-weight: bold } /* Literal.String.Escape */
+.output_html .sh { color: #BA2121 } /* Literal.String.Heredoc */
+.output_html .si { color: #A45A77; font-weight: bold } /* Literal.String.Interpol */
+.output_html .sx { color: #008000 } /* Literal.String.Other */
+.output_html .sr { color: #A45A77 } /* Literal.String.Regex */
+.output_html .s1 { color: #BA2121 } /* Literal.String.Single */
+.output_html .ss { color: #19177C } /* Literal.String.Symbol */
+.output_html .bp { color: #008000 } /* Name.Builtin.Pseudo */
+.output_html .fm { color: #00F } /* Name.Function.Magic */
+.output_html .vc { color: #19177C } /* Name.Variable.Class */
+.output_html .vg { color: #19177C } /* Name.Variable.Global */
+.output_html .vi { color: #19177C } /* Name.Variable.Instance */
+.output_html .vm { color: #19177C } /* Name.Variable.Magic */
+.output_html .il { color: #666 } /* Literal.Number.Integer.Long */</style><div class="highlight"><pre><span></span><span class="p">.</span><span class="nx">TITLE</span><span class="w"> </span><span class="nx">Ideal</span><span class="w"> </span><span class="nx">Transmission</span><span class="w"> </span><span class="nx">Line</span><span class="w"> </span><span class="nx">Example</span>
+<span class="nx">V1</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="nx">PULSE</span><span class="p">(</span><span class="mi">0</span><span class="w"> </span><span class="m m-Double">3.3</span><span class="w"> </span><span class="m m-Double">0.1</span><span class="nx">n</span><span class="w"> </span><span class="m m-Double">0.1</span><span class="nx">n</span><span class="w"> </span><span class="m m-Double">0.1</span><span class="nx">n</span><span class="w"> </span><span class="mi">100</span><span class="nx">n</span><span class="w"> </span><span class="mi">200</span><span class="nx">n</span><span class="p">)</span>
+<span class="nx">Rs</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="mi">10</span>
+<span class="nx">O1</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="mi">3</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="nx">LOSSYMOD</span><span class="w"> </span><span class="nx">TD</span><span class="p">=</span><span class="mi">2</span><span class="nx">n</span>
+<span class="nx">RL</span><span class="w"> </span><span class="mi">3</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="mi">25</span>
+<span class="p">.</span><span class="nx">model</span><span class="w"> </span><span class="nx">LOSSYMOD</span><span class="w"> </span><span class="nx">ltra</span><span class="w"> </span><span class="nx">r</span><span class="p">=</span><span class="m m-Double">0.0514</span><span class="w"> </span><span class="nx">g</span><span class="p">=</span><span class="mi">0</span><span class="w"> </span><span class="nx">l</span><span class="p">=</span><span class="mi">615</span><span class="nx">E</span><span class="o">-</span><span class="mi">9</span><span class="w"> </span><span class="nx">c</span><span class="p">=</span><span class="mi">246</span><span class="nx">e</span><span class="o">-</span><span class="mi">12</span><span class="w"> </span><span class="nx">len</span><span class="p">=</span><span class="m m-Double">0.1219</span>
+</pre></div>
+</div></figure>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_output docutils container">
+<figure class="align-default">
+<img alt="_images/b0db1adf398566cd83a28ae740ec204705654c411ca54294248ec9f0d1c88238.png" src="_images/b0db1adf398566cd83a28ae740ec204705654c411ca54294248ec9f0d1c88238.png" />
 </figure>
 </div>
 </div>
@@ -670,8 +946,9 @@ In het geval met een baantje met karakteristieke impedantie 32 Ohm meten we aan 
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#inleiding">inleiding</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#inleiding">Inleiding</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#uitwerken-van-een-ladderdiagram">Uitwerken van een ladderdiagram</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#uitgewerkte-voorbeelden">Uitgewerkte voorbeelden</a></li>
 </ul>
   </nav></div>
 

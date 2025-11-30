@@ -2,11 +2,11 @@
   "content": [
     {
       "content": null,
-      "created": "2025-11-27T23:51:59.308619Z",
+      "created": "2025-11-30T09:46:32.291595Z",
       "format": null,
       "hash": null,
       "hash_algorithm": null,
-      "last_modified": "2025-11-27T23:51:59.308619Z",
+      "last_modified": "2025-11-30T09:46:32.291595Z",
       "mimetype": null,
       "name": "video",
       "path": "extra_path/video",
@@ -15,11 +15,11 @@
       "writable": true
     }
   ],
-  "created": "2025-11-27T23:51:59.307619Z",
+  "created": "2025-11-30T09:46:32.289594Z",
   "format": "json",
   "hash": null,
   "hash_algorithm": null,
-  "last_modified": "2025-11-27T23:51:59.307619Z",
+  "last_modified": "2025-11-30T09:46:32.289594Z",
   "mimetype": null,
   "name": "extra_path",
   "path": "extra_path",
