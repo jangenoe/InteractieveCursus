@@ -12,7 +12,6 @@ from schemdraw.elements import *
 from schemdraw import flow
 import skrf as rf
 from ipywidgets import interact,FloatSlider
-
 from IPython import display
 import os
 os.environ['NGSPICE_LIBRARY_PATH'] = '/opt/homebrew/Cellar/libngspice/45.2/lib/libngspice.dylib'

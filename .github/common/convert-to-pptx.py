@@ -360,7 +360,7 @@ for ipath in notebooks:
                             # Extract video path from Video() call
                             video_path = None
                             source_line = cell.source.strip()
-                            print(source_line)
+                            # print(source_line)
                             # Look for Video("path") pattern
                             import re
                             video_match = re.search(r'display.Video\s*\(\s*["\']([^"\']+)["\']', source_line)
