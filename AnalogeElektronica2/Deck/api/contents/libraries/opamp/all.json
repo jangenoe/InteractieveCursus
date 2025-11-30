@@ -2,11 +2,11 @@
   "content": [
     {
       "content": null,
-      "created": "2025-11-30T18:38:27.363762Z",
+      "created": "2025-11-30T18:49:38.786233Z",
       "format": null,
       "hash": null,
       "hash_algorithm": null,
-      "last_modified": "2025-11-30T18:31:44.775068Z",
+      "last_modified": "2025-11-30T18:42:54.867612Z",
       "mimetype": null,
       "name": "BasicOpamp.cir",
       "path": "libraries/opamp/BasicOpamp.cir",
@@ -16,11 +16,11 @@
     },
     {
       "content": null,
-      "created": "2025-11-30T18:38:27.363762Z",
+      "created": "2025-11-30T18:49:38.786233Z",
       "format": null,
       "hash": null,
       "hash_algorithm": null,
-      "last_modified": "2025-11-30T18:31:44.775068Z",
+      "last_modified": "2025-11-30T18:42:54.867612Z",
       "mimetype": null,
       "name": "LMV981.cir",
       "path": "libraries/opamp/LMV981.cir",
@@ -29,11 +29,11 @@
       "writable": true
     }
   ],
-  "created": "2025-11-30T18:38:27.363762Z",
+  "created": "2025-11-30T18:49:38.786233Z",
   "format": "json",
   "hash": null,
   "hash_algorithm": null,
-  "last_modified": "2025-11-30T18:38:27.363762Z",
+  "last_modified": "2025-11-30T18:49:38.786233Z",
   "mimetype": null,
   "name": "opamp",
   "path": "libraries/opamp",
