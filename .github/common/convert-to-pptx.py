@@ -197,14 +197,7 @@ def latex_to_unicode(latex_text):
         # Delimiters
         r'\langle': '⟨', r'\rangle': '⟩', r'\lceil': '⌈', r'\rceil': '⌉',
         r'\lfloor': '⌊', r'\rfloor': '⌋', r'\{': '{', r'\}': '}',
-        
-        # Subscripts and superscripts (common ones)
-        r'_0': '₀', r'_1': '₁', r'_2': '₂', r'_3': '₃', r'_4': '₄',
-        r'_5': '₅', r'_6': '₆', r'_7': '₇', r'_8': '₈', r'_9': '₉',
-        r'^0': '⁰', r'^1': '¹', r'^2': '²', r'^3': '³', r'^4': '⁴',
-        r'^5': '⁵', r'^6': '⁶', r'^7': '⁷', r'^8': '⁸', r'^9': '⁹',
-        r'^+': '⁺', r'^-': '⁻', r'^=': '⁼', r'^(': '⁽', r'^)': '⁾',
-        
+                
         # Common fractions
         r'\frac{1}{2}': '½', r'\frac{1}{3}': '⅓', r'\frac{2}{3}': '⅔',
         r'\frac{1}{4}': '¼', r'\frac{3}{4}': '¾', r'\frac{1}{5}': '⅕',
@@ -218,7 +211,6 @@ def latex_to_unicode(latex_text):
     # Sort by length (longest first) to avoid partial replacements
     for latex_cmd in sorted(latex_unicode_map.keys(), key=len, reverse=True):
         result = result.replace(latex_cmd, latex_unicode_map[latex_cmd])
-    
     return result
 
 def add_parsed_bullet(paragraph, text):
@@ -230,6 +222,7 @@ def add_parsed_bullet(paragraph, text):
         r"(?P<bold>\*\*(.*?)\*\*)|"
         r"(?P<dollar>\$(.*?)\$)"
     )
+    underscore_pattern = r"_{(.*?)}"
     last_end = 0
     
     for match in re.finditer(combined_pattern, text):
@@ -254,7 +247,37 @@ def add_parsed_bullet(paragraph, text):
             run.text = match.group(6)
             run.font.bold = True
         elif match.group("dollar"):
-            run.text =  latex_to_unicode(match.group(8))
+            dollar_content = match.group(8)
+            # First apply LaTeX conversion
+            converted_content = latex_to_unicode(dollar_content)
+            
+            # Then search for underscore patterns in the converted content
+            underscore_last_end = 0
+            has_underscores = False
+            
+            for underscore_match in re.finditer(underscore_pattern, converted_content):
+                has_underscores = True
+                u_start, u_end = underscore_match.span()
+                
+                # Add text before the underscore pattern
+                if u_start > underscore_last_end:
+                    run.text += converted_content[underscore_last_end:u_start]
+                
+                # Add the underscore content with subscript formatting
+                sub_run = paragraph.add_run()
+                sub_run.text = underscore_match.group(1)
+                sub_run.font.size = Pt(18)
+                sub_run.font._element.set('baseline', '-25000')
+                
+                underscore_last_end = u_end
+            
+            # Add any remaining text after the last underscore
+            if has_underscores:
+                if underscore_last_end < len(converted_content):
+                    run.text += converted_content[underscore_last_end:]
+            else:
+                # No underscores found, just use the converted content
+                run.text = converted_content
         last_end = end
 
     # Add any remaining text after the last tag
