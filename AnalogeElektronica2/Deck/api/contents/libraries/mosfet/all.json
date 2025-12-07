@@ -2,11 +2,11 @@
   "content": [
     {
       "content": null,
-      "created": "2025-11-30T23:46:42.883059Z",
+      "created": "2025-12-07T23:55:19.536549Z",
       "format": null,
       "hash": null,
       "hash_algorithm": null,
-      "last_modified": "2025-11-30T23:40:08.141203Z",
+      "last_modified": "2025-12-07T23:48:33.946601Z",
       "mimetype": null,
       "name": "irf150.lib",
       "path": "libraries/mosfet/irf150.lib",
@@ -15,11 +15,11 @@
       "writable": true
     }
   ],
-  "created": "2025-11-30T23:46:42.883059Z",
+  "created": "2025-12-07T23:55:19.536549Z",
   "format": "json",
   "hash": null,
   "hash_algorithm": null,
-  "last_modified": "2025-11-30T23:46:42.883059Z",
+  "last_modified": "2025-12-07T23:55:19.536549Z",
   "mimetype": null,
   "name": "mosfet",
   "path": "libraries/mosfet",

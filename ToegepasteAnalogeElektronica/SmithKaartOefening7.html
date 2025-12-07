@@ -573,7 +573,7 @@ De antenne die de belasting is van dit circuit modelleren we als in <a class="re
 <div class="cell docutils container">
 <div class="cell_output docutils container">
 <figure class="align-default" id="smith7ciran">
-<img alt="_images/a2517e9994a168587c1647e76f3953309826de1f6b711e817ceadd899c686354.svg" src="_images/a2517e9994a168587c1647e76f3953309826de1f6b711e817ceadd899c686354.svg" />
+<img alt="_images/cd9b103a1b273e1324623cd6d2cb521f7c88c6b9ef460806406f146f7c74e4c4.svg" src="_images/cd9b103a1b273e1324623cd6d2cb521f7c88c6b9ef460806406f146f7c74e4c4.svg" />
 <figcaption>
 <p><span class="caption-number">Figuur 250 </span><span class="caption-text">circuit van de aangepaste antenne.</span><a class="headerlink" href="#smith7ciran" title="Link to this image">#</a></p>
 </figcaption>
@@ -589,11 +589,16 @@ De antenne die de belasting is van dit circuit modelleren we als in <a class="re
 \[Y_L Z_o= 2+ j  \hspace{2mm}  1\]</div>
 <p>We plaatsen de waarde van <span class="math notranslate nohighlight">\(Y_L Z_o\)</span> op de Smith kaart van de admittantie en we draaien tot we de cirkel waarbij het reële deel van admittantie 1 is tegenkomen. Dit ziet er uit als in <a class="reference internal" href="#smith71"><span class="std std-numref">Figuur 251</span></a>.</p>
 <div class="cell docutils container">
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(2+1.0053096491487337j)
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_output docutils container">
 <figure class="align-default" id="smith71">
-<img alt="_images/9a39f7c34f237705b222a7d92393dbbaa4234139e279578a1a02f61751d2e001.png" src="_images/9a39f7c34f237705b222a7d92393dbbaa4234139e279578a1a02f61751d2e001.png" />
+<img alt="_images/2847097bbf9db132943171df6ac034b9bc934109db01b83d323987158d83a222.png" src="_images/2847097bbf9db132943171df6ac034b9bc934109db01b83d323987158d83a222.png" />
 <figcaption>
 <p><span class="caption-number">Figuur 251 </span><span class="caption-text">Smith kaart van de admitantie.</span><a class="headerlink" href="#smith71" title="Link to this image">#</a></p>
 </figcaption>
@@ -601,6 +606,11 @@ De antenne die de belasting is van dit circuit modelleren we als in <a class="re
 </div>
 </div>
 <div class="cell docutils container">
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.015625
+</pre></div>
+</div>
+</div>
 </div>
 <p>We kijken nu welke hoek we moeten draaien om deze cirkel te snijden.
 Aangezien de opgave was om dit zo kort mogelijk bij de belasting te doen, kiezen we voor het eerste snijpunt.
@@ -617,13 +627,18 @@ Op de kaart lezen we af dat dit na 90  graden is. We hebben dus een stukje van 4
 </div>
 </div>
 <div class="cell docutils container">
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-0.324
+</pre></div>
+</div>
+</div>
 </div>
 <p>Het imaginair gedeelte van de y waarde die we op de kaart aflezen is y=-1 j. We moeten dit dus compenseren door een imaginair deel van y=+1 j van de open transmissielijn.
 We starten dus de cirkelboog bij y=0 (zie oranje lijn in <a class="reference internal" href="#smith72"><span class="std std-numref">Figuur 252</span></a>) en kijken waar deze de waarde van y=+1 j snijdt op de Smith kaart. De lengte van de boog die we hiervoor nodig hebben is 90 graden. Dit komt ook overeen met een lengte van 41.0 mm.</p>
 <div class="cell docutils container">
 <div class="cell_output docutils container">
 <figure class="align-default" id="smith72">
-<img alt="_images/aa37f336acabca6b5e9f6e9d62bcb9ca9cb50b9ffbaf21c67737bbbce7c3fedf.png" src="_images/aa37f336acabca6b5e9f6e9d62bcb9ca9cb50b9ffbaf21c67737bbbce7c3fedf.png" />
+<img alt="_images/ef11d89e487ad6229e1a70dcdedf56f6df25a58b089c23f9f7af41669f4221d3.png" src="_images/ef11d89e487ad6229e1a70dcdedf56f6df25a58b089c23f9f7af41669f4221d3.png" />
 <figcaption>
 <p><span class="caption-number">Figuur 252 </span><span class="caption-text">Smith kaart van de admittantie met ook de aangave van de open transmissielijn.</span><a class="headerlink" href="#smith72" title="Link to this image">#</a></p>
 </figcaption>
@@ -633,8 +648,7 @@ We starten dus de cirkelboog bij y=0 (zie oranje lijn in <a class="reference int
 <p>We kunnen dit ook in tabelvorm uitwerken. Ook hier zoeken we een waarde van 15.625j mS Dit zie je dan hieronder weergegeven.</p>
 <div class="cell docutils container">
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>hoek    admitantie (Siemens)     lengte coax (cm)
-  85       Y= +14.32j mS     lengte=3.87 cm
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>hoek    admittantie (Siemens)     lengte coax (cm)
   86       Y= +14.57j mS     lengte=3.92 cm
   87       Y= +14.83j mS     lengte=3.96 cm
   88       Y= +15.09j mS     lengte=4.01 cm
@@ -643,7 +657,6 @@ We starten dus de cirkelboog bij y=0 (zie oranje lijn in <a class="reference int
   91       Y= +15.90j mS     lengte=4.15 cm
   92       Y= +16.18j mS     lengte=4.19 cm
   93       Y= +16.47j mS     lengte=4.24 cm
-  94       Y= +16.76j mS     lengte=4.28 cm
 </pre></div>
 </div>
 </div>
@@ -652,7 +665,7 @@ We starten dus de cirkelboog bij y=0 (zie oranje lijn in <a class="reference int
 <div class="cell docutils container">
 <div class="cell_output docutils container">
 <figure class="align-default" id="smith7cir">
-<img alt="_images/10a95806df689ae2aafa96ed89105e6563468f1b4fea79f030654d4ac199387a.svg" src="_images/10a95806df689ae2aafa96ed89105e6563468f1b4fea79f030654d4ac199387a.svg" />
+<img alt="_images/51c31f9cf016e990216baa582ad54c40153ebbacdc3517c53735c366aa00392d.svg" src="_images/51c31f9cf016e990216baa582ad54c40153ebbacdc3517c53735c366aa00392d.svg" />
 <figcaption>
 <p><span class="caption-number">Figuur 253 </span><span class="caption-text">circuit van de aangepaste antenne.</span><a class="headerlink" href="#smith7cir" title="Link to this image">#</a></p>
 </figcaption>
@@ -671,17 +684,27 @@ We starten dus de cirkelboog bij y=0 (zie oranje lijn in <a class="reference int
 \[Y_L Z_o= 2+ j  \hspace{2mm}  1.1\]</div>
 <p><span class="math notranslate nohighlight">\(Y_L Z_o\)</span> is dan de vertrekwaarde op de Smith kaart.</p>
 <div class="cell docutils container">
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(2+1.1058406140636072j)
+</pre></div>
+</div>
+</div>
 </div>
 <p>Vervolgens moeten we weten hoegroot de golflengte is voor een 550 MHz signaal. Vertrekkende van de gegeven golflengte <span class="math notranslate nohighlight">\(\lambda_{PCB}\)</span> voor het 500 MHz signaal kunnen we de golflengte van het 550 MHz signaal afleiden:</p>
 <div class="math notranslate nohighlight">
 \[\lambda_{PCB,550}  = \frac {500}{550} \lambda_{PCB,500}\]</div>
 <p>We bekomen dus een golflengte van 298 mm. De 2 baantjes van 41 mm zijn dus 13.75 % van de golflengte en we moeten zowel vanuit het punt van de antenne als het punt van de open transmissielijn een hoek van 99 graden draaien op de Smith kaart.</p>
 <div class="cell docutils container">
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(298.1818181818182, 0.13758389261744966, 99.06040268456375)
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_output docutils container">
 <figure class="align-default" id="smith73">
-<img alt="_images/4ea638eed1ac6a611ea7327265433617364326e3b247545aa6e769930396bd50.png" src="_images/4ea638eed1ac6a611ea7327265433617364326e3b247545aa6e769930396bd50.png" />
+<img alt="_images/1a4acbe175e18a42e43f5c509834513526578580161fb47dbad987ccc1f69634.png" src="_images/1a4acbe175e18a42e43f5c509834513526578580161fb47dbad987ccc1f69634.png" />
 <figcaption>
 <p><span class="caption-number">Figuur 254 </span><span class="caption-text">Smith kaart van de admittantie met ook de aangave van de open transmissielijn. De groene dots geven een aangepaste belasting (500 MHz) en de rose dots de belasting aan 550 MHz</span><a class="headerlink" href="#smith73" title="Link to this image">#</a></p>
 </figcaption>
@@ -689,9 +712,21 @@ We starten dus de cirkelboog bij y=0 (zie oranje lijn in <a class="reference int
 </div>
 </div>
 <div class="cell docutils container">
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(np.complex128(64+0.16990877275945293j),
+ np.complex128(70.88620602129248-17.455525948962876j),
+ np.complex128(0.8512383848841492+0.20961502314900715j))
+</pre></div>
+</div>
+</div>
 </div>
 <p>De Smithkaart in <a class="reference internal" href="#smith73"><span class="std std-numref">Figuur 254</span></a> toont het verschil tussen de admittanties bekomen bekomen aan 500 MHz (groene dots) en de admittanties bekomen bekomen aan 550 MHz (roze dots). Wanneer we de op de Smithkaart afgelezen waardes van de 2 groene dots optellen bekomen we 1, wat overeenkomt met een belasting van 64 Ohm en een aangepaste transmissielijn.  Wanneer we de op de smithkaart afgelezen waardes van de 2 roze dots optellen bekomen we 0.85 +0.2 j, wat overeenkomt met een belasting van 70.9-17.5 j Ohm.</p>
 <div class="cell docutils container">
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.complex128(0.06668201847465817-0.12078000208989162j)
+</pre></div>
+</div>
+</div>
 </div>
 <p>De reflectiecoëfficiënt die we dan bekomen op 550 MHz is:</p>
 <div class="math notranslate nohighlight">
