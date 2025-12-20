@@ -2,7 +2,7 @@
   "jupyter-config-data": {
     "appName": "KULeuven Cursus",
     "appUrl": "./lab",
-    "appVersion": "0.7.0",
+    "appVersion": "0.7.1",
     "baseUrl": "./",
     "contentsStorageName": "JupyterDeck Storage",
     "defaultKernelName": "python",
@@ -51,7 +51,7 @@
       },
       {
         "extension": "./extension",
-        "load": "static/remoteEntry.37de765466b6d480035c.js",
+        "load": "static/remoteEntry.f85e32c9dc9a4472331f.js",
         "name": "jupyterlab-myst",
         "style": "./style"
       },
