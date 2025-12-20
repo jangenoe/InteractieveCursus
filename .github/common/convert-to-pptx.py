@@ -20,6 +20,30 @@ from pptx.shapes.autoshape import Shape
 from bs4 import BeautifulSoup
 import re
 
+"""
+import typing
+import mathml2omml
+import latex2mathml.converter
+from docx.oxml import parse_xml
+
+Add equation to Paragraph element
+    p is een paragraph van docx, latex_string is de latex string tussen $ $
+    werkt dit ook voor pptx? ja, pptx.paragraphe
+    bron: https://github.com/keh9mark/math2docx/blob/main/main.py
+    Dan kan de rest misschien weg
+    p._p.append(_formula(latex_string))
+
+def _formula(latex_string: str) -> typing.Any:
+    mathml_output = latex2mathml.converter.convert(latex_string)
+    omml_output = mathml2omml.convert(mathml_output)
+    xml_output = (
+        f'<p xmlns:m="http://schemas.openxmlformats.org/officeDocument'
+        f'/2006/math">{omml_output}</p>'
+    )
+    return parse_xml(xml_output)[0]
+
+"""
+
 # Collect a list of all notebooks in the content folder
 notebooks = glob("ToegepasteAnalogeElektronica/*.ipynb", recursive=True)
 notebooks+= glob("AnalogeElektronica2/*.ipynb", recursive=True)
@@ -44,7 +68,7 @@ lines_per_chunk=11
 
 
 prs = Presentation(slidetemplate)
-body_left, body_top, body_width, body_height=Inches(1), Inches(0.62), prs.slide_width-Inches(1.5), Inches(6.2)
+body_left, body_top, body_width, body_height=Inches(1), Inches(0.59), prs.slide_width-Inches(1.5), Inches(6.2)
 
 report_all_shapes_in_template=True
 if report_all_shapes_in_template:
@@ -223,6 +247,7 @@ def add_parsed_bullet(paragraph, text):
         r"(?P<dollar>\$(.*?)\$)"
     )
     underscore_pattern = r"_{(.*?)}"
+    superscript_pattern = r"\^{(.*?)}"
     last_end = 0
     
     for match in re.finditer(combined_pattern, text):
@@ -276,8 +301,34 @@ def add_parsed_bullet(paragraph, text):
                 if underscore_last_end < len(converted_content):
                     run.text += converted_content[underscore_last_end:]
             else:
-                # No underscores found, just use the converted content
-                run.text = converted_content
+                # No underscores found
+                # Then search for superscripts patterns in the converted content
+                superscripts_last_end = 0
+                has_superscripts = False
+                
+                for superscript_match in re.finditer(superscript_pattern, converted_content):
+                    has_superscripts = True
+                    s_start, s_end = superscript_match.span()
+                    
+                    # Add text before the underscore pattern
+                    if s_start > superscripts_last_end:
+                        run.text += converted_content[superscripts_last_end:s_start]
+                    
+                    # Add the underscore content with subscript formatting
+                    sub_run = paragraph.add_run()
+                    sub_run.text = superscript_match.group(1)
+                    sub_run.font.size = Pt(18)
+                    sub_run.font._element.set('baseline', '45000')
+                    
+                    superscripts_last_end = s_end
+                
+                # Add any remaining text after the last underscore
+                if has_superscripts:
+                    if superscripts_last_end < len(converted_content):
+                        run.text += converted_content[superscripts_last_end:]
+                else:
+                    # No superscripts found, just use the converted content
+                    run.text = converted_content
         last_end = end
 
     # Add any remaining text after the last tag
