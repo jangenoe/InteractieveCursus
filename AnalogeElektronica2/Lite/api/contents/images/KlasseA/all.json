@@ -1,0 +1,29 @@
+{
+  "content": [
+    {
+      "content": null,
+      "created": "2026-02-08T01:00:50.546357Z",
+      "format": null,
+      "hash": null,
+      "hash_algorithm": null,
+      "last_modified": "2026-02-08T00:54:25.978578Z",
+      "mimetype": "image/jpeg",
+      "name": "image15.jpeg",
+      "path": "images/KlasseA/image15.jpeg",
+      "size": 128330,
+      "type": "file",
+      "writable": true
+    }
+  ],
+  "created": "2026-02-08T01:00:50.546357Z",
+  "format": "json",
+  "hash": null,
+  "hash_algorithm": null,
+  "last_modified": "2026-02-08T01:00:50.546357Z",
+  "mimetype": null,
+  "name": "KlasseA",
+  "path": "images/KlasseA",
+  "size": null,
+  "type": "directory",
+  "writable": true
+}

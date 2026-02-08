@@ -24,21 +24,23 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-
-  
-  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+  <link href="_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
     <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
-    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=d8f3a918" />
-    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=ffafe4b5" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=9c3e77be" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
@@ -49,21 +51,22 @@
     <link rel="stylesheet" type="text/css" href="_static/code-caption-style.css?v=0ad27fa8" />
     <link rel="stylesheet" type="text/css" href="_static/spice-lexer.css?v=422ceae6" />
   
+  <!-- So that users can add custom icons -->
+  <script src="_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
-<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
-  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
     <script src="_static/documentation_options.js?v=b028fc25"></script>
     <script src="_static/doctools.js?v=9a2dae69"></script>
     <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/clipboard.min.js?v=a7894cd8"></script>
     <script src="_static/copybutton.js?v=f281be69"></script>
-    <script src="_static/scripts/sphinx-book-theme.js?v=95f79089"></script>
-    <script>let toggleHintShow = 'Click to show';</script>
-    <script>let toggleHintHide = 'Click to hide';</script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=e3ee46bd"></script>
+    <script>let toggleHintShow = 'Klik om te tonen';</script>
+    <script>let toggleHintHide = 'Klik om te verbergen';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script src="_static/togglebutton.js?v=1ae7504c"></script>
     <script src="_static/translations.js?v=5ce3cdba"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="_static/design-tabs.js?v=f930bc37"></script>
@@ -81,6 +84,7 @@
     <link rel="prev" title="Smith Kaart Oefening 1" href="SmithKaartOefening1.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="nl"/>
+  <meta name="docsearch:version" content="" />
   </head>
   
   
@@ -96,19 +100,8 @@
     <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-primary-sidebar-checkbox"/>
-  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
-  
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-secondary-sidebar-checkbox"/>
-  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
-  
-  <div class="search-button__wrapper">
-    <div class="search-button__overlay"></div>
-    <div class="search-button__search-container">
+  <dialog id="pst-search-dialog">
+    
 <form class="bd-search d-flex align-items-center"
       action="search.html"
       method="get">
@@ -116,7 +109,6 @@
   <input type="search"
          class="form-control"
          name="q"
-         id="search-input"
          placeholder="Search this book..."
          aria-label="Search this book..."
          autocomplete="off"
@@ -124,8 +116,8 @@
          autocapitalize="off"
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form></div>
-  </div>
+</form>
+  </dialog>
 
   <div class="pst-async-banner-revealer d-none">
   <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
@@ -141,7 +133,8 @@
       
       
       
-      <div class="bd-sidebar-primary bd-sidebar">
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -171,21 +164,17 @@
     
     
     <img src="_static/logo.png" class="logo__image only-light" alt="Toegepaste Analoge Elektronica - Home"/>
-    <script>document.write(`<img src="_static/logo.png" class="logo__image only-dark" alt="Toegepaste Analoge Elektronica - Home"/>`);</script>
+    <img src="_static/logo.png" class="logo__image only-dark pst-js-only" alt="Toegepaste Analoge Elektronica - Home"/>
   
   
 </a></div>
         <div class="sidebar-primary-item">
 
- <script>
- document.write(`
-   <button class="btn search-button-field search-button__button" title="Zoeken" aria-label="Zoeken" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">Zoeken</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script></div>
+<button class="btn search-button-field search-button__button pst-js-only" title="Zoeken" aria-label="Zoeken" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Zoeken</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
         <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
@@ -243,9 +232,14 @@
   
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
   </div>
-  
-  <div id="rtd-footer-container"></div>
 
 
       </div>
@@ -499,25 +493,17 @@
 
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
-    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
-    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
-  </button>
-`);
-</script>
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Zoeken" aria-label="Zoeken" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Zoeken" aria-label="Zoeken" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-  </button>
-`);
-</script>
-<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm pst-navbar-icon" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
 </button>
 </div></div>
@@ -575,7 +561,7 @@ document.write(`
 <figure class="align-default" id="smith2s1">
 <img alt="_images/8b16086c6566f6cb7368480703c8079d1b7eea20094346a026e9ff8899c267f4.png" src="_images/8b16086c6566f6cb7368480703c8079d1b7eea20094346a026e9ff8899c267f4.png" />
 <figcaption>
-<p><span class="caption-number">Figuur 178 </span><span class="caption-text">Smith kaart van de eerste oplossing.</span><a class="headerlink" href="#smith2s1" title="Link to this image">#</a></p>
+<p><span class="caption-number">Figuur 180 </span><span class="caption-text">Smith kaart van de eerste oplossing.</span><a class="headerlink" href="#smith2s1" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 </div>
@@ -613,7 +599,7 @@ De optimale condensatorwaarde in serie wordt dus  22.4 pF en de nodige lengte va
 <figure class="align-default" id="smith2f1">
 <img alt="_images/a90eafcd7f71275ec42aea807002e71024354b9fa2eefa23e412dce73b05909a.svg" src="_images/a90eafcd7f71275ec42aea807002e71024354b9fa2eefa23e412dce73b05909a.svg" />
 <figcaption>
-<p><span class="caption-number">Figuur 179 </span><span class="caption-text">Circuit van de eerste oplossing.</span><a class="headerlink" href="#smith2f1" title="Link to this image">#</a></p>
+<p><span class="caption-number">Figuur 181 </span><span class="caption-text">Circuit van de eerste oplossing.</span><a class="headerlink" href="#smith2f1" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 </div>
@@ -627,7 +613,7 @@ De optimale condensatorwaarde in serie wordt dus  22.4 pF en de nodige lengte va
 <figure class="align-default" id="smith2s2">
 <img alt="_images/24aefa8338ca9b3f33e1a6030591d444afe5e709c87253de5f2c1a95b7a777fa.png" src="_images/24aefa8338ca9b3f33e1a6030591d444afe5e709c87253de5f2c1a95b7a777fa.png" />
 <figcaption>
-<p><span class="caption-number">Figuur 180 </span><span class="caption-text">Smith kaart van de tweede oplossing.</span><a class="headerlink" href="#smith2s2" title="Link to this image">#</a></p>
+<p><span class="caption-number">Figuur 182 </span><span class="caption-text">Smith kaart van de tweede oplossing.</span><a class="headerlink" href="#smith2s2" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 </div>
@@ -660,7 +646,7 @@ De optimale condensatorwaarde in serie wordt dus  22.4 pF en de nodige lengte va
 <figure class="align-default" id="smith2f2">
 <img alt="_images/7a9ee7d67f575c8b64f2aa9aedb537e9d72f1ca8d03db850f75b290d6dc23e82.svg" src="_images/7a9ee7d67f575c8b64f2aa9aedb537e9d72f1ca8d03db850f75b290d6dc23e82.svg" />
 <figcaption>
-<p><span class="caption-number">Figuur 181 </span><span class="caption-text">Circuit van de tweede oplossing.</span><a class="headerlink" href="#smith2f2" title="Link to this image">#</a></p>
+<p><span class="caption-number">Figuur 183 </span><span class="caption-text">Circuit van de tweede oplossing.</span><a class="headerlink" href="#smith2f2" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 </div>
@@ -676,7 +662,7 @@ De optimale inductantiewaarde in serie wordt dus  12.56 nH en de nodige lengte v
 <figure class="align-default" id="smith2s3">
 <img alt="_images/90b58994625101174b3a212fbba21a9f5a9f589ce50ad7d83c07c5b9df14790e.png" src="_images/90b58994625101174b3a212fbba21a9f5a9f589ce50ad7d83c07c5b9df14790e.png" />
 <figcaption>
-<p><span class="caption-number">Figuur 182 </span><span class="caption-text">Smith kaart van de derde oplossing.</span><a class="headerlink" href="#smith2s3" title="Link to this image">#</a></p>
+<p><span class="caption-number">Figuur 184 </span><span class="caption-text">Smith kaart van de derde oplossing.</span><a class="headerlink" href="#smith2s3" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 </div>
@@ -687,7 +673,7 @@ De optimale inductantiewaarde in serie wordt dus  12.56 nH en de nodige lengte v
 <figure class="align-default" id="smith2s3a">
 <img alt="_images/710da1ed0966ca9788e884fd237c904a8847bd986526c99733654c79fc42be7c.png" src="_images/710da1ed0966ca9788e884fd237c904a8847bd986526c99733654c79fc42be7c.png" />
 <figcaption>
-<p><span class="caption-number">Figuur 183 </span><span class="caption-text">Smith kaart van de derde oplossing als admittantie.</span><a class="headerlink" href="#smith2s3a" title="Link to this image">#</a></p>
+<p><span class="caption-number">Figuur 185 </span><span class="caption-text">Smith kaart van de derde oplossing als admittantie.</span><a class="headerlink" href="#smith2s3a" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 </div>
@@ -718,7 +704,7 @@ De optimale condensatorwaarde in parallel wordt dus  5 pF en  de nodige lengte v
 <figure class="align-default" id="smith2f3">
 <img alt="_images/686c86ddd7ce457334a7f52ab7f074d1fcd397a04889c88656efcb1b0f3c426f.svg" src="_images/686c86ddd7ce457334a7f52ab7f074d1fcd397a04889c88656efcb1b0f3c426f.svg" />
 <figcaption>
-<p><span class="caption-number">Figuur 184 </span><span class="caption-text">Circuit van de derde oplossing.</span><a class="headerlink" href="#smith2f3" title="Link to this image">#</a></p>
+<p><span class="caption-number">Figuur 186 </span><span class="caption-text">Circuit van de derde oplossing.</span><a class="headerlink" href="#smith2f3" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 </div>
@@ -732,7 +718,7 @@ De optimale condensatorwaarde in parallel wordt dus  5 pF en  de nodige lengte v
 <figure class="align-default" id="smith2s4">
 <img alt="_images/595d70515574e5f6b7c19f52a1fa8ead58a0713de6b5e183229e9787b33dfe96.png" src="_images/595d70515574e5f6b7c19f52a1fa8ead58a0713de6b5e183229e9787b33dfe96.png" />
 <figcaption>
-<p><span class="caption-number">Figuur 185 </span><span class="caption-text">Smith kaart van de vierde oplossing.</span><a class="headerlink" href="#smith2s4" title="Link to this image">#</a></p>
+<p><span class="caption-number">Figuur 187 </span><span class="caption-text">Smith kaart van de vierde oplossing.</span><a class="headerlink" href="#smith2s4" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 </div>
@@ -763,7 +749,7 @@ De optimale inductantiewaarde in parallel wordt dus  56 nH  de nodige lengte van
 <figure class="align-default" id="smith2f4">
 <img alt="_images/a3d6727f1654cb117cede6281dec5ca3fb2f07246900fad58fdc3587e7c03edd.svg" src="_images/a3d6727f1654cb117cede6281dec5ca3fb2f07246900fad58fdc3587e7c03edd.svg" />
 <figcaption>
-<p><span class="caption-number">Figuur 186 </span><span class="caption-text">Circuit van de vierde oplossing.</span><a class="headerlink" href="#smith2f4" title="Link to this image">#</a></p>
+<p><span class="caption-number">Figuur 188 </span><span class="caption-text">Circuit van de vierde oplossing.</span><a class="headerlink" href="#smith2f4" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 </div>
@@ -777,7 +763,7 @@ De optimale inductantiewaarde in parallel wordt dus  56 nH  de nodige lengte van
 <figure class="align-default" id="smith2s5">
 <img alt="_images/4b07386bca88ee48417116a167f33982772c074529768350c4dfb6306aeeef7b.png" src="_images/4b07386bca88ee48417116a167f33982772c074529768350c4dfb6306aeeef7b.png" />
 <figcaption>
-<p><span class="caption-number">Figuur 187 </span><span class="caption-text">Smith kaart van de vijfde oplossing.</span><a class="headerlink" href="#smith2s5" title="Link to this image">#</a></p>
+<p><span class="caption-number">Figuur 189 </span><span class="caption-text">Smith kaart van de vijfde oplossing.</span><a class="headerlink" href="#smith2s5" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 </div>
@@ -815,7 +801,7 @@ Het stukje open coax dat we moeten voorzien ter vervanging van de condensator is
 <figure class="align-default" id="smith2f5">
 <img alt="_images/b69c9e374833270c04beb26bdc992db76ef9887945550f2193e462402e450e81.svg" src="_images/b69c9e374833270c04beb26bdc992db76ef9887945550f2193e462402e450e81.svg" />
 <figcaption>
-<p><span class="caption-number">Figuur 188 </span><span class="caption-text">Circuit van de vijfde oplossing.</span><a class="headerlink" href="#smith2f5" title="Link to this image">#</a></p>
+<p><span class="caption-number">Figuur 190 </span><span class="caption-text">Circuit van de vijfde oplossing.</span><a class="headerlink" href="#smith2f5" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 </div>
@@ -829,7 +815,7 @@ Het stukje open coax dat we moeten voorzien ter vervanging van de condensator is
 <figure class="align-default" id="smith2s6">
 <img alt="_images/ace25b86700430df7932737acf3d6e0654ca1d68bfe1a0402ff18b5e09f527b1.png" src="_images/ace25b86700430df7932737acf3d6e0654ca1d68bfe1a0402ff18b5e09f527b1.png" />
 <figcaption>
-<p><span class="caption-number">Figuur 189 </span><span class="caption-text">Smith kaart van de zesde oplossing.</span><a class="headerlink" href="#smith2s6" title="Link to this image">#</a></p>
+<p><span class="caption-number">Figuur 191 </span><span class="caption-text">Smith kaart van de zesde oplossing.</span><a class="headerlink" href="#smith2s6" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 </div>
@@ -866,7 +852,7 @@ Het stukje kortgesloten coax dat we moeten voorzien ter vervanging van de conden
 <figure class="align-default" id="smith2f6">
 <img alt="_images/4f48a1948ff8c227f003d91645fe6108549f0cf24dcdb49838da524d95279dd7.svg" src="_images/4f48a1948ff8c227f003d91645fe6108549f0cf24dcdb49838da524d95279dd7.svg" />
 <figcaption>
-<p><span class="caption-number">Figuur 190 </span><span class="caption-text">Circuit van de zesde oplossing.</span><a class="headerlink" href="#smith2f6" title="Link to this image">#</a></p>
+<p><span class="caption-number">Figuur 192 </span><span class="caption-text">Circuit van de zesde oplossing.</span><a class="headerlink" href="#smith2f6" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 </div>
@@ -880,7 +866,7 @@ Het stukje kortgesloten coax dat we moeten voorzien ter vervanging van de conden
 <figure class="align-default" id="smith2s7">
 <img alt="_images/7e6a0a455bdd966cf8c2ffe0bb9a037841a43c6852d7ec45f15d18af3adbbcb9.png" src="_images/7e6a0a455bdd966cf8c2ffe0bb9a037841a43c6852d7ec45f15d18af3adbbcb9.png" />
 <figcaption>
-<p><span class="caption-number">Figuur 191 </span><span class="caption-text">Smith kaart van de zevende oplossing.</span><a class="headerlink" href="#smith2s7" title="Link to this image">#</a></p>
+<p><span class="caption-number">Figuur 193 </span><span class="caption-text">Smith kaart van de zevende oplossing.</span><a class="headerlink" href="#smith2s7" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 </div>
@@ -918,7 +904,7 @@ Het stukje open coax dat we moeten voorzien ter vervanging van het spoel is dus:
 <figure class="align-default" id="smith2f7">
 <img alt="_images/2f8a5b1c1f6211c6ffa5befe3e3d98b9d08f1f70e13c7113c60d5c6a0aa0261c.svg" src="_images/2f8a5b1c1f6211c6ffa5befe3e3d98b9d08f1f70e13c7113c60d5c6a0aa0261c.svg" />
 <figcaption>
-<p><span class="caption-number">Figuur 192 </span><span class="caption-text">Circuit van de zevende oplossing.</span><a class="headerlink" href="#smith2f7" title="Link to this image">#</a></p>
+<p><span class="caption-number">Figuur 194 </span><span class="caption-text">Circuit van de zevende oplossing.</span><a class="headerlink" href="#smith2f7" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 </div>
@@ -932,7 +918,7 @@ Het stukje open coax dat we moeten voorzien ter vervanging van het spoel is dus:
 <figure class="align-default" id="smith2s8">
 <img alt="_images/eb54bcf08833dc0f9443965af11bcbc557d7a6866d81cbf794fe8d60953e9872.png" src="_images/eb54bcf08833dc0f9443965af11bcbc557d7a6866d81cbf794fe8d60953e9872.png" />
 <figcaption>
-<p><span class="caption-number">Figuur 193 </span><span class="caption-text">Smith kaart van de achtste oplossing.</span><a class="headerlink" href="#smith2s8" title="Link to this image">#</a></p>
+<p><span class="caption-number">Figuur 195 </span><span class="caption-text">Smith kaart van de achtste oplossing.</span><a class="headerlink" href="#smith2s8" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 </div>
@@ -971,7 +957,7 @@ Het stukje kortgesloten coax dat we moeten voorzien ter vervanging van het spoel
 <figure class="align-default" id="smith2f8">
 <img alt="_images/36f34334faf9f2c8321cb344e918cc02caa91dd8632b383d879c2c085a1713e6.svg" src="_images/36f34334faf9f2c8321cb344e918cc02caa91dd8632b383d879c2c085a1713e6.svg" />
 <figcaption>
-<p><span class="caption-number">Figuur 194 </span><span class="caption-text">Circuit van de achtste oplossing.</span><a class="headerlink" href="#smith2f8" title="Link to this image">#</a></p>
+<p><span class="caption-number">Figuur 196 </span><span class="caption-text">Circuit van de achtste oplossing.</span><a class="headerlink" href="#smith2f8" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 </div>
@@ -1035,14 +1021,16 @@ Het stukje kortgesloten coax dat we moeten voorzien ter vervanging van het spoel
             
             
               
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
 
-  <div class="sidebar-secondary-item">
-  <div class="page-toc tocsection onthispage">
+  <div class="sidebar-secondary-item"><div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
     <i class="fa-solid fa-list"></i> Contents
   </div>
-  <nav class="bd-toc-nav page-toc">
+ <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#opgave">Opgave</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#oplossing-1-bijplaatsen-van-een-capaciteit-in-serie">Oplossing 1: Bijplaatsen van een capaciteit in serie</a></li>
@@ -1096,8 +1084,8 @@ By Jan Genoe (jan.genoe@kuleuven.be)
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
-<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <script defer src="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
 
   <footer class="bd-footer">
   </footer>
