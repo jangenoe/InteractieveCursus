@@ -11,10 +11,10 @@
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://jangenoe.github.io/jangenoe/InteractieveCursus/AnalogeElektronica2/TransistorConfiguraties.html" />
 <meta property="og:site_name" content="Project name not set" />
-<meta property="og:description" content="Tweepoort: Wanneer we een ingangsspanning V_{in} aanleggen aan een transistor die gebruikt wordt als tweepoorten en een uitgangsspanning V_{uit} bekomen, hebben deze spanningen deze enkel zin ten o..." />
+<meta property="og:description" content="Tweepoort configuratie: Wanneer we een ingangsspanning V_{in} aanleggen aan een transistor die gebruikt wordt als tweepoort en een uitgangsspanning V_{uit} bekomen, hebben deze spanningen deze enke..." />
 <meta property="og:image" content="https://jangenoe.github.io/InteractieveCursus/AnalogeElektronica2/_static/logo.svg" />
 <meta property="og:image:alt" content="Project name not set" />
-<meta name="description" content="Tweepoort: Wanneer we een ingangsspanning V_{in} aanleggen aan een transistor die gebruikt wordt als tweepoorten en een uitgangsspanning V_{uit} bekomen, hebben deze spanningen deze enkel zin ten o..." />
+<meta name="description" content="Tweepoort configuratie: Wanneer we een ingangsspanning V_{in} aanleggen aan een transistor die gebruikt wordt als tweepoort en een uitgangsspanning V_{uit} bekomen, hebben deze spanningen deze enke..." />
 
     <title>Transistor Configuraties &#8212; Analoge elektronische schakelingen</title>
   
@@ -82,7 +82,7 @@
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Zoeken" href="search.html" />
     <link rel="next" title="Berekening van elektronische circuits" href="berekening.html" />
-    <link rel="prev" title="Analoge Elektronische Schakelingen" href="intro.html" />
+    <link rel="prev" title="Basiseigenschappen transistors" href="Transistors.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="nl"/>
   <meta name="docsearch:version" content="" />
@@ -180,6 +180,7 @@
     <div class="bd-toc-item navbar-nav active">
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Analyse van circuits</span></p>
 <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Transistors.html">Basiseigenschappen transistors</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Transistor Configuraties</a></li>
 <li class="toctree-l1"><a class="reference internal" href="berekening.html">Berekening van elektronische circuits</a></li>
 </ul>
@@ -368,7 +369,7 @@
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tweepoort">Tweepoort</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tweepoort-configuratie">Tweepoort configuratie</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#eenpoort">Eenpoort</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mos-transistor-configuraties">MOS transistor configuraties</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#de-mos-transistor-geschakeld-als-2-terminal-component">De MOS transistor geschakeld als 2-terminal component</a><ul class="nav section-nav flex-column">
@@ -403,11 +404,9 @@
                   
   <section class="tex2jax_ignore mathjax_ignore" id="transistor-configuraties">
 <h1>Transistor Configuraties<a class="headerlink" href="#transistor-configuraties" title="Link to this heading">#</a></h1>
-<section id="tweepoort">
-<h2>Tweepoort<a class="headerlink" href="#tweepoort" title="Link to this heading">#</a></h2>
-<div class="cell docutils container">
-</div>
-<p>Wanneer we een ingangsspanning <span class="math notranslate nohighlight">\(V_{in}\)</span> aanleggen aan een transistor die gebruikt wordt als tweepoorten en een uitgangsspanning <span class="math notranslate nohighlight">\(V_{uit}\)</span> bekomen, hebben deze spanningen deze enkel zin ten opzichte van een referentie. In dit overzicht van de transistor configuraties nemen we deze referentie gemeenschappelijk voor de ingang en de uitgang zoals je kan zien in <a class="reference internal" href="#tdefa"><span class="std std-numref">Figuur 1</span></a>. De kleinsignaalversterking <span class="math notranslate nohighlight">\(A\)</span> definiëren we dan vervolgens als de verhouding tussen differentiële uitgangsspanning (<span class="math notranslate nohighlight">\(\partial V_{uit}\)</span>) en de differentiële ingangsspanning (<span class="math notranslate nohighlight">\(\partial V_{in}\)</span>).</p>
+<section id="tweepoort-configuratie">
+<h2>Tweepoort configuratie<a class="headerlink" href="#tweepoort-configuratie" title="Link to this heading">#</a></h2>
+<p>Wanneer we een ingangsspanning <span class="math notranslate nohighlight">\(V_{in}\)</span> aanleggen aan een transistor die gebruikt wordt als tweepoort en een uitgangsspanning <span class="math notranslate nohighlight">\(V_{uit}\)</span> bekomen, hebben deze spanningen deze enkel zin ten opzichte van een referentie. In dit overzicht van de transistor configuraties nemen we deze referentie gemeenschappelijk voor de ingang en de uitgang zoals je kan zien in <a class="reference internal" href="#tdefa"><span class="std std-numref">Figuur 1</span></a>. De kleinsignaalversterking <span class="math notranslate nohighlight">\(A\)</span> definiëren we dan vervolgens als de verhouding tussen differentiële uitgangsspanning (<span class="math notranslate nohighlight">\(\partial V_{uit}\)</span>) en de differentiële ingangsspanning (<span class="math notranslate nohighlight">\(\partial V_{in}\)</span>).</p>
 <div class="cell docutils container">
 <div class="cell_output docutils container">
 <figure class="align-default" id="tdefa">
@@ -515,6 +514,9 @@ We leggen een spanning  aan over de component en krijgen er een stroom door, of 
 </figure>
 </div>
 </div>
+</section>
+<section id="de-mos-transistor-als-actieve-belasting">
+<h4>De MOS transistor als actieve belasting<a class="headerlink" href="#de-mos-transistor-als-actieve-belasting" title="Link to this heading">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_output docutils container">
 <figure class="align-default" id="actievebelasting">
@@ -535,9 +537,6 @@ We leggen een spanning  aan over de component en krijgen er een stroom door, of 
 </figure>
 </div>
 </div>
-</section>
-<section id="de-mos-transistor-als-actieve-belasting">
-<h4>De MOS transistor als actieve belasting<a class="headerlink" href="#de-mos-transistor-als-actieve-belasting" title="Link to this heading">#</a></h4>
 </section>
 </section>
 <section id="de-mos-transistor-geschakeld-als-3-terminal-component">
@@ -596,12 +595,34 @@ We leggen een spanning  aan over de component en krijgen er een stroom door, of 
 </section>
 <section id="gemeenschappelijke-gate-schakeling-ggs">
 <h4>Gemeenschappelijke Gate Schakeling: GGS<a class="headerlink" href="#gemeenschappelijke-gate-schakeling-ggs" title="Link to this heading">#</a></h4>
-<p>In deze configuratie is het doel van de transistor in eerste instantie om</p>
 </section>
 </section>
 </section>
 <section id="bipolaire-transistor-configuraties">
 <h2>Bipolaire transistor configuraties<a class="headerlink" href="#bipolaire-transistor-configuraties" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Gemeenschappelijke emitter</p>
+<ul>
+<li><p>de ingang is dan verbonden met de basis</p></li>
+<li><p>de uitgang is dan verbonden met de collector</p></li>
+<li><p>deze transistor werkt als een versterker (amplifier)</p></li>
+</ul>
+</li>
+<li><p>Gemeenschappelijke collector</p>
+<ul>
+<li><p>de ingang is dan verbonden met de basis</p></li>
+<li><p>de uitgang is dan verbonden met de emitter</p></li>
+<li><p>de spanning aan de emitter volgt de spanning aan de basis (emitter follower)</p></li>
+</ul>
+</li>
+<li><p>Gemeenschappelijke basis</p>
+<ul>
+<li><p>de ingang is dan verbonden met de emitter</p></li>
+<li><p>de uitgang is dan verbonden met de collector</p></li>
+<li><p>de spanning aan de collector wordt bepaald door de stroom aan collector (cascode trap)</p></li>
+</ul>
+</li>
+</ul>
 <section id="gemeenschappelijke-emitter-schakeling-ges">
 <h3>Gemeenschappelijke Emitter Schakeling: GES<a class="headerlink" href="#gemeenschappelijke-emitter-schakeling-ges" title="Link to this heading">#</a></h3>
 <p>Als voor een bipolaire transistor de emitter de gemeenschappelijke klem is, is de ingang steeds de basis van bipolaire transistor en de uitgang steeds de collector van de bipolaire transistor. De ingang kan in principe zowel in stroom (zie <a class="reference internal" href="#ges"><span class="std std-numref">Figuur 13</span></a>) als in spanning aangestuurd worden (zie <a class="reference internal" href="#ges2"><span class="std std-numref">Figuur 14</span></a>).</p>
@@ -609,7 +630,7 @@ We leggen een spanning  aan over de component en krijgen er een stroom door, of 
 <div class="cell docutils container">
 <div class="cell_output docutils container">
 <figure class="align-default" id="ges">
-<img alt="_images/49daa79e95884648f89d7fda7ed2d42c339f0c1c29ceceecc0ee8b04c0410ef8.svg" src="_images/49daa79e95884648f89d7fda7ed2d42c339f0c1c29ceceecc0ee8b04c0410ef8.svg" />
+<img alt="_images/6dd355b8b11ea5addbe4e1bf0af270bc189d4b91a275360a4c45fbdee2fb9540.svg" src="_images/6dd355b8b11ea5addbe4e1bf0af270bc189d4b91a275360a4c45fbdee2fb9540.svg" />
 <figcaption>
 <p><span class="caption-number">Figuur 13 </span><span class="caption-text">De npn transistor in de Gemeenschappelijke Emitter Schakeling.</span><a class="headerlink" href="#ges" title="Link to this image">#</a></p>
 </figcaption>
@@ -619,7 +640,7 @@ We leggen een spanning  aan over de component en krijgen er een stroom door, of 
 <div class="cell docutils container">
 <div class="cell_output docutils container">
 <figure class="align-default" id="ges2">
-<img alt="_images/1d3cfa7338f54ed71bf6605684ee9dcf2643a63679b21852e1191c7332dbb482.svg" src="_images/1d3cfa7338f54ed71bf6605684ee9dcf2643a63679b21852e1191c7332dbb482.svg" />
+<img alt="_images/84f56cd8458acec6ef3f4c13541f39372b4984b4974866d888e6a56c08171beb.svg" src="_images/84f56cd8458acec6ef3f4c13541f39372b4984b4974866d888e6a56c08171beb.svg" />
 <figcaption>
 <p><span class="caption-number">Figuur 14 </span><span class="caption-text">De npn transistor in de Gemeenschappelijke Emitter Schakeling</span><a class="headerlink" href="#ges2" title="Link to this image">#</a></p>
 </figcaption>
@@ -629,7 +650,7 @@ We leggen een spanning  aan over de component en krijgen er een stroom door, of 
 <div class="cell docutils container">
 <div class="cell_output docutils container">
 <figure class="align-default" id="gesdefa">
-<img alt="_images/9fd323e230e0b2a772644e68ccb476dd0a288646c55e1c89ab77f4a349b873f7.svg" src="_images/9fd323e230e0b2a772644e68ccb476dd0a288646c55e1c89ab77f4a349b873f7.svg" />
+<img alt="_images/6a0b8c54ca1509338a57169070e850b263584e3d7ff7a18e91426c38a4b272a0.svg" src="_images/6a0b8c54ca1509338a57169070e850b263584e3d7ff7a18e91426c38a4b272a0.svg" />
 <figcaption>
 <p><span class="caption-number">Figuur 15 </span><span class="caption-text">Definitie van de versterking voor de npn transistor in de Gemeenschappelijke Emitter Schakeling.</span><a class="headerlink" href="#gesdefa" title="Link to this image">#</a></p>
 </figcaption>
@@ -643,7 +664,6 @@ We leggen een spanning  aan over de component en krijgen er een stroom door, of 
 </section>
 <section id="gemeenschappelijke-basis-schakeling-gbs">
 <h3>Gemeenschappelijke Basis Schakeling: GBS<a class="headerlink" href="#gemeenschappelijke-basis-schakeling-gbs" title="Link to this heading">#</a></h3>
-<p>In deze configuratie is het doel van de transistor in eerste instantie om</p>
 </section>
 </section>
 </section>
@@ -679,12 +699,12 @@ We leggen een spanning  aan over de component en krijgen er een stroom door, of 
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="intro.html"
+       href="Transistors.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">vorige</p>
-        <p class="prev-next-title">Analoge Elektronische Schakelingen</p>
+        <p class="prev-next-title">Basiseigenschappen transistors</p>
       </div>
     </a>
     <a class="right-next"
@@ -714,7 +734,7 @@ We leggen een spanning  aan over de component en krijgen er een stroom door, of 
   </div>
  <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tweepoort">Tweepoort</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tweepoort-configuratie">Tweepoort configuratie</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#eenpoort">Eenpoort</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mos-transistor-configuraties">MOS transistor configuraties</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#de-mos-transistor-geschakeld-als-2-terminal-component">De MOS transistor geschakeld als 2-terminal component</a><ul class="nav section-nav flex-column">

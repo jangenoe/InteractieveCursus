@@ -3,6 +3,7 @@ root: intro
 parts:
 - caption: Analyse van circuits
   chapters:
+  - file: Transistors
   - file: TransistorConfiguraties
   - file: berekening
 - caption: Versterkers
