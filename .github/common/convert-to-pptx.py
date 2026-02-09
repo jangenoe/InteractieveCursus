@@ -352,7 +352,7 @@ for ipath in notebooks:
         #title_shape.text_frame.paragraphs[0].font.color.rgb = RGBColor(255, 255, 255)  # White text
         #title_shape.text_frame.paragraphs[0].alignment = PP_ALIGN.CENTER
     if "subtitle" in ntbk.metadata.get('KULeuvenSlides', {}):
-        subtitle= slide.shapes.add_textbox(Inches(7),Inches(4), Inches(5),Inches(2.0))  #left, top, width, height
+        subtitle= slide.shapes.add_textbox(Inches(7),Inches(4.5), Inches(5),Inches(2.0))  #left, top, width, height
         subtitle.text = ntbk.metadata.KULeuvenSlides["subtitle"].replace("<BR>","\n")
         #subtitle.text_frame.fit_text()
         for par in subtitle.text_frame.paragraphs:
