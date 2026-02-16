@@ -49,8 +49,8 @@
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="_static/custom-pygments.css?v=d7fe8a85" />
     <link rel="stylesheet" type="text/css" href="_static/code-caption-style.css?v=0ad27fa8" />
-    <link rel="stylesheet" type="text/css" href="_static/custom.css?v=ff21a56f" />
     <link rel="stylesheet" type="text/css" href="_static/spice-lexer.css?v=422ceae6" />
+    <link rel="stylesheet" type="text/css" href="_static/custom.css?v=ff21a56f" />
   
   <!-- So that users can add custom icons -->
   <script src="_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
@@ -568,7 +568,331 @@
 </table>
 </div>
 <div class="cell docutils container">
+<div class="cell_output docutils container">
+<img alt="_images/e4635c455e34872201c15a8839e29e7f453655ca65cfa2cc6620372915152d61.png" src="_images/e4635c455e34872201c15a8839e29e7f453655ca65cfa2cc6620372915152d61.png" />
 </div>
+</div>
+<div class="cell docutils container">
+<div class="cell_output docutils container">
+<img alt="_images/691a52b35d5e9a4a7155ce438c8db2099017b43638890cbd640111f612bc21d5.png" src="_images/691a52b35d5e9a4a7155ce438c8db2099017b43638890cbd640111f612bc21d5.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_output docutils container">
+<img alt="_images/37bfddc6c95aa21c66a1ef06262d8f9ea162230674e51ea08d42e29c2855853a.png" src="_images/37bfddc6c95aa21c66a1ef06262d8f9ea162230674e51ea08d42e29c2855853a.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_output docutils container">
+<img alt="_images/a4a5866933b7b3a81d64d33b3d3e685a8cb64d24f167bb0cb49059e001ed533c.png" src="_images/a4a5866933b7b3a81d64d33b3d3e685a8cb64d24f167bb0cb49059e001ed533c.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_output docutils container">
+<img alt="_images/601af33ccb0ac3e0ba51ed7102f00b815caeb5564083e3b1c35ecabd17a4b7bb.png" src="_images/601af33ccb0ac3e0ba51ed7102f00b815caeb5564083e3b1c35ecabd17a4b7bb.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_output docutils container">
+<img alt="_images/618dff95b720b14432cb04cc00d6f1c9aa08924308539b5363414cd487ba1a83.png" src="_images/618dff95b720b14432cb04cc00d6f1c9aa08924308539b5363414cd487ba1a83.png" />
+</div>
+</div>
+<p>Een versterker versterkt het ingangssignaal om een groter uitgangssignaal te bekomen.
+Het uitgangssignaal wordt naar een andere versterkertrap of een uitgangsapparaat gestuurd.
+De versterking waarover sprake is de AC-versterking van het signaal.
+Toch is de DC-instelling minstens even belangrijk voor een goede werking van de versterker.</p>
+<p>Vermogenversterkers worden gebruikt wanneer het uitgangsapparaat een groot vermogen nodig heeft.
+Doel: Vermogen (stroom en spanning) leveren aan een belasting, bijvoorbeeld:
+Luidsprekers in een audio systeem
+Motorvoeding in een analoog servomechanisme
+Antenne voor radio-transmissie
+Het rendement van de versterker speelt een belangrijke rol.
+Omdat het geleverde vermogen zo groot is, wordt warmteafvoer anders een te groot probleem.</p>
+<p>Vermogenversterkers komen typisch voor in de laatste trap van een elektronisch systeem. In het geheel van het systeem wordt er gewerkt met relatief kleine spanningen en vooral kleine stromen. Vermogenverliezen zijn derhalve niet belangrijk. In de laatste trap moeten dan de signalen versterkt worden om de belasting te kunnen aandrijven (zie voorbeeld in de figuur hieronder). En het kunnen aandrijven van de belasting is het onderwerp van deze cursus.
+De vermogenversterkers voor hoogfrequent signalen komen niet aan bod in deze cursus.</p>
+<p>Het rendement van een versterker:
+is de verhouding van het nuttig AC vermogen in de belasting tot het gemiddeld DC vermogen afgenomen uit de voeding,
+ligt tussen  en ,
+wordt meestal uitgedrukt in %.
+ηAC = rendement,           = nuttig AC vermogen geleverd aan de belasting RL, PVcc(DC) = gemiddeld DC vermogen afgenomen uit de voeding Vcc.</p>
+<p>Meestal is het nodige vermogen in de belasting gekend (           ).
+Het nodige vermogen van de versterker is dan:
+De opwarming van de versterker zelf is dan:
+Een goede koeling is dus nodig
+bij grote vermogens,
+bij een slecht rendement.</p>
+<p>Meestal zijn er meerdere trappen nodig.
+De laatste trap levert het eigenlijke vermogen en wordt de eindtrap genoemd.
+Eindtrappen voor groot vermogen vereisen normaal ook een aanzienlijk stuurvermogen.
+Er wordt dan ook vaak een speciale aandrijftrap ontworpen, “driver” genoemd, volgens de vereisten van de eindtrap.
+driver
+eindtrap</p>
+<p>In de meeste gevallen zullen we eerst de spanningen versterken tot het gewenste niveau en in de daarna volgende stappen de stromen versterken.
+Vooral de laatste stappen, waar grote spanningen grote stromen voorkomen zijn in het ontwerp het belangrijkst aangezien hier de grootste verliezen optreden.</p>
+<p>Een versterker kan zowel aan in- als aan uitgang:
+“single-ended” zijn
+differentieel zijn
+De waarde van een single-ended signaal wordt bepaald ten opzichte van de grond.
+De waarde van een differentieel signaal wordt bepaald door het verschil te nemen tussen beide ingangen en/of uitgangen.</p>
+<ul class="simple">
+<li><p>Belastingen die vermogen vragen hebben een belangrijke resistieve component.</p></li>
+<li><p>Belastingen die niet zuiver resistief zijn, kunnen in principe door een passend filter resistief gemaakt worden.</p></li>
+<li><p>In wat verder volgt, beschouwen we de versterker met een resistieve belasting.</p></li>
+</ul>
+<ul class="simple">
+<li><p>Een klasse A versterker wordt als vermogenversterker gebruikt.</p></li>
+<li><p>Een klasse A versterker bestaat uit een enkele vermogentransistor (bipolaire transistor).</p></li>
+<li><p>Daarom beschouwen we eerst de mogelijkheden om een bipolaire transistor in te stellen (DC).</p></li>
+<li><p>Het DC-instelpunt is de DC-spanning waarop de AC-spanning (die versterkt moet worden) is gesuperponeerd.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_output docutils container">
+<img alt="_images/f913f8cfa655058e591ca3efde2ae6b806f6d066fde5b0a31ae64f71d3e68812.jpg" src="_images/f913f8cfa655058e591ca3efde2ae6b806f6d066fde5b0a31ae64f71d3e68812.jpg" />
+</div>
+</div>
+<div class="math notranslate nohighlight">
+\[ V_{BE} = 0.7 V \]</div>
+<div class="math notranslate nohighlight">
+\[ I_{E} = (\beta+1)I_{B} \approx I_{C}\]</div>
+<div class="math notranslate nohighlight">
+\[ I_{C} = \beta I_{B} \]</div>
+<p>De vertrekbasis voor het ontwerp van een klasse A  versterker is de karakteristiek van de vermogentransistor, zoals in de slide hierboven getoond wordt.
+Er zijn 3 beperkingen voor elke bipolaire transistor:</p>
+<ul class="simple">
+<li><p>Maximale stroom door de transistor</p></li>
+<li><p>Maximale spanning over de transistor</p></li>
+<li><p>Maximaal vermogen gedissipeerd door de transistor. Dit laatste is afhankelijk van de koeling van de transistor.</p></li>
+</ul>
+<p>Daarnaast zijn er natuurlijk ook de eigenschappen zoals de voorwaartse spanning van de basis-emitter diode en de stroomversterking <span class="math notranslate nohighlight">\(\beta\)</span>.</p>
+<div class="cell docutils container">
+<div class="cell_output docutils container">
+<img alt="_images/f913f8cfa655058e591ca3efde2ae6b806f6d066fde5b0a31ae64f71d3e68812.jpg" src="_images/f913f8cfa655058e591ca3efde2ae6b806f6d066fde5b0a31ae64f71d3e68812.jpg" />
+</div>
+</div>
+<p>Punt B is de beste keuze:</p>
+<ul class="simple">
+<li><p>zo groot mogelijke spanningszwaai</p></li>
+<li><p>zo groot mogelijke stroomzwaai</p></li>
+<li><p>lineaire versterking</p></li>
+</ul>
+<p>Bij de keuze van de DC instelling is het belangrijk om zowel een grote spanningszwaai over de transistor te kunnen bekomen alsook een grote stroomzwaai over de transistor.
+Met deze karakteristieken lijkt het punt B de beste keuze, Op het einde van dit hoofdstuk komen we op deze keuze in detail terug.</p>
+<div class="cell docutils container">
+<div class="cell_output docutils container">
+<img alt="_images/1992353040e67097fc0b27925b7732db79a90dd84010ebcad1f1d23eb1e6dfc9.png" src="_images/1992353040e67097fc0b27925b7732db79a90dd84010ebcad1f1d23eb1e6dfc9.png" />
+</div>
+</div>
+<p>belasting (RL)</p>
+<p>Dit is het eerste klasse A schema waarvan we de instelling gaan uitwerken.</p>
+<div class="cell docutils container">
+<div class="cell_output docutils container">
+<img alt="_images/2a0852e838daf51ff438994bd6c5894e76838326cc268d435bf323df034aabbc.png" src="_images/2a0852e838daf51ff438994bd6c5894e76838326cc268d435bf323df034aabbc.png" />
+</div>
+</div>
+<p>DC-equivalent:
+Alle condensatoren zijn open.
+VCC is ontdubbeld om het circuit te kunnen analyseren.</p>
+<p>Voor de DC-instelling moeten we zowel IB (basisstroom) als IC (collectorstroom) en VC (collectorspanning) goed krijgen. Dit wil zeggen dat we de volgende parameters juist moeten kiezen:</p>
+<ul class="simple">
+<li><p>RB: De basisweerstand</p></li>
+<li><p>RC : De collectorweerstand</p></li>
+<li><p>VCC: de voedingsspanning</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_output docutils container">
+<img alt="_images/3d78cf3a73a256affb9c608722417ce3d1463e45e15eb2c44229933fcaf38842.png" src="_images/3d78cf3a73a256affb9c608722417ce3d1463e45e15eb2c44229933fcaf38842.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_output docutils container">
+<img alt="_images/51f56356126472d47225cd899483bd810407b9ee590f40aeb4305c9575c2e602.png" src="_images/51f56356126472d47225cd899483bd810407b9ee590f40aeb4305c9575c2e602.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_output docutils container">
+<img alt="_images/d14d08ff3ee18d35d365397b3a221c5d477a79933ed068d72980013cfaf9a701.png" src="_images/d14d08ff3ee18d35d365397b3a221c5d477a79933ed068d72980013cfaf9a701.png" />
+</div>
+</div>
+<p>Opl.:</p>
+<ul class="simple">
+<li><p>IB = 47.08 µA</p></li>
+<li><p>IC = 2.35 mA</p></li>
+<li><p>VCE = 6.83 V</p></li>
+<li><p>VB = 0.7 V</p></li>
+<li><p>VC = 6.83 V</p></li>
+<li><p>VBC = -6.13 V</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_output docutils container">
+<img alt="_images/0bf8c6dd456023b1431db0542538d073f9d7a3297169834d122ddf4a65a5471c.png" src="_images/0bf8c6dd456023b1431db0542538d073f9d7a3297169834d122ddf4a65a5471c.png" />
+</div>
+</div>
+<p>Q-punt = DC-instelpunt</p>
+<p>We gebruiken de transistorkarakteristieken om het DC instelpunt (Q) te bepalen. Hiervoor variëren we  parameters:</p>
+<ul class="simple">
+<li><p>De basisstroom IB</p></li>
+<li><p>De belastingsweerstand RC</p></li>
+<li><p>De voedingsspanning VCC
+De invloed van elk van deze  parameters wordt aanschouwelijk voorgesteld op de volgende pagina’s.</p></li>
+</ul>
+<p>[] Robert L. Boylestad,  “Electronic Devices and Circuit Theory”, e edition, Copyright © by Pearson Education, Inc. Upper Saddle River, New Jersey</p>
+<div class="cell docutils container">
+<div class="cell_output docutils container">
+<img alt="_images/679a240840c4e806bbd238d1c8d10ec3036c6fd82cd38250b5cc512771180c20.png" src="_images/679a240840c4e806bbd238d1c8d10ec3036c6fd82cd38250b5cc512771180c20.png" />
+</div>
+</div>
+<p>De eerste parameter die we kunnen variëren is de basisstroom IB. We zien dat door een hogere basisstroom IB het DC instelpunt Q telkens op een hogere curve komt te liggen.</p>
+<p>[] Robert L. Boylestad,  “Electronic Devices and Circuit Theory”, e edition, Copyright © by Pearson Education, Inc. Upper Saddle River, New Jersey</p>
+<div class="cell docutils container">
+<div class="cell_output docutils container">
+<img alt="_images/0b2aee6da859bbda0c2f8e309151d7da887ab31dbab281f198a1b3a85823348b.png" src="_images/0b2aee6da859bbda0c2f8e309151d7da887ab31dbab281f198a1b3a85823348b.png" />
+</div>
+</div>
+<p>Deze figuur toont de invloed van de weerstand RC. We zien dat door het verhogen van RC van R naar R, het DC instelpunt Q horizontaal opschuift.
+[] Robert L. Boylestad,  “Electronic Devices and Circuit Theory”, e edition, Copyright © by Pearson Education, Inc. Upper Saddle River, New Jersey</p>
+<div class="cell docutils container">
+<div class="cell_output docutils container">
+<img alt="_images/e2fbc6383acfa2ecb2e5bf73d31f80618fb18dd2129ffde2be3081c062cc8a99.png" src="_images/e2fbc6383acfa2ecb2e5bf73d31f80618fb18dd2129ffde2be3081c062cc8a99.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_output docutils container">
+<img alt="_images/0e42e5293c680641cad5fcf930d0012fdb0cf4ffea6ffc864c22cdf697482088.png" src="_images/0e42e5293c680641cad5fcf930d0012fdb0cf4ffea6ffc864c22cdf697482088.png" />
+</div>
+</div>
+<p>Bereken de vereisten voor Vcc, RC en RB voor een vaste bias configuratie met de gegeven belastingslijn.</p>
+<p>Oplossing:</p>
+<ul class="simple">
+<li><p>Vcc = 20V</p></li>
+<li><p>RC = 2 kΩ</p></li>
+<li><p>RB = 772 kΩ</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_output docutils container">
+<img alt="_images/1d5be25f892c2e5d272ea9aa9d14a4ef9d4571afcd6902552e29a56ee676e759.png" src="_images/1d5be25f892c2e5d272ea9aa9d14a4ef9d4571afcd6902552e29a56ee676e759.png" />
+</div>
+</div>
+<p>Een tweede schema van de Klasse A versterker voert bijkomend emitter degeneratie in. Dit gebeurt aan de hand van de extra weerstand RE. De reden hiervoor is dat VBE van een bipolaire transistor gaat dalen als de temperatuur stijgt. In het geval dat de instelling niet mag verschuiven tussen het opstarten van de versterker (i.e. wanneer de vermogentransistor koud is) en het normale verbruik (i.e. wanneer de transistor warm is) is het nuttig emitter degeneratie in te voeren. Ook wanneer er pieken van zware belasting kunnen optreden en het gedrag van de versterker niet anders mag zijn na deze belastingspieken, is het goed emitter degeneratie in te voeren.</p>
+<div class="cell docutils container">
+<div class="cell_output docutils container">
+<img alt="_images/9c3907f9d3d0a68d4e0ca1ca4b08cc6aecffd74d77084a5a5916c6d99ed3ecdf.png" src="_images/9c3907f9d3d0a68d4e0ca1ca4b08cc6aecffd74d77084a5a5916c6d99ed3ecdf.png" />
+</div>
+</div>
+<p>De berekening van de basisstroom IB verloopt nu op de bovenstaande wijze.</p>
+<div class="cell docutils container">
+<div class="cell_output docutils container">
+<img alt="_images/6596b67aec20b37430ba7edddb15f767c3313f8e61e8b297f140aafc4d3b222e.png" src="_images/6596b67aec20b37430ba7edddb15f767c3313f8e61e8b297f140aafc4d3b222e.png" />
+</div>
+</div>
+<p>Een eenvoudig model kan hiervoor worden opgesteld, waarbij RE (b+1) maal groter is dan de nominale waarde.</p>
+<div class="cell docutils container">
+<div class="cell_output docutils container">
+<img alt="_images/8ab3631e0fd794fd43bc9d322448c055435c550ca4ad690607ab0527b0df1a87.png" src="_images/8ab3631e0fd794fd43bc9d322448c055435c550ca4ad690607ab0527b0df1a87.png" />
+</div>
+</div>
+<p>De ingangsweerstand <span class="math notranslate nohighlight">\(R_i\)</span> is nu ook <span class="math notranslate nohighlight">\(R_{E}\)</span> (b+1).</p>
+<div class="cell docutils container">
+<div class="cell_output docutils container">
+<img alt="_images/89f22363f7b848a4bce4773638ad405c5a6466db68494b29636677341cf4a087.png" src="_images/89f22363f7b848a4bce4773638ad405c5a6466db68494b29636677341cf4a087.png" />
+</div>
+</div>
+<p>De emitter-collector lus wordt op gelijkaardig wijze berekend.</p>
+<div class="cell docutils container">
+<div class="cell_output docutils container">
+<img alt="_images/38e1dbbbe44770dce0a3eed01e5d5d9f25572863a0d420bf47537343e662d8f2.png" src="_images/38e1dbbbe44770dce0a3eed01e5d5d9f25572863a0d420bf47537343e662d8f2.png" />
+</div>
+</div>
+<p>Bereken de DC-instelling van IB, IC, VCE, VC, VE, VB en VBC</p>
+<p>Oplossing:</p>
+<ul class="simple">
+<li><p>IB = 40.1 µA</p></li>
+<li><p>IC = 2.01 mA</p></li>
+<li><p>VCE = 13.97 V</p></li>
+<li><p>VC = 15.98 V</p></li>
+<li><p>VE = 2.01 V</p></li>
+<li><p>VB = 2.71 V</p></li>
+<li><p>VBC = -13.72 V</p></li>
+</ul>
+<p>Q-punt = DC-instelpunt</p>
+<p>Vorige configuraties:
+DC-instelling van IC en VCE afhankelijk van β
+β is temperatuursafhankelijk
+β is niet nauwkeurig gekend
+Deze configuratie:
+DC-instelling onafhankelijk van β</p>
+<p>benadering bij
+βRE ≥ R</p>
+<p>VB kan alleen maar onafhankelijk zijn van de ingangsstroom IB indien Ri veel groter is dan R</p>
+<p>Bereken de DC-instelling van  IC en VCE.
+Opl.: IC = ,mA; VCE = ,V</p>
+<p>De oplossing aangegeven in de slide is uitgewerkt in de veronderstelling dat bRE &gt;&gt;&gt;  R (zie slide , rechter bovenhoek).  Dan bekomen we dat VB= V.
+We kunnen ook de parallelschakeling uitrekenen zoals in de figuur van slide . Dan komen we uit dat  VB= . V
+Vervolgens wordt dan:
+VE=.V en dan hebben we IE=. mA
+IB =IE/(+b)
+IB wordt dan  . uA
+en IC wordt dan . mA.
+VCE= -. -.= . V
+We zien dat de benadering in de bovenhoek van slide  een verschil geeft van .% ten opzicht van het meer nauwkeurigere resultaat.</p>
+<p>Het rendement bedraagt hierbij ten hoogste , %
+Deze versterker is dus nauwelijks bruikbaar als vermogenversterker
+Vdd</p>
+<p>Rendement van ten hoogste  % (bij volle uitsturing)</p>
+<p>De meeste belastingen (bv luidsprekers) laten geen DC stroom toe
+Vdd</p>
+<p>Het maximale rendement wordt hier op een gelijkaardige wijze als op de vorige pagina bepaald. Het is al een factor  beter. Maar dit volstaat nog niet.
+Luidsprekers laten geen DC stroom toe omdat de boxen dan geen symmetrische zwaai kunnen bekomen.</p>
+<p>Voor de drie configuraties die we hebben beschouwd, is de belasting (RL=RC) steeds serieel gevoed. De meeste belastingen (bv. luidsprekers) laten echter geen DC-stroom toe en kunnen dus niet serieel gevoed worden.</p>
+<p>Bereken het ingangsvermogen, uitgangsvermogen en rendement voor onderstaande versterker voor een ingangsspanning die resulteert in een basisstroom met een piekwaarde van  mA.</p>
+<p>Laat ons eerst naar het DC instelling kijken, dus zonder het AC signaal Vi dat dan later  mA AC aan de basis zal leveren. De basis van de bipolaire transistor die aangestuurd wordt staat . V hoger als de emitter die op  staat. Dus over de weerstand RB staat . V. Deze weerstand is  KOhm, dus de DC basisstroom is . mA. Deze wordt  maal versterkt dus de collectorstroom is . mA.
+In het totaal (instellingweerstand+vermogentransistor) moet de V voeding dus . mA+. mA= . mA leveren. Dit is . Watt in het totaal. In de weerstand RB (instelling) verbruiken we . W (. mA*.V) en in de vermogentransistor en RC samen .W (. mA*  V)
+Vervolgens kijken we naar het AC vermogen. Er wordt door de bron  mA piek AC aangestuurd naar de basis. Als een gevolg hiervan bekomen we  mA aan de collector. Dit geeft een AC vermogen in Rc:   Pac= Rac/ * Iac* Iac= .W.
+In de elektronica kijken we vaak naar het rendement van de laatste trap, de verbruiker van het grootste vermogen, zonder de instelling of voortrappen. Het is ook het gemakkelijkste en vraagt het minste rekenwerk. Indien dat gevraagd is, is
+= . W/ . W = . %
+Wanneer echter het systeemrendement gevraagd wordt, moet je alle verliezen  en verbruikers inbrengen en kom je nog lager uit. In dit geval is het echter nog eenvoudig:
+ = . W/ . W = . %</p>
+<p>R’L = gereflecteerde belasting</p>
+<p>DC-belastingslijn:
+weerstand van de primaire winding ≈  Ω
+(in werkelijkheid enkele Ω)
+AC-belastingslijn:
+gereflecteerde belasting R’L</p>
+<p>Bereken het AC-vermogen dat geleverd wordt aan de  Ω luidspreker. De DC-instelling resulteert in een basisstroom van  mA en het ingangssignaal resulteert in een basisstroom zwaai van  mA. De karakteristiek van de transistor is gegeven in de grafiek aan de rechterkant.</p>
+<p>Deze lijn verloopt zeer stijl
+Enkel de weerstand R’ is van belang
+Stabiele instelling is belangrijk om te voorkomen dat er in een zone van te hoge dissipatie gekomen wordt</p>
+<p>Excursie boven de voedingsspanning
+actieve element moet hiervoor bemeten zijn.
+Helling=/nRL
+Idoor
+Vover
+Vdd
+Helling=/R’
+max P
+max Vover</p>
+<p>inductieve belasting
+resistieve belasting maar laag frequent
+Wanneer er niet geldt wL &gt;&gt; RL
+gevolg : tijdelijk in hoge dissipatie</p>
+<p>AC vermogen wordt bepaald door een rechthoek waarvan de zwaai de diagonaal is
+Kies de DC instelling zodanig dat het DC verbruik beperkt is
+Idoor
+Vover
+Vdd</p>
+<p>Laag rendement (nooit boven de  %)
+vooral laag bij beperkte uitsturing</p>
+<p>Opgepast met het verbreken van de belasting:
+de nieuwe belastingslijn ligt nu horizontaal
+de opgestapelde energie in het spoel zal leiden tot een veel te hoge spanning over de transistor
+max Vover</p>
+<p>Ontwerp een klasse A versterker met een luidspreker als belasting ( Ohm) en een nuttig muziekvermogen van  W.
+De wikkelverhouding van de gekozen transformator is n= met een weerstand van de primaire wikkeling R’=  Ohm.
+De vermogentransistor heeft een verzadigingsspanning van . volt en bF van .
+Wat is de nodige voedingsspanning?
+Hoe groot is de DC instelstroom aan de basis?
+Wat is de maximale spanning in het circuit bij maximaal vermogen?
+Wat is de maximale stroom in het circuit bij maximaal vermogen?
+Hoe groot is de AC stroomamplitude aangelegd aan de basis om  W muziekvermogen te bekomen? Wat is dan het rendement?</p>
 <section id="basisschema">
 <h3>Basisschema<a class="headerlink" href="#basisschema" title="Link to this heading">#</a></h3>
 <p>Het basisschema van de klasse A versterker vinden we terug in <a class="reference internal" href="#afig1"><span class="std std-numref">Figuur 22</span></a>. Om hiervan een Spice simulatie te maken, nummeren we de verschillende knopen in dit netwerk zoals je kan zien in <a class="reference internal" href="#afig1-2"><span class="std std-numref">Figuur 23</span></a>.</p>
@@ -618,7 +942,7 @@
 <div class="cell docutils container">
 <div class="cell_output docutils container">
 <figure class="align-default" id="afigstroomvsspanning">
-<img alt="_images/7b35bc5d177864497f37ddb015a83454660290653b9d17162c112c547ccd87ad.png" src="_images/7b35bc5d177864497f37ddb015a83454660290653b9d17162c112c547ccd87ad.png" />
+<img alt="_images/3bab285efbb7d00f16b8654632c40d99dbf9460d841188bd9b6e8c4afdf4cbd3.png" src="_images/3bab285efbb7d00f16b8654632c40d99dbf9460d841188bd9b6e8c4afdf4cbd3.png" />
 <figcaption>
 <p><span class="caption-number">Figuur 24 </span><span class="caption-text">Klasse A versterker: stromen en spanningen als functie van de tijd.</span><a class="headerlink" href="#afigstroomvsspanning" title="Link to this image">#</a></p>
 </figcaption>
@@ -629,7 +953,7 @@
 <div class="cell docutils container">
 <div class="cell_output docutils container">
 <figure class="align-default" id="afigstroomvsspanning2">
-<img alt="_images/6b4e32498837e60c7fa15c588f4b74e9f589d732d3dd591a7b5fba4b2c882601.png" src="_images/6b4e32498837e60c7fa15c588f4b74e9f589d732d3dd591a7b5fba4b2c882601.png" />
+<img alt="_images/12e2546c1bb709003deb45119d5acfe19a7c18ac9d04521a0d016cb5d6ad742f.png" src="_images/12e2546c1bb709003deb45119d5acfe19a7c18ac9d04521a0d016cb5d6ad742f.png" />
 <figcaption>
 <p><span class="caption-number">Figuur 25 </span><span class="caption-text">Belastingskarakteristiek van de klasse A versterker.</span><a class="headerlink" href="#afigstroomvsspanning2" title="Link to this image">#</a></p>
 </figcaption>
@@ -656,7 +980,7 @@
 <div class="cell docutils container">
 <div class="cell_output docutils container">
 <figure class="align-default" id="afig3">
-<img alt="_images/5e4aa78123a976d391aff40a0dcc37e554f073247904489217e66b8d81d402ef.png" src="_images/5e4aa78123a976d391aff40a0dcc37e554f073247904489217e66b8d81d402ef.png" />
+<img alt="_images/d52e6720d4e018422c45c2a26f42cd6731184e11381dc9243f0e93535337bc8f.png" src="_images/d52e6720d4e018422c45c2a26f42cd6731184e11381dc9243f0e93535337bc8f.png" />
 <figcaption>
 <p><span class="caption-number">Figuur 26 </span><span class="caption-text">Stroom-spanningsrelaties voor de primaire en de secundaire wikkeling in het geval van een grote inductantie van de spoelen.</span><a class="headerlink" href="#afig3" title="Link to this image">#</a></p>
 </figcaption>
@@ -683,7 +1007,7 @@
 <div class="cell docutils container">
 <div class="cell_output docutils container">
 <figure class="align-default" id="afighf">
-<img alt="_images/c5b81760a0c079c67b8776f69fd039d6400a4c0fdb1b23ffa53e762852474a3e.png" src="_images/c5b81760a0c079c67b8776f69fd039d6400a4c0fdb1b23ffa53e762852474a3e.png" />
+<img alt="_images/fb014d1026ca0742b4838f22e72828364c39486a4fb5b5e7da38ce309bfaab7b.png" src="_images/fb014d1026ca0742b4838f22e72828364c39486a4fb5b5e7da38ce309bfaab7b.png" />
 <figcaption>
 <p><span class="caption-number">Figuur 27 </span><span class="caption-text">Stroom door de transistor versus spanning over de transistor in het geval van aansturing aan 100 kHz.</span><a class="headerlink" href="#afighf" title="Link to this image">#</a></p>
 </figcaption>
@@ -693,7 +1017,7 @@
 <div class="cell docutils container">
 <div class="cell_output docutils container">
 <figure class="align-default" id="afigvermogen">
-<img alt="_images/eeae7d28c7bcc800a526e9683970d53b3e453d8ef4c249cb93f1894711ebe6c5.png" src="_images/eeae7d28c7bcc800a526e9683970d53b3e453d8ef4c249cb93f1894711ebe6c5.png" />
+<img alt="_images/49607bc58cf2b84b6953e5d7897ffb93311fc840fb1ea3ce40264b7a9de00f9e.png" src="_images/49607bc58cf2b84b6953e5d7897ffb93311fc840fb1ea3ce40264b7a9de00f9e.png" />
 <figcaption>
 <p><span class="caption-number">Figuur 28 </span><span class="caption-text">Ogenblikkelijk vermogen als functie van de tijd voor de simulatie van <a class="reference internal" href="#afigstroomvsspanning"><span class="std std-numref">Figuur 24</span></a></span><a class="headerlink" href="#afigvermogen" title="Link to this image">#</a></p>
 </figcaption>
