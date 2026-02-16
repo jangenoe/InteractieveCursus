@@ -15,6 +15,8 @@ from IPython import display
 from pygments import lexers, highlight
 from pygments.formatters import HtmlFormatter
 from myspicelexer import SpiceLexer
+import os
+os.environ['NGSPICE_LIBRARY_PATH'] = '/opt/homebrew/Cellar/libngspice/45.2/lib/libngspice.dylib'
 
 usewidgets=False;
 
