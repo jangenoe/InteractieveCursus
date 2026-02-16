@@ -813,86 +813,223 @@ De invloed van elk van deze  parameters wordt aanschouwelijk voorgesteld op de v
 <li><p>VB = 2.71 V</p></li>
 <li><p>VBC = -13.72 V</p></li>
 </ul>
+<div class="cell docutils container">
+<div class="cell_output docutils container">
+<img alt="_images/8bbc6f8b33d01e828ada3e8d8829d3934bf03d855ee2ffd44ac5ed0e55966dde.png" src="_images/8bbc6f8b33d01e828ada3e8d8829d3934bf03d855ee2ffd44ac5ed0e55966dde.png" />
+</div>
+</div>
 <p>Q-punt = DC-instelpunt</p>
+<div class="cell docutils container">
+<div class="cell_output docutils container">
+<img alt="_images/71a4421658af1b75e6c44e45fe565cf91bdb2bbf1766385c7961a914c7fc091f.png" src="_images/71a4421658af1b75e6c44e45fe565cf91bdb2bbf1766385c7961a914c7fc091f.png" />
+</div>
+</div>
 <p>Vorige configuraties:
 DC-instelling van IC en VCE afhankelijk van β
 β is temperatuursafhankelijk
 β is niet nauwkeurig gekend
 Deze configuratie:
 DC-instelling onafhankelijk van β</p>
+<div class="cell docutils container">
+<div class="cell_output docutils container">
+<img alt="_images/db216108b407af09df41014f82bb37cadc42a2981bb32bd5ca2d252ac841a557.png" src="_images/db216108b407af09df41014f82bb37cadc42a2981bb32bd5ca2d252ac841a557.png" />
+</div>
+</div>
 <p>benadering bij
 βRE ≥ R</p>
 <p>VB kan alleen maar onafhankelijk zijn van de ingangsstroom IB indien Ri veel groter is dan R</p>
-<p>Bereken de DC-instelling van  IC en VCE.
-Opl.: IC = ,mA; VCE = ,V</p>
-<p>De oplossing aangegeven in de slide is uitgewerkt in de veronderstelling dat bRE &gt;&gt;&gt;  R (zie slide , rechter bovenhoek).  Dan bekomen we dat VB= V.
-We kunnen ook de parallelschakeling uitrekenen zoals in de figuur van slide . Dan komen we uit dat  VB= . V
-Vervolgens wordt dan:
-VE=.V en dan hebben we IE=. mA
-IB =IE/(+b)
-IB wordt dan  . uA
-en IC wordt dan . mA.
-VCE= -. -.= . V
-We zien dat de benadering in de bovenhoek van slide  een verschil geeft van .% ten opzicht van het meer nauwkeurigere resultaat.</p>
-<p>Het rendement bedraagt hierbij ten hoogste , %
+<div class="cell docutils container">
+<div class="cell_output docutils container">
+<img alt="_images/4a979600893b3357bb87b13606434572c15816f32de96e36ff564478cc783139.png" src="_images/4a979600893b3357bb87b13606434572c15816f32de96e36ff564478cc783139.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_output docutils container">
+<img alt="_images/fcbd3e2fd5128d09e34d39b365e242b4981b0c9ccc36b1784af2dfffcd4c293c.png" src="_images/fcbd3e2fd5128d09e34d39b365e242b4981b0c9ccc36b1784af2dfffcd4c293c.png" />
+</div>
+</div>
+<p>Bereken de DC-instelling van  IC en VCE.</p>
+<p>Oplossing:</p>
+<ul class="simple">
+<li><p>IC = 0.838 mA</p></li>
+<li><p>VCE = 12.35 V</p></li>
+</ul>
+<p>De oplossing aangegeven in de slide is uitgewerkt in de veronderstelling dat</p>
+<p>bRE &gt;&gt;&gt;  R 2(zie slide 33, rechter bovenhoek).  Dan bekomen we dat VB= 2 V.
+We kunnen ook de parallelschakeling uitrekenen zoals in de figuur van slide 33. Dan komen we uit dat  VB= 1.996 V
+Vervolgens wordt dan:</p>
+<ul class="simple">
+<li><p>VE=1.266V en dan hebben we IE= 0.844 mA</p></li>
+<li><p>IB =IE/(1+b)</p></li>
+<li><p>IB wordt dan  5.99 uA</p></li>
+<li><p>IC wordt dan 0.838 mA.</p></li>
+<li><p>VCE= 22-1.266-8.38=12.35 V.</p></li>
+</ul>
+<p>We zien dat de benadering in de bovenhoek van slide 33 een verschil geeft van 1.7% ten opzicht van het meer nauwkeurigere resultaat.</p>
+<div class="cell docutils container">
+<div class="cell_output docutils container">
+<img alt="_images/0452cfc45a2df5986fcfb1040b6ff5279f8d495eac1ad9b53d705bc32104584d.png" src="_images/0452cfc45a2df5986fcfb1040b6ff5279f8d495eac1ad9b53d705bc32104584d.png" />
+</div>
+</div>
+<p>Het rendement bedraagt hierbij ten hoogste 8.3 %
 Deze versterker is dus nauwelijks bruikbaar als vermogenversterker
 Vdd</p>
-<p>Rendement van ten hoogste  % (bij volle uitsturing)</p>
-<p>De meeste belastingen (bv luidsprekers) laten geen DC stroom toe
-Vdd</p>
-<p>Het maximale rendement wordt hier op een gelijkaardige wijze als op de vorige pagina bepaald. Het is al een factor  beter. Maar dit volstaat nog niet.
+<div class="cell docutils container">
+<div class="cell_output docutils container">
+<img alt="_images/6ac1a7b67784f7ef95633673745bf6316c35b47d329a2b785d2f06382ab71426.png" src="_images/6ac1a7b67784f7ef95633673745bf6316c35b47d329a2b785d2f06382ab71426.png" />
+</div>
+</div>
+<ul class="simple">
+<li><p>Rendement van ten hoogste  25 % (bij volle uitsturing)</p>
+<ul>
+<li><p>25 % vermogenverlies in de transistor</p></li>
+<li><p>50 % vermogenverlies als DC stroom in de weerstand</p></li>
+</ul>
+</li>
+<li><p>De meeste belastingen (bv luidsprekers) laten geen DC stroom toe
+Vdd</p></li>
+</ul>
+<p>Het maximale rendement wordt hier op een gelijkaardige wijze als op de vorige pagina bepaald. Het is al een factor 3 beter. Maar dit volstaat nog niet.
 Luidsprekers laten geen DC stroom toe omdat de boxen dan geen symmetrische zwaai kunnen bekomen.</p>
+<div class="cell docutils container">
+<div class="cell_output docutils container">
+<img alt="_images/31edcfb7a1054cd66e57bf09effdfeacbed61a39a5546df062e99356faa44a45.png" src="_images/31edcfb7a1054cd66e57bf09effdfeacbed61a39a5546df062e99356faa44a45.png" />
+</div>
+</div>
 <p>Voor de drie configuraties die we hebben beschouwd, is de belasting (RL=RC) steeds serieel gevoed. De meeste belastingen (bv. luidsprekers) laten echter geen DC-stroom toe en kunnen dus niet serieel gevoed worden.</p>
+<div class="cell docutils container">
+<div class="cell_output docutils container">
+<img alt="_images/b3acc2a2e7cc8aae70f4562cd5f41aa42d685b0628560273255929cb84f5b30a.png" src="_images/b3acc2a2e7cc8aae70f4562cd5f41aa42d685b0628560273255929cb84f5b30a.png" />
+</div>
+</div>
 <p>Bereken het ingangsvermogen, uitgangsvermogen en rendement voor onderstaande versterker voor een ingangsspanning die resulteert in een basisstroom met een piekwaarde van  mA.</p>
-<p>Laat ons eerst naar het DC instelling kijken, dus zonder het AC signaal Vi dat dan later  mA AC aan de basis zal leveren. De basis van de bipolaire transistor die aangestuurd wordt staat . V hoger als de emitter die op  staat. Dus over de weerstand RB staat . V. Deze weerstand is  KOhm, dus de DC basisstroom is . mA. Deze wordt  maal versterkt dus de collectorstroom is . mA.
-In het totaal (instellingweerstand+vermogentransistor) moet de V voeding dus . mA+. mA= . mA leveren. Dit is . Watt in het totaal. In de weerstand RB (instelling) verbruiken we . W (. mA*.V) en in de vermogentransistor en RC samen .W (. mA*  V)
-Vervolgens kijken we naar het AC vermogen. Er wordt door de bron  mA piek AC aangestuurd naar de basis. Als een gevolg hiervan bekomen we  mA aan de collector. Dit geeft een AC vermogen in Rc:   Pac= Rac/ * Iac* Iac= .W.
-In de elektronica kijken we vaak naar het rendement van de laatste trap, de verbruiker van het grootste vermogen, zonder de instelling of voortrappen. Het is ook het gemakkelijkste en vraagt het minste rekenwerk. Indien dat gevraagd is, is
-= . W/ . W = . %
-Wanneer echter het systeemrendement gevraagd wordt, moet je alle verliezen  en verbruikers inbrengen en kom je nog lager uit. In dit geval is het echter nog eenvoudig:
- = . W/ . W = . %</p>
+<p>Laat ons eerst naar het DC instelling kijken, dus zonder het AC signaal Vi dat dan later 10 mA AC aan de basis zal leveren. De basis van de bipolaire transistor die aangestuurd wordt staat 0.7 V hoger als de emitter die op 0 staat. Dus over de weerstand RB staat 19.3 V. Deze weerstand is 1 KOhm, dus de DC basisstroom is 19.3 mA. Deze wordt 25 maal versterkt dus de collectorstroom is 482.5 mA.</p>
+<p>In het totaal (instellingweerstand+vermogentransistor) moet de 20V voeding dus 482.5 mA+19.3 mA= 501.8 mA leveren. Dit is 10.036 Watt in het totaal. In de weerstand RB (instelling) verbruiken we 0.37 W (19.3 mA x 19.3V) en in de vermogentransistor en RC samen 9.6W (482.5 mA* 20 V)
+Vervolgens kijken we naar het AC vermogen. Er wordt door de bron 10 mA piek AC aangestuurd naar de basis. Als een gevolg hiervan bekomen we 250 mA aan de collector. Dit geeft een AC vermogen in Rc:   Pac= Rac/2 * Iac* Iac= 0.625W.</p>
+<p>In de elektronica kijken we vaak naar het rendement van de laatste trap, de verbruiker van het grootste vermogen, zonder de instelling of voortrappen. Het is ook het gemakkelijkste en vraagt het minste rekenwerk. Indien dat gevraagd is, is</p>
+<p>mu= 0.625 W/ 9.6 W = 6.5 %</p>
+<p>Wanneer echter het systeemrendement gevraagd wordt, moet je alle verliezen  en verbruikers inbrengen en kom je nog lager uit. In dit geval is het echter nog eenvoudig:</p>
+<p>mu = 0.625 W/ 10.036 W = 6.2 %</p>
+<div class="cell docutils container">
+<div class="cell_output docutils container">
+<img alt="_images/41c0d34c484d9bc019e73b16a209a469cbd445f104be7a4a8d0f4ff9f46ae689.png" src="_images/41c0d34c484d9bc019e73b16a209a469cbd445f104be7a4a8d0f4ff9f46ae689.png" />
+</div>
+</div>
 <p>R’L = gereflecteerde belasting</p>
+<div class="cell docutils container">
+<div class="cell_output docutils container">
+<img alt="_images/819dbdc4d80f31c2c444118fdd8922221ff035914bd29d81599a24a418d15c58.png" src="_images/819dbdc4d80f31c2c444118fdd8922221ff035914bd29d81599a24a418d15c58.png" />
+</div>
+</div>
 <p>DC-belastingslijn:
-weerstand van de primaire winding ≈  Ω
+weerstand van de primaire winding ≈  0 Ω
 (in werkelijkheid enkele Ω)
 AC-belastingslijn:
 gereflecteerde belasting R’L</p>
-<p>Bereken het AC-vermogen dat geleverd wordt aan de  Ω luidspreker. De DC-instelling resulteert in een basisstroom van  mA en het ingangssignaal resulteert in een basisstroom zwaai van  mA. De karakteristiek van de transistor is gegeven in de grafiek aan de rechterkant.</p>
-<p>Deze lijn verloopt zeer stijl
-Enkel de weerstand R’ is van belang
-Stabiele instelling is belangrijk om te voorkomen dat er in een zone van te hoge dissipatie gekomen wordt</p>
-<p>Excursie boven de voedingsspanning
-actieve element moet hiervoor bemeten zijn.
-Helling=/nRL
+<div class="cell docutils container">
+<div class="cell_output docutils container">
+<img alt="_images/34639f253385a04985234a5dac72a8d6b94191b29129413c07290c26b5429282.png" src="_images/34639f253385a04985234a5dac72a8d6b94191b29129413c07290c26b5429282.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_output docutils container">
+<img alt="_images/29ab2f403f23fad0d008b346209e44ea1e84b0df9f9f41494f1dbc45c8529edd.png" src="_images/29ab2f403f23fad0d008b346209e44ea1e84b0df9f9f41494f1dbc45c8529edd.png" />
+</div>
+</div>
+<p>Bereken het AC-vermogen dat geleverd wordt aan de 8 Ω luidspreker. De DC-instelling resulteert in een basisstroom van 6 mA en het ingangssignaal resulteert in een basisstroom zwaai van 4 mA. De karakteristiek van de transistor is gegeven in de grafiek aan de rechterkant.</p>
+<div class="cell docutils container">
+<div class="cell_output docutils container">
+<img alt="_images/735d068b5979cf5b6158a3af3fe72c2d24d7fa3bde2aadb86499403c80a6636b.png" src="_images/735d068b5979cf5b6158a3af3fe72c2d24d7fa3bde2aadb86499403c80a6636b.png" />
+</div>
+</div>
+<p>Oplossing:
+P_{R_L AC}= 0.477 W</p>
+<div class="cell docutils container">
+<div class="cell_output docutils container">
+<img alt="_images/0e350c0da846f49a154afc6fd2eabe7509025273a19f88f9107bd054b02e4eab.png" src="_images/0e350c0da846f49a154afc6fd2eabe7509025273a19f88f9107bd054b02e4eab.png" />
+</div>
+</div>
+<ul class="simple">
+<li><p>Deze lijn verloopt zeer stijl</p></li>
+<li><p>Enkel de weerstand R’ is van belang</p></li>
+<li><p>Stabiele instelling is belangrijk om te voorkomen dat er in een zone van te hoge dissipatie gekomen wordt</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_output docutils container">
+<img alt="_images/22152e78b333fbf86b387574144502a951ef7259fb7f8edd22db3ee3d16695fe.png" src="_images/22152e78b333fbf86b387574144502a951ef7259fb7f8edd22db3ee3d16695fe.png" />
+</div>
+</div>
+<ul class="simple">
+<li><p>Excursie boven de voedingsspanning</p></li>
+<li><p>actieve element moet hiervoor bemeten zijn.</p></li>
+</ul>
+<p>Helling=/nRL
 Idoor
 Vover
 Vdd
 Helling=/R’
 max P
 max Vover</p>
-<p>inductieve belasting
-resistieve belasting maar laag frequent
-Wanneer er niet geldt wL &gt;&gt; RL
-gevolg : tijdelijk in hoge dissipatie</p>
-<p>AC vermogen wordt bepaald door een rechthoek waarvan de zwaai de diagonaal is
-Kies de DC instelling zodanig dat het DC verbruik beperkt is
-Idoor
+<div class="cell docutils container">
+<div class="cell_output docutils container">
+<img alt="_images/33c532da2145ec694695c1bea16ddecd7b9656eeb3eb18adfadee149bd12eb7a.png" src="_images/33c532da2145ec694695c1bea16ddecd7b9656eeb3eb18adfadee149bd12eb7a.png" />
+</div>
+</div>
+<ul class="simple">
+<li><p>inductieve belasting</p></li>
+<li><p>resistieve belasting maar laag frequent</p>
+<ul>
+<li><p>Wanneer er niet geldt wL &gt;&gt; RL</p></li>
+</ul>
+</li>
+<li><p>gevolg : tijdelijk in hoge dissipatie</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_output docutils container">
+<img alt="_images/a7d92534f134c18cc279cb9cbef07e8c84c7aab18401c744063152c140baf644.png" src="_images/a7d92534f134c18cc279cb9cbef07e8c84c7aab18401c744063152c140baf644.png" />
+</div>
+</div>
+<ul class="simple">
+<li><p>AC vermogen wordt bepaald door een rechthoek waarvan de zwaai de diagonaal is</p></li>
+<li><p>Kies de DC instelling zodanig dat het DC verbruik beperkt is</p></li>
+</ul>
+<p>Idoor
 Vover
 Vdd</p>
-<p>Laag rendement (nooit boven de  %)
-vooral laag bij beperkte uitsturing</p>
-<p>Opgepast met het verbreken van de belasting:
-de nieuwe belastingslijn ligt nu horizontaal
-de opgestapelde energie in het spoel zal leiden tot een veel te hoge spanning over de transistor
-max Vover</p>
-<p>Ontwerp een klasse A versterker met een luidspreker als belasting ( Ohm) en een nuttig muziekvermogen van  W.
-De wikkelverhouding van de gekozen transformator is n= met een weerstand van de primaire wikkeling R’=  Ohm.
-De vermogentransistor heeft een verzadigingsspanning van . volt en bF van .
-Wat is de nodige voedingsspanning?
-Hoe groot is de DC instelstroom aan de basis?
-Wat is de maximale spanning in het circuit bij maximaal vermogen?
-Wat is de maximale stroom in het circuit bij maximaal vermogen?
-Hoe groot is de AC stroomamplitude aangelegd aan de basis om  W muziekvermogen te bekomen? Wat is dan het rendement?</p>
+<div class="cell docutils container">
+<div class="cell_output docutils container">
+<img alt="_images/be2045542d24ed5083cf75443862add65f37181707fba596cb470eed18fd7945.png" src="_images/be2045542d24ed5083cf75443862add65f37181707fba596cb470eed18fd7945.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_output docutils container">
+<img alt="_images/dc91ce52175531f067267b32035eac2f2fa66836a654924ed34621e9be9d0068.png" src="_images/dc91ce52175531f067267b32035eac2f2fa66836a654924ed34621e9be9d0068.png" />
+</div>
+</div>
+<ul class="simple">
+<li><p>Laag rendement (nooit boven de 50 %)</p></li>
+<li><p>vooral laag bij beperkte uitsturing</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_output docutils container">
+<img alt="_images/c559512f282e5ddff602a33b6aef85b50d63588adc1bb121d18bfaa165d5f256.png" src="_images/c559512f282e5ddff602a33b6aef85b50d63588adc1bb121d18bfaa165d5f256.png" />
+</div>
+</div>
+<p>Opgepast met het verbreken van de belasting:</p>
+<ul class="simple">
+<li><p>de nieuwe belastingslijn ligt nu horizontaal</p></li>
+<li><p>de opgestapelde energie in het spoel zal leiden tot een veel te hoge spanning over de transistor</p></li>
+</ul>
+<p>Ontwerp een klasse A versterker met een luidspreker als belasting (8 Ohm) en een nuttig muziekvermogen van 10 W.</p>
+<ul class="simple">
+<li><p>De wikkelverhouding van de gekozen transformator is n=5 met een weerstand van de primaire wikkeling R’= 1 Ohm.</p></li>
+<li><p>De vermogentransistor heeft een verzadigingsspanning van 0.3 volt en <span class="math notranslate nohighlight">\(\beta_F\)</span> van 20.</p></li>
+<li><p>Wat is de nodige voedingsspanning?</p></li>
+<li><p>Hoe groot is de DC instelstroom aan de basis?</p></li>
+<li><p>Wat is de maximale spanning in het circuit bij maximaal vermogen?</p></li>
+<li><p>Wat is de maximale stroom in het circuit bij maximaal vermogen?</p></li>
+<li><p>Hoe groot is de AC stroomamplitude aangelegd aan de basis om 1 W muziekvermogen te bekomen? Wat is dan het rendement?</p></li>
+</ul>
 <section id="basisschema">
 <h3>Basisschema<a class="headerlink" href="#basisschema" title="Link to this heading">#</a></h3>
 <p>Het basisschema van de klasse A versterker vinden we terug in <a class="reference internal" href="#afig1"><span class="std std-numref">Figuur 22</span></a>. Om hiervan een Spice simulatie te maken, nummeren we de verschillende knopen in dit netwerk zoals je kan zien in <a class="reference internal" href="#afig1-2"><span class="std std-numref">Figuur 23</span></a>.</p>
