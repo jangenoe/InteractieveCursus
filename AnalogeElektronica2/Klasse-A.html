@@ -49,8 +49,8 @@
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="_static/custom-pygments.css?v=d7fe8a85" />
     <link rel="stylesheet" type="text/css" href="_static/code-caption-style.css?v=0ad27fa8" />
-    <link rel="stylesheet" type="text/css" href="_static/spice-lexer.css?v=422ceae6" />
     <link rel="stylesheet" type="text/css" href="_static/custom.css?v=ff21a56f" />
+    <link rel="stylesheet" type="text/css" href="_static/spice-lexer.css?v=422ceae6" />
   
   <!-- So that users can add custom icons -->
   <script src="_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
@@ -954,82 +954,6 @@ P_{R_L AC}= 0.477 W</p>
 <li><p>Enkel de weerstand R’ is van belang</p></li>
 <li><p>Stabiele instelling is belangrijk om te voorkomen dat er in een zone van te hoge dissipatie gekomen wordt</p></li>
 </ul>
-<div class="cell docutils container">
-<div class="cell_output docutils container">
-<img alt="_images/22152e78b333fbf86b387574144502a951ef7259fb7f8edd22db3ee3d16695fe.png" src="_images/22152e78b333fbf86b387574144502a951ef7259fb7f8edd22db3ee3d16695fe.png" />
-</div>
-</div>
-<ul class="simple">
-<li><p>Excursie boven de voedingsspanning</p></li>
-<li><p>actieve element moet hiervoor bemeten zijn.</p></li>
-</ul>
-<p>Helling=/nRL
-Idoor
-Vover
-Vdd
-Helling=/R’
-max P
-max Vover</p>
-<div class="cell docutils container">
-<div class="cell_output docutils container">
-<img alt="_images/33c532da2145ec694695c1bea16ddecd7b9656eeb3eb18adfadee149bd12eb7a.png" src="_images/33c532da2145ec694695c1bea16ddecd7b9656eeb3eb18adfadee149bd12eb7a.png" />
-</div>
-</div>
-<ul class="simple">
-<li><p>inductieve belasting</p></li>
-<li><p>resistieve belasting maar laag frequent</p>
-<ul>
-<li><p>Wanneer er niet geldt wL &gt;&gt; RL</p></li>
-</ul>
-</li>
-<li><p>gevolg : tijdelijk in hoge dissipatie</p></li>
-</ul>
-<div class="cell docutils container">
-<div class="cell_output docutils container">
-<img alt="_images/a7d92534f134c18cc279cb9cbef07e8c84c7aab18401c744063152c140baf644.png" src="_images/a7d92534f134c18cc279cb9cbef07e8c84c7aab18401c744063152c140baf644.png" />
-</div>
-</div>
-<ul class="simple">
-<li><p>AC vermogen wordt bepaald door een rechthoek waarvan de zwaai de diagonaal is</p></li>
-<li><p>Kies de DC instelling zodanig dat het DC verbruik beperkt is</p></li>
-</ul>
-<p>Idoor
-Vover
-Vdd</p>
-<div class="cell docutils container">
-<div class="cell_output docutils container">
-<img alt="_images/be2045542d24ed5083cf75443862add65f37181707fba596cb470eed18fd7945.png" src="_images/be2045542d24ed5083cf75443862add65f37181707fba596cb470eed18fd7945.png" />
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_output docutils container">
-<img alt="_images/dc91ce52175531f067267b32035eac2f2fa66836a654924ed34621e9be9d0068.png" src="_images/dc91ce52175531f067267b32035eac2f2fa66836a654924ed34621e9be9d0068.png" />
-</div>
-</div>
-<ul class="simple">
-<li><p>Laag rendement (nooit boven de 50 %)</p></li>
-<li><p>vooral laag bij beperkte uitsturing</p></li>
-</ul>
-<div class="cell docutils container">
-<div class="cell_output docutils container">
-<img alt="_images/c559512f282e5ddff602a33b6aef85b50d63588adc1bb121d18bfaa165d5f256.png" src="_images/c559512f282e5ddff602a33b6aef85b50d63588adc1bb121d18bfaa165d5f256.png" />
-</div>
-</div>
-<p>Opgepast met het verbreken van de belasting:</p>
-<ul class="simple">
-<li><p>de nieuwe belastingslijn ligt nu horizontaal</p></li>
-<li><p>de opgestapelde energie in het spoel zal leiden tot een veel te hoge spanning over de transistor</p></li>
-</ul>
-<p>Ontwerp een klasse A versterker met een luidspreker als belasting (8 Ohm) en een nuttig muziekvermogen van 10 W.</p>
-<ul class="simple">
-<li><p>De wikkelverhouding van de gekozen transformator is n=5 met een weerstand van de primaire wikkeling R’= 1 Ohm.</p></li>
-<li><p>De vermogentransistor heeft een verzadigingsspanning van 0.3 volt en <span class="math notranslate nohighlight">\(\beta_F\)</span> van 20.</p></li>
-<li><p>Wat is de nodige voedingsspanning?</p></li>
-<li><p>Hoe groot is de DC instelstroom aan de basis?</p></li>
-<li><p>Wat is de maximale spanning in het circuit bij maximaal vermogen?</p></li>
-<li><p>Wat is de maximale stroom in het circuit bij maximaal vermogen?</p></li>
-<li><p>Hoe groot is de AC stroomamplitude aangelegd aan de basis om 1 W muziekvermogen te bekomen? Wat is dan het rendement?</p></li>
-</ul>
 <section id="basisschema">
 <h3>Basisschema<a class="headerlink" href="#basisschema" title="Link to this heading">#</a></h3>
 <p>Het basisschema van de klasse A versterker vinden we terug in <a class="reference internal" href="#afig1"><span class="std std-numref">Figuur 22</span></a>. Om hiervan een Spice simulatie te maken, nummeren we de verschillende knopen in dit netwerk zoals je kan zien in <a class="reference internal" href="#afig1-2"><span class="std std-numref">Figuur 23</span></a>.</p>
@@ -1175,6 +1099,82 @@ De gemiddelde efficentie gedurende de 10 eerste periodes is 37.89 %
 </div>
 </div>
 </div>
+<div class="cell docutils container">
+<div class="cell_output docutils container">
+<img alt="_images/22152e78b333fbf86b387574144502a951ef7259fb7f8edd22db3ee3d16695fe.png" src="_images/22152e78b333fbf86b387574144502a951ef7259fb7f8edd22db3ee3d16695fe.png" />
+</div>
+</div>
+<ul class="simple">
+<li><p>Excursie boven de voedingsspanning</p></li>
+<li><p>actieve element moet hiervoor bemeten zijn.</p></li>
+</ul>
+<p>Helling=/nRL
+Idoor
+Vover
+Vdd
+Helling=/R’
+max P
+max Vover</p>
+<div class="cell docutils container">
+<div class="cell_output docutils container">
+<img alt="_images/33c532da2145ec694695c1bea16ddecd7b9656eeb3eb18adfadee149bd12eb7a.png" src="_images/33c532da2145ec694695c1bea16ddecd7b9656eeb3eb18adfadee149bd12eb7a.png" />
+</div>
+</div>
+<ul class="simple">
+<li><p>inductieve belasting</p></li>
+<li><p>resistieve belasting maar laag frequent</p>
+<ul>
+<li><p>Wanneer er niet geldt wL &gt;&gt; RL</p></li>
+</ul>
+</li>
+<li><p>gevolg : tijdelijk in hoge dissipatie</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_output docutils container">
+<img alt="_images/a7d92534f134c18cc279cb9cbef07e8c84c7aab18401c744063152c140baf644.png" src="_images/a7d92534f134c18cc279cb9cbef07e8c84c7aab18401c744063152c140baf644.png" />
+</div>
+</div>
+<ul class="simple">
+<li><p>AC vermogen wordt bepaald door een rechthoek waarvan de zwaai de diagonaal is</p></li>
+<li><p>Kies de DC instelling zodanig dat het DC verbruik beperkt is</p></li>
+</ul>
+<p>Idoor
+Vover
+Vdd</p>
+<div class="cell docutils container">
+<div class="cell_output docutils container">
+<img alt="_images/be2045542d24ed5083cf75443862add65f37181707fba596cb470eed18fd7945.png" src="_images/be2045542d24ed5083cf75443862add65f37181707fba596cb470eed18fd7945.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_output docutils container">
+<img alt="_images/dc91ce52175531f067267b32035eac2f2fa66836a654924ed34621e9be9d0068.png" src="_images/dc91ce52175531f067267b32035eac2f2fa66836a654924ed34621e9be9d0068.png" />
+</div>
+</div>
+<ul class="simple">
+<li><p>Laag rendement (nooit boven de 50 %)</p></li>
+<li><p>vooral laag bij beperkte uitsturing</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_output docutils container">
+<img alt="_images/c559512f282e5ddff602a33b6aef85b50d63588adc1bb121d18bfaa165d5f256.png" src="_images/c559512f282e5ddff602a33b6aef85b50d63588adc1bb121d18bfaa165d5f256.png" />
+</div>
+</div>
+<p>Opgepast met het verbreken van de belasting:</p>
+<ul class="simple">
+<li><p>de nieuwe belastingslijn ligt nu horizontaal</p></li>
+<li><p>de opgestapelde energie in het spoel zal leiden tot een veel te hoge spanning over de transistor</p></li>
+</ul>
+<p>Ontwerp een klasse A versterker met een luidspreker als belasting (8 Ohm) en een nuttig muziekvermogen van 10 W.</p>
+<ul class="simple">
+<li><p>De wikkelverhouding van de gekozen transformator is n=5 met een weerstand van de primaire wikkeling R’= 1 Ohm.</p></li>
+<li><p>De vermogentransistor heeft een verzadigingsspanning van 0.3 volt en <span class="math notranslate nohighlight">\(\beta_F\)</span> van 20.</p></li>
+<li><p>Wat is de nodige voedingsspanning?</p></li>
+<li><p>Hoe groot is de DC instelstroom aan de basis?</p></li>
+<li><p>Wat is de maximale spanning in het circuit bij maximaal vermogen?</p></li>
+<li><p>Wat is de maximale stroom in het circuit bij maximaal vermogen?</p></li>
+<li><p>Hoe groot is de AC stroomamplitude aangelegd aan de basis om 1 W muziekvermogen te bekomen? Wat is dan het rendement?</p></li>
+</ul>
 </section>
 </section>
 </section>
