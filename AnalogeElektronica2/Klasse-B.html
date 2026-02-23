@@ -603,6 +603,510 @@ Als een gevolg hiervan kan de duurdere aanschafkosten gemakkelijk teruggewonnen 
 </tbody>
 </table>
 </div>
+<p>In dit hoofdstuk bespreken we de Klasse B en de klasse G versterker. Deze versterker vereist meer actieve elementen en is dus duurder in ontwerp maar levert een veel hoger rendement op. Hij is dus veel goedkoper in gebruik en vereist veel minder koeling.
+[] <a class="reference external" href="http://www.eee.bham.ac.uk/collinst/eeb/slides/">http://www.eee.bham.ac.uk/collinst/eeb/slides/</a></p>
+<ul class="simple">
+<li><p>Invoering van symmetrie</p>
+<ul>
+<li><p>2 transistors die elk de helft van de tijd in geleiding zijn</p></li>
+<li><p>DC werkingspunt in een zone van geringe dissipatie</p>
+<ul>
+<li><p>geen stroom door beide transistors</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Benamingen</p>
+<ul>
+<li><p>balansschakeling</p></li>
+<li><p>push-pull (duw-trek)</p></li>
+</ul>
+</li>
+<li><p>Complexere schema’s in vergelijking met klasse A, maar een hoger rendement</p>
+<ul>
+<li><p>duurder in fabricatie</p></li>
+<li><p>goedkoper in werking</p></li>
+</ul>
+</li>
+</ul>
+<p>NPN en PNP type transistor zijn beide de helft van de tijd in geleiding (bij sinusvormige sturing)
+Ook voor DC toepassingen bruikbaar</p>
+<div class="cell docutils container">
+<div class="cell_output docutils container">
+<img alt="_images/7119bc49dc73a0c7ab08cfabe4d49c16c88cf590e9b27ddc6cf27be93af874f3.png" src="_images/7119bc49dc73a0c7ab08cfabe4d49c16c88cf590e9b27ddc6cf27be93af874f3.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_output docutils container">
+<img alt="_images/d2f2c075859966b9733e16d92545632471f0e948f1ad918fe0b9716f716d3abd.png" src="_images/d2f2c075859966b9733e16d92545632471f0e948f1ad918fe0b9716f716d3abd.png" />
+</div>
+</div>
+<p>Geen  aftakkingen op de voeding nodig
+goedkopere voeding
+Geen gevaar voor drift
+In de DC versie geeft drift van het instelpunt belangrijke DC stromen door de belasting.
+<span class="math notranslate nohighlight">\(R_L\)</span>
+<span class="math notranslate nohighlight">\(V_{DD}\)</span></p>
+<p>basissen worden gezamenlijk gestuurd met dezelfde spanning
+Beide transistors zijn emitter volgers
+spanningsversterking =
+stroomversterking b
+<span class="math notranslate nohighlight">\(R_L\)</span>
+<span class="math notranslate nohighlight">\(V_{DD}\)</span></p>
+<div class="cell docutils container">
+<div class="cell_output docutils container">
+<img alt="_images/5157d90b7cb86ed6a5a1af6a10912096eb0d060909003bafc98aefad83a46304.png" src="_images/5157d90b7cb86ed6a5a1af6a10912096eb0d060909003bafc98aefad83a46304.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_output docutils container">
+<img alt="_images/8735bc52ab71218e0f2def88aeda50e525656bb82c1bb90ca9a5a5e2bde09e77.png" src="_images/8735bc52ab71218e0f2def88aeda50e525656bb82c1bb90ca9a5a5e2bde09e77.png" />
+</div>
+</div>
+<p>Het overgaan van het geleiden van de ene transistor naar het geleiden van de andere transistor stelt een probleem.
+Er is een dode zone van  * . Volt.
+<span class="math notranslate nohighlight">\(V_{in}\)</span>
+<span class="math notranslate nohighlight">\(V_{out}\)</span>
+. V
+-. V
+npn in geleiding
+pnp in geleiding</p>
+<div class="cell docutils container">
+<div class="cell_output docutils container">
+<img alt="_images/8eab2f6d7baeb4549731d8600c7746b618ef017c83c83fc4b40ecf0890184f85.png" src="_images/8eab2f6d7baeb4549731d8600c7746b618ef017c83c83fc4b40ecf0890184f85.png" />
+</div>
+</div>
+<p>Verschillende voorspanning voor beide transistors
+Problemen:
+Voorspanning verandert met variaties op de voeding.
+Het schema houdt geen rekening met de temperatuursafhankelijkheid van <span class="math notranslate nohighlight">\(V_{BE}\)</span>.
+<span class="math notranslate nohighlight">\(V_{DD}\)</span></p>
+<ul class="simple">
+<li><p>Deze diodes vangen</p>
+<ul>
+<li><p>variaties van de voeding</p></li>
+<li><p>temperatuur variatie van de junctie
+op.</p></li>
+</ul>
+</li>
+<li><p>Deze diodes moeten dezelfde temperatuur hebben als de transistors.</p>
+<ul>
+<li><p>Dit kan maar bij benadering zo zijn.</p></li>
+</ul>
+</li>
+</ul>
+<p><span class="math notranslate nohighlight">\(V_{DD}\)</span></p>
+<div class="cell docutils container">
+<div class="cell_output docutils container">
+<img alt="_images/e8fbe5f4f1ea6861a389d57d406cc6b88bdfb6525f0cbf44fead3952b19a43cb.png" src="_images/e8fbe5f4f1ea6861a389d57d406cc6b88bdfb6525f0cbf44fead3952b19a43cb.png" />
+</div>
+</div>
+<ul class="simple">
+<li><p>Deze diodes vangen</p>
+<ul>
+<li><p>variaties van de voeding</p></li>
+<li><p>temperatuur variatie van de junctie
+op.</p></li>
+</ul>
+</li>
+<li><p>Deze diodes moeten dezelfde temperatuur hebben als de transistors.</p>
+<ul>
+<li><p>Dit kan maar bij benadering zo zijn.</p></li>
+</ul>
+</li>
+</ul>
+<p><span class="math notranslate nohighlight">\(V_{DD}\)</span></p>
+<div class="cell docutils container">
+<div class="cell_output docutils container">
+<img alt="_images/44daccc2a059f28d60d7452ef33a372c157533f5f7fd0058897894566c445869.png" src="_images/44daccc2a059f28d60d7452ef33a372c157533f5f7fd0058897894566c445869.png" />
+</div>
+</div>
+<p>Neem een transistor met een grote stroomversterking
+De stroom door beide delen van de instelweerstand zal dan gelijk zijn
+Over het onderste deel van de instelweerstand staat <span class="math notranslate nohighlight">\(V_{BE}\)</span>
+De instelling van de weerstand bepaalt de totale spanning
+Beste oplossing omdat het de laagste impedantie geeft tussen de basissen van de vermogentransistors
+<span class="math notranslate nohighlight">\(V_{DD}\)</span></p>
+<div class="cell docutils container">
+<div class="cell_output docutils container">
+<img alt="_images/0dab5ca03c2b279212aad3453a6ec8db75091d13e55e506313fddddbff3470c0.png" src="_images/0dab5ca03c2b279212aad3453a6ec8db75091d13e55e506313fddddbff3470c0.png" />
+</div>
+</div>
+<ul class="simple">
+<li><p>De voorspanning mag nooit te groot worden.</p>
+<ul>
+<li><p>Een te grote voorspanning brengt beide transistors gelijktijdig in geleiding, zodat de voeding kortgesloten wordt.</p></li>
+</ul>
+</li>
+<li><p>De voorspanning mag kleiner worden maar als het signaal door 0 gaat moet ze de ingestelde waarde hebben</p></li>
+<li><p>Het optimale gedrag voor de voorspanning is dus een spanningsbron met een lage impedantie</p></li>
+</ul>
+<ul class="simple">
+<li><p>Bij een constante basis-emitter spanning neemt de stroom toe met 8% per graad Celsius dat de temperatuur stijgt.</p>
+<ul>
+<li><p>Dit geeft een verdubbeling van de stroom elke 9 graden Celsius.</p></li>
+</ul>
+</li>
+<li><p>Bij een constante basisstroom daalt <span class="math notranslate nohighlight">\(V_{BE}\)</span> 2 mV per graad Celsius dat de temperatuur stijgt.</p>
+<ul>
+<li><p>Stel V1 = 3.75 V en V3 =  3V (keuze R3 = 60 Ω)</p>
+<ul>
+<li><p>V3 stijgt  ten gevolge van een temperatuursstijging van 1 graad Celsius met ongeveer 2 mV.</p></li>
+<li><p>nog een aanvaardbare stroomstijging (0.066 %)</p></li>
+</ul>
+</li>
+<li><p>Stel V 1= 0.85 V en V = 0.1 V (keuze R = 2 Ω)</p>
+<ul>
+<li><p>stroomstijging per graad Celsius is nu 2%</p></li>
+<li><p>10 graden stijgen: V3 = 0.12 V  (20% stijging)</p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_output docutils container">
+<img alt="_images/44948eb11868b1bd6d7fcc74e69958c2f0a2e098cca1e6bbd0c21464e1ba3f65.png" src="_images/44948eb11868b1bd6d7fcc74e69958c2f0a2e098cca1e6bbd0c21464e1ba3f65.png" />
+</div>
+</div>
+<p>Laat ons eerst even de weerstand R_3 wegdenken. Dan is V_3 gelijk aan 0V en dan is V_1 aan <span class="math notranslate nohighlight">\(V_{BE}\)</span>.
+Als we de stroom die in de basis instroomt constant zouden houden, zou de <span class="math notranslate nohighlight">\(V_{BE}\)</span> (=V1) dalen met 2 mV per graad Celsius dat de temperatuur stijgt.
+In dit geval houden we echter de V_1 constant, waardoor de stroom met 8% gaat stijgen.
+We willen tegengaan dat de stroom (veel) gaat stijgen, bv maar 2% in plaats van 8%.
+Hoe kunnen we dat bekomen?
+Als de temperatuur stijgt, zou normaal de stroom veel stijgen, maar als we tegelijk de <span class="math notranslate nohighlight">\(V_{BE}\)</span> kleiner kunnen maken zal de stroom minder dan normaal stijgen.
+Hoe kunnen we <span class="math notranslate nohighlight">\(V_{BE}\)</span> kleiner maken met stijgende stroom?
+ Wel <span class="math notranslate nohighlight">\(V_{BE}\)</span>= V_1-V_3, dus als V_3 groter wordt, wordt <span class="math notranslate nohighlight">\(V_{BE}\)</span> kleiner. En we kunnen V_3 groter maken als de stroom stijgt door de stroom door de weerstand te laten lopen.
+Dit hebben we uitgewerkt met 2 voorbeelden van R_3:
+Een voorbeeld waar de stroomstijging 0.066% per graad Celcius is, in plaats van 8% per graad Celcius.
+Een voorbeeld waar de stroomstijging 2% per graad Celcius is, in plaats van 8% per graad Celcius.
+Het tweede voorbeeld lijkt minder goed, maar heeft het belangrijk voordeel dat er veel minder spanning verloren wordt.</p>
+<p>Bij schakelingen met een groot vermogen is het onmogelijk de diodes op dezelfde temperatuur te plaatsen.
+Emitter degeneratie door weerstanden is dus aangewezen.
+Het is een probleem dat deze weerstanden bij grote stromen grote verliezen betekenen.
+<span class="math notranslate nohighlight">\(V_{DD}\)</span></p>
+<div class="cell docutils container">
+<div class="cell_output docutils container">
+<img alt="_images/a0cc2d88ff9566512e7e3b7d092514be67ce0780135267cf5b9bf65fb0e70fff.png" src="_images/a0cc2d88ff9566512e7e3b7d092514be67ce0780135267cf5b9bf65fb0e70fff.png" />
+</div>
+</div>
+<p>Bij schakelingen met een groot vermogen is het onmogelijk de voorspanningsschakeling op dezelfde temperatuur te plaatsen
+Emitterdegeneratie door weerstanden is dus aangewezen
+Het is een probleem dat deze weerstanden bij grote stromen grote verliezen betekenen
+<span class="math notranslate nohighlight">\(V_{DD}\)</span></p>
+<div class="cell docutils container">
+<div class="cell_output docutils container">
+<img alt="_images/2af823eb1972e4e0826ce58d7b48c8585c2fa36a1959fe8a33f36dad794eadb0.png" src="_images/2af823eb1972e4e0826ce58d7b48c8585c2fa36a1959fe8a33f36dad794eadb0.png" />
+</div>
+</div>
+<p>Door het bijplaatsen van overbruggingsdiodes kunnen we het probleem van de grote verliezen bij grote stromen aanpakken.
+<span class="math notranslate nohighlight">\(V_{DD}\)</span>
+-<span class="math notranslate nohighlight">\(V_{DD}\)</span></p>
+<div class="cell docutils container">
+<div class="cell_output docutils container">
+<img alt="_images/84a03d2867a172f969d0fe12c1bf01a4f0103dea22d7055b5d0e18f9e627a4c3.png" src="_images/84a03d2867a172f969d0fe12c1bf01a4f0103dea22d7055b5d0e18f9e627a4c3.png" />
+</div>
+</div>
+<p>Door het bijplaatsen van overbruggingsdiodes kunnen we het probleem van de grote verliezen bij grote stromen aanpakken
+<span class="math notranslate nohighlight">\(V_{DD}\)</span></p>
+<div class="cell docutils container">
+<div class="cell_output docutils container">
+<img alt="_images/f11594f837be3e9d7f9ff69f2086be3788632cff945de739d88c164735c3daa9.png" src="_images/f11594f837be3e9d7f9ff69f2086be3788632cff945de739d88c164735c3daa9.png" />
+</div>
+</div>
+<p>De karakteristiek die men met voorgaande schakeling bekomt heeft een luie zone i.p.v. een dode zone.
+De emitter weerstand staat in serie met de belasting en geeft dus aanleiding tot spanningsverlies.
+Terugkoppeling kan deze niet-lineariteit overwinnen.
+<span class="math notranslate nohighlight">\(V_{in}\)</span>
+<span class="math notranslate nohighlight">\(V_{out}\)</span>
+. V
+-. V
+npn in geleiding
+pnp in geleiding</p>
+<div class="cell docutils container">
+<div class="cell_output docutils container">
+<img alt="_images/8d0829d341f9d7ac22f08c66a932eca84861aff8da982f743f67fa6333b80778.png" src="_images/8d0829d341f9d7ac22f08c66a932eca84861aff8da982f743f67fa6333b80778.png" />
+</div>
+</div>
+<p>De stroom die in het vorige schema door de diodes vloeide, wordt nu versterkt door de transistors T’.
+De transistors T’ leveren het grootste vermogen maar zijn minder dan de helft van de tijd in geleiding.
+<span class="math notranslate nohighlight">\(V_{DD}\)</span></p>
+<div class="cell docutils container">
+<div class="cell_output docutils container">
+<img alt="_images/dfdab0c238e7dc74629ca46f967d4bc28e171047ce0e50fc4467b5c9a29fcb63.png" src="_images/dfdab0c238e7dc74629ca46f967d4bc28e171047ce0e50fc4467b5c9a29fcb63.png" />
+</div>
+</div>
+<p>De stroom die in het vorige schema door de diodes vloeide wordt nu versterkt door de transistors T’
+De transistors T’ leveren het grootste vermogen maar zijn minder dan de helft van de tijd in geleiding
+<span class="math notranslate nohighlight">\(V_{DD}\)</span></p>
+<div class="cell docutils container">
+<div class="cell_output docutils container">
+<img alt="_images/bc70158dbfc74e681d0d89753f5a87908a3386f23c50cf39fe575a0089ddd4a5.png" src="_images/bc70158dbfc74e681d0d89753f5a87908a3386f23c50cf39fe575a0089ddd4a5.png" />
+</div>
+</div>
+<p><span class="math notranslate nohighlight">\(T_4\)</span> vervangt de onderste instelweerstand
+We moeten ervoor zorgen dat <span class="math notranslate nohighlight">\(T_4\)</span> steeds juist ingesteld blijft
+Dit kan door terugkoppeling
+<span class="math notranslate nohighlight">\(V_{DD}\)</span>
+<span class="math notranslate nohighlight">\(R_S\)</span>
+<span class="math notranslate nohighlight">\(R_S\)</span> moet voldoende laag zijn om voldoende stroom te kunnen leveren aan <span class="math notranslate nohighlight">\(T_1\)</span>
+Dit geeft belangrijke verliezen in <span class="math notranslate nohighlight">\(R_S\)</span></p>
+<div class="cell docutils container">
+<div class="cell_output docutils container">
+<img alt="_images/0aed5ea65ae0b2a83531fc2e3552c757e7b7cac363a7cc3cfe63bc493d40bdec.png" src="_images/0aed5ea65ae0b2a83531fc2e3552c757e7b7cac363a7cc3cfe63bc493d40bdec.png" />
+</div>
+</div>
+<p>Stel dat de belasting door een sinus van +40 tot -40 volt moet kunnen aangestuurd worden. We gaan dan een voeding gebruiken van bv 84.8V
+Stel dat de belasting met 10A moet kunnen gestuurd worden, dan zullen we bv 10 mA nodig hebben aan de basis van T1, dus staat er over Rs  1 V en moet Rs 100 Ohm zijn.
+Maar we komen ook aan -40V  op de uitgang en dan staat er over Rs 42.4V en loopt er door Rs een stroom van 824 mA, dus bijna 1 A. Deze is niet nodig want bij -40V werkt de bovenste transistor niet en al deze stroom loopt door T4.
+We kunnen eigenlijk de stroom door de tak van Rs beter constant houden, namelijk de gehele tijd op 10 mA, wat nodig is. Hoe kan dat: door een stroombron. We gebruiken een bipolaire transistor met een vaste stroom aan de basis en daardoor zal de stroom door deze insteltak ook constant 10 mA blijven.</p>
+<p>Stroombron levert altijd de maximale stroom die T nodig heeft
+<span class="math notranslate nohighlight">\(V_{DD}\)</span></p>
+<div class="cell docutils container">
+<div class="cell_output docutils container">
+<img alt="_images/0658601cb15e9898b7e474ad072e8b18ae9691b2f84ccf5ba7a6f4a89f646831.png" src="_images/0658601cb15e9898b7e474ad072e8b18ae9691b2f84ccf5ba7a6f4a89f646831.png" />
+</div>
+</div>
+<p>PNP vermogentransistors zijn</p>
+<ul class="simple">
+<li><p>minder goed,</p></li>
+<li><p>minder robust,</p></li>
+<li><p>minder betrouwbaar,</p></li>
+<li><p>of duurder
+dan de vergelijkbare NPN component.</p></li>
+<li><p>We vervangen de grootste PNP transistors door NPN transistors.</p></li>
+<li><p>T’2 verhuist daardoor van plaats en we moeten de diode terug invoeren.</p></li>
+<li><p>We zijn een belangrijk deel van de symmetrie terug kwijt.</p></li>
+</ul>
+<p><span class="math notranslate nohighlight">\(V_{DD}\)</span>
+Oorspronkelijke emitter
+degeneratie
+moeten we terug invoeren</p>
+<div class="cell docutils container">
+<div class="cell_output docutils container">
+<img alt="_images/94d463619ccb3719a8c9993be8f365eea82a28d8b51bd30e0bf43e26254b5a37.png" src="_images/94d463619ccb3719a8c9993be8f365eea82a28d8b51bd30e0bf43e26254b5a37.png" />
+</div>
+</div>
+<p><span class="math notranslate nohighlight">\(V_{DD}\)</span>
+T’’
+T’’
+R = R       
+R’ = R’      
+R’’ = R’’    k</p>
+<div class="cell docutils container">
+<div class="cell_output docutils container">
+<img alt="_images/b8fb744b495923ade0526b287141124d7272cea40edda3c9075ace558869e25b.png" src="_images/b8fb744b495923ade0526b287141124d7272cea40edda3c9075ace558869e25b.png" />
+</div>
+</div>
+<p>In het schema van slide 19 hebben de  weerstanden in de vermogentrap een dubbele functie:</p>
+<ul class="simple">
+<li><p>emitter degeneratie</p></li>
+<li><p>spanningsval opbouwen evenredig met de stroom, tot de spanning aan 0.7 volt komt. Vanaf dan neemt de volgende trap over. De stroom door de weerstand neemt nu niet meer verder toe.</p></li>
+</ul>
+<p>In het schema van slide 23 is de tweede functie naar de collector kant van T2 verschoven.
+Maar dan is de emitterdegeneratie niet meer gelijkaardig (symmetrisch) aan beide kanten. Dit lossen we op door de extra diode.</p>
+<p>In  het schema van slide 24 zijn beide functies volledig gesplitst:</p>
+<ul class="simple">
+<li><p>Een weerstand voor emitterdegeneratie staat aan de emitter kant</p></li>
+<li><p>meten van de stroom staat aan de collector kant.</p></li>
+</ul>
+<p>Stroombegrenzing principeschema</p>
+<div class="cell docutils container">
+<div class="cell_output docutils container">
+<img alt="_images/72a6312980672988f0c21a0b5566c6a2d379b8f57630457531320e523e806731.png" src="_images/72a6312980672988f0c21a0b5566c6a2d379b8f57630457531320e523e806731.png" />
+</div>
+</div>
+<p>vermogenbegrenzing principeschema
+Spanning aan de basis van TVI is evenredig met
+de stroom door de transistor (<span class="math notranslate nohighlight">\(R_I\)</span>)
+de spanning over de transistor [RV/(RV+RV)]
+TVI
+<span class="math notranslate nohighlight">\(R_I\)</span></p>
+<div class="cell docutils container">
+<div class="cell_output docutils container">
+<img alt="_images/d3eac10b622c5a245947ade2f9c0faa588e61805bb290776569929ffb9d33ef0.png" src="_images/d3eac10b622c5a245947ade2f9c0faa588e61805bb290776569929ffb9d33ef0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_output docutils container">
+<img alt="_images/d145e2ac6f00832a76e13d7dd4f945eac6909fec84f0f72241cfcac63290816f.png" src="_images/d145e2ac6f00832a76e13d7dd4f945eac6909fec84f0f72241cfcac63290816f.png" />
+</div>
+</div>
+<p>De stroom vanuit de voedingen is dezelfde als de stroom door de belasting.
+De spanning van de voeding is constant.
+Maximaal 78%</p>
+<div class="cell docutils container">
+<div class="cell_output docutils container">
+<img alt="_images/aa40d28ac8f7acb7836f895f41100fe49c474cffccbfc9341a5798616a1def7f.png" src="_images/aa40d28ac8f7acb7836f895f41100fe49c474cffccbfc9341a5798616a1def7f.png" />
+</div>
+</div>
+<p>Om het DC vermogen te berekenen, moeten we het product van spanning en stroom uit de voedingen integreren over een periode T en delen door de periode T. We kunnen hierop de volgende vereenvoudigingen toepassen:
+Omdat beide voedingen symmetrisch zijn, hoeven we het maar voor een voeding uit te rekenen, en kunnen we het resultaat vermenigvuldigen met 2.
+Omdat de stroom gedurende de tweede helft van de periode  is, hoeven we maar te integreren tot T/2.</p>
+<div class="cell docutils container">
+<div class="cell_output docutils container">
+<img alt="_images/0e176a8109695bd39ea12f8ea55df7555fcd87abe7393db163fbde76d85644ae.png" src="_images/0e176a8109695bd39ea12f8ea55df7555fcd87abe7393db163fbde76d85644ae.png" />
+</div>
+</div>
+<ul class="simple">
+<li><p>De dissipatie is maximaal voor een uitsturing van 63%.</p></li>
+<li><p>Deze dissipatie is kleiner dan de helft van het maximale AC vermogen.</p></li>
+<li><p>Per transistor is dit maar 1/4 van het maximale AC vermogen.</p></li>
+<li><p>Bij een klasse A is de maximale dissipatie het dubbele van het maximale AC vermogen.</p></li>
+<li><p>Voor een gelijk vermogen zullen de transistors van een klasse A versterker ongeveer 10 maal groter (en duurder) zijn.</p></li>
+</ul>
+<ul class="simple">
+<li><p>Continu veranderende voeding</p>
+<ul>
+<li><p>Voeding aanpassen aan de amplitude van het signaal</p></li>
+<li><p>Voeding moet tijd krijgen om zich aan te passen</p>
+<ul>
+<li><p>vertragingslijn</p></li>
+<li><p>voorspellingsnetwerk</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Stapsgewijs veranderende voeding (Klasse G)</p>
+<ul>
+<li><p>2 of meer voedingspanningen zijn beschikbaar</p></li>
+<li><p>signaalamplitude bepaalt de keuze van de voeding</p></li>
+</ul>
+</li>
+<li><p>Hoogfrequent schakelen met laagdoorlaatfilter (Klasse S)</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_output docutils container">
+<img alt="_images/e8758341e2a33bf62c5190eae4a82d3325c5bc70a5c561da7f705d18d54c720f.png" src="_images/e8758341e2a33bf62c5190eae4a82d3325c5bc70a5c561da7f705d18d54c720f.png" />
+</div>
+</div>
+<p><span class="math notranslate nohighlight">\(R_L\)</span>
+<span class="math notranslate nohighlight">\(V_{DD}\)</span></p>
+<div class="cell docutils container">
+<div class="cell_output docutils container">
+<img alt="_images/fc4ecf542e5ff10ccbbdf37207fd48f91683723d281cd2e30cae74e9f025ac7f.png" src="_images/fc4ecf542e5ff10ccbbdf37207fd48f91683723d281cd2e30cae74e9f025ac7f.png" />
+</div>
+</div>
+<p>rendement
+Uitsturing
+Aftakking op:
+Klasse B</p>
+<div class="cell docutils container">
+<div class="cell_output docutils container">
+<img alt="_images/5ee212060198da40ec77d41bdc8a3742ea06fd56d1710d6c64822639cef6c7f9.png" src="_images/5ee212060198da40ec77d41bdc8a3742ea06fd56d1710d6c64822639cef6c7f9.png" />
+</div>
+</div>
+<p>Vermogen
+trap
+Vuit
+<span class="math notranslate nohighlight">\(V_{in}\)</span></p>
+<div class="cell docutils container">
+<div class="cell_output docutils container">
+<img alt="_images/9f71ed15e3f34eceb6adf2ecb65ba5c442fa96a12eae0eaffd1bed5195a03f59.png" src="_images/9f71ed15e3f34eceb6adf2ecb65ba5c442fa96a12eae0eaffd1bed5195a03f59.png" />
+</div>
+</div>
+<p>Vermogen
+trap
+Vuit
+<span class="math notranslate nohighlight">\(V_{in}\)</span></p>
+<div class="cell docutils container">
+<div class="cell_output docutils container">
+<img alt="_images/6292e97b1ed101c877d520c868cf62235feee52df3b5aa1b2499ec5f07ddd01b.png" src="_images/6292e97b1ed101c877d520c868cf62235feee52df3b5aa1b2499ec5f07ddd01b.png" />
+</div>
+</div>
+<p>Rendement Klasse B versterker:
+van  tot  78% afhankelijk van de uitsturing bij sinus signaal
+van  tot  100% afhankelijk van de uitsturing bij blokgolf signaal
+Waarom dan niet
+een hoogfrequent blokgolf opleggen met maximale amplitude
+een laagdoorlaatfilter deze laten omzetten naar een sinus</p>
+<p>Soms noemen we deze versterker ook wel een Klasse D voor Audio [1]. Klasse D versterkers zijn eigenlijk hoogfrequent versterkers, en hier wordt ook aan hoge frequentie versterkt, en daarna alleen de laagfrequent componente overgehouden.
+[1] X. Jiang, “Fundamentals of Audio Class D Amplifier Design: A Review of Schemes and Architectures,” IEEE Solid-State Circuits Magazine, vol. , no. , pp. –, Summer .</p>
+<div class="cell docutils container">
+<div class="cell_output docutils container">
+<img alt="_images/137352e75582c793f12f0c81bf0e59e83aa312d6a183144246839c6e54450672.png" src="_images/137352e75582c793f12f0c81bf0e59e83aa312d6a183144246839c6e54450672.png" />
+</div>
+</div>
+<p>Het laagdoorlaatfilter heeft zijn dB punt vlak boven de maximale frequentie in het signaal.
+De schakelfrequentie moet minstens  maal hoger zijn dan het dB punt van het laagdoorlaatfilter
+Dit vereist vermogen FETs in plaats van bipolaire transistors
+Vermogen FETs zijn veel duurder
+<span class="math notranslate nohighlight">\(R_L\)</span>
+Laagdoorlaatfilter</p>
+<div class="cell docutils container">
+<div class="cell_output docutils container">
+<img alt="_images/460527f4e5199a66a63a3b9221b7dc41daa47f7b34a323a5e564493dcd87f360.png" src="_images/460527f4e5199a66a63a3b9221b7dc41daa47f7b34a323a5e564493dcd87f360.png" />
+</div>
+</div>
+<p>Komt neer op pulsbreedte modulatie.
+Vergelijk de ingang met een zaagtang:
+indien groter:
+indien kleiner:-
+Gebruik dit als aansturing van de schakelaars</p>
+<div class="cell docutils container">
+<div class="cell_output docutils container">
+<img alt="_images/57cf3c090445ff7436388041ff241f081afe0737b89b737f26f94fb8d1f86f51.png" src="_images/57cf3c090445ff7436388041ff241f081afe0737b89b737f26f94fb8d1f86f51.png" />
+</div>
+</div>
+<p>Meestal is gekend
+Het te leveren (sinus)vermogen van de versterker (PAC)
+bv  W
+De impedantie van de belasting (<span class="math notranslate nohighlight">\(R_L\)</span>)
+bv  Ohm
+Hieruit volgt onmiddellijk de spanningszwaai van aan de belasting (Vmax)
+De nodige voedingsspanning is  Vmax + Vsat</p>
+<div class="cell docutils container">
+<div class="cell_output docutils container">
+<img alt="_images/455a41124e2fadcfa1cbeaee32047d571ed6711cc29753382adab6b7d892ec23.png" src="_images/455a41124e2fadcfa1cbeaee32047d571ed6711cc29753382adab6b7d892ec23.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_output docutils container">
+<img alt="_images/187e726a7559fb4ca9e04a14da01e775e256ea15b9d62cfb66182cb0e0af374d.png" src="_images/187e726a7559fb4ca9e04a14da01e775e256ea15b9d62cfb66182cb0e0af374d.png" />
+</div>
+</div>
+<p>Idoor
+Vover
+<span class="math notranslate nohighlight">\(V_{DD}\)</span>
+Helling=/R’
+max P
+Helling=/nRL
+Klasse A
+ruststroom niet nul
+tot dubbele van voeding</p>
+<p>In de grafiek van de klasse B versterker beschouwen we een klasse B versterker met slechts 1 voedingsspanning. Wanneer we een klasse B versterker beschouwen uitgevoerd met een voeding + <span class="math notranslate nohighlight">\(V_{DD}\)</span> en –<span class="math notranslate nohighlight">\(V_{DD}\)</span>, bereikt de maximale spanning over de transistor de waarde  2<span class="math notranslate nohighlight">\(V_{DD}\)</span>.</p>
+<div class="cell docutils container">
+<div class="cell_output docutils container">
+<img alt="_images/0d2651948c9c86c6f34d614d0e2ec271f10966b7c646d5ada424e971e780a208.png" src="_images/0d2651948c9c86c6f34d614d0e2ec271f10966b7c646d5ada424e971e780a208.png" />
+</div>
+</div>
+<p>ruststroom nul
+veel minder dan de helft van de tijd in geleiding
+rustspanning helft van voedingenverschil
+spanning tot helft van  voedingenverschil
+ruststroom nul
+helft van de tijd in geleiding
+rustspanning helft van kleine voeding
+spanning tot …</p>
+<p><span class="math notranslate nohighlight">\(V_{DD1}\)</span> is hier het spanningsverschil tussen de + en de – klem van de voedingen gebruikt voor kleine signalen en <span class="math notranslate nohighlight">\(V_{DD2}\)</span> is het spanningsverschil tussen de + en de – klem van de voedingen gebruikt voor grote signalen.
+De binnenste transistors krijgen de hoogste spanningen te verwerken, maar dit nooit onder grote stroom. Als er een grote stroom loopt is de spanning over deze transistors nul.
+De buitenste transitors geleiden wel een grote stroom onder spanning, maar de spanning over deze transistors is echter steeds beperkt.
+Met deze verschillen wordt best rekening gehouden bij de keuze van de transistors. Het ligt voor de hand een ander type transistor te gebruiken voor beide gevallen.</p>
+<div class="cell docutils container">
+<div class="cell_output docutils container">
+<img alt="_images/d19334ed91c687389fbfc76c83d727d23c0c88c9943f8d4e1ab676887b376dc8.png" src="_images/d19334ed91c687389fbfc76c83d727d23c0c88c9943f8d4e1ab676887b376dc8.png" />
+</div>
+</div>
+<p>Grote spanning met geen stroom
+-&gt; geen opwarming
+Grote stroom met weinig spanning-&gt; geen opwarming
+Idoor
+Vover
+<span class="math notranslate nohighlight">\(V_{DD}\)</span>
+max P
+Klasse S transistor
+Vandaar het theoretisch rendement
+van  %</p>
 </section>
 <section id="basisschema">
 <h2>Basisschema<a class="headerlink" href="#basisschema" title="Link to this heading">#</a></h2>
@@ -616,7 +1120,7 @@ De stroom aan de collector wordt echter met de factor <span class="math notransl
 <div class="cell docutils container">
 <div class="cell_output docutils container">
 <figure class="align-default" id="bfig1">
-<img alt="_images/561c4dd88c2120df96aa4402720bed1566467db5ad524feb0234a9e43e666376.svg" src="_images/561c4dd88c2120df96aa4402720bed1566467db5ad524feb0234a9e43e666376.svg" />
+<img alt="_images/707e600d80dd27a0f70b13dae5b0cdee88966698f7f6fd29fcf0ffcccf98d8b3.svg" src="_images/707e600d80dd27a0f70b13dae5b0cdee88966698f7f6fd29fcf0ffcccf98d8b3.svg" />
 <figcaption>
 <p><span class="caption-number">Figuur 29 </span><span class="caption-text">Basisschema van de klasse B versterker voor DC werking.</span><a class="headerlink" href="#bfig1" title="Link to this image">#</a></p>
 </figcaption>
@@ -629,7 +1133,7 @@ De stroom aan de collector wordt echter met de factor <span class="math notransl
 <div class="cell docutils container">
 <div class="cell_output docutils container">
 <figure class="align-default" id="bfig1anot">
-<img alt="_images/0cced0e67d1701da4e43a923716d4fd7b96ecd162620329a38f45ed937e0c45d.svg" src="_images/0cced0e67d1701da4e43a923716d4fd7b96ecd162620329a38f45ed937e0c45d.svg" />
+<img alt="_images/c6305e63cea91ac52c9c45fa5682a9e745cc0b1e8a514dfc5f91a52edf839e04.svg" src="_images/c6305e63cea91ac52c9c45fa5682a9e745cc0b1e8a514dfc5f91a52edf839e04.svg" />
 <figcaption>
 <p><span class="caption-number">Figuur 30 </span><span class="caption-text">Basisschema van de klasse B versterker voor DC werking met aangeduide bouwblokken.</span><a class="headerlink" href="#bfig1anot" title="Link to this image">#</a></p>
 </figcaption>
