@@ -57,7 +57,7 @@ slidetemplate="./.github/common/PowerPoint_600jaar_template.pptx"
 KUL_layout_title=0
 KUL_layout_subtitle=1
 KUL_layout_outline=9
-KUL_layout_fig=4
+KUL_layout_fig=2   # was 4 maar dan lukt het toevoegen van een tekstvak niet meer, mogelijk omdat er al een tekstvak in de template zit
 KUL_layout_code=3
 KUL_layout_text=6
 KUL_layout_mdtext=6
@@ -379,56 +379,41 @@ for ipath in notebooks:
             if "slide_type" in cell.metadata.get('slideshow', {}):
                 if  cell.metadata.slideshow.get("slide_type", ())=="slide":
                    for output_idx, output in enumerate(cell.get("outputs", ())):
-                        if "image/png" in output.get("data", {}):                           
+                        imageformat=None
+                        for imageformat_test in ["image/gif", "image/jpeg", "image/png"]:
+                            if imageformat_test in output.get("data", {}):
+                                imageformat=imageformat_test
+                        if imageformat:                           
                             slide = prs.slides.add_slide(prs.slide_layouts[KUL_layout_fig])
-                            maketitle(cell,slide)  
-                            image_stream = io.BytesIO(base64.b64decode(output.data["image/png"]))
+                            maketitle(cell,slide)
+                            vertical_shift,horizontal_shift,scaling_factor=Inches(0),Inches(0),1.0
+                            if "KULeuvenSlides" in cell.get('metadata', {}):
+                                if "eq_vertical" in cell.metadata.get('KULeuvenSlides', {}):
+                                    if cell.metadata.KULeuvenSlides["eq_vertical"]:
+                                        vertical_shift=Inches(cell.metadata.KULeuvenSlides["eq_vertical"])
+                                if "eq_horizontal" in cell.metadata.get('KULeuvenSlides', {}):
+                                    if cell.metadata.KULeuvenSlides["eq_horizontal"]:
+                                        horizontal_shift=Inches(cell.metadata.KULeuvenSlides["eq_horizontal"])
+                                if "eq_scale" in cell.metadata.get('KULeuvenSlides', {}):
+                                    if cell.metadata.KULeuvenSlides["eq_scale"]:
+                                        scaling_factor=cell.metadata.KULeuvenSlides["eq_scale"]
+                            image_stream = io.BytesIO(base64.b64decode(output.data[imageformat]))
                             try:                            
                                 pictp=slide.shapes.add_picture(image_stream, body_left, body_top, height=body_height) 
                                 if pictp.width>prs.slide_width:
                                     factorsc=(body_height*prs.slide_width)//pictp.width
-                                    pictp.width=prs.slide_width
-                                    pictp.height= factorsc
-                                    pictp.left=Inches(0)
+                                    pictp.width=int(prs.slide_width*scaling_factor)
+                                    pictp.height= int(factorsc*scaling_factor)
+                                    pictp.left=horizontal_shift
+                                    pictp.top=body_top+vertical_shift    
                                 else:
-                                    pictp.left=(prs.slide_width-pictp.width)//2
+                                    pictp.left=(prs.slide_width-pictp.width)//2+horizontal_shift
+                                    pictp.top=body_top+vertical_shift
+                                    pictp.height= int(body_height*scaling_factor)
+                                    pictp.width=int(pictp.width*scaling_factor)
                                 running_height=body_top+pictp.height+Inches(0.1)
                             except UnidentifiedImageError:
-                                print("  image/png  error for cell number "+str(index))
-                                running_height=body_top
-                        elif "image/jpeg" in output.get("data", {}):                           
-                            slide = prs.slides.add_slide(prs.slide_layouts[KUL_layout_fig])
-                            maketitle(cell,slide)  
-                            image_stream = io.BytesIO(base64.b64decode(output.data["image/jpeg"]))
-                            try:                            
-                                pictp=slide.shapes.add_picture(image_stream, body_left, body_top, height=body_height) 
-                                if pictp.width>prs.slide_width:
-                                    factorsc=(body_height*prs.slide_width)//pictp.width
-                                    pictp.width=prs.slide_width
-                                    pictp.height= factorsc
-                                    pictp.left=Inches(0)
-                                else:
-                                    pictp.left=(prs.slide_width-pictp.width)//2
-                                running_height=body_top+pictp.height+Inches(0.1)
-                            except UnidentifiedImageError:
-                                print("  image/jpeg  error for cell number "+str(index))
-                                running_height=body_top
-                        elif "image/gif" in output.get("data", {}):                           
-                            slide = prs.slides.add_slide(prs.slide_layouts[KUL_layout_fig])
-                            maketitle(cell,slide)  
-                            image_stream = io.BytesIO(base64.b64decode(output.data["image/gif"]))
-                            try:                            
-                                pictp=slide.shapes.add_picture(image_stream, body_left, body_top, height=body_height) 
-                                if pictp.width>prs.slide_width:
-                                    factorsc=(body_height*prs.slide_width)//pictp.width
-                                    pictp.width=prs.slide_width
-                                    pictp.height= factorsc
-                                    pictp.left=Inches(0)
-                                else:
-                                    pictp.left=(prs.slide_width-pictp.width)//2
-                                running_height=body_top+pictp.height+Inches(0.1)
-                            except UnidentifiedImageError:
-                                print("  image/gif  error for cell number "+str(index))
+                                print("  "+imageformat+"  error for cell number "+str(index))
                                 running_height=body_top
                         elif "".join(cell.source).startswith("display.Video("):
                             # Extract video path from Video() call
@@ -581,8 +566,8 @@ for ipath in notebooks:
                         body_shape = clone_shape(slide.shapes[0],  top=running_height, idcounter=idcounter)
                         idcounter+=1
                         tf = body_shape.text_frame
-                        #tf.clear()  # Remove any existing paragraphs
-                        #tf.text = ""  # Clear existing text
+                        tf.clear()  # Remove any existing paragraphs
+                        tf.text = ""  # Clear existing text
                         for idx, (level, text) in enumerate(bullets):
                             if idx == 0:
                                 # Reuse the existing paragraph for the first bullet
@@ -592,7 +577,10 @@ for ipath in notebooks:
                             p.level = level
                             add_parsed_bullet(p, text)
                         tf.auto_size = MSO_AUTO_SIZE.SHAPE_TO_FIT_TEXT
+                        body_shape.height=int(body_shape.height*scaling_factor)
                         running_height += body_shape.height + Inches(0.2)
+                        body_shape.left += horizontal_shift
+
                                    
 
 # Loop through all slides except the first

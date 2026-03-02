@@ -9,6 +9,7 @@ This document defines the Markdown style guidelines for all Markdown and jupyter
 
 - find all words in the markdown text of the markdown files and jupyter notebook files that are not in the English dictionary nor in the Dutch dictionary
 - ignore words in wordlists provided in the folder '.github/dictionaries/'
+- ignore math formulas and LaTeX expressions as present between $...$ or $$...$$.
 - ignore code blocks, inline code, URLs, and file paths
 - ignore proper nouns, technical terms, and acronyms specific to the project
 - provide suggestions for spelling corrections based on the closest matching words in the Dutch and English dictionaries

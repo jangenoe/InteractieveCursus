@@ -20,7 +20,7 @@ os.environ['NGSPICE_LIBRARY_PATH'] = '/opt/homebrew/Cellar/libngspice/45.2/lib/l
 
 usewidgets=False;
 
-def spicelisting(filename,firstline=0,lastline=10000,name=None,caption=None):
+def spicelistingtest(filename,firstline=0,lastline=10000,name=None,caption=None):
     """Display SPICE listing with custom lexer highlighting"""
     ff=""
     with open(filename) as f:
@@ -97,6 +97,14 @@ def spicelisting(filename,firstline=0,lastline=10000,name=None,caption=None):
     """
     
     return display.HTML(inline_css + highlighted)
+
+def spicelisting(filename,firstline=0,lastline=10000):
+    ff=""
+    with open(filename) as f:
+        for i,line in enumerate(f):
+            if i>=firstline and i<lastline:
+                ff+=line.strip()+"\r"
+    return display.Code(data=ff, language='spice')
 
 def plotZ(Z, frequencies):
     """Plot complex impedance on a logarithmic frequency scale"""
