@@ -10,6 +10,11 @@ This document defines the Markdown style guidelines for all Markdown and jupyter
 - find all words in the markdown text of the markdown files and jupyter notebook files that are not in the English dictionary nor in the Dutch dictionary
 - ignore words in wordlists provided in the folder '.github/dictionaries/'
 - ignore math formulas and LaTeX expressions as present between $...$ or $$...$$.
+- never remove $ signs from the original markdown or jupyter notebook files, even if they are part of a misspelled word.
+- never edit strings starting with r, f, or b followed by a quote (e.g., r"string", f'string', b'string') as they are likely to be raw strings, formatted strings, or byte strings in code blocks.
+- never replace latex symbols such as \alpha, \beta, \gamma, etc. with their corresponding words (e.g., alpha, beta, gamma) in the original markdown or jupyter notebook files, even if they are part of a misspelled word.
+- never remove '\\'
+- never change code in a cell starting with 'with schemdraw.Drawing():' in jupyter notebook files, as it may contain schemdraw code that should not be modified.
 - ignore code blocks, inline code, URLs, and file paths
 - ignore proper nouns, technical terms, and acronyms specific to the project
 - provide suggestions for spelling corrections based on the closest matching words in the Dutch and English dictionaries
