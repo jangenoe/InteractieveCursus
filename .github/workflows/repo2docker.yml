@@ -61,7 +61,7 @@ jobs:
         docker run $CONTAINER_NAME:latest conda list > conda-packages/packages.txt
     - name: Archive Conda Package List
       # Seems that artifacts uploaded with restricted permissions, requiring chmod -R u+x to read content
-      uses: actions/upload-artifact@v1
+      uses: actions/upload-artifact@v7
       with:
         name: conda-packages
         path: conda-packages
