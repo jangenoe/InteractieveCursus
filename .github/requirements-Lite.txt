@@ -3,7 +3,7 @@ jupyterlite
 jupyterlab-myst
 jupyterlab-deck
 jupyterlab-fonts
-jupyterlab-theme-KULeuven
+# jupyterlab-theme-KULeuven
 ipympl>=0.9.4
 ipywidgets>=8.1.3
 numpy
