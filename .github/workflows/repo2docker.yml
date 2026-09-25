@@ -21,6 +21,9 @@ on:
       - .github/requirements-Lite.txt
       - .github/requirements-Repo2Docker.txt
 
+permissions:
+  contents: read
+
 
 env:
   CONTAINER_NAME: ${{ github.repository }} # user/repo format
