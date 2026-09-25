@@ -1,5 +1,8 @@
 name: Link Checker
 
+permissions:
+  contents: read
+
 # First we define the Action trigger
 on:
   # In this case, we define a manual trigger (workflow_dispatch)
