@@ -35,11 +35,11 @@
   </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
-<link href="_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+  <link href="_static/styles/theme.css?digest=55c26ed414f5f8a31ebb" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=55c26ed414f5f8a31ebb" rel="stylesheet" />
 
     <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
-    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=013c97f6" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a18f7723" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=9c3e77be" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css" />
@@ -47,15 +47,15 @@
     <link rel="stylesheet" type="text/css" href="_static/exercise.css" />
     <link rel="stylesheet" type="text/css" href="_static/spice_file.css" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="_static/spice-lexer.css?v=422ceae6" />
     <link rel="stylesheet" type="text/css" href="_static/custom-pygments.css?v=d7fe8a85" />
     <link rel="stylesheet" type="text/css" href="_static/code-caption-style.css?v=0ad27fa8" />
-    <link rel="stylesheet" type="text/css" href="_static/spice-lexer.css?v=422ceae6" />
   
   <!-- So that users can add custom icons -->
-  <script src="_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <script defer src="_static/scripts/fontawesome.js?digest=55c26ed414f5f8a31ebb"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
-<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=55c26ed414f5f8a31ebb" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=55c26ed414f5f8a31ebb" />
 
     <script src="_static/documentation_options.js?v=b028fc25"></script>
     <script src="_static/doctools.js?v=9a2dae69"></script>
@@ -66,7 +66,7 @@
     <script>let toggleHintShow = 'Klik om te tonen';</script>
     <script>let toggleHintHide = 'Klik om te verbergen';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="_static/togglebutton.js?v=1ae7504c"></script>
+    <script src="_static/togglebutton.js?v=b8b12719"></script>
     <script src="_static/translations.js?v=5ce3cdba"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="_static/design-tabs.js?v=f930bc37"></script>
@@ -77,6 +77,7 @@
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'Klasse-E';</script>
+    <script>DOCUMENTATION_OPTIONS.search_as_you_type = false;</script>
     <link rel="icon" href="_static/favicon.ico"/>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Zoeken" href="search.html" />
@@ -85,20 +86,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="nl"/>
   <meta name="docsearch:version" content="" />
+  
+    
+    <script src="_static/searchtools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <script src="searchindex.js"></script>
+  
   </head>
-  
-  
-  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
-
+  <body data-default-mode="">
   
   
   <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+
   
   <div id="pst-scroll-pixel-helper"></div>
   
   <button type="button" class="btn rounded-pill" id="pst-back-to-top">
     <i class="fa-solid fa-arrow-up"></i>Back to top</button>
-
+  
+  
+  
   
   <dialog id="pst-search-dialog">
     
@@ -124,7 +131,51 @@
 </div>
 
   
-    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    <header id="pst-header" class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Zoeken" aria-label="Zoeken" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Zoeken</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Zoeken" aria-label="Zoeken" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Zoeken</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
     </header>
   
 
@@ -525,7 +576,7 @@
                 <h2> Contents </h2>
             </div>
             <nav aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
+                <ul class="pst-show_toc_level nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#verklaring-van-de-werking-stap-voor-stap">Verklaring van de werking stap voor stap</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#uitbreiding-van-het-schema-met-een-derde-harmonische-filter">Uitbreiding van het schema met een derde harmonische filter</a></li>
 </ul>
@@ -598,7 +649,7 @@ In <a class="reference internal" href="#vermogenversterkerse"><span class="std s
 <li><p><strong>Optimale timing</strong> tussen spanning en stroom voor minimaal vermogenverlies</p></li>
 <li><p><strong>Hoge efficiëntie</strong> (tot 95% theoretisch mogelijk)</p></li>
 </ul>
-<p>De klasse E versterkers zijn initieel uitgewerkt door Sokal and Sokal <span id="id1">[<a class="reference internal" href="References.html#id6" title="Nathan O. Sokal and A. D. Sokal. Class E-A new class of high-efficiency tuned single-ended switching power amplifiers. IEEE Journal of Solid-State Circuits, 10(3):168–176, June 1975. doi:10.1109/JSSC.1975.1050582.">4</a>]</span>, <span id="id2">[<a class="reference internal" href="References.html#id13" title="N. O. Sokal. Class E high-efficiency power amplifiers, from HF to microwave. In 1998 IEEE MTT-S International Microwave Symposium Digest (Cat. No.98CH36192), volume 2, 1109-1112 vol.2. June 1998. doi:10.1109/MWSYM.1998.705187.">5</a>]</span> ,<span id="id3">[<a class="reference internal" href="References.html#id7" title="Nathan O Sokal. Class-E RF Power Amplifiers. QEX, pages 9–20, Jan/Feb 2001.">6</a>]</span> vanuit de basisredenering dat we dat we op elk moment het gedisipeerde vermogen in de transistor zo laag mogelijk moeten houden.
+<p>De klasse E versterkers zijn initieel uitgewerkt door Sokal and Sokal <span class="bibtex-citation" id="id1">[<a class="reference internal" href="References.html#id6" title="Nathan O. Sokal and A. D. Sokal. Class E-A new class of high-efficiency tuned single-ended switching power amplifiers. IEEE Journal of Solid-State Circuits, 10(3):168–176, June 1975. doi:10.1109/JSSC.1975.1050582.">4</a>]</span>, <span class="bibtex-citation" id="id2">[<a class="reference internal" href="References.html#id13" title="N. O. Sokal. Class E high-efficiency power amplifiers, from HF to microwave. In 1998 IEEE MTT-S International Microwave Symposium Digest (Cat. No.98CH36192), volume 2, 1109-1112 vol.2. June 1998. doi:10.1109/MWSYM.1998.705187.">5</a>]</span> ,<span class="bibtex-citation" id="id3">[<a class="reference internal" href="References.html#id7" title="Nathan O Sokal. Class-E RF Power Amplifiers. QEX, pages 9–20, Jan/Feb 2001.">6</a>]</span> vanuit de basisredenering dat we dat we op elk moment het gedisipeerde vermogen in de transistor zo laag mogelijk moeten houden.
 Dit kan door veel stroom door de transistor moeten laten lopen wanneer de spanning minimaal is en dat we geen stroom door de transistor laten lopen als de spanning over de transistor hoog is.
 Deze afwisseling tussen stroom en spanning vereist een hele goede timing:</p>
 <ul class="simple">
@@ -655,8 +706,8 @@ Deze spoel zal zorgen voor een zo constant mogelijke stroom bovenop de sinusvorm
 </div>
 </div>
 <p>Natuurlijk moet op basis van de <a class="reference external" href="https://en.wikipedia.org/wiki/Kirchhoff%27s_circuit_laws">stroomwet</a> van <a class="reference external" href="https://en.wikipedia.org/wiki/Gustav_Kirchhoff">Kirchhoff</a> de netto stroom naar elke knoop 0 zijn.</p>
-<div class="amsmath math notranslate nohighlight" id="equation-192046f3-378a-458c-8f2e-abbff59bd83f">
-<span class="eqno">(9)<a class="headerlink" href="#equation-192046f3-378a-458c-8f2e-abbff59bd83f" title="Permalink to this equation">#</a></span>\[\begin{equation}\label{eq:Kirchoff}
+<div class="amsmath math notranslate nohighlight" id="equation-42daacd8-9360-484e-952a-a24d2c53d3c9">
+<span class="eqno">(9)<a class="headerlink" href="#equation-42daacd8-9360-484e-952a-a24d2c53d3c9" title="Permalink to this equation">#</a></span>\[\begin{equation}\label{eq:Kirchoff}
 \sum_{j \neq i}^n I_{ij}=0.
 \end{equation}\]</div>
 <p>Wanneer dit niet zo zou zijn zou de spanning op deze knoop snel gaan stijgen of dalen tot dat wel het geval wordt. De snelheid waarmee dat gebeurt hangt af van de (parasitaire) capaciteit van de knoop.</p>
@@ -722,7 +773,7 @@ Deze lading wordt bekomen door de integratie van de stroom op de condensator <sp
 </div>
 <section id="uitbreiding-van-het-schema-met-een-derde-harmonische-filter">
 <h3>Uitbreiding van het schema met een derde harmonische filter<a class="headerlink" href="#uitbreiding-van-het-schema-met-een-derde-harmonische-filter" title="Link to this heading">#</a></h3>
-<p>In 2013 werd het originele design uitgebreid door ook de derde harmonische weg te filteren <span id="id4">[<a class="reference internal" href="References.html#id4" title="Arturo Mediano and Nathan O. Sokal. A Class-E RF Power Amplifier With a Flat-Top Transistor-Voltage Waveform. IEEE Transactions on Power Electronics, 28(11):5215–5221, November 2013. doi:10.1109/TPEL.2013.2242097.">7</a>]</span>. In dit schema (zie <a class="reference internal" href="#efig20"><span class="std std-numref">Figuur 76</span></a>) voegen we een parallelkring voor de derde harmonische frequentie (<span class="math notranslate nohighlight">\(L_3 C_3\)</span>) toe aan de seriekring voor de eerste harmonische (<span class="math notranslate nohighlight">\(L_2 C_2\)</span>). Op deze manier combineren we de voordelen van klasse E en klasse F versterkers.</p>
+<p>In 2013 werd het originele design uitgebreid door ook de derde harmonische weg te filteren <span class="bibtex-citation" id="id4">[<a class="reference internal" href="References.html#id4" title="Arturo Mediano and Nathan O. Sokal. A Class-E RF Power Amplifier With a Flat-Top Transistor-Voltage Waveform. IEEE Transactions on Power Electronics, 28(11):5215–5221, November 2013. doi:10.1109/TPEL.2013.2242097.">7</a>]</span>. In dit schema (zie <a class="reference internal" href="#efig20"><span class="std std-numref">Figuur 76</span></a>) voegen we een parallelkring voor de derde harmonische frequentie (<span class="math notranslate nohighlight">\(L_3 C_3\)</span>) toe aan de seriekring voor de eerste harmonische (<span class="math notranslate nohighlight">\(L_2 C_2\)</span>). Op deze manier combineren we de voordelen van klasse E en klasse F versterkers.</p>
 <div class="cell docutils container">
 <div class="cell_output docutils container">
 <figure class="align-default" id="efig20">
@@ -745,7 +796,7 @@ Deze lading wordt bekomen door de integratie van de stroom op de condensator <sp
 </ul>
 <section id="ontwerpvergelijkingen-voor-laagfrequent-klasse-e-versterkers">
 <h3>Ontwerpvergelijkingen voor laagfrequent Klasse E Versterkers<a class="headerlink" href="#ontwerpvergelijkingen-voor-laagfrequent-klasse-e-versterkers" title="Link to this heading">#</a></h3>
-<p>Voor het ontwerpen van een aantal voorbeelden kunnen we de ontwerpvergelijkingen gebruiken vanuit <span id="id5">[<a class="reference internal" href="References.html#id7" title="Nathan O Sokal. Class-E RF Power Amplifiers. QEX, pages 9–20, Jan/Feb 2001.">6</a>]</span>. Deze ontwerpvergelijkingen zijn uitgewerkt voor lagere frequenties. Voor MHz frequenties (en hoger) moet er in detail geanalyseerd en gesimuleerd worden. De onderstaande vergelijkingen (Eq.<a class="reference internal" href="#equation-deq1">(10)</a> tot Eq.<a class="reference internal" href="#equation-deq4">(13)</a>) kunnen daarvoor niet gebruikt worden.</p>
+<p>Voor het ontwerpen van een aantal voorbeelden kunnen we de ontwerpvergelijkingen gebruiken vanuit <span class="bibtex-citation" id="id5">[<a class="reference internal" href="References.html#id7" title="Nathan O Sokal. Class-E RF Power Amplifiers. QEX, pages 9–20, Jan/Feb 2001.">6</a>]</span>. Deze ontwerpvergelijkingen zijn uitgewerkt voor lagere frequenties. Voor MHz frequenties (en hoger) moet er in detail geanalyseerd en gesimuleerd worden. De onderstaande vergelijkingen (Eq.<a class="reference internal" href="#equation-deq1">(10)</a> tot Eq.<a class="reference internal" href="#equation-deq4">(13)</a>) kunnen daarvoor niet gebruikt worden.</p>
 <p>Voor frequenties beneden 1 MHz:</p>
 <div class="math notranslate nohighlight" id="equation-deq1">
 <span class="eqno">(10)<a class="headerlink" href="#equation-deq1" title="Link to this equation">#</a></span>\[R_L= 0.5768 \frac{(V_{DD}-V_{sat})^2}{P} \left(1.00001-\frac{0.4144}{Q}-\frac{0.5775}{Q^2}+\frac{0.206}{Q^3}   \right) \]</div>
@@ -953,7 +1004,7 @@ door een transformator met wikkelverhouding: 6.00
 </section>
 <section id="voorbeeld-3-on-chip-2-ghz-klasse-e-versterker-voor-gsm-toepassingen">
 <h3>Voorbeeld 3: On-chip 2 GHz Klasse E versterker voor GSM toepassingen<a class="headerlink" href="#voorbeeld-3-on-chip-2-ghz-klasse-e-versterker-voor-gsm-toepassingen" title="Link to this heading">#</a></h3>
-<p>In 1999 hebben King-Chun Tsai en Paul Gray een 1.9GHz klasse E versterker voor GSM en DECT telefoon toepassingen ontworpen <span id="id6">[<a class="reference internal" href="References.html#id14" title="King-Chun Tsai and P.R. Gray. A 1.9-GHz, 1-W CMOS class-E power amplifier for wireless communications. IEEE Journal of Solid-State Circuits, 34(7):962–970, July 1999. doi:10.1109/4.772411.">8</a>]</span>. De versterker bestaat uit 2 stages en elke stage is fully-differential uitgewerkt.</p>
+<p>In 1999 hebben King-Chun Tsai en Paul Gray een 1.9GHz klasse E versterker voor GSM en DECT telefoon toepassingen ontworpen <span class="bibtex-citation" id="id6">[<a class="reference internal" href="References.html#id14" title="King-Chun Tsai and P.R. Gray. A 1.9-GHz, 1-W CMOS class-E power amplifier for wireless communications. IEEE Journal of Solid-State Circuits, 34(7):962–970, July 1999. doi:10.1109/4.772411.">8</a>]</span>. De versterker bestaat uit 2 stages en elke stage is fully-differential uitgewerkt.</p>
 <p>In de 2de stage herkenen we 2 gekruiste klasse E versterkers:</p>
 <ul class="simple">
 <li><p>L3 met de ingangscapaciteit van de complementaire transistor M23 die dan de kring L5 en C1 (5.1 pF) aanstuurt. De belasting is een 50 Ohm transmissielijn.</p></li>
@@ -1051,11 +1102,11 @@ De frequenties voor deze ontwerpen blijven beperkt tot 6 tot 13.56 MHz.</p>
 <caption><span class="caption-number">Tabel 5 </span><span class="caption-text">Overzicht van de state-of-the-art</span><a class="headerlink" href="#esota" title="Link to this table">#</a></caption>
 <thead>
 <tr class="row-odd"><th class="head"></th>
-<th class="head"><p>ISSCC’18 <span id="id7">[<a class="reference internal" href="References.html#id12" title="Che-Hao Yeh, Yen-Ting Lin, Chun-Chieh Kuo, Chao-Jen Huang, Cheng-Yu Xie, Shen-Fu Lu, Wen-Hau Yang, Ke-Horng Chen, Kuo-Chi Liu, and Ying-Hsi Lin. A 70W and 90% GaN-based class-E wireless-power-transfer system with automatic-matching-point-search control for zero-voltage switching and zero-voltage-derivative switching. In 2018 IEEE International Solid-State Circuits Conference - (ISSCC), 138–140. February 2018. doi:10.1109/ISSCC.2018.8310222.">9</a>]</span></p></th>
-<th class="head"><p>ISSCC’19 <span id="id8">[<a class="reference internal" href="References.html#id10" title="Cheng-Yu Xie, Shang-Hsien Yang, Shen-Fu Lu, Fa-Yi Lin, Yen-An Lin, You-Zheng Ou-Yang, Ke-Horng Chen, Kuo-Chi Liu, and Yin-Hsi Lin. 15.3 A 100W and 91% GaN-Based Class-E Wireless-Power-Transfer Transmitter with Differential-Impedance-Matching Control for Charging Multiple Devices. In 2019 IEEE International Solid-State Circuits Conference - (ISSCC), 242–244. February 2019. doi:10.1109/ISSCC.2019.8662535.">10</a>]</span></p></th>
-<th class="head"><p>ISSCC’24 <span id="id9">[<a class="reference internal" href="References.html#id9" title="Fangyu Mao, Rui Martins, and Yan Lu. 27.1 A Differential Hybrid Class-ED Power Amplifier with 27W Maximum Power and 82% Peak E2E Efficiency for Wireless Fast Charging To-Go. In 2024 IEEE International Solid-State Circuits Conference (ISSCC), volume 67, 444–446. February 2024. doi:10.1109/ISSCC49657.2024.10454369.">11</a>]</span></p></th>
-<th class="head"><p>JSSC’24 <span id="id10">[<a class="reference internal" href="References.html#id8" title="Xiaofei Ma, Wing-Hung Ki, and Yan Lu. A 27 W Wireless Power Transceiver With Compact Single-Stage Regulated Class-E Architecture and Adaptive ZVS Control. IEEE Journal of Solid-State Circuits, 59(6):1782–1793, June 2024. doi:10.1109/JSSC.2023.3333196.">12</a>]</span></p></th>
-<th class="head"><p>ISSCC’25 <span id="id11">[<a class="reference internal" href="References.html#id11" title="Yuhao Xiong, Wenxing Cao, Xihao Liu, Shangzhou Zhao, Zhongming Xue, Zhuoqi Guo, and Li Geng. A 6.78MHz 94.2% Peak Efficiency Class-E Transmitter with Adaptive Real-Part Impedance Matching and Imaginary-Part Phase Compensation Achieving a 33W Wireless-Power-Transfer System. In 2025 IEEE International Solid-State Circuits Conference (ISSCC), volume 68, 190–192. February 2025. doi:10.1109/ISSCC49661.2025.10904755.">13</a>]</span></p></th>
+<th class="head"><p>ISSCC’18 <span class="bibtex-citation" id="id7">[<a class="reference internal" href="References.html#id12" title="Che-Hao Yeh, Yen-Ting Lin, Chun-Chieh Kuo, Chao-Jen Huang, Cheng-Yu Xie, Shen-Fu Lu, Wen-Hau Yang, Ke-Horng Chen, Kuo-Chi Liu, and Ying-Hsi Lin. A 70W and 90% GaN-based class-E wireless-power-transfer system with automatic-matching-point-search control for zero-voltage switching and zero-voltage-derivative switching. In 2018 IEEE International Solid-State Circuits Conference - (ISSCC), 138–140. February 2018. doi:10.1109/ISSCC.2018.8310222.">9</a>]</span></p></th>
+<th class="head"><p>ISSCC’19 <span class="bibtex-citation" id="id8">[<a class="reference internal" href="References.html#id10" title="Cheng-Yu Xie, Shang-Hsien Yang, Shen-Fu Lu, Fa-Yi Lin, Yen-An Lin, You-Zheng Ou-Yang, Ke-Horng Chen, Kuo-Chi Liu, and Yin-Hsi Lin. 15.3 A 100W and 91% GaN-Based Class-E Wireless-Power-Transfer Transmitter with Differential-Impedance-Matching Control for Charging Multiple Devices. In 2019 IEEE International Solid-State Circuits Conference - (ISSCC), 242–244. February 2019. doi:10.1109/ISSCC.2019.8662535.">10</a>]</span></p></th>
+<th class="head"><p>ISSCC’24 <span class="bibtex-citation" id="id9">[<a class="reference internal" href="References.html#id9" title="Fangyu Mao, Rui Martins, and Yan Lu. 27.1 A Differential Hybrid Class-ED Power Amplifier with 27W Maximum Power and 82% Peak E2E Efficiency for Wireless Fast Charging To-Go. In 2024 IEEE International Solid-State Circuits Conference (ISSCC), volume 67, 444–446. February 2024. doi:10.1109/ISSCC49657.2024.10454369.">11</a>]</span></p></th>
+<th class="head"><p>JSSC’24 <span class="bibtex-citation" id="id10">[<a class="reference internal" href="References.html#id8" title="Xiaofei Ma, Wing-Hung Ki, and Yan Lu. A 27 W Wireless Power Transceiver With Compact Single-Stage Regulated Class-E Architecture and Adaptive ZVS Control. IEEE Journal of Solid-State Circuits, 59(6):1782–1793, June 2024. doi:10.1109/JSSC.2023.3333196.">12</a>]</span></p></th>
+<th class="head"><p>ISSCC’25 <span class="bibtex-citation" id="id11">[<a class="reference internal" href="References.html#id11" title="Yuhao Xiong, Wenxing Cao, Xihao Liu, Shangzhou Zhao, Zhongming Xue, Zhuoqi Guo, and Li Geng. A 6.78MHz 94.2% Peak Efficiency Class-E Transmitter with Adaptive Real-Part Impedance Matching and Imaginary-Part Phase Compensation Achieving a 33W Wireless-Power-Transfer System. In 2025 IEEE International Solid-State Circuits Conference (ISSCC), volume 68, 190–192. February 2025. doi:10.1109/ISSCC49661.2025.10904755.">13</a>]</span></p></th>
 <th class="head"><p>ESSERC’25 [x]</p></th>
 </tr>
 </thead>
@@ -1246,7 +1297,7 @@ De frequenties voor deze ontwerpen blijven beperkt tot 6 tot 13.56 MHz.</p>
     <i class="fa-solid fa-list"></i> Contents
   </div>
  <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
-    <ul class="visible nav section-nav flex-column">
+    <ul class="pst-show_toc_level nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#verklaring-van-de-werking-stap-voor-stap">Verklaring van de werking stap voor stap</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#uitbreiding-van-het-schema-met-een-derde-harmonische-filter">Uitbreiding van het schema met een derde harmonische filter</a></li>
 </ul>
@@ -1305,8 +1356,8 @@ By Jan Genoe (jan.genoe@kuleuven.be)
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script defer src="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
-<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+  <script defer src="_static/scripts/bootstrap.js?digest=55c26ed414f5f8a31ebb"></script>
+<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=55c26ed414f5f8a31ebb"></script>
 
   <footer class="bd-footer">
   </footer>

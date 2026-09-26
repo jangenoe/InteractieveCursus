@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkjupyterlab_myst=self.webpackChunkjupyterlab_myst||[]).push([[7865],{77865:(e,s,t)=>{t.d(s,{createInfoServices:()=>a.v});var a=t(78572);t(11254)}}]);

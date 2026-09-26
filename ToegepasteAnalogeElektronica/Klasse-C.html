@@ -35,11 +35,11 @@
   </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
-<link href="_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+  <link href="_static/styles/theme.css?digest=55c26ed414f5f8a31ebb" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=55c26ed414f5f8a31ebb" rel="stylesheet" />
 
     <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
-    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=013c97f6" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a18f7723" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=9c3e77be" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css" />
@@ -47,15 +47,15 @@
     <link rel="stylesheet" type="text/css" href="_static/exercise.css" />
     <link rel="stylesheet" type="text/css" href="_static/spice_file.css" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="_static/spice-lexer.css?v=422ceae6" />
     <link rel="stylesheet" type="text/css" href="_static/custom-pygments.css?v=d7fe8a85" />
     <link rel="stylesheet" type="text/css" href="_static/code-caption-style.css?v=0ad27fa8" />
-    <link rel="stylesheet" type="text/css" href="_static/spice-lexer.css?v=422ceae6" />
   
   <!-- So that users can add custom icons -->
-  <script src="_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <script defer src="_static/scripts/fontawesome.js?digest=55c26ed414f5f8a31ebb"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
-<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=55c26ed414f5f8a31ebb" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=55c26ed414f5f8a31ebb" />
 
     <script src="_static/documentation_options.js?v=b028fc25"></script>
     <script src="_static/doctools.js?v=9a2dae69"></script>
@@ -66,7 +66,7 @@
     <script>let toggleHintShow = 'Klik om te tonen';</script>
     <script>let toggleHintHide = 'Klik om te verbergen';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="_static/togglebutton.js?v=1ae7504c"></script>
+    <script src="_static/togglebutton.js?v=b8b12719"></script>
     <script src="_static/translations.js?v=5ce3cdba"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="_static/design-tabs.js?v=f930bc37"></script>
@@ -77,6 +77,7 @@
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'Klasse-C';</script>
+    <script>DOCUMENTATION_OPTIONS.search_as_you_type = false;</script>
     <link rel="icon" href="_static/favicon.ico"/>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Zoeken" href="search.html" />
@@ -85,20 +86,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="nl"/>
   <meta name="docsearch:version" content="" />
+  
+    
+    <script src="_static/searchtools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <script src="searchindex.js"></script>
+  
   </head>
-  
-  
-  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
-
+  <body data-default-mode="">
   
   
   <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+
   
   <div id="pst-scroll-pixel-helper"></div>
   
   <button type="button" class="btn rounded-pill" id="pst-back-to-top">
     <i class="fa-solid fa-arrow-up"></i>Back to top</button>
-
+  
+  
+  
   
   <dialog id="pst-search-dialog">
     
@@ -124,7 +131,51 @@
 </div>
 
   
-    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    <header id="pst-header" class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Zoeken" aria-label="Zoeken" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Zoeken</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Zoeken" aria-label="Zoeken" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Zoeken</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
     </header>
   
 
@@ -525,7 +576,7 @@
                 <h2> Contents </h2>
             </div>
             <nav aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
+                <ul class="pst-show_toc_level nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#basisprincipe-van-de-werking">basisprincipe van de werking</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#differentiaalvergelijking-van-de-trilkring">Differentiaalvergelijking van de trilkring</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#keuze-van-de-parameters-van-de-resonante-kring">Keuze van de parameters van de resonante kring</a></li>
@@ -713,7 +764,7 @@ Kies geschikte waardes voor de capaciteit C1 en de inductantie L1. Bepaal ook de
 <section id="aansturingsprincipe-van-de-versterker">
 <h3>Aansturingsprincipe van de versterker<a class="headerlink" href="#aansturingsprincipe-van-de-versterker" title="Link to this heading">#</a></h3>
 <p>Het basis werkingsprincipe van de Klasse C versterker is als het volgt: We leggen een sinusvormige spanning met een negatieve offset aan de hand van een serieweerstand aan aan de basis van de bipolaire transistor. De ingang van de bipolaire transistor  vormt een diode naar de emitter en als gevolg hiervan loopt er enkel een basisstroom wanneer de ingangspanning positief is. Deze basisstroom wordt dan een factor <span class="math notranslate nohighlight">\(\beta_F\)</span> versterkt in de collectorstroom. Deze gepulste collectorstroom wordt dan aangelegd aan de LRC trilkring.</p>
-<p>De originele beschrijving van dit aansturingsprincipe kan je vinden in <span id="id1">[<a class="reference internal" href="References.html#id3" title="John W. Wood. High efficiency class c amplifier. February 1969.">1</a>]</span>.</p>
+<p>De originele beschrijving van dit aansturingsprincipe kan je vinden in <span class="bibtex-citation" id="id1">[<a class="reference internal" href="References.html#id3" title="John W. Wood. High efficiency class c amplifier. February 1969.">1</a>]</span>.</p>
 <div class="cell docutils container">
 <div class="cell_output docutils container">
 <figure class="align-default" id="cfig2">
@@ -1137,7 +1188,7 @@ Een van de opties om de reference van de voeding naar de grond te brengen, is he
 <section id="meerdere-versterkingstrappen">
 <h2>Meerdere versterkingstrappen<a class="headerlink" href="#meerdere-versterkingstrappen" title="Link to this heading">#</a></h2>
 <p>In praktijk is het vaak zo dat een klasse C versterker gebruikt wordt om een klein ingangssignaal om te zetten naar een uitgangssignaal dat veel vermogen aan de belasting kan leveren. Vaak is echter een versterkertrap niet voldoende om van het klein ingangssignaal naar het groot uitgangssignaal te gaan, zowel in spanning als in stroom. Om dit te bekomen maken we meestal gebruik van meerdere versterkertrappen.</p>
-<p>Hieronder bouwen we stap voor stap op van het hierboven besproken schema naar een schema met 3 achtereenvolgende klasse C versterkertrappen. Dit schema met 3 versterkertrappen sluit aan bij een schema dat gebruikt wordt voor mobiele communicatie. Als voorbeeld nemen we <span id="id2">[<a class="reference internal" href="References.html#id2" title="B. Schmukler and J. Jorgenson. Design of a 3-Volt HBT power amplifier for DCS. Applied Microwave and wireless, pages 116–125, June 2000.">2</a>]</span>.</p>
+<p>Hieronder bouwen we stap voor stap op van het hierboven besproken schema naar een schema met 3 achtereenvolgende klasse C versterkertrappen. Dit schema met 3 versterkertrappen sluit aan bij een schema dat gebruikt wordt voor mobiele communicatie. Als voorbeeld nemen we <span class="bibtex-citation" id="id2">[<a class="reference internal" href="References.html#id2" title="B. Schmukler and J. Jorgenson. Design of a 3-Volt HBT power amplifier for DCS. Applied Microwave and wireless, pages 116–125, June 2000.">2</a>]</span>.</p>
 <section id="versterker-met-2-klasse-c-trappen-stap-1">
 <h3>Versterker met 2 Klasse C trappen: stap 1<a class="headerlink" href="#versterker-met-2-klasse-c-trappen-stap-1" title="Link to this heading">#</a></h3>
 <p>We vertrekken van het schema van de klasse C versterker zoals gegeven in <a class="reference internal" href="#cfig1"><span class="std std-numref">Figuur 6</span></a>. We laten in dit schema de belasting <span class="math notranslate nohighlight">\(R_L\)</span> voorlopig eventjes weg. De vergelijking die we hierboven gebruikt hebben om de stroom naar <span class="math notranslate nohighlight">\(C_1\)</span> uit te rekenen is <span class="math notranslate nohighlight">\(I_C= C \frac{d V}{dt}\)</span>. We merken op dat deze stroom <span class="math notranslate nohighlight">\(I_C\)</span> niet verandert als we een extra DC spanning over <span class="math notranslate nohighlight">\(C_1\)</span> zetten. We kunnen het schema in <a class="reference internal" href="#cfig1"><span class="std std-numref">Figuur 6</span></a> dus aanpassen met een extra spanning over de condensator <span class="math notranslate nohighlight">\(C_1\)</span>. Dit levert ons het schema op in <a class="reference internal" href="#cfig22"><span class="std std-numref">Figuur 31</span></a>.</p>
@@ -1228,14 +1279,14 @@ Een van de opties om de reference van de voeding naar de grond te brengen, is he
 </div>
 </div>
 <p>Het circuit in <a class="reference internal" href="#cfig28"><span class="std std-numref">Figuur 36</span></a> wordt ook gebruikt in de GSM transmitter ICs RFMD RF2140 en RF2174. Deze ICs werken tussen 1710 en 1785 MHz, gebruiken een voedingsspanning van 3.2V en bekomen en zendvermogen van 32.7 dBm (ongeveer 2 W) met een efficiëntie van 50.6%.</p>
-<p>De spoelen (<span class="math notranslate nohighlight">\(L_1\)</span>,<span class="math notranslate nohighlight">\(L_2\)</span> en <span class="math notranslate nohighlight">\(L_3\)</span>) en de condensator <span class="math notranslate nohighlight">\(C_3\)</span> worden wel extern uitgevoerd en zitten dus niet in de IC <span id="id3">[<a class="reference internal" href="References.html#id2" title="B. Schmukler and J. Jorgenson. Design of a 3-Volt HBT power amplifier for DCS. Applied Microwave and wireless, pages 116–125, June 2000.">2</a>]</span>.</p>
+<p>De spoelen (<span class="math notranslate nohighlight">\(L_1\)</span>,<span class="math notranslate nohighlight">\(L_2\)</span> en <span class="math notranslate nohighlight">\(L_3\)</span>) en de condensator <span class="math notranslate nohighlight">\(C_3\)</span> worden wel extern uitgevoerd en zitten dus niet in de IC <span class="bibtex-citation" id="id3">[<a class="reference internal" href="References.html#id2" title="B. Schmukler and J. Jorgenson. Design of a 3-Volt HBT power amplifier for DCS. Applied Microwave and wireless, pages 116–125, June 2000.">2</a>]</span>.</p>
 <p>We herkennen <span class="math notranslate nohighlight">\(L_1\)</span> tussen <em>VCC1</em> (Pin 5) en <span class="math notranslate nohighlight">\(V_{dd}\)</span>, <span class="math notranslate nohighlight">\(L_2\)</span> tussen <em>VCC2</em> (Pinnen 14,15,en 16) en <span class="math notranslate nohighlight">\(V_{dd}\)</span> en <span class="math notranslate nohighlight">\(L_3\)</span> tussen <em>RF OUT</em> (Pinnen 10,11 en 12) en <span class="math notranslate nohighlight">\(V_{dd}\)</span>.</p>
 <div class="cell tag_remove-cell4PDF docutils container">
 <div class="cell_output docutils container">
 <figure class="align-default" id="figgsm">
 <img alt="_images/0a89ab10a8352ca87ea82c7dca7cca9917226c81cda3703b766b9cbfb6a92bd5.png" src="_images/0a89ab10a8352ca87ea82c7dca7cca9917226c81cda3703b766b9cbfb6a92bd5.png" />
 <figcaption>
-<p><span class="caption-number">Figuur 37 </span><span class="caption-text">IC schema en fotos van de RFMD RF2140 en RF2174 <span id="id4">[<a class="reference internal" href="References.html#id2" title="B. Schmukler and J. Jorgenson. Design of a 3-Volt HBT power amplifier for DCS. Applied Microwave and wireless, pages 116–125, June 2000.">2</a>]</span></span><a class="headerlink" href="#figgsm" title="Link to this image">#</a></p>
+<p><span class="caption-number">Figuur 37 </span><span class="caption-text">IC schema en fotos van de RFMD RF2140 en RF2174 <span class="bibtex-citation" id="id4">[<a class="reference internal" href="References.html#id2" title="B. Schmukler and J. Jorgenson. Design of a 3-Volt HBT power amplifier for DCS. Applied Microwave and wireless, pages 116–125, June 2000.">2</a>]</span></span><a class="headerlink" href="#figgsm" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 </div>
@@ -1328,7 +1379,7 @@ kunnen afleiden, is het rendement (<span class="math notranslate nohighlight">\(
     <i class="fa-solid fa-list"></i> Contents
   </div>
  <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
-    <ul class="visible nav section-nav flex-column">
+    <ul class="pst-show_toc_level nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#basisprincipe-van-de-werking">basisprincipe van de werking</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#differentiaalvergelijking-van-de-trilkring">Differentiaalvergelijking van de trilkring</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#keuze-van-de-parameters-van-de-resonante-kring">Keuze van de parameters van de resonante kring</a></li>
@@ -1398,8 +1449,8 @@ By Jan Genoe (jan.genoe@kuleuven.be)
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script defer src="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
-<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+  <script defer src="_static/scripts/bootstrap.js?digest=55c26ed414f5f8a31ebb"></script>
+<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=55c26ed414f5f8a31ebb"></script>
 
   <footer class="bd-footer">
   </footer>

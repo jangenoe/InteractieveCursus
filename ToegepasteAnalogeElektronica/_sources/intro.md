@@ -3,9 +3,9 @@
 **door [Jan Genoe](https://www.kuleuven.be/wieiswie/nl/person/00004269)**
 
 Welkom bij het jupyterbook van het vak Toegepaste Analoge Elektronica.
-Deze notebooks bevatten materiaal en oefeningen, in het formaat van Jupyter notebooks, ontwikkeld als aanvullingen bij het vak [Toegepaste Analoge Elektronica](https://studiegidswww.uhasselt.be/opleidingsonderdeel.aspx?a=2025&i=4953) aan de [KU Leuven](https://www.kuleuven.be), campus Diepenbeek. De cursus zoals aanwezig op Toledo blijft het voornaamste leerinstrument. Dit online boek is enkel een hulpmiddel.
+Deze notebooks bevatten materiaal en oefeningen, in het formaat van Jupyter notebooks, ontwikkeld als aanvullingen bij het vak [Toegepaste Analoge Elektronica](https://studiegidswww.uhasselt.be/opleidingsonderdeel.aspx?a=2026&i=4953) aan de [KU Leuven](https://www.kuleuven.be), campus Diepenbeek. De cursus zoals aanwezig op Toledo blijft het voornaamste leerinstrument. Dit online boek is enkel een hulpmiddel.
 
-Voor de praktische organisatie van het vak (en het examen) verwijzen we naar de [studiegids](https://studiegidswww.uhasselt.be/opleidingsonderdeel.aspx?a=2025&i=4953). We veronderstellen dat de student voorafgaand aan dit vak het vak [Analoge elektronische schakelingen](https://jangenoe.github.io/InteractieveCursus/AnalogeElektronica2/intro.html) heeft gevolgd.
+Voor de praktische organisatie van het vak (en het examen) verwijzen we naar de [studiegids](https://studiegidswww.uhasselt.be/opleidingsonderdeel.aspx?a=2026&i=4953). We veronderstellen dat de student voorafgaand aan dit vak het vak [Analoge elektronische schakelingen](https://jangenoe.github.io/InteractieveCursus/AnalogeElektronica2/intro.html) heeft gevolgd.
 
 ## Overzicht van de inhoud
 
