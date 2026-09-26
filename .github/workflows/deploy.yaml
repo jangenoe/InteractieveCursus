@@ -78,19 +78,21 @@ jobs:
         # cp .github/common/cursusdef_MicroEnNanoTechnologie_Lite.py MicroEnNanoTechnologie/cursusdef.py
     - name: Build the JupyterLite site
       run: |
-        jupyter lite build --lite-dir .github/Lite --contents ToegepasteAnalogeElektronica --output-dir ToegepasteAnalogeElektronica/_build/html/Lite/
-        jupyter lite build --lite-dir .github/Lite --contents AnalogeElektronica2 --output-dir AnalogeElektronica2/_build/html/Lite/
-        jupyter lite build --lite-dir .github/Lite --contents AnalogDesignTechniques --output-dir AnalogDesignTechniques/_build/html/Lite/
-        jupyter lite build --lite-dir .github/Lite --contents MicroEnNanoTechnologie --output-dir MicroEnNanoTechnologie/_build/html/Lite/
+        ROOT_DIR="$PWD"
+        jupyter lite build --lite-dir .github/Lite --contents "$ROOT_DIR/ToegepasteAnalogeElektronica" --output-dir ToegepasteAnalogeElektronica/_build/html/Lite/
+        jupyter lite build --lite-dir .github/Lite --contents "$ROOT_DIR/AnalogeElektronica2" --output-dir AnalogeElektronica2/_build/html/Lite/
+        jupyter lite build --lite-dir .github/Lite --contents "$ROOT_DIR/AnalogDesignTechniques" --output-dir AnalogDesignTechniques/_build/html/Lite/
+        jupyter lite build --lite-dir .github/Lite --contents "$ROOT_DIR/MicroEnNanoTechnologie" --output-dir MicroEnNanoTechnologie/_build/html/Lite/
     - name: convert to deck
       run: python .github/common/convert-to-deck.py
       shell: sh
     - name: Build the JupyterLite deck site
       run: |
-        jupyter lite build --lite-dir .github/LiteDeck --contents ToegepasteAnalogeElektronica --output-dir ToegepasteAnalogeElektronica/_build/html/Deck/
-        jupyter lite build --lite-dir .github/LiteDeck --contents AnalogeElektronica2 --output-dir AnalogeElektronica2/_build/html/Deck/
-        jupyter lite build --lite-dir .github/LiteDeck --contents AnalogDesignTechniques --output-dir AnalogDesignTechniques/_build/html/Deck/
-        jupyter lite build --lite-dir .github/LiteDeck --contents MicroEnNanoTechnologie --output-dir MicroEnNanoTechnologie/_build/html/Deck/
+        ROOT_DIR="$PWD"
+        jupyter lite build --lite-dir .github/LiteDeck --contents "$ROOT_DIR/ToegepasteAnalogeElektronica" --output-dir ToegepasteAnalogeElektronica/_build/html/Deck/
+        jupyter lite build --lite-dir .github/LiteDeck --contents "$ROOT_DIR/AnalogeElektronica2" --output-dir AnalogeElektronica2/_build/html/Deck/
+        jupyter lite build --lite-dir .github/LiteDeck --contents "$ROOT_DIR/AnalogDesignTechniques" --output-dir AnalogDesignTechniques/_build/html/Deck/
+        jupyter lite build --lite-dir .github/LiteDeck --contents "$ROOT_DIR/MicroEnNanoTechnologie" --output-dir MicroEnNanoTechnologie/_build/html/Deck/
     - name: Install the dependencies for PowerPoint building
       run: |
         pip install -r .github/requirements-pptx.txt
@@ -114,5 +116,4 @@ jobs:
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_dir: CursusIndex/_build/html
-
 
