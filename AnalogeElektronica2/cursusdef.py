@@ -115,16 +115,16 @@ def plotZ(Z, frequencies):
     
     # Magnitude plot
     ax1.semilogx(frequencies, magnitude)
-    ax1.set_ylabel('|Z| (Ω)')
+    ax1.set_ylabel(r'|Z| (Ω)')
     ax1.grid(True, which="both", ls="-", alpha=0.3)
-    ax1.set_title('Impedance Magnitude')
+    ax1.set_title(r'Impedance Magnitude')
     
     # Phase plot
     ax2.semilogx(frequencies, phase)
-    ax2.set_xlabel('Frequency (Hz)')
-    ax2.set_ylabel('∠Z (degrees)')
+    ax2.set_xlabel(r'Frequency (Hz)')
+    ax2.set_ylabel(r'∠Z (degrees)')
     ax2.grid(True, which="both", ls="-", alpha=0.3)
-    ax2.set_title('Impedance Phase')
+    ax2.set_title(r'Impedance Phase')
   
 
 

@@ -162,16 +162,16 @@ def freqs_resp(ba_array,Dmin=1,Dmax=5,lowDB=-100, Npts = 1024,fsize=(6,4),legend
                 index+=1
             ax[1].semilogx(f,np.angle(H)/np.pi*180)
     if ShowGraf:
-        ax[0].set_ylabel('Gain (dB)')
-        ax[0].set_title('Frequency Response - Magnitude')
+        ax[0].set_ylabel(r'Gain (dB)')
+        ax[0].set_title(r'Frequency Response - Magnitude')
         ax[0].grid()
         ax[0].set_xlim([10**Dmin,10**Dmax]);
         ax[0].set_ylim([lowDB,5]);
         if not(legend==[]):
             ax[0].legend()
-        ax[1].set_xlabel('Frequency (Hz)')
-        ax[1].set_ylabel('Phase (graden)')
-        ax[1].set_title('Frequency Response - Phase')
+        ax[1].set_xlabel(r'Frequency (Hz)')
+        ax[1].set_ylabel(r'Phase (graden)')
+        ax[1].set_title(r'Frequency Response - Phase')
         ax[1].set_xlim([10**Dmin,10**Dmax]);
         ax[1].set_yticks([-180,-90,0,90,180])
         ax[1].grid();
