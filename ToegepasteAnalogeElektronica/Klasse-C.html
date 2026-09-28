@@ -653,7 +653,7 @@ De vermogentransistor levert het vermogen dat verloren/uitgestraald wordt door d
 <div class="cell docutils container">
 <div class="cell_output docutils container">
 <figure class="align-default" id="cfig1">
-<img alt="_images/3ec2464081ceba10551e176586f6e8b2343a92793bb4a54b831512f65757a694.svg" src="_images/3ec2464081ceba10551e176586f6e8b2343a92793bb4a54b831512f65757a694.svg" />
+<img alt="_images/06f994756034f2f331f959da437bfbcac8fcb057cb4c04cbc5858bc1b8d5571e.svg" src="_images/06f994756034f2f331f959da437bfbcac8fcb057cb4c04cbc5858bc1b8d5571e.svg" />
 <figcaption>
 <p><span class="caption-number">Figuur 6 </span><span class="caption-text">Basisschema van de Klasse C versterker.</span><a class="headerlink" href="#cfig1" title="Link to this image">#</a></p>
 </figcaption>
@@ -667,7 +667,7 @@ De vermogentransistor levert het vermogen dat verloren/uitgestraald wordt door d
 <div class="cell docutils container">
 <div class="cell_output docutils container">
 <figure class="align-default" id="cfigtrilkring">
-<img alt="_images/6a16fb75dcabff43624dd93ab4ca55eca5fe8e7b8cb0266e41fefa7e73220485.svg" src="_images/6a16fb75dcabff43624dd93ab4ca55eca5fe8e7b8cb0266e41fefa7e73220485.svg" />
+<img alt="_images/1c393b473294e1783b46f6d31f551ef13d7527b9c58978492a0477c0ded6c14b.svg" src="_images/1c393b473294e1783b46f6d31f551ef13d7527b9c58978492a0477c0ded6c14b.svg" />
 <figcaption>
 <p><span class="caption-number">Figuur 7 </span><span class="caption-text">Trilkring van de Klasse C versterker.</span><a class="headerlink" href="#cfigtrilkring" title="Link to this image">#</a></p>
 </figcaption>
@@ -893,10 +893,10 @@ voornamelijk bijdragen tot het bepalen van de oscillatiefrequentie, namelijk:</p
 <span class="eqno">(1)<a class="headerlink" href="#equation-eq1" title="Link to this equation">#</a></span>\[V_{out}(t)=V_{dd}-V_a \cos(\omega t) \]</div>
 <p>en is de collector current van de transistor <span class="math notranslate nohighlight">\(I_c\)</span></p>
 <div class="math notranslate nohighlight" id="equation-eq2">
-<span class="eqno">(2)<a class="headerlink" href="#equation-eq2" title="Link to this equation">#</a></span>\[ I_c(t) = \left\{ \begin{matrix}
-      \frac{\cos(\omega t)-\cos(\alpha)}{1-\cos(\alpha)}I_p  &amp; wanneer &amp; |\omega t| &lt;\alpha \  
+<span class="eqno">(2)<a class="headerlink" href="#equation-eq2" title="Link to this equation">#</a></span>\[\begin{split} I_c(t) = \left\{ \begin{matrix}
+      \frac{\cos(\omega t)-\cos(\alpha)}{1-\cos(\alpha)}I_p  &amp; wanneer &amp; |\omega t| &lt;\alpha \\  
                   0 &amp; wanneer&amp; | \omega t| &gt;\alpha   
-          \end{matrix} \right.\]</div>
+          \end{matrix} \right.\end{split}\]</div>
 <p>Hoe we aan de waarde van <span class="math notranslate nohighlight">\(V_a\)</span> komen, volgt in de afleiding hieronder.</p>
 <p>Op basis van de hierboven gegeven stromen en spanningen kunnen we de verschillende vermogens uitrekenen  (met <span class="math notranslate nohighlight">\(u=\omega t\)</span>):</p>
 <div class="math notranslate nohighlight" id="equation-eq3">
@@ -959,6 +959,16 @@ voornamelijk bijdragen tot het bepalen van de oscillatiefrequentie, namelijk:</p
 </figure>
 </div>
 </div>
+<div class="cell docutils container">
+<div class="cell_output docutils container">
+<figure class="align-default" id="id2">
+<img alt="_images/0d1e091bfc3c85b8f28d70f850359b28659ec83cf6dc8067fe0d64fb36f5f369.png" src="_images/0d1e091bfc3c85b8f28d70f850359b28659ec83cf6dc8067fe0d64fb36f5f369.png" />
+<figcaption>
+<p><span class="caption-number">Figuur 21 </span><span class="caption-text">bekomen oscillatiespanning als functie van de geleidingshoek.</span><a class="headerlink" href="#id2" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
+</div>
 <p>opmerking:</p>
 <ul class="simple">
 <li><p>De grafiek in deze jupyter notebook geeft de maximale oscillatiespanning <span class="math notranslate nohighlight">\(V_{max}\)</span> weer die bekomen wordt in de resonante kring in functie van de geleidingshoek (<span class="math notranslate nohighlight">\(\alpha\)</span>) ten opzichte van het product van de piekstroom <span class="math notranslate nohighlight">\(I_p\)</span> en de weerstand <span class="math notranslate nohighlight">\(R_L\)</span>.  Dus de plot geeft dus de waarde van <span class="math notranslate nohighlight">\(u= \frac{V_{max}}{I_p R_L}\)</span></p></li>
@@ -972,7 +982,7 @@ voornamelijk bijdragen tot het bepalen van de oscillatiefrequentie, namelijk:</p
 <figure class="align-default" id="cfig12">
 <img alt="_images/931bfd49f6093bb9cc5630161b514192e9eb03dfb2fc536edc8ba9e5e39444b1.png" src="_images/931bfd49f6093bb9cc5630161b514192e9eb03dfb2fc536edc8ba9e5e39444b1.png" />
 <figcaption>
-<p><span class="caption-number">Figuur 21 </span><span class="caption-text">De nodige piekstroom om een amplitude te bekomen die gelijk is aan de voedingsspanning als een functie van de geleidingshoek.</span><a class="headerlink" href="#cfig12" title="Link to this image">#</a></p>
+<p><span class="caption-number">Figuur 22 </span><span class="caption-text">De nodige piekstroom om een amplitude te bekomen die gelijk is aan de voedingsspanning als een functie van de geleidingshoek.</span><a class="headerlink" href="#cfig12" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 </div>
@@ -998,12 +1008,12 @@ voornamelijk bijdragen tot het bepalen van de oscillatiefrequentie, namelijk:</p
 <figure class="align-default" id="cfig13">
 <img alt="_images/e7e7d0c901111ceafe5282f67df44cb5ad19e94366967479f42d5542a168c018.png" src="_images/e7e7d0c901111ceafe5282f67df44cb5ad19e94366967479f42d5542a168c018.png" />
 <figcaption>
-<p><span class="caption-number">Figuur 22 </span><span class="caption-text">Bekomen rendement bij maximale uitsturing.</span><a class="headerlink" href="#cfig13" title="Link to this image">#</a></p>
+<p><span class="caption-number">Figuur 23 </span><span class="caption-text">Bekomen rendement bij maximale uitsturing.</span><a class="headerlink" href="#cfig13" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 </div>
 </div>
-<p>Het is belangrijk dat we in de <a class="reference internal" href="#cfig13"><span class="std std-numref">Figuur 22</span></a> 3 belangrijke punten herkennen:</p>
+<p>Het is belangrijk dat we in de <a class="reference internal" href="#cfig13"><span class="std std-numref">Figuur 23</span></a> 3 belangrijke punten herkennen:</p>
 <ul class="simple">
 <li><p>Bij geleidingshoek <span class="math notranslate nohighlight">\(\alpha\)</span> = 0 hebben we een rendement van 100%. De transistor is hierbij echter over heel de periode nooit in geleiding en er kan dus ook geen energie aan het circuit worden toegevoegd. Er wordt geen vermogen aan de uitgang bekomen.</p></li>
 <li><p>Bij geleidingshoek <span class="math notranslate nohighlight">\(\alpha\)</span> =<span class="math notranslate nohighlight">\(\pi /2\)</span>  hebben we een rendement van 78%. De transistor is hierbij de helft van de periode in geleiding, zoals bij een klasse B versterker. Hetzelfde maximale rendement als bij een klasse B versterker wordt dan ook bekomen.</p></li>
@@ -1031,7 +1041,7 @@ Wat kiezen we als de maximale stroom van de transistor 360 mA is?</p>
 <figure class="align-default" id="cfig14a">
 <img alt="_images/28fb85a125d3fa3757790acbd5dcce0a7a14de48c31247b9f42214c75323c131.png" src="_images/28fb85a125d3fa3757790acbd5dcce0a7a14de48c31247b9f42214c75323c131.png" />
 <figcaption>
-<p><span class="caption-number">Figuur 23 </span><span class="caption-text">(links) impedantie van de LRC-kring als functie van de frequentie (rechts) het uitdempen van deze kring als functie van de tijd.</span><a class="headerlink" href="#cfig14a" title="Link to this image">#</a></p>
+<p><span class="caption-number">Figuur 24 </span><span class="caption-text">(links) impedantie van de LRC-kring als functie van de frequentie (rechts) het uitdempen van deze kring als functie van de tijd.</span><a class="headerlink" href="#cfig14a" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 </div>
@@ -1058,7 +1068,7 @@ Op het eerste zicht lijkt het <code class="docutils literal notranslate"><span c
 <figure class="align-default" id="cfig15">
 <img alt="_images/d95df5ae0b069678b686a70c7520195697121241f2d6a64120655f44dc13f3d8.png" src="_images/d95df5ae0b069678b686a70c7520195697121241f2d6a64120655f44dc13f3d8.png" />
 <figcaption>
-<p><span class="caption-number">Figuur 24 </span><span class="caption-text">Amplitude van de spanning op knoop 2 (spice simulatie) als functie van de frequentie van aansturing.</span><a class="headerlink" href="#cfig15" title="Link to this image">#</a></p>
+<p><span class="caption-number">Figuur 25 </span><span class="caption-text">Amplitude van de spanning op knoop 2 (spice simulatie) als functie van de frequentie van aansturing.</span><a class="headerlink" href="#cfig15" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 </div>
@@ -1088,7 +1098,7 @@ Op het eerste zicht lijkt het <code class="docutils literal notranslate"><span c
 <figure class="align-default" id="cfig16">
 <img alt="_images/d2d8d962b96d6163092528a7ccf40138514338ddd3c06d0a9077932d3564348f.png" src="_images/d2d8d962b96d6163092528a7ccf40138514338ddd3c06d0a9077932d3564348f.png" />
 <figcaption>
-<p><span class="caption-number">Figuur 25 </span><span class="caption-text">De contributies van de verschillende harmonischen in het aanstuursignaal en de impact hiervan op de bekomen oscillatie amplitude.</span><a class="headerlink" href="#cfig16" title="Link to this image">#</a></p>
+<p><span class="caption-number">Figuur 26 </span><span class="caption-text">De contributies van de verschillende harmonischen in het aanstuursignaal en de impact hiervan op de bekomen oscillatie amplitude.</span><a class="headerlink" href="#cfig16" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 </div>
@@ -1106,7 +1116,7 @@ Op het eerste zicht lijkt het <code class="docutils literal notranslate"><span c
 <figure class="align-default" id="cfig17">
 <img alt="_images/3e5e0d16d30e272a42a6f6cf640da71df7d7200d6cd64c95cb80c0af57ad8ac1.png" src="_images/3e5e0d16d30e272a42a6f6cf640da71df7d7200d6cd64c95cb80c0af57ad8ac1.png" />
 <figcaption>
-<p><span class="caption-number">Figuur 26 </span><span class="caption-text">De contributies van de verschillende harmonischen in een blokgolf aanstuursignaal en de impact hiervan op de bekomen oscillatie amplitude.</span><a class="headerlink" href="#cfig17" title="Link to this image">#</a></p>
+<p><span class="caption-number">Figuur 27 </span><span class="caption-text">De contributies van de verschillende harmonischen in een blokgolf aanstuursignaal en de impact hiervan op de bekomen oscillatie amplitude.</span><a class="headerlink" href="#cfig17" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 </div>
@@ -1124,7 +1134,7 @@ Een van de opties om de reference van de voeding naar de grond te brengen, is he
 <figure class="align-default" id="cfig18">
 <img alt="_images/072e06b6f97af7f9f7e38cf72f7a875e4799bba36983d857c8bbf9fe307700c6.svg" src="_images/072e06b6f97af7f9f7e38cf72f7a875e4799bba36983d857c8bbf9fe307700c6.svg" />
 <figcaption>
-<p><span class="caption-number">Figuur 27 </span><span class="caption-text">Klasse C versterker met een transformator in de resonante kring.</span><a class="headerlink" href="#cfig18" title="Link to this image">#</a></p>
+<p><span class="caption-number">Figuur 28 </span><span class="caption-text">Klasse C versterker met een transformator in de resonante kring.</span><a class="headerlink" href="#cfig18" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 </div>
@@ -1138,7 +1148,7 @@ Een van de opties om de reference van de voeding naar de grond te brengen, is he
 <figure class="align-default" id="cfig19">
 <img alt="_images/700f6e2cb8ca680b9ec9dd4458d6554dd032372be3a0b583a4e3ff7c0788527f.svg" src="_images/700f6e2cb8ca680b9ec9dd4458d6554dd032372be3a0b583a4e3ff7c0788527f.svg" />
 <figcaption>
-<p><span class="caption-number">Figuur 28 </span><span class="caption-text">Klasse C versterker met een LC kring aan de ingang van de transistor.</span><a class="headerlink" href="#cfig19" title="Link to this image">#</a></p>
+<p><span class="caption-number">Figuur 29 </span><span class="caption-text">Klasse C versterker met een LC kring aan de ingang van de transistor.</span><a class="headerlink" href="#cfig19" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 </div>
@@ -1152,7 +1162,7 @@ Een van de opties om de reference van de voeding naar de grond te brengen, is he
 <figure class="align-default" id="cfig20">
 <img alt="_images/005fbb16fa8ea271688ad7c5a2b5bba845c82004ea662ba4504f3ebe8c8704f0.svg" src="_images/005fbb16fa8ea271688ad7c5a2b5bba845c82004ea662ba4504f3ebe8c8704f0.svg" />
 <figcaption>
-<p><span class="caption-number">Figuur 29 </span><span class="caption-text">Basisschema van de klasse C versterker waarbij de uitgangspanning oscilleert rond de grond.</span><a class="headerlink" href="#cfig20" title="Link to this image">#</a></p>
+<p><span class="caption-number">Figuur 30 </span><span class="caption-text">Basisschema van de klasse C versterker waarbij de uitgangspanning oscilleert rond de grond.</span><a class="headerlink" href="#cfig20" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 </div>
@@ -1178,7 +1188,7 @@ Een van de opties om de reference van de voeding naar de grond te brengen, is he
 <figure class="align-default" id="cfig21">
 <img alt="_images/28f5b8fe13cc28e65aa81018b7935c700f4d9d9b46f23b184fdb56f2fca07ab2.png" src="_images/28f5b8fe13cc28e65aa81018b7935c700f4d9d9b46f23b184fdb56f2fca07ab2.png" />
 <figcaption>
-<p><span class="caption-number">Figuur 30 </span><span class="caption-text">Resultaat van de spice simulatie van het bovenstaande circuit.</span><a class="headerlink" href="#cfig21" title="Link to this image">#</a></p>
+<p><span class="caption-number">Figuur 31 </span><span class="caption-text">Resultaat van de spice simulatie van het bovenstaande circuit.</span><a class="headerlink" href="#cfig21" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 </div>
@@ -1188,16 +1198,16 @@ Een van de opties om de reference van de voeding naar de grond te brengen, is he
 <section id="meerdere-versterkingstrappen">
 <h2>Meerdere versterkingstrappen<a class="headerlink" href="#meerdere-versterkingstrappen" title="Link to this heading">#</a></h2>
 <p>In praktijk is het vaak zo dat een klasse C versterker gebruikt wordt om een klein ingangssignaal om te zetten naar een uitgangssignaal dat veel vermogen aan de belasting kan leveren. Vaak is echter een versterkertrap niet voldoende om van het klein ingangssignaal naar het groot uitgangssignaal te gaan, zowel in spanning als in stroom. Om dit te bekomen maken we meestal gebruik van meerdere versterkertrappen.</p>
-<p>Hieronder bouwen we stap voor stap op van het hierboven besproken schema naar een schema met 3 achtereenvolgende klasse C versterkertrappen. Dit schema met 3 versterkertrappen sluit aan bij een schema dat gebruikt wordt voor mobiele communicatie. Als voorbeeld nemen we <span class="bibtex-citation" id="id2">[<a class="reference internal" href="References.html#id2" title="B. Schmukler and J. Jorgenson. Design of a 3-Volt HBT power amplifier for DCS. Applied Microwave and wireless, pages 116–125, June 2000.">2</a>]</span>.</p>
+<p>Hieronder bouwen we stap voor stap op van het hierboven besproken schema naar een schema met 3 achtereenvolgende klasse C versterkertrappen. Dit schema met 3 versterkertrappen sluit aan bij een schema dat gebruikt wordt voor mobiele communicatie. Als voorbeeld nemen we <span class="bibtex-citation" id="id3">[<a class="reference internal" href="References.html#id2" title="B. Schmukler and J. Jorgenson. Design of a 3-Volt HBT power amplifier for DCS. Applied Microwave and wireless, pages 116–125, June 2000.">2</a>]</span>.</p>
 <section id="versterker-met-2-klasse-c-trappen-stap-1">
 <h3>Versterker met 2 Klasse C trappen: stap 1<a class="headerlink" href="#versterker-met-2-klasse-c-trappen-stap-1" title="Link to this heading">#</a></h3>
-<p>We vertrekken van het schema van de klasse C versterker zoals gegeven in <a class="reference internal" href="#cfig1"><span class="std std-numref">Figuur 6</span></a>. We laten in dit schema de belasting <span class="math notranslate nohighlight">\(R_L\)</span> voorlopig eventjes weg. De vergelijking die we hierboven gebruikt hebben om de stroom naar <span class="math notranslate nohighlight">\(C_1\)</span> uit te rekenen is <span class="math notranslate nohighlight">\(I_C= C \frac{d V}{dt}\)</span>. We merken op dat deze stroom <span class="math notranslate nohighlight">\(I_C\)</span> niet verandert als we een extra DC spanning over <span class="math notranslate nohighlight">\(C_1\)</span> zetten. We kunnen het schema in <a class="reference internal" href="#cfig1"><span class="std std-numref">Figuur 6</span></a> dus aanpassen met een extra spanning over de condensator <span class="math notranslate nohighlight">\(C_1\)</span>. Dit levert ons het schema op in <a class="reference internal" href="#cfig22"><span class="std std-numref">Figuur 31</span></a>.</p>
+<p>We vertrekken van het schema van de klasse C versterker zoals gegeven in <a class="reference internal" href="#cfig1"><span class="std std-numref">Figuur 6</span></a>. We laten in dit schema de belasting <span class="math notranslate nohighlight">\(R_L\)</span> voorlopig eventjes weg. De vergelijking die we hierboven gebruikt hebben om de stroom naar <span class="math notranslate nohighlight">\(C_1\)</span> uit te rekenen is <span class="math notranslate nohighlight">\(I_C= C \frac{d V}{dt}\)</span>. We merken op dat deze stroom <span class="math notranslate nohighlight">\(I_C\)</span> niet verandert als we een extra DC spanning over <span class="math notranslate nohighlight">\(C_1\)</span> zetten. We kunnen het schema in <a class="reference internal" href="#cfig1"><span class="std std-numref">Figuur 6</span></a> dus aanpassen met een extra spanning over de condensator <span class="math notranslate nohighlight">\(C_1\)</span>. Dit levert ons het schema op in <a class="reference internal" href="#cfig22"><span class="std std-numref">Figuur 32</span></a>.</p>
 <div class="cell docutils container">
 <div class="cell_output docutils container">
 <figure class="align-default" id="cfig22">
 <img alt="_images/c5666d831fe864b150d0b595683557946e188aa2d5c1406ad2c7b382328c594f.svg" src="_images/c5666d831fe864b150d0b595683557946e188aa2d5c1406ad2c7b382328c594f.svg" />
 <figcaption>
-<p><span class="caption-number">Figuur 31 </span><span class="caption-text">Klasse C versterker waarbij de spoel en de condensator aan een verschillende voedingsspanning verbonden zijn.</span><a class="headerlink" href="#cfig22" title="Link to this image">#</a></p>
+<p><span class="caption-number">Figuur 32 </span><span class="caption-text">Klasse C versterker waarbij de spoel en de condensator aan een verschillende voedingsspanning verbonden zijn.</span><a class="headerlink" href="#cfig22" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 </div>
@@ -1206,13 +1216,13 @@ Een van de opties om de reference van de voeding naar de grond te brengen, is he
 </section>
 <section id="versterker-met-2-klasse-c-trappen-stap-2">
 <h3>Versterker met 2 Klasse C trappen: stap 2<a class="headerlink" href="#versterker-met-2-klasse-c-trappen-stap-2" title="Link to this heading">#</a></h3>
-<p>Een volgende stap naar een meertraps klasse C versterker is de uitvoering van <span class="math notranslate nohighlight">\(V_{dd2}\)</span> op basis van een spanningsdeling vanuit <span class="math notranslate nohighlight">\(V_{dd}\)</span>. Dit schema kan je zien in <a class="reference internal" href="#cfig23"><span class="std std-numref">Figuur 32</span></a>. Hiervoor gebruiken we de 2 weerstanden <span class="math notranslate nohighlight">\(R_L\)</span> en <span class="math notranslate nohighlight">\(R_{L2}\)</span>. Een gevolg hiervan gaat zijn dat de AC-stroom die door de condensator <span class="math notranslate nohighlight">\(C_1\)</span> loopt ook door de weerstanden <span class="math notranslate nohighlight">\(R_L\)</span> of <span class="math notranslate nohighlight">\(R_{L2}\)</span> gaat lopen (i.e. verdeeld proportioneel met de geleidbaarheden van <span class="math notranslate nohighlight">\(R_L\)</span> en <span class="math notranslate nohighlight">\(R_{L2}\)</span>).  Hierdoor voeren we terug de belastingsweerstand in die we in de vorige stap weggelaten hebben.</p>
+<p>Een volgende stap naar een meertraps klasse C versterker is de uitvoering van <span class="math notranslate nohighlight">\(V_{dd2}\)</span> op basis van een spanningsdeling vanuit <span class="math notranslate nohighlight">\(V_{dd}\)</span>. Dit schema kan je zien in <a class="reference internal" href="#cfig23"><span class="std std-numref">Figuur 33</span></a>. Hiervoor gebruiken we de 2 weerstanden <span class="math notranslate nohighlight">\(R_L\)</span> en <span class="math notranslate nohighlight">\(R_{L2}\)</span>. Een gevolg hiervan gaat zijn dat de AC-stroom die door de condensator <span class="math notranslate nohighlight">\(C_1\)</span> loopt ook door de weerstanden <span class="math notranslate nohighlight">\(R_L\)</span> of <span class="math notranslate nohighlight">\(R_{L2}\)</span> gaat lopen (i.e. verdeeld proportioneel met de geleidbaarheden van <span class="math notranslate nohighlight">\(R_L\)</span> en <span class="math notranslate nohighlight">\(R_{L2}\)</span>).  Hierdoor voeren we terug de belastingsweerstand in die we in de vorige stap weggelaten hebben.</p>
 <div class="cell docutils container">
 <div class="cell_output docutils container">
 <figure class="align-default" id="cfig23">
 <img alt="_images/0a9b8ec748a5d0063a74b8d45642688e2403868066b6ad5f508986c933f29459.svg" src="_images/0a9b8ec748a5d0063a74b8d45642688e2403868066b6ad5f508986c933f29459.svg" />
 <figcaption>
-<p><span class="caption-number">Figuur 32 </span><span class="caption-text">Een andere versie van bovenstaand schema waarbij <span class="math notranslate nohighlight">\(V_{dd2}\)</span> opgebouwd is aan de hand van een spanningsdeling.</span><a class="headerlink" href="#cfig23" title="Link to this image">#</a></p>
+<p><span class="caption-number">Figuur 33 </span><span class="caption-text">Een andere versie van bovenstaand schema waarbij <span class="math notranslate nohighlight">\(V_{dd2}\)</span> opgebouwd is aan de hand van een spanningsdeling.</span><a class="headerlink" href="#cfig23" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 </div>
@@ -1220,13 +1230,13 @@ Een van de opties om de reference van de voeding naar de grond te brengen, is he
 </section>
 <section id="versterker-met-2-klasse-c-trappen-stap-3">
 <h3>Versterker met 2 Klasse C trappen: stap 3<a class="headerlink" href="#versterker-met-2-klasse-c-trappen-stap-3" title="Link to this heading">#</a></h3>
-<p>De belastingsweerstand <span class="math notranslate nohighlight">\(R_{L2}\)</span> kunnen we vervangen door een (voorwaarts gebiaste) diode (<span class="math notranslate nohighlight">\(D_L\)</span>). Dit schema zie je in <a class="reference internal" href="#cfig24"><span class="std std-numref">Figuur 33</span></a>. Aangezien een voorwaarts gebiaste diode een lage aanweerstand heeft (of dus een hoge geleidbaarheid), zal de meerderheid van de stroom tijdens het voorwaarts gedeelte van de swing door de diode gaan.</p>
+<p>De belastingsweerstand <span class="math notranslate nohighlight">\(R_{L2}\)</span> kunnen we vervangen door een (voorwaarts gebiaste) diode (<span class="math notranslate nohighlight">\(D_L\)</span>). Dit schema zie je in <a class="reference internal" href="#cfig24"><span class="std std-numref">Figuur 34</span></a>. Aangezien een voorwaarts gebiaste diode een lage aanweerstand heeft (of dus een hoge geleidbaarheid), zal de meerderheid van de stroom tijdens het voorwaarts gedeelte van de swing door de diode gaan.</p>
 <div class="cell docutils container">
 <div class="cell_output docutils container">
 <figure class="align-default" id="cfig24">
 <img alt="_images/a27aebbeae2eb6eb96b6edbba04305ff6e56a0d448a911dd68bb199c25cc4f0a.svg" src="_images/a27aebbeae2eb6eb96b6edbba04305ff6e56a0d448a911dd68bb199c25cc4f0a.svg" />
 <figcaption>
-<p><span class="caption-number">Figuur 33 </span><span class="caption-text">Een andere versie van bovenstaand schema waarbij een diode gebruikt wordt als actieve belasting.</span><a class="headerlink" href="#cfig24" title="Link to this image">#</a></p>
+<p><span class="caption-number">Figuur 34 </span><span class="caption-text">Een andere versie van bovenstaand schema waarbij een diode gebruikt wordt als actieve belasting.</span><a class="headerlink" href="#cfig24" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 </div>
@@ -1234,13 +1244,13 @@ Een van de opties om de reference van de voeding naar de grond te brengen, is he
 </section>
 <section id="versterker-met-2-klasse-c-trappen-stap-4">
 <h3>Versterker met 2 Klasse C trappen: stap 4<a class="headerlink" href="#versterker-met-2-klasse-c-trappen-stap-4" title="Link to this heading">#</a></h3>
-<p>In een volgende stap versterken we de stroom door de last diode <span class="math notranslate nohighlight">\(D_L\)</span> met een factor <span class="math notranslate nohighlight">\(\beta_F\)</span> van een transistor. De werking blijft hetzelfde, maar in <span class="math notranslate nohighlight">\(R_L\)</span> krijgen we een factor <span class="math notranslate nohighlight">\(\beta_F\)</span> meer stroom. Dit schema zie je in <a class="reference internal" href="#cfig26"><span class="std std-numref">Figuur 34</span></a>.</p>
+<p>In een volgende stap versterken we de stroom door de last diode <span class="math notranslate nohighlight">\(D_L\)</span> met een factor <span class="math notranslate nohighlight">\(\beta_F\)</span> van een transistor. De werking blijft hetzelfde, maar in <span class="math notranslate nohighlight">\(R_L\)</span> krijgen we een factor <span class="math notranslate nohighlight">\(\beta_F\)</span> meer stroom. Dit schema zie je in <a class="reference internal" href="#cfig26"><span class="std std-numref">Figuur 35</span></a>.</p>
 <div class="cell docutils container">
 <div class="cell_output docutils container">
 <figure class="align-default" id="cfig26">
 <img alt="_images/ecdc0522376cd16867584764774162d349c1067db6ba69b8e94929fc522215fc.svg" src="_images/ecdc0522376cd16867584764774162d349c1067db6ba69b8e94929fc522215fc.svg" />
 <figcaption>
-<p><span class="caption-number">Figuur 34 </span><span class="caption-text">Een andere versie van bovenstaand schema waarbij de diode vervangen is door een transistor.</span><a class="headerlink" href="#cfig26" title="Link to this image">#</a></p>
+<p><span class="caption-number">Figuur 35 </span><span class="caption-text">Een andere versie van bovenstaand schema waarbij de diode vervangen is door een transistor.</span><a class="headerlink" href="#cfig26" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 </div>
@@ -1248,7 +1258,7 @@ Een van de opties om de reference van de voeding naar de grond te brengen, is he
 </section>
 <section id="versterker-met-2-klasse-c-trappen-stap-5">
 <h3>Versterker met 2 Klasse C trappen: stap 5<a class="headerlink" href="#versterker-met-2-klasse-c-trappen-stap-5" title="Link to this heading">#</a></h3>
-<p>De belasting <span class="math notranslate nohighlight">\(R_L\)</span> in <a class="reference internal" href="#cfig26"><span class="std std-numref">Figuur 34</span></a> kan nu terug resonant gemaakt worden door het invoeren van de 2de trilkring op basis van <span class="math notranslate nohighlight">\(L_2\)</span> en <span class="math notranslate nohighlight">\(C_2\)</span>. We hebben nu een 2-trap klasse C versterker met 2 resonante kringen. Dit schema zie je in in <a class="reference internal" href="#cfig27"><span class="std std-numref">Figuur 35</span></a>. Het spreek vanzelf dat we hier</p>
+<p>De belasting <span class="math notranslate nohighlight">\(R_L\)</span> in <a class="reference internal" href="#cfig26"><span class="std std-numref">Figuur 35</span></a> kan nu terug resonant gemaakt worden door het invoeren van de 2de trilkring op basis van <span class="math notranslate nohighlight">\(L_2\)</span> en <span class="math notranslate nohighlight">\(C_2\)</span>. We hebben nu een 2-trap klasse C versterker met 2 resonante kringen. Dit schema zie je in in <a class="reference internal" href="#cfig27"><span class="std std-numref">Figuur 36</span></a>. Het spreek vanzelf dat we hier</p>
 <div class="math notranslate nohighlight">
 \[\frac{1}{L_1 C_1} = \frac{1}{L_2 C_2}\]</div>
 <p>moeten kiezen.</p>
@@ -1257,7 +1267,7 @@ Een van de opties om de reference van de voeding naar de grond te brengen, is he
 <figure class="align-default" id="cfig27">
 <img alt="_images/3ad499a9a193dbad328ac018a89ca520c81fe88a5201959f1721c4d0274c72cd.svg" src="_images/3ad499a9a193dbad328ac018a89ca520c81fe88a5201959f1721c4d0274c72cd.svg" />
 <figcaption>
-<p><span class="caption-number">Figuur 35 </span><span class="caption-text">Een andere versie van bovenstaand schema waarbij de tweede transitor belast wordt door een tweede resonante kring aan dezelfde frequentie.</span><a class="headerlink" href="#cfig27" title="Link to this image">#</a></p>
+<p><span class="caption-number">Figuur 36 </span><span class="caption-text">Een andere versie van bovenstaand schema waarbij de tweede transitor belast wordt door een tweede resonante kring aan dezelfde frequentie.</span><a class="headerlink" href="#cfig27" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 </div>
@@ -1265,7 +1275,7 @@ Een van de opties om de reference van de voeding naar de grond te brengen, is he
 </section>
 <section id="versterker-met-3-klasse-c-trappen">
 <h3>Versterker met 3 Klasse C trappen<a class="headerlink" href="#versterker-met-3-klasse-c-trappen" title="Link to this heading">#</a></h3>
-<p>Volgens de zelfde redenering kunnen we ook een derde klasse C versterkertrap toevoegen. Dit schema zie je in <a class="reference internal" href="#cfig28"><span class="std std-numref">Figuur 36</span></a>. Hier geldt:</p>
+<p>Volgens de zelfde redenering kunnen we ook een derde klasse C versterkertrap toevoegen. Dit schema zie je in <a class="reference internal" href="#cfig28"><span class="std std-numref">Figuur 37</span></a>. Hier geldt:</p>
 <div class="math notranslate nohighlight">
 \[\frac{1}{L_1 C_1} = \frac{1}{L_2 C_2}= \frac{1}{L_3 C_3}\]</div>
 <div class="cell docutils container">
@@ -1273,20 +1283,20 @@ Een van de opties om de reference van de voeding naar de grond te brengen, is he
 <figure class="align-default" id="cfig28">
 <img alt="_images/30b09ed3c89db7a613622b7acaedcd20b1cee2e9b65befa4ba51b7b51eb0c617.svg" src="_images/30b09ed3c89db7a613622b7acaedcd20b1cee2e9b65befa4ba51b7b51eb0c617.svg" />
 <figcaption>
-<p><span class="caption-number">Figuur 36 </span><span class="caption-text">Een andere versie van bovenstaand schema waarbij een derde trap toegevoegd werd aan de versterker.</span><a class="headerlink" href="#cfig28" title="Link to this image">#</a></p>
+<p><span class="caption-number">Figuur 37 </span><span class="caption-text">Een andere versie van bovenstaand schema waarbij een derde trap toegevoegd werd aan de versterker.</span><a class="headerlink" href="#cfig28" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 </div>
 </div>
-<p>Het circuit in <a class="reference internal" href="#cfig28"><span class="std std-numref">Figuur 36</span></a> wordt ook gebruikt in de GSM transmitter ICs RFMD RF2140 en RF2174. Deze ICs werken tussen 1710 en 1785 MHz, gebruiken een voedingsspanning van 3.2V en bekomen en zendvermogen van 32.7 dBm (ongeveer 2 W) met een efficiëntie van 50.6%.</p>
-<p>De spoelen (<span class="math notranslate nohighlight">\(L_1\)</span>,<span class="math notranslate nohighlight">\(L_2\)</span> en <span class="math notranslate nohighlight">\(L_3\)</span>) en de condensator <span class="math notranslate nohighlight">\(C_3\)</span> worden wel extern uitgevoerd en zitten dus niet in de IC <span class="bibtex-citation" id="id3">[<a class="reference internal" href="References.html#id2" title="B. Schmukler and J. Jorgenson. Design of a 3-Volt HBT power amplifier for DCS. Applied Microwave and wireless, pages 116–125, June 2000.">2</a>]</span>.</p>
+<p>Het circuit in <a class="reference internal" href="#cfig28"><span class="std std-numref">Figuur 37</span></a> wordt ook gebruikt in de GSM transmitter ICs RFMD RF2140 en RF2174. Deze ICs werken tussen 1710 en 1785 MHz, gebruiken een voedingsspanning van 3.2V en bekomen en zendvermogen van 32.7 dBm (ongeveer 2 W) met een efficiëntie van 50.6%.</p>
+<p>De spoelen (<span class="math notranslate nohighlight">\(L_1\)</span>,<span class="math notranslate nohighlight">\(L_2\)</span> en <span class="math notranslate nohighlight">\(L_3\)</span>) en de condensator <span class="math notranslate nohighlight">\(C_3\)</span> worden wel extern uitgevoerd en zitten dus niet in de IC <span class="bibtex-citation" id="id4">[<a class="reference internal" href="References.html#id2" title="B. Schmukler and J. Jorgenson. Design of a 3-Volt HBT power amplifier for DCS. Applied Microwave and wireless, pages 116–125, June 2000.">2</a>]</span>.</p>
 <p>We herkennen <span class="math notranslate nohighlight">\(L_1\)</span> tussen <em>VCC1</em> (Pin 5) en <span class="math notranslate nohighlight">\(V_{dd}\)</span>, <span class="math notranslate nohighlight">\(L_2\)</span> tussen <em>VCC2</em> (Pinnen 14,15,en 16) en <span class="math notranslate nohighlight">\(V_{dd}\)</span> en <span class="math notranslate nohighlight">\(L_3\)</span> tussen <em>RF OUT</em> (Pinnen 10,11 en 12) en <span class="math notranslate nohighlight">\(V_{dd}\)</span>.</p>
 <div class="cell tag_remove-cell4PDF docutils container">
 <div class="cell_output docutils container">
 <figure class="align-default" id="figgsm">
 <img alt="_images/0a89ab10a8352ca87ea82c7dca7cca9917226c81cda3703b766b9cbfb6a92bd5.png" src="_images/0a89ab10a8352ca87ea82c7dca7cca9917226c81cda3703b766b9cbfb6a92bd5.png" />
 <figcaption>
-<p><span class="caption-number">Figuur 37 </span><span class="caption-text">IC schema en fotos van de RFMD RF2140 en RF2174 <span class="bibtex-citation" id="id4">[<a class="reference internal" href="References.html#id2" title="B. Schmukler and J. Jorgenson. Design of a 3-Volt HBT power amplifier for DCS. Applied Microwave and wireless, pages 116–125, June 2000.">2</a>]</span></span><a class="headerlink" href="#figgsm" title="Link to this image">#</a></p>
+<p><span class="caption-number">Figuur 38 </span><span class="caption-text">IC schema en fotos van de RFMD RF2140 en RF2174 <span class="bibtex-citation" id="id5">[<a class="reference internal" href="References.html#id2" title="B. Schmukler and J. Jorgenson. Design of a 3-Volt HBT power amplifier for DCS. Applied Microwave and wireless, pages 116–125, June 2000.">2</a>]</span></span><a class="headerlink" href="#figgsm" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 </div>
@@ -1299,14 +1309,14 @@ Een van de opties om de reference van de voeding naar de grond te brengen, is he
 <p>Echter, zoals we uit de berekeningen van het rendement (<span class="math notranslate nohighlight">\(\eta\)</span>) bij niet-volledige uitsturing en ook uit simulaties zoals bijvoorbeeld aan de hand van widgets kunnen uitgevoerd worden zoals in <a class="reference internal" href="#cfig7"><span class="std std-numref">Figuur 16</span></a>
 kunnen afleiden, is het rendement (<span class="math notranslate nohighlight">\(\eta\)</span>) van een klasse C versterker die niet volledig uitgestuurd wordt tot een amplitude lager dan de voedingsspanning, altijd lager dan wanneer dat wel het geval is. Daarom verkiezen we steeds de klasse C versterker te gebruiken met een amplitude die overeenkomt met de voedingsspanning.</p>
 <p>Hoe kunnen we dan die amplitude aanpassen, wel door een klasse B versterker te gebruiken om de voedingsspanning van een klasse C versterker aan te sturen. Dit concept noemen we plaatmodulatie.</p>
-<p><a class="reference internal" href="#cfigplaatmodulatie"><span class="std std-numref">Figuur 38</span></a> toont schematisch aan hoe zo een plaatmodulatie kan gerealiseerd worden.</p>
+<p><a class="reference internal" href="#cfigplaatmodulatie"><span class="std std-numref">Figuur 39</span></a> toont schematisch aan hoe zo een plaatmodulatie kan gerealiseerd worden.</p>
 <p>In dit geval levert de voeding (<span class="math notranslate nohighlight">\(V_{dd}\)</span>) het DC vermogen en dus ook de DC stroom die naar de voeding van klasse C versterker gaat. De spoel <span class="math notranslate nohighlight">\(L\)</span> moet dan voldoende groot zijn om deze DC stroom nauwkeurig constant te houden. De klasse B versterker moet dan enkel het vermogen leveren om de veranderingen van voedingsspanningen van de klasse C te kunnen bekomen. De condensator <span class="math notranslate nohighlight">\(C\)</span> moet derhalve ook groot genoeg zijn om snel genoeg de AC stroom te kunnen leveren die de aanpassingen van de voeding mogelijk maakt.</p>
 <div class="cell docutils container">
 <div class="cell_output docutils container">
 <figure class="align-default" id="cfigplaatmodulatie">
 <img alt="_images/4ac73a83e5badb39fef882e50fbf635f393598523708085b2428ad6af11042ef.svg" src="_images/4ac73a83e5badb39fef882e50fbf635f393598523708085b2428ad6af11042ef.svg" />
 <figcaption>
-<p><span class="caption-number">Figuur 38 </span><span class="caption-text">Amplitude modulatie bekomen door een klasse B versterker te gebruiken om de voeding van de klasse C versterker aan te sturen.</span><a class="headerlink" href="#cfigplaatmodulatie" title="Link to this image">#</a></p>
+<p><span class="caption-number">Figuur 39 </span><span class="caption-text">Amplitude modulatie bekomen door een klasse B versterker te gebruiken om de voeding van de klasse C versterker aan te sturen.</span><a class="headerlink" href="#cfigplaatmodulatie" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 </div>
